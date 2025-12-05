@@ -17,9 +17,9 @@ export const fetchIPOs = async () => {
   note: "UPI Mandate for Bids placed between 5 PM and before 10 AM will be received after 10 AM."
 } ,
  {
-      id: 1,
+      id: 2,
       name: "Aequs Limited",
-      fullName: "Ecosystems of Efficiency",
+      
       logo: "images/aequs.png", // you can keep real logo or placeholder
       open: "Dec 3, 2025",
       close: "Dec 5, 2025",
@@ -31,7 +31,7 @@ export const fetchIPOs = async () => {
       status: "live",
       note: "UPI Mandate for Bids placed between 5 PM and before 10 AM will be received after 10 AM.",
     },{
-      id: 2,
+      id: 3,
       name: "Meesho Limited",
       fullName: "",
       logo: "images/meesho.jpg",
@@ -45,30 +45,19 @@ export const fetchIPOs = async () => {
       status: "live",
       note: "UPI Mandate for Bids placed between 5 PM and before 10 AM will be received after 10 AM.",
     },
-    {
-      id: 3,
-      name: "Corona Remedies",
-      fullName: "",
-      logo: "images/corona.jpg",
-      open: "Dec 8, 2025",
-      close: "Dec 10, 2025",
-      price: "1008-1062",
-      lot: 14,
-      subscription: "N/A times",
-      premium: "290-300 (27.31%)",
-      type: "mainboard",
-      status: "upcoming", // no "Live" badge
-      note: "",
-    },   // Add more
+   
   ]
 }
 
 export const fetchUnlisted = async () => {
   return [
     { id: 1, logo: '/images/zeta-logo.png', name: 'Zeta Tech', price: 2250, lot: 100, change: '+12%', liquidity: 'Medium' },
-    { id: 2, logo: '/images/bluefin-logo.png', name: 'BlueFin Payments', price: 825, change: '-4%', liquidity: 'Low' },
+    { id: 2, logo: '/images/bluefin-logo.png', name: 'BlueFin Payments', price: 825, lot: 50, change: '-4%', liquidity: 'Low' },
+    { id: 3, logo: '/images/paypal-logo.png', name: 'PayPlus Fintech', price: 1320, lot: 120, change: '+8%', liquidity: 'High' },
+
   ]
 }
+
 
 export const fetchBrokers = async () => {
   return [
