@@ -7,7 +7,7 @@ import IPOCard from '../components/IPOCard';
 import UnlistedCard from '../components/UnlistedCard';
 
 const features = [
-  "Stocks", "IPO Updates", "Unlisted Shares", "Broker Comparison",
+   "IPO Updates", "Unlisted Shares", "Broker Comparison",
   "Options", "Futures", "Commodity", "ETFs", "Mutual Funds", "NFO", "Corporate Actions"
 ];
 
@@ -37,91 +37,99 @@ export default function Home() {
 
   return (
     <>
-      {/* HERO Section */}
-      <section className="relative min-h-screen flex flex-col justify-center px-5 pt-24 pb-16 md:pt-20">
-        <div className="text-center max-w-6xl mx-auto -mt-8 md:-mt-12">
-          {/* Main Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-black text-gray-900 leading-tight
-              text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
-          >
-            India’s Most Trusted Platform for
-          </motion.h1>
+<section className="relative flex flex-col justify-start px-5 pt-10 sm:pt-12 md:pt-14 lg:pt-16 min-h-[65vh]">
+  <div className="text-center max-w-full mx-auto overflow-visible">
 
-          {/* Rotating Feature */}
-          <div className="relative h-20 sm:h-24 md:h-28 lg:h-32 mt-4">
-            <span className="invisible font-black text-green-600 whitespace-nowrap
-              text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-              {longestFeature}
-            </span>
+    {/* Main Heading */}
+    <motion.h1
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="font-black text-gray-900 
+                 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 
+                 leading-tight sm:leading-tight md:leading-normal"
+    >
+      India’s Most Trusted Analysis Platform for Stocks
+    </motion.h1>
 
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={index}
-                initial={{ y: 70, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -70, opacity: 0 }}
-                transition={{ y: { type: "spring", stiffness: 300, damping: 28 } }}
-                className="absolute inset-0 flex justify-center items-center"
-              >
-                <span className="font-black text-green-600
-                  text-5xl sm:text-6xl md:text-7xl lg:text-8xl">
-                  {features[index]}
-                </span>
-              </motion.div>
-            </AnimatePresence>
+    {/* Rotating Feature */}
+ 
+<div className="relative w-full mt-2 sm:mt-4 flex justify-center">
+  <span className="invisible font-black text-green-600 whitespace-nowrap
+                   text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
+    {longestFeature}
+  </span>
+
+  <AnimatePresence mode="wait">
+    <motion.span
+      key={index}
+      initial={{ opacity: 0, y: 5 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -5 }}
+      transition={{ type: "spring", stiffness: 300, damping: 25 }}
+      className="absolute font-black text-green-600 whitespace-nowrap
+                 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl"
+    >
+      {features[index]}
+    </motion.span>
+  </AnimatePresence>
+</div>
+
+
+    {/* Subtext */}
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.7, duration: 1 }}
+      className="mt-4 sm:mt-6 md:mt-8 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 
+                 font-medium text-gray-600 max-w-4xl mx-auto text-center leading-snug"
+    >
+      Real-time Market Coverage • Research Backed • Trader Friendly
+    </motion.p>
+  </div>
+</section>
+
+
+
+
+
+
+{/* IPO Section */}
+<section className="relative px-4 pb-24 mt-32">
+  <div className="max-w-7xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center mb-12"
+    >
+      <h2 className="font-black text-gray-900 text-4xl sm:text-5xl md:text-6xl lg:text-4xl">
+        Live IPO Tracker
+      </h2>
+    </motion.div>
+
+    {isIPOLoading ? (
+      <div className="flex justify-center py-20">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-green-600"></div>
+      </div>
+    ) : (
+      <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {ipos.map((ipo) => (
+          <div key={ipo.id} className="w-full">
+            <IPOCard ipo={ipo} />
           </div>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
 
-          {/* Subtext */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 1 }}
-            className="mt-10 text-sm sm:text-base md:text-lg lg:text-xl font-medium text-gray-600 max-w-3xl mx-auto"
-          >
-            Real-time Market Coverage • Research Backed • Trader Friendly
-          </motion.p>
-        </div>
-      </section>
-
-      {/* IPO Section */}
-      <section className="relative px-4 pb-24 -mt-10 md:-mt-16">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="font-black text-gray-900 text-4xl sm:text-5xl md:text-6xl lg:text-5xl">
-              Live IPO Tracker
-            </h2>
-          </motion.div>
-
-          {isIPOLoading ? (
-            <div className="flex justify-center py-20">
-              <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-green-600"></div>
-            </div>
-          ) : (
-            <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {ipos.map((ipo) => (
-                <div key={ipo.id} className="w-full">
-                  <IPOCard ipo={ipo} />
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </section>
 
       {/* Unlisted Shares & Pre-IPO Section */}
       <section className="relative px-4 py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl font-black text-gray-900">
               Unlisted Shares & Pre-IPO
             </h2>
             <p className="text-gray-600 mt-2 text-sm md:text-base">
