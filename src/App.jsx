@@ -10,6 +10,7 @@ import PreIPOStocks from './pages/PreIPOStocks'
 import BrokerAnalyzer from './pages/BrokerAnalyzer'
 import InsightHub from './pages/InsightHub'
 import SkillUp from './pages/SkillUp'
+import IPODetails from './pages/IPODetails';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/pre-ipo-stocks" element={<PreIPOStocks />} />
             <Route path="/broker-analyzer" element={<BrokerAnalyzer />} />
             <Route path="/insight-hub" element={<InsightHub />} />
+            <Route path="/ipo/:id" element={<IPODetails />} />
             <Route path="/skill-up" element={<SkillUp />} />
           </Routes>
         </main>

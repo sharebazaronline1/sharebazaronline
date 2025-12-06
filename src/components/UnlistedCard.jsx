@@ -1,41 +1,53 @@
-// components/UnlistedCard.jsx
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const UnlistedCard = ({ stock }) => {
   return (
     <motion.div
       whileHover={{ y: -4 }}
-      className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 overflow-hidden w-full max-w-xs mx-auto"
+      className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 
+      border border-gray-100 w-full max-w-[340px] mx-auto flex flex-col h-full min-h-[280px]"
     >
-      {/* Header - Logo + Name */}
-      <div className="px-5 py-4 bg-white flex items-center gap-3 border-b border-gray-200">
-        {/* Company Logo Circle */}
-        <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 font-bold">
-          {stock.name.charAt(0)}
+      {/* Header */}
+      <div className="px-6 py-5 border-b border-gray-100">
+        <div className="flex items-center gap-3">
+          {/* Logo Circle */}
+          <div className="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-700 font-semibold">
+            {stock?.name?.charAt(0)}
+          </div>
+
+          {/* Title */}
+          <div>
+            <h3 className="text-base font-semibold text-gray-800">
+              {stock.name}
+            </h3>
+            {stock.fullName && (
+              <p className="text-xs text-gray-500 truncate w-36">
+                {stock.fullName}
+              </p>
+            )}
+          </div>
         </div>
-        <h3 className="font-bold text-lg tracking-tight">{stock.name}</h3>
       </div>
 
-      {/* Body - Price & Lot Size */}
-      <div className="p-5 space-y-4">
-        <div className="flex justify-between items-center">
-          <span className="text-gray-600 text-sm font-medium">Share Price:</span>
-          <span className="font-bold text-gray-900 text-sm">₹{stock.price}</span>
+      {/* Stats */}
+      <div className="px-6 py-3 grid grid-cols-2 text-center text-xs">
+        <div>
+          <p className="text-gray-500">Share Price</p>
+          <p className="font-bold text-gray-900 text-sm">₹{stock.price}</p>
         </div>
-
-        <div className="flex justify-between items-center">
-          <span className="text-gray-600 text-sm font-medium">Lot Size:</span>
-          <span className="font-bold text-gray-900 text-sm">{stock.lot || '-'}</span>
+        <div>
+          <p className="text-gray-500">Lot Size</p>
+          <p className="font-bold text-gray-900 text-sm">{stock.lot || "—"}</p>
         </div>
       </div>
 
       {/* Buttons */}
-      <div className="px-5 pb-5 flex gap-3">
-        <button className="flex-1 px-5 sm:px-6 py-2.5 bg-white border border-purple-200 text-blue-700 rounded-xl font-medium text-sm hover:bg-purple-50 transition">
-          Buy Now
+      <div className="flex justify-between px-6 pb-5 gap-3 mt-auto">
+        <button className="w-1/2 text-xs py-2 border rounded-xl border-gray-300 hover:bg-gray-50 transition">
+          Buy
         </button>
-        <button className="flex-1 px-6 sm:px-7 py-2.5 bg-blue-600 text-white rounded-xl font-medium text-sm hover:bg-blue-700 shadow transition">
-          View 
+        <button className="w-1/2 text-xs py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition">
+          View
         </button>
       </div>
     </motion.div>
