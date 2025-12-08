@@ -78,7 +78,7 @@ const HeaderAndNav = () => {
 
             <Link
               to="/login"
-              className="ml-4 px-7 py-2.5 bg-blue-500 text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+              className="ml-4 px-7 py-2.5 bg-green-500 text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
               Login
             </Link>
@@ -118,7 +118,7 @@ const HeaderAndNav = () => {
             <Link to="/blog" className="block text-gray-800">Insight Hub</Link>
             <Link to="/courses" className="block text-gray-800">SkillUp</Link>
 
-            <Link to="/login" className="block text-center py-3 bg-blue-500 text-white font-bold rounded-full shadow-lg">
+            <Link to="/login" className="block text-center py-3 bg-green-500 text-white font-bold rounded-full shadow-lg">
               Login
             </Link>
           </div>

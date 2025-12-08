@@ -35,21 +35,22 @@ const IPODashboard = ({ ipos = [] }) => {
 
       {/* Tabs + Filter */}
       <div className="px-6 py-4 border-b border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <div className="flex gap-3 flex-wrap justify-center">
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
-                activeTab === tab
-                  ? "bg-gray-900 text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
+<div className="flex gap-3 flex-nowrap justify-start sm:justify-center overflow-x-auto scrollbar-hide w-full py-1">
+  {tabs.map((tab) => (
+    <button
+      key={tab}
+      onClick={() => setActiveTab(tab)}
+      className={`px-5 py-2 whitespace-nowrap rounded-full text-xs sm:text-sm font-medium transition-all ${
+        activeTab === tab
+          ? "bg-gray-900 text-white"
+          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+      }`}
+    >
+      {tab}
+    </button>
+  ))}
+</div>
+
 
         <select
           value={typeFilter}
