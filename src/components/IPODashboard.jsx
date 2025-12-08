@@ -3,163 +3,172 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-const tabs = ["Open", "Closed", "Upcoming"];
-
 const IPODashboard = ({ ipos = [] }) => {
-  const [activeTab, setActiveTab] = useState("Open");
-  const [typeFilter, setTypeFilter] = useState("All");
   const navigate = useNavigate();
-
-  // Filter logic
-  const filteredIPOs = ipos.filter((ipo) => {
-    const isLive = ipo.status === "live";
-    const isClosed = ipo.listingPrice !== undefined;
-    const isUpcoming = !ipo.status && !ipo.listingPrice;
-
-    const matchesTab =
-      activeTab === "Open" ? isLive :
-      activeTab === "Closed" ? isClosed :
-      activeTab === "Upcoming" ? isUpcoming : true;
-
-    const matchesType = typeFilter === "All" || ipo.type?.toLowerCase().includes(typeFilter.toLowerCase());
-
-    return matchesTab && matchesType;
-  });
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
       {/* Header */}
-      <div className="px-6 py-5 border-b border-gray-200 bg-gray-50">
-        <h2 className="text-2xl font-bold text-center text-gray-800">IPO Tracker</h2>
+      <div className="px-6 py-6 bg-gray-50 border-b border-gray-200">
+        <h2 className="text-3xl font-black text-center text-gray-900">IPO Tracker</h2>
+        <p className="text-center text-gray-600 mt-2 text-lg">Latest Mainboard & SME IPOs in India</p>
       </div>
 
-      {/* Tabs + Filter */}
-      <div className="px-6 py-4 border-b border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
-<div className="flex gap-3 flex-nowrap justify-start sm:justify-center overflow-x-auto scrollbar-hide w-full py-1">
-  {tabs.map((tab) => (
-    <button
-      key={tab}
-      onClick={() => setActiveTab(tab)}
-      className={`px-5 py-2 whitespace-nowrap rounded-full text-xs sm:text-sm font-medium transition-all ${
-        activeTab === tab
-          ? "bg-gray-900 text-white"
-          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-      }`}
-    >
-      {tab}
-    </button>
-  ))}
-</div>
+      {/* IPO Cards */}
+      <div className="p-6 pb-10">
+        {ipos.length === 0 ? (
+          <div className="text-center py-28">
+            <p className="text-2xl font-medium text-gray-500">No IPOs available</p>
+            <p className="text-gray-400 mt-4 text-lg">Check back soon!</p>
+          </div>
+        ) : (
+          <>
+            {/* Mobile & Tablet: Horizontal Scroll */}
+            <div className="lg:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide">
+              <div className="flex gap-6 pb-4">
+                {ipos.map((ipo, i) => (
+                  <motion.div
+                    key={ipo.id}
+                    initial={{ opacity: 0, x: 50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex-shrink-0 w-80 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg hover:border-gray-300 transition-all duration-300"
+                  >
+                    {/* Card Header */}
+                    <div className="p-5 border-b border-gray-100">
+                      <div className="flex items-center gap-4">
+                        <img
+                          src={ipo.logo || "/placeholder-logo.svg"}
+                          alt={ipo.name}
+                          className="w-14 h-14 object-contain rounded-lg border border-gray-200"
+                        />
+                        <div>
+                          <h3 className="font-bold text-gray-900 text-lg">{ipo.name}</h3>
+                          <p className="text-xs text-gray-500 mt-1">{ipo.fullName || "Mainboard IPO"}</p>
+                        </div>
+                      </div>
+                    </div>
 
+                    {/* Card Body */}
+                    <div className="p-5 space-y-4 text-sm">
+                      <div className="space-y-3">
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Open</span>
+                          <span className="font-medium text-gray-900">{ipo.open || "—"}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Close</span>
+                          <span className="font-medium text-gray-900">{ipo.close || "—"}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Price</span>
+                          <span className="font-medium text-gray-900">₹{ipo.price}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Lot</span>
+                          <span className="font-medium text-gray-900">{ipo.lot} shares</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">Listing</span>
+                          <span className="font-medium text-gray-900">{ipo.listing}</span>
+                        </div>
+                        
+                      </div>
+                    </div>
 
-        <select
-          value={typeFilter}
-          onChange={(e) => setTypeFilter(e.target.value)}
-          className="px-5 py-2 border border-gray-300 rounded-lg text-sm text-gray-700 focus:outline-none focus:border-gray-400"
-        >
-          <option value="All">All Types</option>
-          <option value="Mainboard">Mainboard</option>
-          <option value="SME">SME</option>
-        </select>
-      </div>
+                    {/* Buttons - Smaller */}
+                    <div className="p-5 pt-4 border-t border-gray-100 flex gap-3">
+                      <button
+                        onClick={() => navigate(`/ipo/${ipo.id}`)}
+                        className="flex-1 py-2.5 text-sm font-semibold bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+                      >
+                        Apply
+                      </button>
+                      <button
+                        onClick={() => navigate(`/ipo/${ipo.id}`)}
+                        className="flex-1 py-2.5 text-sm font-semibold border border-gray-300 text-gray-800 rounded-lg hover:bg-gray-50 transition"
+                      >
+                        View
+                      </button>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
 
-      {/* Responsive Table */}
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[800px]">
-          <thead>
-            <tr className="bg-gray-50 border-b border-gray-200 text-left text-xs font-medium text-gray-600 uppercase tracking-wider">
-              <th className="px-4 py-3">Company</th>
-              <th className="px-4 py-3 text-center">Open</th>
-              <th className="px-4 py-3 text-center">Close</th>
-              <th className="px-4 py-3 text-center">Price</th>
-              <th className="px-4 py-3 text-center">Listing</th>
-              <th className="px-4 py-3 text-center">Lot</th>
-              <th className="px-4 py-3 text-center">Action</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-gray-200">
-            {filteredIPOs.length === 0 ? (
-              <tr>
-                <td colSpan="7" className="text-center py-16 text-gray-500 text-lg">
-                  No {activeTab.toLowerCase()} IPOs available
-                </td>
-              </tr>
-            ) : (
-              filteredIPOs.map((ipo, i) => (
-                <motion.tr
+            {/* Desktop: Grid */}
+            <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {ipos.map((ipo, i) => (
+                <motion.div
                   key={ipo.id}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: i * 0.05 }}
-                  className="hover:bg-gray-50 transition-colors"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                  whileHover={{ y: -4 }}
+                  className="bg-white rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
                 >
-                  {/* Company */}
-                  <td className="px-4 py-4">
-                    <div className="flex items-center gap-3">
+                  {/* Header */}
+                  <div className="p-6 border-b border-gray-100">
+                    <div className="flex items-center gap-4">
                       <img
                         src={ipo.logo || "/placeholder-logo.svg"}
                         alt={ipo.name}
-                        className="w-10 h-10 object-contain rounded-lg border border-gray-200"
+                        className="w-16 h-16 object-contain rounded-xl border border-gray-200"
                       />
                       <div>
-                        <p className="font-semibold text-gray-900 text-sm">{ipo.name}</p>
-                        {ipo.fullName && (
-                          <p className="text-xs text-gray-500">{ipo.fullName}</p>
-                        )}
+                        <h3 className="font-bold text-gray-900 text-lg">{ipo.name}</h3>
+                        <p className="text-sm text-gray-500 mt-1">{ipo.fullName || "Mainboard IPO"}</p>
                       </div>
                     </div>
-                  </td>
+                  </div>
 
-                  {/* Dates */}
-                  <td className="text-center text-xs sm:text-sm text-gray-700 font-medium">
-                    {ipo.open || "—"}
-                  </td>
-                  <td className="text-center text-xs sm:text-sm text-gray-700 font-medium">
-                    {ipo.close || "—"}
-                  </td>
-
-                  {/* Price */}
-                  <td className="text-center font-semibold text-gray-900 text-sm">
-                    ₹{ipo.price}
-                  </td>
-
-                  {/* Listing Date */}
-                  <td className="text-center text-xs sm:text-sm text-gray-700 font-medium">
-                    {ipo.listing || "TBA"}
-                  </td>
-
-                  {/* Lot Size */}
-                  <td className="text-center font-semibold text-gray-800 text-sm">
-                    {ipo.lot || "—"}
-                  </td>
-
-                  {/* Action Buttons */}
-                  <td className="text-center py-3">
-                    <div className="flex justify-center gap-2 flex-wrap">
-                      <button
-                        onClick={() => navigate(`/ipo/${ipo.id}`)}
-                        disabled={activeTab !== "Open"}
-                        className={`px-4 py-2 rounded-lg font-medium text-xs sm:text-sm transition-all ${
-                          activeTab === "Open"
-                            ? "bg-green-600 text-white hover:bg-green-700 shadow-sm"
-                            : "bg-gray-200 text-gray-500 cursor-not-allowed"
-                        }`}
-                      >
-                        Apply Now
-                      </button>
-                      <button
-                        onClick={() => navigate(`/ipo/${ipo.id}`)}
-                        className="px-4 py-2 border border-gray-400 text-gray-700 rounded-lg font-medium text-xs sm:text-sm hover:bg-gray-50 transition"
-                      >
-                        View More
-                      </button>
+                  {/* Body */}
+                  <div className="p-6 space-y-5 text-sm">
+                    <div className="space-y-4">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Open Date</span>
+                        <span className="font-medium text-gray-900">{ipo.open || "—"}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Close Date</span>
+                        <span className="font-medium text-gray-900">{ipo.close || "—"}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Price Band</span>
+                        <span className="font-medium text-gray-900">₹{ipo.price}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Lot Size</span>
+                        <span className="font-medium text-gray-900">{ipo.lot} shares</span>
+                      </div>
+                       <div className="flex justify-between">
+                          <span className="text-gray-600">Listing</span>
+                          <span className="font-medium text-gray-900">{ipo.listing} </span>
+                        </div>
+                     
                     </div>
-                  </td>
-                </motion.tr>
-              ))
-            )}
-          </tbody>
-        </table>
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="p-6 pt-4 border-t border-gray-100 flex gap-3">
+                    <button
+                      onClick={() => navigate(`/ipo/${ipo.id}`)}
+                      className="flex-1 py-3 text-sm font-semibold bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+                    >
+                      Apply Now
+                    </button>
+                    <button
+                      onClick={() => navigate(`/ipo/${ipo.id}`)}
+                      className="flex-1 py-3 text-sm font-semibold border border-gray-300 text-gray-800 rounded-lg hover:bg-gray-50 transition"
+                    >
+                      View More
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

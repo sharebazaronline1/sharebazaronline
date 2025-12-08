@@ -36,15 +36,10 @@ const HeaderAndNav = () => {
               <div className="absolute left-0 top-full mt-2 w-48 bg-white border border-gray-200 rounded-xl shadow-xl z-[999]
                 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto
                 transition-opacity duration-200">
-                <Link to="/ipo/current" className="block  px-4 py-2 hover:bg-gray-50">
-                  Current IPO
+                <Link to="/ipo/ipolist" className="block  px-4 py-2 hover:bg-gray-50">
+                  List Of Ipo
                 </Link>
-                <Link to="/ipo/past" className="block px-4 py-2 hover:bg-gray-50">
-                  Past IPO
-                </Link>
-                <Link to="/ipo/upcoming" className="block px-4 py-2 hover:bg-gray-50">
-                  Upcoming IPO
-                </Link>
+                
               </div>
             </div>
 
