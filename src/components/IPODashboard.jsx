@@ -6,6 +6,9 @@ import { useNavigate } from "react-router-dom";
 const IPODashboard = ({ ipos = [] }) => {
   const navigate = useNavigate();
 
+  
+  const liveIPOs = ipos.filter((ipo) => ipo.status?.toLowerCase() === "live");
+
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
       {/* Header */}
@@ -16,17 +19,17 @@ const IPODashboard = ({ ipos = [] }) => {
 
       {/* IPO Cards */}
       <div className="p-6 pb-10">
-        {ipos.length === 0 ? (
+        {liveIPOs.length === 0 ? (
           <div className="text-center py-28">
-            <p className="text-2xl font-medium text-gray-500">No IPOs available</p>
-            <p className="text-gray-400 mt-4 text-lg">Check back soon!</p>
+            <p className="text-2xl font-medium text-gray-500">No LIVE IPOs</p>
+            <p className="text-gray-400 mt-4 text-lg">Check again soon!</p>
           </div>
         ) : (
           <>
             {/* Mobile & Tablet: Horizontal Scroll */}
             <div className="lg:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide">
               <div className="flex gap-6 pb-4">
-                {ipos.map((ipo, i) => (
+                {liveIPOs.map((ipo, i) => (
                   <motion.div
                     key={ipo.id}
                     initial={{ opacity: 0, x: 50 }}
@@ -72,11 +75,10 @@ const IPODashboard = ({ ipos = [] }) => {
                           <span className="text-gray-600">Listing</span>
                           <span className="font-medium text-gray-900">{ipo.listing}</span>
                         </div>
-                        
                       </div>
                     </div>
 
-                    {/* Buttons - Smaller */}
+                    {/* Buttons */}
                     <div className="p-5 pt-4 border-t border-gray-100 flex gap-3">
                       <button
                         onClick={() => navigate(`/ipo/${ipo.id}`)}
@@ -96,9 +98,9 @@ const IPODashboard = ({ ipos = [] }) => {
               </div>
             </div>
 
-            {/* Desktop: Grid */}
+            {/* Desktop View */}
             <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {ipos.map((ipo, i) => (
+              {liveIPOs.map((ipo, i) => (
                 <motion.div
                   key={ipo.id}
                   initial={{ opacity: 0, y: 20 }}
@@ -141,11 +143,10 @@ const IPODashboard = ({ ipos = [] }) => {
                         <span className="text-gray-600">Lot Size</span>
                         <span className="font-medium text-gray-900">{ipo.lot} shares</span>
                       </div>
-                       <div className="flex justify-between">
-                          <span className="text-gray-600">Listing</span>
-                          <span className="font-medium text-gray-900">{ipo.listing} </span>
-                        </div>
-                     
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Listing</span>
+                        <span className="font-medium text-gray-900">{ipo.listing}</span>
+                      </div>
                     </div>
                   </div>
 
