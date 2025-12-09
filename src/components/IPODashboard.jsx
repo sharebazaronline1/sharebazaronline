@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 const IPODashboard = ({ ipos = [] }) => {
   const navigate = useNavigate();
 
-  
   const liveIPOs = ipos.filter((ipo) => ipo.status?.toLowerCase() === "live");
 
   return (
@@ -26,7 +25,7 @@ const IPODashboard = ({ ipos = [] }) => {
           </div>
         ) : (
           <>
-            {/* Mobile & Tablet: Horizontal Scroll */}
+            {/* Mobile Scroll View */}
             <div className="lg:hidden -mx-6 px-6 overflow-x-auto scrollbar-hide">
               <div className="flex gap-6 pb-4">
                 {liveIPOs.map((ipo, i) => (
@@ -35,8 +34,13 @@ const IPODashboard = ({ ipos = [] }) => {
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex-shrink-0 w-80 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg hover:border-gray-300 transition-all duration-300"
+                    className="relative flex-shrink-0 w-80 bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-lg hover:border-gray-300 transition-all duration-300"
                   >
+                    {/* LIVE Badge */}
+                    <span className="absolute top-3 right-3 text-xs px-2 py-0.5 bg-green-100 text-green-700 font-semibold rounded-md">
+                      LIVE
+                    </span>
+
                     {/* Card Header */}
                     <div className="p-5 border-b border-gray-100">
                       <div className="flex items-center gap-4">
@@ -98,7 +102,7 @@ const IPODashboard = ({ ipos = [] }) => {
               </div>
             </div>
 
-            {/* Desktop View */}
+         
             <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {liveIPOs.map((ipo, i) => (
                 <motion.div
@@ -107,8 +111,13 @@ const IPODashboard = ({ ipos = [] }) => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 }}
                   whileHover={{ y: -4 }}
-                  className="bg-white rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
+                  className="relative bg-white rounded-2xl border border-gray-200 hover:border-gray-300 hover:shadow-lg transition-all duration-300"
                 >
+                  
+                  <span className="absolute top-1.5 right-2 text-xs px-2 py-0.5 bg-green-100 text-green-700 font-semibold rounded-md">
+                    LIVE
+                  </span>
+
                   {/* Header */}
                   <div className="p-6 border-b border-gray-100">
                     <div className="flex items-center gap-4">
