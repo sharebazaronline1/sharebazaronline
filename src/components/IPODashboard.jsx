@@ -4,7 +4,26 @@ import { useNavigate } from "react-router-dom";
 
 const IPODashboard = ({ ipos = [] }) => {
   const navigate = useNavigate();
+
+  // Filter only LIVE IPOs
   const liveIPOs = ipos.filter((ipo) => ipo.status?.toLowerCase() === "live");
+
+  // Parse close date safely
+  const parseDate = (dateStr) => {
+    if (!dateStr) return null;
+    const d = new Date(dateStr);
+    return isNaN(d.getTime()) ? null : d;
+  };
+
+  // Get only top 4 LIVE IPOs (closing soonest first)
+  const top4IPOs = liveIPOs
+    .map((ipo) => ({
+      ...ipo,
+      _closeDate: parseDate(ipo.close),
+    }))
+    .filter((ipo) => ipo._closeDate !== null)
+    .sort((a, b) => a._closeDate - b._closeDate)
+    .slice(0, 4);
 
   const getIPOType = (ipo) => {
     const name = (ipo.fullName || ipo.name || "").toLowerCase();
@@ -14,25 +33,25 @@ const IPODashboard = ({ ipos = [] }) => {
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
       {/* Header */}
-      <div className="px-6 py-6 bg-gray-50 border-b border-gray-200">
-        <h2 className="text-3xl font-black text-center text-gray-900">IPO Tracker</h2>
-        <p className="text-center text-gray-600 mt-2 text-lg">
+      <div className="px-6 py-6 bg-gray-50 border-b border-gray-200 text-center">
+        <h2 className="text-3xl font-black text-gray-900">IPO Tracker</h2>
+        <p className="text-lg text-gray-600 mt-2">
           Latest Mainboard & SME IPOs in India
         </p>
       </div>
 
       <div className="p-6 pb-10">
-        {liveIPOs.length === 0 ? (
+        {top4IPOs.length === 0 ? (
           <div className="text-center py-28">
             <p className="text-2xl font-medium text-gray-500">No LIVE IPOs</p>
             <p className="text-gray-400 mt-4 text-lg">Check again soon!</p>
           </div>
         ) : (
           <>
-            {/* Mobile: Horizontal Scroll */}
+            {/* Mobile: Horizontal Scroll – Only 4 cards */}
             <div className="lg:hidden -mx-6 overflow-x-auto scrollbar-hide">
               <div className="flex gap-6 px-6 py-4">
-                {liveIPOs.map((ipo, i) => {
+                {top4IPOs.map((ipo, i) => {
                   const type = getIPOType(ipo);
                   return (
                     <motion.div
@@ -43,7 +62,7 @@ const IPODashboard = ({ ipos = [] }) => {
                       className="flex-shrink-0 w-80"
                     >
                       <div className="relative bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition">
-                        {/* Subtle Badges */}
+                        {/* Badges – Exactly as before */}
                         <div className="absolute top-3 right-3 flex flex-col items-end gap-1 z-10">
                           <span className="text-[10px] px-1.5 py-0.5 bg-gray-100 text-gray-600 font-medium rounded">
                             {type}
@@ -53,9 +72,7 @@ const IPODashboard = ({ ipos = [] }) => {
                           </span>
                         </div>
 
-                        {/* Fixed Height Card */}
                         <div className="h-full flex flex-col">
-                          {/* Header */}
                           <div className="p-4 border-b border-gray-100">
                             <div className="flex items-center gap-3 pr-16">
                               <img
@@ -74,7 +91,6 @@ const IPODashboard = ({ ipos = [] }) => {
                             </div>
                           </div>
 
-                          {/* Body - Fixed Height */}
                           <div className="p-4 space-y-2 text-xs flex-1">
                             <div className="flex justify-between">
                               <span className="text-gray-600">Open</span>
@@ -98,7 +114,6 @@ const IPODashboard = ({ ipos = [] }) => {
                             </div>
                           </div>
 
-                          {/* Buttons */}
                           <div className="p-4 pt-3 border-t border-gray-100 flex gap-2 mt-auto">
                             <button
                               onClick={() => navigate(`/ipo/${ipo.id}`)}
@@ -121,9 +136,9 @@ const IPODashboard = ({ ipos = [] }) => {
               </div>
             </div>
 
-            {/* Desktop: Grid */}
+            {/* Desktop: Grid – Only 4 cards */}
             <div className="hidden lg:grid lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {liveIPOs.map((ipo, i) => {
+              {top4IPOs.map((ipo, i) => {
                 const type = getIPOType(ipo);
                 return (
                   <motion.div
@@ -134,7 +149,7 @@ const IPODashboard = ({ ipos = [] }) => {
                     whileHover={{ y: -4 }}
                   >
                     <div className="relative bg-white rounded-2xl border border-gray-200 hover:border-gray-300 transition h-full flex flex-col">
-                      {/* Subtle Badges */}
+                      {/* Badges – Exactly same as before */}
                       <div className="absolute top-4 right-4 flex flex-col items-end gap-1.5 z-10">
                         <span className="text-xs px-2 py-0.5 bg-gray-100 text-gray-600 font-medium rounded">
                           {type}
@@ -144,7 +159,6 @@ const IPODashboard = ({ ipos = [] }) => {
                         </span>
                       </div>
 
-                      {/* Header */}
                       <div className="p-5 border-b border-gray-100">
                         <div className="flex items-center gap-4 pr-20">
                           <img
@@ -163,7 +177,6 @@ const IPODashboard = ({ ipos = [] }) => {
                         </div>
                       </div>
 
-                      {/* Body */}
                       <div className="p-5 space-y-3 text-sm flex-1">
                         <div className="space-y-2.5 text-xs">
                           <div className="flex justify-between">
@@ -189,7 +202,6 @@ const IPODashboard = ({ ipos = [] }) => {
                         </div>
                       </div>
 
-                      {/* Buttons */}
                       <div className="p-5 pt-3 border-t border-gray-100 flex gap-3 mt-auto">
                         <button
                           onClick={() => navigate(`/ipo/${ipo.id}`)}

@@ -1,7 +1,8 @@
-// src/components/UnlistedCard.jsx 
+// src/components/UnlistedCard.jsx
 import { motion } from "framer-motion";
 
 const UnlistedCard = ({ stock }) => {
+ 
   return (
     <motion.div
       whileHover={{ y: -4 }}
@@ -10,9 +11,27 @@ const UnlistedCard = ({ stock }) => {
       {/* Header */}
       <div className="p-6 border-b border-gray-100">
         <div className="flex items-center gap-4">
-          <div className="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center text-gray-700 font-bold text-lg shadow-sm">
-            {stock?.name?.charAt(0)}
+          {/* Company Logo with Fallback */}
+          <div className="relative w-14 h-14 bg-white border-2 border-gray-200 rounded-xl overflow-hidden shadow-sm flex-shrink-0">
+           
+              <img
+                src={stock.logo}
+                alt={`${stock.name} logo`}
+                className="w-full h-full object-contain p-2"
+                onError={(e) => {
+                  // Hide broken image and show fallback
+                  e.currentTarget.style.display = "none";
+                  e.currentTarget.nextElementSibling.style.display = "flex";
+                }}
+              />
+   
+
+            {/* Fallback: First letter (always rendered, hidden if image loads) */}
+            <div className={`absolute inset-0 flex items-center justify-center text-gray-700 font-bold text-xl bg-gray-50 ${stock.logo ? 'hidden' : 'flex'}`}>
+              {stock?.name?.charAt(0)}
+            </div>
           </div>
+
           <div className="flex-1 min-w-0">
             <h3 className="font-bold text-gray-900 text-lg leading-tight truncate">
               {stock.name}

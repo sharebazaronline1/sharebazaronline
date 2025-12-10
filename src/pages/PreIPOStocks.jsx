@@ -1,3 +1,4 @@
+// src/pages/PreIPOStocks.jsx
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -5,167 +6,127 @@ import { fetchIPOs } from "../api/mockApi";
 
 const PreIPOStocks = () => {
   const [ipos, setIPOs] = useState([]);
-  const [page, setPage] = useState(1);
-  const PAGE_SIZE = 20;
   const navigate = useNavigate();
 
   useEffect(() => {
     const load = async () => {
       const data = await fetchIPOs();
-
-
       const upcoming = data.filter(
         (item) => item?.status?.toLowerCase() === "upcoming"
       );
-
       setIPOs(upcoming);
     };
     load();
   }, []);
 
-  const paginatedData = ipos.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
-  const totalPages = Math.ceil(ipos.length / PAGE_SIZE);
-
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-6">
+    <div className="w-full max-w-none px-4 sm:px-6 lg:px-8 py-8">
+      {/* Full-width container to use all available space */}
 
-      {/* GRID */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+        {/* Header */}
+        <div className="px-6 sm:px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-200 text-center">
+          <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
+            Pre-IPO & Unlisted Shares
+          </h2>
+          <p className="mt-2 text-lg text-gray-600">
+            Invest early in high-growth companies before they list
+          </p>
+        </div>
 
-        {/* TABLE */}
-        <div className="lg:col-span-9 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+        {/* Table */}
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[900px]">
+            <thead>
+              <tr className="bg-gray-50 text-left text-xs font-bold text-gray-700 uppercase tracking-wider border-b-2 border-gray-200">
+                <th className="px-6 py-5">Company</th>
+                <th className="px-6 py-5 text-center">Current Price</th>
+                <th className="px-6 py-5 text-center">Min. Lot</th>
+                <th className="px-6 py-5 text-center">Depository</th>
+                <th className="px-6 py-5 text-center">Action</th>
+              </tr>
+            </thead>
 
-          {/* Heading */}
-          <div className="px-4 sm:px-6 py-5 bg-gray-50 border-b border-gray-200 text-center">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
-              Pre-IPO Stocks
-            </h2>
-          
-          </div>
-
-          {/* TABLE WRAP */}
-          <div className="p-3 sm:p-6 overflow-x-auto">
-
-            <table className="w-full min-w-[800px]">
-              <thead>
-                <tr className="bg-gray-50 text-left text-xs font-semibold text-gray-600 uppercase border-b border-gray-200">
-                  <th className="px-4 py-3">Company</th>
-                  <th className="px-4 py-3 text-center">Price</th>
-                  <th className="px-4 py-3 text-center">Lot Size</th>
-                  <th className="px-4 py-3 text-center">Depository</th>
-                  <th className="px-4 py-3 text-center">Action</th>
+            <tbody className="divide-y divide-gray-100">
+              {ipos.length === 0 ? (
+                <tr>
+                  <td colSpan="5" className="text-center py-20 text-gray-500 text-lg">
+                    No Pre-IPO / Unlisted shares available right now
+                  </td>
                 </tr>
-              </thead>
-
-              <tbody className="divide-y divide-gray-100 text-sm sm:text-base">
-                {paginatedData.length === 0 ? (
-                  <tr>
-                    <td colSpan="5" className="text-center py-10 text-gray-500">
-                      No Upcoming Pre-IPO Found
-                    </td>
-                  </tr>
-                ) : (
-                  paginatedData.map((ipo, i) => (
-                    <motion.tr
-                      key={ipo.id || i}
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.03 }}
-                      className="hover:bg-gray-50"
-                    >
-                  
-                      <td className="px-4 py-4">
-                        <div className="flex items-center gap-3">
-
-                       
-                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg border border-gray-300 flex items-center justify-center text-gray-900 font-semibold text-lg">
-                            {(ipo?.name ?? "N").charAt(0)}
-                          </div>
-
-                          <div>
-                            <p className="font-semibold text-gray-900 text-sm sm:text-base">
-                              {ipo?.name || "N/A"}
+              ) : (
+                ipos.map((ipo, i) => (
+                  <motion.tr
+                    key={ipo.id || i}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05 }}
+                    className="hover:bg-gray-50 transition-colors"
+                  >
+                    {/* Company */}
+                    <td className="px-6 py-5">
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-blue-100 to-indigo-200 rounded-xl flex items-center justify-center text-xl sm:text-2xl font-bold text-indigo-700 shadow-md">
+                          {(ipo?.name ?? "N").charAt(0).toUpperCase()}
+                        </div>
+                        <div>
+                          <p className="font-bold text-gray-900 text-base sm:text-lg">
+                            {ipo?.name || "N/A"}
+                          </p>
+                          {ipo?.fullName && (
+                            <p className="text-xs sm:text-sm text-gray-500 mt-0.5">
+                              {ipo.fullName}
                             </p>
-                          </div>
+                          )}
                         </div>
-                      </td>
+                      </div>
+                    </td>
 
-                      {/* PRICE */}
-                      <td className="px-4 py-4 text-center font-semibold text-gray-900 text-sm">
+                    {/* Price */}
+                    <td className="px-6 py-5 text-center">
+                      <span className="text-lg font-bold text-green-600">
                         ₹{ipo?.price ?? "-"}
-                      </td>
+                      </span>
+                    </td>
 
-                      {/* LOT SIZE */}
-                      <td className="px-4 py-4 text-center font-medium text-gray-900 text-sm">
-                        {ipo?.minLotSize ?? "-"}
-                      </td>
+                    {/* Lot Size */}
+                    <td className="px-6 py-5 text-center font-medium text-gray-800">
+                      {ipo?.minLotSize ?? "-"} shares
+                    </td>
 
-                      {/* DEPOSITORY */}
-                      <td className="px-4 py-4 text-center text-gray-700 text-sm">
-                        {ipo?.depository ?? "-"}
-                      </td>
+                    {/* Depository */}
+                    <td className="px-6 py-5 text-center text-gray-700">
+                      {ipo?.depository || "-"}
+                    </td>
 
-                      {/* ACTION BUTTONS */}
-                      <td className="px-4 py-4 text-center">
-                        <div className="flex justify-center gap-2">
-                          <button
-                            className="px-3 py-1.5 text-sm bg-green-600 text-white rounded hover:bg-green-700"
-                          >
-                            Buy
-                          </button>
-                          <button
-                            onClick={() => navigate(`/ipo/${ipo.id}`)}
-                            className="px-3 py-1.5 text-sm border border-gray-300 rounded text-gray-700 hover:bg-gray-100"
-                          >
-                            View
-                          </button>
-                        </div>
-                      </td>
-                    </motion.tr>
-                  ))
-                )}
-              </tbody>
-            </table>
-
-            {/* PAGINATION */}
-            <div className="flex justify-center items-center mt-6 gap-3">
-              <button
-                disabled={page === 1}
-                onClick={() => setPage(page - 1)}
-                className="px-3 py-1.5 text-sm border rounded disabled:opacity-40"
-              >
-                Prev
-              </button>
-
-              <p className="text-sm font-medium">
-                {page} / {totalPages}
-              </p>
-
-              <button
-                disabled={page === totalPages}
-                onClick={() => setPage(page + 1)}
-                className="px-3 py-1.5 text-sm border rounded disabled:opacity-40"
-              >
-                Next
-              </button>
-            </div>
-          </div>
+                    {/* Actions */}
+                    <td className="px-6 py-5 text-center">
+                      <div className="flex justify-center gap-3">
+                        <button className="px-5 py-2.5 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition shadow-sm text-sm">
+                          Buy 
+                        </button>
+                        <button
+                          onClick={() => navigate(`/ipo/${ipo.id}`)}
+                          className="px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition text-sm"
+                        >
+                          View 
+                        </button>
+                      </div>
+                    </td>
+                  </motion.tr>
+                ))
+              )}
+            </tbody>
+          </table>
         </div>
 
-        {/* ADS */}
-        <div className="hidden lg:block lg:col-span-3">
-          <div className="sticky top-24">
-            <div className="bg-gray-100 border-dashed border-2 border-gray-300 rounded-xl h-80 flex items-center justify-center text-gray-500">
-              <div className="text-center">
-                <p className="text-lg font-medium">Ad Space</p>
-              
-              </div>
-            </div>
+        {/* Optional Footer Note */}
+        {ipos.length > 0 && (
+          <div className="px-8 py-5 bg-gray-50 border-t border-gray-200 text-center text-sm text-gray-600">
+            Prices are indicative • Subject to availability • Contact for latest quotes
           </div>
-        </div>
-
+        )}
       </div>
-
     </div>
   );
 };
