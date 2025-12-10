@@ -1,9 +1,9 @@
-// src/api/mockApi.js 
+// src/api/mockApi.js — ONLY JAVASCRIPT, NO JSX!
 
 export const fetchIPOs = async () => {
   return [
 
-    
+    // Existing IPOs (from your earlier file)
     {
       id: 154,
       name: "Vidya Wires",
@@ -52,22 +52,22 @@ export const fetchIPOs = async () => {
       type: "Mainboard",
       status: "live",
     },
-    {
-      id: 156,
-      name: "Meesho Limited",
-      fullName: "Meesho (Social Commerce)",
-      logo: "/images/meesho.jpg",
-      open: "03 Dec 2025",
-      close: "05 Dec 2025",
-      listing: "10 Dec 2025",
-      price: "105-111",
-      lot: 135,
-      subscription: "78.88x",
-      listingPrice: null,
-      performance: null,
-      type: "Mainboard",
-      status: "live",
-    },
+     {
+    id: 161,
+    name: "Sai Life Sciences",
+    fullName: "Sai Life Sciences Limited",
+    logo: "/images/sai-science.jpg",
+    open: "04 Dec 2025",
+    close: "06 Dec 2025",
+    listing: "11 Dec 2025",
+    price: "520-548",
+    lot: 27,
+    subscription: "89.10x",
+    listingPrice: null,
+    performance: null,
+    type: "Mainboard",
+    status: "live",
+  },
     {
       id: 157,
       name: "Sudeep Pharma",
@@ -1316,9 +1316,54 @@ export const fetchIPOs = async () => {
 
 export const fetchUnlisted = async () => {
   return [
-    { id: 1, name: 'Zeta Tech', price: 2250, lot: 100, change: '+12%', liquidity: 'Medium' },
-    { id: 2, name: 'BlueFin Payments', price: 825, lot: 50, change: '-4%', liquidity: 'Low' },
-    { id: 3, name: 'PayPlus Fintech', price: 1320, lot: 120, change: '+8%', liquidity: 'High' },
+    {
+      id: 1,
+      name: "Zeta Tech",
+      price: 2250,
+      lot: 100,
+      change: "+12%",
+      liquidity: "Medium",
+    },
+    {
+      id: 2,
+      name: "BlueFin Payments",
+      price: 825,
+      lot: 50,
+      change: "-4%",
+      liquidity: "Low",
+    },
+    {
+      id: 3,
+      name: "PayPlus Fintech",
+      price: 1320,
+      lot: 120,
+      change: "+8%",
+      liquidity: "High",
+    },
+    {
+      id: 4,
+      name: "PharmEasy",
+      price: 4850,
+      lot: 30,
+      change: "+18%",
+      liquidity: "High",
+    },
+    {
+      id: 5,
+      name: "Ola Electric",
+      price: 620,
+      lot: 240,
+      change: "+25%",
+      liquidity: "Very High",
+    },
+    {
+      id: 6,
+      name: "MobiKwik",
+      price: 980,
+      lot: 150,
+      change: "+6%",
+      liquidity: "Medium",
+    },
   ];
 };
 

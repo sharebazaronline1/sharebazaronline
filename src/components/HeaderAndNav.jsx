@@ -91,9 +91,7 @@ const HeaderAndNav = () => {
                   ${preIpoOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none translate-y-1"}`}
                 role="menu"
               >
-                <Link to="/preipo/dhrpfiled" className="block px-4 py-2 hover:bg-gray-50" role="menuitem">
-                  DHRP Filed
-                </Link>
+              
                   <Link to="/pre-ipo-stocks" className="block px-4 py-2 hover:bg-gray-50" role="menuitem">Pre-IPO List</Link>
               </div>
             </div>

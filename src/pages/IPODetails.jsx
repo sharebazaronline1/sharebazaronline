@@ -97,7 +97,7 @@ const IPODetails = () => {
       <div className="bg-blue-50 border-b border-blue-100">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center gap-3">
           <AlertTriangle size={20} className="text-blue-700" />
-          <p className="text-blue-900 font-medium">Quick Verdict: High Growth • Limited Liquidity</p>
+          <p className="text-blue-900 font-medium">Content need to Be Added</p>
         </div>
       </div>
 
@@ -137,7 +137,7 @@ const IPODetails = () => {
                   <div><p className="text-gray-600">Min Lot Size</p><p className="font-medium text-lg">{ipo.minLotSize || ipo.lot} shares</p></div>
                   <div><p className="text-gray-600">Min Investment</p><p className="font-medium text-lg text-green-600">₹{minInvestment.toLocaleString()}</p></div>
                   <div><p className="text-gray-600">Depository</p><p className="font-medium text-lg">{ipo.depository || "NSDL & CDSL"}</p></div>
-                  <div><p className="text-gray-600">Status</p><p className="font-medium text-lg text-orange-600">Pre-IPO / Unlisted</p></div>
+                  <div><p className="text-gray-600">Listing Date</p><p className="font-medium text-lg text-orange-600">{ipo.listing}</p></div>
                 </div>
               </div>
             )}

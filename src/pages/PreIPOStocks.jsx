@@ -6,7 +6,7 @@ import { fetchIPOs } from "../api/mockApi";
 const PreIPOStocks = () => {
   const [ipos, setIPOs] = useState([]);
   const [page, setPage] = useState(1);
-  const PAGE_SIZE = 6;
+  const PAGE_SIZE = 20;
   const navigate = useNavigate();
 
   useEffect(() => {
