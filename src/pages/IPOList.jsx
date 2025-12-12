@@ -1,4 +1,4 @@
-// src/components/IPODashboard.jsx 
+// src/components/IPODashboard.jsx
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -27,6 +27,13 @@ const IPODashboard = () => {
     loadIPOs();
   }, []);
 
+  const getIPOType = (ipo) => {
+    // Priority: explicit type → name contains "sme" → default Mainboard
+    if (ipo.type) return ipo.type.toUpperCase();
+    const name = (ipo.fullName || ipo.name || "").toLowerCase();
+    return name.includes("sme") ? "SME" : "MAINBOARD";
+  };
+
   const filteredIPOs = ipos.filter((ipo) => {
     const isLive = ipo.status?.toLowerCase() === "live";
     const isClosed = ipo.listingPrice != null && ipo.listingPrice !== "";
@@ -38,7 +45,7 @@ const IPODashboard = () => {
       (activeTab === "Upcoming" && isUpcoming);
 
     const matchesType = typeFilter === "All" || 
-      (ipo.type && ipo.type.toLowerCase().includes(typeFilter.toLowerCase()));
+      getIPOType(ipo).toLowerCase().includes(typeFilter.toLowerCase());
 
     return matchesTab && matchesType;
   });
@@ -48,6 +55,16 @@ const IPODashboard = () => {
     if (tab === "Closed") return ipos.filter(i => i.listingPrice != null && i.listingPrice !== "").length;
     if (tab === "Upcoming") return ipos.filter(i => !i.status && (i.listingPrice == null || i.listingPrice === "")).length;
     return 0;
+  };
+
+  // Letter Fallback Component
+  const LetterAvatar = ({ name }) => {
+    const letter = name?.charAt(0).toUpperCase() || "?";
+    return (
+      <div className="w-14 h-14 rounded-lg bg-gray-500 flex items-center justify-center text-white font-bold text-2xl shadow-md">
+        {letter}
+      </div>
+    );
   };
 
   if (loading) {
@@ -62,8 +79,6 @@ const IPODashboard = () => {
   return (
     <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-
-        {/* IPO Tracker Card */}
         <div className="lg:col-span-12 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="px-8 py-6 bg-gray-50 border-b border-gray-200">
             <h2 className="text-3xl font-black text-center text-gray-900">IPO Tracker</h2>
@@ -127,63 +142,92 @@ const IPODashboard = () => {
                       </td>
                     </tr>
                   ) : (
-                    filteredIPOs.map((ipo, i) => (
-                      <motion.tr
-                        key={ipo.id}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: i * 0.05 }}
-                        className="hover:bg-gray-50 transition"
-                      >
-                        <td className="px-8 py-6">
-                          <div className="flex items-center gap-4">
-                            <img
-                              src={ipo.logo || "/placeholder-logo.svg"}
-                              alt={ipo.name}
-                              className="w-14 h-14 object-contain rounded-lg border border-gray-200"
-                            />
-                            <div>
-                              <p className="font-bold text-gray-900 text-lg">{ipo.name}</p>
-                              <p className="text-xs text-gray-500 mt-1">{ipo.fullName || "Mainboard IPO"}</p>
+                    filteredIPOs.map((ipo, i) => {
+                      const type = getIPOType(ipo);
+                      const hasLogo = ipo.logo && ipo.logo.trim() !== "";
+
+                      return (
+                        <motion.tr
+                          key={ipo.id}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: i * 0.05 }}
+                          className="hover:bg-gray-50 transition"
+                        >
+                          {/* Company + Logo + Type Badge */}
+                          <td className="px-8 py-6">
+                            <div className="flex items-center gap-4">
+                              {/* Logo or Letter Avatar */}
+                              {hasLogo ? (
+                                <img
+                                  src={ipo.logo}
+                                  alt={ipo.name}
+                                  className="w-14 h-14 object-contain rounded-lg border border-gray-200 bg-white shadow-sm"
+                                  onError={(e) => {
+                                    e.target.style.display = "none";
+                                    e.target.nextElementSibling.style.display = "flex";
+                                  }}
+                                />
+                              ) : null}
+                              <div className={`${hasLogo ? "hidden" : "flex"}`}>
+                                <LetterAvatar name={ipo.name} />
+                              </div>
+
+                              {/* Company Name + Type Badge */}
+                              <div className="flex items-center gap-3">
+                                <div>
+                                  <p className="font-bold text-gray-900 text-lg">{ipo.name}</p>
+                                  <p className="text-xs text-gray-500 mt-1">{ipo.fullName || "IPO"}</p>
+                                </div>
+                                {/* SME = Blue, Mainboard = Green */}
+                                <span
+                                  className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold shadow-sm ${
+                                    type === "SME"
+                                      ? "bg-blue-100 text-blue-700 border border-blue-200"
+                                      : "bg-green-100 text-green-700 border border-green-200"
+                                  }`}
+                                >
+                                  {type}
+                                </span>
+                              </div>
                             </div>
-                          </div>
-                        </td>
+                          </td>
 
-                        <td className="px-8 py-6 text-center text-gray-700">{ipo.open || "—"}</td>
-                        <td className="px-8 py-6 text-center text-gray-700">{ipo.close || "—"}</td>
-                        <td className="px-8 py-6 text-center font-bold text-gray-900 text-lg">₹{ipo.price}</td>
-                        <td className="px-8 py-6 text-center text-gray-700">{ipo.listing || "TBA"}</td>
-                        <td className="px-8 py-6 text-center font-medium text-gray-900 text-lg">{ipo.lot}</td>
+                          <td className="px-8 py-6 text-center text-gray-700">{ipo.open || "—"}</td>
+                          <td className="px-8 py-6 text-center text-gray-700">{ipo.close || "—"}</td>
+                          <td className="px-8 py-6 text-center font-bold text-gray-900 text-lg">₹{ipo.price}</td>
+                          <td className="px-8 py-6 text-center text-gray-700">{ipo.listing || "TBA"}</td>
+                          <td className="px-8 py-6 text-center font-medium text-gray-900 text-lg">{ipo.lot}</td>
 
-                        <td className="px-8 py-6 text-center">
-                          <div className="flex justify-center gap-4">
-                            <button
-                              onClick={() => navigate(`/ipo/${ipo.id}`)}
-                              disabled={activeTab !== "Open"}
-                              className={`px-6 py-3 rounded-lg font-semibold text-sm transition ${
-                                activeTab === "Open"
-                                  ? "bg-green-600 text-white hover:bg-green-700"
-                                  : "bg-gray-200 text-gray-500 cursor-not-allowed"
-                              }`}
-                            >
-                              Apply 
-                            </button>
-                            <button
-                              onClick={() => navigate(`/ipo/${ipo.id}`)}
-                              className="px-6 py-3 rounded-lg border border-gray-400 text-gray-700 font-semibold text-sm hover:bg-gray-50 transition"
-                            >
-                              View 
-                            </button>
-                          </div>
-                        </td>
-                      </motion.tr>
-                    ))
+                          <td className="px-8 py-6 text-center">
+                            <div className="flex justify-center gap-4">
+                              <button
+                                onClick={() => navigate(`/ipo/${ipo.id}`)}
+                                disabled={activeTab !== "Open"}
+                                className={`px-6 py-3 rounded-lg font-semibold text-sm transition ${
+                                  activeTab === "Open"
+                                    ? "bg-green-600 text-white hover:bg-green-700 shadow-sm"
+                                    : "bg-gray-200 text-gray-500 cursor-not-allowed"
+                                }`}
+                              >
+                                Apply
+                              </button>
+                              <button
+                                onClick={() => navigate(`/ipo/${ipo.id}`)}
+                                className="px-6 py-3 rounded-lg border border-gray-400 text-gray-700 font-semibold text-sm hover:bg-gray-50 transition"
+                              >
+                                View
+                              </button>
+                            </div>
+                          </td>
+                        </motion.tr>
+                      );
+                    })
                   )}
                 </tbody>
               </table>
             </div>
           </div>
-
         </div>
       </div>
     </div>

@@ -39,21 +39,6 @@ function App() {
             </Routes>
           </main>
 
-          {/* RIGHT ADS SIDEBAR – Fixed position */}
-          <aside className="hidden lg:block w-72 xl:w-80 flex-shrink-0">
-            <div className="sticky top-20 h-screen overflow-y-auto py-8 px-6">
-              <div className="space-y-8">
-                {[...Array(6)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="bg-gray-200 border-2 border-dashed rounded-2xl h-64 flex items-center justify-center text-gray-500 font-medium text-sm"
-                  >
-                    Ad 300×250
-                  </div>
-                ))}
-              </div>
-            </div>
-          </aside>
         </div>
 
         <Footer />
