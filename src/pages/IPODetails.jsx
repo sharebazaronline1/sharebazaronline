@@ -65,17 +65,18 @@ const IPODetails = () => {
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
             <div className="flex items-center gap-4">
-{ipo.logo ? (
+{ipo?.logo ? (
   <img
     src={ipo.logo}
-    alt={ipo.name}
-    className="w-14 h-14 object-contain rounded-lg border border-gray-200"
+    alt="IPO"
+    className="w-14 h-14 object-contain rounded-lg border border-gray-200 bg-white"
   />
 ) : (
-  <div className="w-14 h-14 rounded-lg bg-gray-500  text-white flex items-center justify-center font-bold text-2xl shadow-md">
-    {(ipo.name || "N").trim().charAt(0).toUpperCase()}
+  <div className="w-14 h-14 rounded-lg bg-gray-600 text-white flex items-center justify-center font-bold text-2xl shadow-md">
+    {(ipo?.name?.charAt(0) || 'N').toUpperCase()}
   </div>
-)}              <div>
+)}
+       <div>
                 <h1 className="text-2xl md:text-3xl font-bold text-gray-900">{ipo.name}</h1>
                 <p className="text-sm text-gray-600">{ipo.fullName || "Pre-IPO "}</p>
               </div>

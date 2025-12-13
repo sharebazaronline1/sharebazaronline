@@ -93,18 +93,27 @@ export default function Home() {
 
      
 
-      {/* IPO SECTION */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl xl:max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-          {isIPOLoading ? (
-            <div className="flex justify-center py-20">
-              <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-gray-800"></div>
-            </div>
-          ) : (
-            <IPODashboard ipos={ipos} />
-          )}
-        </div>
-      </section>
+     {/* IPO SECTION */}
+  <section className=" bg-gray-50">
+  <div className="max-w-none w-full mx-auto px-4  sm:px-6 lg:px-8">
+    {isIPOLoading ? (
+      <div className="flex justify-center py-20">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-gray-800"></div>
+      </div>
+    ) : (
+      <IPODashboard ipos={ipos} />
+    )}
+  </div>
+   <div className="text-center mt-6">
+                    <button
+                      onClick={() => navigate('/ipo/ipo-list')}
+                      className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
+                    >
+                      View All IPO
+                    </button>
+                  </div>
+                  
+</section>
 
       {/* AD AFTER IPO */}
       <AdBanner size="horizontal" />
@@ -160,7 +169,7 @@ export default function Home() {
       <AdBanner size="horizontal" />
 
       {/* BLOGS SECTION */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl xl:max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <Blogs />
         </div>
@@ -170,7 +179,7 @@ export default function Home() {
       <AdBanner size="horizontal" />
 
       {/* BROKER ANALYZER SECTION */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl xl:max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <BrokerAnalyzer />
           <div className="text-center mt-12">
@@ -188,7 +197,7 @@ export default function Home() {
       <AdBanner size="horizontal" />
 
       {/* WHY CHOOSE US – Premium Marketing Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24">
         <div className="max-w-7xl xl:max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 leading-tight">

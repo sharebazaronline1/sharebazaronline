@@ -96,7 +96,7 @@ const PreIPOStocks = () => {
                       <div className="flex items-center gap-4">
                         <CompanyLogo name={ipo.name} logo={ipo.logo} />
                         <div>
-                          <p className="font-bold text-gray-900 text-base sm:text-lg line-clamp-2">
+                          <p className="font-medium text-gray-900 text-base sm:text-md line-clamp-2">
                             {ipo.name}
                           </p>
                         </div>
