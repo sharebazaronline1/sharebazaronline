@@ -1,4 +1,4 @@
-// src/components/IPODashboard.jsx 
+// src/components/IPODashboard.jsx
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -33,7 +33,6 @@ const IPODashboard = () => {
     return name.includes("sme") ? "SME" : "MAINBOARD";
   };
 
-  // Determine tab based on dates
   const getIPOStatusByDate = (ipo) => {
     const today = new Date();
     let openDate = ipo.openDate || ipo.open || null;
@@ -50,7 +49,7 @@ const IPODashboard = () => {
       if (today >= openDate) return "Open";
       if (today < openDate) return "Upcoming";
     }
-    return "Upcoming"; // fallback
+    return "Upcoming";
   };
 
   const filteredIPOs = ipos.filter((ipo) => {
@@ -64,7 +63,8 @@ const IPODashboard = () => {
     return matchesTab && matchesType;
   });
 
-  const getCount = (tab) => ipos.filter((ipo) => getIPOStatusByDate(ipo) === tab).length;
+  const getCount = (tab) =>
+    ipos.filter((ipo) => getIPOStatusByDate(ipo) === tab).length;
 
   const LetterAvatar = ({ name }) => {
     const letter = name?.charAt(0).toUpperCase() || "?";
@@ -85,52 +85,72 @@ const IPODashboard = () => {
   }
 
   return (
-    <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-        <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
-          <h2 className="text-3xl font-black text-gray-900">IPO Tracker</h2>
-          <p className="mt-2 text-lg text-gray-600">Live & Upcoming IPOs in India</p>
-        </div>
+    <div className="w-full bg-gray-50">
 
-        <div className="px-8 py-5 border-b border-gray-200">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div className="flex gap-3 flex-wrap">
-              {tabs.map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 ${
-                    activeTab === tab
-                      ? "bg-green-600 text-white shadow-sm"
-                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                  }`}
-                >
-                  {tab}
-                  <span
-                    className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${
-                      activeTab === tab ? "bg-white text-green-600" : "bg-gray-300 text-gray-700"
+      {/* ===== IPO LIST BANNER (ONLY ADDITION) ===== */}
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 mt-6">
+        <div className="relative h-56 md:h-64 lg:h-72 rounded-2xl overflow-hidden">
+          <img
+            src="/images/Ipolist.png"
+            alt="IPO List"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+         
+        
+        </div>
+      </div>
+      {/* ===== BANNER END ===== */}
+
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+          <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
+            <h2 className="text-3xl font-black text-gray-900">IPO Tracker</h2>
+            <p className="mt-2 text-lg text-gray-600">
+              Live & Upcoming IPOs in India
+            </p>
+          </div>
+
+          <div className="px-8 py-5 border-b border-gray-200">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="flex gap-3 flex-wrap">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 ${
+                      activeTab === tab
+                        ? "bg-green-600 text-white shadow-sm"
+                        : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                     }`}
                   >
-                    {getCount(tab)}
-                  </span>
-                </button>
-              ))}
+                    {tab}
+                    <span
+                      className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                        activeTab === tab
+                          ? "bg-white text-green-600"
+                          : "bg-gray-300 text-gray-700"
+                      }`}
+                    >
+                      {getCount(tab)}
+                    </span>
+                  </button>
+                ))}
+              </div>
+
+              <select
+                value={typeFilter}
+                onChange={(e) => setTypeFilter(e.target.value)}
+                className="px-5 py-2.5 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+              >
+                <option value="All">All Types</option>
+                <option value="Mainboard">Mainboard</option>
+                <option value="SME">SME</option>
+              </select>
             </div>
-
-            <select
-              value={typeFilter}
-              onChange={(e) => setTypeFilter(e.target.value)}
-              className="px-5 py-2.5 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-            >
-              <option value="All">All Types</option>
-              <option value="Mainboard">Mainboard</option>
-              <option value="SME">SME</option>
-            </select>
           </div>
-        </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[1200px]">
+          <div className="overflow-x-auto">
+              <table className="w-full min-w-[1200px]">
             <thead>
               <tr className="bg-gray-50 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider border-b-2 border-gray-200">
                 <th className="px-6 py-4">Company</th>
@@ -245,6 +265,7 @@ const IPODashboard = () => {
               )}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </div>

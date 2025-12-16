@@ -108,7 +108,7 @@ const IPODashboard = ({ ipos = [] }) => {
 
   const top8IPOs = useMemo(() => {
     return ipos
-      .filter((ipo) => ipo.status?.toLowerCase() === "live")
+      .filter((ipo) => ipo.status?.toLowerCase() === "open")
       .map((ipo) => ({ ...ipo, _closeDate: parseDate(ipo.close) }))
       .filter((ipo) => ipo._closeDate !== null && ipo._closeDate.getTime() >= today.getTime())
       .sort((a, b) => a._closeDate - b._closeDate)
@@ -121,16 +121,8 @@ const IPODashboard = ({ ipos = [] }) => {
   };
 
   return (
-    <div className="bg-gray-50 py-6 px-4">
+    <div className="py-6 px-4">
       <div className="max-w-screen-2xl mx-auto">
-
-        {/* HEADER */}
-        <div className="text-center mb-6">
-          <h1 className="text-4xl font-black text-gray-900">IPO Tracker</h1>
-          <p className="mt-2 text-lg text-gray-700">
-            Latest Mainboard & SME IPOs in India
-          </p>
-        </div>
 
         {/* Desktop Grid */}
         <div className="hidden lg:grid grid-cols-4 gap-6">

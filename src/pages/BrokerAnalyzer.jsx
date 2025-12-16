@@ -68,9 +68,7 @@ const BrokerCard = ({ broker }) => {
             <ImageLogo src={broker.img} alt={broker.name} />
             <h3 className="text-lg font-bold text-gray-900">{broker.name}</h3>
           </div>
-          <span className="text-xs font-bold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full">
-            {broker.rating} Stars
-          </span>
+        
         </div>
       </div>
 
@@ -121,18 +119,8 @@ const BrokerCard = ({ broker }) => {
 
 const BrokerAnalyzer = () => {
   return (
-    <section className="py-14 px-4 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Title */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900">
-            Best Stock Brokers in India 2025
-          </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            Zero delivery • Flat ₹20 • Trusted by millions
-          </p>
-        </div>
-
+    <section className="py-14 px-4 ">
+      <div className="max-w-7xl mx-auto">  
         {/* Mobile: Horizontal Scroll */}
         <div className="lg:hidden overflow-x-auto scrollbar-hide -mx-4 px-4 pb-6">
           <div className="flex gap-4">

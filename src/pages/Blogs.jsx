@@ -78,39 +78,37 @@ const blogPosts = [
 const BlogCard = ({ post, index }) => {
   return (
     <motion.div
-      whileHover={{ y: -6 }}
+      whileHover={{ y: -4 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08 }}
-      className="flex-shrink-0 w-80 sm:w-96 lg:w-80"
+      className="flex-shrink-0 w-64 sm:w-72"
     >
-      <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
-        {/* Image */}
-        <div className="h-48 relative overflow-hidden bg-gray-100">
+      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
+        {/* Smaller Image */}
+        <div className="h-36 relative overflow-hidden bg-gray-100">
           <img
             src={post.image}
             alt={post.title}
             className="w-full h-full object-cover"
             loading="lazy"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          
-      
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         </div>
 
-        {/* Content */}
-        <div className="p-5">
-          <h3 className="font-bold text-gray-900 text-lg leading-tight line-clamp-2">
+        {/* Compact Content */}
+        <div className="p-4 flex flex-col flex-1">
+          <h3 className="font-bold text-gray-900 text-base leading-tight line-clamp-2">
             {post.title}
           </h3>
-          <p className="text-sm text-gray-500 mt-2">{post.date}</p>
-        </div>
+          <p className="text-xs text-gray-500 mt-2">{post.date}</p>
 
-        {/* Read More */}
-        <div className="px-5 pb-5">
-          <button className="text-green-600 font-medium text-sm hover:text-green-700 flex items-center gap-1 transition">
-            Read More →
-          </button>
+          {/* Read More */}
+          <div className="mt-auto pt-3">
+            <button className="text-green-600 font-medium text-xs hover:text-green-700 flex items-center gap-1 transition">
+              Read More →
+            </button>
+          </div>
         </div>
       </div>
     </motion.div>
@@ -142,17 +140,8 @@ export default function Blogs() {
   }, [isHovered]);
 
   return (
-    <section className="py-16 lg:py-20 bg-gray-50">
+    <section className="py-12 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-black text-gray-900">IPO News & Blogs</h2>
-          <p className="mt-3 text-lg text-gray-600 max-w-3xl mx-auto">
-            Latest updates on IPOs, Dividends, Bonus Issues, Rights, NFOs, REITs & Bonds
-          </p>
-        </div>
-
-        {/* Auto-scrolling Carousel */}
         <div
           className="overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}
@@ -160,7 +149,7 @@ export default function Blogs() {
         >
           <div
             ref={scrollRef}
-            className="flex gap-6 py-4 overflow-x-auto scrollbar-hide scroll-smooth"
+            className="flex gap-5 py-4 overflow-x-auto scrollbar-hide scroll-smooth"
           >
             {/* Duplicate for seamless loop */}
             {[...blogPosts, ...blogPosts].map((post, index) => (
@@ -172,8 +161,6 @@ export default function Blogs() {
             ))}
           </div>
         </div>
-
-       
       </div>
     </section>
   );

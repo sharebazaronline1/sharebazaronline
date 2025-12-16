@@ -28,8 +28,8 @@ function App() {
         <HeaderAndNav />
 
         <div className="flex-1 flex">
-          {/* Main Content */}
-          <main className="flex-1 min-w-0 pb-20">
+          {/* Main Content - Full width when no sidebar, shared when sidebar present */}
+         <main className="flex-1 min-w-0 pb-10 xl:pl-36"> {/* Added right padding on lg+ to prevent content touching sidebar */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/ipo-tracker" element={<IPOTracker />} />
@@ -42,25 +42,25 @@ function App() {
             </Routes>
           </main>
 
-          {/* Right Sidebar */}
-          <aside className="hidden xl:flex w-72 flex-col pr-4 gap-8">
-            {/* New Banner Above Sidebar - Scrolls with page */}
-            <div className="mt-60">
+          {/* Right Sidebar - Only on xl screens, placed inside the flex row */}
+          <aside className="hidden xl:block w-72 flex-shrink-0">
+            <div className="flex flex-col gap-8 py-8"> {/* py-8 for vertical alignment with main content */}
+              {/* Top Advertisement Banner - Scrolls with page */}
               <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-48 flex items-center justify-center">
-                <p className="text-xs font-semibold text-gray-800"> Advertisement </p>
+                <p className="text-xs font-semibold text-gray-800">Advertisement</p>
               </div>
-            </div>
 
-            {/* IPO Sidebar */}
-            <UpcomingIPOSidebar />
+              {/* IPO Sidebar */}
+              <UpcomingIPOSidebar />
 
-            {/* Sticky Banners (remain fixed while scrolling) */}
-            <div className="flex flex-col gap-3 sticky top-24">
-              <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
-                <p className="text-xs font-semibold text-gray-800">Banner Ad 1</p>
-              </div>
-              <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
-                <p className="text-xs font-semibold text-gray-800">Banner Ad 2</p>
+              {/* Sticky Banners */}
+              <div className="flex flex-col gap-3 sticky top-64">
+                <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
+                  <p className="text-xs font-semibold text-gray-800">Banner Ad 1</p>
+                </div>
+                <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
+                  <p className="text-xs font-semibold text-gray-800">Banner Ad 2</p>
+                </div>
               </div>
             </div>
           </aside>

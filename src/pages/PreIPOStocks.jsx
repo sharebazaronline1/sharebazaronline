@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { fetchIPOs } from "../api/mockApi";
+import { fetchPreIPOs } from "../api/mockApi";
 
 const PreIPOStocks = () => {
   const [ipos, setIPOs] = useState([]);
@@ -10,7 +10,7 @@ const PreIPOStocks = () => {
 
   useEffect(() => {
     const load = async () => {
-      const data = await fetchIPOs();
+      const data = await fetchPreIPOs();
       const upcoming = data.filter(
         (item) => item?.status?.toLowerCase() === "upcoming"
       );

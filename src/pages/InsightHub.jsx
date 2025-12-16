@@ -1,4 +1,3 @@
-// src/pages/InsightHub.jsx
 import { motion } from "framer-motion";
 
 const InsightHub = () => {
@@ -35,7 +34,7 @@ const InsightHub = () => {
       id: 5,
       title: "Reliance Industries Announces 1:1 Bonus Issue",
       category: "Bonus Issue",
-      image: "https://images.unsplash.com/photo-1559526324-c1f0a2a9b2c5?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
       date: "7 Dec 2025",
     },
     {
@@ -49,14 +48,14 @@ const InsightHub = () => {
       id: 7,
       title: "HDFC Bank Rights Issue Opens – ₹25,000 Cr Fundraise",
       category: "Rights Issue",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80",
       date: "9 Dec 2025",
     },
     {
       id: 8,
       title: "Axis Multi-Asset Allocation Fund NFO Opens",
       category: "NFO",
-      image: "https://images.unsplash.com/photo-1559526324-593bbc0b6dc2?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
       date: "Today",
     },
     {
@@ -73,72 +72,79 @@ const InsightHub = () => {
       image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&q=80",
       date: "4 days ago",
     },
+    {
+      id: 11,
+      title: "Best Multibagger Stocks of 2025 – Up 300%+",
+      category: "Multibagger",
+      image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800&q=80",
+      date: "11 Dec 2025",
+    },
+    {
+      id: 12,
+      title: "Upcoming SME IPOs This Week – Subscription Details",
+      category: "SME IPO",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+      date: "15 Dec 2025",
+    },
   ];
 
   return (
-    <div className="w-full max-w-none px-4 sm:px-6 lg:px-8 py-12">
-      <div className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
+    <div className="w-full bg-gray-50 min-h-screen">
 
-        {/* Hero */}
-        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white py-20 px-6 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-4xl sm:text-5xl font-black mb-4"
-          >
-            Insight Hub
-          </motion.h1>
-          <p className="text-xl opacity-90">
-            IPOs, Listings, Dividends, Corporate Actions & Market Insights
-          </p>
+      {/* Banner */}
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative h-60 md:h-72 lg:h-80 rounded-2xl overflow-hidden bg-gray-900">
+          <img
+            src="/images/insightbanner.jpg"
+            alt="Insight Hub"
+            className="absolute inset-0 w-full h-full object-cover opacity-95"
+          />
+        </div>
+      </div>
+
+      {/* Blog Grid */}
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+
+          {blogPosts.map((post, i) => (
+            <motion.article
+              key={post.id}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.04 }}
+              className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full"
+            >
+              {/* Image */}
+              <div className="relative h-36 px-3 pt-3">
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover object-[50%_15%] rounded-lg"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-3 flex flex-col flex-1">
+                <time className="text-[11px] text-gray-500 mb-1">
+                  {post.date}
+                </time>
+
+                <h3 className="text-sm font-semibold text-gray-900 leading-snug line-clamp-3 mb-3">
+                  {post.title}
+                </h3>
+
+                <span className="mt-auto text-xs font-semibold text-green-600 hover:text-green-700">
+                  Read →
+                </span>
+              </div>
+            </motion.article>
+          ))}
+
         </div>
 
-        {/* Grid */}
-        <div className="p-8 bg-gray-50">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post, i) => (
-              <motion.div
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition cursor-pointer flex flex-col"
-              >
-                {/* Image */}
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="h-full w-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-
-                {/* Content */}
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center justify-between text-xs mb-3">
-                    <span className="px-3 py-1 rounded-full bg-blue-100 text-blue-700 font-semibold">
-                      {post.category}
-                    </span>
-                    <span className="text-gray-500">{post.date}</span>
-                  </div>
-
-                  <h3 className="text-lg font-bold text-gray-900 mb-4 line-clamp-2">
-                    {post.title}
-                  </h3>
-
-                  <span className="mt-auto text-green-600 font-semibold">
-                    Read More →
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Load More */}
-        <div className="py-10 text-center border-t">
-          <button className="px-8 py-3 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition">
+        <div className="text-center mt-14">
+          <button className="px-8 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition shadow-md">
             Load More Insights
           </button>
         </div>
