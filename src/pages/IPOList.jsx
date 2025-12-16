@@ -1,4 +1,4 @@
-// src/components/IPODashboard.jsx (or src/pages/IPOList.jsx)
+// src/components/IPODashboard.jsx 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -33,15 +33,29 @@ const IPODashboard = () => {
     return name.includes("sme") ? "SME" : "MAINBOARD";
   };
 
-  const filteredIPOs = ipos.filter((ipo) => {
-    const isLive = ipo.status?.toLowerCase() === "live";
-    const isClosed = ipo.listingPrice != null && ipo.listingPrice !== "";
-    const isUpcoming = !ipo.status || ipo.status?.toLowerCase() === "upcoming";
+  // Determine tab based on dates
+  const getIPOStatusByDate = (ipo) => {
+    const today = new Date();
+    let openDate = ipo.openDate || ipo.open || null;
+    let closeDate = ipo.closeDate || ipo.close || null;
 
-    const matchesTab =
-      (activeTab === "Open" && isLive) ||
-      (activeTab === "Closed" && isClosed) ||
-      (activeTab === "Upcoming" && isUpcoming);
+    openDate = openDate ? new Date(openDate) : null;
+    closeDate = closeDate ? new Date(closeDate) : null;
+
+    if (openDate && closeDate) {
+      if (today >= openDate && today <= closeDate) return "Open";
+      if (today > closeDate) return "Closed";
+      if (today < openDate) return "Upcoming";
+    } else if (openDate) {
+      if (today >= openDate) return "Open";
+      if (today < openDate) return "Upcoming";
+    }
+    return "Upcoming"; // fallback
+  };
+
+  const filteredIPOs = ipos.filter((ipo) => {
+    const ipoStatus = getIPOStatusByDate(ipo);
+    const matchesTab = ipoStatus === activeTab;
 
     const matchesType =
       typeFilter === "All" ||
@@ -50,15 +64,7 @@ const IPODashboard = () => {
     return matchesTab && matchesType;
   });
 
-  const getCount = (tab) => {
-    if (tab === "Open")
-      return ipos.filter((i) => i.status?.toLowerCase() === "live").length;
-    if (tab === "Closed")
-      return ipos.filter((i) => i.listingPrice != null && i.listingPrice !== "").length;
-    if (tab === "Upcoming")
-      return ipos.filter((i) => !i.status || i.status?.toLowerCase() === "upcoming").length;
-    return 0;
-  };
+  const getCount = (tab) => ipos.filter((ipo) => getIPOStatusByDate(ipo) === tab).length;
 
   const LetterAvatar = ({ name }) => {
     const letter = name?.charAt(0).toUpperCase() || "?";
@@ -83,7 +89,7 @@ const IPODashboard = () => {
       <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
         <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
           <h2 className="text-3xl font-black text-gray-900">IPO Tracker</h2>
-          <p className="mt-2 text-lg text-gray-600">Live & Upcoming IPOs in India (as of Dec 13, 2025)</p>
+          <p className="mt-2 text-lg text-gray-600">Live & Upcoming IPOs in India</p>
         </div>
 
         <div className="px-8 py-5 border-b border-gray-200">
@@ -155,9 +161,8 @@ const IPODashboard = () => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.04 }}
                       className="hover:bg-gray-50 transition cursor-pointer"
-                      onClick={() => navigate(`/ipo/${ipo.id}`)} // ← Row click = View button
+                      onClick={() => navigate(`/ipo/${ipo.id}`)}
                     >
-                      {/* All cells except Action column: allow row click */}
                       <td className="px-6 py-5">
                         <div className="flex items-center gap-4">
                           {hasLogo ? (
@@ -207,7 +212,6 @@ const IPODashboard = () => {
                         {ipo.lot}
                       </td>
 
-                      {/* Action column: stop row click so buttons work independently */}
                       <td className="px-6 py-5 text-center" onClick={(e) => e.stopPropagation()}>
                         <div className="flex justify-center items-center gap-3">
                           <button

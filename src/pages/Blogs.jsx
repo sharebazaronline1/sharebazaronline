@@ -15,42 +15,42 @@ const blogPosts = [
     title: "December 2025 SME IPO Bonanza – 12 New Issues",
     category: "SME IPO",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    date: "Dec 2025",
+    date: "1 Dec 2025",
   },
   {
     id: 3,
     title: "8 MEGA IPOs That Delivered 500%+ Returns in 2025",
     category: "Listing Gains",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
-    date: "1 day ago",
+    date: "14 Dec 2025",
   },
   {
     id: 4,
     title: "Top 10 IPOs of 2025 – Spectacular Listing Performance",
     category: "IPO Performance",
     image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80",
-    date: "Dec 2025",
+    date: "13 Dec 2025",
   },
   {
     id: 5,
     title: "Reliance Industries Announces 1:1 Bonus Issue",
     category: "Bonus Issue",
     image: "https://images.unsplash.com/photo-1559526324-c1f0a2a9b2c5?w=800&q=80",
-    date: "2 days ago",
+    date: "7 Dec 2025",
   },
   {
     id: 6,
     title: "TCS Declares ₹48 Final Dividend – Record Date 15 Dec",
     category: "Dividend",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    date: "5 days ago",
+    date: "13 Dec 2025",
   },
   {
     id: 7,
     title: "HDFC Bank Rights Issue Opens – ₹25,000 Cr Fundraise",
     category: "Rights Issue",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
-    date: "1 week ago",
+    date: "9 Dec 2025",
   },
   {
     id: 8,
@@ -64,7 +64,7 @@ const blogPosts = [
     title: "Embassy REIT Announces 8.2% Dividend Yield",
     category: "REITs",
     image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-    date: "3 days ago",
+    date: "6 Dec 2025",
   },
   {
     id: 10,
@@ -173,12 +173,7 @@ export default function Blogs() {
           </div>
         </div>
 
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <button className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md">
-            View All News & Blogs →
-          </button>
-        </div>
+       
       </div>
     </section>
   );

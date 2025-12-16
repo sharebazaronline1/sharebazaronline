@@ -11,7 +11,7 @@ import InsightHub from './pages/InsightHub';
 import SkillUp from './pages/SkillUp';
 import IPODetails from './pages/IPODetails';
 import IPOList from './pages/IPOList';
-import UpcomingIPOSidebar from './pages/Listofdata';
+import UpcomingIPOSidebar from './components/IPOSidebar';
 
 function App() {
   return (
@@ -27,10 +27,8 @@ function App() {
       <div className="min-h-screen bg-gray-50 font-sans flex flex-col">
         <HeaderAndNav />
 
-        {/* MAIN CONTENT + SIDEBAR */}
-        <div className="flex-1 flex flex-col xl:flex-row">
-
-          {/* MAIN CONTENT */}
+        <div className="flex-1 flex">
+          {/* Main Content */}
           <main className="flex-1 min-w-0 pb-20">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -44,35 +42,28 @@ function App() {
             </Routes>
           </main>
 
-          {/* RIGHT SIDEBAR */}
-          <aside className="hidden xl:block w-72 pr-4 mt-96">
-            <div className="sticky top-56 flex flex-col gap-4">
-
-              {/* IPO Sidebar */}
-              <UpcomingIPOSidebar />
-
-              {/* BANNERS – HORIZONTAL ALIGNMENT */}
-              <div className="flex gap-3">
-                
-                {/* Banner 1 */}
-                <div className="flex-1 bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
-                  <p className="text-xs font-semibold text-gray-800">
-                    Banner
-                  </p>
-                </div>
-
-                {/* Banner 2 */}
-                <div className="flex-1 bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
-                  <p className="text-xs font-semibold text-gray-800">
-                    Banner
-                  </p>
-                </div>
-
+          {/* Right Sidebar */}
+          <aside className="hidden xl:flex w-72 flex-col pr-4 gap-8">
+            {/* New Banner Above Sidebar - Scrolls with page */}
+            <div className="mt-60">
+              <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-48 flex items-center justify-center">
+                <p className="text-xs font-semibold text-gray-800"> Advertisement </p>
               </div>
+            </div>
 
+            {/* IPO Sidebar */}
+            <UpcomingIPOSidebar />
+
+            {/* Sticky Banners (remain fixed while scrolling) */}
+            <div className="flex flex-col gap-3 sticky top-24">
+              <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
+                <p className="text-xs font-semibold text-gray-800">Banner Ad 1</p>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
+                <p className="text-xs font-semibold text-gray-800">Banner Ad 2</p>
+              </div>
             </div>
           </aside>
-
         </div>
 
         <Footer />
