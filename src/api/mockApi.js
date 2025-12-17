@@ -552,7 +552,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/imag.jpg"
+    "logo": "/images/preipo/dantech.png"
   },
   {
     "id": 28,
@@ -615,7 +615,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image.png"
+    "logo": "/images/preipo/electrosteel.png"
   },
   {
     "id": 35,
@@ -651,7 +651,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 10,
     "status": "upcoming",
-    "logo": "/images/preipo/image.jpg"
+    "logo": "/images/preipo/frick.png"
   },
   {
     "id": 39,
@@ -687,7 +687,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image.jpg"
+    "logo": "/images/preipo/goashipyard.png"
   },
   {
     "id": 43,
@@ -705,7 +705,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image.jpg"
+    "logo": "/images/preipo/image42.jpg"
   },
   {
     "id": 45,
@@ -732,7 +732,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image.png"
+    "logo": "/images/preipo/image45.png"
   },
   {
     "id": 48,
@@ -741,7 +741,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 600,
     "status": "upcoming",
-    "logo": "/images/preipo/image.jpg"
+    "logo": "/images/preipo/image46.jpg"
   },
   {
     "id": 49,
@@ -768,7 +768,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 25,
     "status": "upcoming",
-    "logo": "/images/preipo/image49.jpg"
+    "logo": "/images/preipo/image49.png"
   },
   {
     "id": 52,
@@ -786,7 +786,7 @@ export const fetchPreIPOs = async () => {
     "depository": "CDSL ONLY",
     "minLotSize": 25,
     "status": "upcoming",
-    "logo": "/images/preipo/image53.jpg"
+    "logo": "/images/preipo/image51.jpg"
   },
   {
     "id": 54,
@@ -795,7 +795,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image54.jpg"
+    "logo": "/images/preipo/HimalayanHeli.png"
   },
   {
     "id": 55,
@@ -804,7 +804,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image55.png"
+    "logo": "/images/preipo/hindonmercantile.png"
   },
   {
     "id": 56,
@@ -813,7 +813,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image56.jpg"
+    "logo": "/images/preipo/image54.jpg"
   },
   {
     "id": 57,
@@ -822,7 +822,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL ONLY",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image57.png"
+    "logo": "/images/preipo/image55.png"
   },
   {
     "id": 58,
@@ -831,7 +831,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image58.jpg"
+    "logo": "/images/preipo/image56.jpg"
   },
   {
     "id": 59,
@@ -840,7 +840,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image59.png"
+    "logo": "/images/preipo/image57.jpg"
   },
   {
     "id": 60,
@@ -849,7 +849,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 10,
     "status": "upcoming",
-    "logo": "/images/preipo/image60.png"
+    "logo": "/images/preipo/image58.png"
   },
   {
     "id": 61,
@@ -858,7 +858,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image61.jpg"
+    "logo": "/images/preipo/image59.jpg"
   },
   {
     "id": 62,
@@ -867,7 +867,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 5000,
     "status": "upcoming",
-    "logo": "/images/preipo/image62.png"
+    "logo": "/images/preipo/image60.png"
   },
   {
     "id": 63,
@@ -876,7 +876,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image63.png"
+    "logo": "/images/preipo/image61.png"
   },
   {
     "id": 64,
@@ -885,7 +885,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image64.jpg"
+    "logo": "/images/preipo/image62.jpg"
   },
   {
     "id": 65,
@@ -894,7 +894,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 250,
     "status": "upcoming",
-    "logo": "/images/preipo/image65.png"
+    "logo": "/images/preipo/image63.png"
   },
   {
     "id": 66,
@@ -903,7 +903,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image66.png"
+    "logo": "/images/preipo/image64.jpg"
   },
   {
     "id": 67,
@@ -912,7 +912,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image67.png"
+    "logo": "/images/preipo/image65.jpg"
   },
   {
     "id": 68,
@@ -921,7 +921,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 25,
     "status": "upcoming",
-    "logo": "/images/preipo/image68.png"
+    "logo": "/images/preipo/image66.png"
   },
   {
     "id": 69,
@@ -930,7 +930,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 25,
     "status": "upcoming",
-    "logo": "/images/preipo/image69.jpg"
+    "logo": "/images/preipo/image67.png"
   },
   {
     "id": 70,
@@ -939,7 +939,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image70.png"
+    "logo": "/images/preipo/image68.png"
   },
   {
     "id": 71,
@@ -948,7 +948,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image71.png"
+    "logo": "/images/preipo/image69.jpg"
   },
   {
     "id": 72,
@@ -957,7 +957,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image72.jpg"
+    "logo": "/images/preipo/image70.jpg"
   },
   {
     "id": 73,
@@ -966,7 +966,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 25,
     "status": "upcoming",
-    "logo": "/images/preipo/image73.png"
+    "logo": "/images/preipo/image71.jpg"
   },
   {
     "id": 74,
@@ -975,7 +975,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image74.jpg"
+    "logo": "/images/preipo/image72.jpg"
   },
   {
     "id": 75,
@@ -984,7 +984,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image75.png"
+    "logo": "/images/preipo/image73.jpg"
   },
   {
     "id": 76,
@@ -993,7 +993,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image76.jpg"
+    "logo": "/images/preipo/image74.png"
   },
   {
     "id": 77,
@@ -1002,7 +1002,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 2000,
     "status": "upcoming",
-    "logo": "/images/preipo/image77.jpg"
+    "logo": "/images/preipo/image75.png"
   },
   {
     "id": 78,
@@ -1011,7 +1011,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image78.jpg"
+    "logo": "/images/preipo/image76.jpg"
   },
   {
     "id": 79,
@@ -1020,7 +1020,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
-    "logo": "/images/preipo/image79.png"
+    "logo": "/images/preipo/image77.png"
   },
   {
     "id": 80,
@@ -1029,7 +1029,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 250,
     "status": "upcoming",
-    "logo": "/images/preipo/image80.png"
+    "logo": "/images/preipo/image78.png"
   },
   {
     "id": 81,
@@ -1038,7 +1038,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image81.png"
+    "logo": "/images/preipo/image79.png"
   },
   {
     "id": 82,
@@ -1047,7 +1047,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image82.png"
+    "logo": "/images/preipo/image80.png"
   },
   {
     "id": 83,
@@ -1056,7 +1056,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image83.png"
+    "logo": "/images/preipo/image81.png"
   },
   {
     "id": 84,
@@ -1065,7 +1065,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image84.png"
+    "logo": "/images/preipo/image82.jpg"
   },
   {
     "id": 85,
@@ -1074,7 +1074,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image85.png"
+    "logo": "/images/preipo/image83.jpg"
   },
   {
     "id": 86,
@@ -1083,7 +1083,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image86.png"
+    "logo": "/images/preipo/image84.png"
   },
   {
     "id": 87,
@@ -1092,7 +1092,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 5000,
     "status": "upcoming",
-    "logo": "/images/preipo/image87.png"
+    "logo": "/images/preipo/image85.jpg"
   },
   {
     "id": 88,
@@ -1101,7 +1101,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 250,
     "status": "upcoming",
-    "logo": "/images/preipo/image88.png"
+    "logo": "/images/preipo/image86.png"
   },
   {
     "id": 89,
@@ -1110,7 +1110,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image89.png"
+    "logo": "/images/preipo/image87.png"
   },
   {
     "id": 90,
@@ -1119,7 +1119,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image90.png"
+    "logo": "/images/preipo/image88.png"
   },
   {
     "id": 91,
@@ -1128,7 +1128,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image91.jpg"
+    "logo": "/images/preipo/Manjushree.png"
   },
   {
     "id": 92,
@@ -1137,7 +1137,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image92.png"
+    "logo": "/images/preipo/image90.jpg"
   },
   {
     "id": 93,
@@ -1146,7 +1146,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL Only",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image93.png"
+    "logo": "/images/preipo/image91.jpg"
   },
   {
     "id": 94,
@@ -1155,7 +1155,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image94.png"
+    "logo": "/images/preipo/image92.png"
   },
   {
     "id": 95,
@@ -1164,7 +1164,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image95.png"
+    "logo": "/images/preipo/image93.png"
   },
   {
     "id": 96,
@@ -1173,7 +1173,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 5000,
     "status": "upcoming",
-    "logo": "/images/preipo/image96.jpg"
+    "logo": "/images/preipo/image94.jpg"
   },
   {
     "id": 97,
@@ -1182,7 +1182,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 10,
     "status": "upcoming",
-    "logo": "/images/preipo/image97.png"
+    "logo": "/images/preipo/image95.jpg"
   },
   {
     "id": 98,
@@ -1191,7 +1191,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 10000,
     "status": "upcoming",
-    "logo": "/images/preipo/image98.jpg"
+    "logo": "/images/preipo/image96.png"
   },
   {
     "id": 99,
@@ -1200,7 +1200,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image99.jpg"
+    "logo": "/images/preipo/image97.jpg"
   },
   {
     "id": 100,
@@ -1209,7 +1209,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL ONLY",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image100.jpg"
+    "logo": "/images/preipo/image98.jpg"
   },
   {
     "id": 101,
@@ -1218,7 +1218,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
-    "logo": "/images/preipo/image101.png"
+    "logo": "/images/preipo/image99.jpg"
   },
   {
     "id": 102,
@@ -1227,7 +1227,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 2000,
     "status": "upcoming",
-    "logo": "/images/preipo/image102.png"
+    "logo": "/images/preipo/image100.jpg"
   },
   {
     "id": 103,
@@ -1236,7 +1236,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image103.png"
+    "logo": "/images/preipo/image101.png"
   },
   {
     "id": 104,
@@ -1245,7 +1245,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 250,
     "status": "upcoming",
-    "logo": "/images/preipo/image104.png"
+    "logo": "/images/preipo/image102.jpg"
   },
   {
     "id": 105,
@@ -1254,7 +1254,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 250,
     "status": "upcoming",
-    "logo": "/images/preipo/image105.png"
+    "logo": "/images/preipo/NSE.png"
   },
   {
     "id": 106,
@@ -1263,7 +1263,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image106.jpg"
+    "logo": "/images/preipo/image104.jpg"
   },
   {
     "id": 107,
@@ -1272,7 +1272,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 2000,
     "status": "upcoming",
-    "logo": "/images/preipo/image107.jpg"
+    "logo": "/images/preipo/image105.png"
   },
   {
     "id": 108,
@@ -1281,7 +1281,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
-    "logo": "/images/preipo/image108.jpg"
+    "logo": "/images/preipo/image107.jpg"
   },
   {
     "id": 109,
@@ -1290,7 +1290,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image109.jpg"
+    "logo": "/images/preipo/image106.jpg"
   },
   {
     "id": 110,
@@ -1299,7 +1299,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image110.jpg"
+    "logo": "/images/preipo/image107.jpg"
   },
   {
     "id": 111,
@@ -1308,7 +1308,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image111.jpg"
+    "logo": "/images/preipo/image108.jpg"
   },
   {
     "id": 112,
@@ -1317,7 +1317,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 10,
     "status": "upcoming",
-    "logo": "/images/preipo/image112.png"
+    "logo": "/images/preipo/image109.png"
   },
   {
     "id": 113,
@@ -1326,7 +1326,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 10,
     "status": "upcoming",
-    "logo": "/images/preipo/image113.jpg"
+    "logo": "/images/preipo/image110.jpg"
   },
   {
     "id": 114,
@@ -1335,7 +1335,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
-    "logo": "/images/preipo/image114.jpg"
+    "logo": "/images/preipo/image111.jpg"
   },
   {
     "id": 115,
@@ -1344,7 +1344,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 25,
     "status": "upcoming",
-    "logo": "/images/preipo/image115.jpg"
+    "logo": "/images/preipo/image112.png"
   },
   {
     "id": 116,
@@ -1353,7 +1353,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image116.jpg"
+    "logo": "/images/preipo/Paymate.png"
   },
   {
     "id": 117,
@@ -1362,7 +1362,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 5000,
     "status": "upcoming",
-    "logo": "/images/preipo/image117.png"
+    "logo": "/images/preipo/image114.png"
   },
   {
     "id": 118,
@@ -1371,7 +1371,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image118.png"
+    "logo": "/images/preipo/image115.png"
   },
   {
     "id": 119,
@@ -1380,7 +1380,7 @@ export const fetchPreIPOs = async () => {
     "depository": "Only NSDL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image119.jpg"
+    "logo": "/images/preipo/image116.jpg"
   },
   {
     "id": 120,
@@ -1389,7 +1389,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image120.jpg"
+    "logo": "/images/preipo/image117.jpg"
   },
   {
     "id": 121,
@@ -1398,7 +1398,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 400,
     "status": "upcoming",
-    "logo": "/images/preipo/image121.png"
+    "logo": "/images/preipo/image118.png"
   },
   {
     "id": 122,
@@ -1407,7 +1407,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 250,
     "status": "upcoming",
-    "logo": "/images/preipo/image122.png"
+    "logo": "/images/preipo/RamarajuSurgical.png"
   },
   {
     "id": 123,
@@ -1416,7 +1416,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 2000,
     "status": "upcoming",
-    "logo": "/images/preipo/image123.jpg"
+    "logo": "/images/preipo/image120.jpg"
   },
   {
     "id": 124,
@@ -1425,7 +1425,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image124.png"
+    "logo": "/images/preipo/image121.png"
   },
   {
     "id": 125,
@@ -1434,7 +1434,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 250,
     "status": "upcoming",
-    "logo": "/images/preipo/image125.png"
+    "logo": "/images/preipo/image122.png"
   },
   {
     "id": 126,
@@ -1443,7 +1443,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 10,
     "status": "upcoming",
-    "logo": "/images/preipo/image126.png"
+    "logo": "/images/preipo/Roots.png"
   },
   {
     "id": 127,
@@ -1452,7 +1452,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image127.png"
+    "logo": "/images/preipo/image124.png"
   },
   {
     "id": 128,
@@ -1461,7 +1461,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image128.png"
+    "logo": "/images/preipo/image125.png"
   },
   {
     "id": 129,
@@ -1470,7 +1470,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
-    "logo": "/images/preipo/image129.png"
+    "logo": "/images/preipo/image126.png"
   },
   {
     "id": 130,
@@ -1479,7 +1479,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image130.png"
+    "logo": "/images/preipo/image127.jpg"
   },
   {
     "id": 131,
@@ -1488,7 +1488,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
-    "logo": "/images/preipo/image131.png"
+    "logo": "/images/preipo/image128.jpg"
   },
   {
     "id": 132,
@@ -1497,7 +1497,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image132.png"
+    "logo": "/images/preipo/image129.png"
   },
   {
     "id": 133,
@@ -1506,7 +1506,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1600,
     "status": "upcoming",
-    "logo": "/images/preipo/image133.png"
+    "logo": "/images/preipo/image130.png"
   },
   {
     "id": 134,
@@ -1515,7 +1515,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image134.png"
+    "logo": "/images/preipo/image131.jpg"
   },
   {
     "id": 135,
@@ -1524,7 +1524,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
-    "logo": "/images/preipo/image135.jpg"
+    "logo": "/images/preipo/image132.jpg"
   },
   {
     "id": 136,
@@ -1533,7 +1533,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image136.png"
+    "logo": "/images/preipo/image133.png"
   },
   {
     "id": 137,
@@ -1542,7 +1542,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 25,
     "status": "upcoming",
-    "logo": "/images/preipo/image137.png"
+    "logo": "/images/preipo/Spencer.png"
   },
   {
     "id": 138,
@@ -1551,7 +1551,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image138.jpg"
+    "logo": "/images/preipo/image134.png"
   },
   {
     "id": 139,
@@ -1560,7 +1560,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
-    "logo": "/images/preipo/image139.png"
+    "logo": "/images/preipo/image135.jpg"
   },
   {
     "id": 140,
@@ -1569,7 +1569,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 250,
     "status": "upcoming",
-    "logo": "/images/preipo/image140.jpg"
+    "logo": "/images/preipo/Srichakra.png"
   },
   {
     "id": 141,
@@ -1578,7 +1578,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image141.jpg"
+    "logo": "/images/preipo/image136.png"
   },
   {
     "id": 142,
@@ -1587,7 +1587,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image142.png"
+    "logo": "/images/preipo/sterlitegrid.png"
   },
   {
     "id": 143,
@@ -1596,7 +1596,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL",
     "minLotSize": 25,
     "status": "upcoming",
-    "logo": "/images/preipo/image143.jpg"
+    "logo": "/images/preipo/Krosaki.png"
   },
   {
     "id": 144,
@@ -1605,7 +1605,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image144.png"
+    "logo": "/images/preipo/image139.jpg"
   },
   {
     "id": 145,
@@ -1614,7 +1614,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image145.png"
+    "logo": "/images/preipo/image140.png"
   },
   {
     "id": 146,
@@ -1623,7 +1623,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image146.png"
+    "logo": "/images/preipo/image141.jpg"
   },
   {
     "id": 147,
@@ -1632,7 +1632,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image147.png"
+    "logo": "/images/preipo/image142.png"
   },
   {
     "id": 148,
@@ -1641,7 +1641,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
-    "logo": "/images/preipo/image148.jpg"
+    "logo": "/images/preipo/image143.png"
   },
   {
     "id": 149,
@@ -1650,7 +1650,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image149.jpg"
+    "logo": "/images/preipo/image144.jpg"
   },
   {
     "id": 150,
@@ -1659,7 +1659,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 5000,
     "status": "upcoming",
-    "logo": "/images/preipo/image150.png"
+    "logo": "/images/preipo/image145.jpg"
   },
   {
     "id": 151,
@@ -1668,7 +1668,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
-    "logo": "/images/preipo/image151.png"
+    "logo": "/images/preipo/image146.png"
   },
   {
     "id": 152,
@@ -1677,7 +1677,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 2500,
     "status": "upcoming",
-    "logo": "/images/preipo/image152.png"
+    "logo": "/images/preipo/image147.png"
   },
   {
     "id": 153,
@@ -1686,7 +1686,7 @@ export const fetchPreIPOs = async () => {
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
-    "logo": "/images/preipo/image153.png"
+    "logo": "/images/preipo/image148.png"
   } 
   ];
 };

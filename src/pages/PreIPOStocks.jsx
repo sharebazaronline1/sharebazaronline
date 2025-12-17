@@ -19,32 +19,25 @@ const PreIPOStocks = () => {
     load();
   }, []);
 
-  // Helper component for logo or fallback letter
+  // ✅ Fixed-size logo component (no shrinking)
   const CompanyLogo = ({ name, logo }) => {
     const firstLetter = name?.charAt(0).toUpperCase() || "?";
 
     return (
-      <div className="w-14 h-14 rounded-xl bg-gray-500 flex items-center justify-center text-white font-bold text-xl shadow-md border border-indigo-200">
+      <div className="w-14 h-14 min-w-[56px] min-h-[56px] rounded-xl bg-gray-500 flex items-center justify-center text-white font-bold text-xl shadow-md border border-indigo-200 relative overflow-hidden flex-shrink-0">
         {logo ? (
           <img
             src={logo}
             alt={name}
-            className="w-full h-full rounded-xl object-contain bg-white p-1"
             loading="lazy"
+            className="w-full h-full object-contain bg-white p-2"
             onError={(e) => {
-              e.target.style.display = "none"; 
-              e.target.nextSibling.style.display = "flex"; 
-            }}
-            onLoad={(e) => {
-              e.target.style.display = "block";
-              e.target.nextSibling.style.display = "none";
+              e.currentTarget.style.display = "none";
             }}
           />
-        ) : null}
-        {/* Fallback letter - hidden if image loads */}
-        <span className={`block ${logo ? "hidden" : "flex"} items-center justify-center w-full h-full`}>
-          {firstLetter}
-        </span>
+        ) : (
+          <span>{firstLetter}</span>
+        )}
       </div>
     );
   };
@@ -91,15 +84,13 @@ const PreIPOStocks = () => {
                     transition={{ delay: i * 0.05 }}
                     className="hover:bg-gray-50 transition-colors"
                   >
-                    {/* Company Name + Logo */}
+                    {/* Company */}
                     <td className="px-6 py-5">
                       <div className="flex items-center gap-4">
                         <CompanyLogo name={ipo.name} logo={ipo.logo} />
-                        <div>
-                          <p className="font-medium text-gray-900 text-base sm:text-md line-clamp-2">
-                            {ipo.name}
-                          </p>
-                        </div>
+                        <p className="font-medium text-gray-900 text-base sm:text-md line-clamp-2">
+                          {ipo.name}
+                        </p>
                       </div>
                     </td>
 
@@ -110,7 +101,7 @@ const PreIPOStocks = () => {
                       </span>
                     </td>
 
-                    {/* Min Lot Size */}
+                    {/* Min Lot */}
                     <td className="px-6 py-5 text-center font-medium text-gray-800">
                       {ipo.minLotSize?.toLocaleString("en-IN") || "-"} shares
                     </td>
@@ -141,7 +132,7 @@ const PreIPOStocks = () => {
           </table>
         </div>
 
-        {/* Footer Note */}
+        {/* Footer */}
         {ipos.length > 0 && (
           <div className="px-8 py-5 bg-gray-50 border-t border-gray-200 text-center text-sm text-gray-600">
             Prices are indicative • Subject to availability • Contact for latest quotes
