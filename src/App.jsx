@@ -46,7 +46,7 @@ function App() {
           <aside className="hidden xl:block w-72 flex-shrink-0">
             <div className="flex flex-col gap-8 py-8"> {/* py-8 for vertical alignment with main content */}
               {/* Top Advertisement Banner - Scrolls with page */}
-              <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-48 flex items-center justify-center">
+              <div className="border-2 border-dashed border-gray-200 rounded-lg shadow-sm h-48 flex items-center justify-center">
                 <p className="text-xs font-semibold text-gray-800">Advertisement</p>
               </div>
 
@@ -55,10 +55,10 @@ function App() {
 
               {/* Sticky Banners */}
               <div className="flex flex-col gap-3 sticky top-64">
-                <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
+                <div className=" border-2 border-dashed border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
                   <p className="text-xs font-semibold text-gray-800">Banner Ad 1</p>
                 </div>
-                <div className="bg-white border border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
+                <div className="border-2 border-dashed border-gray-200 rounded-lg shadow-sm h-36 flex items-center justify-center">
                   <p className="text-xs font-semibold text-gray-800">Banner Ad 2</p>
                 </div>
               </div>
