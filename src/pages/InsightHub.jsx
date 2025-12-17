@@ -91,13 +91,13 @@ const InsightHub = () => {
   return (
     <div className="w-full bg-gray-50 min-h-screen">
 
-      {/* Banner */}
+      {/* ✅ FIXED BANNER */}
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative h-60 md:h-72 lg:h-80 rounded-2xl overflow-hidden bg-gray-900">
           <img
             src="/images/insightbanner.jpg"
             alt="Insight Hub"
-            className="absolute inset-0 w-full h-full object-cover opacity-95"
+            className="absolute inset-0 w-full h-[120%] object-cover translate-y-10 opacity-95"
           />
         </div>
       </div>
@@ -115,16 +115,14 @@ const InsightHub = () => {
               transition={{ delay: i * 0.04 }}
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full"
             >
-              {/* Image */}
               <div className="relative h-36 px-3 pt-3">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover object-[50%_15%] rounded-lg"
+                  className="w-full h-full object-cover rounded-lg"
                 />
               </div>
 
-              {/* Content */}
               <div className="p-3 flex flex-col flex-1">
                 <time className="text-[11px] text-gray-500 mb-1">
                   {post.date}
