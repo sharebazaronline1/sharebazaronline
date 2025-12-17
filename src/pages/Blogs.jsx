@@ -140,7 +140,7 @@ export default function Blogs() {
   }, [isHovered]);
 
   return (
-    <section className="py-12 lg:py-16">
+     <section className="pt-16 pb-4 lg:pt-4 lg:pb-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className="overflow-hidden"

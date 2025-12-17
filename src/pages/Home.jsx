@@ -194,17 +194,19 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="p-8">
-              <Blogs />
-              <div className="text-center mt-6 pb-4">
-                <button
-                  onClick={() => navigate("/insight-hub")}
-                  className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
-                >
-                  View All News & Blogs →
-                </button>
-              </div>
-            </div>
+           <div className="px-8 pt-8 pb-8">
+  <Blogs />
+
+  <div className="text-center mt-2">
+    <button
+      onClick={() => navigate("/insight-hub")}
+      className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
+    >
+      View All News & Blogs →
+    </button>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
@@ -224,14 +226,15 @@ export default function Home() {
 
             <div className="p-8">
               <BrokerAnalyzer />
-              <div className="text-center mt-6 pb-4">
-                <button
-                  onClick={() => navigate('/brokers')}
-                  className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
-                >
-                  View All Brokers
-                </button>
-              </div>
+            <div className="text-center mt-2">
+  <button
+    onClick={() => navigate('/brokers')}
+    className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
+  >
+    View All Brokers
+  </button>
+</div>
+
             </div>
           </div>
         </div>

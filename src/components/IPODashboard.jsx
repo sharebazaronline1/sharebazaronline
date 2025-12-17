@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
 
 const LetterAvatar = ({ name }) => (
-  <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-xl bg-gray-800 text-white font-bold text-lg">
+  <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-lg bg-gray-800 text-white font-bold text-sm">
     {name?.charAt(0)?.toUpperCase() || "I"}
   </div>
 );
@@ -65,25 +65,32 @@ export const IPOCard = ({ ipo }) => {
             <h3 className="font-bold text-base text-gray-900 truncate">
               {ipo.name}
             </h3>
-            <p className="text-xs text-gray-500 truncate">
+            <p className="text-xs text-gray-500 truncate mt-0.5">
               {ipo.fullName || "IPO"}
             </p>
 
-            {/* ✅ SMALLER BADGES – text-[8px], tighter padding */}
-            <div className="flex justify-end gap-1 mt-1">
-              {isLive && (
-                <span
-                  className="inline-flex items-center gap-0.5 px-1 py-0.5 text-[8px] font-medium rounded-full leading-none bg-red-50 text-red-700 border border-red-200"
-                >
-                  <span className="relative flex h-1 w-1">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-70"></span>
-                    <span className="relative inline-flex h-full w-full rounded-full bg-red-600"></span>
-                  </span>
-                  Live
-                </span>
-              )}
+            {/* ✅ Small badges – always visible, properly aligned on all screens */}
+            <div className="flex flex-wrap items-center gap-1 mt-1">
               <span
-                className={`inline-flex items-center px-1 py-0.5 text-[8px] font-medium rounded-full leading-none ${typeColor}`}
+                className={`inline-flex items-center gap-1 px-1 py-[1.5px] text-[8px] font-semibold rounded-full leading-none ${
+                  isLive
+                    ? "bg-red-50 text-red-700 border border-red-200"
+                    : "hidden"
+                }`}
+              >
+                {isLive && (
+                  <>
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-70"></span>
+                      <span className="relative inline-flex h-full w-full rounded-full bg-red-600"></span>
+                    </span>
+                    Live
+                  </>
+                )}
+              </span>
+
+              <span
+                className={`inline-flex items-center px-1 py-[1.5px] text-[8px] font-medium rounded-full leading-none ${typeColor}`}
               >
                 {type}
               </span>
@@ -91,7 +98,7 @@ export const IPOCard = ({ ipo }) => {
           </div>
         </div>
 
-        <div className="mt-2 text-xs grid grid-cols-2 gap-y-1">
+        <div className="mt-2 text-xs grid grid-cols-2 gap-y-1 gap-x-2">
           <span className="text-gray-600">Dates</span>
           <span className="font-medium">
             {formatDateRange(ipo.open, ipo.close)}
@@ -157,7 +164,7 @@ const IPODashboard = ({ ipos = [] }) => {
   }, [ipos]);
 
   return (
-    <div className="py-6 px-4">
+    <div className="py-2 px-4">
       <div className="max-w-screen-2xl mx-auto">
         {/* Desktop Grid */}
         <div className="hidden lg:grid grid-cols-4 gap-6">
@@ -174,7 +181,7 @@ const IPODashboard = ({ ipos = [] }) => {
           ))}
         </div>
 
-        {/* Mobile Horizontal Scroll */}
+        {/* Mobile / Tablet Horizontal Scroll */}
         <div className="lg:hidden overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400">
           <div className="flex gap-4 py-4 min-w-max">
             {top8IPOs.map((ipo, i) => (
