@@ -9,12 +9,7 @@ const UnlistedSharesSidebar = () => {
   const [sidebarUnlisted, setSidebarUnlisted] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const shouldShow = [
-    "/", 
-    "/ipo-tracker", 
-    "/ipo/ipo-list", 
-    "/pre-ipo-stocks"
-  ].includes(pathname);
+  const shouldShow = ["/", "/ipo-tracker", "/ipo/ipo-list", "/pre-ipo-stocks"].includes(pathname);
 
   useEffect(() => {
     const today = new Date();
@@ -50,49 +45,46 @@ const UnlistedSharesSidebar = () => {
   if (!shouldShow) return null;
 
   return (
-    <div className="hidden xl:block w-64 flex-shrink-0 pl-8">
-      <div className="sticky top-80">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden text-xs">
-          {/* Header */}
-          <div className="bg-gradient-to-r from-gray-800 to-gray-700 text-white px-4 py-3 rounded-t-lg">
-            <h3 className="font-bold text-sm">Unlisted Shares</h3>
-            <p className="text-xs opacity-90 mt-0.5">{formattedDate}</p>
-          </div>
+    <div className="hidden xl:block w-48 flex-shrink-0">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden text-xs">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-gray-800 to-gray-700 text-white px-4 py-3 rounded-t-lg">
+          <h3 className="font-bold text-sm">Unlisted Shares</h3>
+          <p className="text-xs opacity-90 mt-0.5">{formattedDate}</p>
+        </div>
 
-          {/* List */}
-          <div className="max-h-48 overflow-y-auto divide-y divide-gray-100">
-            {loading ? (
-              <div className="px-4 py-6 text-center text-gray-500 text-xs">
-                Loading...
-              </div>
-            ) : sidebarUnlisted.length === 0 ? (
-              <div className="px-4 py-6 text-center text-gray-500 text-xs">
-                No unlisted shares available
-              </div>
-            ) : (
-              sidebarUnlisted.map((stock, i) => (
-                <div
-                  key={i}
-                  className="px-4 py-2 hover:bg-gray-50 transition cursor-pointer"
-                >
-                  {/* Name and Price aligned horizontally on the same line */}
-                  <div className="flex justify-between items-center">
-                    <p className="font-semibold text-gray-900 text-xs truncate flex-1">
-                      {stock.name}
-                    </p>
-                    <span className="text-[10px] font-semibold text-gray-700 ml-4">
-                      {stock.price}
-                    </span>
-                  </div>
+        {/* List */}
+        <div className="divide-y divide-gray-100 max-h-[420px] overflow-y-auto">
+          {loading ? (
+            <div className="px-4 py-8 text-center text-gray-500 text-xs">
+              Loading...
+            </div>
+          ) : sidebarUnlisted.length === 0 ? (
+            <div className="px-4 py-8 text-center text-gray-500 text-xs">
+              No unlisted shares available
+            </div>
+          ) : (
+            sidebarUnlisted.map((stock, i) => (
+              <div
+                key={i}
+                className="px-4 py-3.5 hover:bg-gray-50 transition cursor-pointer"
+              >
+                <p className="font-semibold text-gray-900 text-xs truncate pr-2">
+                  {stock.name}
+                </p>
+                <div className="flex justify-between items-center mt-2">
+                  <span className="text-[9px] px-1.5 py-[2px] rounded font-medium leading-none border border-gray-200 bg-gray-100 text-gray-700">
+                    {stock.price}
+                  </span>
                 </div>
-              ))
-            )}
-          </div>
+              </div>
+            ))
+          )}
+        </div>
 
-          {/* Footer */}
-          <div className="bg-gray-50 px-4 py-1.5 text-center border-t border-gray-200 rounded-b-lg">
-            <p className="text-xs text-gray-500">Updated daily • Dec 2025</p>
-          </div>
+        {/* Footer */}
+        <div className="bg-gray-50 px-4 py-2 text-center border-t border-gray-200 rounded-b-lg">
+          <p className="text-xs text-gray-500">Updated daily • Dec 2025</p>
         </div>
       </div>
     </div>

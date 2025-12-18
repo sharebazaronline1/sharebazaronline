@@ -26,7 +26,7 @@ const UnlistedCard = ({ stock }) => {
       "
     >
       {/* TOP */}
-      <div className="px-5 pt-5 flex gap-3 items-start">
+      <div className="px-5 pt-5 flex gap-2 items-start">  {/* Increased gap-2 → gap-3 for better internal spacing */}
         <div className="w-12 h-12 flex-shrink-0">
           {!imgError && stock.logo ? (
             <img

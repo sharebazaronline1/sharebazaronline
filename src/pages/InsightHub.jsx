@@ -91,20 +91,33 @@ const InsightHub = () => {
   return (
     <div className="w-full bg-gray-50 min-h-screen">
 
-      {/* ✅ FIXED BANNER */}
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative h-60 md:h-72 lg:h-80 rounded-2xl overflow-hidden bg-gray-900">
+      {/* ✅ FIXED BANNER – Top portion no longer cropped */}
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
+        <div className="relative h-60 md:h-72 lg:h-96 rounded-3xl overflow-hidden shadow-xl">
           <img
             src="/images/insightbanner.jpg"
-            alt="Insight Hub"
-            className="absolute inset-0 w-full h-[120%] object-cover translate-y-10 opacity-95"
+            alt="Read Our Latest Blogs on IPOs & Corporate Actions"
+            className="absolute inset-0 w-full h-full object-cover object-top"
           />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
+
+          {/* Optional text overlay (still commented) */}
+          {/*
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4">
+              Read Our Latest Blogs on<br />IPOs & Corporate Actions
+            </h1>
+            <p className="text-lg md:text-xl text-white/90">
+              Stay Updated with News, Insights & Analysis
+            </p>
+          </div>
+          */}
         </div>
       </div>
 
       {/* Blog Grid */}
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
 
           {blogPosts.map((post, i) => (
             <motion.article

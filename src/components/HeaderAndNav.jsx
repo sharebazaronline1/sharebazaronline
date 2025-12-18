@@ -152,7 +152,6 @@ const HeaderAndNav = () => {
             <div className="space-y-1">
               <p className="font-bold text-gray-800 py-2">Broker Analyzer</p>
               <Link to="/broker-analyzer/compare" className="block pl-6 py-1 text-gray-600 hover:text-[#1e40af]">Compare Brokers</Link>
-              <Link to="/broker-analyzer/charges" className="block pl-6 py-1 text-gray-600 hover:text-[#1e40af]">Brokerage Charges</Link>
             </div>
 
             <Link to="/insight-hub" className="block py-2 text-gray-800">Insight Hub</Link>

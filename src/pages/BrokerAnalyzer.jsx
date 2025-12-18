@@ -123,7 +123,7 @@ const BrokerAnalyzer = () => {
       <div className="max-w-7xl mx-auto">  
         {/* Mobile: Horizontal Scroll */}
         <div className="lg:hidden overflow-x-auto scrollbar-hide -mx-4 px-4 pb-6">
-          <div className="flex gap-4">
+          <div className="flex gap-3">
             {brokers.map((broker) => (
               <div key={broker.id} className="w-80 flex-shrink-0">
                 <BrokerCard broker={broker} />
@@ -133,7 +133,7 @@ const BrokerAnalyzer = () => {
         </div>
 
         {/* Desktop: Grid */}
-        <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="hidden lg:grid lg:grid-cols-2 xl:grid-cols-4 gap-3">
           {brokers.map((broker) => (
             <BrokerCard key={broker.id} broker={broker} />
           ))}

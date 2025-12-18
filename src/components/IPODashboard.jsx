@@ -30,7 +30,7 @@ const isIPOActiveByDate = (open, close) => {
   return o <= today && today <= c;
 };
 
-// 🔹 Single IPO card – used on both mobile & desktop
+// Single IPO card – used on both mobile & desktop
 export const IPOCard = ({ ipo }) => {
   const navigate = useNavigate();
 
@@ -48,8 +48,9 @@ export const IPOCard = ({ ipo }) => {
   const isLive = isIPOActiveByDate(ipo.open, ipo.close);
 
   return (
-    <div className="min-w-[250px] flex-shrink-0 bg-white border border-gray-300 rounded-2xl shadow-sm">
-      <div className="p-4 flex flex-col gap-2 h-full">
+    <div className="w-full min-w-[300px] flex-shrink-0 bg-white border border-gray-300 rounded-2xl shadow-sm">
+      {/* Fixed minimum width to 300px to prevent shrinking on mobile/tablet */}
+      <div className="p-2 flex flex-col gap-2 h-full">
         <div className="flex gap-3 items-start">
           {ipo.logo ? (
             <img
@@ -69,29 +70,20 @@ export const IPOCard = ({ ipo }) => {
               {ipo.fullName || "IPO"}
             </p>
 
-            {/* ✅ Small badges – always visible, properly aligned on all screens */}
-            <div className="flex flex-wrap items-center gap-1 mt-1">
-              <span
-                className={`inline-flex items-center gap-1 px-1 py-[1.5px] text-[8px] font-semibold rounded-full leading-none ${
-                  isLive
-                    ? "bg-red-50 text-red-700 border border-red-200"
-                    : "hidden"
-                }`}
-              >
-                {isLive && (
-                  <>
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-70"></span>
-                      <span className="relative inline-flex h-full w-full rounded-full bg-red-600"></span>
-                    </span>
-                    Live
-                  </>
-                )}
-              </span>
+            {/* Badges – increased size and removed flex-wrap to prevent line break */}
+            <div className="flex items-center gap-2 mt-1 overflow-x-hidden">
+              {/* overflow-x-hidden ensures badge doesn't get cut off */}
+              {isLive && (
+                <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-semibold rounded-full bg-red-50 text-red-700 border border-red-200 flex-shrink-0">
+                  <span className="relative flex h-3 w-3">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-70"></span>
+                    <span className="relative inline-flex h-full w-full rounded-full bg-red-600"></span>
+                  </span>
+                  Live
+                </span>
+              )}
 
-              <span
-                className={`inline-flex items-center px-1 py-[1.5px] text-[8px] font-medium rounded-full leading-none ${typeColor}`}
-              >
+              <span className={`inline-flex items-center px-2 py-1 text-xs font-medium rounded-full flex-shrink-0 ${typeColor}`}>
                 {type}
               </span>
             </div>
@@ -164,10 +156,10 @@ const IPODashboard = ({ ipos = [] }) => {
   }, [ipos]);
 
   return (
-    <div className="py-2 px-4">
-      <div className="max-w-screen-2xl mx-auto">
+    <div className="py-2 px-2">
+      <div className="w-full">
         {/* Desktop Grid */}
-        <div className="hidden lg:grid grid-cols-4 gap-6">
+        <div className="hidden lg:grid grid-cols-4 gap-3.5">
           {top8IPOs.map((ipo, i) => (
             <motion.div
               key={ipo.id}
@@ -183,7 +175,7 @@ const IPODashboard = ({ ipos = [] }) => {
 
         {/* Mobile / Tablet Horizontal Scroll */}
         <div className="lg:hidden overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400">
-          <div className="flex gap-4 py-4 min-w-max">
+          <div className="flex gap-3 py-4 min-w-max">
             {top8IPOs.map((ipo, i) => (
               <motion.div
                 key={ipo.id}

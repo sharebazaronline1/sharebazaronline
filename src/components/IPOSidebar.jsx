@@ -78,8 +78,8 @@ const IPOSidebar = () => {
   if (!shouldShow) return null;
 
   return (
-    <div className="hidden xl:block w-64 flex-shrink-0 pl-8">
-      <div className="mt-48">
+    <div className="hidden xl:block w-48 flex-shrink-0">
+     
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden text-xs">
           <div className="bg-gradient-to-r from-gray-800 to-gray-700 text-white px-4 py-3 rounded-t-lg">
             <h3 className="font-bold text-sm">Live IPOs</h3>
@@ -130,7 +130,7 @@ const IPOSidebar = () => {
             <p className="text-xs text-gray-500">Updated daily • Dec 2025</p>
           </div>
         </div>
-      </div>
+ 
     </div>
   );
 };

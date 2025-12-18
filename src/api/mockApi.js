@@ -240,7 +240,7 @@ export const fetchIPOs = async () => {
       listingPrice: null,
       performance: null,
       type: "Mainboard",
-      status: "open"
+      status: "live"
     },
     {
       id: 16,
