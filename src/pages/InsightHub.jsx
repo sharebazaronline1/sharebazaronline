@@ -92,28 +92,15 @@ const InsightHub = () => {
     <div className="w-full bg-gray-50 min-h-screen">
 
       {/* ✅ FIXED BANNER – Top portion no longer cropped */}
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-        <div className="relative h-60 md:h-72 lg:h-96 rounded-3xl overflow-hidden shadow-xl">
-          <img
-            src="/images/insightbanner.jpg"
-            alt="Read Our Latest Blogs on IPOs & Corporate Actions"
-            className="absolute inset-0 w-full h-full object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30"></div>
-
-          {/* Optional text overlay (still commented) */}
-          {/*
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4">
-              Read Our Latest Blogs on<br />IPOs & Corporate Actions
-            </h1>
-            <p className="text-lg md:text-xl text-white/90">
-              Stay Updated with News, Insights & Analysis
-            </p>
-          </div>
-          */}
-        </div>
-      </div>
+ <div className="w-screen relative left-1 -translate-x-1/2 -mx-2">
+  <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12 ">
+    <img
+      src="/images/insightbanner.jpg"
+      alt="Insight Hub - Latest Blogs on IPOs & Corporate Actions"
+      className="absolute inset-0 w-full h-full object-top object-center"
+    />
+  </div>
+</div>
 
       {/* Blog Grid */}
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -146,7 +133,7 @@ const InsightHub = () => {
                 </h3>
 
                 <span className="mt-auto text-xs font-semibold text-green-600 hover:text-green-700">
-                  Read →
+                  More Info →
                 </span>
               </div>
             </motion.article>

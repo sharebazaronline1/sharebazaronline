@@ -9,7 +9,14 @@ const IPOSidebar = () => {
   const [sidebarIPOs, setSidebarIPOs] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const shouldShow = ["/", "/ipo-tracker", "/ipo/ipo-list", "/pre-ipo-stocks"].includes(pathname);
+ const shouldShow = [
+  "/",
+  "/ipo-tracker",
+  "/ipo/ipo-list",
+  "/pre-ipo-stocks",
+  "/insight-hub",
+  "/skill-up"
+].includes(pathname) || pathname.startsWith("/ipo/");
 
   useEffect(() => {
     const today = new Date();
@@ -98,30 +105,32 @@ const IPOSidebar = () => {
             ) : (
               sidebarIPOs.map((ipo, i) => (
                 <div
-                  key={i}
-                  className="px-4 py-3.5 hover:bg-gray-50 transition cursor-pointer"
-                >
-                  <p className="font-semibold text-gray-900 text-xs truncate pr-2">
-                    {ipo.name}
-                  </p>
-                  <div className="flex justify-between items-center mt-2">
-                    <span
-                      className={`text-[9px] px-1.5 py-[2px] rounded font-medium leading-none ${
-                        ipo.type === "Mainboard"
-                          ? "bg-green-100 text-green-700 border border-green-200"
-                          : "bg-blue-100 text-blue-700 border border-blue-200"
-                      }`}
-                    >
-                      {ipo.type}
-                    </span>
+  key={i}
+  className="px-3 py-2 hover:bg-gray-50 transition cursor-pointer"
+>
+  {/* NAME — full width, always visible */}
+  <p className="font-medium text-[11px] text-gray-900 truncate leading-tight">
+    {ipo.name}
+  </p>
 
-                    <div className="text-right">
-                      <span className="text-[10px] text-gray-600 font-medium">
-                        {ipo.shortDates}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+  {/* META — second line, compact */}
+  <div className="flex items-center gap-2 mt-1">
+    <span
+      className={`text-[9px] px-1 py-[1px] rounded border ${
+        ipo.type === "Mainboard"
+          ? "bg-green-100 text-green-700 border-green-200"
+          : "bg-blue-100 text-blue-700 border-blue-200"
+      }`}
+    >
+      {ipo.type}
+    </span>
+
+    <span className="text-[9px] text-gray-600 font-medium whitespace-nowrap">
+      {ipo.shortDates}
+    </span>
+  </div>
+</div>
+
               ))
             )}
           </div>

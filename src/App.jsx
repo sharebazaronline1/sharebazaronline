@@ -13,6 +13,10 @@ import InsightHub from './pages/InsightHub';
 import SkillUp from './pages/SkillUp';
 import IPODetails from './pages/IPODetails';
 import IPOList from './pages/IPOList';
+import UpcomingIpoSidebar from './components/IPOSidebar'
+import UnlistedSharesSidebar from './components/UnlistedSidebar';
+
+
 
 function App() {
   return (
@@ -31,10 +35,9 @@ function App() {
 
         {/* CONTENT WRAPPER */}
       {/* CONTENT WRAPPER */}
-<div className="relative flex flex-1">
-
-  {/* MAIN CONTENT — CENTERED */}
-  <main className="w-full max-w-[1200px] mx-auto px-4 lg:px-6 pb-10">
+   <div className="flex-1 flex w-full"> {/* full width */}
+  {/* MAIN CONTENT */}
+  <main className="flex-1 min-w-0 px-4 lg:px-6">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/ipo-tracker" element={<IPOTracker />} />
@@ -47,23 +50,18 @@ function App() {
     </Routes>
   </main>
 
-{/* RIGHT SIDEBAR — STICKY, STOPS BEFORE FOOTER */}
-<aside className="hidden xl:block w-36 mr-6"> {/* increased width from w-24 to w-36 */}
-  <div className="sticky top-96">
-    <div className="flex flex-col gap-2">
-      <div className="h-28 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-[11px] font-semibold text-gray-700 bg-white">
-       1
+  {/* SIDEBAR */}
+  <aside className="hidden xl:block w-48 flex-shrink-0 mr-6">
+    <div className="sticky top-20 mt-96 py-8 flex flex-col gap-2 ">
+      <div className="h-24 bg-white rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center text-sm font-semibold text-gray-700 shadow-sm">
+        Banner Ad
       </div>
-      <div className="h-28 rounded-xl border-2 border-dashed border-gray-300 flex items-center justify-center text-[11px] font-semibold text-gray-700 bg-white">
-     2
-      </div>
+      <UpcomingIpoSidebar />
+      <UnlistedSharesSidebar />
     </div>
-  </div>
-</aside>
-
-
-
+  </aside>
 </div>
+
 
 
         <Footer />

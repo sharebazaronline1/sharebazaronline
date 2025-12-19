@@ -34,23 +34,25 @@ const IPODashboard = () => {
   };
 
   const getIPOStatusByDate = (ipo) => {
-    const today = new Date();
-    let openDate = ipo.openDate || ipo.open || null;
-    let closeDate = ipo.closeDate || ipo.close || null;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0); // <-- This line fixes it
 
-    openDate = openDate ? new Date(openDate) : null;
-    closeDate = closeDate ? new Date(closeDate) : null;
+  let openDate = ipo.openDate || ipo.open || null;
+  let closeDate = ipo.closeDate || ipo.close || null;
 
-    if (openDate && closeDate) {
-      if (today >= openDate && today <= closeDate) return "Open";
-      if (today > closeDate) return "Closed";
-      if (today < openDate) return "Upcoming";
-    } else if (openDate) {
-      if (today >= openDate) return "Open";
-      if (today < openDate) return "Upcoming";
-    }
-    return "Upcoming";
-  };
+  openDate = openDate ? new Date(openDate) : null;
+  closeDate = closeDate ? new Date(closeDate) : null;
+
+  if (openDate && closeDate) {
+    if (today >= openDate && today <= closeDate) return "Open";
+    if (today > closeDate) return "Closed";
+    if (today < openDate) return "Upcoming";
+  } else if (openDate) {
+    if (today >= openDate) return "Open";
+    if (today < openDate) return "Upcoming";
+  }
+  return "Upcoming";
+};
 
   const filteredIPOs = ipos.filter((ipo) => {
     const ipoStatus = getIPOStatusByDate(ipo);
@@ -88,19 +90,22 @@ const IPODashboard = () => {
     <div className="w-full bg-gray-50">
 
       {/* ===== FIXED IPO LIST BANNER – Top cropping fixed ===== */}
-      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-        <div className="relative h-60 md:h-64 lg:h-80 rounded-3xl overflow-hidden shadow-xl">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
+      
+        <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
           <img
             src="/images/Ipolist.png"
             alt="IPO Tracker - Live & Upcoming IPOs in India"
-            className="absolute inset-0 w-full h-full object-cover object-top"
+            className="absolute inset-0 w-full h-full object-top  object-center"
           />
-         
+      
         </div>
       </div>
-      {/* ===== BANNER END ===== */}
-      {/* ===== BANNER END ===== */}
-      {/* ===== BANNER END ===== */}
+
+      </div>
+  
 
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
@@ -205,7 +210,7 @@ const IPODashboard = () => {
                               <p className="font-semibold text-gray-900 text-base">{ipo.name}</p>
                               <p className="text-xs text-gray-500 mt-0.5">{ipo.fullName || "Initial Public Offering"}</p>
                               <span
-                                className={`inline-flex mt-2 px-2.5 py-1 text-xs font-bold rounded-full shadow-sm ${
+                                className={`inline-flex mt-2 px-1 py-1 text-xs font-semibold rounded shadow-sm ${
                                   type === "SME"
                                     ? "bg-blue-100 text-blue-700 border border-blue-200"
                                     : "bg-green-100 text-green-700 border border-green-200"

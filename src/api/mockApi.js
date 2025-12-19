@@ -95,7 +95,7 @@ export const fetchIPOs = async () => {
       subscription: null,
       listingPrice: null,
       performance: null,
-      type: "SME",
+      type: "Mainboard",
       status: "UpcomingIpo"
     },
     {
@@ -1713,15 +1713,15 @@ export const fetchUnlisted = async () => {
       minInvestment: "₹19,100+",
       logo: "/images/nse.png",       
     },
-    {
-      id: 3,
-      name: "Care Health Insurance",
-      fullName: "Care Health Insurance Limited",
-      price: "Listed (Niva Bupa)",
-      lot: "-",
-      minInvestment: "-",
-      logo: "/images/carehealth.png",        
-    },
+   {
+  "id": 3,
+  "name": "Care Health Insurance",
+  "fullName": "Care Health Insurance Limited",
+  "price": "₹70-₹74",                       
+  "lot": 200,
+  "minInvestment": "₹14,800",                 
+  "logo": "/images/carehealth.png"
+ },
     {
       id: 4,
       name: "Metropolitan Stock Exchange (MSE)",

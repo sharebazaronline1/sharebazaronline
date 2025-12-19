@@ -138,11 +138,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SIDEBAR — ALWAYS HORIZONTAL ON XL */}
-      <aside className="hidden xl:block w-72 shrink-0 ">
-        <UpcomingIpoSidebar />
-      </aside>
-
+  
     </div>
   </div>
 </section>
@@ -151,13 +147,14 @@ export default function Home() {
 
 {/* UNLISTED SHARES */}
 <section className="py-0">
-  <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 ml-4 lg:ml-6">
-    
+  <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Removed ml-4 lg:ml-6 — unnecessary and causing misalignment */}
+
     {/* FLEX LAYOUT WITH MAIN + SIDEBAR */}
     <div className="flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-3">
 
       {/* MAIN UNLISTED SHARES SECTION */}
-      <div className="flex-1 max-w-[1100px]">
+      <div className="flex-1">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
           <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
             <h2 className="text-3xl font-black text-gray-900">Unlisted Shares</h2>
@@ -171,8 +168,9 @@ export default function Home() {
               </div>
             ) : (
               <>
+                {/* Mobile: Horizontal scroll - reduced gap */}
                 <div className="lg:hidden overflow-x-auto -mx-4 px-4 pb-6 scrollbar-hide">
-                  <div className="flex gap-6">
+                  <div className="flex gap-3">  {/* Reduced from gap-6 to gap-3 */}
                     {unlistedStocks.map((stock) => (
                       <div className="min-w-[250px] flex-shrink-0" key={stock.id}>
                         <UnlistedCard stock={stock} />
@@ -180,11 +178,14 @@ export default function Home() {
                     ))}
                   </div>
                 </div>
-                <div className="hidden lg:grid grid-cols-4 gap-6">
+
+                {/* Desktop: Grid - reduced gap */}
+                <div className="hidden lg:grid grid-cols-4 gap-3">  {/* Reduced from gap-6 to gap-3 */}
                   {unlistedStocks.map((stock) => (
                     <UnlistedCard key={stock.id} stock={stock} />
                   ))}
                 </div>
+
                 <div className="text-center mt-8">
                   <button
                     onClick={() => navigate("/pre-ipo-stocks")}
@@ -198,11 +199,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* SIDEBAR — ALWAYS HORIZONTAL ON XL */}
-      <aside className="hidden xl:block w-72 shrink-0">
-        <UnlistedSharesSidebar />
-      </aside>
 
     </div>
   </div>

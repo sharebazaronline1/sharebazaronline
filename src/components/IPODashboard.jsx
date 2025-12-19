@@ -32,13 +32,14 @@ const isIPOActiveByDate = (open, close) => {
 
 // Single IPO card – used on both mobile & desktop
 export const IPOCard = ({ ipo }) => {
-  const navigate = useNavigate();
+ const navigate = useNavigate();
 
-  const type = (ipo.fullName || ipo.name || "")
-    .toLowerCase()
-    .includes("sme")
-    ? "SME"
-    : "Mainboard";
+  // Fixed: Now properly uses the 'type' field if available
+  const type = ipo.type 
+    ? ipo.type.toUpperCase() 
+    : (ipo.fullName || ipo.name || "").toLowerCase().includes("sme")
+      ? "SME"
+      : "MAINBOARD";
 
   const typeColor =
     type === "SME"
@@ -50,7 +51,7 @@ export const IPOCard = ({ ipo }) => {
   return (
     <div className="w-full min-w-[300px] flex-shrink-0 bg-white border border-gray-300 rounded-2xl shadow-sm">
       {/* Fixed minimum width to 300px to prevent shrinking on mobile/tablet */}
-      <div className="p-2 flex flex-col gap-2 h-full">
+      <div className="p-4 flex flex-col gap-2 h-full">
         <div className="flex gap-3 items-start">
           {ipo.logo ? (
             <img
@@ -74,8 +75,8 @@ export const IPOCard = ({ ipo }) => {
             <div className="flex items-center gap-2 mt-1 overflow-x-hidden">
               {/* overflow-x-hidden ensures badge doesn't get cut off */}
               {isLive && (
-                <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-semibold rounded-full bg-red-50 text-red-700 border border-red-200 flex-shrink-0">
-                  <span className="relative flex h-3 w-3">
+                <span className="inline-flex items-center gap-1 px-2 text-xs rounded-full bg-red-50 text-red-700 border border-red-200 flex-shrink-0">
+                  <span className="relative flex h-2 w-2">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-70"></span>
                     <span className="relative inline-flex h-full w-full rounded-full bg-red-600"></span>
                   </span>
@@ -83,21 +84,21 @@ export const IPOCard = ({ ipo }) => {
                 </span>
               )}
 
-              <span className={`inline-flex items-center px-2 py-1 text-xs font-medium rounded-full flex-shrink-0 ${typeColor}`}>
+              <span className={`inline-flex items-center px-0.5 text-xs rounded flex-shrink-0 ${typeColor}`}>
                 {type}
               </span>
             </div>
           </div>
         </div>
 
-        <div className="mt-2 text-xs grid grid-cols-2 gap-y-1 gap-x-2">
+        <div className="mt-2 text-sm grid grid-cols-2 gap-y-1 gap-x-2">
           <span className="text-gray-600">Dates</span>
           <span className="font-medium">
             {formatDateRange(ipo.open, ipo.close)}
           </span>
 
           <span className="text-gray-600">Price</span>
-          <span className="font-semibold">₹{ipo.price}</span>
+          <span>₹{ipo.price}</span>
 
           <span className="text-gray-600">Lot</span>
           <span>{ipo.lot} shares</span>

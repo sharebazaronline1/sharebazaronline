@@ -9,7 +9,14 @@ const UnlistedSharesSidebar = () => {
   const [sidebarUnlisted, setSidebarUnlisted] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const shouldShow = ["/", "/ipo-tracker", "/ipo/ipo-list", "/pre-ipo-stocks"].includes(pathname);
+   const shouldShow = [
+  "/",
+  "/ipo-tracker",
+  "/ipo/ipo-list",
+  "/pre-ipo-stocks",
+  "/insight-hub",
+  "/skill-up"
+].includes(pathname) || pathname.startsWith("/ipo/");
 
   useEffect(() => {
     const today = new Date();
@@ -53,7 +60,6 @@ const UnlistedSharesSidebar = () => {
           <p className="text-xs opacity-90 mt-0.5">{formattedDate}</p>
         </div>
 
-        {/* List */}
         <div className="divide-y divide-gray-100 max-h-[420px] overflow-y-auto">
           {loading ? (
             <div className="px-4 py-8 text-center text-gray-500 text-xs">
@@ -65,19 +71,19 @@ const UnlistedSharesSidebar = () => {
             </div>
           ) : (
             sidebarUnlisted.map((stock, i) => (
-              <div
-                key={i}
-                className="px-4 py-3.5 hover:bg-gray-50 transition cursor-pointer"
-              >
-                <p className="font-semibold text-gray-900 text-xs truncate pr-2">
-                  {stock.name}
-                </p>
-                <div className="flex justify-between items-center mt-2">
-                  <span className="text-[9px] px-1.5 py-[2px] rounded font-medium leading-none border border-gray-200 bg-gray-100 text-gray-700">
-                    {stock.price}
-                  </span>
-                </div>
-              </div>
+             <div
+  key={i}
+  className="px-3 py-2 hover:bg-gray-50 transition cursor-pointer flex items-center justify-between gap-2"
+>
+  <p className="font-medium text-[11px] text-gray-900 truncate">
+    {stock.name}
+  </p>
+
+  <span className="text-[10px] px-1.5 py-[1px] rounded border border-gray-200 bg-gray-100 text-gray-700 whitespace-nowrap">
+    {stock.price}
+  </span>
+</div>
+
             ))
           )}
         </div>

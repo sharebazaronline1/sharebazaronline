@@ -55,7 +55,7 @@ const UnlistedCard = ({ stock }) => {
       {/* STATS */}
       <div className="px-5 mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
         <div className="text-gray-600">Share Price</div>
-        <div className="font-semibold">₹{stock.price || "—"}</div>
+        <div>₹{stock.price || "—"}</div>
 
         <div className="text-gray-600">Lot Size</div>
         <div>{stock.lot || "—"}</div>
