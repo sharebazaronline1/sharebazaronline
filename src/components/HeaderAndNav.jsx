@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Search, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import GlobalSearch from "./GlobalSearch";
 
 const HeaderAndNav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -112,6 +113,9 @@ const HeaderAndNav = () => {
             <Link to="/insight-hub" className="text-gray-700 hover:text-[#1e40af] transition">Insight Hub</Link>
             <Link to="/skill-up" className="text-gray-700 hover:text-[#1e40af] transition">SkillUp</Link>
 
+
+{/* add inside header */}
+<GlobalSearch />
             {/* Login Button - Far right */}
             <Link
               to="/login"
