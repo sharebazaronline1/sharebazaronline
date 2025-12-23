@@ -4,13 +4,18 @@ import { Search, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import GlobalSearch from "./GlobalSearch";
 
+
 const HeaderAndNav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [ipoOpen, setIpoOpen] = useState(false);
   const [preIpoOpen, setPreIpoOpen] = useState(false);
   const [brokerOpen, setBrokerOpen] = useState(false); // New dropdown for Broker Analyzer
   const [searchOpen, setSearchOpen] = useState(false);
+  const [mobileIPO, setMobileIPO] = useState(false);
+const [mobilePreIPO, setMobilePreIPO] = useState(false);
+const [mobileBroker, setMobileBroker] = useState(false);
   const [query, setQuery] = useState("");
+   const [showLogin, setShowLogin] = useState(false);  // ← ADD THIS STATE
 
   const ipoTimer = useRef(null);
   const preIpoTimer = useRef(null);
@@ -103,10 +108,10 @@ const HeaderAndNav = () => {
                 Broker Analyzer <span className=" text-xl">▾</span>
               </button>
               <div
-                className={`absolute right-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded-xl shadow-xl z-[999] transition-all duration-150 
+                className={`absolute right-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded-xl shadow-xl z-[9999] transition-all duration-150 
                   ${brokerOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none translate-y-1"}`}
               >
-                <Link to="/broker-analyzer/compare" className="block px-4 py-2 hover:bg-gray-50 rounded-t-xl">Compare Brokers</Link>
+                <Link to="/broker-analyzer/compare" className="block px-4 py-2 hover:bg-gray-50 rounded-xl">Compare Brokers</Link>
               </div>
             </div>
 
@@ -117,60 +122,143 @@ const HeaderAndNav = () => {
 {/* add inside header */}
 <GlobalSearch />
             {/* Login Button - Far right */}
-            <Link
+        <Link
               to="/login"
-              className="ml-8 px-7 py-2.5 bg-green-500 text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
-            >
-              Login
-            </Link>
+  className="ml-8 px-7 py-2.5 bg-green-500 text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+>
+  Login
+</Link>
           </nav>
 
           {/* Mobile Icons */}
           <div className="flex items-center gap-4 lg:hidden">
-            <button onClick={() => setSearchOpen(true)} className="p-2">
-              <Search className="w-6 h-6 text-gray-600" />
-            </button>
-            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2">
-              {mobileMenuOpen ? <X className="w-7 h-7 text-[#1e40af]" /> : <Menu className="w-7 h-7 text-[#1e40af]" />}
-            </button>
-          </div>
+  <GlobalSearch />
+
+  <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2">
+    {mobileMenuOpen ? (
+      <X className="w-7 h-7 text-[#1e40af]" />
+    ) : (
+      <Menu className="w-7 h-7 text-[#1e40af]" />
+    )}
+  </button>
+</div>
+
         </div>
       </div>
 
       {/* Mobile Navigation - Improved spacing & alignment */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
-          <div className="px-6 py-6 space-y-6 text-base font-medium">
-            <Link to="/" className="block text-[#1e40af] font-bold py-2">Home</Link>
+  <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+    <div className="px-6 py-6 space-y-5 text-base font-semibold max-h-[calc(100vh-4rem)] overflow-y-auto">
 
-            <div className="space-y-1">
-              <p className="font-bold text-gray-800 py-2">IPO Tracker</p>
-              <Link to="/ipo/ipo-list" className="block pl-6 py-1 text-gray-600 hover:text-[#1e40af]">List Of IPO</Link>
-            </div>
+      {/* Home */}
+      <Link
+        to="/"
+        className="block text-[#1e40af] font-semibold py-2"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Home
+      </Link>
 
-            <div className="space-y-1">
-              <p className="font-bold text-gray-800 py-2">Pre-IPO Stocks</p>
-              <Link to="/pre-ipo-stocks" className="block pl-6 py-1 text-gray-600 hover:text-[#1e40af]">Pre-IPO List</Link>
-            </div>
-
-            <div className="space-y-1">
-              <p className="font-bold text-gray-800 py-2">Broker Analyzer</p>
-              <Link to="/broker-analyzer/compare" className="block pl-6 py-1 text-gray-600 hover:text-[#1e40af]">Compare Brokers</Link>
-            </div>
-
-            <Link to="/insight-hub" className="block py-2 text-gray-800">Insight Hub</Link>
-            <Link to="/skill-up" className="block py-2 text-gray-800">SkillUp</Link>
-
+      {/* IPO Tracker */}
+      <div>
+        <button
+          onClick={() => setMobileIPO(!mobileIPO)}
+          className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
+        >
+          IPO Tracker
+          <span className="text-xl">{mobileIPO ? "−" : "+"}</span>
+        </button>
+        {mobileIPO && (
+          <div className="pl-6 space-y-2 mt-1">
             <Link
-              to="/login"
-              className="block text-center mt-6 py-3 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition"
+              to="/ipo/ipo-list"
+              className="block text-gray-600 hover:text-[#1e40af]"
+              onClick={() => setMobileMenuOpen(false)}
             >
-              Login
+              List Of IPO
             </Link>
           </div>
-        </div>
-      )}
+        )}
+      </div>
+
+      {/* Pre-IPO */}
+      <div>
+        <button
+          onClick={() => setMobilePreIPO(!mobilePreIPO)}
+          className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
+        >
+          Pre-IPO Stocks
+          <span className="text-xl">{mobilePreIPO ? "−" : "+"}</span>
+        </button>
+        {mobilePreIPO && (
+          <div className="pl-6 space-y-2 mt-1">
+            <Link
+              to="/pre-ipo-stocks"
+              className="block text-gray-600 hover:text-[#1e40af]"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Pre-IPO List
+            </Link>
+          </div>
+        )}
+      </div>
+
+      {/* Broker Analyzer */}
+      <div>
+        <button
+          onClick={() => setMobileBroker(!mobileBroker)}
+          className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
+        >
+          Broker Analyzer
+          <span className="text-xl">{mobileBroker ? "−" : "+"}</span>
+        </button>
+        {mobileBroker && (
+          <div className="pl-6 space-y-2 mt-1">
+            <Link
+              to="/broker-analyzer/compare"
+              className="block text-gray-600 hover:text-[#1e40af]"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Compare Brokers
+            </Link>
+          </div>
+        )}
+      </div>
+
+      {/* Static links */}
+      <Link
+        to="/insight-hub"
+        className="block py-2 text-gray-800"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        Insight Hub
+      </Link>
+
+      <Link
+        to="/skill-up"
+        className="block py-2 text-gray-800"
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        SkillUp
+      </Link>
+
+      {/* Login */}
+      <Link
+        to="/login"
+        onClick={() => setMobileMenuOpen(false)}
+        className="block text-center mt-6 py-3 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition"
+      >
+        Login
+      </Link>
+    </div>
+  </div>
+)}
+
     </header>
+      
+
+
   );
 };
 

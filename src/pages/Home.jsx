@@ -63,7 +63,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="font-black text-gray-900 leading-tight"
-            style={{ fontSize: 'clamp(1.8rem, 5vw, 3.4rem)' }}
+            style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}
           >
             India’s Most Trusted Analysis Platform for
           </motion.h1>

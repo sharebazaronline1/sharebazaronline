@@ -45,53 +45,66 @@ const GlobalSearch = () => {
   );
 
   return (
-    <div className="relative">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="p-2 rounded-full hover:bg-gray-100"
+  <div className="relative">
+    {/* Search Button */}
+    <button
+      onClick={() => setIsOpen(!isOpen)}
+      className="p-2 rounded-full hover:bg-gray-100"
+    >
+      <FiSearch className="w-5 h-5 text-gray-600" />
+    </button>
+
+    {isOpen && (
+      <div
+        ref={overlayRef}
+        className="
+          fixed lg:absolute
+          inset-x-4 top-20 lg:inset-auto lg:right-0 lg:top-full
+          mt-0 lg:mt-2
+          w-auto lg:w-80
+          bg-white border rounded-xl shadow-xl
+          max-h-[70vh] lg:max-h-96 overflow-y-auto
+          z-[9999]
+        "
       >
-        <FiSearch className="w-5 h-5 text-gray-600" />
-      </button>
+        {/* Search Input */}
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          autoFocus
+          placeholder="Search IPOs, Blogs, Brokers..."
+          className="w-full px-4 py-3 border-b outline-none text-base"
+        />
 
-      {isOpen && (
-        <div
-          ref={overlayRef}
-          className="absolute right-0 mt-2 w-80 bg-white border rounded-lg shadow-lg max-h-96 overflow-y-auto z-[9999]"
-        >
-          <input
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            autoFocus
-            placeholder="Search IPOs, Blogs, Brokers..."
-            className="w-full px-4 py-2 border-b outline-none"
-          />
+        {query && (
+          <div>
+            {results.length === 0 ? (
+              <p className="p-4 text-sm text-gray-500">No results found</p>
+            ) : (
+              results.map((r) => (
+                <div
+                  key={r.id}
+                  onClick={() => {
+                    navigate(r.url);
+                    setIsOpen(false);
+                    setQuery("");
+                  }}
+                  className="px-4 py-3 hover:bg-gray-100 cursor-pointer"
+                >
+                  <p className="font-semibold text-sm">{r.title}</p>
+                  <p className="text-xs text-gray-500 line-clamp-2">
+                    {r.content}
+                  </p>
+                </div>
+              ))
+            )}
+          </div>
+        )}
+      </div>
+    )}
+  </div>
+);
 
-          {query && (
-            <div>
-              {results.length === 0 ? (
-                <p className="p-3 text-sm text-gray-500">No results found</p>
-              ) : (
-                results.map((r) => (
-                  <div
-                    key={r.id}
-                    onClick={() => {
-                      navigate(r.url);
-                      setIsOpen(false);
-                      setQuery("");
-                    }}
-                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
-                  >
-                    <p className="font-semibold text-sm">{r.title}</p>
-                    <p className="text-xs text-gray-500 line-clamp-2">{r.content}</p>
-                  </div>
-                ))
-              )}
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
 };
 
 export default GlobalSearch;

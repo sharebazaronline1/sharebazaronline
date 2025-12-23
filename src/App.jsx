@@ -11,6 +11,7 @@ import PreIPOStocks from './pages/PreIPOStocks';
 import BrokerAnalyzer from './pages/BrokerAnalyzer';
 import InsightHub from './pages/InsightHub';
 import SkillUp from './pages/SkillUp';
+import Login from './pages/Login'
 import IPODetails from './pages/IPODetails';
 import IPOList from './pages/IPOList';
 import UpcomingIpoSidebar from './components/IPOSidebar'
@@ -45,6 +46,7 @@ function App() {
       <Route path="/pre-ipo-stocks" element={<PreIPOStocks />} />
       <Route path="/broker-analyzer" element={<BrokerAnalyzer />} />
       <Route path="/insight-hub" element={<InsightHub />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/ipo/:id" element={<IPODetails />} />
       <Route path="/skill-up" element={<SkillUp />} />
     </Routes>
