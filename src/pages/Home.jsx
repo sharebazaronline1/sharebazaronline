@@ -56,38 +56,71 @@ export default function Home() {
     <div className="w-full bg-gray-50">
 
       {/* HERO */}
-      <section className="py-12 lg:py-16">
-        <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: -30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-black text-gray-900 leading-tight"
-            style={{ fontSize: 'clamp(1.8rem, 5vw, 3rem)' }}
-          >
-            India’s Most Trusted Analysis Platform for
-          </motion.h1>
+    <section className="py-12 px-8 lg:py-24 relative">
+  <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+    
+    <motion.h1
+  initial={{ opacity: 0, y: -30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="font-black text-gray-900 leading-tight relative z-10 mx-auto"
+  style={{
+    fontSize: 'clamp(1.8rem, 5vw, 3rem)',
+    transform: 'translateX(22%)' // 👈 offsets right sidebar pull
+  }}
+>
+  India’s Most Trusted Analysis Platform for
+</motion.h1>
 
-          <div className="relative mt-6 h-20 lg:h-24 flex justify-center items-center">
-            <AnimatePresence mode="wait">
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                className="absolute font-black text-green-600 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
-              >
-                {features[index]}
-              </motion.span>
-            </AnimatePresence>
+
+    <div className="relative mt-6 h-20 lg:h-24 flex justify-center items-center">
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -30 }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className="absolute font-black text-green-600 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
+        >
+          {features[index]}
+        </motion.span>
+      </AnimatePresence>
+    </div>
+
+    <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+      Your Trusted One-Stop Platform for Smarter Investment.
+    </p>
+  </div>
+</section>
+
+       {/* BROKER ANALYZER */}
+      <section className="py-2">
+        <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+            <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
+              <h2 className="text-3xl font-black text-gray-900">Best Stock Brokers in India 2025</h2>
+              <p className="mt-2 text-lg text-gray-600">
+                Trusted by millions
+              </p>
+            </div>
+
+            <div className="p-8">
+              <BrokerAnalyzer />
+              <div className="text-center mt-2">
+                <button
+                  onClick={() => navigate('/brokers')}
+                  className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
+                >
+                  View All Brokers
+                </button>
+              </div>
+            </div>
           </div>
-
-          <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Your Trusted One-Stop Platform for Smarter Investment.
-          </p>
         </div>
       </section>
+
+      <AdBanner />
 
       {/* IPO SECTION */}
   <section className="py-2">
@@ -237,33 +270,7 @@ export default function Home() {
 
       <AdBanner />
 
-      {/* BROKER ANALYZER */}
-      <section className="py-2">
-        <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
-              <h2 className="text-3xl font-black text-gray-900">Best Stock Brokers in India 2025</h2>
-              <p className="mt-2 text-lg text-gray-600">
-                Zero delivery • Flat ₹20 • Trusted by millions
-              </p>
-            </div>
-
-            <div className="p-8">
-              <BrokerAnalyzer />
-              <div className="text-center mt-2">
-                <button
-                  onClick={() => navigate('/brokers')}
-                  className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
-                >
-                  View All Brokers
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <AdBanner />
+     
 
       {/* WHY CHOOSE US */}
       <section className="py-2 pb-8">

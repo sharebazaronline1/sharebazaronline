@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi"; 
-import { fetchIPOs, fetchPreIPOs, fetchBrokers, fetchBlogs, fetchUpcomingIPOs, fetchUnlistedShares } from "../api/mockApi";
+import { fetchIPOs, fetchPreIPOs, fetchBrokers, fetchBlogs, fetchUnlistedShares } from "../api/mockApi";
 import { buildSearchIndex } from "../utils/buildSearchIndex";
 
 const GlobalSearch = () => {
@@ -13,17 +13,16 @@ const GlobalSearch = () => {
 
   useEffect(() => {
     const fetchAllData = async () => {
-      const [ipos, preIpos, brokers, blogs, upcomingIPOs, unlistedShares] = await Promise.all([
+      const [ipos, preIpos, brokers, blogs, unlistedShares] = await Promise.all([
         fetchIPOs(),
         fetchPreIPOs(),
         fetchBrokers(),
         fetchBlogs(),
-        fetchUpcomingIPOs(),
         fetchUnlistedShares(),
       ]);
 
       setSearchIndex(
-        buildSearchIndex(ipos, preIpos, brokers, blogs, upcomingIPOs, unlistedShares)
+        buildSearchIndex(ipos, preIpos, brokers, blogs, unlistedShares)
       );
     };
 

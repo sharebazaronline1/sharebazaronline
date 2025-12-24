@@ -1,4 +1,4 @@
-export const buildSearchIndex = (ipos = [], preIpos = [], brokers = [], blogs = [], upcomingIPOs = [], unlistedShares = []) => {
+export const buildSearchIndex = (ipos = [], preIpos = [], brokers = [], blogs = [], unlistedShares = []) => {
   const ipoIndex = ipos.map((ipo) => ({
     id: `ipo-${ipo.id}`,
     title: ipo.name,
@@ -41,12 +41,6 @@ export const buildSearchIndex = (ipos = [], preIpos = [], brokers = [], blogs = 
     url: `/insight-hub`,
   }));
 
-  const upcomingIndex = upcomingIPOs.map((u) => ({
-    id: `upcoming-${u.id}`,
-    title: u.name,
-    content: `Upcoming IPO: ${u.type}, Open: ${u.open}, Close: ${u.close}, Status: ${u.status}`,
-    url: `/ipo/ipo-list`,
-  }));
 
   const unlistedIndex = unlistedShares.map((u) => ({
     id: `unlisted-${u.id}`,
@@ -60,7 +54,6 @@ export const buildSearchIndex = (ipos = [], preIpos = [], brokers = [], blogs = 
     ...preIpoIndex,
     ...brokerIndex,
     ...blogIndex,
-    ...upcomingIndex,
     ...unlistedIndex,
   ];
 };

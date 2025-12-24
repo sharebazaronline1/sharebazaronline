@@ -267,7 +267,7 @@ export const fetchIPOs = async () => {
       close: "24 Dec 2025",
       listing: "30 Dec 2025",
       price: "65-70",
-      lot: null,
+      lot: 2000,
       subscription: null,
       listingPrice: null,
       performance: null,
@@ -299,7 +299,7 @@ export const fetchIPOs = async () => {
       close: "24 Dec 2025",
       listing: "30 Dec 2025",
       price: "108-114",
-      lot: null,
+      lot: 128,
       subscription: null,
       listingPrice: null,
       performance: null,
@@ -1896,7 +1896,130 @@ export const fetchUnlistedShares = async () => {
     { id: 5, name: "CSK (Chennai Super Kings)", price: "₹210" },
     { id: 6, name: "Cochin International Airport", price: "₹460" },
     { id: 7, name: "PharmEasy", price: "₹6-7" },
-    { id: 8, name: "Orbis Financial", price: "₹465" },
-    { id: 9, name: "Groww", price: "₹157" },
+    { id: 8, name: "Orbis Financial", price: "₹435" }
+  ];
+};
+
+
+
+// src/api/mockApi.js - Add this as the first blog in fetchBlogs()
+
+export const fetchInsightDetails = async () => {
+  return [
+    {
+      id: 1,
+      title: " NSE Trading Holiday & Clearing Holidays Update 2026",
+      category: "Market Holidays",
+      date: "24 Dec 2025",
+      author: "ShareBazaaronline Team",
+      readTime: "8 min read",
+      image: "/images/insight/insightimage1.png",
+      content: `
+        <p>Stay ahead with ShareBazaarOnline — your trusted source for the latest NSE Trading & Clearing Holidays 2026 and complete Indian stock market timings, sourced directly from official NSE notifications.</p>
+
+        <p>The NSE holiday calendar 2026 includes trading and settlement holidays across Equity, F&O, Currency, and Commodity segments.</p>
+
+        <h2>NSE Trading Holidays 2026 – Key Highlights</h2>
+        <ul>
+          <li>Full list of trading holidays for 2026</li>
+          <li>Covers Equity, Derivatives, and Currency segments</li>
+          <li>Includes special sessions like Diwali Muhurat Trading 2026</li>
+          <li>Updated from official NSE circulars</li>
+        </ul>
+        <p>On trading holidays, normal market activity is closed except for announced special sessions.</p>
+
+        <h2>NSE Clearing Holidays 2026 – Settlement Notes</h2>
+        <p>Clearing holidays affect trade settlement, fund pay-ins, and security pay-outs — important for delivery-based and long-term investors.</p>
+        <p>Key points to track:</p>
+        <ul>
+          <li>Clearing holiday schedule for 2026</li>
+          <li>Impact on T+1 and T+2 settlement cycles</li>
+          <li>Critical dates for equity delivery and IPO allotments</li>
+        </ul>
+
+        <h2>Equity Market Timings (NSE & BSE)</h2>
+        <ul>
+          <li><strong>Pre-Open Session:</strong> Order entry: 09:00 – 09:08 hrs</li>
+          <li><strong>Regular Trading:</strong> 9:15 AM – 3:30 PM</li>
+          <li><strong>Post-Closing Session:</strong> 3:40 PM – 4:00 PM</li>
+        </ul>
+
+        <h2>Equity Derivatives (F&O)</h2>
+        <p>Trading Hours: 9:15 AM – 3:30 PM</p>
+
+        <h2>Currency Derivatives</h2>
+        <p>Trading Hours: 9:00 AM – 5:00 PM</p>
+
+        <h2>Commodity Derivatives</h2>
+        <ul>
+          <li>Morning Session: 9:00 AM – 5:00 PM</li>
+          <li>Evening Session: 5:00 PM – 11:30 PM (up to 11:55 PM during DST for international contracts)</li>
+        </ul>
+        <p><em>Note: Timings may vary on special sessions or regulatory announcements.</em></p>
+
+        <h2>Muhurat Trading 2026</h2>
+        <p>Muhurat Trading will be held on Diwali Laxmi Pujan (Sunday, 8 Nov 2026) as per NSE tradition. Exact timings will be announced via official circular.</p>
+
+        <h2>Why Choose ShareBazaarOnline?</h2>
+        <ul>
+          <li>Official NSE-sourced data</li>
+          <li>Clear, investor-friendly format</li>
+          <li>Regular updates on holidays & timings</li>
+          <li>One-stop platform for IPOs, unlisted shares, and market info</li>
+        </ul>
+
+        <h2>Trading Holidays 2026</h2>
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-2 text-left">Sr. No</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Date</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Day</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 px-4 py-2">1</td><td class="border border-gray-300 px-4 py-2">26-Jan-2026</td><td class="border border-gray-300 px-4 py-2">Monday</td><td class="border border-gray-300 px-4 py-2">Republic Day</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">2</td><td class="border border-gray-300 px-4 py-2">03-Mar-2026</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Holi</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">3</td><td class="border border-gray-300 px-4 py-2">26-Mar-2026</td><td class="border border-gray-300 px-4 py-2">Thursday</td><td class="border border-gray-300 px-4 py-2">Shri Ram Navami</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">4</td><td class="border border-gray-300 px-4 py-2">31-Mar-2026</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Shri Mahavir Jayanti</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">5</td><td class="border border-gray-300 px-4 py-2">03-Apr-2026</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Good Friday</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">6</td><td class="border border-gray-300 px-4 py-2">14-Apr-2026</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Dr. Baba Saheb Ambedkar Jayanti</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">7</td><td class="border border-gray-300 px-4 py-2">01-May-2026</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Maharashtra Day</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">8</td><td class="border border-gray-300 px-4 py-2">28-May-2026</td><td class="border border-gray-300 px-4 py-2">Thursday</td><td class="border border-gray-300 px-4 py-2">Bakri Id</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">9</td><td class="border border-gray-300 px-4 py-2">26-Jun-2026</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Muharram</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">10</td><td class="border border-gray-300 px-4 py-2">14-Sep-2026</td><td class="border border-gray-300 px-4 py-2">Monday</td><td class="border border-gray-300 px-4 py-2">Ganesh Chaturthi</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">11</td><td class="border border-gray-300 px-4 py-2">02-Oct-2026</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Mahatma Gandhi Jayanti</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">12</td><td class="border border-gray-300 px-4 py-2">20-Oct-2026</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Dussehra</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">13</td><td class="border border-gray-300 px-4 py-2">10-Nov-2026</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Diwali-Balipratipada</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">14</td><td class="border border-gray-300 px-4 py-2">24-Nov-2026</td><td class="border border-gray-300 px-4 py-2">Tuesday</td><td class="border border-gray-300 px-4 py-2">Prakash Gurpurb Sri Guru Nanak Dev</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">15</td><td class="border border-gray-300 px-4 py-2">25-Dec-2026</td><td class="border border-gray-300 px-4 py-2">Friday</td><td class="border border-gray-300 px-4 py-2">Christmas</td></tr>
+          </tbody>
+        </table>
+
+        <h2>Holidays on Saturday / Sunday</h2>
+        <table class="w-full border-collapse">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="border border-gray-300 px-4 py-2 text-left">Sr. No</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Date</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Day</th>
+              <th class="border border-gray-300 px-4 py-2 text-left">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="border border-gray-300 px-4 py-2">1</td><td class="border border-gray-300 px-4 py-2">15-Feb-2026</td><td class="border border-gray-300 px-4 py-2">Sunday</td><td class="border border-gray-300 px-4 py-2">Mahashivratri</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">2</td><td class="border border-gray-300 px-4 py-2">21-Mar-2026</td><td class="border border-gray-300 px-4 py-2">Saturday</td><td class="border border-gray-300 px-4 py-2">Id-Ul-Fitr (Ramadan Eid)</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">3</td><td class="border border-gray-300 px-4 py-2">15-Aug-2026</td><td class="border border-gray-300 px-4 py-2">Saturday</td><td class="border border-gray-300 px-4 py-2">Independence Day</td></tr>
+            <tr><td class="border border-gray-300 px-4 py-2">4</td><td class="border border-gray-300 px-4 py-2">08-Nov-2026</td><td class="border border-gray-300 px-4 py-2">Sunday</td><td class="border border-gray-300 px-4 py-2">Diwali Laxmi Pujan*</td></tr>
+          </tbody>
+        </table>
+
+        <p><strong>Note:</strong> Diwali Laxmi Pujan falls on Sunday, 8 Nov 2026. Muhurat Trading will be conducted as per NSE tradition. Timings will be announced later.</p>
+
+        <p><em>Source: NSE India</em></p>
+      `,
+    },
+    // ... your other blogs here
   ];
 };

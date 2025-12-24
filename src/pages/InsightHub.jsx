@@ -1,13 +1,18 @@
+// src/pages/InsightHub.jsx (only the clickable card change applied)
+
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";  // ← ADD THIS IMPORT
 
 const InsightHub = () => {
+  const navigate = useNavigate();  // ← ADD THIS
+
   const blogPosts = [
     {
       id: 1,
-      title: "Meesho IPO 2025: Complete Details & Review",
-      category: "Upcoming IPO",
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
-      date: "2 hours ago",
+      title: "NSE Trading Holiday & Clearing Holidays Update 2026",
+      category: "Market Uodate",
+      image: "images/insight/insightimage1.png",
+      date: "24 Dec 2025",
     },
     {
       id: 2,
@@ -91,16 +96,17 @@ const InsightHub = () => {
   return (
     <div className="w-full bg-gray-50 min-h-screen">
 
-      {/* ✅ FIXED BANNER – Top portion no longer cropped */}
- <div className="w-screen relative left-1 -translate-x-1/2 -mx-2">
-  <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12 ">
-    <img
-      src="/images/insightbanner.jpg"
-      alt="Insight Hub - Latest Blogs on IPOs & Corporate Actions"
-      className="absolute inset-0 w-full h-full object-top object-center"
-    />
-  </div>
-</div>
+      {/* BANNER */}
+      <div className="w-screen relative left-1 -translate-x-1/2 -mx-2">
+        <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
+        <img
+  src="/images/insightbanner.jpg"
+  alt="Insight Hub - Latest Blogs on IPOs & Corporate Actions"
+  className="absolute inset-0 w-full h-full object-cover object-top"
+/>
+
+        </div>
+      </div>
 
       {/* Blog Grid */}
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -114,12 +120,13 @@ const InsightHub = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.04 }}
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full"
+              onClick={() => navigate(`/insight-hub/${post.id}`)}  // ← CLICK ANYWHERE ON CARD GOES TO DETAIL
             >
               <div className="relative h-36 px-3 pt-3">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-cover rounded-lg"
+                  className="w-full h-full object-contain "
                 />
               </div>
 

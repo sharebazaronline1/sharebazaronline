@@ -1,4 +1,5 @@
-// src/pages/IPODetails.jsx 
+// src/pages/IPODetails.jsx (only the minInvestment calculation fixed)
+
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { 
@@ -22,11 +23,12 @@ const IPODetails = () => {
     window.scrollTo(0, 0);
   }, [id]);
 
-  const getLowerPrice = (priceStr) => {
+  const getHigherPrice = (priceStr) => {
     if (!priceStr) return 0;
     if (typeof priceStr === 'number') return priceStr;
-    const lower = priceStr.toString().split('-')[0];
-    return parseInt(lower.replace(/[^0-9]/g, '')) || 0;
+    const parts = priceStr.toString().split('-');
+    const higher = parts[parts.length - 1]; // Get the last part (highest price)
+    return parseInt(higher.replace(/[^0-9]/g, '')) || 0;
   };
 
   const sections = [
@@ -54,8 +56,8 @@ const IPODetails = () => {
     );
   }
 
-  const lowerPrice = getLowerPrice(ipo.price);
-  const minInvestment = (ipo.lot || ipo.minLotSize || 1) * lowerPrice;
+  const higherPrice = getHigherPrice(ipo.price);
+  const minInvestment = (ipo.lot || ipo.minLotSize || 1) * higherPrice;
 
   return (
     <div className="min-h-screen bg-white">
