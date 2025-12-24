@@ -59,38 +59,44 @@ export default function Home() {
     <section className="py-12 px-8 lg:py-24 relative">
   <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
     
-    <motion.h1
+   <motion.h1
   initial={{ opacity: 0, y: -30 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
-  className="font-black text-gray-900 leading-tight relative z-10 mx-auto"
+  className="
+    font-black text-gray-900 leading-tight
+    relative z-10 mx-auto
+     lg:left-24   /* 👈 forces right shift */
+  "
   style={{
     fontSize: 'clamp(1.8rem, 5vw, 3rem)',
-    transform: 'translateX(22%)' // 👈 offsets right sidebar pull
   }}
 >
   India’s Most Trusted Analysis Platform for
 </motion.h1>
 
 
-    <div className="relative mt-6 h-20 lg:h-24 flex justify-center items-center">
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={index}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -30 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="absolute font-black text-green-600 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
-        >
-          {features[index]}
-        </motion.span>
-      </AnimatePresence>
-    </div>
 
-    <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-      Your Trusted One-Stop Platform for Smarter Investment.
-    </p>
+    <div className="relative mt-6 h-20 lg:h-24 flex justify-center items-center lg:left-24">
+  <AnimatePresence mode="wait">
+    <motion.span
+      key={index}
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -30 }}
+      transition={{ type: "spring", stiffness: 300, damping: 30 }}
+      className="absolute font-black text-green-600 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
+    >
+      {features[index]}
+    </motion.span>
+  </AnimatePresence>
+</div>
+
+
+    <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto relative lg:left-24">
+  Your Trusted One-Stop Platform for Smarter Investment.
+</p>
+
   </div>
 </section>
 

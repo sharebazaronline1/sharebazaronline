@@ -16,6 +16,7 @@ import SkillUp from './pages/SkillUp';
 import Login from './pages/Login';
 import IPODetails from './pages/IPODetails';
 import IPOList from './pages/IPOList';
+import PreIPODetails from './pages/PreIPODetails'
 import UpcomingIpoSidebar from './components/IPOSidebar';
 import UnlistedSharesSidebar from './components/UnlistedSidebar';
 
@@ -44,6 +45,7 @@ function App() {
               <Route path="/ipo/ipo-list" element={<IPOList />} />
               <Route path="/pre-ipo-stocks" element={<PreIPOStocks />} />
               <Route path="/broker-analyzer" element={<BrokerAnalyzer />} />
+              <Route path="/preipo/:id" element={<PreIPODetails />} />
               <Route path="/insight-hub" element={<InsightHub />} />  {/* ← Fixed duplicate */}
               <Route path="/insight-hub/:id" element={<InsightHubDetails />} />  {/* ← Added BlogDetail route */}
               <Route path="/login" element={<Login />} />

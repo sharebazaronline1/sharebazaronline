@@ -36,16 +36,7 @@ const BlogDetail = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Hero Image Only */}
-      <div className="relative h-[200px] sm:h-[250px] md:h-[300px] lg:h-[360px] overflow-hidden">
-        <img
-          src={blog.image || "/images/default-blog-banner.jpg"}
-          alt={blog.title}
-          className="w-full h-full object-cover object-center brightness-75"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-      </div>
-
+   
       {/* Full-width Content Container - Title + Article in same box */}
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 xl:px-24 py-10 lg:py-14 lg:pr-80">
         <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden">
@@ -78,7 +69,7 @@ const BlogDetail = () => {
           </div>
 
           {/* Article Content - Same box, smaller text */}
-          <div className="px-6 sm:px-10 lg:px-16 py-10 lg:py-14">
+          <div className="px-6 sm:px-10 lg:px-16 py-4 lg:py-4">
             <article
               className="
                 prose prose-base max-w-none

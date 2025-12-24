@@ -1,4 +1,5 @@
-// src/pages/PreIPOStocks.jsx
+// src/pages/PreIPOStocks.jsx (updated - entire row clickable for details)
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +20,7 @@ const PreIPOStocks = () => {
     load();
   }, []);
 
-  // ✅ Fixed-size logo component (no shrinking)
+  // Fixed-size logo component (no shrinking)
   const CompanyLogo = ({ name, logo }) => {
     const firstLetter = name?.charAt(0).toUpperCase() || "?";
 
@@ -44,21 +45,18 @@ const PreIPOStocks = () => {
 
   return (
     <div className="w-full bg-gray-50">
-      {/* ===== ADDED BANNER ===== */}
+      {/* BANNER */}
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-         <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
-      
-        <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
-          <img
-            src="/images/unlistedshares.png"
-            alt="IPO Tracker - Live & Upcoming IPOs in India"
-            className="absolute inset-0 w-full h-full object-top  object-center"
-          />
-      
+        <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
+          <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
+            <img
+              src="/images/unlistedshares.png"
+              alt="Pre-IPO & Unlisted Shares - Invest Early"
+              className="absolute inset-0 w-full h-full object-cover object-center"
+            />
+          </div>
         </div>
       </div>
-      </div>
-      {/* ===== BANNER END ===== */}
 
       <div className="w-full max-w-none px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
@@ -99,7 +97,8 @@ const PreIPOStocks = () => {
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.05 }}
-                      className="hover:bg-gray-50 transition-colors"
+                      className="hover:bg-gray-50 transition-colors cursor-pointer"
+                      onClick={() => navigate(`/preipo/${ipo.id}`)}  // ← Entire row clickable
                     >
                       {/* Company */}
                       <td className="px-6 py-5">
@@ -129,13 +128,20 @@ const PreIPOStocks = () => {
                       </td>
 
                       {/* Actions */}
-                      <td className="px-6 py-5 text-center">
+                      <td className="px-6 py-5 text-center" onClick={(e) => e.stopPropagation()}>
                         <div className="flex justify-center gap-3">
-                          <button className="px-5 py-2.5 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition shadow-sm text-sm whitespace-nowrap">
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation(); // Prevent row click
+                              // Handle Buy Now action (e.g., open modal or contact form)
+                              alert("Buy Now clicked - implement your logic here");
+                            }}
+                            className="px-5 py-2.5 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition shadow-sm text-sm whitespace-nowrap"
+                          >
                             Buy Now
                           </button>
                           <button
-                            onClick={() => navigate(`/preipo/${ipo.id}`)}
+                            onClick={(e) => e.stopPropagation()} // Prevent row navigation
                             className="px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition text-sm whitespace-nowrap"
                           >
                             View Details
