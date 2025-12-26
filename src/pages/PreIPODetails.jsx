@@ -17,7 +17,7 @@ const PreIPODetails = () => {
   if (!data) {
     return (
       <div className="min-h-screen flex items-center justify-center text-slate-500 bg-slate-50">
-        <div className="text-xl">Loading…</div>
+        <div className="text-xl">Coming Soon..</div>
       </div>
     );
   }

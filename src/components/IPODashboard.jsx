@@ -1,4 +1,5 @@
-// src/components/IPODashboard.jsx
+// src/components/IPODashboard.jsx (Updated - No IPO message + Apply button links to How to Apply page)
+
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
@@ -32,9 +33,8 @@ const isIPOActiveByDate = (open, close) => {
 
 // Single IPO card – used on both mobile & desktop
 export const IPOCard = ({ ipo }) => {
- const navigate = useNavigate();
+  const navigate = useNavigate();
 
-  // Fixed: Now properly uses the 'type' field if available
   const type = ipo.type 
     ? ipo.type.toUpperCase() 
     : (ipo.fullName || ipo.name || "").toLowerCase().includes("sme")
@@ -50,7 +50,6 @@ export const IPOCard = ({ ipo }) => {
 
   return (
     <div className="w-full min-w-[300px] flex-shrink-0 bg-white border border-gray-300 rounded-2xl shadow-sm">
-      {/* Fixed minimum width to 300px to prevent shrinking on mobile/tablet */}
       <div className="p-4 flex flex-col gap-2 h-full">
         <div className="flex gap-3 items-start">
           {ipo.logo ? (
@@ -71,9 +70,7 @@ export const IPOCard = ({ ipo }) => {
               {ipo.fullName || "IPO"}
             </p>
 
-            {/* Badges – increased size and removed flex-wrap to prevent line break */}
             <div className="flex items-center gap-2 mt-1 overflow-x-hidden">
-              {/* overflow-x-hidden ensures badge doesn't get cut off */}
               {isLive && (
                 <span className="inline-flex items-center gap-1 px-2 text-xs rounded-full bg-red-50 text-red-700 border border-red-200 flex-shrink-0">
                   <span className="relative flex h-2 w-2">
@@ -109,7 +106,7 @@ export const IPOCard = ({ ipo }) => {
 
         <div className="mt-auto flex gap-2">
           <button
-            onClick={() => navigate(`/ipo/${ipo.id}`)}
+            onClick={() => navigate("/how-to-apply-ipo")}  // ← Now goes to How to Apply page
             className="flex-1 py-2.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-xl"
           >
             Apply
@@ -161,33 +158,61 @@ const IPODashboard = ({ ipos = [] }) => {
       <div className="w-full">
         {/* Desktop Grid */}
         <div className="hidden lg:grid grid-cols-4 gap-3.5">
-          {top8IPOs.map((ipo, i) => (
-            <motion.div
-              key={ipo.id}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.06 }}
-              className="h-full"
-            >
-              <IPOCard ipo={ipo} />
-            </motion.div>
-          ))}
+          {top8IPOs.length > 0 ? (
+            top8IPOs.map((ipo, i) => (
+              <motion.div
+                key={ipo.id}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.06 }}
+                className="h-full"
+              >
+                <IPOCard ipo={ipo} />
+              </motion.div>
+            ))
+          ) : (
+            <div className="col-span-4 py-20 text-center">
+              <p className="text-2xl font-semibold text-gray-600">
+                No Live IPOs Right Now
+              </p>
+              <p className="text-lg text-gray-500 mt-4">
+                Check back soon for upcoming IPOs or explore Pre-IPO & Unlisted Shares.
+              </p>
+            </div>
+          )}
         </div>
 
         {/* Mobile / Tablet Horizontal Scroll */}
         <div className="lg:hidden overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400">
-          <div className="flex gap-3 py-4 min-w-max">
-            {top8IPOs.map((ipo, i) => (
-              <motion.div
-                key={ipo.id}
-                initial={{ opacity: 0, x: 50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
+          {top8IPOs.length > 0 ? (
+            <div className="flex gap-3 py-4 min-w-max">
+              {top8IPOs.map((ipo, i) => (
+                <motion.div
+                  key={ipo.id}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                >
+                  <IPOCard ipo={ipo} />
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            <div className="py-20 text-center px-8">
+              <p className="text-2xl font-semibold text-gray-600">
+                No Live IPOs Right Now
+              </p>
+              <p className="text-lg text-gray-500 mt-4">
+                Check back soon for new opportunities.
+              </p>
+              <button
+                onClick={() => navigate("/how-to-apply-ipo")}
+                className="mt-8 px-8 py-4 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-lg"
               >
-                <IPOCard ipo={ipo} />
-              </motion.div>
-            ))}
-          </div>
+                Learn How to Apply for IPOs
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

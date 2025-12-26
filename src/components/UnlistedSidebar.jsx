@@ -19,7 +19,9 @@ const UnlistedSharesSidebar = () => {
   "/login"
 ].includes(pathname) ||  pathname.startsWith("/ipo/") ||
   pathname.startsWith("/insight-hub")||
-  pathname.startsWith("/preipo");
+  pathname.startsWith("/preipo") ||
+  pathname.startsWith("/how-to-apply-ipo");
+  
 
   useEffect(() => {
     const today = new Date();

@@ -1,6 +1,7 @@
 // src/pages/IPODetails.jsx (only the minInvestment calculation fixed)
 
 import { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 import { useParams } from 'react-router-dom';
 import { 
   Download, ExternalLink, AlertTriangle,
@@ -14,6 +15,7 @@ const IPODetails = () => {
   const { id } = useParams();
   const [ipo, setIpo] = useState(null);
   const [activeSection, setActiveSection] = useState('overview');
+const navigate = useNavigate();
 
   useEffect(() => {
     fetchIPOs().then((ipos) => {
@@ -107,7 +109,8 @@ const IPODetails = () => {
             </div>
 
             {/* Apply Now Button - Right Side */}
-            <button className="px-8 py-3 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md hover:shadow-lg">
+            <button onClick={() => navigate('/how-to-apply-ipo')}
+            className="px-8 py-3 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md hover:shadow-lg">
               Apply Now
             </button>
           </div>
