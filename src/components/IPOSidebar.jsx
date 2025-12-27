@@ -1,7 +1,7 @@
 // src/components/UpcomingIPOSidebar.jsx
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { fetchUpcomingIPOs } from "../api/mockApi";
+import { fetchIPOs } from "../api/mockApi";
 
 const IPOSidebar = () => {
   const { pathname } = useLocation();
@@ -36,7 +36,7 @@ const IPOSidebar = () => {
   useEffect(() => {
     const loadSidebarData = async () => {
       try {
-        const data = await fetchUpcomingIPOs();
+        const data = await fetchIPOs();
 
         const today = new Date();
         today.setHours(0, 0, 0, 0);

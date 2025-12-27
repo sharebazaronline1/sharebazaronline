@@ -305,7 +305,23 @@ export const fetchIPOs = async () => {
       performance: null,
       type: "Mainboard",
       status: "UpcomingIpo"
-    }
+    },
+    {
+  "id": 20,
+  "name": "E to E Transportation",
+  "fullName": "E to E Transportation Infrastructure Ltd",
+  "logo": "/images/ipo/e2e-rail.png",
+  "open": "26 Dec 2025",
+  "close": "30 Dec 2025",
+  "listing": "02 Jan 2026",
+  "price": "164-174",
+  "lot": 800,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Live"
+}
   ]
 }
 export const fetchPreIPOs = async () => {
