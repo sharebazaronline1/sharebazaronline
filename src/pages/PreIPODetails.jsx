@@ -29,7 +29,7 @@ const PreIPODetails = () => {
         {/* ================= HEADER ================= */}
         <header className="space-y-4 text-center lg:text-left">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-green-600 leading-tight">
-            {data.name} Unlisted Share Price – Buy & Sell Guide
+            {data.name}
           </h1>
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
             Complete details of {data.name} unlisted shares including company overview,

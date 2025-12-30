@@ -52,7 +52,9 @@ const PreIPOStocks = () => {
             <img
               src="/images/unlistedshares.png"
               alt="Pre-IPO & Unlisted Shares - Invest Early"
-              className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-contain object-top object-cover"
+            style={{ objectPosition: "center 10%" }}
+
             />
           </div>
         </div>
@@ -141,7 +143,7 @@ const PreIPOStocks = () => {
                             Buy Now
                           </button>
                           <button
-                            onClick={(e) => e.stopPropagation()} // Prevent row navigation
+                           onClick={() => navigate(`/preipo/${ipo.id}`)}  // Prevent row navigation
                             className="px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition text-sm whitespace-nowrap"
                           >
                             View Details
