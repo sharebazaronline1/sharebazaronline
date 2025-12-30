@@ -56,50 +56,48 @@ export default function Home() {
     <div className="w-full bg-gray-50">
 
       {/* HERO */}
-    <section className="py-12 px-8 lg:py-24 relative">
+ <section className="py-12 px-8 lg:py-24 relative">
   <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
     
-   <motion.h1
-  initial={{ opacity: 0, y: -30 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  className="
-    font-black text-gray-900 leading-tight
-    relative z-10 mx-auto
-     lg:left-24   /* 👈 forces right shift */
-  "
-  style={{
-    fontSize: 'clamp(1.8rem, 5vw, 3rem)',
-  }}
->
-  India’s Most Trusted Analysis Platform for
-</motion.h1>
-
-
+    <motion.h1
+      initial={{ opacity: 0, y: -30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="
+        font-black text-gray-900 leading-tight
+        relative z-10 mx-auto
+        lg:left-24   /* 👈 forces right shift on large screens */
+        text-4xl sm:text-5xl          /* 👈 Increased base mobile size (default + sm) */
+        md:text-6xl                   /* 👈 Larger on medium screens */
+      "
+      style={{
+        fontSize: 'clamp(2.5rem, 8vw, 4rem)',  /* 👈 Bigger clamp: larger on small/mobile screens */
+      }}
+    >
+      India’s Most Trusted Analysis Platform for
+    </motion.h1>
 
     <div className="relative mt-6 h-20 lg:h-24 flex justify-center items-center lg:left-24">
-  <AnimatePresence mode="wait">
-    <motion.span
-      key={index}
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -30 }}
-      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-      className="absolute font-black text-green-600 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
-    >
-      {features[index]}
-    </motion.span>
-  </AnimatePresence>
-</div>
-
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -30 }}
+          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          className="absolute font-black text-green-600 text-5xl sm:text-6xl lg:text-7xl xl:text-8xl"
+        >
+          {features[index]}
+        </motion.span>
+      </AnimatePresence>
+    </div>
 
     <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto relative lg:left-24">
-  Your Trusted One-Stop Platform for Smarter Investment.
-</p>
+      Your Trusted One-Stop Platform for Smarter Investment.
+    </p>
 
   </div>
 </section>
-
        {/* BROKER ANALYZER */}
       <section className="py-2">
         <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,18 +127,21 @@ export default function Home() {
       <AdBanner />
 
       {/* IPO SECTION */}
-  <section className="py-2">
-  <div className="w-full max-w-screen-2xl mx-auto px-6 lg:px-10 ml-4 lg:ml-6">
-    
+ <section className="py-2">
+  <div className="w-full max-w-screen-2xl mx-auto px-6 lg:px-10">
+
     {/* HORIZONTAL LAYOUT */}
     <div className="flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-3">
 
       {/* MAIN IPO TRACKER SECTION */}
       <div className="flex-1 max-w-[1100px]">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+
           <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
             <h2 className="text-3xl font-black text-gray-900">IPO Tracker</h2>
-            <p className="mt-2 text-lg text-gray-600">Live & Upcoming IPOs in India</p>
+            <p className="mt-2 text-lg text-gray-600">
+              Live & Upcoming IPOs in India
+            </p>
           </div>
 
           <div className="p-8">
@@ -149,20 +150,57 @@ export default function Home() {
                 <div className="animate-spin rounded-full h-14 w-14 border-t-4 border-b-4 border-gray-800" />
               </div>
             ) : (
-              <>
-                <div className="lg:hidden overflow-x-auto px-2 pb-6 scrollbar-hide">
-                  <div className="flex gap-6">
-                    {ipos.map((ipo) => (
-                      <div key={ipo.id} className="min-w-[280px] flex-shrink-0">
-                        <IPOCard ipo={ipo} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="hidden lg:block">
-                  <IPODashboard ipos={ipos} />
-                </div>
-              </>
+              (() => {
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+
+                const liveIPOs = ipos
+                  .map((ipo) => ({
+                    ...ipo,
+                    _openDate: new Date(ipo.open),
+                    _closeDate: new Date(ipo.close),
+                  }))
+                  .filter(
+                    (ipo) =>
+                      !isNaN(ipo._openDate) &&
+                      !isNaN(ipo._closeDate) &&
+                      ipo._openDate <= today &&
+                      today <= ipo._closeDate
+                  )
+                  .sort((a, b) => a._closeDate - b._closeDate)
+                  .slice(0, 8);
+
+                return (
+                  <>
+                    {/* Mobile / Tablet */}
+                    <div className="lg:hidden overflow-x-auto px-2 pb-6 scrollbar-hide">
+                      {liveIPOs.length > 0 ? (
+                        <div className="flex gap-6">
+                          {liveIPOs.map((ipo) => (
+                            <div
+                              key={ipo.id}
+                              className="min-w-[280px] flex-shrink-0"
+                            >
+                              <IPOCard ipo={ipo} />
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="py-20 text-center">
+                          <p className="text-xl font-semibold text-gray-600">
+                            No Live IPOs Right Now
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Desktop */}
+                    <div className="hidden lg:block">
+                      <IPODashboard ipos={liveIPOs} />
+                    </div>
+                  </>
+                );
+              })()
             )}
 
             <div className="text-center mt-8">
@@ -173,11 +211,11 @@ export default function Home() {
                 View All IPO
               </button>
             </div>
+
           </div>
         </div>
       </div>
 
-  
     </div>
   </div>
 </section>
@@ -266,7 +304,7 @@ export default function Home() {
                   onClick={() => navigate("/insight-hub")}
                   className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
                 >
-                  View All News & Blogs →
+                  View All News & Blogs 
                 </button>
               </div>
             </div>

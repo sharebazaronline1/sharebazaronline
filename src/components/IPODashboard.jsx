@@ -1,5 +1,4 @@
-// src/components/IPODashboard.jsx (Updated - No IPO message + Apply button links to How to Apply page)
-
+// src/components/IPODashboard.jsx
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
@@ -15,7 +14,6 @@ const formatDateRange = (open, close) => {
   const o = new Date(open);
   const c = new Date(close);
   if (isNaN(o) || isNaN(c)) return "—";
-
   const month = c.toLocaleString("en-GB", { month: "short" });
   return `${o.getDate()}–${c.getDate()} ${month}`;
 };
@@ -23,18 +21,15 @@ const formatDateRange = (open, close) => {
 const isIPOActiveByDate = (open, close) => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-
   const o = new Date(open);
   const c = new Date(close);
   if (isNaN(o) || isNaN(c)) return false;
-
   return o <= today && today <= c;
 };
 
-// Single IPO card – used on both mobile & desktop
+// Single IPO card – used on all screen sizes
 export const IPOCard = ({ ipo }) => {
   const navigate = useNavigate();
-
   const type = ipo.type 
     ? ipo.type.toUpperCase() 
     : (ipo.fullName || ipo.name || "").toLowerCase().includes("sme")
@@ -61,7 +56,6 @@ export const IPOCard = ({ ipo }) => {
           ) : (
             <LetterAvatar name={ipo.name} />
           )}
-
           <div className="flex-1 min-w-0">
             <h3 className="font-bold text-base text-gray-900 truncate">
               {ipo.name}
@@ -69,7 +63,6 @@ export const IPOCard = ({ ipo }) => {
             <p className="text-xs text-gray-500 truncate mt-0.5">
               {ipo.fullName || "IPO"}
             </p>
-
             <div className="flex items-center gap-2 mt-1 overflow-x-hidden">
               {isLive && (
                 <span className="inline-flex items-center gap-1 px-2 text-xs rounded-full bg-red-50 text-red-700 border border-red-200 flex-shrink-0">
@@ -80,7 +73,6 @@ export const IPOCard = ({ ipo }) => {
                   Live
                 </span>
               )}
-
               <span className={`inline-flex items-center px-0.5 text-xs rounded flex-shrink-0 ${typeColor}`}>
                 {type}
               </span>
@@ -90,23 +82,18 @@ export const IPOCard = ({ ipo }) => {
 
         <div className="mt-2 text-sm grid grid-cols-2 gap-y-1 gap-x-2">
           <span className="text-gray-600">Dates</span>
-          <span className="font-medium">
-            {formatDateRange(ipo.open, ipo.close)}
-          </span>
-
+          <span className="font-medium">{formatDateRange(ipo.open, ipo.close)}</span>
           <span className="text-gray-600">Price</span>
           <span>₹{ipo.price}</span>
-
           <span className="text-gray-600">Lot</span>
           <span>{ipo.lot} shares</span>
-
           <span className="text-gray-600">Listing</span>
           <span>{ipo.listing || "TBA"}</span>
         </div>
 
         <div className="mt-auto flex gap-2">
           <button
-            onClick={() => navigate("/how-to-apply-ipo")}  // ← Now goes to How to Apply page
+            onClick={() => navigate("/how-to-apply-ipo")}
             className="flex-1 py-2.5 bg-green-600 hover:bg-green-700 text-white text-xs font-semibold rounded-xl"
           >
             Apply
@@ -135,7 +122,8 @@ const IPODashboard = ({ ipos = [] }) => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const top8IPOs = useMemo(() => {
+  // Filter live/open IPOs for all screens
+  const liveIPOs = useMemo(() => {
     return ipos
       .map((ipo) => ({
         ...ipo,
@@ -158,8 +146,8 @@ const IPODashboard = ({ ipos = [] }) => {
       <div className="w-full">
         {/* Desktop Grid */}
         <div className="hidden lg:grid grid-cols-4 gap-3.5">
-          {top8IPOs.length > 0 ? (
-            top8IPOs.map((ipo, i) => (
+          {liveIPOs.length > 0 ? (
+            liveIPOs.map((ipo, i) => (
               <motion.div
                 key={ipo.id}
                 initial={{ opacity: 0, y: 30 }}
@@ -184,9 +172,9 @@ const IPODashboard = ({ ipos = [] }) => {
 
         {/* Mobile / Tablet Horizontal Scroll */}
         <div className="lg:hidden overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400">
-          {top8IPOs.length > 0 ? (
+          {liveIPOs.length > 0 ? (
             <div className="flex gap-3 py-4 min-w-max">
-              {top8IPOs.map((ipo, i) => (
+              {liveIPOs.map((ipo, i) => (
                 <motion.div
                   key={ipo.id}
                   initial={{ opacity: 0, x: 50 }}
