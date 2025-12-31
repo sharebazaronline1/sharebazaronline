@@ -46,18 +46,20 @@ const PreIPOStocks = () => {
   return (
     <div className="w-full bg-gray-50">
       {/* BANNER */}
-      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-        <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
-          <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
-            <img
-              src="/images/unlistedshares.png"
-              alt="Pre-IPO & Unlisted Shares - Invest Early"
-            className="absolute inset-0 w-full h-full object-contain object-top object-cover"
-            style={{ objectPosition: "center 10%" }}
+        <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
 
-            />
-          </div>
+      <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
+      
+        <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
+          <img
+            src="/images/unlistedshare.png"
+            alt="Preipo"
+            className="absolute inset-0 w-full h-full object-top  object-center"
+          />
+      
         </div>
+      </div>
+
       </div>
 
       <div className="w-full max-w-none px-4 sm:px-6 lg:px-8 py-8">

@@ -2046,14 +2046,20 @@ export const fetchPreIPODetails = async () => {
   return [
     {
       id: 1,
-      slug: "apl-metals",
       name: "APL Metals Limited",
-      category: "Unlisted Shares",
-      lastUpdated: "24 Dec 2025",
+      logo: "/images/preipo/image1.png",
 
-      overview: `
-        Associated Pigments Limited (APL Metals) is a leading Indian manufacturer specializing in refined lead, lead alloys, and lead oxide products.Established in 1948, the company has built a strong reputation through decades of operational excellence, consistent quality, and customer trust.APL Metals manufactures Refined Lead, Lead Alloys, Red Lead.Lead Sub Oxide, Litharge, Tin, and Tin Alloys with purity levels up to 99.97%, with continuous efforts toward achieving 99.99% purity.
-      `,
+      overview: `Associated Pigments Limited (APL Metals) is a leading Indian manufacturer specializing in lead and lead oxide products. Established in 1948, the company has built a strong reputation in the Indian metals industry through decades of operational excellence, consistent quality, and customer satisfaction. APL Metals has played a significant role in contributing to India’s self-sufficiency in lead-based products and continues to be a trusted supplier across multiple industrial sectors.
+The company manufactures and supplies a wide range of lead products, including Refined Lead, Lead Alloys, Red Lead, Lead Sub Oxide, and Litharge. All products are customizable to meet specific client requirements, ensuring precise specifications and consistent quality standards. APL Metals maintains product purity levels of up to 99.97%, with ongoing efforts to achieve 99.99% purity, setting new benchmarks in the industry.
+
+APL Metals’ product portfolio serves diverse industrial applications. Lead and Lead Alloys are extensively used in batteries, cable sheathing, ammunition, radiation shielding, and other critical applications. Lead Oxides find widespread usage in battery manufacturing, ceramics, glass, and pigments. Additionally, Tin and Tin Alloys produced by the company are utilized in soldering, plating, and specialized industrial applications, further strengthening its diversified product base.
+To support efficient production and supply chain operations, APL Metals operates three state-of-the-art manufacturing facilities strategically located across India. These facilities are situated at Panskura (West Bengal), B.T. Road (West Bengal), and Malwan, Fatehpur (Uttar Pradesh). Each unit is equipped with advanced manufacturing technology, enabling the production of high-quality lead and lead oxide products while maintaining stringent safety and quality controls.
+The company serves a prestigious clients, reflecting its strong market position and industry trust. Notable clients include: Exide Industries Ltd, Luminous Power Technologies, Okaya Batteries (Delhi), HBL Power Systems Ltd, and Ned Energy Ltd. Long-standing relationships with such established brands underline APL Metals’ reliability and product excellence.
+
+Beyond its manufacturing capabilities, APL Metals remains committed to employee welfare, environmental responsibility, and sustainable operations. The company actively follows environmentally responsible manufacturing practices, promotes workplace safety, and continuously adapts its operations to meet evolving industry standards and regulatory requirements. This long-term commitment ensures that APL Metals remains resilient, competitive, and future-ready in an ever-changing industrial landscape.
+
+
+`,
 
       products: [
         "Refined Lead",
@@ -2061,104 +2067,121 @@ export const fetchPreIPODetails = async () => {
         "Red Lead",
         "Lead Sub Oxide",
         "Litharge",
-        "Tin & Tin Alloys",
+        "Tin & Tin Alloys"
       ],
 
       manufacturingUnits: [
-        "Panskura, West Bengal",
-        "B.T. Road, West Bengal",
-        "Malwan, Fatehpur, Uttar Pradesh",
+        "Panskura (West Bengal)",
+        "B.T. Road (West Bengal)",
+        "Malwan, Fatehpur (Uttar Pradesh)"
       ],
 
       clients: [
         "Exide Industries Ltd",
         "Luminous Power Technologies",
-        "Okaya Batteries",
+        "Okaya Batteries (Delhi)",
         "HBL Power Systems Ltd",
-        "Ned Energy Ltd",
+        "Ned Energy Ltd"
       ],
 
       shareDetails: {
-        price: 14,
-        marketCap: "₹13 Crore",
-        lotSize: 5000,
-        high52: "₹12",
-        low52: "₹8",
+        companyName: "APL Metals Limited (Unlisted)",
+        indicativeSharePrice: "₹14",
+        marketCapitalization: "₹13 Crore (Approx.)",
+        lotSize: "5,000 Shares",
+        high52Week: "₹12",
+        low52Week: "₹8",
         faceValue: "₹10",
         bookValue: "₹53.81",
         peRatio: "NA",
         pbRatio: "0.22",
-        debtEquity: "2.81",
+        debtToEquity: "2.81",
         roe: "-20.96%",
-        outstandingShares: "1,07,26,387",
+        totalOutstandingShares: "1,07,26,387",
         isin: "INE578E01019",
         depository: "NSDL & CDSL",
         pan: "AACCA4264P",
         cin: "L24242WB1948PLC017455",
-        rta: "M/s Niche Technologies Private Limited",
+        rta: "M/s Niche Technologies Private Limited"
       },
 
       financials: {
         incomeStatement: [
-          { year: "FY 2022", revenue: 724, ebitda: 21, pat: 5, eps: 4.66 },
-          { year: "FY 2023", revenue: 736, ebitda: 25, pat: 3, eps: 2.8 },
-          { year: "FY 2024", revenue: 703, ebitda: 14, pat: -10, eps: -9.33 },
+          { label: "Revenue", fy22: 724, fy23: 736, fy24: 703 },
+          { label: "Cost of Material Consumed", fy22: 664, fy23: 678, fy24: 663 },
+          { label: "Change in Inventory", fy22: -11, fy23: -21, fy24: -26 },
+          { label: "EBITDA", fy22: 21, fy23: 25, fy24: 14 },
+          { label: "Operating Profit Margin (%)", fy22: 2.9, fy23: 3.4, fy24: 1.99 },
+          { label: "Finance Cost", fy22: 14, fy23: 19, fy24: 24 },
+          { label: "Profit Before Tax", fy22: 7, fy23: 5, fy24: -13 },
+          { label: "Profit After Tax", fy22: 5, fy23: 3, fy24: -10 },
+          { label: "EPS", fy22: 4.66, fy23: 2.8, fy24: -9.33 }
         ],
 
         keyRatios: [
-          { label: "OPM (%)", fy22: 2.9, fy23: 3.4, fy24: 1.99 },
-          { label: "NPM (%)", fy22: 0.69, fy23: 0.41, fy24: -1.42 },
+          { label: "Operating Margin (%)", fy22: 2.9, fy23: 3.4, fy24: 1.99 },
+          { label: "Net Profit Margin (%)", fy22: 0.69, fy23: 0.41, fy24: -1.42 },
+          { label: "EPS (Diluted)", fy22: 4.66, fy23: 2.8, fy24: -9.33 }
         ],
+
+        investorInsight: [
+          "Revenue remained stable, but margins declined in FY24.",
+          "Higher finance costs impacted profitability.",
+          "Negative PAT and EPS signal short-term stress."
+        ]
       },
 
       balanceSheet: {
         assets: [
-          { label: "Total Assets", fy22: 213, fy23: 217, fy24: 314 },
+          { label: "Fixed Assets", fy22: 22.4, fy23: 23, fy24: 25 },
           { label: "Inventory", fy22: 152, fy23: 166, fy24: 244 },
+          { label: "Trade Receivables", fy22: 5, fy23: 11, fy24: 7 },
+          { label: "Total Assets", fy22: 213, fy23: 217, fy24: 314 }
         ],
+
         liabilities: [
+          { label: "Share Capital", fy22: 10.72, fy23: 10.72, fy24: 10.72 },
+          { label: "Reserves & Surplus", fy22: 14, fy23: 16, fy24: 37 },
           { label: "Borrowings", fy22: 139, fy23: 161, fy24: 134 },
           { label: "Trade Payables", fy22: 42, fy23: 19, fy24: 120 },
+          { label: "Total Liabilities", fy22: 213, fy23: 217, fy24: 314 }
         ],
+
+        insights: [
+          "Inventory-led asset growth in FY24",
+          "Borrowings remain elevated but reduced YoY",
+          "Sharp increase in trade payables"
+        ]
       },
 
       cashFlow: {
-        cfo: [-11, -16, 60],
-        cfi: [-3, -2, -3],
-        cff: [24, 2, -51],
+        data: [
+          { label: "Cash Flow from Operations", fy22: -11, fy23: -16, fy24: 60 },
+          { label: "Cash Flow from Investing", fy22: -3, fy23: -2, fy24: -3 },
+          { label: "Cash Flow from Financing", fy22: 24, fy23: 2, fy24: -51 },
+          { label: "Net Cash Generated", fy22: 10, fy23: -16, fy24: 6 }
+        ],
+        insights: [
+          "Strong operating cash flow in FY24 driven by payables",
+          "Negative CFO in FY22–23 indicates working capital stress",
+          "Reduction in borrowings in FY24"
+        ]
       },
 
       shareholding: [
         { year: 2022, promoters: "99.99%", public: "0.01%" },
         { year: 2023, promoters: "73.26%", public: "26.74%" },
-        { year: 2024, promoters: "73.26%", public: "26.74%" },
+        { year: 2024, promoters: "73.26%", public: "26.74%" }
       ],
 
       management: [
-        {
-          name: "Sanjiv Nandan Sahaya",
-          role: "Chairman & Managing Director",
-          experience: "20+ Years",
-        },
-        {
-          name: "Rajendra Sahay",
-          role: "Director",
-          experience: "20+ Years",
-        },
-        {
-          name: "Prakash Kumar Damani",
-          role: "Director",
-          experience: "15+ Years",
-        },
+        { name: "Sanjiv Nandan Sahaya", role: "Chairman & Managing Director", experience: "20+ Years" },
+        { name: "Rajendra Sahay", role: "Director", experience: "20+ Years" },
+        { name: "Prakash Kumar Damani", role: "Director", experience: "15+ Years" }
       ],
 
-      investorInsight: `
-        Revenue remained stable, but profitability declined in FY 2024 due to
-        margin pressure and higher finance costs.
-
-        Negative PAT and EPS indicate short-term financial stress.
-        Investors should closely monitor debt levels and working capital.
-      `,
-    },
+      managementInsight:
+        "The leadership team at APL Metals Limited brings decades of experience in manufacturing, operations, and strategic management within the metals and industrial sector. Their long-standing industry expertise supports stable operations and long-term business continuity."
+    }
   ];
 };

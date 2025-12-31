@@ -1,10 +1,8 @@
-// src/pages/InsightHub.jsx (only the clickable card change applied)
-
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";  // ← ADD THIS IMPORT
+import { useNavigate } from "react-router-dom";  
 
 const InsightHub = () => {
-  const navigate = useNavigate();  // ← ADD THIS
+  const navigate = useNavigate();  
 
   const blogPosts = [
     {
@@ -95,23 +93,25 @@ const InsightHub = () => {
 
   return (
     <div className="w-full bg-gray-50 min-h-screen">
+  <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
 
-      {/* BANNER */}
-      <div className="w-screen relative left-1 -translate-x-1/2 -mx-2">
+      <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
+      
         <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
-        <img
-  src="/images/insightbanner.jpg"
-  alt="Insight Hub - Latest Blogs on IPOs & Corporate Actions"
-  className="absolute inset-0 w-full h-full object-cover object-top"
-/>
-
+          <img
+            src="/images/insight.png"
+            alt="InsightHub"
+            className="absolute inset-0 w-full h-full object-top  object-center"
+          />
+      
         </div>
       </div>
 
-      {/* Blog Grid */}
+      </div>
+
+
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
-
           {blogPosts.map((post, i) => (
             <motion.article
               key={post.id}
@@ -120,7 +120,7 @@ const InsightHub = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.04 }}
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full"
-              onClick={() => navigate(`/insight-hub/${post.id}`)}  // ← CLICK ANYWHERE ON CARD GOES TO DETAIL
+              onClick={() => navigate(`/insight-hub/${post.id}`)} 
             >
               <div className="relative h-36 px-3 pt-3">
                 <img
@@ -129,7 +129,6 @@ const InsightHub = () => {
                   className="w-full h-full object-contain "
                 />
               </div>
-
               <div className="p-3 flex flex-col flex-1">
                 <time className="text-[11px] text-gray-500 mb-1">
                   {post.date}

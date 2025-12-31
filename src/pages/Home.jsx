@@ -10,7 +10,6 @@ import Blogs from './Blogs';
 import UpcomingIpoSidebar from '../components/IPOSidebar'
 import BrokerAnalyzer from './BrokerAnalyzer';
 import UnlistedSharesSidebar from '../components/UnlistedSidebar';
-import IPOFAQ from '../components/IPOFaq'
 
 import { TrendingUp, Gem, Scale, Lightbulb, Star, Check } from 'lucide-react';
 
@@ -214,7 +213,7 @@ export default function Home() {
             </div>
 
           </div>
-          <IPOFAQ/>
+         
         </div>
       </div>
 

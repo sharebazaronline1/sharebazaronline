@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { fetchIPOs } from "../api/mockApi";
+import IPOFAQ from '../components/IPOFaq'
+
 
 const tabs = ["Open", "Closed", "Upcoming"];
 
@@ -272,6 +274,7 @@ const IPODashboard = () => {
               </tbody>
             </table>
           </div>
+           <IPOFAQ/>
         </div>
       </div>
     </div>
