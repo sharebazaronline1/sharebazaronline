@@ -70,9 +70,15 @@ const [mobileBroker, setMobileBroker] = useState(false);
               onMouseEnter={() => openWithDelay(setIpoOpen, ipoTimer)}
               onMouseLeave={() => closeWithDelay(setIpoOpen, ipoTimer)}
             >
-              <button className="flex items-center gap-1 font-semibold text-gray-700 hover:text-[#1e40af] transition">
-                IPO Tracker <span className=" text-xl">▾</span>
-              </button>
+              {/* IPO Tracker - Click to Navigate to IPO Guide Page */}
+<div className="relative">
+  <Link
+    to="/ipoguide" 
+    className="flex items-center gap-1 font-semibold text-gray-700 hover:text-[#1e40af] transition"
+  >
+    IPO Tracker <span className="text-xl">▾</span>
+  </Link>
+</div>
               <div
                 className={`absolute right-0 top-full mt-2 w-48 bg-white border border-gray-200 rounded-xl shadow-xl z-[999] transition-all duration-150 
                   ${ipoOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none translate-y-1"}`}
@@ -87,9 +93,15 @@ const [mobileBroker, setMobileBroker] = useState(false);
               onMouseEnter={() => openWithDelay(setPreIpoOpen, preIpoTimer)}
               onMouseLeave={() => closeWithDelay(setPreIpoOpen, preIpoTimer)}
             >
-              <button className="flex items-center gap-1 font-semibold text-gray-700 hover:text-[#1e40af] transition">
-                Pre-IPO Stocks <span className=" text-xl">▾</span>
-              </button>
+             <div className="relative">
+  <Link
+    to="/preipoguide" 
+    className="flex items-center gap-1 font-semibold text-gray-700 hover:text-[#1e40af] transition"
+  >
+    Pre IPO  <span className="text-xl">▾</span>
+  </Link>
+</div>
+        
               <div
                 className={`absolute right-0 top-full mt-2 w-48 bg-white border border-gray-200 rounded-xl shadow-xl z-[999] transition-all duration-150 
                   ${preIpoOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none translate-y-1"}`}

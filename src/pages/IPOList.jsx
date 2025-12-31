@@ -10,7 +10,7 @@ const tabs = ["Open", "Closed", "Upcoming"];
 
 const IPODashboard = () => {
   const [ipos, setIpos] = useState([]);
-  const [activeTab, setActiveTab] = useState("Open");
+  const [activeTab, setActiveTab] = useState("Closed");
   const [typeFilter, setTypeFilter] = useState("All");
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();

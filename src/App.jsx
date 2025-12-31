@@ -20,6 +20,8 @@ import PreIPODetails from './pages/PreIPODetails'
 import UpcomingIpoSidebar from './components/IPOSidebar';
 import UnlistedSharesSidebar from './components/UnlistedSidebar';
 import HowToApplyIPO from './pages/HowToApplyIPO'
+import IPOGuideSection from './components/IPOGuideSection'
+import UnlistedGuideSection from './components/UnlistedGuideSection'
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
               <Route path="/insight-hub" element={<InsightHub />} />  {/* ← Fixed duplicate */}
               <Route path="/insight-hub/:id" element={<InsightHubDetails />} />  {/* ← Added BlogDetail route */}
               <Route path="/login" element={<Login />} />
+               <Route path="/ipoguide" element={<IPOGuideSection />} />
+                 <Route path="/preipoguide" element={<UnlistedGuideSection />} />
               <Route path="/ipo/:id" element={<IPODetails />} />
               <Route path="/skill-up" element={<SkillUp />} />
             </Routes>
