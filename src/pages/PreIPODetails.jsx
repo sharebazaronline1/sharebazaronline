@@ -1,11 +1,12 @@
 /* ================= IMPORTS ================= */
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link,useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
   ArrowLeft,
   BarChart3,
   Building2,
   DollarSign,
+  AlertTriangle,
   Users,
   Wallet,
   Factory,
@@ -36,6 +37,7 @@ const TableWrapper = ({ children }) => (
 const PreIPODetails = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchPreIPODetails().then((res) =>
@@ -56,32 +58,50 @@ const PreIPODetails = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
         {/* ================= HERO ================= */}
-        <header className="pl-6 lg:pl-64 bg-slate-50">
-          <div className="flex items-start gap-6 ml-4 lg:ml-6 py-6">
+       <header className="relative bg-slate-50 pb-20"> {/* Added pb-20 to make space for the fixed bar */}
+  <div className="flex items-start gap-6 ml-4 lg:ml-6 py-6 pl-6 lg:pl-64">
 
-            {/* LOGO */}
-            <div className="shrink-0">
-              <div className="w-28 h-28 lg:w-36 lg:h-36 border rounded-xl p-4 bg-white shadow-md">
-                <img
-                  src={data.logo}
-                  alt={data.name}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-            </div>
+    {/* LOGO */}
+    <div className="shrink-0">
+      <div className="w-28 h-28 lg:w-36 lg:h-36 border rounded-xl p-4 bg-white shadow-md">
+        <img
+          src={data.logo}
+          alt={data.name}
+          className="w-full h-full object-contain"
+        />
+      </div>
+    </div>
 
-            {/* TEXT */}
-            <div className="pt-2 lg:pt-4">
-              <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 tracking-tight">
-                {data.name}
-              </h1>
-              <p className="text-base lg:text-lg text-slate-600 leading-relaxed max-w-4xl">
-                {data.shareDetails.companyName}
-              </p>
-            </div>
+    {/* TEXT */}
+    <div className="pt-2 lg:pt-4">
+      <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 tracking-tight">
+        {data.name}
+      </h1>
+      <p className="text-base lg:text-lg text-slate-600 leading-relaxed max-w-4xl">
+        {data.shareDetails.companyName}
+      </p>
+    </div>
 
-          </div>
-        </header>
+  </div>
+
+  {/* FULL WIDTH NOTICE BAR - Fixed & Screen-wide */}
+<div className="  inset-x-0 top-[140px] sm:top-[152px] rounded bg-blue-50 border-b border-blue-200 shadow-sm overflow-x-auto">
+  <div className="min-w-[1024px] max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 py-3 flex items-center justify-between gap-4">
+    <div className="flex items-center gap-3">
+      <AlertTriangle className="text-blue-700 w-5 h-5 flex-shrink-0" />
+      <p className="text-sm lg:text-base font-medium text-blue-900 whitespace-nowrap">
+        Ready to invest in this opportunity? Apply now through trusted platforms.
+      </p>
+    </div>
+    <button
+      onClick={() => navigate('/how-to-apply-ipo')}
+      className="px-6 py-3 lg:px-10 lg:py-4 text-sm lg:text-base bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition shadow-md flex-shrink-0"
+    >
+      Apply Now
+    </button>
+  </div>
+</div>
+</header>
 
         {/* ================= COMPANY OVERVIEW ================= */}
         <Card>

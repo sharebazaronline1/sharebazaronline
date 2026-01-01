@@ -274,7 +274,7 @@ const IPODashboard = () => {
               </tbody>
             </table>
           </div>
-           <IPOFAQ/>
+           
         </div>
       </div>
     </div>

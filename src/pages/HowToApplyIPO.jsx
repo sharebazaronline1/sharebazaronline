@@ -250,39 +250,38 @@ const HowToApplyIPO = () => {
 </section>
 
         {/* CHECK STATUS */}
-        <section className="bg-white border rounded-lg p-6 space-y-4">
-          <h2 className="text-lg font-bold">🔎 Check Allotment Status</h2>
+    <section className="bg-white border rounded-lg p-6 space-y-4">
+  <h2 className="text-lg font-bold text-center">🔎 Check Allotment Status</h2>
 
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="https://www.nseindia.com/invest/check-trades-bids-verify-ipo-bids"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700"
-            >
-              NSE IPO <ExternalLink size={14} />
-            </a>
+  <div className="flex flex-wrap justify-center gap-3">
+    <a
+      href="https://www.nseindia.com/invest/check-trades-bids-verify-ipo-bids"
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition"
+    >
+      NSE IPO <ExternalLink size={14} />
+    </a>
 
-            <a
-              href="https://www.bseindia.com/publicissue.html"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white text-sm rounded hover:bg-indigo-700"
-            >
-              BSE IPO <ExternalLink size={14} />
-            </a>
+    <a
+      href="https://www.bseindia.com/publicissue.html"
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white text-sm rounded hover:bg-indigo-700 transition"
+    >
+      BSE IPO <ExternalLink size={14} />
+    </a>
 
-            <a
-              href="https://ipostatus.kfintech.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white text-sm rounded hover:bg-emerald-700"
-            >
-              Registrar (KFintech) <ExternalLink size={14} />
-            </a>
-          </div>
-        </section>
-
+    <a
+      href="https://ipostatus.kfintech.com/"
+      target="_blank"
+      rel="noreferrer"
+      className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white text-sm rounded hover:bg-green-700 transition"
+    >
+      Registrar (KFintech) <ExternalLink size={14} />
+    </a>
+  </div>
+</section>
         {/* BACK */}
         <Link
           to={-1}

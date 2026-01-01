@@ -1,7 +1,7 @@
 // src/components/UnlistedSharesSidebar.jsx
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { fetchUnlistedShares } from "../api/mockApi";
+import { supabase } from "../lib/supabase";
 
 const UnlistedSharesSidebar = () => {
   const { pathname } = useLocation();
@@ -15,6 +15,8 @@ const UnlistedSharesSidebar = () => {
   "/ipo/ipo-list",
   "/pre-ipo-stocks",
   "/insight-hub",
+  "/ipoguide",
+  "/preipoguide",
   "/skill-up",
   "/login"
 ].includes(pathname) ||  pathname.startsWith("/ipo/") ||
@@ -34,25 +36,35 @@ const UnlistedSharesSidebar = () => {
     );
   }, []);
 
-  useEffect(() => {
-    const loadUnlistedData = async () => {
-      try {
-        const data = await fetchUnlistedShares();
-        const list = data
-          .slice(0, 10)
-          .map((stock) => ({
-            name: stock.name,
-            price: stock.price || "₹" + (stock.buyPrice || "Ask"),
-          }));
-        setSidebarUnlisted(list);
-      } catch (error) {
-        console.error("Failed to load unlisted shares sidebar:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadUnlistedData();
-  }, []);
+useEffect(() => {
+  const loadUnlistedData = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("unlisted_shares")
+        .select("name,price_display")
+        .order("id", { ascending: false })
+        .limit(10);
+
+        console.log("Supabase data:", data);
+console.log("Supabase error:", error);
+      if (error) throw error;
+
+      const list = data.map((stock) => ({
+        name: stock.name,
+        price: stock.price_display || "Ask",
+      }));
+
+      setSidebarUnlisted(list);
+    } catch (error) {
+      console.error("Failed to load unlisted shares sidebar:", error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  loadUnlistedData();
+}, []);
+
 
   if (!shouldShow) return null;
 

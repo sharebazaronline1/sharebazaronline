@@ -1,3 +1,5 @@
+// src/components/InsightHub.jsx (Updated: "How to Apply For IPO" redirects to /how-to-apply-ipo)
+
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";  
 
@@ -8,16 +10,18 @@ const InsightHub = () => {
     {
       id: 1,
       title: "NSE Trading Holiday & Clearing Holidays Update 2026",
-      category: "Market Uodate",
+      category: "Market Update",
       image: "images/insight/insightimage1.png",
       date: "24 Dec 2025",
     },
     {
       id: 2,
-      title: "December 2025 SME IPO Bonanza – 12 New Issues",
-      category: "SME IPO",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-      date: "1 Dec 2025",
+      title: "How to Apply For IPO",
+      category: "IPO In India",
+      image: "images/howtoapplyipo.png",
+      date: "1 Nov 2025",
+      // Special route for this post
+      customRoute: "/how-to-apply-ipo",
     },
     {
       id: 3,
@@ -91,24 +95,29 @@ const InsightHub = () => {
     },
   ];
 
+  const handleCardClick = (post) => {
+    if (post.customRoute) {
+      navigate(post.customRoute);
+    } else {
+      navigate(`/insight-hub/${post.id}`);
+    }
+  };
+
   return (
     <div className="w-full bg-gray-50 min-h-screen">
-  <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
-      
-        <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
-          <img
-            src="/images/insight.png"
-            alt="InsightHub"
-            className="absolute inset-0 w-full h-full object-top  object-center"
-          />
-      
+        <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
+          <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
+            <img
+              src="/images/insight.png"
+              alt="InsightHub"
+              className="absolute inset-0 w-full h-full object-top object-center"
+            />
+          </div>
         </div>
-      </div>
 
       </div>
-
 
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2">
@@ -120,13 +129,13 @@ const InsightHub = () => {
               viewport={{ once: true }}
               transition={{ delay: i * 0.04 }}
               className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full"
-              onClick={() => navigate(`/insight-hub/${post.id}`)} 
+              onClick={() => handleCardClick(post)}
             >
               <div className="relative h-36 px-3 pt-3">
                 <img
                   src={post.image}
                   alt={post.title}
-                  className="w-full h-full object-contain "
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="p-3 flex flex-col flex-1">
@@ -144,7 +153,6 @@ const InsightHub = () => {
               </div>
             </motion.article>
           ))}
-
         </div>
 
         <div className="text-center mt-14">
