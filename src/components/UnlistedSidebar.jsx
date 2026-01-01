@@ -20,7 +20,7 @@ const UnlistedSharesSidebar = () => {
       "/ipoguide",
       "/preipoguide",
       "/skill-up",
-      "/login",
+     
     ].includes(pathname) ||
     pathname.startsWith("/ipo/") ||
     pathname.startsWith("/insight-hub") ||

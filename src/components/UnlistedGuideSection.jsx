@@ -1,4 +1,4 @@
-// src/components/UnlistedGuideSection.jsx (All sections visible - Static layout, updated UX)
+// src/components/UnlistedGuideSection.jsx (Full-width sections, vertical flow for early sections, separate boxes)
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp, AlertTriangle, FileText, Building2, TrendingUp, Shield, Scale, HelpCircle } from "lucide-react";
@@ -67,362 +67,375 @@ const UnlistedGuideSection = () => {
   const visibleFaqs = showAllFAQs ? faqs : faqs.slice(0, 10);
 
   return (
-    <div className="py-12 lg:py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div className="py-8 lg:py-12 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
 
         {/* Main Title */}
-        <h2 className="text-3xl sm:text-4xl font-black text-center text-gray-900 mb-12">
+        <h2 className="text-3xl sm:text-4xl font-black text-center text-gray-900">
           Unlisted Shares in India – Complete Guide
         </h2>
 
-        {/* Sections Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">  {/* Reduced gap-6 to gap-4 for closer cards */}
-
-          {/* Introduction */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <FileText className="w-5 h-5 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Introduction</h3>
+        {/* Introduction - Full Width */}
+        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <FileText className="w-6 h-6 text-green-600" />
             </div>
-            <p className="text-sm text-gray-700 leading-relaxed">
-              Unlisted shares, often referred to as pre-IPO shares, represent ownership in companies that are not listed on recognized stock exchanges such as the National Stock Exchange (NSE) or Bombay Stock Exchange (BSE). These shares are legally issued, fully valid equity instruments, but they are traded off-market through private arrangements rather than public exchanges.
-            </p>
-            <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-              In recent years, unlisted shares have emerged as one of the fastest-growing alternative investment segments in India, attracting retail investors, High Net-Worth Individuals (HNIs), family offices, venture capitalists, and long-term value investors.
-            </p>
-            <p className="mt-3 text-sm text-gray-700 leading-relaxed">
-              The growing interest in companies like NSE India, Tata Capital, HDB Financial Services, SBI General Insurance, and ICICI Lombard (before IPO) has pushed unlisted equity investing into the mainstream.
-            </p>
+            <h3 className="text-2xl font-bold text-gray-900">Introduction</h3>
           </div>
+          <p className="text-base text-gray-700 leading-relaxed">
+            Unlisted shares, often referred to as pre-IPO shares, represent ownership in companies that are not listed on recognized stock exchanges such as the National Stock Exchange (NSE) or Bombay Stock Exchange (BSE). These shares are legally issued, fully valid equity instruments, but they are traded off-market through private arrangements rather than public exchanges.
+          </p>
+          <p className="mt-4 text-base text-gray-700 leading-relaxed">
+            In recent years, unlisted shares have emerged as one of the fastest-growing alternative investment segments in India, attracting retail investors, High Net-Worth Individuals (HNIs), family offices, venture capitalists, and long-term value investors.
+          </p>
+          <p className="mt-4 text-base text-gray-700 leading-relaxed">
+            The growing interest in companies like NSE India, Tata Capital, HDB Financial Services, SBI General Insurance, and ICICI Lombard (before IPO) has pushed unlisted equity investing into the mainstream.
+          </p>
+        </section>
 
-          {/* What Are Unlisted Shares? */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-            <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <Building2 className="w-5 h-5 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">What Are Unlisted Shares?</h3>
+        {/* What Are Unlisted Shares? - Full Width */}
+        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <Building2 className="w-6 h-6 text-green-600" />
             </div>
-            <p className="text-sm text-gray-700 mb-4">
-              <strong>Definition:</strong> Unlisted shares are equity shares of companies that are not traded on any public stock exchange. These companies may be:
-            </p>
-            <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 mb-6">
-              <li>Private limited companies</li>
-              <li>Public limited companies not listed on NSE/BSE</li>
-              <li>Companies planning an IPO in the future</li>
-            </ul>
-            <p className="text-sm text-gray-700">
-              Despite not being listed, these companies are:
-            </p>
-            <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 mt-3">
-              <li>Registered under the Companies Act</li>
-              <li>Issued legally</li>
-              <li>Held in Demat form</li>
-              <li>Transferable via depositories (NSDL/CDSL)</li>
-            </ul>
+            <h3 className="text-2xl font-bold text-gray-900">What Are Unlisted Shares?</h3>
           </div>
+          <p className="text-base text-gray-700 mb-4">
+            <strong>Definition:</strong> Unlisted shares are equity shares of companies that are not traded on any public stock exchange. These companies may be:
+          </p>
+          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700 mb-6">
+            <li>Private limited companies</li>
+            <li>Public limited companies not listed on NSE/BSE</li>
+            <li>Companies planning an IPO in the future</li>
+          </ul>
+          <p className="text-base text-gray-700">
+            Despite not being listed, these companies are:
+          </p>
+          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700 mt-4">
+            <li>Registered under the Companies Act</li>
+            <li>Issued legally</li>
+            <li>Held in Demat form</li>
+            <li>Transferable via depositories (NSDL/CDSL)</li>
+          </ul>
+        </section>
 
-          {/* Why Companies Remain Unlisted */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <TrendingUp className="w-5 h-5 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Why Companies Remain Unlisted</h3>
+        {/* Why Companies Remain Unlisted - Full Width */}
+        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <TrendingUp className="w-6 h-6 text-green-600" />
             </div>
-            <div className="space-y-4 text-sm text-gray-700">
-              <div>
-                <h4 className="font-semibold text-gray-900">Long-Term Vision</h4>
-                <p className="mt-1">Companies may prefer long-term business building without short-term market pressure.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900">Regulatory Compliance Cost</h4>
-                <p className="mt-1">Avoid quarterly disclosures, investor presentations, and exchange reporting.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900">Strategic Fundraising</h4>
-                <p className="mt-1">Raise capital from private equity, venture capital, or strategic investors.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-gray-900">Valuation Optimization</h4>
-                <p className="mt-1">Wait for stable revenue, profitability, and favorable market conditions.</p>
-              </div>
+            <h3 className="text-2xl font-bold text-gray-900">Why Companies Remain Unlisted</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-base text-gray-700">
+            <div>
+              <h4 className="font-bold text-gray-900 mb-2">Long-Term Vision</h4>
+              <p>Companies may prefer long-term business building without short-term market pressure.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-2">Regulatory Compliance Cost</h4>
+              <p>Avoid quarterly disclosures, investor presentations, and exchange reporting.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-2">Strategic Fundraising</h4>
+              <p>Raise capital from private equity, venture capital, or strategic investors.</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-2">Valuation Optimization</h4>
+              <p>Wait for stable revenue, profitability, and favorable market conditions.</p>
             </div>
           </div>
+        </section>
 
-          {/* Types of Unlisted Shares */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:col-span-2 lg:col-span-3">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <AlertTriangle className="w-5 h-5 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Types of Unlisted Shares</h3>
+        {/* Types of Unlisted Shares - Full Width */}
+        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <AlertTriangle className="w-6 h-6 text-green-600" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">  {/* Reduced gap */}
-              {/* Pre-IPO */}
-              <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
-                <h4 className="font-bold text-gray-900 mb-3">Pre-IPO Shares</h4>
-                <p className="text-sm text-gray-700 mb-3">Companies planning a future IPO.</p>
-                <p className="text-xs font-medium text-gray-800 mb-2">Examples:</p>
-                <div className="space-y-1 text-xs text-gray-700">
-                  <p>• NSE India Ltd</p>
-                  <p>• Tata Capital Ltd</p>
-                  <p>• HDB Financial Services</p>
-                  <p>• SBI Mutual Fund</p>
-                </div>
-                <p className="mt-4 text-green-700 text-xs font-medium">High demand & price appreciation potential</p>
-              </div>
+            <h3 className="text-2xl font-bold text-gray-900">Types of Unlisted Shares</h3>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h4 className="font-bold text-gray-900 mb-4">Pre-IPO Shares</h4>
+              <p className="text-base text-gray-700 mb-4">Companies planning a future IPO.</p>
+              <p className="text-sm font-medium text-gray-800 mb-2">Examples:</p>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• NSE India Ltd</li>
+                <li>• Tata Capital Ltd</li>
+                <li>• HDB Financial Services</li>
+                <li>• SBI Mutual Fund</li>
+              </ul>
+              <p className="mt-5 text-green-700 font-medium">High demand & price appreciation potential</p>
+            </div>
 
-              {/* Private Company */}
-              <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
-                <h4 className="font-bold text-gray-900 mb-3">Private Company Shares</h4>
-                <p className="text-sm text-gray-700 mb-3">Privately held, no confirmed IPO plans.</p>
-                <p className="text-xs font-medium text-gray-800 mb-2">Examples:</p>
-                <div className="space-y-1 text-xs text-gray-700">
-                  <p>• OYO (earlier phase)</p>
-                  <p>• PharmEasy</p>
-                  <p>• Swiggy (before IPO)</p>
-                </div>
-                <p className="mt-4 text-red-700 text-xs font-medium">Higher risk due to IPO uncertainty</p>
-              </div>
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h4 className="font-bold text-gray-900 mb-4">Private Company Shares</h4>
+              <p className="text-base text-gray-700 mb-4">Privately held, no confirmed IPO plans.</p>
+              <p className="text-sm font-medium text-gray-800 mb-2">Examples:</p>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• OYO (earlier phase)</li>
+                <li>• PharmEasy</li>
+                <li>• Swiggy (before IPO)</li>
+              </ul>
+              <p className="mt-5 text-red-700 font-medium">Higher risk due to IPO uncertainty</p>
+            </div>
 
-              {/* Delisted */}
-              <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
-                <h4 className="font-bold text-gray-900 mb-3">Delisted Shares</h4>
-                <p className="text-sm text-gray-700 mb-3">Previously listed, now removed from exchange.</p>
-                <p className="text-xs font-medium text-gray-800 mb-2">Reasons:</p>
-                <div className="space-y-1 text-xs text-gray-700">
-                  <p>• Promoter buyback</p>
-                  <p>• Low liquidity</p>
-                  <p>• Strategic restructuring</p>
-                </div>
-                <p className="mt-4 text-gray-700 text-xs font-medium">Extremely limited liquidity</p>
-              </div>
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h4 className="font-bold text-gray-900 mb-4">Delisted Shares</h4>
+              <p className="text-base text-gray-700 mb-4">Previously listed, now removed from exchange.</p>
+              <p className="text-sm font-medium text-gray-800 mb-2">Reasons:</p>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>• Promoter buyback</li>
+                <li>• Low liquidity</li>
+                <li>• Strategic restructuring</li>
+              </ul>
+              <p className="mt-5 text-gray-700 font-medium">Extremely limited liquidity</p>
+            </div>
 
-              {/* ESOP */}
-              <div className="bg-gray-50 rounded-xl p-5 border border-gray-200">
-                <h4 className="font-bold text-gray-900 mb-3">ESOP Shares</h4>
-                <p className="text-sm text-gray-700">
-                  Employee stock options sold in the unlisted market before company goes public.
-                </p>
-              </div>
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <h4 className="font-bold text-gray-900 mb-4">ESOP Shares</h4>
+              <p className="text-base text-gray-700">
+                Employee stock options sold in the unlisted market before company goes public.
+              </p>
             </div>
           </div>
+        </section>
 
-          {/* Future & Trends */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6">
-            <div className="flex items-center gap-3 mb-4">
-             <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <TrendingUp className="w-5 h-5 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Future & Trends</h3>
+        {/* Future & Trends - Full Width */}
+        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <TrendingUp className="w-6 h-6 text-green-600" />
             </div>
-            <p className="text-sm font-medium text-gray-800 mb-2">Key Trends:</p>
-            <ul className="space-y-1 text-sm text-gray-700 mb-6">
-              <li>• Growing fintech platforms</li>
-              <li>• Rising retail awareness</li>
-              <li>• Strong IPO pipeline</li>
-              <li>• Increasing ESOP monetization</li>
-            </ul>
-            <p className="text-sm font-medium text-gray-800 mb-2">Growth Drivers:</p>
-            <ul className="space-y-1 text-sm text-gray-700">
-              <li>• Startup ecosystem maturity</li>
-              <li>• Institutional participation</li>
-              <li>• Regulatory clarity</li>
-            </ul>
-            <p className="mt-6 text-green-700 text-sm font-medium">
-              Unlisted shares are expected to become a mainstream alternative asset class over the next decade.
-            </p>
+            <h3 className="text-2xl font-bold text-gray-900">Future & Trends</h3>
           </div>
-
-          {/* Regulation & Taxation */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:col-span-2">
-            <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <Shield className="w-5 h-5 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Regulation & Taxation</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-base text-gray-700">
+            <div>
+              <h4 className="font-bold text-gray-900 mb-3">Key Trends</h4>
+              <ul className="space-y-2">
+                <li>• Growing fintech platforms</li>
+                <li>• Rising retail awareness</li>
+                <li>• Strong IPO pipeline</li>
+                <li>• Increasing ESOP monetization</li>
+              </ul>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">  {/* Reduced gap */}
-              <div>
-                <h4 className="text-base font-semibold text-gray-900 mb-3">Regulatory Safeguards</h4>
-                <ul className="space-y-1 text-sm text-gray-700">
-                  <li>• Companies Act, 2013</li>
-                  <li>• Depository regulations (NSDL/CDSL)</li>
-                  <li>• SEBI rules for IPO transition</li>
-                </ul>
-                <p className="mt-4 text-green-700 text-sm">Ownership rights legally protected.</p>
-              </div>
-
-              <div>
-                <h4 className="text-base font-semibold text-gray-900 mb-3">Lock-In After IPO</h4>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm bg-gray-50 rounded-lg border border-gray-200">
-                    <thead className="bg-gray-800 text-white">
-                      <tr>
-                        <th className="px-4 py-2 text-left">Category</th>
-                        <th className="px-4 py-2 text-left">Period</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-t">
-                        <td className="px-4 py-2">Non-promoters</td>
-                        <td className="px-4 py-2">6 months</td>
-                      </tr>
-                      <tr className="border-t">
-                        <td className="px-4 py-2">Promoters</td>
-                        <td className="px-4 py-2">18 months</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div className="md:col-span-2">
-                <h4 className="text-base font-semibold text-gray-900 mb-3">Taxation</h4>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm bg-gray-50 rounded-lg border border-gray-200">
-                    <thead className="bg-gray-800 text-white">
-                      <tr>
-                        <th className="px-4 py-2 text-left">Holding</th>
-                        <th className="px-4 py-2 text-left">Type</th>
-                        <th className="px-4 py-2 text-left">Rate</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-t">
-                        <td className="px-4 py-2">≤ 24 months</td>
-                        <td className="px-4 py-2">STCG</td>
-                        <td className="px-4 py-2">As per slab</td>
-                      </tr>
-                      <tr className="border-t">
-                        <td className="px-4 py-2">&gt; 24 months</td>
-                        <td className="px-4 py-2">LTCG</td>
-                        <td className="px-4 py-2">20% with indexation</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+            <div>
+              <h4 className="font-bold text-gray-900 mb-3">Growth Drivers</h4>
+              <ul className="space-y-2">
+                <li>• Startup ecosystem maturity</li>
+                <li>• Institutional participation</li>
+                <li>• Regulatory clarity</li>
+              </ul>
             </div>
           </div>
+          <p className="mt-8 text-green-700 font-medium text-lg">
+            Unlisted shares are expected to become a mainstream alternative asset class over the next decade.
+          </p>
+        </section>
 
-          {/* Comparison */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:col-span-2 lg:col-span-3">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <Scale className="w-5 h-5 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Comparison</h3>
+        {/* Regulatory Safeguards - Separate Box */}
+        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <Shield className="w-6 h-6 text-green-600" />
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">  {/* Reduced gap */}
-              <div>
-                <h4 className="text-base font-semibold text-gray-900 mb-3">Unlisted Shares vs Other Asset Classes</h4>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm bg-gray-50 rounded-lg border border-gray-200">
-                    <thead className="bg-gray-800 text-white">
-                      <tr>
-                        <th className="px-4 py-2 text-left">Asset</th>
-                        <th className="px-4 py-2 text-left">Risk</th>
-                        <th className="px-4 py-2 text-left">Return</th>
-                        <th className="px-4 py-2 text-left">Liquidity</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr><td className="px-4 py-2">Fixed Deposit</td><td>Low</td><td>Low</td><td>High</td></tr>
-                      <tr className="bg-gray-100"><td className="px-4 py-2">Mutual Funds</td><td>Medium</td><td>Medium</td><td>High</td></tr>
-                      <tr><td className="px-4 py-2">Listed Stocks</td><td>Medium</td><td>Medium-High</td><td>High</td></tr>
-                      <tr className="bg-gray-100"><td className="px-4 py-2">Unlisted Shares</td><td className="text-red-600 font-medium">High</td><td className="text-green-600 font-medium">High</td><td>Low</td></tr>
-                      <tr><td className="px-4 py-2">Real Estate</td><td>Medium</td><td>Medium</td><td>Low</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <div>
-                <h4 className="text-base font-semibold text-gray-900 mb-3">Unlisted Shares vs IPO Investment</h4>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm bg-gray-50 rounded-lg border border-gray-200">
-                    <thead className="bg-gray-800 text-white">
-                      <tr>
-                        <th className="px-4 py-2 text-left">Aspect</th>
-                        <th className="px-4 py-2 text-left">Unlisted</th>
-                        <th className="px-4 py-2 text-left">IPO</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr><td className="px-4 py-2">Entry Timing</td><td>Before IPO</td><td>At IPO</td></tr>
-                      <tr className="bg-gray-100"><td className="px-4 py-2">Price Certainty</td><td>Variable</td><td>Fixed</td></tr>
-                      <tr><td className="px-4 py-2">Lock-in</td><td>Mandatory</td><td>No</td></tr>
-                      <tr className="bg-gray-100"><td className="px-4 py-2">Risk</td><td className="text-red-600 font-medium">Higher</td><td>Lower</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+            <h3 className="text-2xl font-bold text-gray-900">Regulatory Safeguards</h3>
           </div>
+          <p className="text-base text-gray-700 mb-4">
+            Although unlisted shares are not exchange-traded, they are governed by:
+          </p>
+          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
+            <li>Companies Act, 2013</li>
+            <li>Depository regulations (NSDL/CDSL)</li>
+            <li>SEBI rules for IPO transition</li>
+          </ul>
+          <p className="mt-6 text-green-700 font-medium">
+            📌 Ownership rights remain legally protected.
+          </p>
+        </section>
 
-          {/* FAQs */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:col-span-2 lg:col-span-3">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                <HelpCircle className="w-5 h-5 text-cyan-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900">Frequently Asked Questions (FAQs)</h3>
+        {/* Lock-In After IPO - Separate Box */}
+        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <Shield className="w-6 h-6 text-green-600" />
             </div>
-            <div className="space-y-3">
-              {visibleFaqs.map((faq, i) => (
-                <div
-                  key={i}
-                  className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden hover:shadow-sm transition"
-                >
-                  <button
-                    onClick={() => toggle(i)}
-                    className="w-full px-5 py-3 flex items-center justify-between text-left hover:bg-gray-100 transition"
-                  >
-                    <p className="text-sm lg:text-base text-gray-900 pr-4">
-                      {faq.q}
-                    </p>
-                    {openIndex === i ? (
-                      <ChevronUp size={20} className="text-gray-600 flex-shrink-0" />
-                    ) : (
-                      <ChevronDown size={20} className="text-gray-500 flex-shrink-0" />
-                    )}
-                  </button>
-
-                  {openIndex === i && (
-                    <div className="px-5 pb-4">
-                      <p className="text-sm text-gray-700 leading-relaxed">
-                        {faq.a}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-            {!showAllFAQs && (
-              <div className="text-center mt-6">
-                <button
-                  onClick={() => setShowAllFAQs(true)}
-                  className="px-8 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition"
-                >
-                  View All FAQs
-                </button>
-              </div>
-            )}
+            <h3 className="text-2xl font-bold text-gray-900">Lock-In Period After IPO</h3>
           </div>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[500px] text-base bg-gray-50 rounded-xl border border-gray-200">
+              <thead className="bg-gray-900 text-white">
+                <tr>
+                  <th className="px-8 py-4 text-left">Category</th>
+                  <th className="px-8 py-4 text-left">Lock-In Period</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-8 py-4">Non-promoters</td>
+                  <td className="px-8 py-4">6 months</td>
+                </tr>
+                <tr>
+                  <td className="px-8 py-4">Promoters</td>
+                  <td className="px-8 py-4">18 months</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
 
+        {/* Taxation - Separate Box */}
+        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <div className="flex items-center gap-4 mb-6">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <Shield className="w-6 h-6 text-green-600" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900">Taxation of Unlisted Shares in India</h3>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[600px] text-base bg-gray-50 rounded-xl border border-gray-200">
+              <thead className="bg-gray-900 text-white">
+                <tr>
+                  <th className="px-8 py-4 text-left">Holding Period</th>
+                  <th className="px-8 py-4 text-left">Tax Type</th>
+                  <th className="px-8 py-4 text-left">Rate</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-200">
+                <tr>
+                  <td className="px-8 py-4">≤ 24 months</td>
+                  <td className="px-8 py-4">STCG</td>
+                  <td className="px-8 py-4">As per slab</td>
+                </tr>
+                <tr>
+                  <td className="px-8 py-4">&gt; 24 months</td>
+                  <td className="px-8 py-4">LTCG</td>
+                  <td className="px-8 py-4">20% with indexation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Comparison - Two Separate Boxes */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Asset Class Comparison */}
+          <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <Scale className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Unlisted Shares vs Other Asset Classes</h3>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-base bg-gray-50 rounded-xl border border-gray-200">
+                <thead className="bg-gray-900 text-white">
+                  <tr>
+                    <th className="px-8 py-4 text-left">Asset Class</th>
+                    <th className="px-8 py-4 text-left">Risk</th>
+                    <th className="px-8 py-4 text-left">Return Potential</th>
+                    <th className="px-8 py-4 text-left">Liquidity</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr><td className="px-8 py-4">Fixed Deposit</td><td>Low</td><td>Low</td><td>High</td></tr>
+                  <tr className="bg-gray-100"><td className="px-8 py-4">Mutual Funds</td><td>Medium</td><td>Medium</td><td>High</td></tr>
+                  <tr><td className="px-8 py-4">Listed Stocks</td><td>Medium</td><td>Medium–High</td><td>High</td></tr>
+                  <tr className="bg-gray-100"><td className="px-8 py-4">Unlisted Shares</td><td className="text-red-600 font-medium">High</td><td className="text-green-600 font-medium">High</td><td>Low</td></tr>
+                  <tr><td className="px-8 py-4">Real Estate</td><td>Medium</td><td>Medium</td><td>Low</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="mt-6 text-green-700 font-medium">📌 Best used as satellite allocation, not core.</p>
+          </section>
+
+          {/* Unlisted vs IPO Comparison */}
+          <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                <Scale className="w-6 h-6 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Unlisted Shares vs IPO Investment</h3>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full text-base bg-gray-50 rounded-xl border border-gray-200">
+                <thead className="bg-gray-900 text-white">
+                  <tr>
+                    <th className="px-8 py-4 text-left">Aspect</th>
+                    <th className="px-8 py-4 text-left">Unlisted Shares</th>
+                    <th className="px-8 py-4 text-left">IPO</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  <tr><td className="px-8 py-4">Entry Timing</td><td>Before IPO</td><td>At IPO</td></tr>
+                  <tr className="bg-gray-100"><td className="px-8 py-4">Price Certainty</td><td>Variable</td><td>Fixed</td></tr>
+                  <tr><td className="px-8 py-4">Lock-in</td><td>Mandatory</td><td>No</td></tr>
+                  <tr className="bg-gray-100"><td className="px-8 py-4">Risk</td><td className="text-red-600 font-medium">Higher</td><td>Lower</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
         </div>
 
-        {/* Bottom Disclaimer */}
-        <div className="mt-8 p-6 bg-amber-50 border border-amber-200 rounded-2xl flex items-center justify-center gap-3">
-          <AlertTriangle className="w-6 h-6 text-amber-700 flex-shrink-0" />
-          <p className="text-base text-amber-900 font-medium">
+        {/* Risk Disclaimer - Before FAQs */}
+        <div className="p-6 bg-amber-50 border border-amber-200 rounded-2xl flex items-center gap-4">
+          <AlertTriangle className="w-8 h-8 text-amber-700 flex-shrink-0" />
+          <p className="text-base lg:text-lg text-amber-900 font-medium">
             Unlisted share investments carry higher risks. Always conduct thorough due diligence before investing.
           </p>
         </div>
+
+        {/* FAQs - Full Width */}
+        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+              <HelpCircle className="w-6 h-6 text-green-600" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900">Frequently Asked Questions (FAQs)</h3>
+          </div>
+          <div className="space-y-3">
+            {visibleFaqs.map((faq, i) => (
+              <div
+                key={i}
+                className="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden hover:shadow-md transition"
+              >
+                <button
+                  onClick={() => toggle(i)}
+                  className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-gray-100 transition"
+                >
+                  <p className="text-base lg:text-lg font-medium text-gray-900 pr-6">
+                    {faq.q}
+                  </p>
+                  {openIndex === i ? (
+                    <ChevronUp size={24} className="text-gray-600 flex-shrink-0" />
+                  ) : (
+                    <ChevronDown size={24} className="text-gray-500 flex-shrink-0" />
+                  )}
+                </button>
+                {openIndex === i && (
+                  <div className="px-6 pb-6">
+                    <p className="text-base text-gray-700 leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          {!showAllFAQs && (
+            <div className="text-center mt-8">
+              <button
+                onClick={() => setShowAllFAQs(true)}
+                className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition shadow-lg text-lg"
+              >
+                View All FAQs ({faqs.length - 10} more)
+              </button>
+            </div>
+          )}
+        </section>
 
       </div>
     </div>

@@ -18,7 +18,7 @@ const IPOSidebar = () => {
   "/skill-up",
   "/ipoguide",
   "/preipoguide",
-  "/login"
+  
 ].includes(pathname) ||  pathname.startsWith("/ipo/") ||
   pathname.startsWith("/insight-hub")||
   pathname.startsWith("/preipo") ||
