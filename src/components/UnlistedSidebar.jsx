@@ -1,7 +1,8 @@
 // src/components/UnlistedSharesSidebar.jsx
+
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { supabase } from "../lib/supabase";
+import { fetchUnlistedShares } from "../api/mockApi"; 
 
 const UnlistedSharesSidebar = () => {
   const { pathname } = useLocation();
@@ -9,21 +10,22 @@ const UnlistedSharesSidebar = () => {
   const [sidebarUnlisted, setSidebarUnlisted] = useState([]);
   const [loading, setLoading] = useState(true);
 
-   const shouldShow = [
-  "/",
-  "/ipo-tracker",
-  "/ipo/ipo-list",
-  "/pre-ipo-stocks",
-  "/insight-hub",
-  "/ipoguide",
-  "/preipoguide",
-  "/skill-up",
-  "/login"
-].includes(pathname) ||  pathname.startsWith("/ipo/") ||
-  pathname.startsWith("/insight-hub")||
-  pathname.startsWith("/preipo") ||
-  pathname.startsWith("/how-to-apply-ipo");
-  
+  const shouldShow =
+    [
+      "/",
+      "/ipo-tracker",
+      "/ipo/ipo-list",
+      "/pre-ipo-stocks",
+      "/insight-hub",
+      "/ipoguide",
+      "/preipoguide",
+      "/skill-up",
+      "/login",
+    ].includes(pathname) ||
+    pathname.startsWith("/ipo/") ||
+    pathname.startsWith("/insight-hub") ||
+    pathname.startsWith("/preipo") ||
+    pathname.startsWith("/how-to-apply-ipo");
 
   useEffect(() => {
     const today = new Date();
@@ -36,35 +38,30 @@ const UnlistedSharesSidebar = () => {
     );
   }, []);
 
-useEffect(() => {
-  const loadUnlistedData = async () => {
-    try {
-      const { data, error } = await supabase
-        .from("unlisted_shares")
-        .select("name,price_display")
-        .order("id", { ascending: false })
-        .limit(10);
+  useEffect(() => {
+    const loadUnlistedData = async () => {
+      try {
+        const data = await fetchUnlistedShares(); // Fetch from mockApi
 
-        console.log("Supabase data:", data);
-console.log("Supabase error:", error);
-      if (error) throw error;
+        // Take the latest 10 entries (assuming data is ordered by relevance or date)
+        const latestTen = data.slice(0, 10);
 
-      const list = data.map((stock) => ({
-        name: stock.name,
-        price: stock.price_display || "Ask",
-      }));
+        const list = latestTen.map((stock) => ({
+          name: stock.name,
+          price: stock.price || "Ask", // Fallback if price_display is missing
+        }));
 
-      setSidebarUnlisted(list);
-    } catch (error) {
-      console.error("Failed to load unlisted shares sidebar:", error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
+        setSidebarUnlisted(list);
+      } catch (error) {
+        console.error("Failed to load unlisted shares sidebar:", error);
+        setSidebarUnlisted([]);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  loadUnlistedData();
-}, []);
-
+    loadUnlistedData();
+  }, []);
 
   if (!shouldShow) return null;
 
@@ -88,26 +85,25 @@ console.log("Supabase error:", error);
             </div>
           ) : (
             sidebarUnlisted.map((stock, i) => (
-             <div
-  key={i}
-  className="px-3 py-2 hover:bg-gray-50 transition cursor-pointer flex items-center justify-between gap-2"
->
-  <p className="font-medium text-[11px] text-gray-900 truncate">
-    {stock.name}
-  </p>
+              <div
+                key={i}
+                className="px-3 py-2 hover:bg-gray-50 transition cursor-pointer flex items-center justify-between gap-2"
+              >
+                <p className="font-medium text-[11px] text-gray-900 truncate">
+                  {stock.name}
+                </p>
 
-  <span className="text-[10px] px-1.5 py-[1px] rounded border border-gray-200 bg-gray-100 text-gray-700 whitespace-nowrap">
-    {stock.price}
-  </span>
-</div>
-
+                <span className="text-[10px] px-1.5 py-[1px] rounded border border-gray-200 bg-gray-100 text-gray-700 whitespace-nowrap">
+                  {stock.price}
+                </span>
+              </div>
             ))
           )}
         </div>
 
         {/* Footer */}
         <div className="bg-gray-50 px-4 py-2 text-center border-t border-gray-200 rounded-b-lg">
-          <p className="text-xs text-gray-500">Updated daily • Dec 2025</p>
+          <p className="text-xs text-gray-500">Updated daily • Jan 2026</p>
         </div>
       </div>
     </div>
