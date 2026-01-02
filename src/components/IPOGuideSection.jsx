@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ChevronDown, ChevronUp, AlertTriangle, FileText, Building2, TrendingUp, Shield, Scale, HelpCircle, DollarSign, Users } from "lucide-react";
+import { ChevronDown, ChevronUp, AlertTriangle, FileText, Building2, TrendingUp, Shield, Scale, HelpCircle, IndianRupee, Users } from "lucide-react";
 
 const faqs = [
   { q: "What is an IPO in simple terms?", a: "An IPO (Initial Public Offering) is when a company sells its shares to the public for the first time and gets listed on NSE or BSE." },
@@ -101,7 +101,7 @@ const FAQSection = () => {
         <div className="text-center mt-8">
           <button
             onClick={() => setShowAllFAQs(true)}
-            className="px-8 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition"
+            className="px-8 py-3 bg-green-600 text-white font-medium rounded-full hover:bg-blue-700 transition"
           >
             View All FAQs ({faqs.length - 10} more)
           </button>
@@ -116,7 +116,7 @@ const IPOGuideSection = () => {
 
   return (
     <div className="py-8 lg:py-12 bg-gray-50">
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
 
         {/* Main Title */}
         <h2 className="text-3xl sm:text-4xl font-black text-center text-gray-900 mb-12">
@@ -406,7 +406,7 @@ const IPOGuideSection = () => {
         <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <DollarSign className="w-6 h-6 text-green-600" />
+              <IndianRupee className="w-6 h-6 text-green-600" />
             </div>
             <h3 className="text-2xl font-bold text-gray-900">IPO Price Band, Lot Size & Issue Size</h3>
           </div>

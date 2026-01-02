@@ -5,7 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import {
   Download, AlertTriangle,
   Home, Building2, Target, BarChart3, TrendingUp,
-  Shield, Clock, Ticket, Users, DollarSign,
+  Shield, Clock, Ticket, Users, IndianRupee,
   HelpCircle, CheckCircle, XCircle
 } from 'lucide-react';
 import { fetchIPOs } from '../api/mockApi';
@@ -50,7 +50,7 @@ const IPODetails = () => {
     { id: 'timeline', label: 'Timeline', icon: Clock },
     { id: 'allocation', label: 'Lot', icon: Ticket },
     { id: 'subscription', label: 'Subscription', icon: Users },
-    { id: 'gmp', label: 'GMP', icon: DollarSign },
+    { id: 'gmp', label: 'GMP', icon: IndianRupee },
     { id: 'peers', label: 'Peers', icon: BarChart3 },
     { id: 'review', label: 'Review', icon: Shield },
     { id: 'faqs', label: 'FAQs', icon: HelpCircle },
@@ -105,7 +105,7 @@ const IPODetails = () => {
             <div className="flex items-center gap-2">
               <AlertTriangle className="text-blue-700 w-4 h-4 sm:w-5 sm:h-5" />
               <p className="text-xs sm:text-sm font-medium text-blue-900">
-                Content needs to be added
+                   Ready to invest in this opportunity? Apply now through our trusted platforms.
               </p>
             </div>
             <button
@@ -139,7 +139,7 @@ const IPODetails = () => {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-4 gap-10">
+        <div className="max-w-full mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-4 gap-10">
 
           <aside className="hidden lg:block sticky top-32 border rounded-xl p-6">
             <h3 className="font-bold mb-4">Quick Navigation</h3>

@@ -141,7 +141,7 @@ export default function Blogs() {
 
   return (
      <section className="pt-16 pb-4 lg:pt-4 lg:pb-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div
           className="overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}

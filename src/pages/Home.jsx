@@ -56,8 +56,8 @@ export default function Home() {
     <div className="w-full bg-gray-50">
 
       {/* HERO */}
- <section className="py-12 px-8 lg:py-24 relative">
-  <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+ <section className="py-12 px-8 lg:py-12 relative">
+  <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
     
     <motion.h1
       initial={{ opacity: 0, y: -30 }}
@@ -99,8 +99,8 @@ export default function Home() {
   </div>
 </section>
        {/* BROKER ANALYZER */}
-      <section className="py-2">
-        <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-8">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
             <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
               <h2 className="text-3xl font-black text-gray-900">Best Stock Brokers in India 2025</h2>
@@ -128,7 +128,7 @@ export default function Home() {
 
       {/* IPO SECTION */}
  <section className="py-2">
-  <div className="w-full max-w-screen-2xl mx-auto px-6 lg:px-10">
+  <div className="w-full max-w-full mx-auto px-6 lg:px-10">
 
     {/* HORIZONTAL LAYOUT */}
     <div className="flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-3">
@@ -225,7 +225,7 @@ export default function Home() {
 
 {/* UNLISTED SHARES */}
 <section className="py-0">
-  <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
     {/* Removed ml-4 lg:ml-6 — unnecessary and causing misalignment */}
 
     {/* FLEX LAYOUT WITH MAIN + SIDEBAR */}
@@ -288,7 +288,7 @@ export default function Home() {
 
       {/* BLOGS */}
       <section className="py-2">
-        <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
             <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
               <h2 className="text-3xl font-black text-gray-900">IPO News & Blogs</h2>
@@ -319,7 +319,7 @@ export default function Home() {
 
       {/* WHY CHOOSE US */}
       <section className="py-2 pb-8">
-        <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
             <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
               <h2 className="text-3xl font-black text-gray-900">
@@ -333,7 +333,7 @@ export default function Home() {
             </div>
 
             <div className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-full mx-auto">
                 {[
                   {
                     icon: TrendingUp,
@@ -414,7 +414,7 @@ export default function Home() {
                   <Star className="w-10 h-10 text-yellow-500 fill-current" />
                   <span>Why Investors Trust Us</span>
                 </div>
-                <p className="mt-6 text-2xl font-medium text-gray-800 max-w-5xl mx-auto">
+                <p className="mt-6 text-2xl font-medium text-gray-800 max-w-full mx-auto">
                   Because we make the Indian stock market{" "}
                   <span className="text-green-600 font-bold">
                     simple, transparent, and truly accessible

@@ -14,21 +14,21 @@ const HowToApplyIPO = () => {
     <div className="bg-gray-50 min-h-screen">
 
       {/* HEADER */}
-    <header>
-  <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-3 text-center lg:pl-16">
-    <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-      How to Apply for an IPO (Step-by-Step Guide)
-    </h1>
-    <p className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-4xl mx-auto">
-      An IPO (Initial Public Offering) lets retail investors buy shares of a company when it goes public.
-      Modern IPO applications in India are completely online — no paperwork, no cheques.
-      You can apply through your broker trading platform or your bank’s ASBA facility.
-    </p>
-  </div>
-</header>
+      <header>
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 py-8 space-y-3 text-center">
+          <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
+            How to Apply for an IPO (Step-by-Step Guide)
+          </h1>
+          <p className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-5xl mx-auto">
+            An IPO (Initial Public Offering) lets retail investors buy shares of a company when it goes public.
+            Modern IPO applications in India are completely online — no paperwork, no cheques.
+            You can apply through your broker trading platform or your bank’s ASBA facility.
+          </p>
+        </div>
+      </header>
 
       {/* CONTENT */}
-      <main className="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+      <main className="max-w-full mx-auto px-4 sm:px-6 lg:px-12 py-8 space-y-4">
 
         {/* REQUIREMENTS */}
         <section className="bg-white rounded-lg border p-6">
@@ -210,78 +210,79 @@ const HowToApplyIPO = () => {
           </ul>
         </section>
 
-      {/* TIMING */}
-<section className="bg-gray-100 rounded-lg p-6">
-  <h2 className="text-lg font-bold flex items-center gap-2 mb-4">
-    <Clock size={18} />
-    When Can You Apply?
-  </h2>
+        {/* TIMING */}
+        <section className="bg-gray-100 rounded-lg p-6">
+          <h2 className="text-lg font-bold flex items-center gap-2 mb-4">
+            <Clock size={18} />
+            When Can You Apply?
+          </h2>
 
-  <div className="flex flex-wrap gap-4 text-sm text-gray-700">
-    <span className="bg-white border rounded px-4 py-2">
-      IPO opens at 10:00 AM
-    </span>
-    <span className="bg-white border rounded px-4 py-2">
-      Closes at 4:30 PM
-    </span>
-    <span className="bg-white border rounded px-4 py-2">
-      Pre-apply window does not affect allotment
-    </span>
-  </div>
-</section>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-700">
+            <span className="bg-white border rounded px-4 py-2">
+              IPO opens at 10:00 AM
+            </span>
+            <span className="bg-white border rounded px-4 py-2">
+              Closes at 4:30 PM
+            </span>
+            <span className="bg-white border rounded px-4 py-2">
+              Pre-apply window does not affect allotment
+            </span>
+          </div>
+        </section>
 
-{/* RULES */}
-<section className="bg-white border rounded-lg p-6">
-  <h2 className="text-lg font-bold mb-4">
-    Application Tips & Rules
-  </h2>
+        {/* RULES */}
+        <section className="bg-white border rounded-lg p-6">
+          <h2 className="text-lg font-bold mb-4">
+            Application Tips & Rules
+          </h2>
 
-  <div className="flex flex-wrap gap-4 text-sm text-gray-700">
-    <span className="bg-gray-50 border rounded px-4 py-2">
-      Up to 3 bids allowed per IPO
-    </span>
-    <span className="bg-gray-50 border rounded px-4 py-2">
-      UPI mandate must be approved before closing
-    </span>
-    <span className="bg-gray-50 border rounded px-4 py-2">
-      Only one application per PAN is allowed
-    </span>
-  </div>
-</section>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-700">
+            <span className="bg-gray-50 border rounded px-4 py-2">
+              Up to 3 bids allowed per IPO
+            </span>
+            <span className="bg-gray-50 border rounded px-4 py-2">
+              UPI mandate must be approved before closing
+            </span>
+            <span className="bg-gray-50 border rounded px-4 py-2">
+              Only one application per PAN is allowed
+            </span>
+          </div>
+        </section>
 
         {/* CHECK STATUS */}
-    <section className="bg-white border rounded-lg p-6 space-y-4">
-  <h2 className="text-lg font-bold text-center">🔎 Check Allotment Status</h2>
+        <section className="bg-white border rounded-lg p-6 space-y-4">
+          <h2 className="text-lg font-bold text-center">Check Allotment Status</h2>
 
-  <div className="flex flex-wrap justify-center gap-3">
-    <a
-      href="https://www.nseindia.com/invest/check-trades-bids-verify-ipo-bids"
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition"
-    >
-      NSE IPO <ExternalLink size={14} />
-    </a>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a
+              href="https://www.nseindia.com/invest/check-trades-bids-verify-ipo-bids"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition"
+            >
+              NSE IPO <ExternalLink size={14} />
+            </a>
 
-    <a
-      href="https://www.bseindia.com/publicissue.html"
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white text-sm rounded hover:bg-indigo-700 transition"
-    >
-      BSE IPO <ExternalLink size={14} />
-    </a>
+            <a
+              href="https://www.bseindia.com/publicissue.html"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white text-sm rounded hover:bg-indigo-700 transition"
+            >
+              BSE IPO <ExternalLink size={14} />
+            </a>
 
-    <a
-      href="https://ipostatus.kfintech.com/"
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white text-sm rounded hover:bg-green-700 transition"
-    >
-      Registrar (KFintech) <ExternalLink size={14} />
-    </a>
-  </div>
-</section>
+            <a
+              href="https://ipostatus.kfintech.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white text-sm rounded hover:bg-green-700 transition"
+            >
+              Registrar (KFintech) <ExternalLink size={14} />
+            </a>
+          </div>
+        </section>
+
         {/* BACK */}
         <Link
           to={-1}

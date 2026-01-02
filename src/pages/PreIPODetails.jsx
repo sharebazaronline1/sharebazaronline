@@ -5,9 +5,9 @@ import {
   ArrowLeft,
   BarChart3,
   Building2,
-  DollarSign,
   AlertTriangle,
   Users,
+  IndianRupee,
   Wallet,
   Factory,
 } from "lucide-react";
@@ -38,6 +38,7 @@ const PreIPODetails = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
   const navigate = useNavigate();
+  const [showFullOverview, setShowFullOverview] = useState(false);
 
   useEffect(() => {
     fetchPreIPODetails().then((res) =>
@@ -52,13 +53,17 @@ const PreIPODetails = () => {
       </div>
     );
   }
-
+ const overviewText = data.overview || "";
+  const shortOverview =
+    overviewText.length > 900
+      ? overviewText.slice(0, 900) + "..."
+      : overviewText;
   return (
     <div className="bg-slate-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
         {/* ================= HERO ================= */}
-       <header className="relative bg-slate-50 pb-20"> {/* Added pb-20 to make space for the fixed bar */}
+       <header className="relative bg-slate-50 "> {/* Added pb-20 to make space for the fixed bar */}
   <div className="flex items-start gap-6 ml-4 lg:ml-6 py-6 pl-6 lg:pl-64">
 
     {/* LOGO */}
@@ -90,7 +95,7 @@ const PreIPODetails = () => {
     <div className="flex items-center gap-3">
       <AlertTriangle className="text-blue-700 w-5 h-5 flex-shrink-0" />
       <p className="text-sm lg:text-base font-medium text-blue-900 whitespace-nowrap">
-        Ready to invest in this opportunity? Apply now through trusted platforms.
+        Ready to invest in this opportunity? Apply now through our trusted platforms.
       </p>
     </div>
     <button
@@ -104,10 +109,19 @@ const PreIPODetails = () => {
 </header>
 
         {/* ================= COMPANY OVERVIEW ================= */}
-        <Card>
+     <Card>
           <SectionHeader icon={Building2} title="Company Overview" />
           <div className="p-4 text-slate-700 whitespace-pre-line leading-relaxed">
-            {data.overview}
+            {showFullOverview ? overviewText : shortOverview}
+
+            {overviewText.length > 900 && (
+              <button
+                onClick={() => setShowFullOverview(!showFullOverview)}
+                className="block mt-2 text-green-600 font-semibold text-sm hover:underline"
+              >
+                {showFullOverview ? "View less" : "View more"}
+              </button>
+            )}
           </div>
         </Card>
 
@@ -139,7 +153,7 @@ const PreIPODetails = () => {
 
         {/* ================= SHARE DETAILS ================= */}
         <Card>
-          <SectionHeader icon={DollarSign} title="Unlisted Share Details" />
+          <SectionHeader icon={IndianRupee} title="Unlisted Share Details" />
           <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
             {Object.entries(data.shareDetails).map(([k, v]) => (
               <div key={k} className="bg-slate-50 border rounded-xl p-3 text-center">

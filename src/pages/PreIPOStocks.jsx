@@ -1,12 +1,15 @@
-// src/pages/PreIPOStocks.jsx (updated - entire row clickable for details)
+// src/pages/PreIPOStocks.jsx (with Load More)
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { fetchPreIPOs } from "../api/mockApi";
 
+const ITEMS_PER_PAGE = 10;
+
 const PreIPOStocks = () => {
   const [ipos, setIPOs] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,7 +23,7 @@ const PreIPOStocks = () => {
     load();
   }, []);
 
-  // Fixed-size logo component (no shrinking)
+  // Fixed-size logo component
   const CompanyLogo = ({ name, logo }) => {
     const firstLetter = name?.charAt(0).toUpperCase() || "?";
 
@@ -43,23 +46,21 @@ const PreIPOStocks = () => {
     );
   };
 
+  const visibleIPOs = ipos.slice(0, visibleCount);
+
   return (
     <div className="w-full bg-gray-50">
       {/* BANNER */}
-        <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
-
-      <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
-      
-        <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
-          <img
-            src="/images/unlistedshare.png"
-            alt="Preipo"
-            className="absolute inset-0 w-full h-full object-top  object-center"
-          />
-      
+      <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
+          <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
+            <img
+              src="/images/unlistedshare.png"
+              alt="Preipo"
+              className="absolute inset-0 w-full h-full object-top object-center"
+            />
+          </div>
         </div>
-      </div>
-
       </div>
 
       <div className="w-full max-w-none px-4 sm:px-6 lg:px-8 py-8">
@@ -88,70 +89,68 @@ const PreIPOStocks = () => {
               </thead>
 
               <tbody className="divide-y divide-gray-100">
-                {ipos.length === 0 ? (
+                {visibleIPOs.length === 0 ? (
                   <tr>
                     <td colSpan="5" className="text-center py-20 text-gray-500 text-lg">
                       No Pre-IPO / Unlisted shares available right now
                     </td>
                   </tr>
                 ) : (
-                  ipos.map((ipo, i) => (
+                  visibleIPOs.map((ipo, i) => (
                     <motion.tr
                       key={ipo.id}
                       initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.05 }}
+                      transition={{ delay: i * 0.04 }}
                       className="hover:bg-gray-50 transition-colors cursor-pointer"
-                      onClick={() => navigate(`/preipo/${ipo.id}`)}  // ← Entire row clickable
+                      onClick={() => navigate(`/preipo/${ipo.id}`)}
                     >
-                      {/* Company */}
                       <td className="px-6 py-5">
                         <div className="flex items-center gap-4">
                           <CompanyLogo name={ipo.name} logo={ipo.logo} />
-                          <p className="font-medium text-gray-900 text-base sm:text-md line-clamp-2">
+                          <p className="font-medium text-gray-900 text-base line-clamp-2">
                             {ipo.name}
                           </p>
                         </div>
                       </td>
 
-                      {/* Price */}
                       <td className="px-6 py-5 text-center">
                         <span className="text-lg font-bold text-green-600">
                           ₹{ipo.price?.toLocaleString("en-IN") || "-"}
                         </span>
                       </td>
 
-                      {/* Min Lot */}
                       <td className="px-6 py-5 text-center font-medium text-gray-800">
                         {ipo.minLotSize?.toLocaleString("en-IN") || "-"} shares
                       </td>
 
-                      {/* Depository */}
                       <td className="px-6 py-5 text-center text-gray-700 text-sm">
                         {ipo.depository || "-"}
                       </td>
 
-                      {/* Actions */}
-                      <td className="px-6 py-5 text-center" onClick={(e) => e.stopPropagation()}>
-                        <div className="flex justify-center gap-3">
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation(); // Prevent row click
-                              // Handle Buy Now action (e.g., open modal or contact form)
-                              alert("Buy Now clicked - implement your logic here");
-                            }}
-                            className="px-5 py-2.5 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition shadow-sm text-sm whitespace-nowrap"
-                          >
-                            Buy Now
-                          </button>
-                          <button
-                           onClick={() => navigate(`/preipo/${ipo.id}`)}  // Prevent row navigation
-                            className="px-5 py-2.5 border border-gray-300 text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition text-sm whitespace-nowrap"
-                          >
-                            View Details
-                          </button>
-                        </div>
-                      </td>
+                    <td
+                      className="px-6 py-5 text-center"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <div className="flex justify-center gap-3">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            alert("Buy Now clicked");
+                          }}
+                          className="px-5 py-2.5 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition text-sm whitespace-nowrap"
+                        >
+                          Buy Now
+                        </button>
+                        <button
+                          onClick={() => navigate(`/preipo/${ipo.id}`)}
+                          className="px-5 py-2.5 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition text-sm whitespace-nowrap"
+                        >
+                          View Details
+                        </button>
+                      </div>
+                    </td>
+
                     </motion.tr>
                   ))
                 )}
@@ -159,9 +158,21 @@ const PreIPOStocks = () => {
             </table>
           </div>
 
+          {/* LOAD MORE */}
+          {visibleCount < ipos.length && (
+            <div className="py-6 text-center bg-gray-50 border-t">
+              <button
+                onClick={() => setVisibleCount((prev) => prev + ITEMS_PER_PAGE)}
+                className="px-8 py-3 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition"
+              >
+                View More
+              </button>
+            </div>
+          )}
+
           {/* Footer */}
           {ipos.length > 0 && (
-            <div className="px-8 py-5 bg-gray-50 border-t border-gray-200 text-center text-sm text-gray-600">
+            <div className="px-8 py-5 bg-gray-50 border-t text-center text-sm text-gray-600">
               Prices are indicative • Subject to availability • Contact for latest quotes
             </div>
           )}

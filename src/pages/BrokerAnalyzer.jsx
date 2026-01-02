@@ -120,7 +120,7 @@ const BrokerCard = ({ broker }) => {
 const BrokerAnalyzer = () => {
   return (
     <section className="py-10 px-4 ">
-      <div className="max-w-7xl mx-auto">  
+      <div className="max-w-full mx-auto">  
         {/* Mobile: Horizontal Scroll */}
         <div className="lg:hidden overflow-x-auto scrollbar-hide -mx-4 px-4 pb-6">
           <div className="flex gap-3">
