@@ -1,6 +1,7 @@
-// src/components/UnlistedGuideSection.jsx (Full-width sections, vertical flow for early sections, separate boxes)
+// src/components/UnlistedGuideSection.jsx
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ChevronDown, ChevronUp, AlertTriangle, FileText, Building2, TrendingUp, Shield, Scale, HelpCircle } from "lucide-react";
 
 const faqs = [
@@ -59,7 +60,7 @@ const faqs = [
 const UnlistedGuideSection = () => {
   const [showAllFAQs, setShowAllFAQs] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
-
+  const navigate = useNavigate();
   const toggle = (i) => {
     setOpenIndex(openIndex === i ? null : i);
   };
@@ -69,7 +70,7 @@ const UnlistedGuideSection = () => {
   return (
     <>
       {/* Banner using the provided image */}
- <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+ <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
 
         <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
           <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
@@ -86,13 +87,8 @@ const UnlistedGuideSection = () => {
       <div className="py-8 lg:py-8 bg-gray-50">
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
 
-          {/* Main Title */}
-          <h2 className="text-3xl sm:text-4xl font-black text-center text-gray-900">
-            Unlisted Shares in India – Complete Guide
-          </h2>
-
           {/* Introduction - Full Width */}
-          <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+          <section className="bg-white  rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                 <FileText className="w-6 h-6 text-green-600" />
@@ -396,13 +392,22 @@ const UnlistedGuideSection = () => {
             </section>
           </div>
 
-          {/* Risk Disclaimer - Before FAQs */}
-          <div className="p-6 bg-amber-50 border border-amber-200 rounded-2xl flex items-center gap-4">
-            <AlertTriangle className="w-8 h-8 text-amber-700 flex-shrink-0" />
-            <p className="text-base lg:text-lg text-amber-900 font-medium">
-              Unlisted share investments carry higher risks. Always conduct thorough due diligence before investing.
-            </p>
-          </div>
+          
+<div className="p-6 bg-amber-50 border border-amber-200 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
+  <div className="flex items-center gap-4">
+ 
+    <p className="text-base lg:text-lg text-amber-900 font-medium text-center sm:text-left">
+      Unlisted share investments carry higher risks.Buy now through our trusted platforms.
+    </p>
+  </div>
+
+  <button
+    onClick={() => navigate('/login')}
+    className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition shadow-md whitespace-nowrap"
+  >
+    Buy Now
+  </button>
+</div>
 
           {/* FAQs - Full Width */}
           <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">

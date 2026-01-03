@@ -3,6 +3,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ChevronDown, ChevronUp, AlertTriangle, FileText, Building2, TrendingUp, Shield, Scale, HelpCircle, IndianRupee, Users } from "lucide-react";
+import IPODashboard, { IPOCard } from "./IPODashboard";
+import { fetchIPOs, fetchUnlisted } from '../api/mockApi';
+import { useQuery } from '@tanstack/react-query';
+
 
 const faqs = [
   { q: "What is an IPO in simple terms?", a: "An IPO (Initial Public Offering) is when a company sells its shares to the public for the first time and gets listed on NSE or BSE." },
@@ -113,18 +117,26 @@ const FAQSection = () => {
 
 const IPOGuideSection = () => {
   const navigate = useNavigate();
-
+  
+ const { data: ipos = [], isLoading: isIPOLoading } = useQuery({
+    queryKey: ['ipos'],
+    queryFn: fetchIPOs,
+  });
   return (
-    <div className="py-8 lg:py-12 bg-gray-50">
+   <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
+          <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
+            <img
+              src="images/IpoGuide.jpeg"
+              alt="InsightHub"
+              className="absolute inset-0 w-full h-full object-top object-center"
+            />
+          </div>
+        </div>
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-
-        {/* Main Title */}
-        <h2 className="text-3xl sm:text-4xl font-black text-center text-gray-900 mb-12">
-          IPO in India – Complete Guide to Initial Public Offerings (IPO)
-        </h2>
-
+      
         {/* Introduction - Vertical Full Width */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+        <section className="bg-white mt-8 rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
               <FileText className="w-6 h-6 text-green-600" />
@@ -140,35 +152,139 @@ const IPOGuideSection = () => {
         </section>
 
         {/* What is an IPO? - Vertical Full Width */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <Building2 className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">What is an IPO?</h3>
-          </div>
-          <p className="text-base text-gray-700 leading-relaxed mb-6">
-            An IPO is the first sale of a company’s equity shares to public investors. Before an IPO, ownership is limited to promoters, founders, private investors, and venture capitalists. Once listed, shares can be freely traded in the secondary market.
-          </p>
-          <h4 className="text-xl font-bold text-gray-900 mb-4">Key Objectives of an IPO</h4>
-          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-            <li>Raise capital for expansion and growth</li>
-            <li>Repay existing debt</li>
-            <li>Fund new projects or acquisitions</li>
-            <li>Provide exit to early investors</li>
-            <li>Enhance corporate visibility and brand trust</li>
-          </ul>
-          <h4 className="text-xl font-bold text-gray-900 mt-8 mb-4">Evolution of IPO Market in India</h4>
-          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-            <li>India’s IPO ecosystem has matured due to:</li>
-            <li>Strong regulatory framework by SEBI</li>
-            <li>Digitization of IPO applications (UPI-ASBA)</li>
-            <li>Increased retail investor participation</li>
-            <li>Growth of SME IPO platforms</li>
-            <li>The Indian IPO market has seen participation from startups, manufacturing giants, technology firms, and government-backed PSUs.</li>
-          </ul>
-        </section>
+    <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+  <div className="flex items-center gap-4 mb-6">
+    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+      <Building2 className="w-6 h-6 text-green-600" />
+    </div>
+    <h3 className="text-2xl font-bold text-gray-900">What is an IPO?</h3>
+  </div>
+  <p className="text-base text-gray-700 leading-relaxed mb-8">
+    An IPO is the first sale of a company’s equity shares to public investors. Before an IPO, ownership is limited to promoters, founders, private investors, and venture capitalists. Once listed, shares can be freely traded in the secondary market.
+  </p>
 
+  {/* Horizontal Boxes for Key Objectives and Evolution */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {/* Key Objectives Box */}
+    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+      <h4 className="text-xl font-bold text-gray-900 mb-4">Key Objectives of an IPO</h4>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700">
+        <li>Raise capital for expansion and growth</li>
+        <li>Repay existing debt</li>
+        <li>Fund new projects or acquisitions</li>
+        <li>Provide exit to early investors</li>
+        <li>Enhance corporate visibility and brand trust</li>
+      </ul>
+    </div>
+
+    {/* Evolution Box */}
+    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+      <h4 className="text-xl font-bold text-gray-900 mb-4">Evolution of IPO Market in India</h4>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700">
+        <li>India’s IPO ecosystem has matured due to:</li>
+        <li>Strong regulatory framework by SEBI</li>
+        <li>Digitization of IPO applications (UPI-ASBA)</li>
+        <li>Increased retail investor participation</li>
+        <li>Growth of SME IPO platforms</li>
+        <li>The Indian IPO market has seen participation from startups, manufacturing giants, technology firms, and government-backed PSUs.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+      {/* IPO SECTION */}
+ <section className="py-2">
+  <div className="w-full max-w-full mx-auto px-6 lg:px-10">
+
+    {/* HORIZONTAL LAYOUT */}
+    <div className="flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-3">
+
+      {/* MAIN IPO TRACKER SECTION */}
+      <div className="flex-1 max-w-[1100px]">
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+
+          <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
+            <h2 className="text-3xl font-black text-gray-900">IPO Tracker</h2>
+            <p className="mt-2 text-lg text-gray-600">
+              Live & Upcoming IPOs in India
+            </p>
+          </div>
+
+          <div className="p-8">
+            {isIPOLoading ? (
+              <div className="flex justify-center py-20">
+                <div className="animate-spin rounded-full h-14 w-14 border-t-4 border-b-4 border-gray-800" />
+              </div>
+            ) : (
+              (() => {
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+
+                const liveIPOs = ipos
+                  .map((ipo) => ({
+                    ...ipo,
+                    _openDate: new Date(ipo.open),
+                    _closeDate: new Date(ipo.close),
+                  }))
+                  .filter(
+                    (ipo) =>
+                      !isNaN(ipo._openDate) &&
+                      !isNaN(ipo._closeDate) &&
+                      ipo._openDate <= today &&
+                      today <= ipo._closeDate
+                  )
+                  .sort((a, b) => a._closeDate - b._closeDate)
+                  .slice(0, 8);
+
+                return (
+                  <>
+                    {/* Mobile / Tablet */}
+                    <div className="lg:hidden overflow-x-auto px-2 pb-6 scrollbar-hide">
+                      {liveIPOs.length > 0 ? (
+                        <div className="flex gap-6">
+                          {liveIPOs.map((ipo) => (
+                            <div
+                              key={ipo.id}
+                              className="min-w-[280px] flex-shrink-0"
+                            >
+                              <IPOCard ipo={ipo} />
+                            </div>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="py-20 text-center">
+                          <p className="text-xl font-semibold text-gray-600">
+                            No Live IPOs Right Now
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Desktop */}
+                    <div className="hidden lg:block">
+                      <IPODashboard ipos={liveIPOs} />
+                    </div>
+                  </>
+                );
+              })()
+            )}
+
+            <div className="text-center mt-8">
+              <button
+                onClick={() => navigate("/ipo/ipo-list")}
+                className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
+              >
+                View All IPO
+              </button>
+            </div>
+
+          </div>
+         
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
         {/* Types of IPOs - Full Width */}
         <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
           <div className="flex items-center gap-4 mb-6">
@@ -269,271 +385,441 @@ const IPOGuideSection = () => {
         </section>
 
         {/* IPO Investor Categories - Full Width */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <Users className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">IPO Investor Categories</h3>
-          </div>
-          <div className="space-y-8">
-            {/* Retail */}
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Who are Retail Investors?</h4>
-              <p className="text-base text-gray-700 mb-4">
-                Retail Individual Investors (RII) are individual investors who apply for IPO shares for personal investment purposes.
-              </p>
-              <p className="text-base font-medium text-gray-800 mb-2">Investment Limit</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Maximum investment: ₹2,00,000</li>
-                <li>Applications above ₹2 lakh are not considered under retail category</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-4 mb-2">Key Characteristics</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>This category sees the highest participation volume in IPOs</li>
-                <li>Reserved portion in Mainboard IPOs: At least 35% of the total issue size</li>
-                <li>Applications must be made using ASBA (Application Supported by Blocked Amount)</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-4 mb-2">Allotment Process</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>If the IPO is oversubscribed, allotment is done through a computerized lottery system</li>
-                <li>Every valid retail applicant has an equal chance of allotment, irrespective of the number of lots applied</li>
-                <li>Partial or single-lot allotment is common in highly subscribed IPOs</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-4">Best For</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>First-time investors</li>
-                <li>Small investors looking for listing gains or long-term investments</li>
-              </ul>
-            </div>
+       <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+  <div className="flex items-center gap-4 mb-8">
+    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+      <Users className="w-6 h-6 text-green-600" />
+    </div>
+    <h3 className="text-2xl font-bold text-gray-900">IPO Investor Categories</h3>
+  </div>
 
-            {/* NII/HNI */}
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Who are NIIs / HNIs?</h4>
-              <p className="text-base text-gray-700 mb-4">
-                Non-Institutional Investors (NII), commonly known as High Net Worth Individuals (HNI), include: Individuals, Corporates, Trusts, NRIs (non-repatriation basis)
-              </p>
-              <p className="text-base font-medium text-gray-800 mb-2">Investment Limit</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Investment above ₹2,00,000</li>
-                <li>No upper investment limit</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-4 mb-2">Sub-Categories</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>SEBI further divides NIIs into:</li>
-                <li>Small HNIs (sHNI): ₹2 lakh to ₹10 lakh</li>
-                <li>Big HNIs (bHNI): Above ₹10 lakh</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-4 mb-2">Key Characteristics</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Reserved portion in Mainboard IPOs: At least 15% of the issue size</li>
-                <li>Higher application amounts increase the probability of allotment, but allotment is not guaranteed</li>
-                <li>No lottery system like retail category</li>
-                <li>Allotment is done on a proportionate basis</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-4">Best For</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Investors with higher capital</li>
-                <li>Investors aiming for listing gains</li>
-                <li>Experienced market participants</li>
-              </ul>
-            </div>
+  {/* Three Horizontal Boxes for Retail, NII/HNI, and QIB */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+    {/* Retail Investors Box */}
+    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+      <h4 className="text-xl font-bold text-gray-900 mb-4">Who are Retail Investors?</h4>
+      <p className="text-base text-gray-700 mb-4">
+        Retail Individual Investors (RII) are individual investors who apply for IPO shares for personal investment purposes.
+      </p>
+      <p className="text-base font-medium text-gray-800 mb-2">Investment Limit</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>Maximum investment: ₹2,00,000</li>
+        <li>Applications above ₹2 lakh are not considered under retail category</li>
+      </ul>
+      <p className="text-base font-medium text-gray-800 mb-2">Key Characteristics</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>This category sees the highest participation volume in IPOs</li>
+        <li>Reserved portion in Mainboard IPOs: At least 35% of the total issue size</li>
+        <li>Applications must be made using ASBA (Application Supported by Blocked Amount)</li>
+      </ul>
+      <p className="text-base font-medium text-gray-800 mb-2">Allotment Process</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>If the IPO is oversubscribed, allotment is done through a computerized lottery system</li>
+        <li>Every valid retail applicant has an equal chance of allotment, irrespective of the number of lots applied</li>
+        <li>Partial or single-lot allotment is common in highly subscribed IPOs</li>
+      </ul>
+      <p className="text-base font-medium text-gray-800 mb-2">Best For</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700">
+        <li>First-time investors</li>
+        <li>Small investors looking for listing gains or long-term investments</li>
+      </ul>
+    </div>
 
-            {/* QIB */}
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">Who are QIBs?</h4>
-              <p className="text-base text-gray-700 mb-4">
-                Qualified Institutional Buyers are professional and regulated investors, such as: Mutual Funds, Banks, Insurance Companies, Foreign Institutional Investors (FIIs / FPIs), Pension Funds
-              </p>
-              <p className="text-base font-medium text-gray-800 mb-2">Investment Limit</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>No maximum investment limit</li>
-                <li>Typically invest large sums</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-4 mb-2">Key Characteristics</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Reserved portion in Mainboard IPOs: At least 50% of the issue size</li>
-                <li>Considered informed and sophisticated investors</li>
-                <li>Their participation reflects market confidence</li>
-                <li>Strong QIB subscription often indicates positive listing prospects</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-4 mb-2">Allotment Process</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Allotment is done on a proportionate basis</li>
-                <li>No lottery system</li>
-                <li>Cornerstone investors may get shares before IPO opening (in select cases)</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-4">Best For</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Institutional and professional investors</li>
-                <li>Long-term strategic investments</li>
-              </ul>
-            </div>
-          </div>
+    {/* NII / HNI Box */}
+    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+      <h4 className="text-xl font-bold text-gray-900 mb-4">Who are NIIs / HNIs?</h4>
+      <p className="text-base text-gray-700 mb-4">
+        Non-Institutional Investors (NII), commonly known as High Net Worth Individuals (HNI), include: Individuals, Corporates, Trusts, NRIs (non-repatriation basis)
+      </p>
+      <p className="text-base font-medium text-gray-800 mb-2">Investment Limit</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>Investment above ₹2,00,000</li>
+        <li>No upper investment limit</li>
+      </ul>
+      <p className="text-base font-medium text-gray-800 mb-2">Sub-Categories</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>SEBI further divides NIIs into:</li>
+        <li>Small HNIs (sHNI): ₹2 lakh to ₹10 lakh</li>
+        <li>Big HNIs (bHNI): Above ₹10 lakh</li>
+      </ul>
+      <p className="text-base font-medium text-gray-800 mb-2">Key Characteristics</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>Reserved portion in Mainboard IPOs: At least 15% of the issue size</li>
+        <li>Higher application amounts increase the probability of allotment, but allotment is not guaranteed</li>
+        <li>No lottery system like retail category</li>
+        <li>Allotment is done on a proportionate basis</li>
+      </ul>
+      <p className="text-base font-medium text-gray-800 mb-2">Best For</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700">
+        <li>Investors with higher capital</li>
+        <li>Investors aiming for listing gains</li>
+        <li>Experienced market participants</li>
+      </ul>
+    </div>
 
-          {/* IPO Category Reservation Summary - Table */}
-          <div className="overflow-x-auto mt-4">
-            <table className="w-full text-base bg-gray-50 rounded-xl border border-gray-200">
-              <thead className="bg-gray-900 text-white">
-                <tr>
-                  <th className="px-6 py-4 text-left">Investor Category</th>
-                  <th className="px-6 py-4 text-left">Reservation</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4">QIB</td>
-                  <td className="px-6 py-4">≥ 50%</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4">Retail (RII)</td>
-                  <td className="px-6 py-4">≥ 35%</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4">NII / HNI</td>
-                  <td className="px-6 py-4">≥ 15%</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4">Employee/Shareholder quota (if applicable)</td>
-                  <td className="px-6 py-4">-</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
+    {/* QIB Box */}
+    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+      <h4 className="text-xl font-bold text-gray-900 mb-4">Who are QIBs?</h4>
+      <p className="text-base text-gray-700 mb-4">
+        Qualified Institutional Buyers are professional and regulated investors, such as: Mutual Funds, Banks, Insurance Companies, Foreign Institutional Investors (FIIs / FPIs), Pension Funds
+      </p>
+      <p className="text-base font-medium text-gray-800 mb-2">Investment Limit</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>No maximum investment limit</li>
+        <li>Typically invest large sums</li>
+      </ul>
+      <p className="text-base font-medium text-gray-800 mb-2">Key Characteristics</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>Reserved portion in Mainboard IPOs: At least 50% of the issue size</li>
+        <li>Considered informed and sophisticated investors</li>
+        <li>Their participation reflects market confidence</li>
+        <li>Strong QIB subscription often indicates positive listing prospects</li>
+      </ul>
+      <p className="text-base font-medium text-gray-800 mb-2">Allotment Process</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>Allotment is done on a proportionate basis</li>
+        <li>No lottery system</li>
+        <li>Cornerstone investors may get shares before IPO opening (in select cases)</li>
+      </ul>
+      <p className="text-base font-medium text-gray-800 mb-2">Best For</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700">
+        <li>Institutional and professional investors</li>
+        <li>Long-term strategic investments</li>
+      </ul>
+    </div>
+  </div>
+
+  {/* IPO Category Reservation Summary - Table (Full Width Below Boxes) */}
+  <div className="overflow-x-auto">
+    <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">IPO Category Reservation Summary (Mainboard IPOs)</h4>
+    <table className="w-full text-base bg-gray-50 rounded-xl border border-gray-200">
+      <thead className="bg-gray-900 text-white">
+        <tr>
+          <th className="px-6 py-4 text-left">Investor Category</th>
+          <th className="px-6 py-4 text-left">Reservation</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-gray-200">
+        <tr>
+          <td className="px-6 py-4">QIB</td>
+          <td className="px-6 py-4">≥ 50%</td>
+        </tr>
+        <tr>
+          <td className="px-6 py-4">Retail (RII)</td>
+          <td className="px-6 py-4">≥ 35%</td>
+        </tr>
+        <tr>
+          <td className="px-6 py-4">NII / HNI</td>
+          <td className="px-6 py-4">≥ 15%</td>
+        </tr>
+        <tr>
+          <td className="px-6 py-4">Employee/Shareholder quota (if applicable)</td>
+          <td className="px-6 py-4">-</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
         {/* IPO Price Band, Lot Size & Issue Size - Full Width */}
+      <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+  <div className="flex items-center gap-4 mb-8">
+    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+      <IndianRupee className="w-6 h-6 text-green-600" />
+    </div>
+    <h3 className="text-2xl font-bold text-gray-900">IPO Price Band, Lot Size & Issue Size</h3>
+  </div>
+
+  {/* Three Horizontal Boxes */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+    {/* IPO Price Band Box */}
+    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+      <h4 className="text-xl font-bold text-gray-900 mb-4">IPO Price Band</h4>
+      <p className="text-base text-gray-700 mb-4">
+        What is an IPO Price Band?
+      </p>
+      <p className="text-base text-gray-700 leading-relaxed mb-4">
+        The IPO Price Band is the price range within which investors can bid for shares during the IPO subscription period.
+      </p>
+      <p className="text-base text-gray-700 leading-relaxed mb-4">
+        Example: Price Band: ₹100 – ₹105 per share. Investors can bid at any price within this range.
+      </p>
+
+      <p className="text-base font-medium text-gray-800 mb-2">Types of IPO Pricing</p>
+      <ul className="list-disc pl-6 space-y-3 text-base text-gray-700 mb-4">
+        <li><strong>Fixed Price Issue</strong>: Offered at one fixed price. Common in SME IPOs. Example: ₹80 per share</li>
+        <li><strong>Book-Building Issue (Most Common)</strong>: Price band with lower & upper limits. Final price decided based on demand. Example: ₹100 – ₹105</li>
+      </ul>
+
+      <p className="text-base font-medium text-gray-800 mb-2">What is Cut-Off Price?</p>
+      <p className="text-base text-gray-700 leading-relaxed mb-4">
+        The final IPO price at which shares are allotted. Retail investors can apply at “Cut-Off”. Usually set at the upper end if demand is strong.
+      </p>
+
+      <p className="text-base font-medium text-gray-800 mb-2">Why Price Band Matters</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700">
+        <li>Determines minimum investment amount</li>
+        <li>Helps evaluate IPO valuation</li>
+        <li>Affects listing gains and long-term returns</li>
+      </ul>
+    </div>
+
+    {/* IPO Lot Size Box */}
+    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+      <h4 className="text-xl font-bold text-gray-900 mb-4">IPO Lot Size</h4>
+      <p className="text-base text-gray-700 mb-4">
+        What is IPO Lot Size?
+      </p>
+      <p className="text-base text-gray-700 leading-relaxed mb-4">
+        The minimum number of shares an investor must apply for in an IPO.
+      </p>
+      <p className="text-base text-gray-700 leading-relaxed mb-4">
+        Example: Lot Size: 150 shares, Price Band: ₹100 – ₹105 → Minimum investment = 150 × 105 = ₹15,750
+      </p>
+
+      <p className="text-base font-medium text-gray-800 mb-2">Key Points About Lot Size</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700 mb-4">
+        <li>Investors must apply in multiples of lot size</li>
+        <li>Retail investors can apply up to ₹2 lakh</li>
+        <li>Lot size differs for Mainboard and SME IPOs</li>
+      </ul>
+
+      <p className="text-base font-medium text-gray-800 mb-2">Why Lot Size Is Important</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700">
+        <li>Determines retail participation level</li>
+        <li>Smaller lots encourage higher applications</li>
+        <li>Affects allotment chances in oversubscribed IPOs</li>
+      </ul>
+    </div>
+
+    {/* IPO Issue Size Box */}
+    <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+      <h4 className="text-xl font-bold text-gray-900 mb-4">IPO Issue Size</h4>
+      <p className="text-base text-gray-700 mb-4">
+        What is IPO Issue Size?
+      </p>
+      <p className="text-base text-gray-700 leading-relaxed mb-4">
+        The total value of shares offered to the public in the IPO.
+      </p>
+      <p className="text-base text-gray-700 leading-relaxed mb-4">
+        Example: 1 crore shares at ₹100 → Issue Size = ₹100 crore
+      </p>
+
+      <p className="text-base font-medium text-gray-800 mb-2">Types of Issue</p>
+      <ul className="list-disc pl-6 space-y-3 text-base text-gray-700 mb-4">
+        <li><strong>Fresh Issue</strong>: New shares issued → Funds go to company (expansion, debt repayment, etc.)</li>
+        <li><strong>Offer for Sale (OFS)</strong>: Existing shareholders sell → No funds to company (promoter exit, public float)</li>
+        <li><strong>Combination Issue</strong>: Both Fresh + OFS (most common)</li>
+      </ul>
+
+      <p className="text-base font-medium text-gray-800 mb-2">Why Issue Size Matters</p>
+      <ul className="list-disc pl-6 space-y-2 text-base text-gray-700">
+        <li>Large size → Lower subscription pressure</li>
+        <li>Small size → Higher oversubscription risk</li>
+        <li>Impacts post-listing liquidity</li>
+      </ul>
+    </div>
+  </div>
+
+  {/* Quick Comparison Table - Full Width Below Boxes */}
+  <div className="overflow-x-auto">
+    <h4 className="text-xl font-bold text-gray-900 mb-4 text-center">Price Band vs Lot Size vs Issue Size – Quick Comparison</h4>
+    <table className="w-full text-base bg-gray-50 rounded-xl border border-gray-200">
+      <thead className="bg-gray-900 text-white">
+        <tr>
+          <th className="px-6 py-4 text-left">Component</th>
+          <th className="px-6 py-4 text-left">Meaning</th>
+          <th className="px-6 py-4 text-left">Impact on Investors</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-gray-200">
+        <tr>
+          <td className="px-6 py-4">Price Band</td>
+          <td className="px-6 py-4">Share price range</td>
+          <td className="px-6 py-4">Decides IPO valuation</td>
+        </tr>
+        <tr>
+          <td className="px-6 py-4">Lot Size</td>
+          <td className="px-6 py-4">Minimum shares per application</td>
+          <td className="px-6 py-4">Determines investment amount</td>
+        </tr>
+        <tr>
+          <td className="px-6 py-4">Issue Size</td>
+          <td className="px-6 py-4">Total IPO value</td>
+          <td className="px-6 py-4">Impacts demand & liquidity</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  {/* Example - Full Width */}
+  <div className="mt-8 bg-gray-50 rounded-xl p-6 border border-gray-200">
+    <p className="text-base font-medium text-gray-800 mb-2">Example: Putting It All Together</p>
+    <p className="text-base text-gray-700 leading-relaxed">
+      Price Band: ₹200 – ₹210<br />
+      Lot Size: 70 shares<br />
+      Issue Size: ₹600 crore<br />
+      Minimum investment = 70 × 210 = ₹14,700<br />
+      Retail investors can apply up to ~13 lots (≈ ₹1.91 lakh)
+    </p>
+  </div>
+</section>
+
+       
+
+       
+
+        {/* Quick Info on SME IPOs - Full Width */}
         <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <IndianRupee className="w-6 h-6 text-green-600" />
+              <AlertTriangle className="w-6 h-6 text-green-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900">IPO Price Band, Lot Size & Issue Size</h3>
+            <h3 className="text-2xl font-bold text-gray-900">Quick Info on SME IPOs in India</h3>
           </div>
-          <div className="space-y-8">
-            {/* IPO Price Band */}
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">IPO Price Band</h4>
-              <p className="text-base text-gray-700 mb-4">
-                What is an IPO Price Band?
-              </p>
-              <p className="text-base text-gray-700 leading-relaxed">
-                The IPO Price Band is the price range within which investors can bid for shares during the IPO subscription period.
-              </p>
-              <p className="mt-4 text-base text-gray-700 leading-relaxed">
-                Example: Price Band: ₹100 – ₹105 per share This means investors can place bids at any price within this range.
-              </p>
-              <p className="text-base font-medium text-gray-800 mt-6 mb-2">Types of IPO Pricing</p>
-              <ul className="list-disc pl-8 space-y-4 text-base text-gray-700">
-                <li><strong>Fixed Price Issue</strong>: IPO is offered at one fixed price, Investors must apply at that price, Common in SME IPOs, Example: Price: ₹80 per share</li>
-                <li><strong>Book-Building Issue (Most Common)</strong>: Price band has lower and upper limits, Final price (cut-off price) is decided based on demand, Example: Price Band: ₹100 – ₹105</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-6 mb-2">What is Cut-Off Price?</p>
-              <p className="text-base text-gray-700 leading-relaxed">
-                The final IPO price at which shares are allotted, Retail investors can apply at “Cut-Off” without choosing a specific price, Cut-off is usually set at the upper end if demand is strong
-              </p>
-              <p className="text-base font-medium text-gray-800 mt-6 mb-2">Why IPO Price Band Matters</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Determines minimum investment amount</li>
-                <li>Helps evaluate IPO valuation</li>
-                <li>Affects listing gains and long-term returns</li>
-              </ul>
-            </div>
-
-            {/* IPO Lot Size */}
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">IPO Lot Size</h4>
-              <p className="text-base text-gray-700 mb-4">
-                What is IPO Lot Size?
-              </p>
-              <p className="text-base text-gray-700 leading-relaxed">
-                The IPO Lot Size is the minimum number of shares an investor must apply for in an IPO.
-              </p>
-              <p className="mt-4 text-base text-gray-700 leading-relaxed">
-                Example: Lot Size: 150 shares, Price Band: ₹100 – ₹105, Minimum investment = 150 × 105 = ₹15,750
-              </p>
-              <p className="text-base font-medium text-gray-800 mt-6 mb-2">Key Points About Lot Size</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Investors must apply in multiples of lot size</li>
-                <li>Retail investors can apply for maximum value of ₹2 lakh</li>
-                <li>Lot size differs for Mainboard IPOs and SME IPOs</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-6 mb-2">Why Lot Size Is Important</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Determines how many retail investors can apply</li>
-                <li>Smaller lot sizes encourage higher participation</li>
-                <li>Affects allotment probability in oversubscribed IPOs</li>
-              </ul>
-            </div>
-
-            {/* IPO Issue Size */}
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 mb-4">IPO Issue Size</h4>
-              <p className="text-base text-gray-700 mb-4">
-                What is IPO Issue Size?
-              </p>
-              <p className="text-base text-gray-700 leading-relaxed">
-                The IPO Issue Size is the total value of shares offered to the public in the IPO.
-              </p>
-              <p className="mt-4 text-base text-gray-700 leading-relaxed">
-                Example: Total shares offered: 1 crore shares, Issue Price: ₹100, Issue Size = ₹100 crore
-              </p>
-              <p className="text-base font-medium text-gray-800 mt-6 mb-2">Types of IPO Issue Size</p>
-              <ul className="list-disc pl-8 space-y-4 text-base text-gray-700">
-                <li><strong>Fresh Issue</strong>: Company issues new shares, Money raised goes directly to the company, Used for: Business expansion, Debt repayment, Working capital</li>
-                <li><strong>Offer for Sale (OFS)</strong>: Existing shareholders sell their shares, Company does not receive funds, Used for: Partial exit by promoters, Improving public shareholding</li>
-                <li><strong>Combination Issue</strong>: Includes both Fresh Issue + OFS</li>
-              </ul>
-              <p className="text-base font-medium text-gray-800 mt-6 mb-2">Why Issue Size Matters</p>
-              <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-                <li>Large issue size usually means lower subscription pressure</li>
-                <li>Smaller issue size can lead to higher oversubscription</li>
-                <li>Helps assess liquidity post-listing</li>
-              </ul>
-            </div>
-
-            {/* Quick Comparison Table */}
-            <div className="overflow-x-auto mt-8">
-              <h4 className="text-xl font-bold text-gray-900 mb-4">IPO Price Band vs Lot Size vs Issue Size – Quick Comparison</h4>
-              <table className="w-full text-base bg-gray-50 rounded-xl border border-gray-200">
-                <thead className="bg-gray-900 text-white">
-                  <tr>
-                    <th className="px-6 py-4 text-left">Component</th>
-                    <th className="px-6 py-4 text-left">Meaning</th>
-                    <th className="px-6 py-4 text-left">Impact on Investors</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200">
-                  <tr>
-                    <td className="px-6 py-4">Price Band</td>
-                    <td className="px-6 py-4">Share price range</td>
-                    <td className="px-6 py-4">Decides IPO valuation</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4">Lot Size</td>
-                    <td className="px-6 py-4">Minimum shares per application</td>
-                    <td className="px-6 py-4">Determines investment amount</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4">Issue Size</td>
-                    <td className="px-6 py-4">Total IPO value</td>
-                    <td className="px-6 py-4">Impacts demand & liquidity</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            {/* Example */}
-            <div className="mt-8">
-              <p className="text-base font-medium text-gray-800 mb-3">Example: Putting It All Together</p>
-              <p className="text-base text-gray-700 leading-relaxed">
-                Price Band: ₹200 – ₹210, Lot Size: 70 shares, Issue Size: ₹600 crore, Minimum investment = 70 × 210 = ₹14,700, Retail investors can apply up to 13 lots (~₹1.91 lakh)
-              </p>
-            </div>
-          </div>
+          <p className="text-base text-gray-700 leading-relaxed mb-6">
+            SME IPOs are designed for small and medium enterprises seeking capital from public markets.
+          </p>
+          <h4 className="text-xl font-bold text-gray-900 mb-4">Key Characteristics of SME IPOs</h4>
+          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
+            <li>Listed on NSE SME / BSE SME platforms</li>
+            <li>Lower issue size</li>
+            <li>Higher risk & reward</li>
+            <li>Lower liquidity</li>
+            <li>Fixed price issues common</li>
+          </ul>
         </section>
 
-        {/* How to Apply for an IPO in India - Full Width */}
+      {/* SME IPO Eligibility Criteria & Who Should Invest - Horizontal Layout */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {/* SME IPO Eligibility Criteria */}
+  <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+    <div className="flex items-center gap-4 mb-6">
+      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <Shield className="w-6 h-6 text-green-600" />
+      </div>
+      <h3 className="text-2xl font-bold text-gray-900">SME IPO Eligibility Criteria</h3>
+    </div>
+    <ul className="list-disc pl-8 space-y-3 text-base text-gray-700">
+      <li>Minimum paid-up capital</li>
+      <li>Positive net worth</li>
+      <li>Business track record</li>
+      <li>SEBI compliance</li>
+    </ul>
+  </section>
+
+  {/* Who Should Invest in SME IPOs? */}
+  <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+    <div className="flex items-center gap-4 mb-6">
+      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <Users className="w-6 h-6 text-green-600" />
+      </div>
+      <h3 className="text-2xl font-bold text-gray-900">Who Should Invest in SME IPOs?</h3>
+    </div>
+    <ul className="list-disc pl-8 space-y-3 text-base text-gray-700">
+      <li>High-risk investors</li>
+      <li>Long-term investors</li>
+      <li>Investors with small capital exposure</li>
+      <li>Not recommended for beginners without research</li>
+    </ul>
+  </section>
+</div>
+
+{/* SME IPO vs Mainboard IPO – Risk Comparison - Full Width Below */}
+<section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8 mt-10">
+  <div className="flex items-center gap-4 mb-6">
+    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+      <Scale className="w-6 h-6 text-green-600" />
+    </div>
+    <h3 className="text-2xl font-bold text-gray-900">SME IPO vs Mainboard IPO – Risk Comparison</h3>
+  </div>
+  <div className="overflow-x-auto">
+    <table className="w-full min-w-[600px] text-base bg-gray-50 rounded-xl border border-gray-200">
+      <thead className="bg-gray-900 text-white">
+        <tr>
+          <th className="px-6 py-4 text-left">Parameter</th>
+          <th className="px-6 py-4 text-left">SME IPO</th>
+          <th className="px-6 py-4 text-left">Mainboard IPO</th>
+        </tr>
+      </thead>
+      <tbody className="divide-y divide-gray-200">
+        <tr className="hover:bg-gray-100">
+          <td className="px-6 py-4">Risk Level</td>
+          <td className="px-6 py-4">High</td>
+          <td className="px-6 py-4">Moderate</td>
+        </tr>
+        <tr className="hover:bg-gray-100">
+          <td className="px-6 py-4">Liquidity</td>
+          <td className="px-6 py-4">Low</td>
+          <td className="px-6 py-4">High</td>
+        </tr>
+        <tr className="hover:bg-gray-100">
+          <td className="px-6 py-4">Volatility</td>
+          <td className="px-6 py-4">Very High</td>
+          <td className="px-6 py-4">Medium</td>
+        </tr>
+        <tr className="hover:bg-gray-100">
+          <td className="px-6 py-4">Retail Allocation</td>
+          <td className="px-6 py-4">Higher</td>
+          <td className="px-6 py-4">Standard</td>
+        </tr>
+        <tr className="hover:bg-gray-100">
+          <td className="px-6 py-4">Disclosure Norms</td>
+          <td className="px-6 py-4">Moderate</td>
+          <td className="px-6 py-4">Strict</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+       {/* IPO Allotment Process & Taxation - Horizontal Layout */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {/* IPO Allotment Process Explained */}
+  <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+    <div className="flex items-center gap-4 mb-6">
+      <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+        <HelpCircle className="w-6 h-6 text-green-600" />
+      </div>
+      <h3 className="text-2xl font-bold text-gray-900">IPO Allotment Process Explained</h3>
+    </div>
+    <ul className="list-disc pl-8 space-y-3 text-base text-gray-700">
+      <li>If IPO is undersubscribed → All applicants receive shares</li>
+      <li>If oversubscribed → Lottery system for retail investors</li>
+      <li>Allotment is finalized by the registrar.</li>
+    </ul>
+  </section>
+
+  {/* Finally IPO Taxation in India - Single Line Layout */}
+<section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
+  <div className="flex items-center gap-4 mb-8">
+    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+      <Shield className="w-6 h-6 text-green-600" />
+    </div>
+    <h3 className="text-2xl font-bold text-gray-900">Finally IPO Taxation in India</h3>
+  </div>
+
+  {/* Single Line Layout */}
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="flex items-center justify-center space-x-8 bg-gray-50 rounded-xl py-6 px-8">
+      <div className="text-center">
+        <p className="text-sm font-medium text-gray-800">Short-term Gains</p>
+        <p className="text-sm text-gray-600">Holding &lt; 1 year</p>
+      </div>
+      <p className="text-xl font-black text-gray-900">15%</p>
+    </div>
+
+    <div className="flex items-center justify-center space-x-8 bg-gray-50 rounded-xl py-6 px-8">
+      <div className="text-center">
+        <p className="text-sm font-medium text-gray-800">Long-term Gains</p>
+        <p className="text-sm text-gray-600">Above ₹1 lakh (Holding &gt; 1 year)</p>
+      </div>
+      <p className="text-xl font-black text-gray-900">10%</p>
+    </div>
+  </div>
+</section>
+</div>
+ {/* How to Apply for an IPO in India - Full Width */}
         <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
@@ -567,167 +853,8 @@ const IPOGuideSection = () => {
             </button>
           </div>
         </section>
-
-        {/* IPO Subscription Status - Full Width */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <TrendingUp className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">IPO Subscription Status (Live Tracking)</h3>
-          </div>
-          <p className="text-base text-gray-700 leading-relaxed">
-            Subscription status shows investor demand across categories: Retail subscription, HNI subscription, QIB subscription, High subscription usually indicates strong demand but does not guarantee listing gains.
-          </p>
-        </section>
-
-        {/* Quick Info on SME IPOs - Full Width */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <AlertTriangle className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">Quick Info on SME IPOs in India</h3>
-          </div>
-          <p className="text-base text-gray-700 leading-relaxed mb-6">
-            SME IPOs are designed for small and medium enterprises seeking capital from public markets.
-          </p>
-          <h4 className="text-xl font-bold text-gray-900 mb-4">Key Characteristics of SME IPOs</h4>
-          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-            <li>Listed on NSE SME / BSE SME platforms</li>
-            <li>Lower issue size</li>
-            <li>Higher risk & reward</li>
-            <li>Lower liquidity</li>
-            <li>Fixed price issues common</li>
-          </ul>
-        </section>
-
-        {/* SME IPO Eligibility Criteria - Full Width */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <Shield className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">SME IPO Eligibility Criteria</h3>
-          </div>
-          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-            <li>Minimum paid-up capital</li>
-            <li>Positive net worth</li>
-            <li>Business track record</li>
-            <li>SEBI compliance</li>
-          </ul>
-        </section>
-
-        {/* SME IPO vs Mainboard IPO – Risk Comparison - Full Width */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <Scale className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">SME IPO vs Mainboard IPO – Risk Comparison</h3>
-          </div>
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[600px] text-base bg-gray-50 rounded-xl border border-gray-200">
-              <thead className="bg-gray-900 text-white">
-                <tr>
-                  <th className="px-6 py-4 text-left">Parameter</th>
-                  <th className="px-6 py-4 text-left">SME IPO</th>
-                  <th className="px-6 py-4 text-left">Mainboard IPO</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr>
-                  <td className="px-6 py-4">Risk Level</td>
-                  <td className="px-6 py-4">High</td>
-                  <td className="px-6 py-4">Moderate</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4">Liquidity</td>
-                  <td className="px-6 py-4">Low</td>
-                  <td className="px-6 py-4">High</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4">Volatility</td>
-                  <td className="px-6 py-4">Very High</td>
-                  <td className="px-6 py-4">Medium</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4">Retail Allocation</td>
-                  <td className="px-6 py-4">Higher</td>
-                  <td className="px-6 py-4">Standard</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4">Disclosure Norms</td>
-                  <td className="px-6 py-4">Moderate</td>
-                  <td className="px-6 py-4">Strict</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <h4 className="text-xl font-bold text-gray-900 mt-8 mb-4">Who Should Invest in SME IPOs?</h4>
-          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-            <li>High-risk investors</li>
-            <li>Long-term investors</li>
-            <li>Investors with small capital exposure</li>
-            <li>Not recommended for beginners without research</li>
-          </ul>
-        </section>
-
-        {/* IPO Allotment Process Explained - Full Width */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <HelpCircle className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">IPO Allotment Process Explained</h3>
-          </div>
-          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700">
-            <li>If IPO is undersubscribed → All applicants receive shares</li>
-            <li>If oversubscribed → Lottery system for retail investors</li>
-            <li>Allotment is finalized by the registrar.</li>
-          </ul>
-        </section>
-
-        {/* IPO Allotment Status – How to Check - Full Width */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <HelpCircle className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">IPO Allotment Status – How to Check</h3>
-          </div>
-          <p className="text-base text-gray-700 leading-relaxed mb-4">
-            You can check allotment status using: PAN Number, Application Number
-          </p>
-          <p className="text-base text-gray-700 leading-relaxed mb-4">
-            Registrars:
-          </p>
-          <ul className="list-disc pl-8 space-y-2 text-base text-gray-700 mb-6">
-            <li>KFin Technologies</li>
-            <li>Link Intime India</li>
-          </ul>
-          <p className="text-base text-gray-700 leading-relaxed">
-            What happens if I don’t get IPO allotment? Your blocked funds are released automatically.
-          </p>
-          
-        </section>
-
-        {/* Finally IPO Taxation in India - Full Width, Compact */}
-        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-              <Shield className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">Finally IPO Taxation in India</h3>
-          </div>
-          <p className="text-base text-gray-700 leading-relaxed">
-            Short-term gains (&lt;1 year): 15%, Long-term gains (&gt;1 year): 10% above ₹1 lakh
-          </p>
-        </section>
-
         {/* Risk Disclaimer - Before FAQs */}
         <div className="p-6 bg-amber-50 border border-amber-200 rounded-2xl flex items-center gap-4">
-          <AlertTriangle className="w-8 h-8 text-amber-700 flex-shrink-0" />
           <p className="text-base lg:text-lg text-amber-900 font-medium">
             IPO investments carry market risk. Always conduct thorough research before investing.
           </p>

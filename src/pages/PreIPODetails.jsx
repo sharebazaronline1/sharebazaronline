@@ -60,7 +60,7 @@ const PreIPODetails = () => {
       : overviewText;
   return (
     <div className="bg-slate-50 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
         {/* ================= HERO ================= */}
        <header className="relative bg-slate-50 "> {/* Added pb-20 to make space for the fixed bar */}
