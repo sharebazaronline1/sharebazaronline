@@ -134,10 +134,7 @@ const PreIPOStocks = () => {
                     >
                       <div className="flex justify-center gap-3">
                         <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            alert("Buy Now clicked");
-                          }}
+                      onClick={() => navigate("/login")}
                           className="px-5 py-2.5 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition text-sm whitespace-nowrap"
                         >
                           Buy Now

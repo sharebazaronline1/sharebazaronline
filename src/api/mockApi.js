@@ -321,7 +321,24 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "SME",
   "status": "Live"
+},
+{
+  "id": 21,
+  "name": "Gabion Technologies",
+  "fullName": "Gabion Technologies India Limited",
+  "logo": "/images/ipo/Gabion.png",
+  "open": "06 Jan 2026",
+  "close": "08 Jan 2026",
+  "listing": "13 Jan 2026",
+  "price": "76-81",
+  "lot": 1600,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Live"
 }
+
   ]
 }
 export const fetchPreIPOs = async () => {
@@ -2182,6 +2199,143 @@ Beyond its manufacturing capabilities, APL Metals remains committed to employee 
 
       managementInsight:
         "The leadership team at APL Metals Limited brings decades of experience in manufacturing, operations, and strategic management within the metals and industrial sector. Their long-standing industry expertise supports stable operations and long-term business continuity."
-    }
+    },
+    {
+  id: 109,
+  name: "OYO (Oravel Stays Limited)",
+  logo: "/images/oyo.png",
+
+  overview: `OYO, officially known as Oravel Stays Limited, is one of India’s most well-known hospitality technology companies. Founded in 2013 by Ritesh Agarwal, OYO disrupted the traditional hotel industry by standardizing budget accommodations and leveraging technology to connect property owners with travelers. Over the years, OYO has grown from a small Indian startup into a global hospitality brand operating across multiple countries.
+
+OYO operates as a hospitality aggregation and technology platform. Instead of owning hotels, it partners with hotel owners, homestay operators, and property managers. The company provides branding, technology infrastructure, pricing algorithms, marketing, and operational support, while property owners benefit from higher occupancy and standardized services.
+
+Over time, OYO has diversified its offerings beyond budget hotels into premium and mid-scale hotels, vacation homes, serviced apartments, long-term stays, and corporate accommodations. This asset-light model allows OYO to scale rapidly with comparatively lower capital expenditure.
+
+India remains OYO’s largest and most important market, while international operations across Southeast Asia, the Middle East, Europe, and the United States have been strategically restructured to improve profitability. OYO’s strong brand recall and deep penetration in Tier-2 and Tier-3 cities strengthen its long-term growth prospects.
+
+Historically criticized for aggressive expansion and high losses, OYO has shifted its focus toward cost optimization, operational efficiency, and profitability. The company has reported improving EBITDA margins, reduced losses, and positive operating cash flows in recent years, strengthening its pre-IPO investment narrative.
+`,
+
+  products: [
+    "Budget Hotels",
+    "Premium & Mid-scale Hotels",
+    "Vacation Homes",
+    "Serviced Apartments",
+    "Long-term Stays",
+    "Corporate Accommodations"
+  ],
+
+  manufacturingUnits: [],
+
+  clients: [
+    "Individual Travelers",
+    "Corporate Travelers",
+    "Hotel Owners",
+    "Homestay Operators",
+    "Property Managers"
+  ],
+
+  shareDetails: {
+    companyName: "Oravel Stays Limited (OYO – Unlisted)",
+    indicativeSharePrice: "₹50 per share",
+    marketCapitalization: "₹36,000 – ₹40,000+ Crore (Approx.)",
+    lotSize: "1,000 Shares",
+    high52Week: "₹58",
+    low52Week: "₹26",
+    faceValue: "₹1",
+    bookValue: "₹2.7 – ₹14 per share",
+    peRatio: "70 – 160",
+    pbRatio: "2 – 10+",
+    debtToEquity: "1.8 – 5.0",
+    roe: "Negative historically",
+    totalOutstandingShares: "695 – 1,401 Crore shares",
+    isin: "INE561T01021",
+    depository: "NSDL & CDSL",
+    pan: "AABCO6063D",
+    cin: "U63090GJ2012PLC107088",
+    rta: "MUFG Intime India Pvt. Ltd."
+  },
+
+  financials: {
+    incomeStatement: [
+      { label: "Revenue", fy22: 4781, fy23: 5464, fy24: 5389, fy25: 6253 },
+      { label: "Employee Benefit Expenses", fy22: 1862, fy23: 1549, fy24: 744, fy25: 616 },
+      { label: "Other Expenses", fy22: 4079, fy23: 4289, fy24: 3937, fy25: 4601 },
+      { label: "EBITDA", fy22: -1160, fy23: -374, fy24: 708, fy25: 1036 },
+      { label: "Operating Profit Margin (%)", fy22: -24.26, fy23: -6.84, fy24: 13.14, fy25: 16.57 },
+      { label: "Finance Cost", fy22: 746, fy23: 681, fy24: 844, fy25: 959 },
+      { label: "Profit Before Tax", fy22: -1919, fy23: -1286, fy24: 236, fy25: -489 },
+      { label: "Profit After Tax", fy22: -1942, fy23: -1286, fy24: 230, fy25: 245 },
+      { label: "EPS", fy22: -14.63, fy23: -9.68, fy24: 1.72, fy25: 0.36 }
+    ],
+
+    keyRatios: [
+      { label: "Operating Margin (%)", fy22: -24.26, fy23: -6.84, fy24: 13.14, fy25: 16.57 },
+      { label: "Net Profit Margin (%)", fy22: -40.62, fy23: -23.54, fy24: 4.27, fy25: 3.92 },
+      { label: "EPS (Diluted)", fy22: -14.63, fy23: -9.68, fy24: 1.72, fy25: 0.36 }
+    ],
+
+    investorInsight: [
+      "OYO has transitioned from a loss-making growth startup to a profitability-focused organization.",
+      "Improving EBITDA margins and positive PAT highlight operational discipline.",
+      "Asset-light model supports scalable growth with lower capital requirements.",
+      "IPO preparations and financial turnaround strengthen pre-IPO investment appeal."
+    ]
+  },
+
+  balanceSheet: {
+    assets: [
+      { label: "Fixed Assets", fy22: 1605, fy23: 1582, fy24: 1490, fy25: 4998 },
+      { label: "Investments", fy22: 605, fy23: 510, fy24: 455, fy25: 532 },
+      { label: "Trade Receivables", fy22: 256, fy23: 158, fy24: 203, fy25: 488 },
+      { label: "Other Assets", fy22: 5985, fy23: 5682, fy24: 4293.8, fy25: 10646 },
+      { label: "Total Assets", fy22: 8452, fy23: 7932, fy24: 6443, fy25: 16695 }
+    ],
+
+    liabilities: [
+      { label: "Share Capital", fy22: 132.7, fy23: 132.8, fy24: 133.8, fy25: 678.7 },
+      { label: "Reserves", fy22: 1311, fy23: 449.7, fy24: 767, fy25: 3108 },
+      { label: "Borrowings", fy22: 4664, fy23: 5071, fy24: 3603, fy25: 7144 },
+      { label: "Trade Payables", fy22: 1087, fy23: 935, fy24: 961, fy25: 1240 },
+      { label: "Other Liabilities", fy22: 1257.3, fy23: 1343.5, fy24: 978.2, fy25: 4524.3 },
+      { label: "Total Liabilities", fy22: 8452, fy23: 7932, fy24: 6443, fy25: 16695 }
+    ],
+
+    insights: [
+      "Significant asset base expansion in FY25.",
+      "Borrowings increased to support restructuring and growth.",
+      "Reserve growth reflects equity infusion and retained earnings."
+    ]
+  },
+
+  cashFlow: {
+    data: [
+      { label: "Cash Flow from Operations", fy22: -922, fy23: 142, fy24: 598, fy25: 321 },
+      { label: "Cash Flow from Investing", fy22: -711, fy23: -109, fy24: 1425, fy25: -4212 },
+      { label: "Cash Flow from Financing", fy22: 703.5, fy23: -705, fy24: -2413, fy25: 4160 },
+      { label: "Net Cash Generated", fy22: -929.5, fy23: -672, fy24: -390, fy25: 269 }
+    ],
+    insights: [
+      "Operating cash flow turned positive from FY23 onward.",
+      "FY24 investing inflow reflects asset monetization.",
+      "FY25 financing inflow driven by borrowings and equity issuance.",
+      "Cash balance stabilized indicating improved financial discipline."
+    ]
+  },
+
+  shareholding: [
+    { year: 2025, promoters: "64.55%", public: "35.45%" }
+  ],
+
+  management: [
+    { name: "Ritesh Agarwal", role: "Chairman & CEO", experience: "10 Years" },
+    { name: "Aditya Ghosh", role: "Executive Director", experience: "26 Years" },
+    { name: "Abhishek Gupta", role: "Chief Financial Officer (CFO)", experience: "20 Years" }
+  ],
+
+  managementInsight:
+    "OYO is led by founder Ritesh Agarwal, ensuring strategic continuity and entrepreneurial leadership. A professionally managed executive team supports governance, profitability focus, and operational execution, strengthening investor confidence ahead of the IPO."
+}
+
   ];
 };
