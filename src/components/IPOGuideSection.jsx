@@ -60,6 +60,17 @@ const faqs = [
   { q: "Can IPO shares be pledged?", a: "Yes, after listing." },
   { q: "What is book building?", a: "Price discovery process." }
 ];
+const AdBanner = ({ size = "horizontal" }) => (
+  <div className="w-full flex justify-center py-4">
+    <div
+      className={`bg-gray-200 border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center text-gray-500 font-medium ${
+        size === "horizontal" ? "w-full max-w-5xl h-32" : "w-80 h-96"
+      }`}
+    >
+      Advertisement
+    </div>
+  </div>
+);
 
 const FAQSection = () => {
   const [showAllFAQs, setShowAllFAQs] = useState(false);
@@ -383,7 +394,7 @@ const IPOGuideSection = () => {
             </table>
           </div>
         </section>
-
+<AdBanner />
         {/* IPO Investor Categories - Full Width */}
        <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
   <div className="flex items-center gap-4 mb-8">
@@ -521,7 +532,7 @@ const IPOGuideSection = () => {
   </div>
 </section>
 
-        {/* IPO Price Band, Lot Size & Issue Size - Full Width */}
+   <AdBanner />     {/* IPO Price Band, Lot Size & Issue Size - Full Width */}
       <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
   <div className="flex items-center gap-4 mb-8">
     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">

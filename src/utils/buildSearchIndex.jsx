@@ -1,4 +1,10 @@
-export const buildSearchIndex = (ipos = [], preIpos = [], brokers = [], blogs = [], unlistedShares = []) => {
+export const buildSearchIndex = (
+  ipos = [],
+  preIpos = [],
+  brokers = [],
+  blogs = [],
+  unlistedShares = []
+) => {
   const ipoIndex = ipos.map((ipo) => ({
     id: `ipo-${ipo.id}`,
     title: ipo.name,
@@ -14,6 +20,7 @@ export const buildSearchIndex = (ipos = [], preIpos = [], brokers = [], blogs = 
     url: `/ipo/${ipo.id}`,
   }));
 
+  // ✅ PRE-IPO (WITH ANCHOR)
   const preIpoIndex = preIpos.map((pre) => ({
     id: `preipo-${pre.id}`,
     title: pre.name,
@@ -25,6 +32,7 @@ export const buildSearchIndex = (ipos = [], preIpos = [], brokers = [], blogs = 
       Depository ${pre.depository || ""}
     `,
     url: `/pre-ipo-stocks`,
+    anchor: `preipo-${pre.id}`, // 🔑 REQUIRED FOR SCROLL
   }));
 
   const brokerIndex = brokers.map((b) => ({
@@ -41,12 +49,13 @@ export const buildSearchIndex = (ipos = [], preIpos = [], brokers = [], blogs = 
     url: `/insight-hub`,
   }));
 
-
+  // ✅ UNLISTED SHARES (SAME PAGE + ANCHOR)
   const unlistedIndex = unlistedShares.map((u) => ({
     id: `unlisted-${u.id}`,
     title: u.name,
-    content: `Price: ${u.price}`,
+    content: `Unlisted Share • Price ${u.price || ""}`,
     url: `/pre-ipo-stocks`,
+    anchor: `preipo-${u.id}`, // 🔑 SAME SCROLL MECHANISM
   }));
 
   return [

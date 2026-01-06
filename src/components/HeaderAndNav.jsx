@@ -254,7 +254,7 @@ const HeaderAndNav = () => {
 
             <div>
               <button
-                onClick={() => setMobileIPO(!mobileIPO)}
+              onClick={() => navigate('/ipoguide')}
                 className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
               >
                 IPO Tracker
@@ -275,7 +275,7 @@ const HeaderAndNav = () => {
 
             <div>
               <button
-                onClick={() => setMobilePreIPO(!mobilePreIPO)}
+                 onClick={() => navigate('/preipoguide')}
                 className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
               >
                 Pre-IPO Stocks

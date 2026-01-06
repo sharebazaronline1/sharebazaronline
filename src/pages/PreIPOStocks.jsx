@@ -1,8 +1,6 @@
-// src/pages/PreIPOStocks.jsx (with Load More)
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { fetchPreIPOs } from "../api/mockApi";
 
 const ITEMS_PER_PAGE = 10;
@@ -10,34 +8,55 @@ const ITEMS_PER_PAGE = 10;
 const PreIPOStocks = () => {
   const [ipos, setIPOs] = useState([]);
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
+  const [loading, setLoading] = useState(true);
+
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const load = async () => {
+      setLoading(true);
       const data = await fetchPreIPOs();
       const upcoming = data.filter(
         (item) => item?.status?.toLowerCase() === "upcoming"
       );
       setIPOs(upcoming);
+      setVisibleCount(upcoming.length); // load all
+      setLoading(false);
     };
     load();
   }, []);
 
-  // Fixed-size logo component
+  // 🔹 FIXED: SCROLL EVEN IF USER IS ALREADY ON PAGE
+  useEffect(() => {
+    if (!location.hash || ipos.length === 0) return;
+
+    const targetId = location.hash.replace("#preipo-", "");
+
+    const scroll = () => {
+      const el = document.getElementById(`preipo-${targetId}`);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    };
+
+    // ensure DOM is painted
+    const t = setTimeout(scroll, 150);
+    return () => clearTimeout(t);
+  }, [location.hash, location.key, ipos]);
+
   const CompanyLogo = ({ name, logo }) => {
     const firstLetter = name?.charAt(0).toUpperCase() || "?";
 
     return (
-      <div className="w-14 h-14 min-w-[56px] min-h-[56px] rounded-xl bg-gray-500 flex items-center justify-center text-white font-bold text-xl shadow-md border border-indigo-200 relative overflow-hidden flex-shrink-0">
+      <div className="w-12 h-12 sm:w-14 sm:h-14 min-w-[48px] rounded-xl bg-gray-500 flex items-center justify-center text-white font-bold text-lg shadow border overflow-hidden">
         {logo ? (
           <img
             src={logo}
             alt={name}
             loading="lazy"
             className="w-full h-full object-contain bg-white p-2"
-            onError={(e) => {
-              e.currentTarget.style.display = "none";
-            }}
+            onError={(e) => (e.currentTarget.style.display = "none")}
           />
         ) : (
           <span>{firstLetter}</span>
@@ -74,102 +93,106 @@ const PreIPOStocks = () => {
               Invest early in high-growth companies before they list
             </p>
           </div>
-
-          {/* Table */}
+          {/* TABLE */}
           <div className="overflow-x-auto">
             <table className="w-full min-w-[900px]">
               <thead>
-                <tr className="bg-gray-50 text-left text-xs font-bold text-gray-700 uppercase tracking-wider border-b-2 border-gray-200">
-                  <th className="px-6 py-5">Company</th>
-                  <th className="px-6 py-5 text-center">Current Price</th>
-                  <th className="px-6 py-5 text-center">Min. Lot</th>
-                  <th className="px-6 py-5 text-center">Depository</th>
-                  <th className="px-6 py-5 text-center">Action</th>
+                <tr className="bg-gray-50 text-xs font-bold text-gray-700 uppercase border-b">
+                  <th className="px-6 py-4 text-left">Company</th>
+                  <th className="px-6 py-4 text-center">Price</th>
+                  <th className="px-6 py-4 text-center">Min Lot</th>
+                  <th className="px-6 py-4 text-center">Depository</th>
+                  <th className="px-6 py-4 text-center">Action</th>
                 </tr>
               </thead>
 
-              <tbody className="divide-y divide-gray-100">
-                {visibleIPOs.length === 0 ? (
-                  <tr>
-                    <td colSpan="5" className="text-center py-20 text-gray-500 text-lg">
-                      No Pre-IPO / Unlisted shares available right now
-                    </td>
-                  </tr>
-                ) : (
+              <tbody className="divide-y">
+                {/* LOADING */}
+                {loading &&
+                  Array.from({ length: ITEMS_PER_PAGE }).map((_, i) => (
+                    <tr key={i} className="animate-pulse">
+                      <td className="px-6 py-5">
+                        <div className="flex gap-3 items-center">
+                          <div className="w-12 h-12 bg-gray-200 rounded-xl" />
+                          <div className="h-4 w-36 bg-gray-200 rounded" />
+                        </div>
+                      </td>
+                      <td className="px-6 py-5">
+                        <div className="h-4 w-16 bg-gray-200 mx-auto rounded" />
+                      </td>
+                      <td className="px-6 py-5">
+                        <div className="h-4 w-20 bg-gray-200 mx-auto rounded" />
+                      </td>
+                      <td className="px-6 py-5">
+                        <div className="h-4 w-20 bg-gray-200 mx-auto rounded" />
+                      </td>
+                      <td className="px-6 py-5">
+                        <div className="h-8 w-28 bg-gray-200 mx-auto rounded" />
+                      </td>
+                    </tr>
+                  ))}
+
+                {/* DATA */}
+                {!loading &&
                   visibleIPOs.map((ipo, i) => (
                     <motion.tr
+                      id={`preipo-${ipo.id}`}
                       key={ipo.id}
-                      initial={{ opacity: 0, y: 15 }}
+                      initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: i * 0.04 }}
-                      className="hover:bg-gray-50 transition-colors cursor-pointer"
+                      transition={{ delay: i * 0.02 }}
+                      className="hover:bg-gray-50 cursor-pointer scroll-mt-32"
                       onClick={() => navigate(`/preipo/${ipo.id}`)}
                     >
-                      <td className="px-6 py-5">
-                        <div className="flex items-center gap-4">
+                      <td className="px-6 py-4">
+                        <div className="flex items-center gap-3">
                           <CompanyLogo name={ipo.name} logo={ipo.logo} />
-                          <p className="font-medium text-gray-900 text-base line-clamp-2">
+                          <p className="font-medium text-gray-900 line-clamp-2">
                             {ipo.name}
                           </p>
                         </div>
                       </td>
 
-                      <td className="px-6 py-5 text-center">
-                        <span className="text-lg font-bold text-green-600">
-                          ₹{ipo.price?.toLocaleString("en-IN") || "-"}
-                        </span>
+                      <td className="px-6 py-4 text-center font-bold text-green-600">
+                        ₹{ipo.price?.toLocaleString("en-IN") || "-"}
                       </td>
 
-                      <td className="px-6 py-5 text-center font-medium text-gray-800">
-                        {ipo.minLotSize?.toLocaleString("en-IN") || "-"} shares
+                      <td className="px-6 py-4 text-center">
+                        {ipo.minLotSize || "-"} shares
                       </td>
 
-                      <td className="px-6 py-5 text-center text-gray-700 text-sm">
+                      <td className="px-6 py-4 text-center">
                         {ipo.depository || "-"}
                       </td>
 
-                    <td
-                      className="px-6 py-5 text-center"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <div className="flex justify-center gap-3">
-                        <button
-                      onClick={() => navigate("/login")}
-                          className="px-5 py-2.5 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition text-sm whitespace-nowrap"
-                        >
-                          Buy Now
-                        </button>
-                        <button
-                          onClick={() => navigate(`/preipo/${ipo.id}`)}
-                          className="px-5 py-2.5 border border-gray-300 text-gray-700 rounded-xl hover:bg-gray-50 transition text-sm whitespace-nowrap"
-                        >
-                          View Details
-                        </button>
-                      </div>
-                    </td>
-
+                      <td
+                        className="px-6 py-4 text-center"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <div className="flex items-center justify-center gap-2">
+                          <button
+                            onClick={() => navigate("/login")}
+                            className="px-3 py-1.5 bg-green-600 text-white text-xs rounded-lg hover:bg-green-700"
+                          >
+                            Buy Now
+                          </button>
+                          <button
+                            onClick={() => navigate(`/preipo/${ipo.id}`)}
+                            className="px-3 py-1.5 border text-xs rounded-lg hover:bg-gray-50"
+                          >
+                            View Details
+                          </button>
+                        </div>
+                      </td>
                     </motion.tr>
-                  ))
-                )}
+                  ))}
               </tbody>
             </table>
           </div>
 
-          {/* LOAD MORE */}
-          {visibleCount < ipos.length && (
-            <div className="py-6 text-center bg-gray-50 border-t">
-              <button
-                onClick={() => setVisibleCount((prev) => prev + ITEMS_PER_PAGE)}
-                className="px-8 py-3 bg-green-600 text-white font-semibold rounded-xl hover:bg-green-700 transition"
-              >
-                View More
-              </button>
-            </div>
-          )}
-
-          {/* Footer */}
-          {ipos.length > 0 && (
-            <div className="px-8 py-5 bg-gray-50 border-t text-center text-sm text-gray-600">
+          {/* FOOTER */}
+          {!loading && ipos.length > 0 && (
+            <div className="px-6 py-4 bg-gray-50 border-t text-center text-xs sm:text-sm text-gray-600">
               Prices are indicative • Subject to availability • Contact for latest quotes
             </div>
           )}

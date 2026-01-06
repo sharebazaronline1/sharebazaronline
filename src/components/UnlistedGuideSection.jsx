@@ -57,6 +57,18 @@ const faqs = [
   { q: "Should unlisted shares be part of every investor’s portfolio?", a: "Only for investors who understand the risks and have a long-term investment horizon." }
 ];
 
+const AdBanner = ({ size = "horizontal" }) => (
+  <div className="w-full flex justify-center py-4">
+    <div
+      className={`bg-gray-200 border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center text-gray-500 font-medium ${
+        size === "horizontal" ? "w-full max-w-5xl h-32" : "w-80 h-96"
+      }`}
+    >
+      Advertisement
+    </div>
+  </div>
+);
+
 const UnlistedGuideSection = () => {
   const [showAllFAQs, setShowAllFAQs] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
@@ -160,7 +172,7 @@ const UnlistedGuideSection = () => {
               </div>
             </div>
           </section>
-
+<AdBanner />
           {/* Types of Unlisted Shares - Full Width */}
           <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
             <div className="flex items-center gap-4 mb-6">
@@ -215,7 +227,7 @@ const UnlistedGuideSection = () => {
               </div>
             </div>
           </section>
-
+<AdBanner />
           {/* Future & Trends - Full Width */}
           <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
             <div className="flex items-center gap-4 mb-6">
@@ -363,7 +375,6 @@ const UnlistedGuideSection = () => {
               </div>
               <p className="mt-6 text-green-700 font-medium">📌 Best used as satellite allocation, not core.</p>
             </section>
-
             {/* Unlisted vs IPO Comparison */}
             <section className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 lg:p-8">
               <div className="flex items-center gap-4 mb-6">

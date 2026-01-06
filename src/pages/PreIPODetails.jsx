@@ -49,7 +49,7 @@ const PreIPODetails = () => {
   if (!data) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-500">
-        Loading…
+        Coming Soon
       </div>
     );
   }
@@ -63,8 +63,8 @@ const PreIPODetails = () => {
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
         {/* ================= HERO ================= */}
-       <header className="relative bg-slate-50 "> {/* Added pb-20 to make space for the fixed bar */}
-  <div className="flex items-start gap-6 ml-4 lg:ml-6 py-6 pl-6 lg:pl-64">
+       <header className="relative bg-slate-50"> {/* Added pb-20 to make space for the fixed bar */}
+  <div className="flex items-start gap-6 ml-4 lg:ml-6 py-6 pl-6 lg:pl-96">
 
     {/* LOGO */}
     <div className="shrink-0">
@@ -89,23 +89,55 @@ const PreIPODetails = () => {
 
   </div>
 
-  {/* FULL WIDTH NOTICE BAR - Fixed & Screen-wide */}
-<div className="  inset-x-0 top-[140px] sm:top-[152px] rounded bg-blue-50 border-b border-blue-200 shadow-sm overflow-x-auto">
-  <div className="min-w-[1024px] max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-10 py-3 flex items-center justify-between gap-4">
-    <div className="flex items-center gap-3">
-      <AlertTriangle className="text-blue-700 w-5 h-5 flex-shrink-0" />
-      <p className="text-sm lg:text-base font-medium text-blue-900 whitespace-nowrap">
-        Ready to invest in this opportunity? Apply now through our trusted platforms.
-      </p>
-    </div>
+{/* FULL-WIDTH sticky wrapper */}
+<div
+  className="
+    sticky
+    top-[72px] sm:top-[88px]
+    left-0 right-0
+    w-screen
+    z-40
+    bg-blue-50
+    overflow-x-hidden
+  "
+>
+  <div
+    className="
+      max-w-7xl
+      mx-auto
+      flex
+      items-center
+      justify-between
+      py-4
+      px-4
+      sm:px-6
+      lg:px-8
+    "
+  >
+    <p className="text-blue-900 font-medium">
+      Ready to invest in this opportunity? Apply now through our trusted platforms.
+    </p>
+
     <button
-      onClick={() => navigate('/how-to-apply-ipo')}
-      className="px-6 py-3 lg:px-10 lg:py-4 text-sm lg:text-base bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition shadow-md flex-shrink-0"
+      onClick={() => navigate('/login')}
+      className="
+        px-8 sm:px-8
+        py-3 sm:py-4
+        bg-green-600 hover:bg-green-700
+        text-white font-bold
+        rounded-full
+        whitespace-nowrap
+      "
     >
-      Apply Now
+      Buy Now
     </button>
   </div>
 </div>
+
+
+
+
+
 </header>
 
         {/* ================= COMPANY OVERVIEW ================= */}
