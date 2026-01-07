@@ -1,7 +1,7 @@
-// src/pages/Login.jsx (Updated: Redirect to home after successful login/signup)
+// src/pages/Login.jsx (Updated: Proper success feedback + redirect to home)
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // ← Added
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -13,7 +13,7 @@ import {
 import { auth } from "../firebase";
 
 const Login = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
@@ -58,15 +58,15 @@ const Login = () => {
                 try {
                   if (isSignUp) {
                     await createUserWithEmailAndPassword(auth, email, password);
-                   
+                    
                   } else {
                     await signInWithEmailAndPassword(auth, email, password);
-                   
+                    
                   }
-                  // ← Redirect to home on success
-                  navigate("/");
+                  // Redirect to home on success
+                  navigate("/dashboard");
                 } catch (error) {
-                  console.log(error.message);
+                  alert(error.message);
                 }
               }}
             >
@@ -146,11 +146,10 @@ const Login = () => {
                 try {
                   const provider = new GoogleAuthProvider();
                   await signInWithPopup(auth, provider);
-                
-                  // ← Redirect to home after Google login
-                  navigate("/");
+                 
+                  navigate("/dashboard");
                 } catch (error) {
-                  console.log(error.message);
+                  alert(error.message);
                 }
               }}
               className="w-full py-2.5 border border-gray-300 rounded-xl font-medium text-gray-700 hover:bg-gray-50 transition flex items-center justify-center gap-3"

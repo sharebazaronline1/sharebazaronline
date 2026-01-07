@@ -337,7 +337,107 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "SME",
   "status": "Live"
-}
+},
+{
+  "id": 22,
+  "name": "Victory Electric Vehicles",
+  "fullName": "Victory Electric Vehicles International Limited",
+  "logo": "/images/ipo/VictoryElectricVehicles.png",
+  "open": "07 Jan 2026",
+  "close": "09 Jan 2026",
+  "listing": "14 Jan 2026",
+  "price": "41",
+  "lot": 3000,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "exchange": "NSE SME",
+  "status": "Live"
+},
+
+ {
+  "id": 23,
+  "name": "Yajur Fibres",
+  "fullName": "Yajur Fibres Limited",
+  "logo": "/images/ipo/Yajur.png",
+  "open": "07 Jan 2026",
+  "close": "09 Jan 2026",
+  "listing": "14 Jan 2026",
+  "price": "168 – 174",
+  "lot": 800,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "exchange": "BSE SME",
+  "status": "Live"
+},
+  {
+    "id": 24,
+    "name": "Bharat Coking Coal",
+    "fullName": "Bharat Coking Coal Limited",
+    "logo": "/images/ipo/BharatCokingCoal.png",
+    "open": "09 Jan 2026",
+    "close": "13 Jan 2026",
+    "listing": "16 Jan 2026",
+    "price": "21-? (TBA)",
+    "lot": null,
+    "subscription": null,
+    "listingPrice": null,
+    "performance": null,
+    "type": "Mainboard",
+    "status": "Upcoming"
+  },
+  {
+    "id": 25,
+    "name": "Defrail Technologies",
+    "fullName": "Defrail Technologies Limited",
+    "logo": "/images/ipo/Defrail.png",
+    "open": "09 Jan 2026",
+    "close": "13 Jan 2026",
+    "listing": null,
+    "price": "70-74",
+    "lot": null,
+    "subscription": null,
+    "listingPrice": null,
+    "performance": null,
+    "type": "SME",
+    "status": "Upcoming"
+  },
+  {
+    "id": 26,
+    "name": "Avana Electrosystems",
+    "fullName": "Avana Electrosystems Limited",
+    "logo":  "/images/ipo/Avana.png",
+    "open": "12 Jan 2026",
+    "close": "14 Jan 2026",
+    "listing": null,
+    "price": null,
+    "lot": null,
+    "subscription": null,
+    "listingPrice": null,
+    "performance": null,
+    "type": "SME",
+    "status": "Upcoming"
+  },
+  {
+    "id": 27,
+    "name": "INDO SMC",
+    "fullName": "INDO SMC Limited",
+    "logo": "/images/ipo/INDO.png",
+    "open": "13 Jan 2026",
+    "close": "15 Jan 2026",
+    "listing": "20 Jan 2026",
+    "price": null,
+    "lot": null,
+    "subscription": null,
+    "listingPrice": null,
+    "performance": null,
+    "type": "SME",
+    "status": "Upcoming"
+  }
+
 
   ]
 }

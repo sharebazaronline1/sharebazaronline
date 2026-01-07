@@ -22,11 +22,15 @@ import UnlistedSharesSidebar from "./components/UnlistedSidebar";
 import HowToApplyIPO from "./pages/HowToApplyIPO";
 import IPOGuideSection from "./components/IPOGuideSection";
 import UnlistedGuideSection from "./components/UnlistedGuideSection";
+import Dashboard from "./pages/Dashboard";
 
 function AppLayout() {
   const location = useLocation();
 
-  const hideSidebar = location.pathname === "/login";
+  // Hide header, sidebar, banner, footer on login & dashboard
+  const hideLayoutElements =
+    location.pathname === "/login" ||
+    location.pathname.startsWith("/dashboard");
 
   return (
     <>
@@ -40,11 +44,11 @@ function AppLayout() {
 
       <div className="min-h-screen bg-gray-50 font-sans flex flex-col">
         {/* HEADER */}
-        <HeaderAndNav />
+        {!hideLayoutElements && <HeaderAndNav />}
 
-        {/* CONTENT WRAPPER */}
+        {/* CONTENT */}
         <div className="flex-1 flex w-full">
-          {/* MAIN CONTENT */}
+          {/* MAIN */}
           <main className="flex-1 min-w-0 px-4 lg:px-6">
             <Routes>
               <Route path="/" element={<Home />} />
@@ -57,6 +61,7 @@ function AppLayout() {
               <Route path="/insight-hub" element={<InsightHub />} />
               <Route path="/insight-hub/:id" element={<InsightHubDetails />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
               <Route path="/ipo/:id" element={<IPODetails />} />
@@ -64,8 +69,8 @@ function AppLayout() {
             </Routes>
           </main>
 
-          {/* SIDEBAR (hidden on login) */}
-          {!hideSidebar && (
+          {/* RIGHT SIDEBAR */}
+          {!hideLayoutElements && (
             <aside className="hidden xl:block w-48 flex-shrink-0 mr-6">
               <div className="sticky top-20 mt-96 py-8 flex flex-col gap-2">
                 <div className="h-24 bg-white rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center text-sm font-semibold text-gray-700 shadow-sm">
@@ -78,7 +83,8 @@ function AppLayout() {
           )}
         </div>
 
-        <Footer />
+        {/* FOOTER */}
+        {!hideLayoutElements && <Footer />}
       </div>
     </>
   );
