@@ -1,4 +1,4 @@
-// src/components/HeaderAndNav.jsx (Updated: Modern logged-in user profile instead of Login button)
+// src/components/HeaderAndNav.jsx (Updated with Unique User ID: SB-XXXXXXXX format)
 
 import { useState, useRef, useEffect } from "react";
 import { Search, Menu, X, User, LogOut, Settings, Bell } from "lucide-react";
@@ -6,6 +6,17 @@ import { Link, useNavigate } from "react-router-dom";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import GlobalSearch from "./GlobalSearch";
+
+// Helper: Generate unique 8-character alphanumeric ID (e.g., SB-A7K9P2M4)
+const generateUserID = (uid) => {
+  // Simple deterministic but readable approach using part of Firebase UID
+  // Firebase UID is usually 28 chars, we take a portion and mix with fixed prefix
+  if (!uid) return "SB-GUEST000";
+
+  const short = uid.slice(-12); // last 12 chars of UID
+  const hash = btoa(short).replace(/[=+/]/g, "").slice(0, 8).toUpperCase();
+  return `SB-${hash}`;
+};
 
 const HeaderAndNav = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +29,8 @@ const HeaderAndNav = () => {
   const [mobileBroker, setMobileBroker] = useState(false);
   const [query, setQuery] = useState("");
   const [user, setUser] = useState(null);
-  const [profileOpen, setProfileOpen] = useState(false); // ← Added for dropdown control
+  const [profileOpen, setProfileOpen] = useState(false);
+  const [userID, setUserID] = useState(""); // ← Unique SB-XXXXXXXX ID
 
   const ipoTimer = useRef(null);
   const preIpoTimer = useRef(null);
@@ -29,6 +41,11 @@ const HeaderAndNav = () => {
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      if (currentUser) {
+        setUserID(generateUserID(currentUser.uid));
+      } else {
+        setUserID("");
+      }
     });
     return () => unsub();
   }, []);
@@ -147,79 +164,98 @@ const HeaderAndNav = () => {
 
             <GlobalSearch />
 
-            {/* USER AUTH STATE - MODERN PROFILE */}
+            {/* USER AUTH STATE - MODERN PROFILE WITH USER ID */}
             {user ? (
-              <div className="ml-8 relative">
+              <div className="ml-4 lg:ml-8 relative">
                 <button
                   onClick={() => setProfileOpen(!profileOpen)}
-                  className="flex items-center gap-3 hover:bg-gray-100 rounded-full px-3 py-2 transition"
+                  className="flex items-center gap-3 hover:bg-gray-100 rounded-full px-3 py-2 transition-all duration-200"
+                  aria-label="User menu"
                 >
                   <img
                     src={user.photoURL || "/images/avatar.png"}
-                    alt="User"
-                    className="h-9 w-9 rounded-full border-2 border-gray-300 object-cover"
+                    alt="Profile"
+                    onError={(e) => {
+                      e.currentTarget.src = "/images/avatar.png";
+                    }}
+                    className="h-10 w-10 rounded-full border-2 border-gray-300 object-cover shadow-sm"
                   />
                   <span className="text-sm font-medium text-gray-700 hidden xl:block">
-                    {user.displayName || user.email.split("@")[0]}
+                    {user.displayName || user.email?.split("@")[0] || "User"}
                   </span>
                 </button>
 
                 {/* Profile Dropdown */}
                 {profileOpen && (
-                  <div className="absolute right-0 mt-2 w-56 bg-white border border-gray-200 rounded-xl shadow-xl overflow-hidden">
-                    <div className="px-4 py-3 border-b border-gray-100">
-                      <p className="text-sm font-semibold text-gray-900">
-                        {user.displayName || "User"}
-                      </p>
-                      <p className="text-xs text-gray-500 truncate">{user.email}</p>
+                  <>
+                    {/* Backdrop - closes dropdown when clicked outside */}
+                    <div
+                      className="fixed inset-0 z-40"
+                      onClick={() => setProfileOpen(false)}
+                    />
+
+                    <div className="absolute right-0 mt-3 w-64 bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden z-50">
+                      {/* User Info Header */}
+                      <div className="px-5 py-4 bg-green-50 border-b border-gray-100">
+                        <p className="text-base font-bold text-gray-900">
+                          {user.displayName || "User"}
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">ID: {userID}</p>
+                        <p className="text-sm text-gray-600 truncate mt-1">{user.email}</p>
+                      </div>
+
+                      {/* Menu Items */}
+                      <div className="py-2">
+                        <Link
+                          to="/dashboard"
+                          onClick={() => setProfileOpen(false)}
+                          className="flex items-center gap-4 px-5 py-3 hover:bg-gray-50 transition"
+                        >
+                          <User size={19} className="text-gray-600" />
+                          <span className="text-sm font-medium text-gray-700">Dashboard</span>
+                        </Link>
+
+                        <Link
+                          to="/notifications"
+                          onClick={() => setProfileOpen(false)}
+                          className="flex items-center gap-4 px-5 py-3 hover:bg-gray-50 transition"
+                        >
+                          <Bell size={19} className="text-gray-600" />
+                          <span className="text-sm font-medium text-gray-700">Notifications</span>
+                        </Link>
+
+                        <Link
+                          to="/settings"
+                          onClick={() => setProfileOpen(false)}
+                          className="flex items-center gap-4 px-5 py-3 hover:bg-gray-50 transition"
+                        >
+                          <Settings size={19} className="text-gray-600" />
+                          <span className="text-sm font-medium text-gray-700">Settings</span>
+                        </Link>
+                      </div>
+
+                      {/* Logout */}
+                      <div className="border-t border-gray-100 pt-2">
+                        <button
+                          onClick={() => {
+                            handleLogout();
+                            setProfileOpen(false);
+                          }}
+                          className="w-full flex items-center gap-4 px-5 py-3 hover:bg-red-50 transition text-left"
+                        >
+                          <LogOut size={19} className="text-red-600" />
+                          <span className="text-sm font-medium text-red-600">Logout</span>
+                        </button>
+                      </div>
                     </div>
-
-                    <div className="py-2">
-                      <Link
-                        to="/profile"
-                        onClick={() => setProfileOpen(false)}
-                        className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition"
-                      >
-                        <User size={18} className="text-gray-600" />
-                        <span className="text-sm text-gray-700">My Profile</span>
-                      </Link>
-
-                      <Link
-                        to="/notifications"
-                        onClick={() => setProfileOpen(false)}
-                        className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition"
-                      >
-                        <Bell size={18} className="text-gray-600" />
-                        <span className="text-sm text-gray-700">Notifications</span>
-                      </Link>
-
-                      <Link
-                        to="/settings"
-                        onClick={() => setProfileOpen(false)}
-                        className="flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition"
-                      >
-                        <Settings size={18} className="text-gray-600" />
-                        <span className="text-sm text-gray-700">Settings</span>
-                      </Link>
-                    </div>
-
-                    <div className="border-t border-gray-100">
-                      <button
-                        onClick={handleLogout}
-                        className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-gray-50 transition text-left"
-                      >
-                        <LogOut size={18} className="text-red-600" />
-                        <span className="text-sm text-red-600 font-medium">Logout</span>
-                      </button>
-                    </div>
-                  </div>
+                  </>
                 )}
               </div>
             ) : (
               /* Login Button - When not logged in */
               <Link
                 to="/login"
-                className="ml-8 px-7 py-2.5 bg-green-500 text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
+                className="ml-4 lg:ml-8 px-7 py-2.5 bg-green-600 text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-200"
               >
                 Login
               </Link>
@@ -254,7 +290,7 @@ const HeaderAndNav = () => {
 
             <div>
               <button
-              onClick={() => navigate('/ipoguide')}
+                onClick={() => setMobileIPO(!mobileIPO)}
                 className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
               >
                 IPO Tracker
@@ -275,7 +311,7 @@ const HeaderAndNav = () => {
 
             <div>
               <button
-                 onClick={() => navigate('/preipoguide')}
+                onClick={() => setMobilePreIPO(!mobilePreIPO)}
                 className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
               >
                 Pre-IPO Stocks
@@ -331,12 +367,13 @@ const HeaderAndNav = () => {
               SkillUp
             </Link>
 
-            {/* Mobile Login/Profile */}
+            {/* Mobile Login/Profile with User ID */}
             {user ? (
               <div className="pt-4 border-t border-gray-200">
                 <p className="text-sm font-medium text-gray-900 mb-1">
                   {user.displayName || user.email.split("@")[0]}
                 </p>
+                <p className="text-xs text-gray-500 mb-2">ID: {userID}</p>
                 <button
                   onClick={handleLogout}
                   className="text-sm text-red-600 font-medium"

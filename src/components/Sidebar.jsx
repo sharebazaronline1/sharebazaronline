@@ -39,19 +39,25 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
         ${mobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
         {/* Header */}
-        <div className="p-6 border-b flex justify-between items-center">
-          <img src="/images/sharebazaar.png" alt="ShareBazaarOnline" className="h-6" />
-         
-        </div>
-
+<div className="p-6 border-b flex justify-between items-center bg-white">
+  <button 
+    onClick={() => window.location.href = '/'} 
+    className="flex items-center"
+  >
+    <img 
+      src="/images/sharebazaar.png" 
+      alt="ShareBazaarOnline" 
+      className="h-8" 
+    />
+  </button>
+</div>
         {/* Links */}
         <nav className="flex-1 px-4 py-6 space-y-1">
           <SidebarLink to="/dashboard" icon={<Home size={18} />} label="Dashboard" />
           <SidebarLink to="/portfolio" icon={<Briefcase size={18} />} label="My Portfolio" />
-          <SidebarLink to="/ipo-applications" icon={<FileText size={18} />} label="IPO Applications" />
           <SidebarLink to="/pre-ipo-watchlist" icon={<AlertCircle size={18} />} label="Pre-IPO Watchlist" />
-          <SidebarLink to="/insights" icon={<BarChart2 size={18} />} label="Insights" />
-          <SidebarLink to="/transactions" icon={<IndianRupee size={18} />} label="Transactions" />
+          <SidebarLink to="/kyc" icon={<BarChart2 size={18} />} label="Documents" />
+          <SidebarLink to="/orders" icon={<IndianRupee size={18} />} label="Orders" />
           <SidebarLink to="/notifications" icon={<Bell size={18} />} label="Notifications" />
           <SidebarLink to="/settings" icon={<Settings size={18} />} label="Settings" />
         </nav>

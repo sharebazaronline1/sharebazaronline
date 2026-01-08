@@ -23,6 +23,7 @@ import HowToApplyIPO from "./pages/HowToApplyIPO";
 import IPOGuideSection from "./components/IPOGuideSection";
 import UnlistedGuideSection from "./components/UnlistedGuideSection";
 import Dashboard from "./pages/Dashboard";
+import Documents from "./pages/Documents"
 
 function AppLayout() {
   const location = useLocation();
@@ -30,7 +31,7 @@ function AppLayout() {
   // Hide header, sidebar, banner, footer on login & dashboard
   const hideLayoutElements =
     location.pathname === "/login" ||
-    location.pathname.startsWith("/dashboard");
+    location.pathname.startsWith("/dashboard") || location.pathname.startsWith("/kyc");
 
   return (
     <>
@@ -62,6 +63,7 @@ function AppLayout() {
               <Route path="/insight-hub/:id" element={<InsightHubDetails />} />
               <Route path="/login" element={<Login />} />
               <Route path="/dashboard" element={<Dashboard />} />
+               <Route path="/kyc" element={<Documents />} />
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
               <Route path="/ipo/:id" element={<IPODetails />} />

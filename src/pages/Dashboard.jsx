@@ -1,5 +1,3 @@
-// src/pages/Dashboard.jsx
-
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
@@ -9,10 +7,8 @@ import {
   BarChart2,
   Briefcase,
   FileText,
-  AlertCircle,
   IndianRupee,
   Menu,
-  X,
   TrendingUp,
   CalendarDays,
 } from "lucide-react";
@@ -56,66 +52,106 @@ const Dashboard = () => {
             Welcome, {user.displayName || "Investor"}
           </h1>
           <p className="text-gray-600 mt-1">
-            Track IPOs, applications & portfolio performance
+            Track IPOs, Pre-IPOs & portfolio performance
           </p>
         </header>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          <StatCard icon={<Briefcase />} title="Portfolio Value" value="₹5,20,000" change="+12%" />
-          <StatCard icon={<FileText />} title="Active IPOs" value="3" change="2 Pending" />
-          <StatCard icon={<CalendarDays />} title="Upcoming IPOs" value="7" change="This Month" />
-          <StatCard icon={<IndianRupee />} title="Total Gains" value="₹15,200" change="+8.5%" />
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
+          <StatCard
+            icon={<Briefcase />}
+            title="Portfolio Value"
+            value="₹0"
+            change="No investments yet"
+          />
+          <StatCard
+            icon={<FileText />}
+            title="Holdings"
+            value="0"
+            change="Start investing to build portfolio"
+          />
+          <StatCard
+            icon={<CalendarDays />}
+            title="Orders"
+            value="0"
+            change="No orders placed"
+          />
+          <StatCard
+            icon={<IndianRupee />}
+            title="Wallet Balance"
+            value="₹0"
+            change="Add funds to invest"
+          />
         </div>
 
         {/* Main Sections */}
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
-          {/* IPO Activity */}
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
+          {/* Top Trending Pre-IPO */}
           <section className="bg-white rounded-2xl p-6 border shadow-sm xl:col-span-2">
-            <h2 className="text-xl font-bold mb-4">IPO Activity</h2>
-            <ul className="space-y-4">
-              <ActivityItem title="Applied – Gujarat Kidney & Super Speciality" date="Jan 6" status="Pending" />
-              <ActivityItem title="Allotted – Green Energy Ltd" date="Jan 2" status="Allotted" />
-              <ActivityItem title="Refund – Global Ocean Logistics India" date="Dec 28" status="Refunded" />
-            </ul>
+            <h2 className="text-xl font-bold mb-4">
+              Top Trending Pre-IPO
+            </h2>
+
+          <ul className="space-y-4">
+  <PreIPOItem
+    name="PhonePe"
+    price="≈ ₹19,968"
+    demand="Very High Demand"
+  />
+  <PreIPOItem
+    name="NSE India Ltd"
+    price="≈ ₹1,940 – ₹2,400"
+    demand="Strong Interest (IPO Expected)"
+  />
+  <PreIPOItem
+    name="boAt (Imagine Marketing)"
+    price="≈ ₹980"
+    demand="High Demand"
+  />
+</ul>
+
           </section>
 
           {/* Portfolio Chart */}
           <section className="bg-white rounded-2xl p-6 border shadow-sm">
-            <h2 className="text-xl font-bold mb-4">Portfolio Mix</h2>
+            <h2 className="text-xl font-bold mb-4">
+              Portfolio Mix
+            </h2>
             <div className="h-56 bg-gray-50 rounded-xl flex items-center justify-center">
               <BarChart2 className="w-16 h-16 text-green-600" />
             </div>
             <p className="text-center text-sm text-gray-500 mt-3">
-              Equity • IPO • Pre-IPO distribution
+              IPO • Pre-IPO distribution
             </p>
           </section>
 
-          {/* Recommended IPOs */}
+          {/* Upcoming Unlisted IPOs */}
           <section className="bg-white rounded-2xl p-6 border shadow-sm xl:col-span-3">
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
               <TrendingUp className="text-green-600" />
-              Recommended IPOs
+              Upcoming Unlisted IPOs
             </h2>
 
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-  <RecoCard
-    name="Victory Electric Vehicles Intl"
-    open="Jan 7 – Jan 9, 2026"
-    price="₹41 (Fixed Price)"
-  />
-  <RecoCard
-    name="Defrail Technologies"
-    open="Jan 9 – Jan 13, 2026"
-    price="TBD"
-  />
-  <RecoCard
-    name="Yajur Fibres Ltd"
-    open="Jan 7 – Jan 9, 2026"
-    price="₹168–₹174"
-  />
-</div>
-
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <UnlistedCard
+                name="Bharat Coking Coal Ltd"
+                sector="Mining"
+                price="₹21 – TBA"
+                status="Upcoming"
+              />
+              <UnlistedCard
+                name="Avana Electrosystems"
+                sector="Electronics"
+                price="TBA"
+                status="Pre-IPO"
+              />
+              <UnlistedCard
+                name="Hero FinCorp"
+                sector="NBFC"
+                price="TBA"
+                status="Pre-IPO"
+              />
+            </div>
           </section>
         </div>
       </main>
@@ -123,7 +159,7 @@ const Dashboard = () => {
   );
 };
 
-/* Reusable Components */
+/* ---------------- Reusable Components ---------------- */
 
 const StatCard = ({ icon, title, value, change }) => (
   <div className="bg-white rounded-xl p-5 border shadow-sm">
@@ -138,26 +174,39 @@ const StatCard = ({ icon, title, value, change }) => (
   </div>
 );
 
-const ActivityItem = ({ title, date, status }) => (
-  <li className="flex items-center justify-between border-b pb-3 last:border-none">
+const PreIPOItem = ({ name, price, demand }) => (
+  <li className="flex items-center justify-between">
     <div>
-      <p className="font-medium">{title}</p>
-      <p className="text-sm text-gray-500">{date}</p>
+      <p className="font-medium text-gray-900">{name}</p>
+      <p className="text-xs text-gray-600">
+        Indicative Price: {price}
+      </p>
     </div>
-    <span className="px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-medium">
-      {status}
-    </span>
+    <div className="flex items-center gap-3">
+      <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-700 font-medium">
+        {demand}
+      </span>
+      <button className="px-4 py-1.5 text-sm font-semibold rounded-full bg-green-600 text-white hover:bg-green-700 transition">
+        Buy
+      </button>
+    </div>
   </li>
 );
 
-const RecoCard = ({ name, open, price }) => (
+const UnlistedCard = ({ name, sector, price, status }) => (
   <div className="bg-gray-50 rounded-xl p-4 border hover:shadow-md transition">
-    <h4 className="font-bold mb-1">{name}</h4>
-    <p className="text-sm text-gray-600">Open: {open}</p>
-    <p className="text-sm text-gray-600 mb-3">Price: {price}</p>
-    <button className="w-full py-2 bg-green-600 text-white rounded-full text-sm font-semibold hover:bg-green-700">
-      Apply IPO
-    </button>
+    <h4 className="font-bold text-gray-900">{name}</h4>
+    <p className="text-sm text-gray-600 mt-1">Sector: {sector}</p>
+    <p className="text-sm text-gray-600">Price Range: {price}</p>
+
+    <div className="flex items-center justify-between mt-4">
+      <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-700 font-medium">
+        {status}
+      </span>
+      <button className="px-4 py-1.5 text-sm font-semibold rounded-full border border-green-600 text-green-600 hover:bg-green-50 transition">
+        Buy
+      </button>
+    </div>
   </div>
 );
 
