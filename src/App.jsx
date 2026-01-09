@@ -23,15 +23,25 @@ import HowToApplyIPO from "./pages/HowToApplyIPO";
 import IPOGuideSection from "./components/IPOGuideSection";
 import UnlistedGuideSection from "./components/UnlistedGuideSection";
 import Dashboard from "./pages/Dashboard";
-import Documents from "./pages/Documents"
+import Documents from "./pages/Documents";
+import Portfolio from "./pages/Portfolio";
+import PreIPOWatchlist from "./pages/PreIPOWatchlist";
+import Orders from "./pages/Orders";
+import Notifications from "./pages/Notifications";
+import Settings from "./pages/Settings";
 
 function AppLayout() {
   const location = useLocation();
 
-  // Hide header, sidebar, banner, footer on login & dashboard
   const hideLayoutElements =
     location.pathname === "/login" ||
-    location.pathname.startsWith("/dashboard") || location.pathname.startsWith("/kyc");
+    location.pathname.startsWith("/dashboard") ||
+    location.pathname.startsWith("/portfolio") ||
+    location.pathname.startsWith("/pre-ipo-watchlist") ||
+    location.pathname.startsWith("/kyc") ||
+    location.pathname.startsWith("/orders") ||
+    location.pathname.startsWith("/notifications") ||
+    location.pathname.startsWith("/settings");
 
   return (
     <>
@@ -62,8 +72,16 @@ function AppLayout() {
               <Route path="/insight-hub" element={<InsightHub />} />
               <Route path="/insight-hub/:id" element={<InsightHubDetails />} />
               <Route path="/login" element={<Login />} />
+
+              {/* Authenticated Dashboard Routes */}
               <Route path="/dashboard" element={<Dashboard />} />
-               <Route path="/kyc" element={<Documents />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/pre-ipo-watchlist" element={<PreIPOWatchlist />} />
+              <Route path="/kyc" element={<Documents />} />
+              {/* <Route path="/orders" element={<Orders />} /> */}
+              <Route path="/notifications" element={<Notifications />} />
+              {/* <Route path="/settings" element={<Settings />} /> */}
+
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
               <Route path="/ipo/:id" element={<IPODetails />} />
