@@ -26,9 +26,7 @@ import Dashboard from "./pages/Dashboard";
 import Documents from "./pages/Documents";
 import Portfolio from "./pages/Portfolio";
 import PreIPOWatchlist from "./pages/PreIPOWatchlist";
-import Orders from "./pages/Orders";
 import Notifications from "./pages/Notifications";
-import Settings from "./pages/Settings";
 
 function AppLayout() {
   const location = useLocation();
@@ -39,9 +37,8 @@ function AppLayout() {
     location.pathname.startsWith("/portfolio") ||
     location.pathname.startsWith("/pre-ipo-watchlist") ||
     location.pathname.startsWith("/kyc") ||
-    location.pathname.startsWith("/orders") ||
-    location.pathname.startsWith("/notifications") ||
-    location.pathname.startsWith("/settings");
+    location.pathname.startsWith("/notifications");
+
 
   return (
     <>
