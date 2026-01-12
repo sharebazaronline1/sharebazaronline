@@ -24,9 +24,7 @@ const Orders = () => {
 
   // Sample orders based on actual IPOs
   const orders = [
-    { id: "ORD001", name: "Bharat Coking Coal IPO", quantity: 100, price: 21, total: 2100, status: "Pending", date: "Jan 09, 2026" },
-    { id: "ORD002", name: "Defrail Technologies SME", quantity: 1600, price: 72, total: 115200, status: "Executed", date: "Jan 10, 2026" },
-    { id: "ORD003", name: "Avana Electrosystems", quantity: 2000, price: 57, total: 114000, status: "Cancelled", date: "Jan 12, 2026" },
+   
   ];
 
   return (
