@@ -75,8 +75,6 @@ const PreIPOWatchlist = () => {
     },
   ];
 
-
-
   return (
     <div className="min-h-screen bg-gray-50">
       <Sidebar mobileOpen={mobileSidebarOpen} setMobileOpen={setMobileSidebarOpen} />
@@ -115,7 +113,7 @@ const PreIPOWatchlist = () => {
                   <h3 className="text-lg font-bold text-gray-900">{item.name}</h3>
                   <p className="text-sm text-gray-600">{item.sector}</p>
                 </div>
-                
+               
               </div>
 
               <div className="space-y-3">
@@ -128,7 +126,7 @@ const PreIPOWatchlist = () => {
                   <span className="font-semibold">{item.price}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-sm text-gray-600">Expected IPO</span>
+                  <span className="text-sm text-gray-600">Settlement Time</span>
                   <span className="text-sm">{item.expectedIPO}</span>
                 </div>
               </div>
@@ -150,6 +148,8 @@ const PreIPOWatchlist = () => {
             </div>
           ))}
         </section>
+
+     
 
         {/* Empty State */}
         {watchlist.length === 0 && (
@@ -188,6 +188,19 @@ const PreIPOWatchlist = () => {
               sector="Manufacturing"
             />
           </div>
+             {/* View More Button - Below the cards & Suggested section */}
+        <div className="mt-10 text-center">
+          <button
+            onClick={() => {
+              // You can later navigate to a full list page or load more items
+              alert("Loading more pre-IPO companies...");
+            }}
+            className="inline-flex items-center gap-3 px-10 py-4 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 transition shadow-md hover:shadow-lg"
+          >
+            <TrendingUp size={20} />
+            View More 
+          </button>
+        </div>
         </section>
       </main>
     </div>
@@ -209,7 +222,7 @@ const SuggestionCard = ({ name, price, demand, sector }) => (
         {demand}
       </span>
       <button className="flex items-center gap-2 text-sm font-semibold text-green-600 hover:underline">
-       
+        
         Buy Now
       </button>
     </div>

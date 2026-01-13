@@ -476,18 +476,7 @@ const Settings = () => {
           <p className="text-sm text-gray-500 mt-4">Manage devices logged into your account</p>
         </section>
 
-        {/* Account Details */}
-        <section className="bg-white rounded-2xl p-6 border shadow-sm">
-          <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-            <CreditCard className="text-green-600" />
-            Account Details
-          </h2>
-          <div className="space-y-3 text-gray-700">
-            <p><strong className="text-gray-900">Bank Account:</strong> **** **** **** 1234 (HDFC Bank)</p>
-            <p><strong className="text-gray-900">DEMAT Account:</strong> Linked with Zerodha (View KYC Status)</p>
-          </div>
-          <button className="mt-5 text-green-600 hover:underline font-medium">Update Bank / DEMAT Details →</button>
-        </section>
+        
       </main>
     </div>
   );
