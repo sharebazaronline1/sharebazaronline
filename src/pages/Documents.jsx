@@ -1,8 +1,11 @@
+// src/pages/Documents.jsx
+
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import UserProfileDropdown from "../components/UserProfileDropdown"; // ← New component
 import { Menu, CheckCircle, FileText, Share2 } from "lucide-react";
 
 const Documents = () => {
@@ -57,7 +60,7 @@ const Documents = () => {
           </button>
         </header>
 
-        {/* Desktop Header */}
+        {/* Desktop Header with User Profile Dropdown */}
         <header className="hidden md:flex items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Documents</h1>
@@ -66,11 +69,8 @@ const Documents = () => {
             </p>
           </div>
 
-          {/* Refer Button */}
-          <button className="flex items-center gap-2 px-5 py-2 rounded-xl bg-green-600 text-white font-medium hover:bg-green-700 transition">
-            <Share2 size={18} />
-            Refer & Earn
-          </button>
+          {/* Top Right User Profile Dropdown */}
+          <UserProfileDropdown />
         </header>
 
         {/* Documents Section */}

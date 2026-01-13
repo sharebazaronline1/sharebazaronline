@@ -1,8 +1,11 @@
+// src/pages/Dashboard.jsx
+
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import UserProfileDropdown from "../components/UserProfileDropdown";
 import {
   BarChart2,
   Briefcase,
@@ -46,14 +49,19 @@ const Dashboard = () => {
           </button>
         </header>
 
-        {/* Desktop Header */}
-        <header className="hidden md:block mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Welcome, {user.displayName || "Investor"}
-          </h1>
-          <p className="text-gray-600 mt-1">
-            Track IPOs, Pre-IPOs & portfolio performance
-          </p>
+        {/* Desktop Header with User Profile Dropdown */}
+        <header className="hidden md:flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">
+              Welcome, {user.displayName || "Investor"}
+            </h1>
+            <p className="text-gray-600 mt-1">
+              Track IPOs, Pre-IPOs & portfolio performance
+            </p>
+          </div>
+
+          {/* Top Right User Profile Dropdown */}
+          <UserProfileDropdown />
         </header>
 
         {/* Stats */}
@@ -86,41 +94,38 @@ const Dashboard = () => {
 
         {/* Main Sections */}
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
-          {/* Top Trending Pre-IPO */}
-          <section className="bg-white rounded-2xl p-6 border shadow-sm xl:col-span-2">
-            <h2 className="text-xl font-bold mb-4">
-              Top Trending Pre-IPO
-            </h2>
+          {/* Top Trending Pre-IPO – Reduced height */}
+          <section className="bg-white rounded-2xl p-5 border shadow-sm xl:col-span-2 h-72 flex flex-col">
+            <h2 className="text-xl font-bold mb-4">Top Trending Pre-IPO</h2>
 
-          <ul className="space-y-4">
-  <PreIPOItem
-    name="PhonePe"
-    price="≈ ₹19,968"
-    demand="Very High Demand"
-  />
-  <PreIPOItem
-    name="NSE India Ltd"
-    price="≈ ₹1,940 – ₹2,400"
-    demand="Strong Interest (IPO Expected)"
-  />
-  <PreIPOItem
-    name="boAt (Imagine Marketing)"
-    price="≈ ₹980"
-    demand="High Demand"
-  />
-</ul>
-
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 flex-1">
+              <SmallPreIPOItem
+                name="PhonePe"
+                price="₹19,968"
+                demand="Very High Demand"
+              />
+              <SmallPreIPOItem
+                name="NSE India Ltd"
+                price="₹2,134"
+                demand="Strong Interest (IPO Expected)"
+              />
+              <SmallPreIPOItem
+                name="boAt (Imagine Marketing)"
+                price="₹980"
+                demand="High Demand"
+              />
+            </div>
           </section>
 
-          {/* Portfolio Chart */}
-          <section className="bg-white rounded-2xl p-6 border shadow-sm">
+          {/* Portfolio Chart – Reduced height */}
+          <section className="bg-white rounded-2xl p-5 border shadow-sm h-72 flex flex-col">
             <h2 className="text-xl font-bold mb-4">
               Portfolio Mix
             </h2>
-            <div className="h-56 bg-gray-50 rounded-xl flex items-center justify-center">
-              <BarChart2 className="w-16 h-16 text-green-600" />
+            <div className="flex-1 bg-gray-50 rounded-xl flex items-center justify-center">
+              <BarChart2 className="w-14 h-14 text-green-600" />
             </div>
-            <p className="text-center text-sm text-gray-500 mt-3">
+            <p className="text-center text-xs text-gray-500 mt-2">
               IPO • Pre-IPO distribution
             </p>
           </section>
@@ -174,23 +179,17 @@ const StatCard = ({ icon, title, value, change }) => (
   </div>
 );
 
-const PreIPOItem = ({ name, price, demand }) => (
-  <li className="flex items-center justify-between">
-    <div>
-      <p className="font-medium text-gray-900">{name}</p>
-      <p className="text-xs text-gray-600">
-        Indicative Price: {price}
-      </p>
-    </div>
-    <div className="flex items-center gap-3">
-      <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-700 font-medium">
-        {demand}
-      </span>
-      <button className="px-4 py-1.5 text-sm font-semibold rounded-full bg-green-600 text-white hover:bg-green-700 transition">
+const SmallPreIPOItem = ({ name, price, demand }) => (
+  <div className="bg-gray-50 rounded-xl p-4 border hover:shadow-md transition">
+    <h4 className="font-bold text-gray-900 text-base mb-2">{name}</h4>
+    <p className="text-xs text-gray-600 mb-2">{price}</p>
+    <div className="flex items-center justify-between">
+      
+      <button className="px-3 py-1.5 text-xs font-semibold rounded-full bg-green-600 text-white hover:bg-green-700 transition">
         Buy
       </button>
     </div>
-  </li>
+  </div>
 );
 
 const UnlistedCard = ({ name, sector, price, status }) => (

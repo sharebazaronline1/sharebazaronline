@@ -5,6 +5,7 @@ import { onAuthStateChanged, updateProfile, updatePassword, reauthenticateWithCr
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import UserProfileDropdown from "../components/UserProfileDropdown"; // ← Added
 import { Menu, Settings as SettingsIcon, User, Mail, Lock, BellRing, Moon, Smartphone, CreditCard, Globe } from "lucide-react";
 
 const Settings = () => {
@@ -101,10 +102,15 @@ const Settings = () => {
           </button>
         </header>
 
-        {/* Desktop Header */}
-        <header className="hidden md:block mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Settings</h1>
-          <p className="text-gray-600 mt-1">Manage your profile, security, preferences, and account</p>
+        {/* Desktop Header with User Profile Dropdown */}
+        <header className="hidden md:flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">Settings</h1>
+            <p className="text-gray-600 mt-1">Manage your profile, security, preferences, and account</p>
+          </div>
+
+          {/* Top Right User Profile Dropdown */}
+          <UserProfileDropdown />
         </header>
 
         {message && (

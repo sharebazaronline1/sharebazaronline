@@ -39,6 +39,10 @@ const PreIPODetails = () => {
   const [data, setData] = useState(null);
   const navigate = useNavigate();
   const [showFullOverview, setShowFullOverview] = useState(false);
+const formatKey = (key) =>
+  key
+    .replace(/([A-Z])/g, " $1")   // add space before capitals
+    .replace(/^./, str => str.toUpperCase()); // capitalize first letter
 
   useEffect(() => {
     fetchPreIPODetails().then((res) =>
@@ -184,17 +188,24 @@ const PreIPODetails = () => {
         </section>
 
         {/* ================= SHARE DETAILS ================= */}
-        <Card>
-          <SectionHeader icon={IndianRupee} title="Unlisted Share Details" />
-          <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {Object.entries(data.shareDetails).map(([k, v]) => (
-              <div key={k} className="bg-slate-50 border rounded-xl p-3 text-center">
-                <p className="text-xs uppercase text-slate-500 mb-1">{k}</p>
-                <p className="text-sm font-semibold text-slate-900">{v}</p>
-              </div>
-            ))}
-          </div>
-        </Card>
+       <Card>
+  <SectionHeader icon={IndianRupee} title="Unlisted Share Details" />
+
+  <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+    {Object.entries(data.shareDetails).map(([k, v]) => (
+      <div
+        key={k}
+        className="bg-slate-50 border rounded-xl p-3 text-center"
+      >
+        <p className="text-xs uppercase text-slate-500 mb-1">
+          {formatKey(k)}
+        </p>
+        <p className="text-sm font-semibold text-slate-900">{v}</p>
+      </div>
+    ))}
+  </div>
+</Card>
+
 
         {/* ================= INCOME STATEMENT ================= */}
         <Card>

@@ -5,6 +5,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import UserProfileDropdown from "../components/UserProfileDropdown"; // ← New component
 import { Menu, Bell } from "lucide-react";
 
 const Notifications = () => {
@@ -42,10 +43,15 @@ const Notifications = () => {
           </button>
         </header>
 
-        {/* Desktop Header */}
-        <header className="hidden md:block mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Notifications</h1>
-          <p className="text-gray-600 mt-1">Stay updated with latest alerts</p>
+        {/* Desktop Header with User Profile Dropdown */}
+        <header className="hidden md:flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">Notifications</h1>
+            <p className="text-gray-600 mt-1">Stay updated with latest alerts</p>
+          </div>
+
+          {/* Top Right User Profile Dropdown */}
+          <UserProfileDropdown />
         </header>
 
         {/* Notification List */}

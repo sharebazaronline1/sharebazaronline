@@ -75,7 +75,6 @@ function AppLayout() {
 
               {/* Authenticated Dashboard Routes */}
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/pre-ipo-watchlist" element={<PreIPOWatchlist />} />
               <Route path="/kyc" element={<Documents />} />
               <Route path="/orders" element={<Orders />} />

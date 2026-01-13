@@ -12,12 +12,15 @@ import {
   BarChart2,
   AlertCircle,
   X,
+  User,
 } from "lucide-react";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
+import { useState } from "react";
 
 const Sidebar = ({ mobileOpen, setMobileOpen }) => {
   const navigate = useNavigate();
+  const [profileOpen, setProfileOpen] = useState(false);
 
   const handleLogout = async () => {
     await signOut(auth);
@@ -38,23 +41,25 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
         className={`fixed top-0 left-0 h-screen w-64 bg-white border-r z-50 transform transition-transform
         ${mobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
-        {/* Header */}
-<div className="p-6 border-b flex justify-between items-center bg-white">
-  <button 
-    onClick={() => window.location.href = '/'} 
-    className="flex items-center"
-  >
-    <img 
-      src="/images/sharebazaar.png" 
-      alt="ShareBazaarOnline" 
-      className="h-8" 
-    />
-  </button>
-</div>
-        {/* Links */}
+        {/* Header with Logo */}
+        <div className="p-6 border-b flex justify-between items-center bg-white">
+          <button 
+            onClick={() => window.location.href = '/'} 
+            className="flex items-center"
+          >
+            <img 
+              src="/images/sharebazaar.png" 
+              alt="ShareBazaarOnline" 
+              className="h-8" 
+            />
+          </button>
+
+          
+        </div>
+
+        {/* Main Navigation Links */}
         <nav className="flex-1 px-4 py-6 space-y-1">
           <SidebarLink to="/dashboard" icon={<Home size={18} />} label="Dashboard" />
-          <SidebarLink to="/portfolio" icon={<Briefcase size={18} />} label="My Portfolio" />
           <SidebarLink to="/pre-ipo-watchlist" icon={<AlertCircle size={18} />} label="Pre-IPO Watchlist" />
           <SidebarLink to="/kyc" icon={<BarChart2 size={18} />} label="Documents" />
           <SidebarLink to="/orders" icon={<IndianRupee size={18} />} label="Orders" />
@@ -62,7 +67,7 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
           <SidebarLink to="/settings" icon={<Settings size={18} />} label="Settings" />
         </nav>
 
-        {/* Logout */}
+        {/* Logout (Bottom) */}
         <div className="p-4 border-t">
           <button
             onClick={handleLogout}
@@ -76,7 +81,6 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
     </>
   );
 };
-
 
 const SidebarLink = ({ to, icon, label }) => (
   <NavLink
@@ -97,7 +101,5 @@ const SidebarLink = ({ to, icon, label }) => (
     <span>{label}</span>
   </NavLink>
 );
-
-
 
 export default Sidebar;

@@ -5,6 +5,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
+import UserProfileDropdown from "../components/UserProfileDropdown";
 import { Menu, AlertCircle, TrendingUp, Plus, X } from "lucide-react";
 
 const PreIPOWatchlist = () => {
@@ -22,57 +23,59 @@ const PreIPOWatchlist = () => {
 
   if (!user) return null;
 
-  // Actual trending pre-IPO/unlisted shares as of January 09, 2026
+  // Updated watchlist (no daily change, added ISIN, sector below name)
   const watchlist = [
     {
       name: "OYO (Oravel Stays Ltd)",
+      sector: "Hospitality",
+      isin: "INE561T01021",
       price: "₹26 – ₹28",
       demand: "High Demand",
-      sector: "Hospitality",
       expectedIPO: "2026",
-      change: "+3.7%",
     },
     {
       name: "PhonePe",
+      sector: "Fintech",
+      isin: "INE0KM101019",
       price: "≈ ₹19,968",
       demand: "Very High Demand",
-      sector: "Fintech",
       expectedIPO: "2026-2027",
-      change: "+0.8%",
     },
     {
       name: "NSE India Ltd",
+      sector: "Stock Exchange",
+      isin: "INE721I01024",
       price: "₹1,940 – ₹2,400",
       demand: "Strong Interest",
-      sector: "Stock Exchange",
       expectedIPO: "Expected 2026",
-      change: "+1.2%",
     },
     {
       name: "CSK (Chennai Super Kings)",
+      sector: "Sports",
+      isin: "INE852S01026",
       price: "₹212 – ₹215",
       demand: "Popular",
-      sector: "Sports",
       expectedIPO: "Unlisted",
-      change: "+1.4%",
     },
     {
       name: "Inox Clean Energy",
+      sector: "Renewable Energy",
+      isin: "INE0H7K01023",
       price: "≈ ₹550",
       demand: "Rising",
-      sector: "Renewable Energy",
       expectedIPO: "Upcoming",
-      change: "+2.1%",
     },
     {
       name: "Hero FinCorp",
+      sector: "NBFC",
+      isin: "INE957N01016",
       price: "TBA",
       demand: "Strong",
-      sector: "NBFC",
       expectedIPO: "2026",
-      change: "—",
     },
   ];
+
+
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -87,12 +90,17 @@ const PreIPOWatchlist = () => {
           </button>
         </header>
 
-        {/* Desktop Header */}
-        <header className="hidden md:block mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Pre-IPO Watchlist</h1>
-          <p className="text-gray-600 mt-1">
-            Track your favorite unlisted and upcoming pre-IPO companies
-          </p>
+        {/* Desktop Header with User Profile Dropdown */}
+        <header className="hidden md:flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">Pre-IPO Watchlist</h1>
+            <p className="text-gray-600 mt-1">
+              Track your favorite unlisted and upcoming pre-IPO companies
+            </p>
+          </div>
+
+          {/* Top Right User Profile Dropdown */}
+          <UserProfileDropdown />
         </header>
 
         {/* Watchlist Cards */}
@@ -107,12 +115,14 @@ const PreIPOWatchlist = () => {
                   <h3 className="text-lg font-bold text-gray-900">{item.name}</h3>
                   <p className="text-sm text-gray-600">{item.sector}</p>
                 </div>
-                <button className="text-red-500 hover:text-red-700">
-                  <X size={20} />
-                </button>
+                
               </div>
 
               <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span className="text-sm text-gray-600">ISIN</span>
+                  <span className="font-semibold">{item.isin}</span>
+                </div>
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Current Price</span>
                   <span className="font-semibold">{item.price}</span>
@@ -120,16 +130,6 @@ const PreIPOWatchlist = () => {
                 <div className="flex justify-between">
                   <span className="text-sm text-gray-600">Expected IPO</span>
                   <span className="text-sm">{item.expectedIPO}</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-600">Daily Change</span>
-                  <span
-                    className={`font-medium ${
-                      item.change.startsWith("+") ? "text-green-600" : "text-gray-600"
-                    }`}
-                  >
-                    {item.change}
-                  </span>
                 </div>
               </div>
 
@@ -209,8 +209,8 @@ const SuggestionCard = ({ name, price, demand, sector }) => (
         {demand}
       </span>
       <button className="flex items-center gap-2 text-sm font-semibold text-green-600 hover:underline">
-        <Plus size={18} />
-        Add to Watchlist
+       
+        Buy Now
       </button>
     </div>
   </div>
