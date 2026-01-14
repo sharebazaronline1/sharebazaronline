@@ -109,15 +109,17 @@ const UserProfileDropdown = () => {
               >
                 <Settings size={18} className="text-gray-600" />
                 <span className="text-sm font-medium text-gray-700">Settings</span>
-              </NavLink>``
+              </NavLink>
 
-              {/* Refer & Earn */}
-              <button
+              {/* Refer & Earn - Now links to Referrals page */}
+              <NavLink
+                to="/referrals"
+                onClick={() => setIsOpen(false)}
                 className="w-full flex items-center gap-4 px-5 py-3 hover:bg-green-50 transition-colors text-left"
               >
                 <Share2 size={18} className="text-green-600" />
                 <span className="text-sm font-medium text-green-600">Refer & Earn</span>
-              </button>
+              </NavLink>
             </div>
 
             {/* Logout */}

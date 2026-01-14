@@ -29,6 +29,7 @@ import PreIPOWatchlist from "./pages/PreIPOWatchlist";
 import Orders from "./pages/Orders";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
+import Referrals from "./pages/Referrals"
 
 function AppLayout() {
   const location = useLocation();
@@ -41,7 +42,8 @@ function AppLayout() {
     location.pathname.startsWith("/kyc") ||
     location.pathname.startsWith("/orders") ||
     location.pathname.startsWith("/notifications") ||
-    location.pathname.startsWith("/settings");
+    location.pathname.startsWith("/settings") ||
+    location.pathname.startsWith("/referrals");
 
   return (
     <>
@@ -80,6 +82,7 @@ function AppLayout() {
               <Route path="/orders" element={<Orders />} />
               <Route path="/notifications" element={<Notifications />} />
               <Route path="/settings" element={<Settings />} />
+              <Route path="/referrals" element={<Referrals />} />
 
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
