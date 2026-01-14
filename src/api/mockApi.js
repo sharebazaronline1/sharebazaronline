@@ -439,7 +439,83 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "SME",
   "status": "Upcoming"
+},
+{
+  "id": 28,
+  "name": "ARMOUR SECURITY (INDIA)",
+  "fullName": "Armour Security (India) Ltd",
+  "logo": "/images/ipo/Armour.png",
+  "open": "14 Jan 2026",
+  "close": "19 Jan 2026",
+  "listing": "22 Jan 2026",
+  "price": "55 – 57",
+  "lot": 2000,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
+},
+{
+  "id": 29,
+  "name": "AMAGI MEDIA LABS",
+  "fullName": "Amagi Media Labs Limited",
+  "logo": "/images/ipo/Amagi.png",
+  "open": "13 Jan 2026",
+  "close": "16 Jan 2026",
+  "listing": "21 Jan 2026",
+  "price": "343 – 361",
+  "lot": 41,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
+},
+{
+  "id": 30,
+  "name": "GRE RENEW ENERTECH",
+  "fullName": "GRE Renew Enertech Limited",
+  "logo":  "/images/ipo/grerenew.png",
+  "symbol": "GRERENEW",
+  "open": "13 Jan 2026",
+  "close": "16 Jan 2026",
+  "listing":  "21 Jan 2026",
+  "price": "100 – 105",
+  "lot": 1200,
+  "minBidQuantity": 2400,
+  "issueSizeShares": 2706000,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
+},
+{
+  "id": 31,
+  "name": "ARITAS VINYL",
+  "fullName": "Aritas Vinyl Limited",
+  "logo": "/images/ipo/Aritas.png",
+  "symbol": "ARITAS",
+  "open": "16 Jan 2026",
+  "close": "20 Jan 2026",
+  "listing": "23 Jan 2026",
+  "price": "40 – 47",
+  "lot": 3000,
+  "minBidQuantity": 6000,
+  "issueSizeShares": 7983000,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
 }
+
+
+
+
 
 
 
