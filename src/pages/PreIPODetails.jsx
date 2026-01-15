@@ -1,5 +1,5 @@
 /* ================= IMPORTS ================= */
-import { useParams, Link,useNavigate } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import {
   ArrowLeft,
@@ -39,10 +39,11 @@ const PreIPODetails = () => {
   const [data, setData] = useState(null);
   const navigate = useNavigate();
   const [showFullOverview, setShowFullOverview] = useState(false);
-const formatKey = (key) =>
-  key
-    .replace(/([A-Z])/g, " $1")   // add space before capitals
-    .replace(/^./, str => str.toUpperCase()); // capitalize first letter
+
+  const formatKey = (key) =>
+    key
+      .replace(/([A-Z])/g, " $1")   // add space before capitals
+      .replace(/^./, str => str.toUpperCase()); // capitalize first letter
 
   useEffect(() => {
     fetchPreIPODetails().then((res) =>
@@ -57,95 +58,98 @@ const formatKey = (key) =>
       </div>
     );
   }
- const overviewText = data.overview || "";
+
+  const overviewText = data.overview || "";
   const shortOverview =
     overviewText.length > 900
       ? overviewText.slice(0, 900) + "..."
       : overviewText;
+
+  // Assuming price comes as number or string — format it nicely
+  const displayPrice = Number(data.price || 0).toLocaleString("en-IN");
+
   return (
     <div className="bg-slate-50 min-h-screen">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
         {/* ================= HERO ================= */}
-       <header className="relative bg-slate-50"> {/* Added pb-20 to make space for the fixed bar */}
-  <div className="flex items-start gap-6 ml-4 lg:ml-6 py-6 pl-6 lg:pl-96">
+        <header className="relative bg-slate-50">
+          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 ml-4 lg:ml-6 py-8 pl-6 lg:pl-96 relative">
+            {/* LOGO */}
+            <div className="shrink-0">
+              <div className="w-28 h-28 lg:w-36 lg:h-36 border rounded-xl p-4 bg-white shadow-md">
+                <img
+                  src={data.logo}
+                  alt={data.name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            </div>
 
-    {/* LOGO */}
-    <div className="shrink-0">
-      <div className="w-28 h-28 lg:w-36 lg:h-36 border rounded-xl p-4 bg-white shadow-md">
-        <img
-          src={data.logo}
-          alt={data.name}
-          className="w-full h-full object-contain"
-        />
-      </div>
-    </div>
+            {/* TEXT + BIG PRICE */}
+            <div className="pt-2 lg:pt-4">
+              <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 tracking-tight">
+                {data.name}
+              </h1>
+              <p className="text-base lg:text-lg text-slate-600 leading-relaxed max-w-4xl">
+                {data.shareDetails.companyName}
+              </p>
 
-    {/* TEXT */}
-    <div className="pt-2 lg:pt-4">
-      <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 tracking-tight">
-        {data.name}
-      </h1>
-      <p className="text-base lg:text-lg text-slate-600 leading-relaxed max-w-4xl">
-        {data.shareDetails.companyName}
-      </p>
-    </div>
+              {/* === Eye-catching Price Block === */}
+            
+            </div>
+          </div>
 
-  </div>
+          {/* FULL-WIDTH sticky bar with integrated price */}
+          <div
+            className="
+              sticky
+              top-[72px] sm:top-[88px]
+              left-0 right-0
+              w-screen
+              rounded-lg
+              z-40
+              bg-blue-100 
+              shadow-lg
+            "
+          >
+            <div
+              className="
+                max-w-7xl
+                mx-auto
+                flex flex-col sm:flex-row
+                items-center justify-between
+                gap-4 py-4 px-4 sm:px-6 lg:px-8
+              "
+            >
+              <div className="flex items-center gap-4 text-blue-700 font-medium">
+                <span className="text-lg">Ready to invest in this opportunity? Apply now through our trusted platforms.</span>
+        
+              </div>
 
-{/* FULL-WIDTH sticky wrapper */}
-<div
-  className="
-    sticky
-    top-[72px] sm:top-[88px]
-    left-0 right-0
-    w-screen
-    z-40
-    bg-blue-50
-    overflow-x-hidden
-  "
->
-  <div
-    className="
-      max-w-7xl
-      mx-auto
-      flex
-      items-center
-      justify-between
-      py-4
-      px-4
-      sm:px-6
-      lg:px-8
-    "
-  >
-    <p className="text-blue-900 font-medium">
-      Ready to invest in this opportunity? Apply now through our trusted platforms.
-    </p>
-
-    <button
-      onClick={() => navigate('/login')}
-      className="
-        px-8 sm:px-8
-        py-3 sm:py-4
-        bg-green-600 hover:bg-green-700
-        text-white font-bold
-        rounded-full
-        whitespace-nowrap
-      "
-    >
-      Buy Now
-    </button>
-  </div>
-</div>
-
-
-
-
-
-</header>
+              <button
+                onClick={() => navigate('/login')}
+                className="
+                  px-10 py-4
+                  bg-green-600 text-white
+                  font-bold text-lg
+                  rounded-full
+                  shadow-2xl hover:shadow-xl
+                  hover:bg-green-700
+                  transform hover:-translate-y-1
+                  transition-all duration-200
+                  flex items-center gap-2 whitespace-nowrap
+                "
+              >
+               
+                Buy Now @ ₹{displayPrice}
+              </button>
+            </div>
+          </div>
+        </header>
 
         {/* ================= COMPANY OVERVIEW ================= */}
-     <Card>
+        <Card>
           <SectionHeader icon={Building2} title="Company Overview" />
           <div className="p-4 text-slate-700 whitespace-pre-line leading-relaxed">
             {showFullOverview ? overviewText : shortOverview}
@@ -188,24 +192,23 @@ const formatKey = (key) =>
         </section>
 
         {/* ================= SHARE DETAILS ================= */}
-       <Card>
-  <SectionHeader icon={IndianRupee} title="Unlisted Share Details" />
+        <Card>
+          <SectionHeader icon={IndianRupee} title="Unlisted Share Details" />
 
-  <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-    {Object.entries(data.shareDetails).map(([k, v]) => (
-      <div
-        key={k}
-        className="bg-slate-50 border rounded-xl p-3 text-center"
-      >
-        <p className="text-xs uppercase text-slate-500 mb-1">
-          {formatKey(k)}
-        </p>
-        <p className="text-sm font-semibold text-slate-900">{v}</p>
-      </div>
-    ))}
-  </div>
-</Card>
-
+          <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {Object.entries(data.shareDetails).map(([k, v]) => (
+              <div
+                key={k}
+                className="bg-slate-50 border rounded-xl p-3 text-center"
+              >
+                <p className="text-xs uppercase text-slate-500 mb-1">
+                  {formatKey(k)}
+                </p>
+                <p className="text-sm font-semibold text-slate-900">{v}</p>
+              </div>
+            ))}
+          </div>
+        </Card>
 
         {/* ================= INCOME STATEMENT ================= */}
         <Card>

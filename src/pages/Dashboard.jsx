@@ -21,13 +21,14 @@ const Dashboard = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
+useEffect(() => {
     const unsub = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) navigate("/login");
       else setUser(currentUser);
-    });
+  });
     return () => unsub();
-  }, [navigate]);
+}, [navigate]);
+
 
   if (!user) return null;
 
@@ -96,25 +97,26 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
           {/* Top Trending Pre-IPO – Reduced height */}
           <section className="bg-white rounded-2xl p-5 border shadow-sm xl:col-span-2 h-72 flex flex-col">
-            <h2 className="text-xl font-bold mb-4">Top Trending Pre-IPO</h2>
+            <h2 className="text-xl font-bold mb-4">Top Trending</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 flex-1">
-              <SmallPreIPOItem
-                name="PhonePe"
-                price="₹19,968"
-                demand="Very High Demand"
-              />
-              <SmallPreIPOItem
-                name="NSE India Ltd"
-                price="₹2,134"
-                demand="Strong Interest (IPO Expected)"
-              />
-              <SmallPreIPOItem
-                name="boAt (Imagine Marketing)"
-                price="₹980"
-                demand="High Demand"
-              />
-            </div>
+           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 flex-1">
+  <SmallPreIPOItem
+    name="Tata Capital Ltd"
+    price="₹1,050"
+    demand="Very High Demand"
+  />
+  <SmallPreIPOItem
+    name="Studds Accessories Ltd"
+    price="₹1,380"
+    demand="High Investor Interest"
+  />
+  <SmallPreIPOItem
+    name="OYO Hotels & Homes Pvt Ltd"
+    price="₹62"
+    demand="IPO Watchlist"
+  />
+</div>
+
           </section>
 
           {/* Portfolio Chart – Reduced height */}
@@ -136,27 +138,28 @@ const Dashboard = () => {
               <TrendingUp className="text-green-600" />
               Upcoming Unlisted IPOs
             </h2>
+<div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+  <UnlistedCard
+    name="Tata Capital Ltd"
+    sector="NBFC"
+    price="₹1,040"
+    status="Active Unlisted"
+  />
+  <UnlistedCard
+    name="HDB Financial Services Ltd"
+    sector="NBFC"
+    price="₹755"
+    status="IPO Expected"
+  />
+  <UnlistedCard
+    name="Studds Accessories Ltd"
+    sector="Consumer Manufacturing"
+    price="₹1,420"
+    status="Pre-IPO"
+  />
+</div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <UnlistedCard
-                name="Bharat Coking Coal Ltd"
-                sector="Mining"
-                price="₹21 – TBA"
-                status="Upcoming"
-              />
-              <UnlistedCard
-                name="Avana Electrosystems"
-                sector="Electronics"
-                price="TBA"
-                status="Pre-IPO"
-              />
-              <UnlistedCard
-                name="Hero FinCorp"
-                sector="NBFC"
-                price="TBA"
-                status="Pre-IPO"
-              />
-            </div>
+
           </section>
         </div>
       </main>
@@ -180,17 +183,35 @@ const StatCard = ({ icon, title, value, change }) => (
 );
 
 const SmallPreIPOItem = ({ name, price, demand }) => (
-  <div className="bg-gray-50 rounded-xl p-4 border hover:shadow-md transition">
-    <h4 className="font-bold text-gray-900 text-base mb-2">{name}</h4>
-    <p className="text-xs text-gray-600 mb-2">{price}</p>
-    <div className="flex items-center justify-between">
-      
-      <button className="px-3 py-1.5 text-xs font-semibold rounded-full bg-green-600 text-white hover:bg-green-700 transition">
+  <div className="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col gap-3 hover:shadow-md transition">
+    
+    {/* Name */}
+    <h4 className="font-semibold text-gray-900 text-sm leading-snug">
+      {name}
+    </h4>
+
+    {/* Price */}
+    <div className="flex items-center gap-1">
+      <span className="text-lg font-bold text-gray-900">{price}</span>
+      <span className="text-xs text-gray-500">/ share</span>
+    </div>
+
+    {/* Demand */}
+    {demand && (
+      <span className="inline-block w-fit px-2.5 py-1 text-xs font-medium rounded-full bg-green-50 text-green-700">
+        {demand}
+      </span>
+    )}
+
+    {/* Action */}
+    <div className="pt-2">
+      <button className="w-full py-2 text-xs font-semibold rounded-xl bg-green-600 text-white hover:bg-green-700 transition">
         Buy
       </button>
     </div>
   </div>
 );
+
 
 const UnlistedCard = ({ name, sector, price, status }) => (
   <div className="bg-gray-50 rounded-xl p-4 border hover:shadow-md transition">

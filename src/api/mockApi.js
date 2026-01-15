@@ -2244,6 +2244,7 @@ export const fetchPreIPODetails = async () => {
     {
       id: 1,
       name: "APL Metals Limited",
+      price: 12,
       logo: "/images/preipo/image1.png",
 
       overview: `Associated Pigments Limited (APL Metals) is a leading Indian manufacturer specializing in lead and lead oxide products. Established in 1948, the company has built a strong reputation in the Indian metals industry through decades of operational excellence, consistent quality, and customer satisfaction. APL Metals has played a significant role in contributing to India’s self-sufficiency in lead-based products and continues to be a trusted supplier across multiple industrial sectors.
@@ -2383,6 +2384,7 @@ Beyond its manufacturing capabilities, APL Metals remains committed to employee 
     {
   id: 109,
   name: "OYO (Oravel Stays Limited)",
+  price: 37,
   logo: "/images/oyo.png",
 
   overview: `OYO, officially known as Oravel Stays Limited, is one of India’s most well-known hospitality technology companies. Founded in 2013 by Ritesh Agarwal, OYO disrupted the traditional hotel industry by standardizing budget accommodations and leveraging technology to connect property owners with travelers. Over the years, OYO has grown from a small Indian startup into a global hospitality brand operating across multiple countries.
