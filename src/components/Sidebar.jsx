@@ -14,18 +14,13 @@ import {
   X,
   User,
 } from "lucide-react";
-import { signOut } from "firebase/auth";
-import { auth } from "../firebase";
 import { useState } from "react";
 
 const Sidebar = ({ mobileOpen, setMobileOpen }) => {
   const navigate = useNavigate();
   const [profileOpen, setProfileOpen] = useState(false);
 
-  const handleLogout = async () => {
-    await signOut(auth);
-    navigate("/", { replace: true });
-  };
+
 
   return (
     <>
@@ -39,7 +34,7 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
 
       <aside
         className={`fixed top-0 left-0 h-screen w-64 bg-white border-r z-50 transform transition-transform
-        ${mobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
+        ${mobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 flex flex-col`}
       >
         {/* Header with Logo */}
         <div className="p-6 border-b flex justify-between items-center bg-white">
@@ -53,29 +48,30 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
               className="h-8" 
             />
           </button>
-
-          
         </div>
 
         {/* Main Navigation Links */}
-        <nav className="flex-1 px-4 py-6 space-y-1">
+        <nav className="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
           <SidebarLink to="/dashboard" icon={<Home size={18} />} label="Dashboard" />
           <SidebarLink to="/pre-ipo-watchlist" icon={<AlertCircle size={18} />} label="Pre-IPO Watchlist" />
           <SidebarLink to="/kyc" icon={<BarChart2 size={18} />} label="Documents" />
           <SidebarLink to="/orders" icon={<IndianRupee size={18} />} label="Orders" />
-          <SidebarLink to="/notifications" icon={<Bell size={18} />} label="Notifications" />
-          <SidebarLink to="/settings" icon={<Settings size={18} />} label="Settings" />
         </nav>
 
-        {/* Logout (Bottom) */}
-        <div className="p-4 border-t">
-          <button
-            onClick={handleLogout}
-            className="w-full flex items-center gap-3 px-4 py-3 text-red-600 hover:bg-red-50 rounded-xl"
-          >
-            <LogOut size={18} />
-            Logout
-          </button>
+       
+         {/* Ad Banner - Placed just above Logout */}
+        <div className="px-4 pb-8">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border border-green-200 text-center">
+            <p className="text-sm font-medium text-green-800 mb-2">
+              Unlock Premium Features
+            </p>
+            <p className="text-xs text-gray-600 mb-3">
+              Get exclusive IPO alerts, priority access & more!
+            </p>
+            <button className="w-full bg-green-600 text-white text-sm font-medium py-2 rounded-lg hover:bg-green-700 transition">
+              Upgrade Now
+            </button>
+          </div>
         </div>
       </aside>
     </>
