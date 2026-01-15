@@ -8,7 +8,7 @@ import { IndianRupee, Search } from "lucide-react";
 import { fetchPreIPOs } from "../api/mockApi"; // Only Pre-IPOs
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
-import { Menu, IndianRupee, Plus, Minus } from "lucide-react";
+
 
 const Orders = () => {
   const navigate = useNavigate();
