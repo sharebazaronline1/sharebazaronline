@@ -95,6 +95,7 @@ const Orders = () => {
       <Sidebar />
 
       <main className="md:ml-64 p-4 md:p-6 lg:p-8 transition-all flex flex-col lg:flex-row gap-6 xl:gap-8">
+         <UserProfileDropdown />
         {/* LEFT - Buy/Sell form - fixed max height + scroll */}
         <section 
           className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden w-full lg:w-1/2 max-w-2xl flex flex-col"

@@ -1,32 +1,62 @@
-// src/pages/Referrals.jsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Copy,
   Check,
+  Share2,
   Users,
   IndianRupee,
-  Link2,
-  Share2,
-  Facebook,
-  Twitter,
-  Linkedin,
-  MessageCircle,
 } from "lucide-react";
+import {
+  FaFacebookF,
+  FaXTwitter,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa6";
+
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
+import { supabase } from "../lib/supabase";
 
 const Referrals = () => {
   const [copied, setCopied] = useState(false);
-  const referralLink = "https://sharebazaaronline.com/ref/ArrunJDR-2026";
+  const [showLink, setShowLink] = useState(false);
+  const [sbUserId, setSbUserId] = useState("");
+
+  useEffect(() => {
+    const fetchSBUserId = async () => {
+      const {
+        data: { session },
+      } = await supabase.auth.getSession();
+
+      if (!session?.user) return;
+
+      const { data } = await supabase
+        .from("profiles")
+        .select("sb_user_id")
+        .eq("id", session.user.id)
+        .single();
+
+      if (data?.sb_user_id) {
+        setSbUserId(data.sb_user_id);
+      }
+    };
+
+    fetchSBUserId();
+  }, []);
+
+  const referralLink = sbUserId
+    ? `https://sharebazaaronline.com/ref/${sbUserId}`
+    : "";
 
   const handleCopy = () => {
+    if (!referralLink) return;
     navigator.clipboard.writeText(referralLink);
     setCopied(true);
     setTimeout(() => setCopied(false), 1800);
   };
 
   const whatsappShareUrl = `https://wa.me/?text=${encodeURIComponent(
-    `Join ShareBazaar using my referral link and earn rewards! 🎁\n${referralLink}`
+    `Join ShareBazaar using my referral link and earn rewards!\n${referralLink}`
   )}`;
 
   return (
@@ -35,179 +65,195 @@ const Referrals = () => {
 
       <main className="md:ml-64 px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
         {/* Header */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
             Rewards & Referrals
           </h1>
           <UserProfileDropdown />
         </div>
 
-        {/* Summary Cards */}
-        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm mb-8 overflow-hidden">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x">
-            <div className="p-6">
-              <div className="flex items-center gap-2 text-gray-600 text-sm mb-1">
-                <IndianRupee size={16} />
-                Your wallet
-              </div>
-              <p className="text-3xl font-bold text-gray-900">₹0</p>
-              <button className="text-xs text-green-600 mt-2 hover:underline">
-                Withdrawal
-              </button>
-            </div>
+        {/* SINGLE MAIN BOX */}
+        <div className="bg-white border border-gray-200 rounded-2xl shadow-sm max-w-5xl mx-auto p-6 sm:p-8 space-y-10">
 
-            <div className="p-6">
-              <div className="flex items-center gap-2 text-gray-600 text-sm mb-1">
-                <Users size={16} />
-                Your points
-              </div>
-              <p className="text-3xl font-bold text-green-600">300.00</p>
-              <button className="text-xs text-green-600 mt-2 hover:underline">
-                View statement →
-              </button>
-            </div>
-
-            <div className="p-6 sm:col-span-2">
-              <p className="text-gray-700 leading-relaxed">
-                Refer a friend and earn{" "}
-                <span className="font-bold text-green-700">300 reward points</span>{" "}
-                when they successfully open and verify their account.
-              </p>
-              <button className="text-sm text-green-600 mt-3 hover:underline">
-                Read full terms →
-              </button>
-            </div>
+          {/* HERO */}
+          <div className="text-center space-y-2">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              Refer Friends & Earn Money
+            </h2>
+            <p className="text-gray-600 text-base sm:text-lg">
+              Invite friends and earn rewards on every successful order
+            </p>
           </div>
+
+          {/* REFERRAL LINK */}
+          <div className="flex flex-col items-center gap-4">
+            {!showLink ? (
+              <button
+                onClick={() => setShowLink(true)}
+                className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium transition"
+              >
+                Get Referral Link
+              </button>
+            ) : (
+              <>
+                <div className="flex flex-col sm:flex-row w-full max-w-xl gap-3">
+                  <input
+                    readOnly
+                    value={referralLink}
+                    className="flex-1 border border-gray-300 rounded-lg px-4 py-2 text-sm"
+                  />
+                  <button
+                    onClick={handleCopy}
+                    className={`flex items-center gap-2 px-5 py-2 rounded-lg text-white text-sm ${
+                      copied
+                        ? "bg-green-700"
+                        : "bg-green-600 hover:bg-green-700"
+                    }`}
+                  >
+                    {copied ? <Check size={16} /> : <Copy size={16} />}
+                    {copied ? "Copied" : "Copy"}
+                  </button>
+                </div>
+
+                {/* 🔥 ACTUAL SOCIAL MEDIA ICONS */}
+                <div className="flex justify-center gap-4 pt-2">
+                  <a
+                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-blue-50 hover:bg-blue-100 flex items-center justify-center"
+                  >
+                    <FaFacebookF className="text-blue-600" />
+                  </a>
+
+                  <a
+                    href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(referralLink)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center"
+                  >
+                    <FaXTwitter className="text-black" />
+                  </a>
+
+                  <a
+                    href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(referralLink)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-blue-50 hover:bg-blue-100 flex items-center justify-center"
+                  >
+                    <FaLinkedinIn className="text-blue-700" />
+                  </a>
+
+                  <a
+                    href={whatsappShareUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-green-50 hover:bg-green-100 flex items-center justify-center"
+                  >
+                    <FaWhatsapp className="text-green-600" />
+                  </a>
+                </div>
+              </>
+            )}
+          </div>
+
+        {/* HOW IT WORKS */}
+<div className="border-t pt-10">
+  <h3 className="text-lg font-semibold text-center mb-10">
+    How it works
+  </h3>
+
+  {/* DESKTOP / TABLET */}
+  <div className="hidden sm:grid grid-cols-5 items-center text-center max-w-4xl mx-auto">
+    {/* STEP 1 */}
+    <div className="space-y-3">
+      <div className="w-16 h-16 mx-auto rounded-full bg-green-100 flex items-center justify-center text-green-600">
+        <Share2 size={26} />
+      </div>
+      <p className="text-sm font-medium">Share your referral link</p>
+    </div>
+
+    {/* ARROW */}
+    <div className="flex  justify-center text-green-400 text-3xl">
+      →
+    </div>
+
+    {/* STEP 2 */}
+    <div className="space-y-3">
+      <div className="w-16 h-16 mx-auto rounded-full bg-green-100 flex items-center justify-center text-green-600">
+        <Users size={26} />
+      </div>
+      <p className="text-sm font-medium">Friends place orders</p>
+    </div>
+
+    {/* ARROW */}
+    <div className="flex justify-center text-green-400 text-3xl">
+      →
+    </div>
+
+    {/* STEP 3 */}
+    <div className="space-y-3">
+      <div className="w-16 h-16 mx-auto rounded-full bg-green-100 flex items-center justify-center text-green-600">
+        <IndianRupee size={26} />
+      </div>
+      <p className="text-sm font-medium">You earn rewards</p>
+    </div>
+  </div>
+
+  {/* MOBILE */}
+  <div className="sm:hidden space-y-8 text-center">
+    {[
+      { icon: <Share2 size={24} />, text: "Share your referral link" },
+      { icon: <Users size={24} />, text: "Friends place orders" },
+      { icon: <IndianRupee size={24} />, text: "You earn rewards" },
+    ].map((item, idx) => (
+      <div key={idx} className="space-y-3">
+        <div className="w-14 h-14 mx-auto rounded-full bg-green-100 flex items-center justify-center text-green-600">
+          {item.icon}
         </div>
+        <p className="text-sm font-medium">{item.text}</p>
+      </div>
+    ))}
+  </div>
+</div>
 
-        {/* Referral Link Section */}
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 mb-8 shadow-sm">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-4 mb-6">
-            <div className="flex items-center gap-2 text-sm font-medium text-gray-700 min-w-[140px]">
-              <Link2 size={18} />
-              Your Referral Link
-            </div>
+          {/* EMAIL / MOBILE FORM — KEPT BELOW */}
+          <div className="border-t pt-8">
+            <h3 className="text-lg font-semibold mb-4">
+              Refer via Email or Mobile
+            </h3>
 
-            <div className="flex flex-1 flex-col sm:flex-row gap-3">
+            <form className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <input
-                readOnly
-                value={referralLink}
-                className="flex-1 border border-gray-300 rounded-lg px-4 py-3 text-sm bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500"
+                type="text"
+                placeholder="Name"
+                required
+                className="border border-gray-300 rounded-lg px-4 py-3 text-sm"
+              />
+              <input
+                type="email"
+                placeholder="Email (optional)"
+                className="border border-gray-300 rounded-lg px-4 py-3 text-sm"
+              />
+              <input
+                type="tel"
+                placeholder="+91 Mobile"
+                required
+                className="border border-gray-300 rounded-lg px-4 py-3 text-sm"
               />
 
-              <button
-                onClick={handleCopy}
-                className={`flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium text-sm transition-all min-w-[120px] ${
-                  copied
-                    ? "bg-green-700 text-white shadow-md"
-                    : "bg-green-600 hover:bg-green-700 text-white hover:shadow-md"
-                }`}
-              >
-                {copied ? <Check size={18} /> : <Copy size={18} />}
-                {copied ? "Copied!" : "Copy Link"}
-              </button>
-            </div>
+              <div className="sm:col-span-3 mt-2">
+                <button
+                  type="submit"
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg"
+                >
+                  <Share2 size={18} />
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
 
-          {/* Social Share Buttons - More authentic look */}
-          <div className="flex items-center gap-5 mt-2">
-            <span className="text-sm font-medium text-gray-700">Share via:</span>
-
-            {/* Facebook */}
-            <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-[#1877F2]/10 hover:bg-[#1877F2]/20 transition"
-              aria-label="Share on Facebook"
-              title="Share on Facebook"
-            >
-              <Facebook size={22} className="text-[#1877F2]" />
-            </a>
-
-            {/* X (Twitter) */}
-            <a
-              href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(referralLink)}&text=Join%20ShareBazaar%20using%20my%20referral%20link%20and%20earn%20rewards!%20🎁`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-black/10 hover:bg-black/20 transition"
-              aria-label="Share on X (Twitter)"
-              title="Share on X (Twitter)"
-            >
-              <Twitter size={22} className="text-black" />
-            </a>
-
-            {/* LinkedIn */}
-            <a
-              href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(referralLink)}&title=Join%20ShareBazaar&summary=Use%20my%20referral%20link%20to%20earn%20rewards!`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-[#0A66C2]/10 hover:bg-[#0A66C2]/20 transition"
-              aria-label="Share on LinkedIn"
-              title="Share on LinkedIn"
-            >
-              <Linkedin size={22} className="text-[#0A66C2]" />
-            </a>
-
-            {/* WhatsApp - best approximation with lucide + fill */}
-            <a
-              href={whatsappShareUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 rounded-full bg-[#25D366]/10 hover:bg-[#25D366]/20 transition"
-              aria-label="Share on WhatsApp"
-              title="Share on WhatsApp"
-            >
-              <MessageCircle
-                size={24}
-                className="text-[#25D366] fill-[#25D366]"
-              />
-            </a>
-          </div>
-        </div>
-
-        {/* Refer a Friend Form */}
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 lg:p-8 shadow-sm max-w-4xl">
-          <div className="flex items-center gap-3 mb-6">
-            <Share2 className="text-green-600" size={24} />
-            <h2 className="text-xl font-bold text-gray-900">Invite a Friend</h2>
-          </div>
-
-          <form className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <input
-              type="text"
-              placeholder="Friend's Full Name"
-              className="border border-gray-300 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 focus:outline-none"
-              required
-            />
-
-            <input
-              type="email"
-              placeholder="Email (optional)"
-              className="border border-gray-300 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 focus:outline-none"
-            />
-
-            <input
-              type="tel"
-              placeholder="+91 Mobile Number"
-              className="border border-gray-300 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-green-500 focus:border-green-500 focus:outline-none"
-              required
-            />
-
-            <div className="lg:col-span-3 mt-2">
-              <button
-                type="submit"
-                className="w-full sm:w-auto px-10 py-3.5 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition shadow-sm hover:shadow-md flex items-center justify-center gap-2 text-base"
-              >
-                <Share2 size={18} />
-                Send Invitation
-              </button>
-            </div>
-          </form>
-
-          <p className="mt-6 text-sm text-gray-500">
-            We'll send them an invitation with your referral link automatically.
-          </p>
         </div>
       </main>
     </div>

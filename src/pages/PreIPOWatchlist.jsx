@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
@@ -13,15 +12,6 @@ const PreIPOWatchlist = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (currentUser) => {
-      if (!currentUser) navigate("/login");
-      else setUser(currentUser);
-    });
-    return () => unsub();
-  }, [navigate]);
-
-  if (!user) return null;
 
   // Updated watchlist (no daily change, added ISIN, sector below name)
   const watchlist = [

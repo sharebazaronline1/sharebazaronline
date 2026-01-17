@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase";
+import { supabase } from "../lib/supabase";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
@@ -22,12 +22,21 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
 useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (currentUser) => {
-      if (!currentUser) navigate("/login");
-      else setUser(currentUser);
-  });
-    return () => unsub();
+  const checkUser = async () => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+
+    if (!session) {
+      navigate("/login");
+    } else {
+      setUser(session.user);
+    }
+  };
+
+  checkUser();
 }, [navigate]);
+
 
 
   if (!user) return null;
@@ -54,7 +63,7 @@ useEffect(() => {
         <header className="hidden md:flex items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">
-              Welcome, {user.displayName || "Investor"}
+             Welcome, {user.user_metadata?.full_name || user.email || "Investor"}
             </h1>
             <p className="text-gray-600 mt-1">
               Track IPOs, Pre-IPOs & portfolio performance

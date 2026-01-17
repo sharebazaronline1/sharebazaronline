@@ -3,8 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Search, Menu, X, User, LogOut, Settings, Bell } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../firebase";
+import { supabase } from "../lib/supabase";
 import GlobalSearch from "./GlobalSearch";
 
 // Helper: Generate unique 8-character alphanumeric ID (e.g., SB-A7K9P2M4)
@@ -38,23 +37,48 @@ const HeaderAndNav = () => {
   const searchRef = useRef(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      if (currentUser) {
-        setUserID(generateUserID(currentUser.uid));
-      } else {
-        setUserID("");
-      }
-    });
-    return () => unsub();
-  }, []);
+ const handleLogout = async () => {
+  await supabase.auth.signOut();
+  setUser(null);
+  setUserID("");
+  setProfileOpen(false);
+  navigate("/", { replace: true });
+};
+useEffect(() => {
+  // Initial session load
+  const loadSession = async () => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
 
-  const handleLogout = async () => {
-    await signOut(auth);
-    setProfileOpen(false);
-    navigate("/", { replace: true });
+    if (session?.user) {
+      setUser(session.user);
+      setUserID(generateUserID(session.user.id));
+    } else {
+      setUser(null);
+      setUserID("");
+    }
   };
+
+  loadSession();
+
+  // Listen to auth changes (login/logout/refresh)
+  const {
+    data: { subscription },
+  } = supabase.auth.onAuthStateChange((_event, session) => {
+    if (session?.user) {
+      setUser(session.user);
+      setUserID(generateUserID(session.user.id));
+    } else {
+      setUser(null);
+      setUserID("");
+    }
+  });
+
+  return () => {
+    subscription.unsubscribe();
+  };
+}, []);
 
   const openWithDelay = (setter, timerRef) => {
     if (timerRef.current) {
@@ -173,7 +197,7 @@ const HeaderAndNav = () => {
                   aria-label="User menu"
                 >
                   <img
-                    src={user.photoURL || "/images/avatar.png"}
+                    src={user.user_metadata?.avatar_url || "/images/avatar.png"}
                     alt="Profile"
                     onError={(e) => {
                       e.currentTarget.src = "/images/avatar.png";
@@ -181,7 +205,7 @@ const HeaderAndNav = () => {
                     className="h-10 w-10 rounded-full border-2 border-gray-300 object-cover shadow-sm"
                   />
                   <span className="text-sm font-medium text-gray-700 hidden xl:block">
-                    {user.displayName || user.email?.split("@")[0] || "User"}
+                    {user.user_metadata?.full_name || user.email?.split("@")[0] || "User"}
                   </span>
                 </button>
 
@@ -198,7 +222,7 @@ const HeaderAndNav = () => {
                       {/* User Info Header */}
                       <div className="px-5 py-4 bg-green-50 border-b border-gray-100">
                         <p className="text-base font-bold text-gray-900">
-                          {user.displayName || "User"}
+                          {user.user_metadata?.full_name || "User"}
                         </p>
                         <p className="text-xs text-gray-500 mt-1">ID: {userID}</p>
                         <p className="text-sm text-gray-600 truncate mt-1">{user.email}</p>

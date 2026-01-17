@@ -1,7 +1,14 @@
 // src/App.jsx
 
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useEffect, useState } from "react";
 
 import HeaderAndNav from "./components/HeaderAndNav";
 import Footer from "./components/Footer";
@@ -29,7 +36,47 @@ import PreIPOWatchlist from "./pages/PreIPOWatchlist";
 import Orders from "./pages/Orders";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
-import Referrals from "./pages/Referrals"
+import Referrals from "./pages/Referrals";
+
+import { supabase } from "./lib/supabase";
+
+/* ---------------- AUTH GUARD ---------------- */
+
+function ProtectedRoute({ children }) {
+  const [loading, setLoading] = useState(true);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      setUser(data.session?.user ?? null);
+      setLoading(false);
+    });
+
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        setUser(session?.user ?? null);
+      }
+    );
+
+    return () => listener.subscription.unsubscribe();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <span className="text-sm text-gray-500 animate-pulse">
+          Checking authentication…
+        </span>
+      </div>
+    );
+  }
+
+  if (!user) return <Navigate to="/login" replace />;
+
+  return children;
+}
+
+/* ---------------- APP LAYOUT ---------------- */
 
 function AppLayout() {
   const location = useLocation();
@@ -48,7 +95,9 @@ function AppLayout() {
   return (
     <>
       <Helmet>
-        <title>ShareBazaarOnline - IPO Updates, Unlisted Shares & Broker Comparison</title>
+        <title>
+          ShareBazaarOnline - IPO Updates, Unlisted Shares & Broker Comparison
+        </title>
         <meta
           name="description"
           content="India's most trusted platform for real-time IPO insights, GMP updates, pre-IPO stocks, and broker comparisons."
@@ -64,6 +113,7 @@ function AppLayout() {
           {/* MAIN */}
           <main className="flex-1 min-w-0 px-4 lg:px-6">
             <Routes>
+              {/* Public Routes */}
               <Route path="/" element={<Home />} />
               <Route path="/ipo-tracker" element={<IPOTracker />} />
               <Route path="/ipo/ipo-list" element={<IPOList />} />
@@ -73,21 +123,77 @@ function AppLayout() {
               <Route path="/preipo/:id" element={<PreIPODetails />} />
               <Route path="/insight-hub" element={<InsightHub />} />
               <Route path="/insight-hub/:id" element={<InsightHubDetails />} />
-              <Route path="/login" element={<Login />} />
-
-              {/* Authenticated Dashboard Routes */}
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/pre-ipo-watchlist" element={<PreIPOWatchlist />} />
-              <Route path="/kyc" element={<Documents />} />
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/notifications" element={<Notifications />} />
-              <Route path="/settings" element={<Settings />} />
-              <Route path="/referrals" element={<Referrals />} />
-
-              <Route path="/ipoguide" element={<IPOGuideSection />} />
-              <Route path="/preipoguide" element={<UnlistedGuideSection />} />
               <Route path="/ipo/:id" element={<IPODetails />} />
               <Route path="/skill-up" element={<SkillUp />} />
+              <Route path="/ipoguide" element={<IPOGuideSection />} />
+              <Route path="/preipoguide" element={<UnlistedGuideSection />} />
+              <Route path="/login" element={<Login />} />
+
+              {/* Protected Routes */}
+              <Route
+                path="/dashboard"
+                element={
+                  <ProtectedRoute>
+                    <Dashboard />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/portfolio"
+                element={
+                  <ProtectedRoute>
+                    <Portfolio />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/pre-ipo-watchlist"
+                element={
+                  <ProtectedRoute>
+                    <PreIPOWatchlist />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/kyc"
+                element={
+                  <ProtectedRoute>
+                    <Documents />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/orders"
+                element={
+                  <ProtectedRoute>
+                    <Orders />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/notifications"
+                element={
+                  <ProtectedRoute>
+                    <Notifications />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/settings"
+                element={
+                  <ProtectedRoute>
+                    <Settings />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/referrals"
+                element={
+                  <ProtectedRoute>
+                    <Referrals />
+                  </ProtectedRoute>
+                }
+              />
             </Routes>
           </main>
 
@@ -111,6 +217,8 @@ function AppLayout() {
     </>
   );
 }
+
+/* ---------------- ROOT ---------------- */
 
 function App() {
   return (
