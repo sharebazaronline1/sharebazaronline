@@ -8,20 +8,34 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Initial session load
-    supabase.auth.getSession().then(({ data }) => {
-      setUser(data.session?.user ?? null);
-      setLoading(false);
-    });
+    let mounted = true;
 
-    // Listen to auth changes
+    const initAuth = async () => {
+      // 🔑 1. IMPORTANT: Parse OAuth redirect (for new browsers)
+      await supabase.auth.getSessionFromUrl({ storeSession: true });
+
+      // 🔑 2. Load existing session
+      const { data } = await supabase.auth.getSession();
+
+      if (mounted) {
+        setUser(data.session?.user ?? null);
+        setLoading(false);
+      }
+    };
+
+    initAuth();
+
+    // 🔑 3. Listen to auth changes
     const { data: listener } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         setUser(session?.user ?? null);
       }
     );
 
-    return () => listener.subscription.unsubscribe();
+    return () => {
+      mounted = false;
+      listener.subscription.unsubscribe();
+    };
   }, []);
 
   return (
