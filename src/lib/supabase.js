@@ -5,9 +5,10 @@ export const supabase = createClient(
   import.meta.env.VITE_SUPABASE_ANON_KEY,
   {
     auth: {
-      persistSession: true,     // 👈 keeps user logged in
-      autoRefreshToken: true,   // 👈 refreshes token silently
-      detectSessionInUrl: true // 👈 needed for OAuth
-    }
+      persistSession: true,    
+      autoRefreshToken: true,   
+      detectSessionInUrl: true,  
+      flowType: "pkce",         
+    },
   }
 );
