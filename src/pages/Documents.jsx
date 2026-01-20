@@ -1,11 +1,7 @@
-// src/pages/Documents.jsx
-
 import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase";
-import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
+import { supabase } from "../lib/supabase";
 import {
   Menu,
   CheckCircle,
@@ -16,37 +12,31 @@ import {
   Building,
   ShieldCheck,
   Upload,
-  Edit2,
   Save,
 } from "lucide-react";
 
 const Documents = () => {
   const [user, setUser] = useState(null);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
 
-  // Form state - user types everything here
   const [formData, setFormData] = useState({
     nameAsPerPan: "",
-    dematId: "",
-    bankAccountNo: "",
-    bankName: "",
-    ifsc: "",
-    depositoryName: "",
     nameAsPerDemat: "",
-    dematAccountNo: "",
+    dematId: "",
+    depositoryName: "",
+    bankName: "",
+    bankAccountNo: "",
+    ifsc: "",
   });
 
-  // Saved (displayed) data after user clicks Save
   const [savedData, setSavedData] = useState(null);
 
-  // Document statuses
   const [panStatus, setPanStatus] = useState("Not Uploaded");
   const [aadhaarStatus, setAadhaarStatus] = useState("Not Uploaded");
   const [cmrStatus, setCmrStatus] = useState("Not Uploaded");
   const [chequeStatus, setChequeStatus] = useState("Not Uploaded");
 
-  // Selected files for preview (small display)
   const [selectedFiles, setSelectedFiles] = useState({
     pan: null,
     aadhaar: null,
@@ -60,67 +50,195 @@ const Documents = () => {
     cmrStatus === "Verified" &&
     chequeStatus === "Verified";
 
- 
+  /* ---------------- AUTH + LOAD KYC ---------------- */
+  useEffect(() => {
+    let mounted = true;
+
+    const initKyc = async () => {
+      setLoading(true);
+      const { data: { session } } = await supabase.auth.getSession();
+
+      if (!session?.user || !mounted) {
+        setLoading(false);
+        return;
+      }
+
+      const currentUser = session.user;
+      setUser(currentUser);
+
+      // 1. Try to fetch existing row
+      const { data: existing, error: fetchError } = await supabase
+        .from("user_kyc")
+        .select("*")
+        .eq("user_id", currentUser.id)
+        .maybeSingle();
+
+      let kyc = existing;
+
+      // 2. If no row → create minimal one
+      if (!existing) {
+        const { data: created, error: insertError } = await supabase
+          .from("user_kyc")
+          .insert({ user_id: currentUser.id })
+          .select()
+          .single();
+
+        if (insertError) {
+          console.error("Create KYC row failed:", insertError);
+          setLoading(false);
+          return;
+        }
+        kyc = created;
+      }
+
+      if (fetchError && fetchError.code !== "PGRST116") {
+        console.error("Fetch KYC failed:", fetchError);
+        setLoading(false);
+        return;
+      }
+
+      // 3. Populate form & saved state
+      setFormData({
+        nameAsPerPan: kyc?.name_as_per_pan || "",
+        nameAsPerDemat: kyc?.name_as_per_demat || "",
+        dematId: kyc?.demat_id || "",
+        depositoryName: kyc?.depository_name || "",
+        bankName: kyc?.bank_name || "",
+        bankAccountNo: kyc?.bank_account_no || "",
+        ifsc: kyc?.ifsc || "",
+      });
+
+      setSavedData(kyc || null);
+
+      setPanStatus(kyc?.pan_status || "Not Uploaded");
+      setAadhaarStatus(kyc?.aadhaar_status || "Not Uploaded");
+      setCmrStatus(kyc?.cmr_status || "Not Uploaded");
+      setChequeStatus(kyc?.cheque_status || "Not Uploaded");
+
+      // 4. Restore selectedFiles based on whether file paths exist
+      setSelectedFiles({
+        pan: kyc?.pan_file ? { name: "PAN Document" } : null,
+        aadhaar: kyc?.aadhaar_file ? { name: "Aadhaar Document" } : null,
+        cmr: kyc?.cmr_file ? { name: "CMR Document" } : null,
+        cheque: kyc?.cheque_file ? { name: "Cancelled Cheque" } : null,
+      });
+
+      setLoading(false);
+    };
+
+    initKyc();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session?.user) initKyc();
+    });
+
+    return () => {
+      mounted = false;
+      subscription?.unsubscribe();
+    };
+  }, []);
+
+  /* ---------------- HANDLERS ---------------- */
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSaveAll = () => {
-    setSavedData({ ...formData });
-  };
-
-  // Handle real file selection
-  const handleFileSelect = (docType, file) => {
-    if (!file) return;
-
-    // Validate file type & size
-    const validTypes = ["image/jpeg", "image/png", "application/pdf"];
-    if (!validTypes.includes(file.type)) {
-      alert("Only JPG, PNG, or PDF allowed.");
-      return;
-    }
-    if (file.size > 5 * 1024 * 1024) {
-      alert("File size must be under 5MB.");
+  const handleSaveAll = async () => {
+    if (!user) {
+      alert("Please log in first");
       return;
     }
 
-    // Update selected file
-    setSelectedFiles((prev) => ({
-      ...prev,
-      [docType]: file,
-    }));
+    const payload = {
+      user_id: user.id,
+      name_as_per_pan: formData.nameAsPerPan.trim() || null,
+      name_as_per_demat: formData.nameAsPerDemat.trim() || null,
+      demat_id: formData.dematId.trim() || null,
+      depository_name: formData.depositoryName.trim() || null,
+      bank_name: formData.bankName.trim() || null,
+      bank_account_no: formData.bankAccountNo.trim() || null,
+      ifsc: formData.ifsc.trim() || null,
+    };
 
-    // Set Pending status after file selection
-    switch (docType) {
-      case "pan":
-        setPanStatus("Pending");
-        break;
-      case "aadhaar":
-        setAadhaarStatus("Pending");
-        break;
-      case "cmr":
-        setCmrStatus("Pending");
-        break;
-      case "cheque":
-        setChequeStatus("Pending");
-        break;
-      default:
-        break;
+    const { data, error } = await supabase
+      .from("user_kyc")
+      .upsert(payload, { onConflict: "user_id" })
+      .select()
+      .single();
+
+    if (error) {
+      console.error("Save failed:", error);
+      alert("Failed to save: " + (error.message || "Unknown error"));
+      return;
     }
+
+    setSavedData(data);
+    alert("Details saved successfully!");
   };
 
-  // Show form if not saved yet, otherwise show saved view
-  const isSaved = !!savedData;
+  const handleFileSelect = async (docType, file) => {
+    if (!user || !file) return;
 
+    const fileExt = file.name.split(".").pop();
+    const filePath = `${user.id}/${docType}_${Date.now()}.${fileExt}`;
+
+    const { error: uploadError } = await supabase.storage
+      .from("kyc-documents")
+      .upload(filePath, file, { upsert: true });
+
+    if (uploadError) {
+      console.error("Upload error:", uploadError);
+      alert("File upload failed");
+      return;
+    }
+
+    const { error: updateError } = await supabase
+      .from("user_kyc")
+      .update({
+        [`${docType}_file`]: filePath,
+        [`${docType}_status`]: "Pending",
+      })
+      .eq("user_id", user.id);
+
+    if (updateError) {
+      console.error("Status update failed:", updateError);
+      alert("Could not update document status");
+      return;
+    }
+
+    setSelectedFiles((prev) => ({ ...prev, [docType]: file }));
+    if (docType === "pan") setPanStatus("Pending");
+    if (docType === "aadhaar") setAadhaarStatus("Pending");
+    if (docType === "cmr") setCmrStatus("Pending");
+    if (docType === "cheque") setChequeStatus("Pending");
+  };
+
+  // Only consider saved if at least one meaningful field exists
+  const hasAnyData = savedData && (
+    savedData.name_as_per_pan ||
+    savedData.name_as_per_demat ||
+    savedData.demat_id ||
+    savedData.depository_name ||
+    savedData.bank_name ||
+    savedData.bank_account_no ||
+    savedData.ifsc
+  );
+
+  const isSaved = !!hasAnyData;
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <p className="text-gray-600">Loading KYC details...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Sidebar mobileOpen={mobileSidebarOpen} setMobileOpen={setMobileSidebarOpen} />
+      <Sidebar mobileOpen={mobileSidebarOpen} setMobileSidebarOpen={setMobileSidebarOpen} />
 
       <main className="md:ml-64 p-4 md:p-8 transition-all">
         {/* Mobile Header */}
@@ -137,13 +255,11 @@ const Documents = () => {
             <h1 className="text-3xl font-bold text-gray-900">Documents & KYC</h1>
             <p className="text-gray-600 mt-1">Manage and verify your account details</p>
           </div>
-
           <UserProfileDropdown />
         </header>
 
         {/* Main KYC Card */}
         <section className="bg-white rounded-2xl border shadow-sm overflow-hidden">
-          {/* Header */}
           <div className="px-6 py-5 border-b bg-gradient-to-r from-gray-50 to-white">
             <div className="flex items-center gap-3">
               <ShieldCheck className="text-green-600" size={24} />
@@ -160,12 +276,12 @@ const Documents = () => {
                     <DetailItem
                       icon={<User size={16} />}
                       label="Name (As Per PAN)"
-                      value={savedData.nameAsPerPan || "Not Provided"}
+                      value={savedData.name_as_per_pan || "Not Provided"}
                     />
                     <DetailItem
                       icon={<User size={16} />}
                       label="Name (As Per Demat)"
-                      value={savedData.nameAsPerDemat || "Not Provided"}
+                      value={savedData.name_as_per_demat || "Not Provided"}
                     />
                   </>
                 ) : (
@@ -201,9 +317,16 @@ const Documents = () => {
               <DetailGroup title="Demat Account">
                 {isSaved ? (
                   <>
-                    <DetailItem icon={<CreditCard size={16} />} label="Demat ID" value={savedData.dematId} />
-                    <DetailItem icon={<FileText size={16} />} label="Demat Account No." value={savedData.dematAccountNo} />
-                    <DetailItem icon={<Building size={16} />} label="Depository Name" value={savedData.depositoryName} />
+                    <DetailItem
+                      icon={<CreditCard size={16} />}
+                      label="Demat ID"
+                      value={savedData.demat_id || "Not Provided"}
+                    />
+                    <DetailItem
+                      icon={<Building size={16} />}
+                      label="Depository Name"
+                      value={savedData.depository_name || "Not Provided"}
+                    />
                   </>
                 ) : (
                   <>
@@ -218,8 +341,6 @@ const Documents = () => {
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
                       />
                     </div>
-
-                 
 
                     <div className="flex flex-col gap-1.5">
                       <label className="text-xs text-gray-500">Depository Name</label>
@@ -240,9 +361,21 @@ const Documents = () => {
               <DetailGroup title="Bank Details">
                 {isSaved ? (
                   <>
-                    <DetailItem icon={<Building size={16} />} label="Bank Name" value={savedData.bankName} />
-                    <DetailItem icon={<CreditCard size={16} />} label="Bank Account No." value={savedData.bankAccountNo} />
-                    <DetailItem icon={<FileText size={16} />} label="IFSC Code" value={savedData.ifsc} />
+                    <DetailItem
+                      icon={<Building size={16} />}
+                      label="Bank Name"
+                      value={savedData.bank_name || "Not Provided"}
+                    />
+                    <DetailItem
+                      icon={<CreditCard size={16} />}
+                      label="Bank Account No."
+                      value={savedData.bank_account_no || "Not Provided"}
+                    />
+                    <DetailItem
+                      icon={<FileText size={16} />}
+                      label="IFSC Code"
+                      value={savedData.ifsc || "Not Provided"}
+                    />
                   </>
                 ) : (
                   <>
@@ -285,7 +418,7 @@ const Documents = () => {
                 )}
               </DetailGroup>
 
-              {/* Required Documents Uploads - Compact & Fixed */}
+              {/* Required Documents Uploads */}
               <DetailGroup title="Required Documents" fullWidth>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                   <UploadCard
@@ -316,10 +449,11 @@ const Documents = () => {
               </DetailGroup>
             </div>
 
-            {/* Save Button (only shown when editing) */}
+            {/* Save Button - show when editing (not saved) */}
             {!isSaved && (
               <div className="mt-8 flex justify-center">
                 <button
+                  type="button"
                   onClick={handleSaveAll}
                   className="inline-flex items-center gap-2 px-8 py-3 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 transition shadow-md"
                 >
@@ -336,7 +470,10 @@ const Documents = () => {
                 <p className="font-medium">To update any details</p>
                 <p className="mt-1">
                   Please email us at{" "}
-                  <a href="mailto:support@sharebazaaronline.com" className="text-green-700 hover:underline font-medium">
+                  <a
+                    href="mailto:support@sharebazaaronline.com"
+                    className="text-green-700 hover:underline font-medium"
+                  >
                     support@sharebazaaronline.com
                   </a>
                 </p>
@@ -393,11 +530,7 @@ const DetailItem = ({ icon, label, value, status }) => (
             : "text-gray-600"
         }`}
       >
-        {status === "Verified" ? (
-          <CheckCircle size={14} />
-        ) : status === "Pending" ? (
-          <AlertCircle size={14} />
-        ) : null}
+        {status === "Verified" ? <CheckCircle size={14} /> : status === "Pending" ? <AlertCircle size={14} /> : null}
         {status}
       </span>
     )}
@@ -418,20 +551,15 @@ const UploadCard = ({ title, status, selectedFile, onFileSelect }) => (
           type="file"
           accept="image/jpeg,image/png,application/pdf"
           className="hidden"
-          onChange={(e) => {
-            if (e.target.files?.[0]) {
-              onFileSelect(e.target.files[0]);
-            }
-          }}
+          onChange={(e) => e.target.files?.[0] && onFileSelect(e.target.files[0])}
         />
       </label>
     ) : (
       <div className="bg-white rounded-lg border p-2.5 text-xs flex items-center justify-between gap-2 min-h-[60px]">
         <div className="flex items-center gap-2 flex-1 min-w-0">
           <FileText className="text-green-600 flex-shrink-0" size={16} />
-          <p className="font-medium truncate flex-1">{selectedFile.name}</p>
+          <p className="font-medium truncate flex-1">{selectedFile?.name || "Uploaded file"}</p>
         </div>
-
         <span
           className={`text-xs font-medium flex items-center gap-1 flex-shrink-0 ${
             status === "Pending"
@@ -443,13 +571,11 @@ const UploadCard = ({ title, status, selectedFile, onFileSelect }) => (
         >
           {status === "Pending" ? (
             <>
-              <AlertCircle size={12} />
-              Pending
+              <AlertCircle size={12} /> Pending
             </>
           ) : status === "Verified" ? (
             <>
-              <CheckCircle size={12} />
-              Verified
+              <CheckCircle size={12} /> Verified
             </>
           ) : (
             status

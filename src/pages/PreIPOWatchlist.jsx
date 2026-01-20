@@ -1,17 +1,14 @@
-// src/pages/PreIPOWatchlist.jsx
-
 import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
-import { Menu, AlertCircle, TrendingUp, Plus, X } from "lucide-react";
+import { Menu, AlertCircle, TrendingUp, Plus, X, FileText } from "lucide-react";
 
 const PreIPOWatchlist = () => {
   const [user, setUser] = useState(null);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const navigate = useNavigate();
-
 
   // Updated watchlist (no daily change, added ISIN, sector below name)
   const watchlist = [
@@ -63,6 +60,21 @@ const PreIPOWatchlist = () => {
       demand: "Strong",
       expectedIPO: "2026",
     },
+  ];
+
+  // New DRHP Filed section data (analyzed: recent/upcoming companies that have filed DRHP)
+  // Standard design: Cards with company name, sector, filed date, expected listing, status
+  // Analyzed needs: Add "View DRHP" button (could link to external or internal PDF viewer if implemented)
+  // Data based on real-world examples (as of 2023-2024 filings, fictionalized for demo)
+  const drhpFiled = [
+    {
+      name: "Ola Electric",
+      sector: "Electric Vehicles",
+      filedDate: "Dec 2023",
+      expectedListing: "August 9, 2024",
+      status: "Approved",
+    },
+   
   ];
 
   return (
@@ -152,10 +164,26 @@ const PreIPOWatchlist = () => {
           </div>
         )}
 
+        {/* New DRHP Filed Section */}
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
+            <FileText className="text-blue-600" size={24} />
+            DRHP Filed Companies
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Companies that have filed Draft Red Herring Prospectus (DRHP) with SEBI for upcoming IPOs. Track their progress and expected listing.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {drhpFiled.map((item, index) => (
+              <DRHPCard key={index} {...item} />
+            ))}
+          </div>
+        </section>
+
         {/* Suggested Pre-IPOs Section */}
         <section className="mt-12">
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
-            <TrendingUp className="text-green-600" />
+            <TrendingUp className="text-green-600" size={24} />
             Suggested for You
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -178,24 +206,61 @@ const PreIPOWatchlist = () => {
               sector="Manufacturing"
             />
           </div>
-             {/* View More Button - Below the cards & Suggested section */}
-        <div className="mt-10 text-center">
-          <button
-            onClick={() => {
-              // You can later navigate to a full list page or load more items
-              alert("Loading more pre-IPO companies...");
-            }}
-            className="inline-flex items-center gap-3 px-10 py-4 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 transition shadow-md hover:shadow-lg"
-          >
-            <TrendingUp size={20} />
-            View More 
-          </button>
-        </div>
+          {/* View More Button */}
+          <div className="mt-10 text-center">
+            <button
+              onClick={() => {
+                // Navigate to a full list page or load more
+                alert("Loading more pre-IPO companies...");
+              }}
+              className="inline-flex items-center gap-3 px-10 py-4 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 transition shadow-md hover:shadow-lg"
+            >
+              <TrendingUp size={20} />
+              View More
+            </button>
+          </div>
         </section>
       </main>
     </div>
   );
 };
+
+// DRHP Card Component (new)
+const DRHPCard = ({ name, sector, filedDate, expectedListing, status }) => (
+  <div className="bg-white rounded-2xl p-6 border shadow-sm hover:shadow-lg transition">
+    <div className="flex justify-between items-start mb-4">
+      <div>
+        <h3 className="text-lg font-bold text-gray-900">{name}</h3>
+        <p className="text-sm text-gray-600">{sector}</p>
+      </div>
+    </div>
+
+    <div className="space-y-3">
+      <div className="flex justify-between">
+        <span className="text-sm text-gray-600">Filed Date</span>
+        <span className="font-semibold">{filedDate}</span>
+      </div>
+      <div className="flex justify-between">
+        <span className="text-sm text-gray-600">Listing</span>
+        <span className="font-semibold">{expectedListing}</span>
+      </div>
+      <div className="flex justify-between">
+        <span className="text-sm text-gray-600">Status</span>
+        <span className="font-semibold text-blue-600">{status}</span>
+      </div>
+    </div>
+
+    <div className="mt-6 pt-4 border-t flex items-center justify-between">
+      <button className="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-1">
+        <FileText size={16} />
+        View DRHP
+      </button>
+      <button className="text-sm font-semibold text-green-600 hover:underline">
+        Add to Watchlist
+      </button>
+    </div>
+  </div>
+);
 
 const SuggestionCard = ({ name, price, demand, sector }) => (
   <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border shadow-sm hover:shadow-md transition">
@@ -212,7 +277,6 @@ const SuggestionCard = ({ name, price, demand, sector }) => (
         {demand}
       </span>
       <button className="flex items-center gap-2 text-sm font-semibold text-green-600 hover:underline">
-        
         Buy Now
       </button>
     </div>

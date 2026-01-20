@@ -1,18 +1,15 @@
-// src/components/HeaderAndNav.jsx (Updated with Unique User ID: SB-XXXXXXXX format)
+// src/components/HeaderAndNav.jsx
 
 import { useState, useRef, useEffect } from "react";
-import { Search, Menu, X, User, LogOut, Settings, Bell } from "lucide-react";
+import { Search,User, Menu, X, LogOut, Settings, Bell } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import GlobalSearch from "./GlobalSearch";
 
-// Helper: Generate unique 8-character alphanumeric ID (e.g., SB-A7K9P2M4)
-const generateUserID = (uid) => {
-  // Simple deterministic but readable approach using part of Firebase UID
-  // Firebase UID is usually 28 chars, we take a portion and mix with fixed prefix
+// Same ID generation function used in UserProfileDropdown & Referrals
+const generateShortId = (uid) => {
   if (!uid) return "SB-GUEST000";
-
-  const short = uid.slice(-12); // last 12 chars of UID
+  const short = uid.slice(-12);
   const hash = btoa(short).replace(/[=+/]/g, "").slice(0, 8).toUpperCase();
   return `SB-${hash}`;
 };
@@ -29,7 +26,7 @@ const HeaderAndNav = () => {
   const [query, setQuery] = useState("");
   const [user, setUser] = useState(null);
   const [profileOpen, setProfileOpen] = useState(false);
-  const [userID, setUserID] = useState(""); // ← Unique SB-XXXXXXXX ID
+  const [userID, setUserID] = useState("SB-XXXXXX"); // Consistent SB-ID
 
   const ipoTimer = useRef(null);
   const preIpoTimer = useRef(null);
@@ -37,48 +34,66 @@ const HeaderAndNav = () => {
   const searchRef = useRef(null);
   const navigate = useNavigate();
 
- const handleLogout = async () => {
-  await supabase.auth.signOut();
-  setUser(null);
-  setUserID("");
-  setProfileOpen(false);
-  navigate("/", { replace: true });
-};
-useEffect(() => {
-  // Initial session load
-  const loadSession = async () => {
-    const {
-      data: { session },
-    } = await supabase.auth.getSession();
+  useEffect(() => {
+    const initializeUser = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
 
-    if (session?.user) {
-      setUser(session.user);
-      setUserID(generateUserID(session.user.id));
-    } else {
-      setUser(null);
-      setUserID("");
-    }
+      if (!session?.user) {
+        setUser(null);
+        setUserID("SB-GUEST000");
+        return;
+      }
+
+      const currentUser = session.user;
+      setUser(currentUser);
+
+      // Fetch or create sb_user_id (same logic as dropdown/referrals)
+      let { data: profile } = await supabase
+        .from("profiles")
+        .select("sb_user_id")
+        .eq("id", currentUser.id)
+        .maybeSingle();
+
+      let code = profile?.sb_user_id;
+
+      if (!code) {
+        code = generateShortId(currentUser.id);
+
+        const { error } = await supabase
+          .from("profiles")
+          .update({ sb_user_id: code })
+          .eq("id", currentUser.id);
+
+        if (error) {
+          console.error("Failed to save sb_user_id:", error);
+        }
+      }
+
+      setUserID(code);
+    };
+
+    initializeUser();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!session?.user) {
+        setUser(null);
+        setUserID("SB-GUEST000");
+        navigate("/", { replace: true });
+      } else {
+        initializeUser();
+      }
+    });
+
+    return () => subscription.unsubscribe();
+  }, [navigate]);
+
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    setUser(null);
+    setUserID("SB-GUEST000");
+    setProfileOpen(false);
+    navigate("/", { replace: true });
   };
-
-  loadSession();
-
-  // Listen to auth changes (login/logout/refresh)
-  const {
-    data: { subscription },
-  } = supabase.auth.onAuthStateChange((_event, session) => {
-    if (session?.user) {
-      setUser(session.user);
-      setUserID(generateUserID(session.user.id));
-    } else {
-      setUser(null);
-      setUserID("");
-    }
-  });
-
-  return () => {
-    subscription.unsubscribe();
-  };
-}, []);
 
   const openWithDelay = (setter, timerRef) => {
     if (timerRef.current) {
@@ -96,7 +111,6 @@ useEffect(() => {
     }, delay);
   };
 
-  // Close search when clicking outside
   useEffect(() => {
     const handler = (e) => {
       if (searchRef.current && !searchRef.current.contains(e.target)) {
@@ -106,6 +120,13 @@ useEffect(() => {
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, []);
+
+  // Avatar letter (same as UserProfileDropdown)
+  const avatarLetter = user
+    ? (user.user_metadata?.full_name?.charAt(0)?.toUpperCase() ||
+       user.email?.charAt(0)?.toUpperCase() ||
+       "?")
+    : "?";
 
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
@@ -196,14 +217,10 @@ useEffect(() => {
                   className="flex items-center gap-3 hover:bg-gray-100 rounded-full px-3 py-2 transition-all duration-200"
                   aria-label="User menu"
                 >
-                  <img
-                    src={user.user_metadata?.avatar_url || "/images/avatar.png"}
-                    alt="Profile"
-                    onError={(e) => {
-                      e.currentTarget.src = "/images/avatar.png";
-                    }}
-                    className="h-10 w-10 rounded-full border-2 border-gray-300 object-cover shadow-sm"
-                  />
+                  {/* Same green circle avatar as UserProfileDropdown */}
+                  <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-semibold">
+                    {avatarLetter}
+                  </div>
                   <span className="text-sm font-medium text-gray-700 hidden xl:block">
                     {user.user_metadata?.full_name || user.email?.split("@")[0] || "User"}
                   </span>
@@ -394,10 +411,17 @@ useEffect(() => {
             {/* Mobile Login/Profile with User ID */}
             {user ? (
               <div className="pt-4 border-t border-gray-200">
-                <p className="text-sm font-medium text-gray-900 mb-1">
-                  {user.displayName || user.email.split("@")[0]}
-                </p>
-                <p className="text-xs text-gray-500 mb-2">ID: {userID}</p>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-semibold">
+                    {avatarLetter}
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-gray-900">
+                      {user.user_metadata?.full_name || user.email?.split("@")[0] || "User"}
+                    </p>
+                    <p className="text-xs text-gray-600">ID: {userID}</p>
+                  </div>
+                </div>
                 <button
                   onClick={handleLogout}
                   className="text-sm text-red-600 font-medium"

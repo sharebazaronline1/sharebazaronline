@@ -11,10 +11,8 @@ export const AuthProvider = ({ children }) => {
     let mounted = true;
 
     const initAuth = async () => {
-      // 🔑 1. IMPORTANT: Parse OAuth redirect (for new browsers)
-      await supabase.auth.getSessionFromUrl({ storeSession: true });
-
-      // 🔑 2. Load existing session
+      
+   
       const { data } = await supabase.auth.getSession();
 
       if (mounted) {

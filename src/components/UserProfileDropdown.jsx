@@ -3,63 +3,75 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { Bell, Settings, LogOut, Share2 } from "lucide-react";
 import { supabase } from "../lib/supabase";
 
-
-const generateUserID = (uid) => {
-  if (!uid) return "SB-GUEST000";
-  const short = uid.slice(-12);
-  const hash = btoa(short).replace(/[=+/]/g, "").slice(0, 8).toUpperCase();
-  return `SB-${hash}`;
-};
-
 const UserProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [userData, setUserData] = useState({
-    displayName: "User",
-    email: "",
-    userID: "",
+    displayName: "Guest",
+    email: "Loading...",
+    userID: "SB-XXXXXX",
   });
 
   const navigate = useNavigate();
 
   useEffect(() => {
+    let mounted = true;
+
     const getUser = async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+      const { data: { user } } = await supabase.auth.getUser();
 
-      if (user) {
-        const email = user.email || "";
-        const name =
-          user.user_metadata?.full_name ||
-          user.user_metadata?.name ||
-          email.split("@")[0] ||
-          "User";
+      if (!user || !mounted) return;
 
+      const email = user.email || "No email";
+      let name =
+        user.user_metadata?.full_name ||
+        user.user_metadata?.name ||
+        email.split("@")[0] ||
+        "Guest";
+
+      // Capitalize first letter safely
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+
+      // Fetch stored referral code
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("sb_user_id")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      const referralCode = profile?.sb_user_id || "SB-NOTSET";
+
+      if (mounted) {
         setUserData({
           displayName: name,
           email,
-          userID: generateUserID(user.id),
+          userID: referralCode,
         });
       }
     };
 
     getUser();
 
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       if (!session) {
         navigate("/", { replace: true });
+      } else {
+        getUser();
       }
     });
 
-    return () => subscription.unsubscribe();
+    return () => {
+      mounted = false;
+      subscription.unsubscribe();
+    };
   }, [navigate]);
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
     navigate("/", { replace: true });
   };
+
+  // Safe avatar letter (no spinner, instant fallback)
+  const avatarLetter = userData.displayName.charAt(0).toUpperCase() || "?";
 
   return (
     <div className="relative">
@@ -69,7 +81,7 @@ const UserProfileDropdown = () => {
         className="flex items-center gap-3 hover:bg-gray-100 rounded-full p-2 transition-all duration-200"
       >
         <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-semibold">
-          {userData.displayName.charAt(0).toUpperCase()}
+          {avatarLetter}
         </div>
       </button>
 
