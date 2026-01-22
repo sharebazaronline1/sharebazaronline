@@ -1,8 +1,7 @@
 // src/pages/Settings.jsx
 
 import { useEffect, useState } from "react";
-import { onAuthStateChanged, updateProfile, updatePassword, reauthenticateWithCredential, EmailAuthProvider } from "firebase/auth";
-import { auth } from "../firebase";
+import { supabase } from "../lib/supabase";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown"; // ← Added
@@ -30,18 +29,40 @@ const Settings = () => {
   const [editSecurity, setEditSecurity] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (currentUser) => {
-      if (!currentUser) navigate("/login");
-      else {
-        setUser(currentUser);
-        setDisplayName(currentUser.displayName || "");
-        setEmail(currentUser.email || "");
-        setPhone(currentUser.phoneNumber || "Not set");
-      }
-    });
-    return () => unsub();
-  }, [navigate]);
+useEffect(() => {
+  let mounted = true;
+
+  const checkAuth = async () => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+
+    if (!mounted) return;
+
+    if (!session?.user) {
+      navigate("/login");
+      return;
+    }
+
+    const user = session.user;
+
+    setUser(user);
+    setDisplayName(
+      user.user_metadata?.full_name ||
+      user.user_metadata?.name ||
+      ""
+    );
+    setEmail(user.email || "");
+    setPhone(user.phone || "Not set");
+  };
+
+  checkAuth();
+
+  return () => {
+    mounted = false;
+  };
+}, [navigate]);
+
 
   const handleUpdateProfile = async () => {
     setLoading(true);

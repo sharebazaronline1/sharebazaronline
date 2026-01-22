@@ -75,7 +75,7 @@ const SkillUp = () => {
               </p>
             </motion.div>
 
-         <motion.div
+        <motion.div
   initial={{ opacity: 0, y: 30 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
@@ -83,13 +83,22 @@ const SkillUp = () => {
   className="bg-white rounded-2xl shadow-lg p-10 text-center border border-gray-100 hover:shadow-xl transition-shadow"
 >
   <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-    <span className="text-4xl">📊</span>  {/* Bar chart - represents portfolio tracking & allocation */}
+    <span className="text-4xl">📊</span>
   </div>
-  <h3 className="text-2xl font-bold mb-3">Portfolio Management</h3>
-  <p className="text-gray-600 leading-relaxed">
-    Build balanced portfolios, allocate assets wisely, and minimize risk for long-term growth
-  </p>
+
+  <h3 className="text-2xl font-bold mb-3 tracking-tight">
+    OptionQuant
+  </h3>
+
+  <div className="text-sm text-purple-700 font-semibold bg-purple-50 inline-block px-4 py-1 rounded-full mb-4">
+    Limited-time early access
+  </div>
+
+  <div className="text-xl font-bold text-gray-900">
+    ₹14,999
+  </div>
 </motion.div>
+
           </div>
         </div>
       </div>

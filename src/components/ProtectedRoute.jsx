@@ -1,17 +1,26 @@
-import { Navigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
-import AuthLoadingScreen from "./AuthLoadingScreen";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
+import { supabase } from "../lib/supabase";
+import { useEffect, useState } from "react";
 
-const ProtectedRoute = ({ children }) => {
-  const { user, loading } = useAuth();
+const ProtectedRoute = () => {
+  const [loading, setLoading] = useState(true);
+  const [authenticated, setAuthenticated] = useState(false);
+  const location = useLocation();
 
-  if (loading) return <AuthLoadingScreen />;
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      setAuthenticated(!!data.session);
+      setLoading(false);
+    });
+  }, []);
 
-  if (!user) {
-    return <Navigate to="/login" replace />;
+  if (loading) return null;
+
+  if (!authenticated) {
+    return <Navigate to="/login" replace state={{ from: location }} />;
   }
 
-  return children;
+  return <Outlet />;
 };
 
 export default ProtectedRoute;

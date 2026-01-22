@@ -11,10 +11,7 @@ export const AuthProvider = ({ children }) => {
     let mounted = true;
 
     const initAuth = async () => {
-      
-   
       const { data } = await supabase.auth.getSession();
-
       if (mounted) {
         setUser(data.session?.user ?? null);
         setLoading(false);
@@ -23,12 +20,10 @@ export const AuthProvider = ({ children }) => {
 
     initAuth();
 
-    // 🔑 3. Listen to auth changes
-    const { data: listener } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        setUser(session?.user ?? null);
-      }
-    );
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (!mounted) return;
+      setUser(session?.user ?? null);
+    });
 
     return () => {
       mounted = false;

@@ -1,5 +1,3 @@
-// src/App.jsx
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -8,7 +6,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { useEffect, useState } from "react";
 
 import HeaderAndNav from "./components/HeaderAndNav";
 import Footer from "./components/Footer";
@@ -37,51 +34,22 @@ import Orders from "./pages/Orders";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
 import Referrals from "./pages/Referrals";
+import { AuthProvider } from "./context/AuthContext";
+import ProtectedRoute from "./components/ProtectedRoute";
+
 
 import { supabase } from "./lib/supabase";
 
 /* ---------------- AUTH GUARD ---------------- */
 
-function ProtectedRoute({ children }) {
-  const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      setUser(data.session?.user ?? null);
-      setLoading(false);
-    });
-
-    const { data: listener } = supabase.auth.onAuthStateChange(
-      (_event, session) => {
-        setUser(session?.user ?? null);
-      }
-    );
-
-    return () => listener.subscription.unsubscribe();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <span className="text-sm text-gray-500 animate-pulse">
-          Checking authentication…
-        </span>
-      </div>
-    );
-  }
-
-  if (!user) return <Navigate to="/login" replace />;
-
-  return children;
-}
 
 /* ---------------- APP LAYOUT ---------------- */
 
 function AppLayout() {
   const location = useLocation();
-
-  const hideLayoutElements =
+ console.log("ROUTE:", location.pathname);
+  // Hide header/footer/sidebar on auth pages and dashboard-like protected pages
+  const isAuthOrProtectedPage =
     location.pathname === "/login" ||
     location.pathname.startsWith("/dashboard") ||
     location.pathname.startsWith("/portfolio") ||
@@ -105,15 +73,15 @@ function AppLayout() {
       </Helmet>
 
       <div className="min-h-screen bg-gray-50 font-sans flex flex-col">
-        {/* HEADER */}
-        {!hideLayoutElements && <HeaderAndNav />}
+        {/* HEADER - only show on public pages */}
+        {!isAuthOrProtectedPage && <HeaderAndNav />}
 
         {/* CONTENT */}
         <div className="flex-1 flex w-full">
           {/* MAIN */}
           <main className="flex-1 min-w-0 px-4 lg:px-6">
             <Routes>
-              {/* Public Routes */}
+              {/* Public routes (with layout) */}
               <Route path="/" element={<Home />} />
               <Route path="/ipo-tracker" element={<IPOTracker />} />
               <Route path="/ipo/ipo-list" element={<IPOList />} />
@@ -127,78 +95,29 @@ function AppLayout() {
               <Route path="/skill-up" element={<SkillUp />} />
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
+
+              {/* Login - standalone, no layout */}
               <Route path="/login" element={<Login />} />
 
-              {/* Protected Routes */}
-              <Route
-                path="/dashboard"
-                element={
-                  <ProtectedRoute>
-                    <Dashboard />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/portfolio"
-                element={
-                  <ProtectedRoute>
-                    <Portfolio />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/pre-ipo-watchlist"
-                element={
-                  <ProtectedRoute>
-                    <PreIPOWatchlist />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/kyc"
-                element={
-                  <ProtectedRoute>
-                    <Documents />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/orders"
-                element={
-                  <ProtectedRoute>
-                    <Orders />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/notifications"
-                element={
-                  <ProtectedRoute>
-                    <Notifications />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/settings"
-                element={
-                  <ProtectedRoute>
-                    <Settings />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/referrals"
-                element={
-                  <ProtectedRoute>
-                    <Referrals />
-                  </ProtectedRoute>
-                }
-              />
+           {/* Protected routes */}
+<Route element={<ProtectedRoute />}>
+  <Route path="/dashboard" element={<Dashboard />} />
+  <Route path="/portfolio" element={<Portfolio />} />
+  <Route path="/pre-ipo-watchlist" element={<PreIPOWatchlist />} />
+  <Route path="/kyc" element={<Documents />} />
+  <Route path="/orders" element={<Orders />} />
+  <Route path="/notifications" element={<Notifications />} />
+  <Route path="/settings" element={<Settings />} />
+  <Route path="/referrals" element={<Referrals />} />
+</Route>
+
+
+             
             </Routes>
           </main>
 
-          {/* RIGHT SIDEBAR */}
-          {!hideLayoutElements && (
+          {/* RIGHT SIDEBAR - only on public pages */}
+          {!isAuthOrProtectedPage && (
             <aside className="hidden xl:block w-48 flex-shrink-0 mr-6">
               <div className="sticky top-20 mt-96 py-8 flex flex-col gap-2">
                 <div className="h-24 bg-white rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center text-sm font-semibold text-gray-700 shadow-sm">
@@ -211,8 +130,8 @@ function AppLayout() {
           )}
         </div>
 
-        {/* FOOTER */}
-        {!hideLayoutElements && <Footer />}
+        {/* FOOTER - only on public pages */}
+        {!isAuthOrProtectedPage && <Footer />}
       </div>
     </>
   );
@@ -222,9 +141,11 @@ function AppLayout() {
 
 function App() {
   return (
-    <Router>
-      <AppLayout />
-    </Router>
+  <AuthProvider>
+      <Router>
+        <AppLayout />
+      </Router>
+    </AuthProvider>
   );
 }
 

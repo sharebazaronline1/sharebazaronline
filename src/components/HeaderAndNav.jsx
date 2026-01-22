@@ -74,15 +74,17 @@ const HeaderAndNav = () => {
 
     initializeUser();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (!session?.user) {
-        setUser(null);
-        setUserID("SB-GUEST000");
-        navigate("/", { replace: true });
-      } else {
-        initializeUser();
-      }
-    });
+const { data: { subscription } } =
+  supabase.auth.onAuthStateChange((_event, session) => {
+    if (!session?.user) {
+      setUser(null);
+      setUserID("SB-GUEST000");
+      setProfileOpen(false);
+    } else {
+      initializeUser();
+    }
+  });
+
 
     return () => subscription.unsubscribe();
   }, [navigate]);

@@ -1,25 +1,52 @@
 // src/pages/Notifications.jsx
 
 import { useEffect, useState } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown"; // ← New component
 import { Menu, Bell } from "lucide-react";
+import { supabase } from "../lib/supabase";
 
 const Notifications = () => {
   const [user, setUser] = useState(null);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const unsub = onAuthStateChanged(auth, (currentUser) => {
-      if (!currentUser) navigate("/login");
-      else setUser(currentUser);
-    });
-    return () => unsub();
-  }, [navigate]);
+ useEffect(() => {
+  let mounted = true;
+
+  const checkAuth = async () => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession();
+
+    if (!mounted) return;
+
+    if (!session?.user) {
+      navigate("/login");
+      return;
+    }
+
+    setUser(session.user);
+  };
+
+  checkAuth();
+
+  const {
+    data: { subscription },
+  } = supabase.auth.onAuthStateChange((_event, session) => {
+    if (!session?.user) {
+      navigate("/login");
+    } else {
+      setUser(session.user);
+    }
+  });
+
+  return () => {
+    mounted = false;
+    subscription.unsubscribe();
+  };
+}, [navigate]);
 
   if (!user) return null;
 
