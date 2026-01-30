@@ -413,23 +413,36 @@ const { data: { subscription } } =
             {/* Mobile Login/Profile with User ID */}
             {user ? (
               <div className="pt-4 border-t border-gray-200">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-semibold">
-                    {avatarLetter}
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-gray-900">
-                      {user.user_metadata?.full_name || user.email?.split("@")[0] || "User"}
-                    </p>
-                    <p className="text-xs text-gray-600">ID: {userID}</p>
-                  </div>
-                </div>
+               <Link
+  to="/dashboard"
+  onClick={() => setMobileMenuOpen(false)}
+  className="flex items-center gap-3 mb-3 cursor-pointer"
+>
+  <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-semibold">
+    {avatarLetter}
+  </div>
+  <div>
+    <p className="text-sm font-medium text-gray-900">
+      {user.user_metadata?.full_name || user.email?.split("@")[0] || "User"}
+    </p>
+    <p className="text-xs text-gray-600">ID: {userID}</p>
+  </div>
+</Link>
+<Link
+  to="/dashboard"
+  onClick={() => setMobileMenuOpen(false)}
+  className="block text-sm text-green-600 font-medium mb-2"
+>
+  Go to Dashboard
+</Link>
+
                 <button
-                  onClick={handleLogout}
-                  className="text-sm text-red-600 font-medium"
-                >
-                  Logout
-                </button>
+  onClick={handleLogout}
+  className="text-sm text-red-600 font-medium"
+>
+  Logout
+</button>
+
               </div>
             ) : (
               <Link
