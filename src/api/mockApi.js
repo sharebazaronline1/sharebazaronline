@@ -511,7 +511,69 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "Mainboard",
   "status": "Active"
+},
+{
+  "id": 32,
+  "name": "C K K RETAIL MART",
+  "fullName": "C K K Retail Mart Limited",
+  "logo": "/images/ipo/ckkretail.png",
+  "symbol": "CKKRETAIL",
+  "open": "30 Jan 2026",
+  "close": "03 Feb 2026",
+  "listing": "06 Feb 2026",
+  "price": "155 – 163",
+  "lot": 800,
+  "minBidQuantity": 1600,
+  "issueSizeShares": 5400000,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
+},
+{
+  "id": 33,
+  "name": "BIOPOL CHEMICALS",
+  "fullName": "Biopol Chemicals Limited",
+  "logo": "/images/ipo/biopol.png",
+  "symbol": "BIOPOLCHEM",
+  "open": "06 Feb 2026",
+  "close": "10 Feb 2026",
+  "listing": "13 Feb 2026",
+  "price": "102 – 108",
+  "lot": 1200,
+  "minBidQuantity": 2400,
+  "issueSizeShares": 2894400,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
+},
+{
+  "id": 34,
+  "name": "NFP SAMPOORNA FOODS",
+  "fullName": "NFP Sampoorna Foods Limited",
+  "logo": "/images/ipo/sampoorna.png",
+  "symbol": "NFPSAMPOORNA",
+  "open": "04 Feb 2026",
+  "close": "06 Feb 2026",
+  "listing": "11 Feb 2026",
+  "price": "52 – 55",
+  "lot": 2000,
+  "minBidQuantity": 4000,
+  "issueSizeShares": 4236000,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
 }
+
+
 
 
 
