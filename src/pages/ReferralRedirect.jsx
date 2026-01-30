@@ -7,12 +7,10 @@ const ReferralRedirect = () => {
 
   useEffect(() => {
     if (code) {
-      // store referral code locally
+      console.log("REF CODE:", code); // DEBUG
       localStorage.setItem("referral_code", code);
     }
-
-    // redirect to login page
-    navigate("/login");
+    navigate("/login", { replace: true });
   }, [code, navigate]);
 
   return null;

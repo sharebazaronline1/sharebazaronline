@@ -99,7 +99,7 @@ function AppLayout() {
              
               {/* Login - standalone, no layout */}
               <Route path="/login" element={<Login />} />
-
+ <Route path="/ref/:code" element={<ReferralRedirect />} />
            {/* Protected routes */}
 <Route element={<ProtectedRoute />}>
   <Route path="/dashboard" element={<Dashboard />} />
@@ -112,7 +112,7 @@ function AppLayout() {
   <Route path="/settings" element={<Settings />} />
   <Route path="/referrals" element={<Referrals />} />
 </Route>
-               <Route path="/ref/:code" element={<ReferralRedirect />} />
+              
 
 
              
