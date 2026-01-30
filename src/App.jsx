@@ -36,6 +36,7 @@ import Settings from "./pages/Settings";
 import Referrals from "./pages/Referrals";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import ReferralRedirect from "./pages/ReferralRedirect"
 
 
 import { supabase } from "./lib/supabase";
@@ -95,7 +96,7 @@ function AppLayout() {
               <Route path="/skill-up" element={<SkillUp />} />
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
-
+              <Route path="/ref/:code" element={<ReferralRedirect />} />
               {/* Login - standalone, no layout */}
               <Route path="/login" element={<Login />} />
 
@@ -106,6 +107,7 @@ function AppLayout() {
   <Route path="/pre-ipo-watchlist" element={<PreIPOWatchlist />} />
   <Route path="/kyc" element={<Documents />} />
   <Route path="/orders" element={<Orders />} />
+ 
   <Route path="/notifications" element={<Notifications />} />
   <Route path="/settings" element={<Settings />} />
   <Route path="/referrals" element={<Referrals />} />

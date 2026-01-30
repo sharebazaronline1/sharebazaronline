@@ -11,20 +11,48 @@ const Login = () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    // Listen for auth state changes (Google, email confirmation, etc.)
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, session) => {
-      if (session?.user) {
-        // User is signed in → go to dashboard
-        navigate("/dashboard", { replace: true });
-      }
-    });
+ useEffect(() => {
+  const {
+    data: { subscription },
+  } = supabase.auth.onAuthStateChange(async (event, session) => {
+    if (session?.user) {
+      const user = session.user;
 
-    // Cleanup
-    return () => subscription.unsubscribe();
-  }, [navigate]);
+      // ✅ CHECK FOR REFERRAL CODE
+      const referralCode = localStorage.getItem("referral_code");
+
+      if (referralCode) {
+        // find referrer using sb_user_id
+        const { data: referrer } = await supabase
+          .from("profiles")
+          .select("id")
+          .eq("sb_user_id", referralCode)
+          .single();
+
+        if (referrer) {
+          await supabase.from("referrals").insert({
+            referrer_id: referrer.id,
+            referred_name:
+              user.user_metadata?.full_name ||
+              user.user_metadata?.name ||
+              "New User",
+            referred_email: user.email,
+            status: "pending",
+            reward_amount: 0,
+          });
+        }
+
+        // clear after use
+        localStorage.removeItem("referral_code");
+      }
+
+      // User is signed in → go to dashboard
+      navigate("/dashboard", { replace: true });
+    }
+  });
+
+  return () => subscription.unsubscribe();
+}, [navigate]);
 
   const handleEmailAuth = async (e) => {
     e.preventDefault();
