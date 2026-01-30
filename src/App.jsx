@@ -96,7 +96,7 @@ function AppLayout() {
               <Route path="/skill-up" element={<SkillUp />} />
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
-              <Route path="/ref/:code" element={<ReferralRedirect />} />
+             
               {/* Login - standalone, no layout */}
               <Route path="/login" element={<Login />} />
 
@@ -112,6 +112,7 @@ function AppLayout() {
   <Route path="/settings" element={<Settings />} />
   <Route path="/referrals" element={<Referrals />} />
 </Route>
+               <Route path="/ref/:code" element={<ReferralRedirect />} />
 
 
              
