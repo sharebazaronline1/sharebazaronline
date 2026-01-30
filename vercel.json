@@ -1,7 +1,7 @@
 {
   "rewrites": [
-    { "source": "/ref/:code*", "destination": "/index.html" },
-    { "source": "/login", "destination": "/index.html" },
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/ref/:code*", "destination": "/dist/index.html" },
+    { "source": "/login", "destination": "/dist/index.html" },
+    { "source": "/(.*)", "destination": "/dist/index.html" }
   ]
 }
