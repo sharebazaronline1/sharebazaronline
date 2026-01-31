@@ -1,58 +1,66 @@
 // src/pages/Login.jsx
 import { useState, useEffect } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { supabase } from "../lib/supabase";
 
 const Login = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
   const [loading, setLoading] = useState(false);
 
- useEffect(() => {
-  const {
-    data: { subscription },
-  } = supabase.auth.onAuthStateChange(async (event, session) => {
-    if (session?.user) {
-      const user = session.user;
+  useEffect(() => {
+    // ✅ STORE REFERRAL CODE FROM URL IF PRESENT
+    const params = new URLSearchParams(location.search);
+    const refCode = params.get("ref");
+    if (refCode) {
+      localStorage.setItem("referral_code", refCode);
+    }
 
-      // ✅ CHECK FOR REFERRAL CODE
-      const referralCode = localStorage.getItem("referral_code");
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (session?.user) {
+        const user = session.user;
 
-      if (referralCode) {
-        // find referrer using sb_user_id
-        const { data: referrer } = await supabase
-          .from("profiles")
-          .select("id")
-          .eq("sb_user_id", referralCode)
-          .single();
+        // ✅ CHECK FOR REFERRAL CODE IN LOCAL STORAGE
+        const referralCode = localStorage.getItem("referral_code");
 
-        if (referrer) {
-          await supabase.from("referrals").insert({
-            referrer_id: referrer.id,
-            referred_name:
-              user.user_metadata?.full_name ||
-              user.user_metadata?.name ||
-              "New User",
-            referred_email: user.email,
-            status: "pending",
-            reward_amount: 0,
-          });
+        if (referralCode) {
+          // Find referrer using sb_user_id
+          const { data: referrer } = await supabase
+            .from("profiles")
+            .select("id")
+            .eq("sb_user_id", referralCode)
+            .single();
+
+          if (referrer) {
+            await supabase.from("referrals").insert({
+              referrer_id: referrer.id,
+              referred_name:
+                user.user_metadata?.full_name ||
+                user.user_metadata?.name ||
+                "New User",
+              referred_email: user.email,
+              status: "pending",
+              reward_amount: 0,
+            });
+          }
+
+          // clear after use
+          localStorage.removeItem("referral_code");
         }
 
-        // clear after use
-        localStorage.removeItem("referral_code");
+        // User is signed in → go to dashboard
+        navigate("/dashboard", { replace: true });
       }
+    });
 
-      // User is signed in → go to dashboard
-      navigate("/dashboard", { replace: true });
-    }
-  });
-
-  return () => subscription.unsubscribe();
-}, [navigate]);
+    return () => subscription.unsubscribe();
+  }, [navigate, location.search]);
 
   const handleEmailAuth = async (e) => {
     e.preventDefault();
@@ -95,17 +103,16 @@ const Login = () => {
     }
   };
 
- const handleGoogleLogin = async () => {
-  const { error } = await supabase.auth.signInWithOAuth({
-    provider: "google",
-    options: {
-      redirectTo: `${window.location.origin}/login`,
-    },
-  });
+  const handleGoogleLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/login`,
+      },
+    });
 
-  if (error) alert(error.message);
-};
-
+    if (error) alert(error.message);
+  };
 
   return (
     <div
