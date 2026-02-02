@@ -37,7 +37,7 @@ const Login = () => {
             .eq("sb_user_id", referralCode)
             .single();
 
-          if (referrer) {
+          if (referrer?.id) {
             await supabase.from("referrals").insert({
               referrer_id: referrer.id,
               referred_name:
@@ -84,14 +84,12 @@ const Login = () => {
         return;
       }
 
-      // Login
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
       if (error) throw error;
 
-      // onAuthStateChange will catch this and redirect
     } catch (error) {
       alert(
         error.message.includes("Invalid login credentials")

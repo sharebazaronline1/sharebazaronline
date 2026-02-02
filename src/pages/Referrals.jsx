@@ -18,7 +18,6 @@ import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
 import { supabase } from "../lib/supabase";
 
-// Same generation function used in dropdown (for consistency if needed)
 const generateShortId = (uid) => {
   if (!uid) return "SB-GUEST000";
   const short = uid.slice(-12);
@@ -37,83 +36,85 @@ const Referrals = () => {
   const [referralEmail, setReferralEmail] = useState("");
   const [referralMobile, setReferralMobile] = useState("");
 
-  useEffect(() => {
-    const initializeReferral = async () => {
-      setLoading(true);
+  const fetchReferrals = async (userId) => {
+    setLoading(true);
+    const { data: refData, error: refError } = await supabase
+      .from("referrals")
+      .select("*")
+      .eq("referrer_id", userId)
+      .order("created_at", { ascending: false });
 
-      const { data: { session } } = await supabase.auth.getSession();
-      if (!session?.user) {
-        setLoading(false);
-        return;
-      }
+    if (refError) {
+      console.error("Referrals fetch error:", refError);
+      setReferrals([]);
+      setTotalRewards(0);
+    } else {
+      setReferrals(refData || []);
+      const sum =
+        refData?.reduce((acc, r) => acc + (Number(r.reward_amount) || 0), 0) || 0;
+      setTotalRewards(sum);
+    }
+    setLoading(false);
+  };
 
-      const userId = session.user.id;
+useEffect(() => {
+  const init = async () => {
+    setLoading(true);
 
-      // Step 1: Get current profile
-      const { data: profile, error: fetchError } = await supabase
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    if (!user) {
+      setLoading(false);
+      return;
+    }
+
+    const userId = user.id;
+
+    // Run profile + referrals in parallel
+    const [profileRes, referralsRes] = await Promise.all([
+      supabase
         .from("profiles")
         .select("sb_user_id")
         .eq("id", userId)
-        .single();
+        .single(),
 
-      if (fetchError && fetchError.code !== "PGRST116") {
-        console.error("Profile fetch error:", fetchError);
-      }
-
-      let code = profile?.sb_user_id;
-
-      // Step 2: If missing → generate and SAVE it once
-      if (!code) {
-        code = generateShortId(userId);
-
-        const { error: updateError } = await supabase
-          .from("profiles")
-          .update({ sb_user_id: code })
-          .eq("id", userId);
-
-        if (updateError) {
-          console.error("Failed to save sb_user_id:", updateError);
-          // Fallback — still use generated code (but log issue)
-        } else {
-          // Confirm it was saved
-          console.log("Saved new referral code:", code);
-        }
-      }
-
-      // Step 3: Set the final code (stored or newly generated)
-      setReferralCode(code);
-
-      // Step 4: Load referrals (always use user.id for filtering)
-      const { data: refData, error: refError } = await supabase
+      supabase
         .from("referrals")
         .select("*")
         .eq("referrer_id", userId)
-        .order("created_at", { ascending: false });
+        .order("created_at", { ascending: false }),
+    ]);
 
-      if (refError) {
-        console.error("Referrals fetch error:", refError);
-      } else {
-        setReferrals(refData || []);
-        const sum = refData?.reduce((acc, r) => acc + (Number(r.reward_amount) || 0), 0) || 0;
-        setTotalRewards(sum);
-      }
+    let code = profileRes.data?.sb_user_id;
 
-      setLoading(false);
-    };
+    if (!code) {
+      code = generateShortId(userId);
+      await supabase.from("profiles").update({ sb_user_id: code }).eq("id", userId);
+    }
 
-    initializeReferral();
+    setReferralCode(code);
+    setReferrals(referralsRes.data || []);
 
-    // Re-run when auth changes (safety net)
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(() => {
-      initializeReferral();
-    });
+    const sum =
+      referralsRes.data?.reduce(
+        (acc, r) => acc + (Number(r.reward_amount) || 0),
+        0
+      ) || 0;
 
-    return () => subscription.unsubscribe();
-  }, []);
+    setTotalRewards(sum);
+    setLoading(false);
+  };
 
-  const referralLink = referralCode
-    ? `https://sharebazaaronline.com/ref/${referralCode}`
-    : "";
+  init();
+}, []);
+
+
+const referralLink = referralCode
+  ? `https://sharebazaaronline.com/login?ref=${referralCode}`
+  : "";
+
 
   const handleCopy = () => {
     if (!referralLink) return;
@@ -135,7 +136,9 @@ const Referrals = () => {
       return;
     }
 
-    const { data: { user } } = await supabase.auth.getUser();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
     if (!user) return;
 
     const { error } = await supabase.from("referrals").insert({
@@ -153,14 +156,7 @@ const Referrals = () => {
       return;
     }
 
-    // Refresh list
-    const { data: refreshed } = await supabase
-      .from("referrals")
-      .select("*")
-      .eq("referrer_id", user.id)
-      .order("created_at", { ascending: false });
-
-    setReferrals(refreshed || []);
+    await fetchReferrals(user.id);
 
     setReferralName("");
     setReferralEmail("");
@@ -171,9 +167,7 @@ const Referrals = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Sidebar mobileOpen={false} setMobileOpen={() => {}} />
-
       <main className="md:ml-64 px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
-        {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
             Rewards & Referrals
@@ -181,7 +175,6 @@ const Referrals = () => {
           <UserProfileDropdown />
         </div>
 
-        {/* MAIN CONTENT */}
         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm max-w-5xl mx-auto p-6 sm:p-8 space-y-10">
           {/* HERO */}
           <div className="text-center space-y-2">
@@ -193,7 +186,7 @@ const Referrals = () => {
             </p>
           </div>
 
-          {/* REFERRAL LINK SECTION */}
+          {/* REFERRAL LINK */}
           <div className="flex flex-col items-center gap-6">
             {!showLink ? (
               <button
@@ -209,7 +202,6 @@ const Referrals = () => {
                     readOnly
                     value={referralLink || "Loading..."}
                     className="flex-1 border border-gray-300 rounded-lg px-5 py-3.5 text-base font-mono bg-gray-50"
-                    placeholder="Your referral link is loading..."
                   />
                   <button
                     onClick={handleCopy}
@@ -222,11 +214,12 @@ const Referrals = () => {
                     {copied ? "Copied!" : "Copy Link"}
                   </button>
                 </div>
-
                 {referralLink && (
                   <div className="flex justify-center gap-5 pt-2">
                     <a
-                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}`}
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                        referralLink
+                      )}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-blue-100 hover:bg-blue-200 flex items-center justify-center transition"
@@ -234,7 +227,9 @@ const Referrals = () => {
                       <FaFacebookF className="text-blue-700 text-xl" />
                     </a>
                     <a
-                      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(referralLink)}`}
+                      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
+                        referralLink
+                      )}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition"
@@ -242,7 +237,9 @@ const Referrals = () => {
                       <FaXTwitter className="text-black text-xl" />
                     </a>
                     <a
-                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(referralLink)}`}
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
+                        referralLink
+                      )}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-blue-100 hover:bg-blue-200 flex items-center justify-center transition"
@@ -262,8 +259,7 @@ const Referrals = () => {
               </div>
             )}
           </div>
-
-          {/* HOW IT WORKS */}
+ {/* HOW IT WORKS */}
           <div className="border-t pt-10">
             <h3 className="text-xl font-semibold text-center mb-10">
               How it works
@@ -349,8 +345,7 @@ const Referrals = () => {
               </div>
             </form>
           </div>
-
-          {/* REFERRALS & REWARDS OVERVIEW */}
+          {/* REFERRALS & EARNINGS */}
           <div className="border-t pt-10">
             <h3 className="text-xl font-semibold mb-8 flex items-center gap-3">
               <Users size={24} className="text-green-600" />
@@ -374,7 +369,6 @@ const Referrals = () => {
               </div>
             ) : (
               <>
-                {/* Total Rewards */}
                 <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-8 mb-10 text-center shadow-inner">
                   <p className="text-lg text-gray-700 mb-2">Total Rewards Earned</p>
                   <p className="text-5xl font-bold text-green-700">
@@ -382,7 +376,6 @@ const Referrals = () => {
                   </p>
                 </div>
 
-                {/* Referrals List */}
                 <div className="space-y-5">
                   {referrals.map((ref, index) => (
                     <div
