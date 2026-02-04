@@ -52,8 +52,9 @@ const UserProfileDropdown = () => {
   }, []);
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-  };
+  await supabase.auth.signOut();
+  navigate("/", { replace: true }); 
+};
 
   const displayName =
     user?.user_metadata?.full_name ||
