@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,useNavigate  } from "react-router-dom";
 import { Bell, Settings, LogOut, User, Share2 } from "lucide-react";
 import { supabase } from "../lib/supabase";
 import { useAuth } from "../context/AuthContext";
@@ -13,7 +13,7 @@ const UserProfileDropdown = () => {
     email: "",
     userID: "SB-NOTSET",
   });
-
+  const navigate = useNavigate(); 
   useEffect(() => {
     let mounted = true;
 
