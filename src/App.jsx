@@ -48,7 +48,6 @@ import { supabase } from "./lib/supabase";
 
 function AppLayout() {
   const location = useLocation();
- console.log("ROUTE:", location.pathname);
   // Hide header/footer/sidebar on auth pages and dashboard-like protected pages
   const isAuthOrProtectedPage =
     location.pathname === "/login" ||

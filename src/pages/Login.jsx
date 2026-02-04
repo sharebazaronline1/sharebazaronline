@@ -11,56 +11,99 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
   const [loading, setLoading] = useState(false);
+const generateShortId = (uid) => {
+  if (!uid) return "SB-GUEST000";
+  const short = uid.slice(-12);
+  const hash = btoa(short).replace(/[=+/]/g, "").slice(0, 8).toUpperCase();
+  return `SB-${hash}`;
+};
 
-  useEffect(() => {
-    // ✅ STORE REFERRAL CODE FROM URL IF PRESENT
-    const params = new URLSearchParams(location.search);
-    const refCode = params.get("ref");
-    if (refCode) {
-      localStorage.setItem("referral_code", refCode);
+useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const refCode = params.get("ref");
+  if (refCode) localStorage.setItem("referral_code", refCode);
+
+const { data: { subscription } } = supabase.auth.onAuthStateChange(
+  async (event, session) => {
+    if (event !== "SIGNED_IN") return;
+    if (!session?.user) return;
+
+    const user = session.user;
+    const referralCode = localStorage.getItem("referral_code");
+
+    console.log("REF CODE:", referralCode);
+
+    // 1️⃣ ensure profile exists
+    const { data: profileData } = await supabase
+  .from("profiles")
+  .select("*")
+  .eq("id", user.id)
+  .maybeSingle();
+
+    if (!profileData) {
+      await supabase.from("profiles").insert({
+        id: user.id,
+        full_name: user.user_metadata?.full_name || "",
+        sb_user_id: generateShortId(user.id),
+      });
     }
 
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange(async (event, session) => {
-      if (session?.user) {
-        const user = session.user;
+    // 2️⃣ if no referral → go dashboard
+    if (!referralCode) {
+      navigate("/dashboard", { replace: true });
+      return;
+    }
 
-        // ✅ CHECK FOR REFERRAL CODE IN LOCAL STORAGE
-        const referralCode = localStorage.getItem("referral_code");
+    // 3️⃣ find referrer
+    const { data: referrer, error: refErr } = await supabase
+      .from("profiles")
+      .select("id")
+      .eq("sb_user_id", referralCode)
+      .single();
 
-        if (referralCode) {
-          // Find referrer using sb_user_id
-          const { data: referrer } = await supabase
-            .from("profiles")
-            .select("id")
-            .eq("sb_user_id", referralCode)
-            .single();
+    console.log("REFERRER:", referrer, refErr);
 
-          if (referrer?.id) {
-            await supabase.from("referrals").insert({
-              referrer_id: referrer.id,
-              referred_name:
-                user.user_metadata?.full_name ||
-                user.user_metadata?.name ||
-                "New User",
-              referred_email: user.email,
-              status: "pending",
-              reward_amount: 0,
-            });
-          }
+    if (!referrer) {
+      navigate("/dashboard", { replace: true });
+      return;
+    }
 
-          // clear after use
-          localStorage.removeItem("referral_code");
-        }
+    // 4️⃣ prevent duplicate referral
+    const { data: existing } = await supabase
+      .from("referrals")
+      .select("id")
+      .eq("referrer_id", referrer.id)
+      .eq("referred_email", user.email)
+      .maybeSingle();
 
-        // User is signed in → go to dashboard
-        navigate("/dashboard", { replace: true });
+    if (!existing) {
+      const { error: insertError } = await supabase.from("referrals").insert({
+  referrer_id: referrer.id,
+  referred_user_id: user.id,   // 👈 VERY IMPORTANT
+  referred_name: user.user_metadata?.full_name || "New Friend",
+  referred_email: user.email,
+  referred_mobile: null,
+  status: "pending",
+  reward_amount: 0,
+});
+
+
+      if (insertError) {
+        console.error("REFERRAL INSERT ERROR:", insertError);
       }
-    });
+    }
 
-    return () => subscription.unsubscribe();
-  }, [navigate, location.search]);
+    localStorage.removeItem("referral_code");
+    navigate("/dashboard", { replace: true });
+  }
+);
+
+
+  return () => subscription.unsubscribe();
+}, [navigate, location.search]);
+
+
+
 
   const handleEmailAuth = async (e) => {
     e.preventDefault();
@@ -68,14 +111,17 @@ const Login = () => {
 
     try {
       if (isSignUp) {
-        const { error } = await supabase.auth.signUp({
-          email,
-          password,
-          options: {
-            // Redirect back to login page after email confirmation
-            emailRedirectTo: `${window.location.origin}/login`,
-          },
-        });
+       const { error } = await supabase.auth.signUp({
+  email,
+  password,
+  options: {
+    data: {
+      referral_code: localStorage.getItem("referral_code"),
+    },
+    emailRedirectTo: `${window.location.origin}/login`,
+  },
+});
+
 
         if (error) throw error;
 
