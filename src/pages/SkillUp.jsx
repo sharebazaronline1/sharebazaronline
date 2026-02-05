@@ -92,7 +92,7 @@ const SkillUp = () => {
 
      <h3 className="text-2xl font-bold mb-3 tracking-tight text-gray-100">
         <span className="text-yellow-500">O</span>ption
-        <span className="text-yellow-500">Q</span>uant
+        <span className="text-yellow-500">Q</span>uaant
       </h3>
 
 
