@@ -75,29 +75,37 @@ const SkillUp = () => {
               </p>
             </motion.div>
 
-        <motion.div
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ delay: 0.6 }}
-  className="bg-white rounded-2xl shadow-lg p-10 text-center border border-gray-100 hover:shadow-xl transition-shadow"
->
-  <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
-    <span className="text-4xl">📊</span>
-  </div>
+           <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.6 }}
+      onClick={() => window.open("https://www.optionquaant.in/", "_blank")}
+      className="cursor-pointer bg-gradient-to-br from-black via-gray-900 to-black 
+                 rounded-2xl shadow-lg p-10 text-center border border-yellow-500/30 
+                 hover:shadow-yellow-500/30 hover:scale-[1.02] transition-all duration-300"
+    >
+      {/* Icon */}
+      <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6 border border-yellow-400/30">
+        <span className="text-4xl">📊</span>
+      </div>
 
-  <h3 className="text-2xl font-bold mb-3 tracking-tight">
-    OptionQuant
-  </h3>
+     <h3 className="text-2xl font-bold mb-3 tracking-tight text-gray-100">
+        <span className="text-yellow-500">O</span>ption
+        <span className="text-yellow-500">Q</span>uant
+      </h3>
 
-  <div className="text-sm text-purple-700 font-semibold bg-purple-50 inline-block px-4 py-1 rounded-full mb-4">
-    Limited-time early access
-  </div>
 
-  <div className="text-xl font-bold text-gray-900">
-    ₹14,999
-  </div>
-</motion.div>
+      {/* Badge */}
+      <div className="text-sm text-yellow-400 font-semibold bg-yellow-400/10 
+                      inline-block px-4 py-1 rounded-full mb-4 border border-yellow-400/30">
+        Limited-time early access
+      </div>
+
+      <p className="text-gray-600 font-normal leading-relaxed">
+              One Tool to Define Trend
+              </p>
+    </motion.div>
 
           </div>
         </div>
