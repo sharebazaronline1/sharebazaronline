@@ -9,101 +9,112 @@ const Login = () => {
   const location = useLocation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [fullName, setFullName] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
   const [loading, setLoading] = useState(false);
-const generateShortId = (uid) => {
-  if (!uid) return "SB-GUEST000";
-  const short = uid.slice(-12);
-  const hash = btoa(short).replace(/[=+/]/g, "").slice(0, 8).toUpperCase();
-  return `SB-${hash}`;
-};
 
-useEffect(() => {
-  const params = new URLSearchParams(location.search);
-  const refCode = params.get("ref");
-  if (refCode) localStorage.setItem("referral_code", refCode);
+  const generateShortId = (uid) => {
+    if (!uid) return "SB-GUEST000";
+    const short = uid.slice(-12);
+    const hash = btoa(short).replace(/[=+/]/g, "").slice(0, 8).toUpperCase();
+    return `SB-${hash}`;
+  };
 
-const { data: { subscription } } = supabase.auth.onAuthStateChange(
-  async (event, session) => {
-    if (event !== "SIGNED_IN") return;
-    if (!session?.user) return;
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const refCode = params.get("ref");
+    if (refCode) localStorage.setItem("referral_code", refCode);
 
-    const user = session.user;
-    const referralCode = localStorage.getItem("referral_code");
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        if (event !== "SIGNED_IN") return;
+        if (!session?.user) return;
 
-    console.log("REF CODE:", referralCode);
+        const user = session.user;
+        const referralCode = localStorage.getItem("referral_code");
 
-    // 1️⃣ ensure profile exists
-    const { data: profileData } = await supabase
-  .from("profiles")
-  .select("*")
-  .eq("id", user.id)
-  .maybeSingle();
+        console.log("REF CODE:", referralCode);
 
-    if (!profileData) {
-      await supabase.from("profiles").insert({
-        id: user.id,
-        full_name: user.user_metadata?.full_name || "",
-        sb_user_id: generateShortId(user.id),
-      });
-    }
+        // Get the best available name from user_metadata
+        const userName =
+          user.user_metadata?.full_name ||
+          user.user_metadata?.name ||
+          user.user_metadata?.fullName ||  // in case it's stored differently
+          "New Friend";
 
-    // 2️⃣ if no referral → go dashboard
-    if (!referralCode) {
-      navigate("/dashboard", { replace: true });
-      return;
-    }
+        // 1️⃣ ensure profile exists + set name if missing
+        const { data: profileData } = await supabase
+          .from("profiles")
+          .select("*")
+          .eq("id", user.id)
+          .maybeSingle();
 
-    // 3️⃣ find referrer
-    const { data: referrer, error: refErr } = await supabase
-      .from("profiles")
-      .select("id")
-      .eq("sb_user_id", referralCode)
-      .single();
+        if (!profileData) {
+          await supabase.from("profiles").insert({
+            id: user.id,
+            full_name: userName,
+            sb_user_id: generateShortId(user.id),
+          });
+        } else if (!profileData.full_name && userName !== "New Friend") {
+          await supabase
+            .from("profiles")
+            .update({ full_name: userName })
+            .eq("id", user.id);
+        }
 
-    console.log("REFERRER:", referrer, refErr);
+        // 2️⃣ if no referral → go dashboard
+        if (!referralCode) {
+          navigate("/dashboard", { replace: true });
+          return;
+        }
 
-    if (!referrer) {
-      navigate("/dashboard", { replace: true });
-      return;
-    }
+        // 3️⃣ find referrer
+        const { data: referrer, error: refErr } = await supabase
+          .from("profiles")
+          .select("id")
+          .eq("sb_user_id", referralCode)
+          .single();
 
-    // 4️⃣ prevent duplicate referral
-    const { data: existing } = await supabase
-      .from("referrals")
-      .select("id")
-      .eq("referrer_id", referrer.id)
-      .eq("referred_email", user.email)
-      .maybeSingle();
+        console.log("REFERRER:", referrer, refErr);
 
-    if (!existing) {
-      const { error: insertError } = await supabase.from("referrals").insert({
-  referrer_id: referrer.id,
-  referred_user_id: user.id,   // 👈 VERY IMPORTANT
-  referred_name: user.user_metadata?.full_name || "New Friend",
-  referred_email: user.email,
-  referred_mobile: null,
-  status: "pending",
-  reward_amount: 0,
-});
+        if (!referrer || refErr) {
+          navigate("/dashboard", { replace: true });
+          return;
+        }
 
+        // 4️⃣ prevent duplicate referral
+        const { data: existing } = await supabase
+          .from("referrals")
+          .select("id")
+          .eq("referrer_id", referrer.id)
+          .eq("referred_email", user.email)
+          .maybeSingle();
 
-      if (insertError) {
-        console.error("REFERRAL INSERT ERROR:", insertError);
+        if (!existing) {
+          const { error: insertError } = await supabase.from("referrals").insert({
+            referrer_id: referrer.id,
+            referred_user_id: user.id,
+            referred_name: userName,                    // ← Use reliable name from metadata
+            referred_email: user.email,
+            referred_mobile: null,
+            status: "pending",
+            reward_amount: 0,
+          });
+
+          if (insertError) {
+            console.error("REFERRAL INSERT ERROR:", insertError);
+          } else {
+            console.log("Referral recorded with name:", userName);
+          }
+        }
+
+        localStorage.removeItem("referral_code");
+        navigate("/dashboard", { replace: true });
       }
-    }
+    );
 
-    localStorage.removeItem("referral_code");
-    navigate("/dashboard", { replace: true });
-  }
-);
-
-
-  return () => subscription.unsubscribe();
-}, [navigate, location.search]);
-
-
-
+    return () => subscription.unsubscribe();
+  }, [navigate, location.search]);
 
   const handleEmailAuth = async (e) => {
     e.preventDefault();
@@ -111,17 +122,22 @@ const { data: { subscription } } = supabase.auth.onAuthStateChange(
 
     try {
       if (isSignUp) {
-       const { error } = await supabase.auth.signUp({
-  email,
-  password,
-  options: {
-    data: {
-      referral_code: localStorage.getItem("referral_code"),
-    },
-    emailRedirectTo: `${window.location.origin}/login`,
-  },
-});
+        if (!fullName.trim()) {
+          alert("Please enter your full name");
+          setLoading(false);
+          return;
+        }
 
+        const { error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: {
+              full_name: fullName.trim(),          // ← This goes to user_metadata
+            },
+            emailRedirectTo: `${window.location.origin}/login`,
+          },
+        });
 
         if (error) throw error;
 
@@ -135,7 +151,6 @@ const { data: { subscription } } = supabase.auth.onAuthStateChange(
         password,
       });
       if (error) throw error;
-
     } catch (error) {
       alert(
         error.message.includes("Invalid login credentials")
@@ -196,8 +211,11 @@ const { data: { subscription } } = supabase.auth.onAuthStateChange(
                   </label>
                   <input
                     type="text"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
                     className="w-full px-3 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
                     placeholder="John Doe"
+                    required
                   />
                 </div>
               )}
