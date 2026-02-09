@@ -651,17 +651,46 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "SME",
   "status": "Active"
+},
+{
+  "id": 39,
+  "name": "Fractal Analytics",
+  "fullName": "Fractal Analytics Limited",
+  "logo": "/images/ipo/Fractal.png",
+  "symbol": null,
+  "open": "09 Feb 2026",
+  "close": "11 Feb 2026",
+  "listing": "16 Feb 2026",
+  "price": "857 – 900",
+  "lot": 16,
+  "minBidQuantity": 16,
+  "issueSizeShares": null,
+  "faceValue": 1,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
+},{
+  "id": 40,
+  "name": "Aye Finance",
+  "fullName": "Aye Finance Limited",
+  "logo": "/images/ipo/AyeFinance.png",
+  "symbol": null,
+  "open": "09 Feb 2026",
+  "close": "11 Feb 2026",
+  "listing": "16 Feb 2026",
+  "price": "122 – 129",
+  "lot": 116,
+  "minBidQuantity": 116,
+  "issueSizeShares": 78294574,
+  "faceValue": 2,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
 }
-
-
-
-
-
-
-
-
-
-
 
   ]
 }
