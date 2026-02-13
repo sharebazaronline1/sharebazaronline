@@ -39,7 +39,7 @@ const Documents = () => {
 
   const [selectedFiles, setSelectedFiles] = useState({
     pan: null,
-    aadhaar: null,
+    aadhar: null,
     cmr: null,
     cheque: null,
   });
@@ -51,92 +51,106 @@ const Documents = () => {
     chequeStatus === "Verified";
 
   /* ---------------- AUTH + LOAD KYC ---------------- */
-  useEffect(() => {
-    let mounted = true;
+useEffect(() => {
+  let mounted = true;
+  let channel = null;
 
-    const initKyc = async () => {
-      setLoading(true);
-      const { data: { session } } = await supabase.auth.getSession();
+  const initKyc = async () => {
+    setLoading(true);
 
-      if (!session?.user || !mounted) {
-        setLoading(false);
-        return;
-      }
-
-      const currentUser = session.user;
-      setUser(currentUser);
-
-      // 1. Try to fetch existing row
-      const { data: existing, error: fetchError } = await supabase
-        .from("user_kyc")
-        .select("*")
-        .eq("user_id", currentUser.id)
-        .maybeSingle();
-
-      let kyc = existing;
-
-      // 2. If no row → create minimal one
-      if (!existing) {
-        const { data: created, error: insertError } = await supabase
-          .from("user_kyc")
-          .insert({ user_id: currentUser.id })
-          .select()
-          .single();
-
-        if (insertError) {
-          console.error("Create KYC row failed:", insertError);
-          setLoading(false);
-          return;
-        }
-        kyc = created;
-      }
-
-      if (fetchError && fetchError.code !== "PGRST116") {
-        console.error("Fetch KYC failed:", fetchError);
-        setLoading(false);
-        return;
-      }
-
-      // 3. Populate form & saved state
-      setFormData({
-        nameAsPerPan: kyc?.name_as_per_pan || "",
-        nameAsPerDemat: kyc?.name_as_per_demat || "",
-        dematId: kyc?.demat_id || "",
-        depositoryName: kyc?.depository_name || "",
-        bankName: kyc?.bank_name || "",
-        bankAccountNo: kyc?.bank_account_no || "",
-        ifsc: kyc?.ifsc || "",
-      });
-
-      setSavedData(kyc || null);
-
-      setPanStatus(kyc?.pan_status || "Not Uploaded");
-      setAadhaarStatus(kyc?.aadhaar_status || "Not Uploaded");
-      setCmrStatus(kyc?.cmr_status || "Not Uploaded");
-      setChequeStatus(kyc?.cheque_status || "Not Uploaded");
-
-      // 4. Restore selectedFiles based on whether file paths exist
-      setSelectedFiles({
-        pan: kyc?.pan_file ? { name: "PAN Document" } : null,
-        aadhaar: kyc?.aadhaar_file ? { name: "Aadhaar Document" } : null,
-        cmr: kyc?.cmr_file ? { name: "CMR Document" } : null,
-        cheque: kyc?.cheque_file ? { name: "Cancelled Cheque" } : null,
-      });
-
+    const { data: { session } } = await supabase.auth.getSession();
+    if (!session?.user || !mounted) {
       setLoading(false);
-    };
+      return;
+    }
 
-    initKyc();
+    const currentUser = session.user;
+    setUser(currentUser);
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (session?.user) initKyc();
+    const { data: existing } = await supabase
+      .from("user_kyc")
+      .select("*")
+      .eq("user_id", currentUser.id)
+      .maybeSingle();
+
+    let kyc = existing;
+
+    if (!existing) {
+      const { data: created, error } = await supabase
+        .from("user_kyc")
+        .insert({ user_id: currentUser.id })
+        .select()
+        .single();
+
+      if (error) {
+        console.error("Create KYC row failed:", error);
+        setLoading(false);
+        return;
+      }
+      kyc = created;
+    }
+
+    setFormData({
+      nameAsPerPan: kyc?.name_as_per_pan || "",
+      nameAsPerDemat: kyc?.name_as_per_demat || "",
+      dematId: kyc?.demat_id || "",
+      depositoryName: kyc?.depository_name || "",
+      bankName: kyc?.bank_name || "",
+      bankAccountNo: kyc?.bank_account_no || "",
+      ifsc: kyc?.ifsc || "",
     });
 
-    return () => {
-      mounted = false;
-      subscription?.unsubscribe();
-    };
-  }, []);
+    setSavedData(kyc || null);
+    setPanStatus(kyc?.pan_status || "Not Uploaded");
+    setAadhaarStatus(kyc?.aadhaar_status || "Not Uploaded");
+    setCmrStatus(kyc?.cmr_status || "Not Uploaded");
+    setChequeStatus(kyc?.cheque_status || "Not Uploaded");
+
+    setSelectedFiles({
+      pan: kyc?.pan_file ? { name: "PAN Document" } : null,
+      aadhar: kyc?.aadhaar_file ? { name: "Aadhaar Document" } : null,
+      cmr: kyc?.cmr_file ? { name: "CMR Document" } : null,
+      cheque: kyc?.cheque_file ? { name: "Cancelled Cheque" } : null,
+    });
+
+    // ✅ REALTIME LISTENER (now currentUser is defined)
+    channel = supabase
+      .channel("kyc-status-listener")
+      .on(
+        "postgres_changes",
+        {
+          event: "UPDATE",
+          schema: "public",
+          table: "user_kyc",
+          filter: `user_id=eq.${currentUser.id}`,
+        },
+        (payload) => {
+          const kyc = payload.new;
+          setPanStatus(kyc.pan_status || "Not Uploaded");
+          setAadhaarStatus(kyc.aadhaar_status || "Not Uploaded");
+          setCmrStatus(kyc.cmr_status || "Not Uploaded");
+          setChequeStatus(kyc.cheque_status || "Not Uploaded");
+          setSavedData(kyc);
+        }
+      )
+      .subscribe();
+
+    setLoading(false);
+  };
+
+  initKyc();
+
+  const { data: authListener } = supabase.auth.onAuthStateChange((_event, session) => {
+    if (session?.user) initKyc();
+  });
+
+  return () => {
+    mounted = false;
+    authListener?.subscription?.unsubscribe();
+    if (channel) supabase.removeChannel(channel);
+  };
+}, []);
+
 
   /* ---------------- HANDLERS ---------------- */
 
@@ -210,7 +224,7 @@ const Documents = () => {
 
     setSelectedFiles((prev) => ({ ...prev, [docType]: file }));
     if (docType === "pan") setPanStatus("Pending");
-    if (docType === "aadhaar") setAadhaarStatus("Pending");
+    if (docType === "aadhar") setAadhaarStatus("Pending");
     if (docType === "cmr") setCmrStatus("Pending");
     if (docType === "cheque") setChequeStatus("Pending");
   };
@@ -430,8 +444,8 @@ const Documents = () => {
                   <UploadCard
                     title="Aadhaar"
                     status={aadhaarStatus}
-                    selectedFile={selectedFiles.aadhaar}
-                    onFileSelect={(file) => handleFileSelect("aadhaar", file)}
+                    selectedFile={selectedFiles.aadhar}
+                    onFileSelect={(file) => handleFileSelect("aadhar", file)}
                   />
                   <UploadCard
                     title="CMR"
@@ -566,7 +580,7 @@ const UploadCard = ({ title, status, selectedFile, onFileSelect }) => (
               ? "text-yellow-600"
               : status === "Verified"
               ? "text-green-600"
-              : "text-gray-600"
+              :  "text-red-600"
           }`}
         >
           {status === "Pending" ? (
@@ -578,7 +592,7 @@ const UploadCard = ({ title, status, selectedFile, onFileSelect }) => (
               <CheckCircle size={12} /> Verified
             </>
           ) : (
-            status
+            status 
           )}
         </span>
       </div>
