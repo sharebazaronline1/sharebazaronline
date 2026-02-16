@@ -32,11 +32,11 @@ import Referrals from "./pages/Referrals";
 import AdminLogin from "./pages/AdminLogin";         
 import AdminDashboard from "./pages/AdminDashboard";  
 import ReferralRedirect from "./pages/ReferralRedirect";
-
+import AdminKycDocuments from "./pages/AdminKycDocuments"
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";      
-
+import AdminReferrals from "./pages/AdminReferrals"
 // Optional: If you want admin to have its own layout without user sidebar/header
 function AdminLayout() {
   const location = useLocation();
@@ -120,6 +120,8 @@ function AppLayout() {
               <Route element={<AdminRoute />}>
                 <Route path="/admin-login" element={<AdminLogin />} />
                 <Route path="/admin-dashboard" element={<AdminDashboard />} />
+                <Route path="/admin-kyc" element={<AdminKycDocuments />} />
+                <Route path="/admin-referrals" element={<AdminReferrals />} />
               </Route>
 
               {/* Catch-all redirect (optional) */}
