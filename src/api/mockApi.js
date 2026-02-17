@@ -690,7 +690,49 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "Mainboard",
   "status": "Active"
+},
+{
+  "id": 41,
+  "name": "PNGS Reva Diamond Jewellery",
+  "fullName": "PNGS Reva Diamond Jewellery Limited",
+  "logo": "/images/ipo/pngs.png",
+  "symbol": null,
+  "open": "24 Feb 2026",
+  "close": "26 Feb 2026",
+  "listing": "04 Mar 2026",
+  "price": "367 – 386",
+  "lot": 32,
+  "minBidQuantity": 32,
+  "issueSizeShares": 9844560,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
+},
+{
+  "id": 42,
+  "name": "Fractal Industries",
+  "fullName": "Fractal Industries Limited",
+  "logo": "/images/ipo/fractalindustries.png",
+  "symbol": null,
+  "open": "16 Feb 2026",
+  "close": "18 Feb 2026",
+  "listing": "23 Feb 2026",
+  "price": "205 – 216",
+  "lot": 600,
+  "minBidQuantity": 1200,
+  "issueSizeShares": 2268600,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
 }
+
+
 
   ]
 }
