@@ -730,7 +730,69 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "SME",
   "status": "Active"
+},
+{
+  "id": 43,
+  "name": "Manilam Industries",
+  "fullName": "Manilam Industries India Limited",
+  "logo": "/images/ipo/manilam.png",
+  "symbol": null,
+  "open": "20 Feb 2026",
+  "close": "24 Feb 2026",
+  "listing": "27 Feb 2026",
+  "price": "65 – 69",
+  "lot": 2000,
+  "minBidQuantity": 4000,
+  "issueSizeShares": 5790000,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
+},
+{
+  "id": 44,
+  "name": "Gaudium IVF and Women Health",
+  "fullName": "Gaudium IVF and Women Health Limited",
+  "logo": "/images/ipo/gaudiumivf.png",
+  "symbol": null,
+  "open": "20 Feb 2026",
+  "close": "24 Feb 2026",
+  "listing": "27 Feb 2026",
+  "price": "75 – 79",
+  "lot": 189,
+  "minBidQuantity": 189,
+  "issueSizeShares": 20886200,
+  "faceValue": 5,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
+},
+{
+  "id": 45,
+  "name": "Shree Ram Twistex",
+  "fullName": "Shree Ram Twistex Limited",
+  "logo": "/images/ipo/shreeramtwistex.png",
+  "symbol": null,
+  "open": "23 Feb 2026",
+  "close": "25 Feb 2026",
+  "listing": "02 Mar 2026",
+  "price": "95 – 104",
+  "lot": 144,
+  "minBidQuantity": 144,
+  "issueSizeShares": 10600000,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
 }
+
+
 
 
 

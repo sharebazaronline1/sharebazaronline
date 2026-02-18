@@ -68,10 +68,10 @@ const AdminKycDocuments = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center space-y-4">
-          <Loader2 className="w-12 h-12 animate-spin text-green-600 mx-auto" />
-          <p className="text-gray-600">Loading documents...</p>
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center">
+        <div className="text-center space-y-5">
+          <Loader2 className="w-12 h-12 animate-spin text-emerald-600 mx-auto" />
+          <p className="text-lg font-medium text-gray-700">Loading Documents...</p>
         </div>
       </div>
     );
