@@ -889,6 +889,45 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "Mainboard",
   "status": "Active"
+},
+{
+  "id": 51,
+  "name": "Striders Impex",
+  "fullName": "Striders Impex Limited",
+  "logo": "/images/ipo/striders.png",
+  "symbol": null,
+  "open": "26 Feb 2026",
+  "close": "02 Mar 2026",
+  "listing": "06 Mar 2026",
+  "price": "71 – 72",
+  "lot": 1600,
+  "minBidQuantity": 3200,
+  "issueSizeShares": 5040000,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
+},{
+  "id": 52,
+  "name": "Acetech E-Commerce",
+  "fullName": "Acetech E-Commerce Limited",
+  "logo":  "/images/ipo/acetechecommerce.png",
+  "symbol": null,
+  "open": "27 Feb 2026",
+  "close": "04 Mar 2026",
+  "listing": "09 Mar 2026",
+  "price": "106 – 112",
+  "lot": 1200,
+  "minBidQuantity": 2400,
+  "issueSizeShares": 4370400,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
 }
 
 
