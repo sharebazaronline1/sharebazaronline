@@ -37,7 +37,7 @@ const handleAdminLogin = async (e) => {
       .from("profiles")
       .select("is_admin")
       .eq("id", authData.user.id)
-      .single();
+      .maybeSingle();
 
     console.log("QUERY FINISHED - raw response:", { profile, profileError });
 

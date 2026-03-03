@@ -33,7 +33,6 @@ const Login = () => {
         const user = session.user;
         const referralCode = localStorage.getItem("referral_code");
 
-        console.log("REF CODE:", referralCode);
 
         // Get the best available name from user_metadata
         const userName =
@@ -49,19 +48,31 @@ const Login = () => {
           .eq("id", user.id)
           .maybeSingle();
 
-        if (!profileData) {
-          await supabase.from("profiles").insert({
-            id: user.id,
-            full_name: userName,
-            sb_user_id: generateShortId(user.id),
-          });
-        } else if (!profileData.full_name && userName !== "New Friend") {
-          await supabase
-            .from("profiles")
-            .update({ full_name: userName })
-            .eq("id", user.id);
-        }
+      if (!profileData) {
+  const { error: insertError } = await supabase
+    .from("profiles")
+    .insert({
+      id: user.id,
+      full_name: userName,
+      sb_user_id: generateShortId(user.id),
+      email: user.email,
+    });
 
+  if (insertError) {
+    console.error("PROFILE INSERT ERROR:", insertError);
+  }
+}  else if (!profileData.email) {
+  const { error: updateError } = await supabase
+    .from("profiles")
+    .update({
+      email: user.email,
+    })
+    .eq("id", user.id);
+
+  if (updateError) {
+    console.error("PROFILE UPDATE ERROR:", updateError);
+  }
+}
         // 2️⃣ if no referral → go dashboard
         if (!referralCode) {
           navigate("/dashboard", { replace: true });
@@ -87,7 +98,7 @@ const Login = () => {
           .from("referrals")
           .select("id")
           .eq("referrer_id", referrer.id)
-          .eq("referred_email", user.email)
+          .eq("referred_user_id", user.id)
           .maybeSingle();
 
         if (!existing) {

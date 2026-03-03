@@ -49,16 +49,19 @@ const AdminUsers = () => {
             .eq("referrer_id", profile.id);
 
           // Sample of referred users (top 5)
-          const { data: referredUsers } = await supabase
-            .from("referrals")
-            .select(`
-              referred_name,
-              referred_email,
-              referred_sb_user_id:profiles!referred_user_id (sb_user_id)
-            `)
-            .eq("referrer_id", profile.id)
-            .limit(5);
-
+       const { data: referredUsers } = await supabase
+  .from("referrals")
+  .select(`
+    referred_name,
+    referred_email,
+    referred_mobile,
+    referred_user_id,
+    profiles:referred_user_id (
+      sb_user_id
+    )
+  `)
+  .eq("referrer_id", profile.id)
+  .limit(5);
           // Orders count
           const { count: orderCount } = await supabase
             .from("orders")
@@ -374,7 +377,7 @@ const AdminUsers = () => {
                                           {ref.referred_name || "Unnamed User"}
                                         </div>
                                         <div className="text-sm text-gray-600 mt-1">
-                                          SB ID: {ref.referred_sb_user_id?.sb_user_id || "—"}
+                                         SB ID: {ref.profiles?.sb_user_id || "Not Registered"}
                                         </div>
                                         {ref.referred_email && (
                                           <div className="text-xs text-gray-500 mt-1 truncate">

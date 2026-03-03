@@ -928,6 +928,26 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "SME",
   "status": "Active"
+},
+{
+  "id": 53,
+  "name": "SEDEMAC Mechatronics",
+  "fullName": "SEDEMAC Mechatronics Limited",
+  "logo": "/images/ipo/sedmac.png",
+  "symbol": null,
+  "open": "04 Mar 2026",
+  "close": "06 Mar 2026",
+  "listing": "11 Mar 2026",
+  "price": "1287 – 1352",
+  "lot": 11,
+  "minBidQuantity": 11,
+  "issueSizeShares": 8043300,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
 }
 
 
