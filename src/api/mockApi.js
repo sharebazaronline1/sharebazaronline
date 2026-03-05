@@ -948,6 +948,26 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "Mainboard",
   "status": "Active"
+},
+{
+  "id": 54,
+  "name": "Srinibas Pradhan Constructions",
+  "fullName": "Srinibas Pradhan Constructions Limited",
+  "logo":"/images/ipo/srinibaspradhan.png",
+  "symbol": null,
+  "open": "06 Mar 2026",
+  "close": "10 Mar 2026",
+  "listing": "13 Mar 2026",
+  "price": "91 – 98",
+  "lot": 1200,
+  "minBidQuantity": 2400,
+  "issueSizeShares": 2073600,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
 }
 
 
