@@ -832,25 +832,43 @@ export const fetchIPOs = async () => {
   "status": "Active"
 },
 {
-  "id": 48,
-  "name": "Accord Transformer & Switchgear",
-  "fullName": "Accord Transformer & Switchgear Limited",
-  "logo": "/images/ipo/accordtransformer.png",
-  "symbol": null,
-  "open": "23 Feb 2026",
-  "close": "25 Feb 2026",
-  "listing": "02 Mar 2026",
-  "price": "43 – 46",
-  "lot": 3000,
-  "minBidQuantity": 6000,
-  "issueSizeShares": 5562000,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Active"
-},
+      id: 48,
+      name: "Accord Transformer & Switchgear Limited",
+      fullName: "Accord Transformer & Switchgear Limited",
+      logo: "/images/ipo/accordtransformer.png", 
+      open: "23 Feb 2026",
+      close: "25 Feb 2026",
+      listing: "02 Mar 2026",
+      price: "43-46",
+      lot: 3000,
+      issueSize: "₹25.59 Cr",
+      type: "SME",
+      status: "Closed",
+      about: `Accord Transformer & Switchgear Limited is engaged in the business of manufacturing and supplying transformers and switchgear equipment. The company specializes in power and distribution transformers with a strong presence in the domestic market and growing export orders.`,
+      objectives: [
+        "Capital expenditure towards purchase of machinery and equipment",
+        "Funding of working capital requirements",
+        "General corporate purposes"
+      ],
+    
+      timeline: "Bidding: 23–25 Feb 2026 | Allotment: 26 Feb 2026 | Listing: 02 Mar 2026",
+      gmp: "₹12 (as of 05 Mar 2026)",
+      documents: {
+        drhp: "https://www.bsesme.com/download/339916/SME_IPO%20InPrinciple/DRHP_Accord_Final_20250930235151.pdf",
+        rhp: "https://www.bseindia.com/downloads/ipo/RHP%20&GID_200220262325.zip",
+        finalProspectus: "https://gyrcapitaladvisors.com/wp-content/uploads/2026/02/Prospectus_Accord_compressed.pdf",
+        anchorLetter: "https://www.chittorgarh.net/reports/anchor-investor/accord-transformer-anchor-letter.pdf"
+      },
+      subscription: "357.37x overall (QIB 153x, NII 606x, Retail 367x)",
+      minInvestment: 276000,
+      // Optional extra fields your component can use later
+      leadManager: "GYR Capital Advisors Pvt. Ltd.",
+      registrar: "Kfin Technologies Ltd.",
+      kycStatus: "N/A" // if you want to show something
+    },
+
+ 
+
 {
   "id": 49,
   "name": "Clean Max Enviro Energy Solutions",
@@ -2976,3 +2994,8 @@ Historically criticized for aggressive expansion and high losses, OYO has shifte
 
   ];
 };
+
+
+
+
+
