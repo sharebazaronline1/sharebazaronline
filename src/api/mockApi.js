@@ -844,7 +844,7 @@ export const fetchIPOs = async () => {
   "issueSize": "₹25.59 Cr",
   "type": "SME",
   "status": "Closed",
-  "about": "Accord Transformer & Switchgear Limited is engaged in designing, manufacturing, and supplying power and distribution transformers along with switchgear equipment, primarily serving India's electrical infrastructure needs with growing exports to utilities, industries, and renewable energy segments.",
+  "about": "Accord Transformer & Switchgear Limited specializes in the design, production, and supply of power transformers, distribution transformers, and associated switchgear products. The company mainly supports India's power and electrical infrastructure sector and is steadily expanding its international presence by delivering customized solutions to utilities, industrial clients, and players in the renewable energy space.",
   "objectives": [
     "Capital expenditure for purchase of machinery and equipment – ₹13.03 Cr",
     "Funding working capital requirements – ₹10.00 Cr",
