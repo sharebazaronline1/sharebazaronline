@@ -832,40 +832,154 @@ export const fetchIPOs = async () => {
   "status": "Active"
 },
 {
-      id: 48,
-      name: "Accord Transformer & Switchgear Limited",
-      fullName: "Accord Transformer & Switchgear Limited",
-      logo: "/images/ipo/accordtransformer.png", 
-      open: "23 Feb 2026",
-      close: "25 Feb 2026",
-      listing: "02 Mar 2026",
-      price: "43-46",
-      lot: 3000,
-      issueSize: "₹25.59 Cr",
-      type: "SME",
-      status: "Closed",
-      about: `Accord Transformer & Switchgear Limited is engaged in the business of manufacturing and supplying transformers and switchgear equipment. The company specializes in power and distribution transformers with a strong presence in the domestic market and growing export orders.`,
-      objectives: [
-        "Capital expenditure towards purchase of machinery and equipment",
-        "Funding of working capital requirements",
-        "General corporate purposes"
-      ],
-    
-      timeline: "Bidding: 23–25 Feb 2026 | Allotment: 26 Feb 2026 | Listing: 02 Mar 2026",
-      gmp: "₹12 (as of 05 Mar 2026)",
-      documents: {
-        drhp: "https://www.bsesme.com/download/339916/SME_IPO%20InPrinciple/DRHP_Accord_Final_20250930235151.pdf",
-        rhp: "https://www.bseindia.com/downloads/ipo/RHP%20&GID_200220262325.zip",
-        finalProspectus: "https://gyrcapitaladvisors.com/wp-content/uploads/2026/02/Prospectus_Accord_compressed.pdf",
-        anchorLetter: "https://www.chittorgarh.net/reports/anchor-investor/accord-transformer-anchor-letter.pdf"
-      },
-      subscription: "357.37x overall (QIB 153x, NII 606x, Retail 367x)",
-      minInvestment: 276000,
-      // Optional extra fields your component can use later
-      leadManager: "GYR Capital Advisors Pvt. Ltd.",
-      registrar: "Kfin Technologies Ltd.",
-      kycStatus: "N/A" // if you want to show something
+  "id": 48,
+  "name": "Accord Transformer & Switchgear Limited",
+  "fullName": "Accord Transformer & Switchgear Limited",
+  "logo": "/images/ipo/accordtransformer.png",
+  "open": "23 Feb 2026",
+  "close": "25 Feb 2026",
+  "listing": "02 Mar 2026",
+  "price": "43-46",
+  "lot": 3000,
+  "issueSize": "₹25.59 Cr",
+  "type": "SME",
+  "status": "Closed",
+  "about": "Accord Transformer & Switchgear Limited is engaged in designing, manufacturing, and supplying power and distribution transformers along with switchgear equipment, primarily serving India's electrical infrastructure needs with growing exports to utilities, industries, and renewable energy segments.",
+  "objectives": [
+    "Capital expenditure for purchase of machinery and equipment – ₹13.03 Cr",
+    "Funding working capital requirements – ₹10.00 Cr",
+    "General corporate purposes (remaining amount to reach total ₹23.03 Cr)"
+  ],
+  "totalObjectsAmount": "₹23.03 Cr",
+  "timeline": "Bidding: 23–25 Feb 2026 | Allotment finalized: 26 Feb 2026 | Listing on BSE SME: 02 Mar 2026",
+  "gmp": "₹4 (8.7% premium as of early March 2026; stable post-listing)",
+  "documents": {
+    "drhp": "https://www.bsesme.com/download/339916/SME_IPO%20InPrinciple/DRHP_Accord_Final_20250930235151.pdf",
+    "rhp": "https://www.bseindia.com/downloads/ipo/RHP%20&GID_200220262325.zip",
+    "finalProspectus": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/02/Prospectus_Accord_compressed.pdf",
+    "anchorLetter": "https://www.chittorgarh.net/reports/anchor-investor/accord-transformer-anchor-letter.pdf"
+  },
+  "subscription": "Overall: 357.37x (Total bids: 1,32,08,55,000 shares against 36,96,000 offered; 1,39,976 applications) | QIB (ex-Anchor): 153.01x (10,56,000 offered, 16,15,83,000 bid) | NII: 606.02x (7,92,000 offered, 47,99,70,000 bid) – bNII (>₹10L): 709.68x (5,28,000 offered, 37,47,12,000 bid), sNII (<₹10L): 398.70x (2,64,000 offered, 10,52,58,000 bid) | Retail: 367.59x (18,48,000 offered, 67,93,02,000 bid)",
+  "minInvestment": 276000,
+  "leadManager": "GYR Capital Advisors Pvt. Ltd.",
+  "registrar": "Kfin Technologies Ltd.",
+  "marketMaker": "Giriraj Stock Broking Pvt. Ltd.",
+  "kycStatus": "N/A",
+  "additionalDetails": {
+    "issueType": "Bookbuilt fresh issue only (no offer for sale)",
+    "listingPlatform": "BSE SME (Script Code: 544710, ISIN: INE132201018)",
+    "faceValue": "₹10 per share",
+    "issuePrice": "₹46 per share (upper band finalized)",
+    "totalSharesIssued": "55,62,000 shares (aggregate up to ₹26 Cr)",
+    "marketMakerReservation": "2,82,000 shares (5.07%, up to ₹1 Cr)",
+    "netPublicOffer": "52,80,000 shares (up to ₹24 Cr)",
+    "preIssueShares": "1,50,11,289",
+    "postIssueShares": "2,05,73,289",
+    "promoterHolding": "Pre-IPO: 84.94% | Post-IPO: 61.98%",
+    "ipoReservations": {
+      "marketMaker": "2,82,000 shares (5.07%)",
+      "QIB": "26,40,000 shares (47.46%)",
+      "anchor": "15,84,000 shares (28.48%, ₹7.29 Cr, bid date: 20 Feb 2026)",
+      "QIB ex-anchor": "10,56,000 shares (18.99%)",
+      "NII/HNI": "7,92,000 shares (14.24%) – bNII (>₹10L): 5,28,000 (9.49%), sNII (<₹10L): 2,64,000 (4.75%)",
+      "retail": "18,48,000 shares (33.23%)",
+      "total": "55,62,000 shares (100%)"
     },
+    "lotSizeDetails": {
+      "retailMin": "2 lots (6,000 shares) – ₹2,76,000 (at ₹46)",
+      "retailMax": "2 lots (6,000 shares) – ₹2,76,000",
+      "sHNI min": "3 lots (9,000 shares) – ₹4,14,000",
+      "sHNI max": "7 lots (21,000 shares) – ₹9,66,000",
+      "bHNI min": "8 lots (24,000 shares) – ₹11,04,000"
+    },
+    "anchorLockIn": "50% shares lock-in ends 30 days from listing (27 Mar 2026)",
+    "listingDayPerformance": {
+      "issuePrice": "₹46.00",
+      "open": "₹50.00",
+      "low": "₹47.50",
+      "high": "₹52.50",
+      "close/lastTrade": "₹52.50",
+      "gain": "~14% intraday from issue price"
+    },
+    "recentTrading": "As of March 6–7, 2026: Trading range ~₹48.97–54.90 (52-week high ₹54.90 on Mar 4); recent close ~₹49.3–50.44 (volatile SME movement post-listing)",
+    "financialHighlights": {
+      "periods": [
+        {
+          "period": "31 Dec 2025",
+          "assets": "₹41.02 Cr",
+          "totalIncome": "₹45.29 Cr",
+          "PAT": "₹2.91 Cr",
+          "EBITDA": "₹4.62 Cr",
+          "netWorth": "₹24.45 Cr",
+          "reservesSurplus": "₹9.44 Cr",
+          "borrowings": "₹4.37 Cr",
+          "ROE": "12.67%",
+          "ROCE": "14.52%",
+          "debtEquity": "0.18",
+          "roNW": "11.91%",
+          "patMargin": "6.44%",
+          "ebitdaMargin": "10.19%",
+          "priceToBook": "2.82"
+        },
+        {
+          "period": "31 Mar 2025",
+          "assets": "₹59.89 Cr",
+          "totalIncome": "₹79.20 Cr",
+          "PAT": "₹6.05 Cr",
+          "EBITDA": "₹9.10 Cr",
+          "netWorth": "₹21.54 Cr",
+          "reservesSurplus": "₹21.25 Cr",
+          "borrowings": "₹11.81 Cr",
+          "ROE": "43.90%",
+          "ROCE": "26%",
+          "debtEquity": "0.55",
+          "roNW": "28.10%",
+          "patMargin": "7.66%",
+          "ebitdaMargin": "11.49%",
+          "priceToBook": "3.21"
+        },
+        {
+          "period": "31 Mar 2024",
+          "assets": "₹26.46 Cr",
+          "totalIncome": "₹48.60 Cr",
+          "PAT": "₹1.61 Cr",
+          "EBITDA": "₹2.67 Cr",
+          "netWorth": "₹6.04 Cr",
+          "reservesSurplus": "₹5.79 Cr",
+          "borrowings": "₹9.13 Cr"
+        },
+        {
+          "period": "31 Mar 2023",
+          "assets": "₹15.82 Cr",
+          "totalIncome": "₹40.81 Cr",
+          "PAT": "₹0.87 Cr",
+          "EBITDA": "₹1.54 Cr",
+          "netWorth": "₹4.43 Cr",
+          "reservesSurplus": "₹4.18 Cr",
+          "borrowings": "₹2.30 Cr"
+        }
+      ],
+      "kpiPrePost": {
+        "eps": "Pre-IPO: ₹4.03 | Post-IPO: ₹2.94",
+        "pe": "Pre-IPO: 11.41x | Post-IPO: 15.63x",
+        "marketCapAtIssue": "₹94.64 Cr"
+      }
+    },
+    "ipoExpenses": {
+      "leadManagerFees": "₹0.30 Cr",
+      "underwritingFees": "₹1.28 Cr",
+      "marketMakerFees": "₹0.03 Cr",
+      "registrarFees": "₹0.02 Cr",
+      "advertisingPublishing": "₹0.05 Cr",
+      "regulatoryStockExchangeDepositories": "₹0.20 Cr",
+      "printingStationeryPostage": "₹0.00 Cr",
+      "statutoryAuditorsLegalAdvisorsProfessionals": "₹0.42 Cr",
+      "otherExpenses": "₹0.27 Cr",
+      "total": "₹2.56 Cr"
+    },
+    "recommendations": "Broker reviews: 0 Subscribe / 0 May Apply / 0 Neutral / 0 Avoid | Member reviews: 0 Subscribe / 0 May Apply / 0 Neutral / 0 Avoid"
+  }
+},
 
  
 
