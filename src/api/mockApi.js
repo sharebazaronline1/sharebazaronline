@@ -844,7 +844,7 @@ export const fetchIPOs = async () => {
   "issueSize": "₹25.59 Cr",
   "type": "SME",
   "status": "Closed",
-  "about": "Accord Transformer & Switchgear Limited specializes in the design, production, and supply of power transformers, distribution transformers, and associated switchgear products. The company mainly supports India's power and electrical infrastructure sector and is steadily expanding its international presence by delivering customized solutions to utilities, industrial clients, and players in the renewable energy space.",
+  "about": "Accord Transformer & Switchgear Limited specializes in the design, production, and supply of power transformers, distribution transformers, and associated switchgear products. The company primarily supports India's power and electrical infrastructure sector and is steadily expanding its international presence by delivering customized solutions to utilities, industrial clients, and players in the renewable energy space.",
   "objectives": [
     "Capital expenditure for purchase of machinery and equipment – ₹13.03 Cr",
     "Funding working capital requirements – ₹10.00 Cr",
@@ -859,23 +859,52 @@ export const fetchIPOs = async () => {
     "finalProspectus": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/02/Prospectus_Accord_compressed.pdf",
     "anchorLetter": "https://www.chittorgarh.net/reports/anchor-investor/accord-transformer-anchor-letter.pdf"
   },
-  "subscription": "Overall: 357.37x (Total bids: 1,32,08,55,000 shares against 36,96,000 offered; 1,39,976 applications) | QIB (ex-Anchor): 153.01x (10,56,000 offered, 16,15,83,000 bid) | NII: 606.02x (7,92,000 offered, 47,99,70,000 bid) – bNII (>₹10L): 709.68x (5,28,000 offered, 37,47,12,000 bid), sNII (<₹10L): 398.70x (2,64,000 offered, 10,52,58,000 bid) | Retail: 367.59x (18,48,000 offered, 67,93,02,000 bid)",
+  "subscription": "Overall: 357.37x | Total bids: 1,32,08,55,000 shares (against 36,96,000 offered) | Total applications: 1,39,976 | QIB (ex-Anchor): 153.01x (10,56,000 offered, 16,15,83,000 bid) | NII: 606.02x (7,92,000 offered, 47,99,70,000 bid) – bNII (>₹10L): 709.68x (5,28,000 offered, 37,47,12,000 bid), sNII (<₹10L): 398.70x (2,64,000 offered, 10,52,58,000 bid) | Retail: 367.59x (18,48,000 offered, 67,93,02,000 bid)",
   "minInvestment": 276000,
   "leadManager": "GYR Capital Advisors Pvt. Ltd.",
   "registrar": "Kfin Technologies Ltd.",
   "marketMaker": "Giriraj Stock Broking Pvt. Ltd.",
   "kycStatus": "N/A",
+  "faceValue": "₹10 per share",
+  "issuePriceFinal": "₹46 per share",
+  "saleType": "Fresh capital only",
+  "bseScriptCode": "544710",
+  "isin": "INE132201018",
+  "totalIssueShares": "55,62,000 shares (aggregate up to ₹26 Cr)",
+  "marketMakerReservedShares": "2,82,000 shares (5.07%, up to ₹1 Cr)",
+  "netPublicShares": "52,80,000 shares (up to ₹24 Cr)",
+  "preIssueShares": "1,50,11,289",
+  "postIssueShares": "2,05,73,289",
+  "anchorDetails": {
+    "bidDate": "Fri, Feb 20, 2026",
+    "sharesOffered": "15,84,000",
+    "amount": "₹7.29 Cr",
+    "lockIn50PercentEnd": "Fri, Mar 27, 2026 (30 days from listing)"
+  },
+  "promoterHolding": "Pre-IPO: 84.94% | Post-IPO: 61.98%",
+  "listingDayPrices": {
+    "issuePrice": "₹46.00",
+    "open": "₹50.00",
+    "low": "₹47.50",
+    "high": "₹52.50",
+    "lastTrade": "₹52.50"
+  },
+  "lotSizeBreakdown": {
+    "retail": {
+      "min": "2 lots (6,000 shares) – ₹2,76,000",
+      "max": "2 lots (6,000 shares) – ₹2,76,000"
+    },
+    "sHNI": {
+      "min": "3 lots (9,000 shares) – ₹4,14,000",
+      "max": "7 lots (21,000 shares) – ₹9,66,000"
+    },
+    "bHNI": {
+      "min": "8 lots (24,000 shares) – ₹11,04,000"
+    }
+  },
   "additionalDetails": {
     "issueType": "Bookbuilt fresh issue only (no offer for sale)",
     "listingPlatform": "BSE SME (Script Code: 544710, ISIN: INE132201018)",
-    "faceValue": "₹10 per share",
-    "issuePrice": "₹46 per share (upper band finalized)",
-    "totalSharesIssued": "55,62,000 shares (aggregate up to ₹26 Cr)",
-    "marketMakerReservation": "2,82,000 shares (5.07%, up to ₹1 Cr)",
-    "netPublicOffer": "52,80,000 shares (up to ₹24 Cr)",
-    "preIssueShares": "1,50,11,289",
-    "postIssueShares": "2,05,73,289",
-    "promoterHolding": "Pre-IPO: 84.94% | Post-IPO: 61.98%",
     "ipoReservations": {
       "marketMaker": "2,82,000 shares (5.07%)",
       "QIB": "26,40,000 shares (47.46%)",
@@ -885,23 +914,6 @@ export const fetchIPOs = async () => {
       "retail": "18,48,000 shares (33.23%)",
       "total": "55,62,000 shares (100%)"
     },
-    "lotSizeDetails": {
-      "retailMin": "2 lots (6,000 shares) – ₹2,76,000 (at ₹46)",
-      "retailMax": "2 lots (6,000 shares) – ₹2,76,000",
-      "sHNI min": "3 lots (9,000 shares) – ₹4,14,000",
-      "sHNI max": "7 lots (21,000 shares) – ₹9,66,000",
-      "bHNI min": "8 lots (24,000 shares) – ₹11,04,000"
-    },
-    "anchorLockIn": "50% shares lock-in ends 30 days from listing (27 Mar 2026)",
-    "listingDayPerformance": {
-      "issuePrice": "₹46.00",
-      "open": "₹50.00",
-      "low": "₹47.50",
-      "high": "₹52.50",
-      "close/lastTrade": "₹52.50",
-      "gain": "~14% intraday from issue price"
-    },
-    "recentTrading": "As of March 6–7, 2026: Trading range ~₹48.97–54.90 (52-week high ₹54.90 on Mar 4); recent close ~₹49.3–50.44 (volatile SME movement post-listing)",
     "financialHighlights": {
       "periods": [
         {
@@ -965,19 +977,57 @@ export const fetchIPOs = async () => {
         "marketCapAtIssue": "₹94.64 Cr"
       }
     },
+    "subscriptionStatus": {
+  "qibNonAnchor": {
+    "subscription": "153.01x",
+    "sharesOffered": "10,56,000",
+    "sharesBid": "16,15,83,000"
+  },
+  "nii": {
+    "subscription": "606.02x",
+    "sharesOffered": "7,92,000",
+    "sharesBid": "47,99,70,000"
+  },
+  "bnii": {
+    "subscription": "709.68x",
+    "sharesOffered": "5,28,000",
+    "sharesBid": "37,47,12,000"
+  },
+  "snii": {
+    "subscription": "398.70x",
+    "sharesOffered": "2,64,000",
+    "sharesBid": "10,52,58,000"
+  },
+  "retail": {
+    "subscription": "367.59x",
+    "sharesOffered": "18,48,000",
+    "sharesBid": "67,93,02,000"
+  },
+  "total": {
+    "subscription": "357.37x",
+    "sharesOffered": "36,96,000",
+    "sharesBid": "1,32,08,55,000",
+    "applications": "1,39,976"
+  }
+},
     "ipoExpenses": {
-      "leadManagerFees": "₹0.30 Cr",
-      "underwritingFees": "₹1.28 Cr",
-      "marketMakerFees": "₹0.03 Cr",
-      "registrarFees": "₹0.02 Cr",
-      "advertisingPublishing": "₹0.05 Cr",
-      "regulatoryStockExchangeDepositories": "₹0.20 Cr",
-      "printingStationeryPostage": "₹0.00 Cr",
-      "statutoryAuditorsLegalAdvisorsProfessionals": "₹0.42 Cr",
-      "otherExpenses": "₹0.27 Cr",
+      "items": [
+        { "item": "Book Running Lead Manager Fees", "amount": "₹0.30 Cr" },
+        { "item": "Underwriting Fees", "amount": "₹1.28 Cr" },
+        { "item": "Fees payable to the Market maker to the Issue", "amount": "₹0.03 Cr" },
+        { "item": "Fees payable to the Registrar to the Issue", "amount": "₹0.02 Cr" },
+        { "item": "Fees payable for Advertising and Publishing Expense", "amount": "₹0.05 Cr" },
+        { "item": "Fees payable to Regulators including Stock Exchange & Depositories", "amount": "₹0.20 Cr" },
+        { "item": "Payment for Printing & Stationary, Postage etc", "amount": "₹0.00 Cr" },
+        { "item": "Fees payable to statutory auditors, Legal Advisors & other Professionals", "amount": "₹0.42 Cr" },
+        { "item": "Other Expense", "amount": "₹0.27 Cr" }
+      ],
       "total": "₹2.56 Cr"
     },
-    "recommendations": "Broker reviews: 0 Subscribe / 0 May Apply / 0 Neutral / 0 Avoid | Member reviews: 0 Subscribe / 0 May Apply / 0 Neutral / 0 Avoid"
+    "recommendations": {
+      "brokers": { "Subscribe": 0, "May Apply": 0, "Neutral": 0, "Avoid": 0 },
+      "members": { "Subscribe": 0, "May Apply": 0, "Neutral": 0, "Avoid": 0 }
+    }
   }
 },
 
