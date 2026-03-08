@@ -39,7 +39,7 @@ const IPODetails = () => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 160;
+      const offset = 220;
       const y =
         element.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top: y, behavior: "smooth" });
@@ -54,30 +54,34 @@ const IPODetails = () => {
     );
   }
 
-  const minInvestment = (ipo.lot || 1) * getHigherPrice(ipo.price);
+  const minInvestment = ipo.minInvestment || (ipo.lot || 1) * getHigherPrice(ipo.price);
 
   const sections = [
-    { id: "overview", label: "Overview", icon: Home },
     { id: "about", label: "About", icon: Building2 },
-    { id: "objectives", label: "Objectives", icon: Target },
+    { id: "basic-details", label: "IPO Basic Details", icon: Building2 },
+    { id: "company-overview", label: "Company Overview", icon: Target },
+    { id: "strengths-risks", label: "IPO Strengths & Risks", icon: Target },
+    { id: "important-dates", label: "IPO Important Dates", icon: Clock },
+    { id: "objectives", label: "IPO Objectives", icon: Target },
+    { id: "investor-reservation", label: "Investor Reservation", icon: Users },
+    { id: "lot-allocation", label: "Market Lot Details", icon: Ticket },
+    { id: "kpi", label: "Key Performance Indicators", icon: IndianRupee },
     { id: "financials", label: "Financials", icon: BarChart3 },
-    { id: "valuation", label: "Valuation & KPI", icon: IndianRupee },
-    { id: "timeline", label: "Timeline", icon: Clock },
-    { id: "lot", label: "Lot & Allocation", icon: Ticket },
-    { id: "subscription", label: "Subscription", icon: Users },
-    { id: "anchor", label: "Anchor", icon: CheckCircle },
-    { id: "gmp", label: "GMP", icon: IndianRupee },
-    { id: "documents", label: "Docs", icon: Download },
+    { id: "gmp", label: "Grey Market Premium", icon: IndianRupee },
+    { id: "subscription", label: "IPO Subscription Data", icon: Users },
+    { id: "intermediaries", label: "IPO Intermediaries", icon: Users },
+    { id: "lead-manager", label: "IPO Lead Manager(s)", icon: Building2 },
+    { id: "company-info", label: "Company Information", icon: Building2 },
+    { id: "documents", label: "IPO Documents", icon: Download },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
 
       {/* HEADER */}
-      <header className="fixed inset-x-0  z-40 bg-white shadow-sm">
+      <header className="fixed inset-x-0 z-40 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 border-b">
           <div className="flex justify-between items-center">
-
             <div className="flex items-center gap-4">
               {ipo.logo ? (
                 <img
@@ -99,11 +103,10 @@ const IPODetails = () => {
 
             <div className="text-right">
               <p className="text-2xl font-bold">
-                ₹{minInvestment.toLocaleString()}
+                {minInvestment.toLocaleString()}
               </p>
               <p className="text-sm text-gray-600">Minimum Investment</p>
             </div>
-
           </div>
         </div>
 
@@ -130,481 +133,499 @@ const IPODetails = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
           {/* SIDEBAR */}
-         <aside className="hidden lg:block lg:col-span-1">
+          <aside className="hidden lg:block lg:col-span-1">
+            <div className="sticky top-28 w-full border rounded-xl p-4 bg-white shadow-md max-h-[calc(100vh-160px)] overflow-y-auto">
+              <h3 className="font-semibold text-base mb-3">Quick Navigation</h3>
 
-  <div className="sticky top-28 w-full border rounded-xl p-4 bg-white shadow-md max-h-[calc(100vh-160px)] overflow-y-auto">
-
-    <h3 className="font-semibold text-base mb-3">Quick Navigation</h3>
-
-    <div className="space-y-1.5">
-
-      {sections.map(({ id, label, icon: Icon }) => (
-
-        <button
-          key={id}
-          onClick={() => scrollToSection(id)}
-          className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-xs transition ${
-            activeSection === id
-              ? "bg-green-600 text-white font-medium"
-              : "hover:bg-gray-100 text-gray-700"
-          }`}
-        >
-          <Icon size={14} />
-          <span className="truncate">{label}</span>
-        </button>
-
-      ))}
-
-    </div>
-
-  </div>
-
-</aside>
+              <div className="space-y-1.5">
+                {sections.map(({ id, label, icon: Icon }) => (
+                  <button
+                    key={id}
+                    onClick={() => scrollToSection(id)}
+                    className={`w-full flex items-center gap-2 px-3 py-2 rounded-lg text-xs transition ${
+                      activeSection === id
+                        ? "bg-green-600 text-white font-medium"
+                        : "hover:bg-gray-100 text-gray-700"
+                    }`}
+                  >
+                    <Icon size={14} />
+                    <span className="truncate">{label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </aside>
 
           {/* MAIN CONTENT */}
           <main className="lg:col-span-3 space-y-4">
 
-            {/* OVERVIEW */}
-            <section id="overview" className="bg-white p-6 rounded-xl border shadow-sm">
-
-              <h2 className="text-2xl font-bold mb-6">Overview</h2>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-                <div>
-                  <p className="text-gray-500 text-sm">Price</p>
-                  <p className="font-medium text-lg">₹{ipo.price}</p>
-                </div>
-
-                <div>
-                  <p className="text-gray-500 text-sm">Lot Size</p>
-                  <p className="font-medium text-lg">{ipo.lot}</p>
-                </div>
-
-                <div>
-                  <p className="text-gray-500 text-sm">Listing</p>
-                  <p className="font-medium text-lg">{ipo.listing}</p>
-                </div>
-
-                <div>
-                  <p className="text-gray-500 text-sm">Min Investment</p>
-                  <p className="font-medium text-lg">
-                    ₹{minInvestment.toLocaleString()}
-                  </p>
-                </div>
-
+            {/* 1. About Company */}
+            <section id="about" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">About Company</h2>
+              <div className="space-y-3 text-sm md:text-base">
+                <p><strong>Company Name:</strong> {ipo.about_company?.company_name}</p>
+                <p><strong>Industry / Sector:</strong> {ipo.about_company?.industry_sector}</p>
+                <p><strong>Founded Year:</strong> {ipo.about_company?.founded_year}</p>
+                <p><strong>Promoters:</strong> {ipo.about_company?.promoters?.join(", ")}</p>
+                <p className="mt-4">{ipo.about_company?.description}</p>
               </div>
-
             </section>
 
-            {/* ABOUT */}
-            {ipo.about && (
+            {/* 2. IPO Basic Details */}
+            <section id="basic-details" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">IPO Basic Details</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <tbody>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Company Name</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.company_name || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">IPO Type</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.ipo_type || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Issue Type</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.issue_type || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Face Value</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.face_value || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Price Band</td>
+                      <td className="p-3">
+                        {ipo.ipo_basic_details?.price_band_min || "-"} – {ipo.ipo_basic_details?.price_band_max || "-"}
+                      </td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Lot Size</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.lot_size || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Total Issue Size</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.total_issue_size || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Fresh Issue Size</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.fresh_issue_size || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Offer for Sale</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.offer_for_sale || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Shares Offered</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.shares_offered || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Listing Exchange</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.listing_exchange || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Issue Price</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.issue_price || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Minimum Investment</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.minimum_investment || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Market Cap Post Issue</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.market_cap_post_issue || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Pre-issue Shareholding</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.pre_issue_shareholding || "-"}</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="p-3 font-medium">Post-issue Shareholding</td>
+                      <td className="p-3">{ipo.ipo_basic_details?.post_issue_shareholding || "-"}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-              <section id="about" className="bg-white p-6 rounded-xl border shadow-sm">
+            {/* 3. Company Overview */}
+            <section id="company-overview" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">Company Overview</h2>
+              <div className="space-y-4 text-sm md:text-base">
+                <p><strong>Business Model:</strong> {ipo.company_overview?.business_model}</p>
+                <div>
+                  <strong>Products / Services:</strong>
+                  <ul className="list-disc ml-6 mt-1">
+                    {ipo.company_overview?.products_services?.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </section>
 
-                <h2 className="text-2xl font-bold mb-6">About Company</h2>
+            {/* IPO Strengths & Risks - improved layout */}
+            <section id="strengths-risks" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">IPO Strengths & Risks</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-green-700">Strengths</h3>
+                  <ul className="list-disc ml-6 space-y-3 text-gray-700 text-sm md:text-base">
+                    {ipo.company_overview?.competitive_strengths?.map((strength, i) => (
+                      <li key={i} className="leading-relaxed">{strength}</li>
+                    )) || <li>No strengths listed</li>}
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-red-700">Risks</h3>
+                  <ul className="list-disc ml-6 space-y-3 text-gray-700 text-sm md:text-base">
+                    {ipo.company_overview?.risks?.map((risk, i) => (
+                      <li key={i} className="leading-relaxed">{risk}</li>
+                    )) || <li>No risks listed</li>}
+                  </ul>
+                </div>
+              </div>
+            </section>
 
-                <p className="text-gray-700 leading-relaxed">
-                  {ipo.about}
-                </p>
+            {/* 4. IPO Important Dates - now table */}
+            <section id="important-dates" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">IPO Important Dates</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <tbody>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">IPO Open Date</td>
+                      <td className="p-3">{ipo.ipo_important_dates?.ipo_open_date || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">IPO Close Date</td>
+                      <td className="p-3">{ipo.ipo_important_dates?.ipo_close_date || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Basis of Allotment</td>
+                      <td className="p-3">{ipo.ipo_important_dates?.basis_of_allotment_date || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Refund Initiation</td>
+                      <td className="p-3">{ipo.ipo_important_dates?.refund_initiation_date || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Demat Credit Date</td>
+                      <td className="p-3">{ipo.ipo_important_dates?.demat_credit_date || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Listing Date</td>
+                      <td className="p-3">{ipo.ipo_important_dates?.listing_date || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Anchor Investor Date</td>
+                      <td className="p-3">{ipo.ipo_important_dates?.anchor_investor_date || "-"}</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="p-3 font-medium">UPI Mandate Deadline</td>
+                      <td className="p-3">{ipo.ipo_important_dates?.upi_mandate_deadline || "-"}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-              </section>
+            {/* 5. IPO Objectives */}
+            <section id="objectives" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">IPO Objectives</h2>
+              <ul className="list-disc ml-6 space-y-3 text-gray-700">
+                <li>Capital expenditure for machinery and equipment – {ipo.ipo_objectives?.expansion}</li>
+                <li>Funding working capital requirements – {ipo.ipo_objectives?.working_capital}</li>
+                <li>Debt repayment – {ipo.ipo_objectives?.debt_repayment}</li>
+                <li>General corporate purposes – {ipo.ipo_objectives?.general_corporate_purposes}</li>
+              </ul>
+            </section>
 
-            )}
+            {/* 6. Investor Reservation - now table */}
+            <section id="investor-reservation" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">Investor Reservation</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <tbody>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">QIB Quota</td>
+                      <td className="p-3">{ipo.investor_reservation?.qib_quota || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Retail Quota</td>
+                      <td className="p-3">{ipo.investor_reservation?.retail_quota || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">HNI Quota</td>
+                      <td className="p-3">{ipo.investor_reservation?.hni_quota || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Employee Quota</td>
+                      <td className="p-3">{ipo.investor_reservation?.employee_quota || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Shareholder Quota</td>
+                      <td className="p-3">{ipo.investor_reservation?.shareholder_quota || "-"}</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="p-3 font-medium">Anchor Investor Allocation</td>
+                      <td className="p-3">{ipo.investor_reservation?.anchor_investor_allocation || "-"}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-            {/* OBJECTIVES */}
-            {Array.isArray(ipo.objectives) && ipo.objectives.length > 0 && (
+            {/* 7. Market Lot Details */}
+            <section id="lot-allocation" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">Market Lot Details</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-gray-100">
+                      <th className="p-3 text-left">Application</th>
+                      <th className="p-3 text-center">Lot Size</th>
+                      <th className="p-3 text-center">Shares</th>
+                      <th className="p-3 text-right">Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t hover:bg-gray-50">
+                      <td className="p-3">Retail Minimum</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.retail_minimum?.lot_size || "-"}</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.retail_minimum?.shares || "-"}</td>
+                      <td className="p-3 text-right">{ipo.market_lot_details?.retail_minimum?.amount || "-"}</td>
+                    </tr>
+                    <tr className="border-t hover:bg-gray-50">
+                      <td className="p-3">Retail Maximum</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.retail_maximum?.lot_size || "-"}</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.retail_maximum?.shares || "-"}</td>
+                      <td className="p-3 text-right">{ipo.market_lot_details?.retail_maximum?.amount || "-"}</td>
+                    </tr>
+                    <tr className="border-t hover:bg-gray-50">
+                      <td className="p-3">S-HNI Minimum</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.shni_minimum?.lot_size || "-"}</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.shni_minimum?.shares || "-"}</td>
+                      <td className="p-3 text-right">{ipo.market_lot_details?.shni_minimum?.amount || "-"}</td>
+                    </tr>
+                    <tr className="border-t hover:bg-gray-50">
+                      <td className="p-3">S-HNI Maximum</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.shni_maximum?.lot_size || "-"}</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.shni_maximum?.shares || "-"}</td>
+                      <td className="p-3 text-right">{ipo.market_lot_details?.shni_maximum?.amount || "-"}</td>
+                    </tr>
+                    <tr className="border-t hover:bg-gray-50">
+                      <td className="p-3">B-HNI Minimum</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.bhni_minimum?.lot_size || "-"}</td>
+                      <td className="p-3 text-center">{ipo.market_lot_details?.bhni_minimum?.shares || "-"}</td>
+                      <td className="p-3 text-right">{ipo.market_lot_details?.bhni_minimum?.amount || "-"}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-              <section id="objectives" className="bg-white p-6 rounded-xl border shadow-sm">
+            {/* 8. Key Performance Indicators (KPI) */}
+            <section id="kpi" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">Key Performance Indicators (KPI)</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <tbody>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">ROE</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.roe || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">ROCE</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.roce || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">RoNW</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.ronw || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">PAT Margin</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.pat_margin || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">EBITDA Margin</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.ebitda_margin || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">EPS</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.eps || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">NAV per share</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.nav_per_share || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Debt to Equity</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.debt_to_equity || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">P/E Ratio</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.pe_ratio || "-"}</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="p-3 font-medium">Industry P/E</td>
+                      <td className="p-3">{ipo.key_performance_indicators?.industry_pe || "-"}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-                <h2 className="text-2xl font-bold mb-6">IPO Objectives</h2>
-
-                <ul className="list-disc ml-6 space-y-3 text-gray-700">
-
-                  {ipo.objectives.map((o, i) => (
-                    <li key={i}>{o}</li>
-                  ))}
-
-                </ul>
-
-              </section>
-
-            )}
-
-           {/* FINANCIAL HIGHLIGHTS */}
-            {Array.isArray(ipo.additionalDetails?.financialHighlights?.periods) && (
-              <section id="financials" className="bg-white p-6 rounded-xl border shadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold mb-5">Financial Highlights</h2>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm md:text-base border-collapse">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="p-3 text-left">Period</th>
-                        <th className="p-3 text-right">Assets (Cr)</th>
-                        <th className="p-3 text-right">Income (Cr)</th>
-                        <th className="p-3 text-right">PAT (Cr)</th>
-                        <th className="p-3 text-right">EBITDA (Cr)</th>
-                        <th className="p-3 text-right">Net Worth (Cr)</th>
+            {/* 9. Company Financial Data */}
+            <section id="financials" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">Company Financial Data</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="bg-gray-100">
+                      <th className="p-3 text-left">Period</th>
+                      <th className="p-3 text-right">Assets</th>
+                      <th className="p-3 text-right">Total Income</th>
+                      <th className="p-3 text-right">PAT</th>
+                      <th className="p-3 text-right">EBITDA</th>
+                      <th className="p-3 text-right">Net Worth</th>
+                      <th className="p-3 text-right">Borrowings</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {ipo.company_financial_data?.map((f, i) => (
+                      <tr key={i} className="border-t hover:bg-gray-50">
+                        <td className="p-3">{f.period}</td>
+                        <td className="p-3 text-right">{f.assets || "-"}</td>
+                        <td className="p-3 text-right">{f.total_income || "-"}</td>
+                        <td className="p-3 text-right">{f.pat || "-"}</td>
+                        <td className="p-3 text-right">{f.ebitda || "-"}</td>
+                        <td className="p-3 text-right">{f.net_worth || "-"}</td>
+                        <td className="p-3 text-right">{f.total_borrowing || "-"}</td>
                       </tr>
-                    </thead>
-                    <tbody>
-                      {ipo.additionalDetails.financialHighlights.periods.map((f, i) => (
-                        <tr key={i} className="border-t hover:bg-gray-50">
-                          <td className="p-3">{f.period}</td>
-                          <td className="p-3 text-right">{f.assets || "-"}</td>
-                          <td className="p-3 text-right">{f.totalIncome || "-"}</td>
-                          <td className="p-3 text-right">{f.PAT || "-"}</td>
-                          <td className="p-3 text-right">{f.EBITDA || "-"}</td>
-                          <td className="p-3 text-right">{f.netWorth || "-"}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </section>
-            )}
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-            {/* VALUATION & KPI */}
-            {(ipo.additionalDetails?.financialHighlights?.kpiPrePost || ipo.additionalDetails?.promoterHolding) && (
-              <section id="valuation" className="bg-white p-6 rounded-xl border shadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold mb-5">Valuation & KPI</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="overflow-hidden rounded-lg border">
-                    <table className="w-full text-sm">
-                      <thead>
-                        <tr className="bg-gray-100">
-                          <th className="p-3 text-left">Metric</th>
-                          <th className="p-3 text-center">Pre-IPO</th>
-                          <th className="p-3 text-center">Post-IPO</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr className="border-t">
-                          <td className="p-3">EPS</td>
-                          <td className="p-3 text-center font-medium">
-                            {ipo.additionalDetails?.financialHighlights?.kpiPrePost?.eps?.split(" | ")[0]?.replace("Pre-IPO: ", "") || "N/A"}
-                          </td>
-                          <td className="p-3 text-center font-medium">
-                            {ipo.additionalDetails?.financialHighlights?.kpiPrePost?.eps?.split(" | ")[1]?.replace("Post-IPO: ", "") || "N/A"}
-                          </td>
-                        </tr>
-                        <tr className="border-t">
-                          <td className="p-3">P/E</td>
-                          <td className="p-3 text-center font-medium">
-                            {ipo.additionalDetails?.financialHighlights?.kpiPrePost?.pe?.split(" | ")[0]?.replace("Pre-IPO: ", "") || "N/A"}
-                          </td>
-                          <td className="p-3 text-center font-medium">
-                            {ipo.additionalDetails?.financialHighlights?.kpiPrePost?.pe?.split(" | ")[1]?.replace("Post-IPO: ", "") || "N/A"}
-                          </td>
-                        </tr>
-                        <tr className="border-t">
-                          <td className="p-3">Promoter Holding</td>
-                          <td className="p-3 text-center font-medium">
-                            {ipo.additionalDetails?.promoterHolding?.split(" | ")[0]?.replace("Pre-IPO: ", "") || "N/A"}
-                          </td>
-                          <td className="p-3 text-center font-medium">
-                            {ipo.additionalDetails?.promoterHolding?.split(" | ")[1]?.replace("Post-IPO: ", "") || "N/A"}
-                          </td>
-                        </tr>
-                        <tr className="border-t bg-gray-50">
-                          <td className="p-3 font-medium">Market Cap at Issue</td>
-                          <td className="p-3 text-center font-medium" colSpan={2}>
-                            {ipo.additionalDetails?.financialHighlights?.kpiPrePost?.marketCapAtIssue || "N/A"}
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+            {/* 10. Grey Market Premium */}
+            <section id="gmp" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">Grey Market Premium</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <tbody>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">GMP Price</td>
+                      <td className="p-3">{ipo.grey_market_premium?.gmp_price || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Kostak Rate</td>
+                      <td className="p-3">{ipo.grey_market_premium?.kostak_rate || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Subject to Sauda</td>
+                      <td className="p-3">{ipo.grey_market_premium?.subject_to_sauda || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Last Updated</td>
+                      <td className="p-3">{ipo.grey_market_premium?.gmp_last_updated || "-"}</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="p-3 font-medium">Estimated Listing Price</td>
+                      <td className="p-3">{ipo.grey_market_premium?.estimated_listing_price || "-"}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-                  <div className="overflow-hidden rounded-lg border">
-                    <table className="w-full text-sm">
-                      <thead>
-                        <tr className="bg-gray-100">
-                          <th className="p-3 text-left">Key Ratio (Latest)</th>
-                          <th className="p-3 text-center">Value</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr className="border-t">
-                          <td className="p-3">ROE</td>
-                          <td className="p-3 text-center font-medium">{ipo.additionalDetails?.financialHighlights?.periods?.[0]?.ROE || "N/A"}</td>
-                        </tr>
-                        <tr className="border-t">
-                          <td className="p-3">ROCE</td>
-                          <td className="p-3 text-center font-medium">{ipo.additionalDetails?.financialHighlights?.periods?.[0]?.ROCE || "N/A"}</td>
-                        </tr>
-                        <tr className="border-t">
-                          <td className="p-3">Debt/Equity</td>
-                          <td className="p-3 text-center font-medium">{ipo.additionalDetails?.financialHighlights?.periods?.[0]?.debtEquity || "N/A"}</td>
-                        </tr>
-                        <tr className="border-t">
-                          <td className="p-3">RoNW</td>
-                          <td className="p-3 text-center font-medium">{ipo.additionalDetails?.financialHighlights?.periods?.[0]?.roNW || "N/A"}</td>
-                        </tr>
-                        <tr className="border-t">
-                          <td className="p-3">PAT Margin</td>
-                          <td className="p-3 text-center font-medium">{ipo.additionalDetails?.financialHighlights?.periods?.[0]?.patMargin || "N/A"}</td>
-                        </tr>
-                        <tr className="border-t">
-                          <td className="p-3">EBITDA Margin</td>
-                          <td className="p-3 text-center font-medium">{ipo.additionalDetails?.financialHighlights?.periods?.[0]?.ebitdaMargin || "N/A"}</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </section>
-            )}
+            {/* 11. IPO Subscription Data */}
+            <section id="subscription" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">IPO Subscription Data</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm border-collapse">
+                  <tbody>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Total Subscription</td>
+                      <td className="p-3">{ipo.ipo_subscription_data?.total_subscription || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">QIB (Ex Anchor)</td>
+                      <td className="p-3">{ipo.ipo_subscription_data?.qib_ex_anchor || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">HNI Subscription</td>
+                      <td className="p-3">{ipo.ipo_subscription_data?.hni_subscription || "-"}</td>
+                    </tr>
+                    <tr className="border-b hover:bg-gray-50">
+                      <td className="p-3 font-medium">Retail Subscription</td>
+                      <td className="p-3">{ipo.ipo_subscription_data?.retail_subscription || "-"}</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="p-3 font-medium">Anchor</td>
+                      <td className="p-3">{ipo.ipo_subscription_data?.anchor || "-"}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
 
-            {/* TIMELINE */}
-            <section id="timeline" className="bg-white p-6 rounded-xl border shadow-sm">
-              <h2 className="text-2xl md:text-3xl font-bold mb-5">Timeline</h2>
-              <div className="space-y-4 text-base divide-y">
-                <div className="flex justify-between items-center py-3">
-                  <span className="font-medium">Bidding Period:</span>
-                  <span>{ipo.open} – {ipo.close}</span>
-                </div>
-                <div className="flex justify-between items-center py-3">
-                  <span className="font-medium">Allotment:</span>
-                  <span>Feb 26, 2026</span>
-                </div>
-                <div className="flex justify-between items-center py-3">
-                  <span className="font-medium">Listing Date:</span>
-                  <span>{ipo.listing || "N/A"}</span>
-                </div>
-                {ipo.additionalDetails?.anchor && (
-                  <div className="flex justify-between items-center py-3">
-                    <span className="font-medium">Anchor Bid Date:</span>
-                    <span>{ipo.additionalDetails.anchor.match(/bid on ([\w\s,]+)/)?.[1] || "N/A"}</span>
-                  </div>
+            {/* 12. IPO Intermediaries */}
+            <section id="intermediaries" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">IPO Intermediaries</h2>
+              <div className="space-y-3 text-sm">
+                <p><strong>Registrar:</strong> {ipo.ipo_intermediaries?.registrar}</p>
+                <p><strong>Registrar Website:</strong> <a href={ipo.ipo_intermediaries?.registrar_website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{ipo.ipo_intermediaries?.registrar_website}</a></p>
+                <p><strong>Market Maker:</strong> {ipo.ipo_intermediaries?.market_maker}</p>
+                <p><strong>Company Secretary:</strong> {ipo.ipo_intermediaries?.company_secretary}</p>
+                <p><strong>Compliance Officer:</strong> {ipo.ipo_intermediaries?.compliance_officer}</p>
+              </div>
+            </section>
+
+            {/* 13. IPO Lead Manager(s) */}
+            <section id="lead-manager" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">IPO Lead Manager(s)</h2>
+              <p className="text-sm">{ipo.ipo_lead_manager?.lead_manager}</p>
+            </section>
+
+            {/* 14. Company Information */}
+            <section id="company-info" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">Company Information</h2>
+              <div className="space-y-3 text-sm">
+                <p><strong>Address:</strong> {ipo.company_information?.company_address}</p>
+                <p><strong>Website:</strong> <a href={ipo.company_information?.company_website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{ipo.company_information?.company_website}</a></p>
+                <p><strong>Email:</strong> {ipo.company_information?.company_email}</p>
+                <p><strong>Phone:</strong> {ipo.company_information?.company_phone}</p>
+              </div>
+            </section>
+
+            {/* 15. IPO Documents */}
+            <section id="documents" className="bg-white p-6 rounded-xl border shadow-sm">
+              <h2 className="text-2xl font-bold mb-6">IPO Documents</h2>
+              <div className="space-y-3">
+                {ipo.ipo_documents?.drhp_link && (
+                  <a href={ipo.ipo_documents.drhp_link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline">
+                    <Download size={16} /> DRHP
+                  </a>
+                )}
+                {ipo.ipo_documents?.rhp_link && (
+                  <a href={ipo.ipo_documents.rhp_link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline">
+                    <Download size={16} /> RHP
+                  </a>
+                )}
+                {ipo.ipo_documents?.prospectus_pdf && (
+                  <a href={ipo.ipo_documents.prospectus_pdf} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline">
+                    <Download size={16} /> Prospectus PDF
+                  </a>
+                )}
+                {ipo.ipo_documents?.investor_presentation && (
+                  <a href={ipo.ipo_documents.investor_presentation} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline">
+                    <Download size={16} /> Investor Presentation
+                  </a>
                 )}
               </div>
             </section>
-
-            {/* LOT & ALLOCATION */}
-            {ipo.lot || ipo.minInvestment || ipo.additionalDetails?.ipoReservations ? (
-              <section id="lot" className="bg-white p-6 rounded-xl border shadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold mb-5">Lot & Allocation</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-                  <div className="rounded-lg border overflow-hidden">
-                    <h3 className="font-semibold text-base bg-gray-100 p-3">Lot Size Details</h3>
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-xs md:text-sm">
-                        <thead>
-                          <tr className="bg-gray-50">
-                            <th className="p-3 text-left">Category</th>
-                            <th className="p-3 text-center">Lots</th>
-                            <th className="p-3 text-right">Amount</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr className="border-t">
-                            <td className="p-3">Retail (Min/Max)</td>
-                            <td className="p-3 text-center">2 lots</td>
-                            <td className="p-3 text-right">₹2,76,000</td>
-                          </tr>
-                          <tr className="border-t">
-                            <td className="p-3">S-HNI (Min)</td>
-                            <td className="p-3 text-center">3 lots</td>
-                            <td className="p-3 text-right">₹4,14,000</td>
-                          </tr>
-                          <tr className="border-t">
-                            <td className="p-3">S-HNI (Max)</td>
-                            <td className="p-3 text-center">7 lots</td>
-                            <td className="p-3 text-right">₹9,66,000</td>
-                          </tr>
-                          <tr className="border-t">
-                            <td className="p-3">B-HNI (Min)</td>
-                            <td className="p-3 text-center">8 lots</td>
-                            <td className="p-3 text-right">₹11,04,000</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  {ipo.additionalDetails?.ipoReservations && (
-                    <div className="rounded-lg border overflow-hidden">
-                      <h3 className="font-semibold text-base bg-gray-100 p-3">Reservation</h3>
-                      <div className="overflow-x-auto">
-                        <table className="w-full text-xs md:text-sm">
-                          <thead>
-                            <tr className="bg-gray-50">
-                              <th className="p-3 text-left">Category</th>
-                              <th className="p-3 text-center">Shares</th>
-                              <th className="p-3 text-center">%</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr className="border-t">
-                              <td className="p-3">Market Maker</td>
-                              <td className="p-3 text-center">{ipo.additionalDetails.ipoReservations.marketMaker?.split(" ")[0] || "N/A"}</td>
-                              <td className="p-3 text-center">{ipo.additionalDetails.ipoReservations.marketMaker?.match(/\(([^)]+)\)/)?.[1] || "N/A"}</td>
-                            </tr>
-                            <tr className="border-t">
-                              <td className="p-3">QIB</td>
-                              <td className="p-3 text-center">{ipo.additionalDetails.ipoReservations.QIB?.split(" ")[0] || "N/A"}</td>
-                              <td className="p-3 text-center">{ipo.additionalDetails.ipoReservations.QIB?.match(/\(([^)]+)\)/)?.[1] || "N/A"}</td>
-                            </tr>
-                            <tr className="border-t">
-                              <td className="p-3">NII/HNI</td>
-                              <td className="p-3 text-center">{ipo.additionalDetails.ipoReservations["NII/HNI"]?.split(" ")[0] || "N/A"}</td>
-                              <td className="p-3 text-center">{ipo.additionalDetails.ipoReservations["NII/HNI"]?.match(/\(([^)]+)\)/)?.[1] || "N/A"}</td>
-                            </tr>
-                            <tr className="border-t">
-                              <td className="p-3">Retail</td>
-                              <td className="p-3 text-center">{ipo.additionalDetails.ipoReservations.retail?.split(" ")[0] || "N/A"}</td>
-                              <td className="p-3 text-center">{ipo.additionalDetails.ipoReservations.retail?.match(/\(([^)]+)\)/)?.[1] || "N/A"}</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </section>
-            ) : null}
-
-            {/* SUBSCRIPTION */}
-            {ipo.subscription && (
-              <section id="subscription" className="bg-white p-6 rounded-xl border shadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold mb-5">Subscription Status</h2>
-                <div className="overflow-x-auto rounded-lg border">
-                  <table className="w-full text-sm border-collapse">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="p-4 text-left">Category</th>
-                        <th className="p-4 text-center">Subscription (x)</th>
-                        <th className="p-4 text-center">Shares Offered</th>
-                        <th className="p-4 text-center">Shares Bid</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-t hover:bg-gray-50">
-                        <td className="p-4">QIB (Ex Anchor)</td>
-                        <td className="p-4 text-center font-bold text-green-700">
-                          {ipo.subscription.split("QIB (ex-anchor): ")[1]?.split("x")[0] || "N/A"}
-                        </td>
-                        <td className="p-4 text-center">10,56,000</td>
-                        <td className="p-4 text-center">16,15,83,000</td>
-                      </tr>
-                      <tr className="border-t hover:bg-gray-50">
-                        <td className="p-4">NII/HNI (Total)</td>
-                        <td className="p-4 text-center font-bold text-green-700">606.02</td>
-                        <td className="p-4 text-center">7,92,000</td>
-                        <td className="p-4 text-center">47,99,70,000</td>
-                      </tr>
-                      <tr className="text-sm text-gray-600 border-t hover:bg-gray-50">
-                        <td className="p-4 pl-8">– bNII (₹10L)</td>
-                        <td className="p-4 text-center font-bold text-green-700">709.68</td>
-                        <td className="p-4 text-center">5,28,000</td>
-                        <td className="p-4 text-center">37,47,12,000</td>
-                      </tr>
-                      <tr className="text-sm text-gray-600 border-t hover:bg-gray-50">
-                        <td className="p-4 pl-8">– sNII (₹10L)</td>
-                        <td className="p-4 text-center font-bold text-green-700">398.70</td>
-                        <td className="p-4 text-center">2,64,000</td>
-                        <td className="p-4 text-center">10,52,58,000</td>
-                      </tr>
-                      <tr className="border-t hover:bg-gray-50">
-                        <td className="p-4">Retail</td>
-                        <td className="p-4 text-center font-bold text-green-700">367.59</td>
-                        <td className="p-4 text-center">18,48,000</td>
-                        <td className="p-4 text-center">67,93,02,000</td>
-                      </tr>
-                      <tr className="bg-gray-100 font-bold border-t">
-                        <td className="p-4">Total</td>
-                        <td className="p-4 text-center text-green-700">357.37</td>
-                        <td className="p-4 text-center">36,96,000</td>
-                        <td className="p-4 text-center">1,32,08,55,000</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </section>
-            )}
-
-            {/* ANCHOR */}
-            {(ipo.additionalDetails?.anchor || ipo.additionalDetails?.anchorLockIn) && (
-              <section id="anchor" className="bg-white p-6 rounded-xl border shadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold mb-5">Anchor Investors</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm md:text-base">
-                  <div>
-                    <p className="text-gray-600">Bid Date</p>
-                    <p className="font-medium">
-                      {ipo.additionalDetails?.anchor?.match(/bid on ([\w\s,]+)/)?.[1] || "N/A"}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-gray-600">Shares Offered</p>
-                    <p className="font-medium">
-                      {ipo.additionalDetails?.anchor?.split(" ")[0] || "N/A"}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-gray-600">Amount</p>
-                    <p className="font-medium">
-                      {ipo.additionalDetails?.anchor?.match(/₹([\d.]+ Cr)/)?.[0] || "N/A"}
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-gray-600">50% Lock-in End</p>
-                    <p className="font-medium">
-                      {ipo.additionalDetails?.anchorLockIn?.match(/\(.*\)/)?.[0]?.replace(/[()]/g, "") || "N/A"}
-                    </p>
-                  </div>
-                </div>
-              </section>
-            )}
-
-            {/* GMP */}
-            {ipo.gmp && (
-              <section id="gmp" className="bg-white p-6 rounded-xl border shadow-sm">
-                <h2 className="text-2xl md:text-3xl font-bold mb-5">Grey Market Premium</h2>
-                <p className="text-xl font-semibold text-gray-700">
-                  {ipo.gmp}
-                </p>
-                <p className="text-sm text-gray-500 mt-2">(Indicative as of latest data)</p>
-              </section>
-            )}
-
-            {/* DOCUMENTS */}
-            {ipo.documents && (
-
-              <section id="documents" className="bg-white p-6 rounded-xl border shadow-sm">
-
-                <h2 className="text-2xl font-bold mb-6">Documents</h2>
-
-                <div className="space-y-4">
-
-                  {ipo.documents?.drhp && (
-                    <a
-                      href={ipo.documents.drhp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-600 hover:underline"
-                    >
-                      <Download size={16} /> DRHP
-                    </a>
-                  )}
-
-                  {ipo.documents?.rhp && (
-                    <a
-                      href={ipo.documents.rhp}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-blue-600 hover:underline"
-                    >
-                      <Download size={16} /> RHP
-                    </a>
-                  )}
-
-                </div>
-
-              </section>
-
-            )}
 
           </main>
 

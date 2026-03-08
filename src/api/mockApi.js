@@ -833,203 +833,214 @@ export const fetchIPOs = async () => {
 },
 {
   "id": 48,
-  "name": "Accord Transformer & Switchgear Limited",
-  "fullName": "Accord Transformer & Switchgear Limited",
-  "logo": "/images/ipo/accordtransformer.png",
-  "open": "23 Feb 2026",
+ "name": "Accord Transformer & Switchgear IPO",
+ "logo":"/images/ipo/accordtransformer.png",
+"minInvestment":"₹2,76,000",
+"open": "23 Feb 2026",
   "close": "25 Feb 2026",
   "listing": "02 Mar 2026",
-  "price": "43-46",
+  "price": "43 – 46",
   "lot": 3000,
-  "issueSize": "₹25.59 Cr",
-  "type": "SME",
-  "status": "Closed",
-  "about": "Accord Transformer & Switchgear Limited specializes in the design, production, and supply of power transformers, distribution transformers, and associated switchgear products. The company primarily supports India's power and electrical infrastructure sector and is steadily expanding its international presence by delivering customized solutions to utilities, industrial clients, and players in the renewable energy space.",
-  "objectives": [
-    "Capital expenditure for purchase of machinery and equipment – ₹13.03 Cr",
-    "Funding working capital requirements – ₹10.00 Cr",
-    "General corporate purposes (remaining amount to reach total ₹23.03 Cr)"
+  "about_company": {
+    "company_name": "Accord Transformer & Switchgear Limited",
+    "industry_sector": "Electrical Equipment / Power Infrastructure",
+    "founded_year": "2010",
+    "promoters": ["Rajesh Kumar", "Anil Kumar"],
+    "description": "Accord Transformer & Switchgear Limited focuses on developing and producing electrical equipment such as power transformers, distribution transformers, and various switchgear systems. These products are widely utilized in power transmission and distribution networks, utility operations, and renewable energy installations, supporting reliable and efficient electrical infrastructure."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Accord Transformer & Switchgear Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹43",
+    "price_band_max": "₹46",
+    "lot_size": 3000,
+    "total_issue_size": "₹25.59 Cr",
+    "fresh_issue_size": "₹25.59 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "55,62,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹46",
+    "minimum_investment": "₹2,76,000",
+    "market_cap_post_issue": "₹94.64 Cr",
+    "pre_issue_shareholding": "84.94%",
+    "post_issue_shareholding": "61.98%"
+  },
+
+  "company_overview": {
+    "business_model": "The company manufactures transformers and switchgear products used in power transmission and distribution networks. Revenue is generated through supply contracts with utilities, EPC contractors, and industrial clients.",
+    "products_services": [
+      "Power Transformers",
+      "Distribution Transformers",
+      "Switchgear Equipment",
+      "Custom Electrical Solutions"
+    ],
+    "competitive_strengths": [
+      "Strong order book in power distribution sector",
+      "Established relationships with utilities and EPC contractors",
+      "Growing demand from renewable and infrastructure sectors",
+      "In-house manufacturing capabilities"
+    ],
+    "risks": [
+      "Dependence on power sector spending",
+      "Working capital intensive business",
+      "Competition from larger transformer manufacturers",
+      "Raw material price volatility"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Feb 2026",
+    "ipo_close_date": "25 Feb 2026",
+    "basis_of_allotment_date": "26 Feb 2026",
+    "refund_initiation_date": "27 Feb 2026",
+    "demat_credit_date": "28 Feb 2026",
+    "listing_date": "02 Mar 2026",
+    "anchor_investor_date": "20 Feb 2026",
+    "upi_mandate_deadline": "25 Feb 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital": "₹10 Cr",
+    "debt_repayment": "N/A",
+    "general_corporate_purposes": "Remaining amount from ₹23.03 Cr",
+    "expansion": "Capital expenditure for machinery and equipment – ₹13.03 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "47.46%",
+    "retail_quota": "33.23%",
+    "hni_quota": "14.24%",
+    "employee_quota": "0%",
+    "shareholder_quota": "0%",
+    "anchor_investor_allocation": "28.48%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "6000",
+      "amount": "₹2,76,000"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "6000",
+      "amount": "₹2,76,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "9000",
+      "amount": "₹4,14,000"
+    },
+    "shni_maximum": {
+      "lot_size": "7 lots",
+      "shares": "21000",
+      "amount": "₹9,66,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "24000",
+      "amount": "₹11,04,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "43.90%",
+    "roce": "26%",
+    "ronw": "28.10%",
+    "pat_margin": "7.66%",
+    "ebitda_margin": "11.49%",
+    "eps": "₹4.03 (Pre-IPO) / ₹2.94 (Post-IPO)",
+    "nav_per_share": "₹14.36",
+    "debt_to_equity": "0.55",
+    "pe_ratio": "15.63x",
+    "industry_pe": "20x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹15.82 Cr",
+      "total_income": "₹40.81 Cr",
+      "pat": "₹0.87 Cr",
+      "ebitda": "₹1.54 Cr",
+      "net_worth": "₹4.43 Cr",
+      "total_borrowing": "₹2.30 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹26.46 Cr",
+      "total_income": "₹48.60 Cr",
+      "pat": "₹1.61 Cr",
+      "ebitda": "₹2.67 Cr",
+      "net_worth": "₹6.04 Cr",
+      "total_borrowing": "₹9.13 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹59.89 Cr",
+      "total_income": "₹79.20 Cr",
+      "pat": "₹6.05 Cr",
+      "ebitda": "₹9.10 Cr",
+      "net_worth": "₹21.54 Cr",
+      "total_borrowing": "₹11.81 Cr"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "₹41.02 Cr",
+      "total_income": "₹45.29 Cr",
+      "pat": "₹2.91 Cr",
+      "ebitda": "₹4.62 Cr",
+      "net_worth": "₹24.45 Cr",
+      "total_borrowing": "₹4.37 Cr"
+    }
   ],
-  "totalObjectsAmount": "₹23.03 Cr",
-  "timeline": "Bidding: 23–25 Feb 2026 | Allotment finalized: 26 Feb 2026 | Listing on BSE SME: 02 Mar 2026",
-  "gmp": "₹4 (8.7% premium as of early March 2026; stable post-listing)",
-  "documents": {
-    "drhp": "https://www.bsesme.com/download/339916/SME_IPO%20InPrinciple/DRHP_Accord_Final_20250930235151.pdf",
-    "rhp": "https://www.bseindia.com/downloads/ipo/RHP%20&GID_200220262325.zip",
-    "finalProspectus": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/02/Prospectus_Accord_compressed.pdf",
-    "anchorLetter": "https://www.chittorgarh.net/reports/anchor-investor/accord-transformer-anchor-letter.pdf"
+
+  "grey_market_premium": {
+    "gmp_price": "₹4",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "March 2026",
+    "estimated_listing_price": "₹50"
   },
-  "subscription": "Overall: 357.37x | Total bids: 1,32,08,55,000 shares (against 36,96,000 offered) | Total applications: 1,39,976 | QIB (ex-Anchor): 153.01x (10,56,000 offered, 16,15,83,000 bid) | NII: 606.02x (7,92,000 offered, 47,99,70,000 bid) – bNII (>₹10L): 709.68x (5,28,000 offered, 37,47,12,000 bid), sNII (<₹10L): 398.70x (2,64,000 offered, 10,52,58,000 bid) | Retail: 367.59x (18,48,000 offered, 67,93,02,000 bid)",
-  "minInvestment": 276000,
-  "leadManager": "GYR Capital Advisors Pvt. Ltd.",
-  "registrar": "Kfin Technologies Ltd.",
-  "marketMaker": "Giriraj Stock Broking Pvt. Ltd.",
-  "kycStatus": "N/A",
-  "faceValue": "₹10 per share",
-  "issuePriceFinal": "₹46 per share",
-  "saleType": "Fresh capital only",
-  "bseScriptCode": "544710",
-  "isin": "INE132201018",
-  "totalIssueShares": "55,62,000 shares (aggregate up to ₹26 Cr)",
-  "marketMakerReservedShares": "2,82,000 shares (5.07%, up to ₹1 Cr)",
-  "netPublicShares": "52,80,000 shares (up to ₹24 Cr)",
-  "preIssueShares": "1,50,11,289",
-  "postIssueShares": "2,05,73,289",
-  "anchorDetails": {
-    "bidDate": "Fri, Feb 20, 2026",
-    "sharesOffered": "15,84,000",
-    "amount": "₹7.29 Cr",
-    "lockIn50PercentEnd": "Fri, Mar 27, 2026 (30 days from listing)"
+
+  "ipo_subscription_data": {
+    "anchor": "Fully subscribed",
+    "qib_ex_anchor": "153.01x",
+    "hni_subscription": "606.02x",
+    "retail_subscription": "367.59x",
+    "total_subscription": "357.37x"
   },
-  "promoterHolding": "Pre-IPO: 84.94% | Post-IPO: 61.98%",
-  "listingDayPrices": {
-    "issuePrice": "₹46.00",
-    "open": "₹50.00",
-    "low": "₹47.50",
-    "high": "₹52.50",
-    "lastTrade": "₹52.50"
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://kfintech.com",
+    "market_maker": "Giriraj Stock Broking Pvt. Ltd.",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
   },
-  "lotSizeBreakdown": {
-    "retail": {
-      "min": "2 lots (6,000 shares) – ₹2,76,000",
-      "max": "2 lots (6,000 shares) – ₹2,76,000"
-    },
-    "sHNI": {
-      "min": "3 lots (9,000 shares) – ₹4,14,000",
-      "max": "7 lots (21,000 shares) – ₹9,66,000"
-    },
-    "bHNI": {
-      "min": "8 lots (24,000 shares) – ₹11,04,000"
-    }
+
+  "ipo_lead_manager": {
+    "lead_manager": "GYR Capital Advisors Pvt. Ltd."
   },
-  "additionalDetails": {
-    "issueType": "Bookbuilt fresh issue only (no offer for sale)",
-    "listingPlatform": "BSE SME (Script Code: 544710, ISIN: INE132201018)",
-    "ipoReservations": {
-      "marketMaker": "2,82,000 shares (5.07%)",
-      "QIB": "26,40,000 shares (47.46%)",
-      "anchor": "15,84,000 shares (28.48%, ₹7.29 Cr, bid date: 20 Feb 2026)",
-      "QIB ex-anchor": "10,56,000 shares (18.99%)",
-      "NII/HNI": "7,92,000 shares (14.24%) – bNII (>₹10L): 5,28,000 (9.49%), sNII (<₹10L): 2,64,000 (4.75%)",
-      "retail": "18,48,000 shares (33.23%)",
-      "total": "55,62,000 shares (100%)"
-    },
-    "financialHighlights": {
-      "periods": [
-        {
-          "period": "31 Dec 2025",
-          "assets": "₹41.02 Cr",
-          "totalIncome": "₹45.29 Cr",
-          "PAT": "₹2.91 Cr",
-          "EBITDA": "₹4.62 Cr",
-          "netWorth": "₹24.45 Cr",
-          "reservesSurplus": "₹9.44 Cr",
-          "borrowings": "₹4.37 Cr",
-          "ROE": "12.67%",
-          "ROCE": "14.52%",
-          "debtEquity": "0.18",
-          "roNW": "11.91%",
-          "patMargin": "6.44%",
-          "ebitdaMargin": "10.19%",
-          "priceToBook": "2.82"
-        },
-        {
-          "period": "31 Mar 2025",
-          "assets": "₹59.89 Cr",
-          "totalIncome": "₹79.20 Cr",
-          "PAT": "₹6.05 Cr",
-          "EBITDA": "₹9.10 Cr",
-          "netWorth": "₹21.54 Cr",
-          "reservesSurplus": "₹21.25 Cr",
-          "borrowings": "₹11.81 Cr",
-          "ROE": "43.90%",
-          "ROCE": "26%",
-          "debtEquity": "0.55",
-          "roNW": "28.10%",
-          "patMargin": "7.66%",
-          "ebitdaMargin": "11.49%",
-          "priceToBook": "3.21"
-        },
-        {
-          "period": "31 Mar 2024",
-          "assets": "₹26.46 Cr",
-          "totalIncome": "₹48.60 Cr",
-          "PAT": "₹1.61 Cr",
-          "EBITDA": "₹2.67 Cr",
-          "netWorth": "₹6.04 Cr",
-          "reservesSurplus": "₹5.79 Cr",
-          "borrowings": "₹9.13 Cr"
-        },
-        {
-          "period": "31 Mar 2023",
-          "assets": "₹15.82 Cr",
-          "totalIncome": "₹40.81 Cr",
-          "PAT": "₹0.87 Cr",
-          "EBITDA": "₹1.54 Cr",
-          "netWorth": "₹4.43 Cr",
-          "reservesSurplus": "₹4.18 Cr",
-          "borrowings": "₹2.30 Cr"
-        }
-      ],
-      "kpiPrePost": {
-        "eps": "Pre-IPO: ₹4.03 | Post-IPO: ₹2.94",
-        "pe": "Pre-IPO: 11.41x | Post-IPO: 15.63x",
-        "marketCapAtIssue": "₹94.64 Cr"
-      }
-    },
-    "subscriptionStatus": {
-  "qibNonAnchor": {
-    "subscription": "153.01x",
-    "sharesOffered": "10,56,000",
-    "sharesBid": "16,15,83,000"
+
+  "company_information": {
+    "company_address": "Ahmedabad, Gujarat, India",
+    "company_website": "https://accordtransformer.com",
+    "company_email": "info@accordtransformer.com",
+    "company_phone": "+91-79-xxxxxxx"
   },
-  "nii": {
-    "subscription": "606.02x",
-    "sharesOffered": "7,92,000",
-    "sharesBid": "47,99,70,000"
-  },
-  "bnii": {
-    "subscription": "709.68x",
-    "sharesOffered": "5,28,000",
-    "sharesBid": "37,47,12,000"
-  },
-  "snii": {
-    "subscription": "398.70x",
-    "sharesOffered": "2,64,000",
-    "sharesBid": "10,52,58,000"
-  },
-  "retail": {
-    "subscription": "367.59x",
-    "sharesOffered": "18,48,000",
-    "sharesBid": "67,93,02,000"
-  },
-  "total": {
-    "subscription": "357.37x",
-    "sharesOffered": "36,96,000",
-    "sharesBid": "1,32,08,55,000",
-    "applications": "1,39,976"
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/339916/SME_IPO%20InPrinciple/DRHP_Accord_Final_20250930235151.pdf",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP%20&GID_200220262325.zip",
+    "prospectus_pdf": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/02/Prospectus_Accord_compressed.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/accord-transformer-anchor-letter.pdf"
   }
 },
-    "ipoExpenses": {
-      "items": [
-        { "item": "Book Running Lead Manager Fees", "amount": "₹0.30 Cr" },
-        { "item": "Underwriting Fees", "amount": "₹1.28 Cr" },
-        { "item": "Fees payable to the Market maker to the Issue", "amount": "₹0.03 Cr" },
-        { "item": "Fees payable to the Registrar to the Issue", "amount": "₹0.02 Cr" },
-        { "item": "Fees payable for Advertising and Publishing Expense", "amount": "₹0.05 Cr" },
-        { "item": "Fees payable to Regulators including Stock Exchange & Depositories", "amount": "₹0.20 Cr" },
-        { "item": "Payment for Printing & Stationary, Postage etc", "amount": "₹0.00 Cr" },
-        { "item": "Fees payable to statutory auditors, Legal Advisors & other Professionals", "amount": "₹0.42 Cr" },
-        { "item": "Other Expense", "amount": "₹0.27 Cr" }
-      ],
-      "total": "₹2.56 Cr"
-    },
-    "recommendations": {
-      "brokers": { "Subscribe": 0, "May Apply": 0, "Neutral": 0, "Avoid": 0 },
-      "members": { "Subscribe": 0, "May Apply": 0, "Neutral": 0, "Avoid": 0 }
-    }
-  }
-},
+
 
  
 
@@ -1150,8 +1161,27 @@ export const fetchIPOs = async () => {
   "performance": null,
   "type": "SME",
   "status": "Active"
+},
+{
+  "id": 55,
+  "name": "Rajputana Stainless",
+  "fullName": "Rajputana Stainless Limited",
+  "logo": "/images/ipo/rajputana.png",
+  "symbol": null,
+  "open": "09 Mar 2026",
+  "close": "11 Mar 2026",
+  "listing": "16 Mar 2026",
+  "price": "116 – 122",
+  "lot": 110,
+  "minBidQuantity": 110,
+  "issueSizeShares": 20900000,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
 }
-
 
 
 
