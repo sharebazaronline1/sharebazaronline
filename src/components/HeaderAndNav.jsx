@@ -195,9 +195,9 @@ const { data: { subscription } } =
               onMouseEnter={() => openWithDelay(setBrokerOpen, brokerTimer)}
               onMouseLeave={() => closeWithDelay(setBrokerOpen, brokerTimer)}
             >
-              <button className="flex items-center gap-1 font-semibold text-gray-700 hover:text-[#1e40af] transition">
+              <Link to="/broker-analyzer" className="flex items-center gap-1 font-semibold text-gray-700 hover:text-[#1e40af] transition">
                 Broker Analyzer <span className="text-xl">▾</span>
-              </button>
+              </Link>
               <div
                 className={`absolute right-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded-xl shadow-xl z-[9999] transition-all duration-150 
                   ${brokerOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none translate-y-1"}`}
