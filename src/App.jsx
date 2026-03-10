@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import IPOTracker from "./pages/IPOTracker";
 import PreIPOStocks from "./pages/PreIPOStocks";
-import BrokerAnalyzer from "./pages/BrokerAnalyzer";
+import BrokerAnalyzerGuide from "./pages/BrokerAnalyzerGuide";
 import InsightHub from "./pages/InsightHub";
 import InsightHubDetails from "./pages/InsightHubDetails";
 import SkillUp from "./pages/SkillUp";
@@ -91,7 +91,7 @@ function AppLayout() {
               <Route path="/ipo-tracker" element={<IPOTracker />} />
               <Route path="/ipo/ipo-list" element={<IPOList />} />
               <Route path="/pre-ipo-stocks" element={<PreIPOStocks />} />
-              <Route path="/broker-analyzer" element={<BrokerAnalyzer />} />
+              <Route path="/broker-analyzer" element={<BrokerAnalyzerGuide />} />
               <Route path="/how-to-apply-ipo" element={<HowToApplyIPO />} />
               <Route path="/preipo/:id" element={<PreIPODetails />} />
               <Route path="/insight-hub" element={<InsightHub />} />
