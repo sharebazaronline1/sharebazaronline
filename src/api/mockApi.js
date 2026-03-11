@@ -944,6 +944,8 @@ export const fetchIPOs = async () => {
       "shares": "24000",
       "amount": "₹11,04,000"
     }
+
+    
   },
 
   "key_performance_indicators": {
@@ -1038,7 +1040,57 @@ export const fetchIPOs = async () => {
     "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP%20&GID_200220262325.zip",
     "prospectus_pdf": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/02/Prospectus_Accord_compressed.pdf",
     "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/accord-transformer-anchor-letter.pdf"
+  },
+  "faq": [
+  {
+    "question": "What does Accord Transformer & Switchgear Limited do?",
+    "answer": "Accord Transformer & Switchgear Limited manufactures electrical equipment including power transformers, distribution transformers, and switchgear systems used in power transmission and distribution networks."
+  },
+  {
+    "question": "When did the Accord Transformer & Switchgear IPO open and close?",
+    "answer": "The IPO opened on 23 Feb 2026 and closed on 25 Feb 2026."
+  },
+  {
+    "question": "What was the price band of the Accord Transformer & Switchgear IPO?",
+    "answer": "The price band of the IPO was ₹43 to ₹46 per share."
+  },
+  {
+    "question": "What was the minimum investment required in the Accord Transformer & Switchgear IPO?",
+    "answer": "Retail investors had to apply for a minimum of 2 lots (6000 shares), requiring an investment of ₹2,76,000."
+  },
+  {
+    "question": "What was the lot size of the Accord Transformer & Switchgear IPO?",
+    "answer": "The lot size for the IPO was 3000 shares per lot."
+  },
+  {
+    "question": "On which exchange was the Accord Transformer & Switchgear IPO listed?",
+    "answer": "The IPO was listed on the BSE SME platform."
+  },
+  {
+    "question": "What was the total issue size of the Accord Transformer & Switchgear IPO?",
+    "answer": "The total issue size of the IPO was approximately ₹25.59 crore."
+  },
+  {
+    "question": "Who were the promoters of Accord Transformer & Switchgear Limited?",
+    "answer": "The promoters of the company are Rajesh Kumar and Anil Kumar."
+  },
+  {
+    "question": "What is the estimated listing price based on the GMP?",
+    "answer": "Based on the Grey Market Premium of ₹4, the estimated listing price was around ₹50 per share."
+  },
+  {
+    "question": "What is the business sector of Accord Transformer & Switchgear Limited?",
+    "answer": "The company operates in the electrical equipment and power infrastructure sector."
+  },
+  {
+    "question": "What are the main objectives of the IPO?",
+    "answer": "The IPO proceeds are mainly intended for working capital requirements and capital expenditure for machinery and equipment."
+  },
+  {
+    "question": "Who is the registrar for the Accord Transformer & Switchgear IPO?",
+    "answer": "Kfin Technologies Ltd. is the registrar for the IPO."
   }
+]
 },
 
 
@@ -1164,23 +1216,245 @@ export const fetchIPOs = async () => {
 },
 {
   "id": 55,
-  "name": "Rajputana Stainless",
-  "fullName": "Rajputana Stainless Limited",
+  "name": "Rajputana Stainless IPO",
   "logo": "/images/ipo/rajputana.png",
-  "symbol": null,
+  "minInvestment": "₹13,420",
   "open": "09 Mar 2026",
   "close": "11 Mar 2026",
   "listing": "16 Mar 2026",
   "price": "116 – 122",
   "lot": 110,
-  "minBidQuantity": 110,
-  "issueSizeShares": 20900000,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "Mainboard",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Rajputana Stainless Limited",
+    "industry_sector": "Steel / Stainless Steel Manufacturing",
+    "founded_year": "1991",
+    "promoters": ["Shankarlal Deepchand Mehta"],
+    "description": "Rajputana Stainless Limited is engaged in the manufacturing of stainless-steel long and flat products including billets, forging ingots, rolled bright bars, rolled black bars, flats, and pattis. The company serves industries such as engineering, automotive, oil & gas, aerospace, and defense with a wide range of stainless steel grades produced at its integrated manufacturing facility in Gujarat."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Rajputana Stainless Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹116",
+    "price_band_max": "₹122",
+    "lot_size": 110,
+    "total_issue_size": "₹254.98 Cr",
+    "fresh_issue_size": "₹178.73 Cr",
+    "offer_for_sale": "₹76.25 Cr",
+    "shares_offered": "2,09,00,000 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹122",
+    "minimum_investment": "₹13,420",
+    "market_cap_post_issue": "₹1,019.53 Cr",
+    "pre_issue_shareholding": "Approx 100%",
+    "post_issue_shareholding": "Approx 73%"
+  },
+
+  "company_overview": {
+    "business_model": "The company manufactures stainless steel products used across engineering, automotive, oil & gas, aerospace, and industrial sectors. Revenue is generated through domestic sales and exports of stainless steel billets, bars, flats, and pattis.",
+    "products_services": [
+      "Stainless Steel Billets",
+      "Forging Ingots",
+      "Rolled Bright Bars",
+      "Rolled Black Bars",
+      "Stainless Steel Flats",
+      "Stainless Steel Patti"
+    ],
+    "competitive_strengths": [
+      "Integrated stainless steel manufacturing facility",
+      "Wide product portfolio with multiple steel grades",
+      "Established presence in engineering and automotive sectors",
+      "Growing export opportunities"
+    ],
+    "risks": [
+      "Steel industry cyclicality",
+      "Raw material price volatility (nickel and scrap)",
+      "Dependence on industrial demand",
+      "Competition from large integrated steel producers"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "09 Mar 2026",
+    "ipo_close_date": "11 Mar 2026",
+    "basis_of_allotment_date": "12 Mar 2026",
+    "refund_initiation_date": "13 Mar 2026",
+    "demat_credit_date": "13 Mar 2026",
+    "listing_date": "16 Mar 2026",
+    "anchor_investor_date": "06 Mar 2026",
+    "upi_mandate_deadline": "11 Mar 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital": "N/A",
+    "debt_repayment": "Repayment or prepayment of certain outstanding borrowings",
+    "general_corporate_purposes": "Balance funds from the issue",
+    "expansion": "Capital expenditure for setting up a stainless steel seamless pipes manufacturing facility"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "retail_quota": "35%",
+    "hni_quota": "15%",
+    "employee_quota": "0%",
+    "shareholder_quota": "0%",
+    "anchor_investor_allocation": "Allocated before IPO opening"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "110",
+      "amount": "₹13,420"
+    },
+    "retail_maximum": {
+      "lot_size": "14 lots",
+      "shares": "1540",
+      "amount": "₹1,87,880"
+    },
+    "shni_minimum": {
+      "lot_size": "15 lots",
+      "shares": "1650",
+      "amount": "₹2,01,300"
+    },
+    "shni_maximum": {
+      "lot_size": "74 lots",
+      "shares": "8140",
+      "amount": "₹9,93,080"
+    },
+    "bhni_minimum": {
+      "lot_size": "75 lots",
+      "shares": "8250",
+      "amount": "₹10,06,500"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "26%",
+    "roce": "24%",
+    "ronw": "26%",
+    "pat_margin": "4.25%",
+    "ebitda_margin": "8.8%",
+    "eps": "₹5.78",
+    "nav_per_share": "₹22.40",
+    "debt_to_equity": "0.62",
+    "pe_ratio": "21.1x",
+    "industry_pe": "58x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹640 Cr",
+      "total_income": "₹820 Cr",
+      "pat": "₹24 Cr",
+      "ebitda": "₹62 Cr",
+      "net_worth": "₹140 Cr",
+      "total_borrowing": "₹210 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹702 Cr",
+      "total_income": "₹918 Cr",
+      "pat": "₹31 Cr",
+      "ebitda": "₹71 Cr",
+      "net_worth": "₹166 Cr",
+      "total_borrowing": "₹225 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹735 Cr",
+      "total_income": "₹937.49 Cr",
+      "pat": "₹39.85 Cr",
+      "ebitda": "₹82 Cr",
+      "net_worth": "₹190 Cr",
+      "total_borrowing": "₹230 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹1",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "March 2026",
+    "estimated_listing_price": "₹123"
+  },
+
+  "ipo_subscription_data": {
+    "anchor": "Allocated before IPO opening",
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "N/A",
+    "retail_subscription": "N/A",
+    "total_subscription": "N/A"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://kfintech.com",
+    "market_maker": "N/A",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Nirbhay Capital Services Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Kalol, Gujarat, India",
+    "company_website": "https://www.rajputanastainless.com",
+    "company_email": "info@rajputanastainless.com",
+    "company_phone": "+91-79-xxxxxxx"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/jun-2025/rajputana-stainless-limited_94803.html",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/mar-2026/rajputana-stainless-limited-rhp_100081.html",
+    "prospectus_pdf": "https://www.nseindia.com",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Rajputana Stainless Limited do?",
+      "answer": "Rajputana Stainless Limited manufactures stainless steel long and flat products including billets, forging ingots, bright bars, flats, and pattis used across engineering, automotive, and industrial sectors."
+    },
+    {
+      "question": "When did the Rajputana Stainless IPO open and close?",
+      "answer": "The IPO opened on 09 March 2026 and closed on 11 March 2026."
+    },
+    {
+      "question": "What was the price band of the Rajputana Stainless IPO?",
+      "answer": "The IPO price band was ₹116 to ₹122 per share."
+    },
+    {
+      "question": "What was the lot size of the Rajputana Stainless IPO?",
+      "answer": "The IPO lot size was 110 shares."
+    },
+    {
+      "question": "What was the minimum investment required in the Rajputana Stainless IPO?",
+      "answer": "Retail investors had to invest a minimum of ₹13,420 for one lot of 110 shares."
+    },
+    {
+      "question": "What was the total issue size of the Rajputana Stainless IPO?",
+      "answer": "The IPO size was approximately ₹254.98 crore."
+    },
+    {
+      "question": "Where will Rajputana Stainless shares be listed?",
+      "answer": "The shares will be listed on both BSE and NSE stock exchanges."
+    },
+    {
+      "question": "What are the main objectives of the Rajputana Stainless IPO?",
+      "answer": "The company plans to use IPO proceeds for capital expenditure for a stainless steel seamless pipes facility, repayment of borrowings, and general corporate purposes."
+    },
+    {
+      "question": "Who is the registrar for the Rajputana Stainless IPO?",
+      "answer": "Kfin Technologies Ltd. is the registrar for the IPO."
+    }
+  ]
 },
   {
   "id": 56,
@@ -1205,23 +1479,249 @@ export const fetchIPOs = async () => {
 },
 {
   "id": 57,
-  "name": "Innovision",
-  "fullName": "Innovision Limited",
+  "name": "Innovision IPO",
   "logo": "/images/ipo/innovision.png",
-  "symbol": null,
+  "minInvestment": "₹14,796",
   "open": "10 Mar 2026",
   "close": "12 Mar 2026",
   "listing": "17 Mar 2026",
   "price": "521 – 548",
   "lot": 27,
-  "minBidQuantity": 27,
-  "issueSizeShares": 5891284,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "Mainboard",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Innovision Limited",
+    "industry_sector": "Manpower Services / Toll Management / Skill Development",
+    "founded_year": "2007",
+    "promoters": ["Lt Col Randeep Hundal", "Uday Pal Singh"],
+    "description": "Innovision Limited provides manpower services, toll plaza management, and skill development programs across India. The company supplies security personnel, facility management staff, and workforce solutions to industries such as infrastructure, healthcare, retail, and government institutions. Innovision also operates toll plazas and runs government-supported skill training centres across multiple states."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Innovision Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹521",
+    "price_band_max": "₹548",
+    "lot_size": 27,
+    "total_issue_size": "₹322.84 Cr",
+    "fresh_issue_size": "₹255 Cr",
+    "offer_for_sale": "12,38,000 shares (~₹68 Cr)",
+    "shares_offered": "58,91,284 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹548",
+    "minimum_investment": "₹14,796",
+    "market_cap_post_issue": "₹1,290.72 Cr",
+    "pre_issue_shareholding": "1,89,00,000 shares",
+    "post_issue_shareholding": "2,35,53,284 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Innovision generates revenue through manpower deployment, toll plaza management contracts, and skill development training programs funded by government agencies and corporate clients.",
+    "products_services": [
+      "Manpower Supply Services",
+      "Private Security Services",
+      "Facility Management Services",
+      "Toll Plaza Management",
+      "Skill Development Training Programs",
+      "Recruitment & Workforce Solutions"
+    ],
+    "competitive_strengths": [
+      "Operations across 23 states and 5 union territories",
+      "Strong government and infrastructure contracts",
+      "Diversified revenue streams including toll management",
+      "Large workforce deployment capabilities"
+    ],
+    "risks": [
+      "High dependence on infrastructure and government contracts",
+      "Working capital intensive business",
+      "Thin margins typical for manpower services",
+      "Client concentration risk"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "10 Mar 2026",
+    "ipo_close_date": "12 Mar 2026",
+    "basis_of_allotment_date": "13 Mar 2026",
+    "refund_initiation_date": "16 Mar 2026",
+    "demat_credit_date": "16 Mar 2026",
+    "listing_date": "17 Mar 2026",
+    "anchor_investor_date": "09 Mar 2026",
+    "upi_mandate_deadline": "12 Mar 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital": "Funding working capital requirements",
+    "debt_repayment": "Repayment or prepayment of borrowings",
+    "general_corporate_purposes": "General corporate purposes",
+    "expansion": "Strengthening operational infrastructure"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "1%",
+    "retail_quota": "65%",
+    "hni_quota": "34%",
+    "employee_quota": "0%",
+    "shareholder_quota": "0%",
+    "anchor_investor_allocation": "Included in QIB portion"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "27",
+      "amount": "₹14,796"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "351",
+      "amount": "₹1,92,348"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "378",
+      "amount": "₹2,07,144"
+    },
+    "shni_maximum": {
+      "lot_size": "67 lots",
+      "shares": "1809",
+      "amount": "₹9,91,332"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 lots",
+      "shares": "1836",
+      "amount": "₹10,06,128"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "35.45%",
+    "roce": "40.77%",
+    "ronw": "35.45%",
+    "pat_margin": "3.25%",
+    "ebitda_margin": "5.79%",
+    "eps": "₹15.62",
+    "nav_per_share": "₹43.32",
+    "debt_to_equity": "0.97",
+    "pe_ratio": "33.35x – 35.08x",
+    "industry_pe": "40x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹305 Cr",
+      "total_income": "₹255.57 Cr",
+      "pat": "₹8.88 Cr",
+      "ebitda": "₹16.36 Cr",
+      "net_worth": "₹40 Cr",
+      "total_borrowing": "₹33 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹420 Cr",
+      "total_income": "₹510.33 Cr",
+      "pat": "₹10.27 Cr",
+      "ebitda": "₹26 Cr",
+      "net_worth": "₹60 Cr",
+      "total_borrowing": "₹70 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹530 Cr",
+      "total_income": "₹893.13 Cr",
+      "pat": "₹29.02 Cr",
+      "ebitda": "₹51.75 Cr",
+      "net_worth": "₹120 Cr",
+      "total_borrowing": "₹112 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "March 2026",
+    "estimated_listing_price": "₹548"
+  },
+
+  "ipo_subscription_data": {
+    "anchor": "Allocated before IPO opening",
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "N/A",
+    "retail_subscription": "N/A",
+    "total_subscription": "N/A"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://kfintech.com",
+    "market_maker": "N/A",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Emkay Global Financial Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Gurugram, Haryana, India",
+    "company_website": "https://innovision.co.in",
+    "company_email": "info@innovision.co.in",
+    "company_phone": "+91-124-xxxxxxx"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/dec-2024/innovision-limited-drhp_90017.html",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/mar-2026/innovision-limited-rhp_100105.html",
+    "prospectus_pdf": "https://www.bseindia.com",
+    "investor_presentation": "https://innovision.co.in/investors"
+  },
+
+  "faq": [
+    {
+      "question": "What does Innovision Limited do?",
+      "answer": "Innovision Limited provides manpower services, toll plaza management, and skill development programs across India."
+    },
+    {
+      "question": "When did the Innovision IPO open and close?",
+      "answer": "The IPO opened on 10 March 2026 and closed on 12 March 2026."
+    },
+    {
+      "question": "What was the price band of the Innovision IPO?",
+      "answer": "The IPO price band was ₹521 to ₹548 per share."
+    },
+    {
+      "question": "What was the lot size of the Innovision IPO?",
+      "answer": "The lot size for the IPO was 27 shares."
+    },
+    {
+      "question": "What was the minimum investment required?",
+      "answer": "Retail investors had to invest at least ₹14,796 for one lot."
+    },
+    {
+      "question": "What was the total issue size?",
+      "answer": "The total IPO size was ₹322.84 crore."
+    },
+    {
+      "question": "Where will Innovision shares be listed?",
+      "answer": "The shares will be listed on both BSE and NSE."
+    },
+    {
+      "question": "Who are the promoters of Innovision Limited?",
+      "answer": "The promoters are Lt Col Randeep Hundal and Uday Pal Singh."
+    },
+    {
+      "question": "What are the objectives of the IPO?",
+      "answer": "The IPO proceeds will be used for working capital, repayment of borrowings, and general corporate purposes."
+    },
+    {
+      "question": "Who is the registrar for the IPO?",
+      "answer": "Kfin Technologies Ltd. is the registrar."
+    }
+  ]
 }
 
 

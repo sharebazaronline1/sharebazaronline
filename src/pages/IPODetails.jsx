@@ -8,11 +8,14 @@ import {
   Building2,
   Target,
   BarChart3,
+  HelpCircle,
   Clock,
   IndianRupee,
   Ticket,
   Users,
   CheckCircle,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { fetchIPOs } from "../api/mockApi";
 
@@ -21,6 +24,8 @@ const IPODetails = () => {
   const navigate = useNavigate();
   const [ipo, setIpo] = useState(null);
   const [activeSection, setActiveSection] = useState("overview");
+  // State to track which FAQ items are open (key = index)
+  const [openFaqs, setOpenFaqs] = useState({});
 
   useEffect(() => {
     fetchIPOs().then((ipos) => {
@@ -40,10 +45,17 @@ const IPODetails = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       const offset = 220;
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset - offset;
+      const y = element.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
+  };
+
+  // Toggle FAQ open/close
+  const toggleFaq = (index) => {
+    setOpenFaqs((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
   };
 
   if (!ipo) {
@@ -73,6 +85,7 @@ const IPODetails = () => {
     { id: "lead-manager", label: "IPO Lead Manager(s)", icon: Building2 },
     { id: "company-info", label: "Company Information", icon: Building2 },
     { id: "documents", label: "IPO Documents", icon: Download },
+    { id: "faq", label: "FAQ", icon: HelpCircle },
   ];
 
   return (
@@ -264,7 +277,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* IPO Strengths & Risks - improved layout */}
+            {/* IPO Strengths & Risks */}
             <section id="strengths-risks" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">IPO Strengths & Risks</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -287,7 +300,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 4. IPO Important Dates - now table */}
+            {/* IPO Important Dates */}
             <section id="important-dates" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">IPO Important Dates</h2>
               <div className="overflow-x-auto">
@@ -330,7 +343,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 5. IPO Objectives */}
+            {/* IPO Objectives */}
             <section id="objectives" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">IPO Objectives</h2>
               <ul className="list-disc ml-6 space-y-3 text-gray-700">
@@ -341,7 +354,7 @@ const IPODetails = () => {
               </ul>
             </section>
 
-            {/* 6. Investor Reservation - now table */}
+            {/* Investor Reservation */}
             <section id="investor-reservation" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">Investor Reservation</h2>
               <div className="overflow-x-auto">
@@ -376,7 +389,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 7. Market Lot Details */}
+            {/* Market Lot Details */}
             <section id="lot-allocation" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">Market Lot Details</h2>
               <div className="overflow-x-auto">
@@ -425,7 +438,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 8. Key Performance Indicators (KPI) */}
+            {/* Key Performance Indicators (KPI) */}
             <section id="kpi" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">Key Performance Indicators (KPI)</h2>
               <div className="overflow-x-auto">
@@ -476,7 +489,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 9. Company Financial Data */}
+            {/* Company Financial Data */}
             <section id="financials" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">Company Financial Data</h2>
               <div className="overflow-x-auto">
@@ -509,7 +522,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 10. Grey Market Premium */}
+            {/* Grey Market Premium */}
             <section id="gmp" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">Grey Market Premium</h2>
               <div className="overflow-x-auto">
@@ -540,7 +553,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 11. IPO Subscription Data */}
+            {/* IPO Subscription Data */}
             <section id="subscription" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">IPO Subscription Data</h2>
               <div className="overflow-x-auto">
@@ -571,7 +584,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 12. IPO Intermediaries */}
+            {/* IPO Intermediaries */}
             <section id="intermediaries" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">IPO Intermediaries</h2>
               <div className="space-y-3 text-sm">
@@ -583,13 +596,13 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 13. IPO Lead Manager(s) */}
+            {/* IPO Lead Manager(s) */}
             <section id="lead-manager" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">IPO Lead Manager(s)</h2>
               <p className="text-sm">{ipo.ipo_lead_manager?.lead_manager}</p>
             </section>
 
-            {/* 14. Company Information */}
+            {/* Company Information */}
             <section id="company-info" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">Company Information</h2>
               <div className="space-y-3 text-sm">
@@ -600,7 +613,7 @@ const IPODetails = () => {
               </div>
             </section>
 
-            {/* 15. IPO Documents */}
+            {/* IPO Documents */}
             <section id="documents" className="bg-white p-6 rounded-xl border shadow-sm">
               <h2 className="text-2xl font-bold mb-6">IPO Documents</h2>
               <div className="space-y-3">
@@ -626,6 +639,38 @@ const IPODetails = () => {
                 )}
               </div>
             </section>
+
+            {/* FAQ - collapsible accordion */}
+            {ipo.faq && ipo.faq.length > 0 && (
+              <section id="faq" className="bg-white p-6 rounded-xl border shadow-sm">
+                <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQ)</h2>
+                <div className="space-y-3">
+                  {ipo.faq.map((item, index) => (
+                    <div 
+                      key={index} 
+                      className="border rounded-lg overflow-hidden"
+                    >
+                      <button
+                        onClick={() => toggleFaq(index)}
+                        className="w-full flex justify-between items-center px-4 py-3 text-left bg-gray-50 hover:bg-gray-100 transition"
+                      >
+                        <span className="font-medium text-gray-800">{item.question}</span>
+                        {openFaqs[index] ? (
+                          <ChevronUp size={20} className="text-gray-600" />
+                        ) : (
+                          <ChevronDown size={20} className="text-gray-600" />
+                        )}
+                      </button>
+                      {openFaqs[index] && (
+                        <div className="px-4 pb-4 pt-2 text-gray-700 text-sm md:text-base border-t">
+                          {item.answer}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
           </main>
 
