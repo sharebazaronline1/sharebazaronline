@@ -392,14 +392,14 @@ export default function Home() {
                         {title}
                       </h3>
                     </div>
-                    <ul className="space-y-4">
-                      {items.map((item, idx) => (
-                        <li key={idx} className="flex gap-3 text-gray-700">
-                          <Check className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
-                          <span>{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+                   <ul className="space-y-4 flex flex-col items-center">
+  {items.map((item, idx) => (
+    <li key={idx} className="flex items-center gap-3 text-gray-700">
+      <Check className="w-6 h-6 text-green-600 flex-shrink-0" />
+      <span className="text-center">{item}</span>
+    </li>
+  ))}
+</ul>
                   </div>
                 ))}
               </div>
