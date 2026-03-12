@@ -2,22 +2,229 @@
 
 export const fetchIPOs = async () => {
    return [
-    {
-      id: 1,
-      name: "Neptune Logitek",
-      fullName: "Neptune Logitek IPO",
-      logo: "/images/ipo/neptune-logitek.png",
-      open: "12 Dec 2025",
-      close: "16 Dec 2025",
-      listing: " 22 Dec 2025",
-      price: "120-125",
-      lot: 120,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "Mainboard",
-      status: "Open"
+  {
+  "id": 1,
+  "name": "Neptune Logitek",
+  "logo": "/images/ipo/neptune-logitek.png",
+  "minInvestment": "₹2,52,000",
+  "open": "15 Dec 2025",
+  "close": "17 Dec 2025",
+  "listing": "22 Dec 2025",
+  "price": "₹126",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "Neptune Logitek Limited",
+    "industry_sector": "Logistics & Transportation",
+    "founded_year": "2012",
+    "promoters": ["Ankit Devidas Shah", "Reema Ankit Shah"],
+    "description": "Neptune Logitek Limited is an integrated logistics company providing transportation and supply chain services across India. The company offers services such as freight forwarding, customs clearance, air freight transportation, and multimodal logistics solutions. It operates its own fleet supported by technology driven systems like GPS fleet tracking and automated engine monitoring to improve operational efficiency."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Neptune Logitek Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fixed Price Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹126",
+    "price_band_max": "₹126",
+    "lot_size": 1000,
+    "total_issue_size": "₹46.62 Cr",
+    "fresh_issue_size": "37,00,000 shares",
+    "offer_for_sale": "N/A",
+    "shares_offered": "37,00,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹126",
+    "minimum_investment": "₹2,52,000",
+    "market_cap_post_issue": "₹172.62 Cr",
+    "pre_issue_shareholding": "99.99%",
+    "post_issue_shareholding": "72.99%"
+  },
+
+  "company_overview": {
+    "business_model": "Neptune Logitek operates as an integrated logistics provider offering transportation, freight forwarding, customs clearance, and multimodal logistics services across India. The company utilizes a fleet-based logistics model supported by GPS-enabled fleet management and real-time vehicle tracking.",
+    "products_services": [
+      "Freight Forwarding Services",
+      "Customs Clearance",
+      "Air Freight Transportation",
+      "Multimodal Coastal Logistics",
+      "Road and Rail Transport",
+      "Supply Chain Solutions"
+    ],
+    "competitive_strengths": [
+      "Integrated logistics service portfolio",
+      "Technology-enabled fleet tracking",
+      "Nationwide branch network",
+      "Dedicated fleet and operational infrastructure"
+    ],
+    "risks": [
+      "Highly competitive logistics industry",
+      "High debt-to-equity ratio",
+      "Dependence on transportation demand",
+      "Operational risks related to fleet maintenance"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "15 Dec 2025",
+    "ipo_close_date": "17 Dec 2025",
+    "basis_of_allotment_date": "18 Dec 2025",
+    "refund_initiation_date": "19 Dec 2025",
+    "demat_credit_date": "19 Dec 2025",
+    "listing_date": "22 Dec 2025",
+    "upi_mandate_deadline": "17 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "Purchase of trucks and ancillary equipment",
+    "debt_repayment": "Repayment of existing borrowings",
+    "general_corporate_purposes": "General corporate purposes"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "0%",
+    "retail_quota": "47.50%",
+    "hni_quota": "47.50%",
+    "market_maker_quota": "5%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹2,52,000"
     },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹2,52,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3000",
+      "amount": "₹3,78,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "14.89%",
+    "roce": "21.25%",
+    "ronw": "45.89%",
+    "pat_margin": "3.56%",
+    "ebitda_margin": "8.31%",
+    "eps": "₹9.16",
+    "debt_to_equity": "2.91",
+    "pe_ratio": "17.9x",
+    "price_to_book": "6.32"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Aug 2025",
+      "assets": "₹122.94 Cr",
+      "total_income": "₹105.52 Cr",
+      "pat": "₹4.02 Cr",
+      "ebitda": "₹9.26 Cr",
+      "net_worth": "₹23.97 Cr",
+      "total_borrowing": "₹56.40 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹119.25 Cr",
+      "total_income": "₹260.74 Cr",
+      "pat": "₹9.16 Cr",
+      "ebitda": "₹21.38 Cr",
+      "net_worth": "₹19.95 Cr",
+      "total_borrowing": "₹58.00 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹95.24 Cr",
+      "total_income": "₹175.76 Cr",
+      "pat": "₹0.00 Cr",
+      "ebitda": "₹9.74 Cr",
+      "net_worth": "₹10.79 Cr",
+      "total_borrowing": "₹62.48 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹74.51 Cr",
+      "total_income": "₹187.71 Cr",
+      "pat": "-₹0.18 Cr",
+      "ebitda": "₹5.55 Cr",
+      "net_worth": "₹10.79 Cr",
+      "total_borrowing": "₹38.20 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹100.80"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "0.32x",
+    "retail_subscription": "2.90x",
+    "total_subscription": "1.57x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt Ltd",
+    "registrar_website": "https://www.bigshareonline.com",
+    "market_maker": "Asnani Stock Broker Pvt Ltd",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Galactico Corporate Services Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Office No S6-2, Pinnacle Business Park, Mahakali Caves Road, Mumbai, India",
+    "company_website": "https://www.neptunelogitek.com",
+    "company_email": "cs@neptunelogitek.com",
+    "company_phone": "+91-22-62638200"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/376502/SME_IPO%20InPrinciple/NeptuneLogitekLimitedDraftProspectus_20250528063714.pdf",
+    "rhp_link": "https://www.bseindia.com",
+    "prospectus_pdf": "https://www.bsesme.com/download/376502/SME_IPO%20InPrinciple/NeptuneLogitekLimitedDraftProspectus_20250528063714.pdf",
+    "investor_presentation": "https://www.neptunelogitek.com"
+  },
+
+  "faq": [
+    {
+      "question": "What does Neptune Logitek Limited do?",
+      "answer": "Neptune Logitek Limited provides logistics, freight forwarding, customs clearance, and multimodal transportation services across India."
+    },
+    {
+      "question": "When did the Neptune Logitek IPO open and close?",
+      "answer": "The IPO opened on 15 December 2025 and closed on 17 December 2025."
+    },
+    {
+      "question": "What was the issue price of the Neptune Logitek IPO?",
+      "answer": "The IPO was offered at a fixed price of ₹126 per share."
+    },
+    {
+      "question": "What was the lot size of the Neptune Logitek IPO?",
+      "answer": "The lot size for the IPO was 1,000 shares."
+    },
+    {
+      "question": "Where are Neptune Logitek shares listed?",
+      "answer": "The shares are listed on the BSE SME platform."
+    },
+    {
+      "question": "What was the IPO issue size?",
+      "answer": "The total IPO issue size was ₹46.62 crore."
+    }
+  ]
+},
     {
       id: 2,
       name: "AceVector",
@@ -1456,30 +1663,232 @@ export const fetchIPOs = async () => {
     }
   ]
 },
-  {
+ {
   "id": 56,
-  "name": "Apsis Aerocom",
-  "fullName": "Apsis Aerocom Limited",
+  "name": "Apsis Aerocom ",
   "logo": "/images/ipo/apsis.png",
-  "symbol": null,
+  "minInvestment": "₹2,64,000",
   "open": "11 Mar 2026",
   "close": "13 Mar 2026",
   "listing": "18 Mar 2026",
-  "price": "104 – 110",
+  "price": "₹110",
   "lot": 1200,
-  "minBidQuantity": 2400,
-  "issueSizeShares": 3252000,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Active"
 
+  "about_company": {
+    "company_name": "Apsis Aerocom Limited",
+    "industry_sector": "Aerospace & Defense Manufacturing",
+    "founded_year": "2022",
+    "promoters": ["Vishwanath K", "Srinivas R"],
+    "description": "Apsis Aerocom Limited is a precision engineering company specializing in manufacturing components for the aerospace, defense, and healthcare industries. The company operates a manufacturing facility in the Peenya Industrial Area of Bangalore equipped with CNC machines capable of handling components up to 1,200 mm in length. It provides CAD/CAM based design, process development, and precision machining services for complex industrial components."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Apsis Aerocom Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹104",
+    "price_band_max": "₹110",
+    "lot_size": 1200,
+    "total_issue_size": "₹35.77 Cr",
+    "fresh_issue_size": "32,52,000 shares",
+    "offer_for_sale": "N/A",
+    "shares_offered": "32,52,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹110",
+    "minimum_investment": "₹2,64,000",
+    "market_cap_post_issue": "₹132.57 Cr",
+    "pre_issue_shareholding": "100%",
+    "post_issue_shareholding": "73.02%"
+  },
+
+  "company_overview": {
+    "business_model": "Apsis Aerocom operates in the precision engineering segment, manufacturing high-accuracy components used in aerospace, defense, and healthcare systems. The company uses CNC-based production combined with CAD/CAM design capabilities to provide end-to-end manufacturing services to its clients.",
+    "products_services": [
+      "Precision Aerospace Components",
+      "Defense Engineering Components",
+      "Healthcare Equipment Components",
+      "CNC Machining Services",
+      "CAD/CAM Design and Process Development"
+    ],
+    "competitive_strengths": [
+      "Advanced CNC manufacturing infrastructure",
+      "Specialization in high-precision engineering components",
+      "Integrated CAD/CAM based production capability",
+      "Exposure to aerospace and defense supply chains"
+    ],
+    "risks": [
+      "Dependence on aerospace and defense sector demand",
+      "Limited operating history since incorporation in 2022",
+      "Competition from established precision engineering firms",
+      "Dependence on key customers"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "11 Mar 2026",
+    "ipo_close_date": "13 Mar 2026",
+    "basis_of_allotment_date": "16 Mar 2026",
+    "refund_initiation_date": "17 Mar 2026",
+    "demat_credit_date": "17 Mar 2026",
+    "listing_date": "18 Mar 2026",
+    "upi_mandate_deadline": "13 Mar 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "Purchase of machinery and equipment",
+    "debt_repayment": "N/A",
+    "general_corporate_purposes": "General corporate purposes"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "47.34%",
+    "retail_quota": "33.28%",
+    "hni_quota": "14.28%",
+    "market_maker_quota": "5.09%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,64,000"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,64,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,96,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "9600",
+      "amount": "₹10,56,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "91.60%",
+    "roce": "65.76%",
+    "ronw": "62.82%",
+    "pat_margin": "32.39%",
+    "ebitda_margin": "49.80%",
+    "eps": "₹7.54",
+    "debt_to_equity": "0.22",
+    "pe_ratio": "14.58x",
+    "price_to_book": "9.16"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹23.56 Cr",
+      "total_income": "₹13.70 Cr",
+      "pat": "₹3.12 Cr",
+      "ebitda": "₹4.78 Cr",
+      "net_worth": "₹13.69 Cr",
+      "total_borrowing": "₹2.33 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹18.46 Cr",
+      "total_income": "₹20.57 Cr",
+      "pat": "₹6.64 Cr",
+      "ebitda": "₹10.20 Cr",
+      "net_worth": "₹10.57 Cr",
+      "total_borrowing": "₹2.84 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹11.93 Cr",
+      "total_income": "₹16.88 Cr",
+      "pat": "₹2.55 Cr",
+      "ebitda": "₹4.10 Cr",
+      "net_worth": "₹3.93 Cr",
+      "total_borrowing": "₹1.32 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹7.22 Cr",
+      "total_income": "₹10.41 Cr",
+      "pat": "₹1.03 Cr",
+      "ebitda": "₹1.93 Cr",
+      "net_worth": "₹1.37 Cr",
+      "total_borrowing": "₹2.07 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹7",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Mar 2026",
+    "estimated_listing_price": "₹117"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "N/A",
+    "retail_subscription": "N/A",
+    "total_subscription": "N/A"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Integrated Registry Management Services Pvt Ltd",
+    "registrar_website": "https://www.integratedindia.in",
+    "market_maker": "Basan Equity Broking Ltd",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Oneview Corporate Advisors Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Peenya Industrial Area, Bangalore, Karnataka, India",
+    "company_website": "https://www.apsisaerocom.com",
+    "company_email": "info@apsisaerocom.com",
+    "company_phone": "+91-80-xxxxxxx"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_30092025233505_DRHP.pdf",
+    "rhp_link": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
+    "prospectus_pdf": "https://www.chittorgarh.com/report/sme_ipo_prospectus_document_drhp_rhp_pdf/29/",
+    "investor_presentation": "https://www.apsisaerocom.com"
+  },
+
+  "faq": [
+    {
+      "question": "What does Apsis Aerocom Limited do?",
+      "answer": "Apsis Aerocom manufactures precision engineering components for aerospace, defense, and healthcare industries."
+    },
+    {
+      "question": "When did the Apsis Aerocom IPO open and close?",
+      "answer": "The IPO opened on 11 March 2026 and closed on 13 March 2026."
+    },
+    {
+      "question": "What was the issue price of the Apsis Aerocom IPO?",
+      "answer": "The IPO price band was ₹104 to ₹110 per share."
+    },
+    {
+      "question": "What is the lot size of the Apsis Aerocom IPO?",
+      "answer": "The IPO lot size is 1,200 shares."
+    },
+    {
+      "question": "Where are Apsis Aerocom shares listed?",
+      "answer": "The shares are listed on NSE SME."
+    }
+  ]
 },
 {
   "id": 57,
-  "name": "Innovision IPO",
+  "name": "Innovision ",
   "logo": "/images/ipo/innovision.png",
   "minInvestment": "₹14,796",
   "open": "10 Mar 2026",
