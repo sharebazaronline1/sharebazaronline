@@ -116,17 +116,20 @@ const BrokerAnalyzerGuide = () => {
   const visibleFaqs = showAllFAQs ? faqs : faqs.slice(0, 10);
 
   return (
-    <div className="py-8 bg-gray-50 min-h-screen">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-<div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
+   <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
           <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
             <img
-              src="/images/brokers/brokerguide.png"
-              alt="Broker Analyzer"
+              src="images/brokers/brokerguide.png"
+              alt="Broker Analysis"
               className="absolute inset-0 w-full h-full object-top object-center"
             />
           </div>
         </div>
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-4 mt-4">
+  
+
+ 
         {/* Introduction */}
         <section className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
           <div className="flex items-center gap-3 mb-4">
@@ -185,7 +188,7 @@ const BrokerAnalyzerGuide = () => {
         <AdBanner />
 
         {/* Brokers – Horizontal Layout: Segments last, Charges at end */}
-        <section className="space-y-8">
+        <section className="space-y-4">
           {brokers.map((broker, idx) => (
             <div
               key={idx}
@@ -313,7 +316,7 @@ const BrokerAnalyzerGuide = () => {
           </div>
           <button
             onClick={() => navigate("/login")}
-            className="px-5 py-2 bg-amber-600 hover:bg-amber-700 text-white text-sm font-medium rounded-lg transition"
+            className="px-5 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition shadow-lg"
           >
             Open Account
           </button>

@@ -5,6 +5,7 @@ export const fetchIPOs = async () => {
   {
   "id": 1,
   "name": "Neptune Logitek",
+  "fullName": "Neptune Logitek Limited",
   "logo": "/images/ipo/neptune-logitek.png",
   "minInvestment": "₹2,52,000",
   "open": "15 Dec 2025",
@@ -225,70 +226,861 @@ export const fetchIPOs = async () => {
     }
   ]
 },
+   {
+  "id": 2,
+  "name": "AceVector",
+    "fullName": "Acevector Ltd.",
+  "logo": "/images/ipo/acevector.png",
+  "minInvestment": "TBA",
+  "open": "TBA",
+  "close": "TBA",
+  "listing": "TBA",
+  "price": "TBA",
+  "lot": "TBA",
+
+  "about_company": {
+    "company_name": "Acevector Ltd.",
+    "industry_sector": "Digital Commerce & E-commerce Enablement",
+    "founded_year": "2007",
+    "promoters": ["Kunal Bahl", "Rohit Kumar Bansal", "Starfish I Pte. Ltd."],
+    "description": "Acevector Ltd. runs an asset-light digital commerce platform that serves value-conscious consumers across India through its subsidiaries. It owns Snapdeal, a marketplace focused on affordable products in Tier-2 and smaller cities reaching over 18,000 pin codes with consistently high customer ratings. It also operates Unicommerce (SaaS tools for warehousing, shipping, and order management) and Stellaro Brands (its own consumer product lines sold across multiple channels)."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Acevector Ltd.",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO (Fresh Issue + OFS)",
+    "face_value": "₹1 per share",
+    "price_band_min": "TBA",
+    "price_band_max": "TBA",
+    "lot_size": "TBA",
+    "total_issue_size": "₹300 Cr (Fresh) + OFS up to 6.39 Cr shares",
+    "fresh_issue_size": "₹300 Cr",
+    "offer_for_sale": "Up to 6.39 Cr equity shares",
+    "shares_offered": "TBA",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "TBA",
+    "minimum_investment": "TBA",
+    "market_cap_post_issue": "TBA",
+    "pre_issue_shareholding": "65.31% (Promoters)",
+    "post_issue_shareholding": "TBA"
+  },
+
+  "company_overview": {
+    "business_model": "Asset-light digital commerce ecosystem combining marketplace, SaaS enablement tools, and owned consumer brands, primarily targeting middle-income buyers in smaller cities.",
+    "products_services": [
+      "Snapdeal marketplace",
+      "Unicommerce SaaS (Uniware, Convertway, Shipway)",
+      "Stellaro own brands"
+    ],
+    "competitive_strengths": [
+      "Strong presence in Tier-2+ cities",
+      "High product ratings and trust",
+      "Integrated tech platform for sellers"
+    ],
+    "risks": [
+      "Continued losses in recent years",
+      "Intense competition in e-commerce",
+      "Dependence on subsidiary performance"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "TBA",
+    "ipo_close_date": "TBA",
+    "basis_of_allotment_date": "TBA",
+    "refund_initiation_date": "TBA",
+    "demat_credit_date": "TBA",
+    "listing_date": "TBA",
+    "upi_mandate_deadline": "TBA"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "Growth and technology initiatives",
+    "debt_repayment": "N/A",
+    "general_corporate_purposes": "Working capital and ecosystem expansion"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not less than 75%",
+    "retail_quota": "Not more than 10%",
+    "hni_quota": "Not more than 15%",
+    "market_maker_quota": "N/A"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": { "lot_size": "TBA", "shares": "TBA", "amount": "TBA" },
+    "retail_maximum": { "lot_size": "TBA", "shares": "TBA", "amount": "TBA" },
+    "shni_minimum": { "lot_size": "TBA", "shares": "TBA", "amount": "TBA" }
+  },
+
+  "key_performance_indicators": {
+    "roe": "N/A",
+    "roce": "N/A",
+    "ronw": "-100.25%",
+    "pat_margin": "Negative",
+    "ebitda_margin": "Negative",
+    "eps": "Negative",
+    "debt_to_equity": "Very low",
+    "pe_ratio": "N/A",
+    "price_to_book": "N/A"
+  },
+
+  "company_financial_data": [
     {
-      id: 2,
-      name: "AceVector",
-      fullName: "AceVector Group Ltd",
-      logo: "/images/ipo/acevector.png",
-      open: "11 Dec 2025",
-      close: "16 Dec 2025",
-      listing: "TBA",
-      price: "285-300",
-      lot: 50,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "Mainboard",
-      status: "Open"
+      "period": "30 Sep 2025",
+      "assets": "₹555.84 Cr",
+      "total_income": "₹251.91 Cr",
+      "pat": "-₹22.46 Cr",
+      "ebitda": "-₹9.28 Cr",
+      "net_worth": "₹142.09 Cr",
+      "total_borrowing": "Minimal"
     },
     {
-      id: 3,
-      name: "Park Medi World",
-      fullName: "Park Medi World IPO",
-      logo: "/images/ipo/park-medi-world.png",
-      open: "05 Dec 2025",
-      close: "09 Dec 2025",
-      listing: "17 Dec 2025",
-      price: "86-90",
-      lot: 1600,
-      subscription: "45.20x",
-      listingPrice: null,
-      performance: null,
-      type: "Mainboard",
-      status: "Closed"
+      "period": "31 Mar 2025",
+      "assets": "₹553.97 Cr",
+      "total_income": "₹406.77 Cr",
+      "pat": "-₹125.94 Cr",
+      "ebitda": "-₹39.16 Cr",
+      "net_worth": "₹138.56 Cr",
+      "total_borrowing": "₹0.45 Cr"
     },
     {
-      id: 4,
-      name: "Nephrocare Health",
-      fullName: "Nephrocare Healthtech Ltd",
-      logo: "/images/ipo/nephrocare-health.png",
-      open: "08 Dec 2025",
-      close: "10 Dec 2025",
-      listing: "17 Dec 2025",
-      price: "76-80",
-      lot: 1500,
-      subscription: "32.15x",
-      listingPrice: null,
-      performance: null,
-      type: "Mainboard",
-      status: "Closed"
+      "period": "31 Mar 2024",
+      "assets": "₹410.50 Cr",
+      "total_income": "₹384.74 Cr",
+      "pat": "-₹51.30 Cr",
+      "ebitda": "-₹26.52 Cr",
+      "net_worth": "₹129.16 Cr",
+      "total_borrowing": "N/A"
     },
     {
-      id: 5,
-      name: "Ashwini Container Movers",
-      fullName: "Ashwini Container Movers Ltd",
-      logo: "/images/ipo/ashwini-container-movers.png",
-      open: "09 Dec 2025",
-      close: "11 Dec 2025",
-      listing: "19 Dec 2025",
-      price: "55-58",
-      lot: 2000,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "SME",
-      status: "Closed"
+      "period": "31 Mar 2023",
+      "assets": "₹378.37 Cr",
+      "total_income": "₹388.13 Cr",
+      "pat": "-₹267.53 Cr",
+      "ebitda": "-₹166.72 Cr",
+      "net_worth": "₹22.83 Cr",
+      "total_borrowing": "N/A"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "N/A",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "N/A",
+    "retail_subscription": "N/A",
+    "total_subscription": "N/A"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com",
+    "market_maker": "N/A",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "IIFL Capital Services Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Mezzanine Floor, A-83, Okhla Industrial Area, Phase II, New Delhi - 110020",
+    "company_website": "https://www.acevector.com/",
+    "company_email": "contact@acevector.com",
+    "company_phone": "N/A"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/dec-2025/acevector-limited-udrhp_98252.html",
+    "rhp_link": "N/A",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Acevector Ltd. do?",
+      "answer": "It operates Snapdeal marketplace, Unicommerce SaaS tools, and Stellaro consumer brands targeting value buyers in smaller Indian cities."
     },
+    {
+      "question": "When will the Acevector IPO open?",
+      "answer": "Dates are yet to be announced (SEBI approval received in November 2025)."
+    }
+  ]
+},
+    {
+  "id": 3,
+  "name": "Park Medi World",
+  "fullName": "Park Medi World Limited",
+  "logo": "/images/ipo/park-medi-world.png",
+  "minInvestment": "₹14,904",
+  "open": "10 Dec 2025",
+  "close": "12 Dec 2025",
+  "listing": "17 Dec 2025",
+  "price": "₹154-162",
+  "lot": 92,
+
+  "about_company": {
+    "company_name": "Park Medi World Limited",
+    "industry_sector": "Healthcare - Multi-Super Specialty Hospitals",
+    "founded_year": "2011",
+    "promoters": ["Dr. Ajit Gupta", "Dr. Ankit Gupta"],
+    "description": "Park Medi World Limited operates one of the leading private hospital networks in North India, managing 14 NABH-accredited multi-super specialty facilities with a total capacity exceeding 3,000 beds. It is the largest such chain in Haryana (1,600 beds) and provides affordable, high-quality care across more than 30 specialties, including critical care, oncology, neurology, orthopedics, and diagnostics. The network spans Haryana, Delhi, Punjab, and Rajasthan, emphasizing cluster-based growth and successful integration of acquired hospitals."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Park Medi World Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹2 per share",
+    "price_band_min": "₹154",
+    "price_band_max": "₹162",
+    "lot_size": 92,
+    "total_issue_size": "₹920 Cr",
+    "fresh_issue_size": "₹770 Cr (4.75 Cr shares)",
+    "offer_for_sale": "₹150 Cr (0.93 Cr shares)",
+    "shares_offered": "5,67,90,123 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹162",
+    "minimum_investment": "₹14,904 (1 lot)",
+    "market_cap_post_issue": "₹6,997 Cr (approx. pre-IPO reference)",
+    "pre_issue_shareholding": "95.55% (Promoters)",
+    "post_issue_shareholding": "82.89% (Promoters)"
+  },
+
+  "company_overview": {
+    "business_model": "Operates a network of owned multi-super specialty hospitals with a focus on affordable healthcare in underserved North Indian regions, using a cluster-based expansion model and strategic acquisitions to boost capacity and revenue.",
+    "products_services": [
+      "Multi-super specialty hospital services (30+ specialties)",
+      "Critical care and ICU facilities",
+      "Diagnostics, labs, and medical equipment support"
+    ],
+    "competitive_strengths": [
+      "Leading position in Haryana with high bed capacity",
+      "Strong EBITDA margins through owned assets and efficient operations",
+      "Proven track record of turning around acquired hospitals"
+    ],
+    "risks": [
+      "Challenges in integrating acquired facilities",
+      "High reliance on government payers impacting average revenue per occupied bed",
+      "Competition from larger national hospital chains"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "10 Dec 2025",
+    "ipo_close_date": "12 Dec 2025",
+    "basis_of_allotment_date": "15 Dec 2025",
+    "refund_initiation_date": "16 Dec 2025",
+    "demat_credit_date": "16 Dec 2025",
+    "listing_date": "17 Dec 2025",
+    "upi_mandate_deadline": "12 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "Funding expansion of hospitals and purchase of medical equipment",
+    "debt_repayment": "Repayment or prepayment of existing borrowings",
+    "general_corporate_purposes": "Inorganic growth opportunities and working capital needs"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50% (including anchor portion)",
+    "retail_quota": "35%",
+    "hni_quota": "15%",
+    "market_maker_quota": "N/A"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "92",
+      "amount": "₹14,904"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "1,196",
+      "amount": "₹1,93,752"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "1,288",
+      "amount": "₹2,08,656"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "20.68%",
+    "roce": "17.47%",
+    "ronw": "20.08%",
+    "pat_margin": "15.30%",
+    "ebitda_margin": "26.71%",
+    "eps": "₹5.55",
+    "debt_to_equity": "0.61",
+    "pe_ratio": "29.21x",
+    "price_to_book": "6.09"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹2,320.93 Cr",
+      "total_income": "₹823.39 Cr",
+      "pat": "₹139.14 Cr",
+      "ebitda": "₹217.14 Cr",
+      "net_worth": "₹1,153.05 Cr",
+      "total_borrowing": "₹733.91 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹2,133.70 Cr",
+      "total_income": "₹1,425.97 Cr",
+      "pat": "₹213.22 Cr",
+      "ebitda": "₹372.17 Cr",
+      "net_worth": "₹1,021.86 Cr",
+      "total_borrowing": "₹682.07 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹1,912.10 Cr",
+      "total_income": "₹1,263.08 Cr",
+      "pat": "₹152.01 Cr",
+      "ebitda": "₹310.30 Cr",
+      "net_worth": "₹815.98 Cr",
+      "total_borrowing": "₹686.71 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹1,592.82 Cr",
+      "total_income": "₹1,272.18 Cr",
+      "pat": "₹228.19 Cr",
+      "ebitda": "₹390.34 Cr",
+      "net_worth": "₹667.55 Cr",
+      "total_borrowing": "₹575.68 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "N/A",
+    "estimated_listing_price": "Day-1 close around ₹148-156; Current trading ~₹198-200 (Mar 2026)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "12.07x",
+    "hni_subscription": "15.93x",
+    "retail_subscription": "3.32x",
+    "total_subscription": "8.52x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://www.kfintech.com",
+    "market_maker": "N/A",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Nuvama Wealth Management Ltd."
+  },
+
+  "company_information": {
+    "company_address": "12, Meera Enclave, Near Keshopur Bus Depot, Outer Ring Road, New Delhi - 110018",
+    "company_website": "http://www.parkhospital.in/",
+    "company_email": "company.secretary@parkhospital.in",
+    "company_phone": "+91 124 696 000"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/dec-2025/park-medi-world-limited_98190.html",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/dec-2025/park-medi-world-limited_98190.html",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What is the core business of Park Medi World Limited?",
+      "answer": "It manages a chain of multi-super specialty hospitals in North India, delivering affordable healthcare services across various medical fields with a strong presence in Haryana and nearby states."
+    },
+    {
+      "question": "What were the subscription dates for the Park Medi World IPO?",
+      "answer": "The IPO opened on December 10, 2025, and closed on December 12, 2025."
+    },
+    {
+      "question": "What was the final issue price of the Park Medi World IPO?",
+      "answer": "The shares were priced at ₹162 (upper end of the ₹154-162 band)."
+    },
+    {
+      "question": "What was the minimum lot size for the Park Medi World IPO?",
+      "answer": "92 shares, requiring a minimum investment of ₹14,904 at the upper price."
+    },
+    {
+      "question": "On which exchanges are Park Medi World shares listed?",
+      "answer": "The shares are listed on both BSE and NSE since December 17, 2025."
+    },
+    {
+      "question": "What was the total size of the Park Medi World IPO?",
+      "answer": "The IPO aimed to raise ₹920 crore through a mix of fresh issue and offer for sale."
+    }
+  ]
+},
+    {
+  "id": 4,
+  "name": "Nephrocare Health",
+  "fullName": "Nephrocare Health Services Limited",
+  "logo": "/images/ipo/nephrocare-health.png",
+  "minInvestment": "₹14,720",
+  "open": "10 Dec 2025",
+  "close": "12 Dec 2025",
+  "listing": "17 Dec 2025",
+  "price": "₹438-460",
+  "lot": 32,
+
+  "about_company": {
+    "company_name": "Nephrocare Health Services Limited",
+    "industry_sector": "Healthcare - Dialysis & Kidney Care Services",
+    "founded_year": "2010",
+    "promoters": ["Vikram Vuppala and other key investors (private equity backed)"],
+    "description": "Nephrocare Health Services Limited, operating under the NephroPlus brand, is India's largest and Asia's leading provider of comprehensive dialysis care. It manages an extensive network of over 500 clinics across India and select international markets, offering services from diagnosis and in-center hemodialysis to home-based and mobile dialysis options, along with wellness programs and in-house pharmacy support. The company focuses on tier-2 and tier-3 cities, serving a significant portion of India's dialysis patients with innovative, patient-centric models."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Nephrocare Health Services Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹2 per share",
+    "price_band_min": "₹438",
+    "price_band_max": "₹460",
+    "lot_size": 32,
+    "total_issue_size": "₹871.05 Cr",
+    "fresh_issue_size": "₹353.40 Cr (76,82,717 shares)",
+    "offer_for_sale": "₹517.64 Cr (1,12,53,102 shares)",
+    "shares_offered": "1,89,35,819 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹460",
+    "minimum_investment": "₹14,720 (1 lot)",
+    "market_cap_post_issue": "₹4,615 Cr (pre-IPO reference)",
+    "pre_issue_shareholding": "78.90% (Promoters & others)",
+    "post_issue_shareholding": "71.49% (Promoters & others)"
+  },
+
+  "company_overview": {
+    "business_model": "Asset-light, scalable network of dialysis clinics emphasizing organic growth, acquisitions, and expansion into underserved regions, with a strong focus on operational efficiency and patient accessibility in smaller cities.",
+    "products_services": [
+      "In-center hemodialysis",
+      "Home and mobile dialysis",
+      "Kidney wellness and preventive programs",
+      "In-house pharmacy and support services"
+    ],
+    "competitive_strengths": [
+      "Market leadership in India (largest by patients, clinics, and revenue)",
+      "Broad geographic reach in tier-2/3 cities",
+      "Innovative service models (holiday/mobile dialysis)",
+      "Strong clinical expertise and private equity backing"
+    ],
+    "risks": [
+      "High capital needs for clinic expansion",
+      "Dependence on dialysis demand and reimbursement policies",
+      "Competition from hospitals and regional players",
+      "Potential impact of finance costs on profitability"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "10 Dec 2025",
+    "ipo_close_date": "12 Dec 2025",
+    "basis_of_allotment_date": "15 Dec 2025",
+    "refund_initiation_date": "16 Dec 2025",
+    "demat_credit_date": "16 Dec 2025",
+    "listing_date": "17 Dec 2025",
+    "upi_mandate_deadline": "12 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "Opening new dialysis clinics in India (₹129.11 Cr)",
+    "debt_repayment": "Pre-payment/repayment of borrowings (₹136 Cr)",
+    "general_corporate_purposes": "General corporate purposes (₹60.05 Cr)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "~50% (incl. anchor portion)",
+    "retail_quota": "~35%",
+    "hni_quota": "~15%",
+    "market_maker_quota": "N/A"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "32",
+      "amount": "₹14,720"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "416",
+      "amount": "₹1,91,360"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "448",
+      "amount": "₹2,06,080"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "13.45%",
+    "roce": "18.67%",
+    "ronw": "13.19%",
+    "pat_margin": "8.88%",
+    "ebitda_margin": "22.05%",
+    "eps": "₹7.24",
+    "debt_to_equity": "Low (post-repayment focus)",
+    "pe_ratio": "63.52x (pre-IPO)",
+    "price_to_book": "7.72"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹1,193.68 Cr",
+      "total_income": "₹483.97 Cr",
+      "pat": "₹14.23 Cr",
+      "ebitda": "₹110.31 Cr",
+      "net_worth": "₹716.06 Cr",
+      "total_borrowing": "₹207.04 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹996.46 Cr",
+      "total_income": "₹769.92 Cr",
+      "pat": "₹67.10 Cr",
+      "ebitda": "₹166.64 Cr",
+      "net_worth": "₹594.21 Cr",
+      "total_borrowing": "₹225.80 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹806.02 Cr",
+      "total_income": "₹574.72 Cr",
+      "pat": "₹35.13 Cr",
+      "ebitda": "₹99.66 Cr",
+      "net_worth": "₹423.55 Cr",
+      "total_borrowing": "₹243.37 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹666.23 Cr",
+      "total_income": "₹443.26 Cr",
+      "pat": "-₹11.79 Cr",
+      "ebitda": "₹48.60 Cr",
+      "net_worth": "₹384.73 Cr",
+      "total_borrowing": "₹196.21 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "N/A",
+    "estimated_listing_price": "Listed at ~₹490 (6-7% premium on Dec 17, 2025); traded higher post-listing"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "26.82x",
+    "hni_subscription": "24.77x",
+    "retail_subscription": "2.36x",
+    "total_subscription": "14.08x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://www.kfintech.com",
+    "market_maker": "N/A",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "ICICI Securities Ltd., Nomura Financial Advisory & Securities (India) Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "5th Floor, D Block, iLabs Centre, Madhapur, Hyderabad, Telangana - 500081",
+    "company_website": "https://www.nephroplus.com/",
+    "company_email": "cs@nephroplus.com",
+    "company_phone": "+91 40 4240 8039"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/aug-2025/nephrocare-health-services-limited_96127.html",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/dec-2025/nephrocare-health-services-limited-rhp_98134.html",
+    "prospectus_pdf": "https://www.sebi.gov.in/filings/public-issues/dec-2025/nephrocare-health-services-limited-prospectus_98358.html",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/nephrocare-health-services-anchor-investor.pdf"
+  },
+
+  "faq": [
+    {
+      "question": "What is the main business of Nephrocare Health Services Limited?",
+      "answer": "It provides comprehensive dialysis and kidney care services through a large network of clinics, including hemodialysis, home dialysis, and wellness programs, primarily in India."
+    },
+    {
+      "question": "When did the Nephrocare Health IPO open and close?",
+      "answer": "The IPO opened on December 10, 2025, and closed on December 12, 2025."
+    },
+    {
+      "question": "What was the issue price of the Nephrocare Health IPO?",
+      "answer": "The final issue price was ₹460 per share (upper end of the ₹438-460 band)."
+    },
+    {
+      "question": "What was the lot size for the Nephrocare Health IPO?",
+      "answer": "32 shares, with a minimum investment of ₹14,720 at the issue price."
+    },
+    {
+      "question": "Where are Nephrocare Health shares listed?",
+      "answer": "Listed on BSE and NSE on December 17, 2025."
+    },
+    {
+      "question": "What was the total size of the Nephrocare Health IPO?",
+      "answer": "₹871.05 crore, comprising fresh issue and offer for sale."
+    }
+  ]
+},
+    {
+  "id": 5,
+  "name": "Ashwini Container Movers",
+  "fullName": "Ashwini Container Movers Limited",
+  "logo": "/images/ipo/ashwini-container-movers.png",
+  "minInvestment": "₹2,84,000",
+  "open": "12 Dec 2025",
+  "close": "16 Dec 2025",
+  "listing": "19 Dec 2025",
+  "price": "₹135-142",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "Ashwini Container Movers Limited",
+    "industry_sector": "Transportation & Logistics – Containerized Cargo",
+    "founded_year": "2012",
+    "promoters": ["Bhaskar Kisan Pawar", "Govind Janabhau Sable"],
+    "description": "Ashwini Container Movers Limited is a Maharashtra-based logistics company providing surface transportation services for goods across India, with a primary focus on Maharashtra and Gujarat. It specializes in Full Container Load (FCL) shipments using reefer and dry containers, along with Less Container Load (LCL) and Over Dimension Cargo (ODC). The company operates its own fleet of more than 300 vehicles (20-ft and 40-ft containers) as of September 2025, serving B2B clients by moving bulk cargo between factories and ports. It employs advanced GPS tracking and proprietary software (Clay Soft and Elixia) for real-time monitoring and efficiency. The firm holds multiple certifications including ISO 9001/14001/45001, GDP compliance, CTPAT US, and FSSAI."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Ashwini Container Movers Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO (Fresh Issue only)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹135",
+    "price_band_max": "₹142",
+    "lot_size": 1000,
+    "total_issue_size": "₹71.00 Cr",
+    "fresh_issue_size": "₹71.00 Cr (50,00,000 shares)",
+    "offer_for_sale": "N/A",
+    "shares_offered": "50,00,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹142",
+    "minimum_investment": "₹2,84,000 (2 lots / 2000 shares for retail)",
+    "market_cap_post_issue": "₹213.00 Cr (pre-IPO reference)",
+    "pre_issue_shareholding": "100% (Promoters)",
+    "post_issue_shareholding": "N/A (diluted post-fresh issue)"
+  },
+
+  "company_overview": {
+    "business_model": "Operates as a fleet-owner logistics provider focused on containerized cargo movement in western India, emphasizing B2B services with owned assets, technology-enabled tracking, and customized solutions for port-factory transport.",
+    "products_services": [
+      "Full Container Load (FCL) transportation",
+      "Reefer and dry container services",
+      "Less Container Load (LCL)",
+      "Over Dimension Cargo (ODC) handling"
+    ],
+    "competitive_strengths": [
+      "Large owned fleet (>300 vehicles) ensuring control and reliability",
+      "Real-time tracking via GPS and custom software",
+      "Strong compliance certifications (ISO, CTPAT, FSSAI)",
+      "Experienced promoters with 50+ years in transport",
+      "Client-centric approach with diverse B2B clientele"
+    ],
+    "risks": [
+      "Highly competitive and fragmented logistics sector",
+      "Dependence on regional demand (Maharashtra/Gujarat focus)",
+      "Recent profit surge may not sustain long-term",
+      "No dividend history; capital-intensive fleet maintenance"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "12 Dec 2025",
+    "ipo_close_date": "16 Dec 2025",
+    "basis_of_allotment_date": "17 Dec 2025",
+    "refund_initiation_date": "18 Dec 2025",
+    "demat_credit_date": "18 Dec 2025",
+    "listing_date": "19 Dec 2025",
+    "upi_mandate_deadline": "16 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "Purchase of trucks and vehicles (₹9.03 Cr)",
+    "debt_repayment": "Repayment/pre-payment of borrowings (₹42.50 Cr)",
+    "general_corporate_purposes": "Working capital and other needs (₹9.35 Cr)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "N/A (SME format)",
+    "retail_quota": "N/A (SME format)",
+    "hni_quota": "N/A (SME format)",
+    "market_maker_quota": "Reserved (Choice Equity Broking Pvt. Ltd.)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹2,84,000"
+    },
+    "retail_maximum": {
+      "lot_size": "N/A (SME limits apply)",
+      "shares": "N/A",
+      "amount": "N/A"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3000",
+      "amount": "₹4,26,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "76.82%",
+    "roce": "25.39%",
+    "ronw": "76.82%",
+    "pat_margin": "12.17%",
+    "ebitda_margin": "26.44%",
+    "eps": "N/A (based on post-issue)",
+    "debt_to_equity": "N/A (high borrowing pre-IPO)",
+    "pe_ratio": "18.61x (FY25 basis); 10.75x (annualized FY26)",
+    "price_to_book": "6.95 (pre-IPO); 2.11 (post-IPO)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹121.21 Cr",
+      "total_income": "₹55.86 Cr",
+      "pat": "₹9.91 Cr",
+      "ebitda": "₹19.01 Cr",
+      "net_worth": "₹29.80 Cr",
+      "total_borrowing": "₹74.90 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹101.46 Cr",
+      "total_income": "₹96.06 Cr",
+      "pat": "₹11.45 Cr",
+      "ebitda": "₹24.89 Cr",
+      "net_worth": "₹20.42 Cr",
+      "total_borrowing": "₹62.57 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹78.31 Cr",
+      "total_income": "₹79.27 Cr",
+      "pat": "₹1.38 Cr",
+      "ebitda": "₹13.64 Cr",
+      "net_worth": "₹9.39 Cr",
+      "total_borrowing": "₹58.70 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹66.11 Cr",
+      "total_income": "₹77.16 Cr",
+      "pat": "₹2.10 Cr",
+      "ebitda": "₹12.17 Cr",
+      "net_worth": "₹8.01 Cr",
+      "total_borrowing": "₹47.38 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "N/A",
+    "estimated_listing_price": "N/A (SME GMP not prominently tracked; listed Dec 19, 2025)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "1.31x",
+    "hni_subscription": "3.50x (bNII 4.51x, sNII 1.48x)",
+    "retail_subscription": "1.15x",
+    "total_subscription": "1.70x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt Ltd",
+    "registrar_website": "https://www.bigshareonline.com",
+    "market_maker": "Choice Equity Broking Pvt Ltd",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Corporate Professionals Capital Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "409, Skylark Premises Co-op Society Ltd., Sector 11, Plot No. 63, Thane, Maharashtra 400614",
+    "company_website": "https://www.ashwinimovers.com/",
+    "company_email": "compliance@ashwinimovers.com",
+    "company_phone": "+91 22-27420030"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_23012025003612_DRHP.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_ASHWINI.zip",
+    "prospectus_pdf": "https://nsearchives.nseindia.com/emerge/corporates/content/AshwiniContainerMoversLimited_PROSP.pdf",
+    "investor_presentation": "https://nsearchives.nseindia.com/emerge/corporates/content/AshwiniContainerMoversLimited_PROSP.pdf"
+  },
+
+  "faq": [
+    {
+      "question": "What is the main business of Ashwini Container Movers Limited?",
+      "answer": "It provides containerized cargo transportation services across India, focusing on FCL shipments with reefer/dry containers, LCL, and ODC, mainly serving B2B clients in Maharashtra and Gujarat using its owned fleet."
+    },
+    {
+      "question": "What were the subscription dates for the Ashwini Container Movers IPO?",
+      "answer": "The IPO opened on December 12, 2025, and closed on December 16, 2025."
+    },
+    {
+      "question": "What was the issue price of the Ashwini Container Movers IPO?",
+      "answer": "The price band was ₹135-142 per share, finalized at ₹142."
+    },
+    {
+      "question": "What was the lot size of the Ashwini Container Movers IPO?",
+      "answer": "1000 shares per lot, with retail minimum of 2 lots (2000 shares)."
+    },
+    {
+      "question": "Where are Ashwini Container Movers shares listed?",
+      "answer": "Listed on NSE SME Emerge platform since December 19, 2025."
+    },
+    {
+      "question": "What was the total size of the Ashwini Container Movers IPO?",
+      "answer": "₹71 crore, entirely through fresh issue of 50 lakh shares."
+    }
+  ]
+},
     {
       id: 6,
       name: "Shipwaves Online",
@@ -1424,6 +2216,7 @@ export const fetchIPOs = async () => {
 {
   "id": 55,
   "name": "Rajputana Stainless IPO",
+  "fullName": "Rajputana Stainless Limited",
   "logo": "/images/ipo/rajputana.png",
   "minInvestment": "₹13,420",
   "open": "09 Mar 2026",
@@ -1666,6 +2459,7 @@ export const fetchIPOs = async () => {
  {
   "id": 56,
   "name": "Apsis Aerocom ",
+  "fullName":"Apsis Aerocom Limited",
   "logo": "/images/ipo/apsis.png",
   "minInvestment": "₹2,64,000",
   "open": "11 Mar 2026",
@@ -1858,9 +2652,9 @@ export const fetchIPOs = async () => {
 
   "ipo_documents": {
     "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_30092025233505_DRHP.pdf",
-    "rhp_link": "https://www.chittorgarh.com/keyword/rhp-detail/136/",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_APSISAERO.zip",
     "prospectus_pdf": "https://www.chittorgarh.com/report/sme_ipo_prospectus_document_drhp_rhp_pdf/29/",
-    "investor_presentation": "https://www.apsisaerocom.com"
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/apsis-aerocom-anchor-list.pdf"
   },
 
   "faq": [
@@ -1889,6 +2683,7 @@ export const fetchIPOs = async () => {
 {
   "id": 57,
   "name": "Innovision ",
+  "fullName":"Innovision Limited",
   "logo": "/images/ipo/innovision.png",
   "minInvestment": "₹14,796",
   "open": "10 Mar 2026",
@@ -2131,6 +2926,46 @@ export const fetchIPOs = async () => {
       "answer": "Kfin Technologies Ltd. is the registrar."
     }
   ]
+},
+{
+  "id": 58,
+  "name": "GSP Crop Science",
+  "fullName": "GSP Crop Science Limited",
+  "logo": "/images/ipo/gspcrop.png",
+  "symbol": null,
+  "open": "16 Mar 2026",
+  "close": "18 Mar 2026",
+  "listing": "24 Mar 2026",
+  "price": "304 – 320",
+  "lot": 46,
+  "minBidQuantity": 46,
+  "issueSizeShares": null,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "Mainboard",
+  "status": "Active"
+},
+{
+  "id": 59,
+  "name": "Novus Loyalty",
+  "fullName": "Novus Loyalty Limited",
+  "logo": "/images/ipo/novus.png",
+  "symbol": null,
+  "open": "17 Mar 2026",
+  "close": "20 Mar 2026",
+  "listing": "25 Mar 2026",
+  "price": "139 – 146",
+  "lot": 1000,
+  "minBidQuantity": 2000,
+  "issueSizeShares": 4120000,
+  "faceValue": 10,
+  "subscription": null,
+  "listingPrice": null,
+  "performance": null,
+  "type": "SME",
+  "status": "Active"
 }
 
 
