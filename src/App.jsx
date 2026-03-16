@@ -44,7 +44,7 @@ function AdminLayout() {
   const isAdminPage = location.pathname.startsWith("/admin");
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans flex flex-col">
+    <div className="min-h-screen  font-sans flex flex-col">
       {/* No HeaderAndNav or Footer for admin */}
       <main className="flex-1">
         <Outlet />
@@ -77,7 +77,7 @@ function AppLayout() {
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gray-50 font-sans flex flex-col">
+      <div className="min-h-screen  font-sans flex flex-col">
         {/* HEADER - only on public pages */}
         {!isAuthOrProtectedPage && <HeaderAndNav />}
 

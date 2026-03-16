@@ -20,7 +20,7 @@ const features = [
 ];
 
 const AdBanner = ({ size = "horizontal" }) => (
-  <div className="w-full flex justify-center py-4">
+  <div className="w-full flex justify-center py-4 ">
     <div
       className={`bg-gray-200 border-2 border-dashed border-gray-400 rounded-xl flex items-center justify-center text-gray-500 font-medium ${
         size === "horizontal" ? "w-full max-w-5xl h-32" : "w-80 h-96"
@@ -53,8 +53,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="w-full bg-gray-50">
-
+<div className="w-full min-h-screen bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200">
       {/* HERO */}
  <section className="py-12 px-8 lg:py-12 relative">
   <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
@@ -102,14 +101,14 @@ export default function Home() {
       <section className="py-8">
         <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
-              <h2 className="text-3xl font-black text-gray-900">Best Stock Brokers in India 2025</h2>
-              <p className="mt-2 text-lg text-gray-600">
+            <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 text-white border-b border-gray-200 text-center">
+              <h2 className="text-2xl font-medium font-black text-white">Best Stock Brokers in India 2025</h2>
+              <p className="mt-2 text-lg text-white">
                 Trusted by millions
               </p>
             </div>
 
-            <div className="p-8">
+            <div className="p-8" >
               <BrokerAnalyzer />
               <div className="text-center mt-2">
                 <button
@@ -137,9 +136,9 @@ export default function Home() {
       <div className="flex-1 max-w-[1100px]">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
 
-          <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
-            <h2 className="text-3xl font-black text-gray-900">IPO Tracker</h2>
-            <p className="mt-2 text-lg text-gray-600">
+          <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 border-b border-gray-200 text-center">
+            <h2 className="text-2xl font-black text-white">IPO Tracker</h2>
+            <p className="mt-2 text-lg text-white">
               Live & Upcoming IPOs in India
             </p>
           </div>
@@ -234,9 +233,9 @@ export default function Home() {
       {/* MAIN UNLISTED SHARES SECTION */}
       <div className="flex-1">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-          <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
-            <h2 className="text-3xl font-black text-gray-900">Unlisted Shares</h2>
-            <p className="mt-2 text-lg text-gray-600">Curated marketplace with verified listings</p>
+          <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 border-b border-gray-200 text-center">
+            <h2 className="text-2xl font-black text-white">Unlisted Shares</h2>
+            <p className="mt-2 text-lg text-white">Curated marketplace with verified listings</p>
           </div>
 
           <div className="p-8">
@@ -290,9 +289,9 @@ export default function Home() {
       <section className="py-2">
         <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
-              <h2 className="text-3xl font-black text-gray-900">IPO News & Blogs</h2>
-              <p className="mt-2 text-lg text-gray-600">
+            <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 border-b border-gray-200 text-center">
+              <h2 className="text-2xl font-bold text-white">News & Blogs</h2>
+              <p className="mt-2 text-lg text-white">
                 Latest updates on IPOs, Dividends, Bonus Issues, Rights, NFOs, REITs & Bonds
               </p>
             </div>
@@ -321,13 +320,13 @@ export default function Home() {
       <section className="py-2 pb-8">
         <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
-              <h2 className="text-3xl font-black text-gray-900">
+            <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 border-b border-gray-200 text-center">
+              <h2 className="text-2xl font-bold  text-white">
                 Your Ultimate Hub for{" "}
                 <span className="text-green-600">Smarter Stock-Market Decisions</span>{" "}
                 in India
               </h2>
-              <p className="mt-2 text-lg text-gray-600">
+              <p className="mt-2 text-lg text-white">
                 Everything you need — IPO updates, unlisted shares, broker comparison, and market insights — all in one powerful platform.
               </p>
             </div>
@@ -414,7 +413,7 @@ export default function Home() {
                   <Star className="w-10 h-10 text-yellow-500 fill-current" />
                   <span>Why Investors Trust Us</span>
                 </div>
-                <p className="mt-6 text-2xl font-medium text-gray-800 max-w-full mx-auto">
+                <p className="mt-6 mb-6 text-2xl font-medium text-gray-800 max-w-full mx-auto">
                   Because we make the Indian stock market{" "}
                   <span className="text-green-600 font-bold">
                     simple, transparent, and truly accessible

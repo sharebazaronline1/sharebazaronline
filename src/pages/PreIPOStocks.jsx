@@ -68,7 +68,7 @@ const PreIPOStocks = () => {
   const visibleIPOs = ipos.slice(0, visibleCount);
 
   return (
-    <div className="w-full bg-gray-50">
+    <div className="w-full ">
       {/* BANNER */}
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">

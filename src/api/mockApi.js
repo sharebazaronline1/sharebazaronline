@@ -1081,86 +1081,997 @@ export const fetchIPOs = async () => {
     }
   ]
 },
+   {
+  "id": 6,
+  "name": "Shipwaves Online",
+  "fullName": "Shipwaves Online Solutions Limited",
+  "logo": "/images/ipo/shipwaves-online.png",
+  "minInvestment": "₹2,40,000",
+  "open": "10 Dec 2025",
+  "close": "12 Dec 2025",
+  "listing": "17 Dec 2025",
+  "price": "₹12",
+  "lot": 10000,
+
+  "about_company": {
+    "company_name": "Shipwaves Online Solutions Limited",
+    "industry_sector": "Logistics Technology & Digital Freight Forwarding",
+    "founded_year": "2015",
+    "promoters": [
+      "Kalandan Mohammed Haris",
+      "Kalandan Mohammed Althaf",
+      "Kalandan Mohammad Arif",
+      "Abid Ali",
+      "Bibi Hajira",
+      "Mohammed Sahim Haris"
+    ],
+    "description": "Shipwaves Online Solutions Limited is a Mangaluru-based logistics technology company providing end-to-end digital freight forwarding and supply chain solutions. The company operates a multimodal shipping platform covering ocean, air, and road transport while also offering enterprise SaaS tools for supply chain management. Its digital platform enables businesses to manage bookings, documentation, shipment tracking, and logistics analytics through a unified system designed to improve efficiency and transparency in global trade operations."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Shipwaves Online Solutions Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fixed Price Issue (Fresh Issue)",
+    "face_value": "₹1 per share",
+    "price_band_min": "₹12",
+    "price_band_max": "₹12",
+    "lot_size": 10000,
+    "total_issue_size": "₹56.35 Cr",
+    "fresh_issue_size": "₹56.35 Cr (4,69,60,000 shares)",
+    "offer_for_sale": "N/A",
+    "shares_offered": "4,69,60,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹12",
+    "minimum_investment": "₹2,40,000 (1 lot / 20,000 shares for retail typical application)",
+    "market_cap_post_issue": "Approx ₹169 Cr (estimated)",
+    "pre_issue_shareholding": "99.96% (Promoters)",
+    "post_issue_shareholding": "66.79% (Promoters post issue)"
+  },
+
+  "company_overview": {
+    "business_model": "Operates a technology-driven logistics platform integrating freight forwarding with SaaS-based supply chain solutions. It enables enterprises to book shipments, track cargo, automate documentation, and optimize logistics operations digitally.",
+    "products_services": [
+      "Digital freight forwarding (ocean, air, road)",
+      "Enterprise SaaS logistics management platform",
+      "Shipment tracking and analytics",
+      "Customs clearance support",
+      "Trade finance and insurance services",
+      "Warehousing and cargo relocation services"
+    ],
+    "competitive_strengths": [
+      "Integrated logistics + SaaS technology platform",
+      "Real-time shipment tracking and digital documentation",
+      "Rapidly growing SaaS vertical with strong margins",
+      "Asset-light scalable logistics model",
+      "Growing demand for digital supply chain platforms"
+    ],
+    "risks": [
+      "Highly competitive freight forwarding sector",
+      "Dependence on global trade volumes and logistics demand",
+      "SME IPO liquidity risk after listing",
+      "Technology platform scalability and cybersecurity challenges"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "10 Dec 2025",
+    "ipo_close_date": "12 Dec 2025",
+    "basis_of_allotment_date": "15 Dec 2025",
+    "refund_initiation_date": "16 Dec 2025",
+    "demat_credit_date": "16 Dec 2025",
+    "listing_date": "17 Dec 2025",
+    "upi_mandate_deadline": "12 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "working_capital": "₹17.13 Cr",
+    "subsidiary_investment": "₹10 Cr",
+    "debt_repayment": "₹15 Cr",
+    "general_corporate_purposes": "Balance amount for operational expansion and corporate needs"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not Applicable (SME structure)",
+    "retail_quota": "Approx 47.51%",
+    "hni_quota": "Approx 47.49%",
+    "market_maker_quota": "Approx 5%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "10,000",
+      "amount": "₹1,20,000"
+    },
+    "retail_typical_application": {
+      "lot_size": "2 lots",
+      "shares": "20,000",
+      "amount": "₹2,40,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "30,000",
+      "amount": "₹3,60,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "Approx 35%",
+    "roce": "Approx 28%",
+    "ronw": "Approx 35%",
+    "pat_margin": "Around 11%",
+    "ebitda_margin": "17.5%",
+    "eps": "₹0.86 (approx FY25)",
+    "debt_to_equity": "Moderate leverage",
+    "pe_ratio": "Approx 14x (FY25 basis)",
+    "price_to_book": "Approx 3x"
+  },
+
+  "company_financial_data": [
     {
-      id: 6,
-      name: "Shipwaves Online",
-      fullName: "Shipwaves Online Solutions Ltd",
-      logo: "/images/ipo/shipwaves-online.png",
-      open: "18 Dec 2025",
-      close: "20 Dec 2025",
-      listing: " 27 Dec 2025",
-      price: "92-95",
-      lot: 1300,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "Mainboard",
-      status: "UpcomingIpo"
+      "period": "30 Sep 2025",
+      "assets": "₹79.60 Cr",
+      "total_income": "₹40.98 Cr",
+      "pat": "₹4.45 Cr",
+      "ebitda": "₹7.20 Cr",
+      "net_worth": "₹30.76 Cr",
+      "total_borrowing": "₹20.50 Cr"
     },
     {
-      id: 7,
-      name: "ICICI Prudential AMC",
-      fullName: "ICICI Prudential Asset Management Company Ltd",
-      logo: "/images/ipo/icici-prudential-amc.png",
-      open: "15 Dec 2025",
-      close: "17 Dec 2025",
-      listing: "24 Dec 2025",
-      price: "600-625",
-      lot: 24,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "Mainboard",
-      status: "Open"
+      "period": "31 Mar 2025",
+      "assets": "₹70.50 Cr",
+      "total_income": "₹108.28 Cr",
+      "pat": "₹12.20 Cr",
+      "ebitda": "₹18.95 Cr",
+      "net_worth": "₹30.76 Cr",
+      "total_borrowing": "₹22.10 Cr"
     },
     {
-      id: 8,
-      name: "Methodhub Software",
-      fullName: "Methodhub Software Solutions Ltd",
-      logo: "/images/ipo/methodhub-software.png",
-      open: "02 Dec 2025",
-      close: "04 Dec 2025",
-      listing: "09 Dec 2025",
-      price: "78",
-      lot: 1500,
-      subscription: "67.45x",
-      listingPrice: "102",
-      performance: "+30.77%",
-      type: "SME",
-      status: "Closed"
+      "period": "31 Mar 2024",
+      "assets": "₹60.10 Cr",
+      "total_income": "₹96.71 Cr",
+      "pat": "₹6.29 Cr",
+      "ebitda": "₹13.10 Cr",
+      "net_worth": "₹22.70 Cr",
+      "total_borrowing": "₹24.80 Cr"
     },
     {
-      id: 9,
-      name: "Flywings Simulator",
-      fullName: "Flywings Simulator Training Centre IPO",
-      logo: "/images/ipo/flywings-simulator.png",
-      open: "28 Nov 2025",
-      close: "30 Nov 2025",
-      listing: "05 Dec 2025",
-      price: "145-150",
-      lot: 1000,
-      subscription: "89.12x",
-      listingPrice: "178",
-      performance: "+18.67%",
-      type: "SME",
-      status: "Closed"
+      "period": "31 Mar 2023",
+      "assets": "₹48.30 Cr",
+      "total_income": "₹73.20 Cr",
+      "pat": "₹3.90 Cr",
+      "ebitda": "₹9.30 Cr",
+      "net_worth": "₹16.90 Cr",
+      "total_borrowing": "₹21.40 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹12 (flat listing expectation)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "Moderate demand",
+    "retail_subscription": "Moderate demand",
+    "total_subscription": "Approx 1x range"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Cameo Corporate Services Limited",
+    "registrar_website": "https://cameoindia.com",
+    "market_maker": "Anant Securities Limited",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Finshore Management Services Limited"
+  },
+
+  "company_information": {
+    "company_address": "3rd Floor, Mukka Corporate House, Attavara, Mangaluru, Karnataka, India",
+    "company_website": "https://www.shipwaves.com",
+    "company_email": "secretarial@shipwaves.com",
+    "company_phone": "+91 95381 49978"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bseindia.com/corporates/download/381943/DP_BSE_Shipwaves_27032025_Final_20250329003006.pdf",
+    "prospectus_pdf": "https://www.sebi.gov.in/filings/public-issues/dec-2025/shipwaves-online-limited_98198.html",
+    
+  },
+
+  "faq": [
+    {
+      "question": "What does Shipwaves Online Solutions Limited do?",
+      "answer": "The company provides digital freight forwarding and SaaS-based logistics solutions that allow businesses to manage shipments, documentation, and supply chain operations through a single digital platform."
     },
     {
-      id: 10,
-      name: "Encompass Design",
-      fullName: "Encompass Design India Ltd",
-      logo: "/images/ipo/encompass-design.png",
-      open: "25 Nov 2025",
-      close: "27 Nov 2025",
-      listing: "02 Dec 2025",
-      price: "210",
-      lot: 70,
-      subscription: "54.33x",
-      listingPrice: "245",
-      performance: "+16.67%",
-      type: "SME",
-      status: "Closed"
+      "question": "When did the Shipwaves Online IPO open and close?",
+      "answer": "The IPO opened on December 10, 2025 and closed on December 12, 2025."
     },
+    {
+      "question": "What was the issue price of the Shipwaves Online IPO?",
+      "answer": "The IPO was a fixed price issue of ₹12 per equity share."
+    },
+    {
+      "question": "What was the lot size of the Shipwaves Online IPO?",
+      "answer": "The lot size was 10,000 shares per lot."
+    },
+    {
+      "question": "Where are Shipwaves Online shares listed?",
+      "answer": "The shares are listed on the BSE SME platform since December 17, 2025."
+    },
+    {
+      "question": "What was the total size of the Shipwaves Online IPO?",
+      "answer": "The IPO size was ₹56.35 crore and consisted entirely of a fresh issue of shares."
+    }
+  ]
+},
+
+  {
+  "id": 7,
+  "name": "ICICI Prudential AMC",
+  "fullName": "ICICI Prudential Asset Management Company Limited",
+  "logo": "/images/ipo/icici-prudential-amc.png",
+  "minInvestment": "₹51,960",
+  "open": "12 Dec 2025",
+  "close": "16 Dec 2025",
+  "listing": "19 Dec 2025",
+  "price": "₹2061-₹2165",
+  "lot": 24,
+
+  "about_company": {
+    "company_name": "ICICI Prudential Asset Management Company Limited",
+    "industry_sector": "Asset Management / Mutual Funds",
+    "founded_year": "1998",
+    "promoters": [
+      "ICICI Bank Limited",
+      "Prudential Corporation Holdings Limited"
+    ],
+    "description": "ICICI Prudential Asset Management Company Limited is one of India's largest asset managers and operates the ICICI Prudential Mutual Fund. The company provides asset management services across equity, debt, hybrid, passive funds and portfolio management services. It manages investments for retail investors, institutions and high-net-worth individuals through SIPs, digital platforms and institutional mandates."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "ICICI Prudential Asset Management Company Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Book Built Issue (Offer For Sale)",
+    "face_value": "₹1 per share",
+    "price_band_min": "₹2061",
+    "price_band_max": "₹2165",
+    "lot_size": 24,
+    "total_issue_size": "₹10,000 Cr",
+    "fresh_issue_size": "NIL",
+    "offer_for_sale": "1.76 Crore shares",
+    "shares_offered": "1.76 Crore shares",
+    "listing_exchange": "NSE, BSE",
+    "issue_price": "₹2165",
+    "minimum_investment": "₹51,960",
+    "market_cap_post_issue": "Approx ₹1.18 Lakh Cr",
+    "pre_issue_shareholding": "ICICI Bank 51%, Prudential 49%",
+    "post_issue_shareholding": "ICICI Bank 51%, Prudential ~39%"
+  },
+
+  "company_overview": {
+    "business_model": "Asset-light financial services business focused on mutual fund management, portfolio management services and advisory solutions for institutional and retail investors.",
+    "products_services": [
+      "Equity Mutual Funds",
+      "Debt Mutual Funds",
+      "Hybrid Funds",
+      "Passive Funds and ETFs",
+      "Portfolio Management Services",
+      "Institutional Asset Management"
+    ],
+    "competitive_strengths": [
+      "Second largest AMC in India by AUM",
+      "Strong distribution through ICICI Bank network",
+      "Large SIP investor base",
+      "Asset-light high-margin business model",
+      "Strong brand recognition"
+    ],
+    "risks": [
+      "Revenue depends heavily on market performance",
+      "Regulatory changes by SEBI may reduce TER margins",
+      "Competition from passive funds and ETFs",
+      "Dependence on equity market inflows"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "12 Dec 2025",
+    "ipo_close_date": "16 Dec 2025",
+    "basis_of_allotment_date": "17 Dec 2025",
+    "refund_initiation_date": "18 Dec 2025",
+    "demat_credit_date": "18 Dec 2025",
+    "listing_date": "19 Dec 2025",
+    "upi_mandate_deadline": "16 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "offer_for_sale": "Entire proceeds go to Prudential Corporation Holdings Ltd",
+    "general_corporate_purposes": "Company will not receive funds from the IPO"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "retail_quota": "35%",
+    "hni_quota": "15%",
+    "shareholder_quota": "Reserved for ICICI Bank shareholders"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "24",
+      "amount": "₹51,960"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "312",
+      "amount": "₹6,75,480"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "82.8%",
+    "roce": "74%",
+    "ronw": "82.8%",
+    "pat_margin": "53%",
+    "ebitda_margin": "60%",
+    "eps": "₹55.7",
+    "debt_to_equity": "0",
+    "pe_ratio": "38.8x",
+    "price_to_book": "31x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2025",
+      "assets": "₹4,384 Cr",
+      "total_income": "₹4,980 Cr",
+      "pat": "₹2,651 Cr",
+      "ebitda": "₹3,050 Cr",
+      "net_worth": "₹3,190 Cr",
+      "total_borrowing": "₹0"
+    },
+    {
+      "period": "FY2024",
+      "assets": "₹3,915 Cr",
+      "total_income": "₹4,070 Cr",
+      "pat": "₹2,050 Cr",
+      "ebitda": "₹2,420 Cr",
+      "net_worth": "₹2,860 Cr",
+      "total_borrowing": "₹0"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹520",
+    "kostak_rate": "₹1500",
+    "subject_to_sauda": "₹35,000",
+    "gmp_last_updated": "18 Dec 2025",
+    "estimated_listing_price": "₹2685"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "124x",
+    "hni_subscription": "22x",
+    "retail_subscription": "2.5x",
+    "total_subscription": "39x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "KFin Technologies Limited",
+    "registrar_website": "https://kfintech.com",
+    "market_maker": "N/A",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": 
+      "Citigroup Global Markets India,Morgan Stanley India,Kotak Mahindra Capital,ICICI Securities,Axis Capital,SBI Capital Markets"
+    
+  },
+
+  "company_information": {
+    "company_address": "One BKC, Bandra Kurla Complex, Mumbai, Maharashtra, India",
+    "company_website": "https://www.icicipruamc.com",
+    "company_email": "investor@icicipruamc.com",
+    "company_phone": "+91 22 2652 5000"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/jul-2025/icici-prudential-asset-management-company-limited_95357.html",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/dec-2025/icici-prudential-asset-management-company-limited-rhp_98228.html",
+    "prospectus_pdf": "https://www.sebi.gov.in/filings/public-issues/dec-2025/icici-prudential-asset-management-company-limited-prospectus_98432.html",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/icici-prudential-anchor-investor.pdf"
+  }
+},
+    {
+  "id": 8,
+  "name": "Methodhub Software",
+  "fullName": "Methodhub Software Solutions Limited",
+  "logo": "/images/ipo/methodhub-software.png",
+  "minInvestment": "₹1,17,000",
+  "open": "02 Dec 2025",
+  "close": "04 Dec 2025",
+  "listing": "09 Dec 2025",
+  "price": "₹78",
+  "lot": 1500,
+
+  "about_company": {
+    "company_name": "Methodhub Software Solutions Limited",
+    "industry_sector": "Information Technology Services",
+    "founded_year": "2016",
+    "promoters": [
+      "Raghu Ramakrishnan",
+      "Lakshmi Narayanan"
+    ],
+    "description": "Methodhub Software Solutions Limited is an IT services and consulting company providing enterprise software development, cloud engineering, data analytics, and digital transformation solutions. The company serves global clients across banking, healthcare, retail, and manufacturing sectors with a focus on agile development and scalable enterprise platforms."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Methodhub Software Solutions Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fixed Price Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹78",
+    "price_band_max": "₹78",
+    "lot_size": 1500,
+    "total_issue_size": "₹25.74 Cr",
+    "fresh_issue_size": "₹25.74 Cr",
+    "offer_for_sale": "NIL",
+    "shares_offered": "33,00,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹78",
+    "minimum_investment": "₹1,17,000",
+    "market_cap_post_issue": "Approx ₹95 Cr",
+    "pre_issue_shareholding": "100% (Promoters)",
+    "post_issue_shareholding": "Approx 73% (Promoters)"
+  },
+
+  "company_overview": {
+    "business_model": "Provides IT consulting and software development services for enterprises focusing on cloud migration, digital transformation, and enterprise application development.",
+    "products_services": [
+      "Enterprise Software Development",
+      "Cloud Engineering",
+      "Data Analytics & AI Solutions",
+      "Digital Transformation Consulting",
+      "Application Maintenance & Support"
+    ],
+    "competitive_strengths": [
+      "Strong expertise in enterprise cloud and digital platforms",
+      "Growing demand for IT outsourcing",
+      "Client relationships across multiple industries",
+      "Agile delivery and scalable development teams"
+    ],
+    "risks": [
+      "Highly competitive IT services industry",
+      "Dependence on global technology spending cycles",
+      "Client concentration risk",
+      "SME stock liquidity risk after listing"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "02 Dec 2025",
+    "ipo_close_date": "04 Dec 2025",
+    "basis_of_allotment_date": "05 Dec 2025",
+    "refund_initiation_date": "06 Dec 2025",
+    "demat_credit_date": "06 Dec 2025",
+    "listing_date": "09 Dec 2025",
+    "upi_mandate_deadline": "04 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "working_capital": "Funding working capital requirements",
+    "technology_investment": "Development of software platforms and R&D",
+    "general_corporate_purposes": "Operational expansion and brand development"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not applicable (SME structure)",
+    "retail_quota": "35%",
+    "hni_quota": "50%",
+    "market_maker_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "1500",
+      "amount": "₹1,17,000"
+    },
+    "shni_minimum": {
+      "lot_size": "2 lots",
+      "shares": "3000",
+      "amount": "₹2,34,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "32.6%",
+    "roce": "28.4%",
+    "ronw": "32.6%",
+    "pat_margin": "14.8%",
+    "ebitda_margin": "22.5%",
+    "eps": "₹6.1",
+    "debt_to_equity": "0.35",
+    "pe_ratio": "12.8x",
+    "price_to_book": "3.1"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹42.5 Cr",
+      "total_income": "₹38.7 Cr",
+      "pat": "₹5.7 Cr",
+      "ebitda": "₹8.7 Cr",
+      "net_worth": "₹17.5 Cr",
+      "total_borrowing": "₹6.2 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹34.2 Cr",
+      "total_income": "₹29.4 Cr",
+      "pat": "₹3.9 Cr",
+      "ebitda": "₹6.1 Cr",
+      "net_worth": "₹12.4 Cr",
+      "total_borrowing": "₹5.4 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹28.6 Cr",
+      "total_income": "₹21.3 Cr",
+      "pat": "₹2.8 Cr",
+      "ebitda": "₹4.7 Cr",
+      "net_worth": "₹8.5 Cr",
+      "total_borrowing": "₹4.9 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹18",
+    "kostak_rate": "₹800",
+    "subject_to_sauda": "₹18,000",
+    "gmp_last_updated": "08 Dec 2025",
+    "estimated_listing_price": "₹96"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "89.21x",
+    "retail_subscription": "45.68x",
+    "total_subscription": "67.45x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt Ltd",
+    "registrar_website": "https://www.bigshareonline.com",
+    "market_maker": "Shreni Shares Limited",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Fedex Securities Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Bangalore, Karnataka, India",
+    "company_website": "https://www.methodhub.com",
+    "company_email": "info@methodhub.com",
+    "company_phone": "+91 80 4567 8900"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/344942/SME_IPO%20InPrinciple/MethodhubSoftwareDRHP_20250912225602.pdf",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP_041220251833.zip",
+    "prospectus_pdf": "https://methodhub.in/wp-content/uploads/2025/12/Prospectus-1.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/methodhub-software-anchor-list.pdf"
+  },
+
+  "listing_performance": {
+    "issue_price": "₹78",
+    "listing_price": "₹102",
+    "gain_per_share": "₹24",
+    "percentage_gain": "30.77%"
+  }
+},
+{
+  "id": 9,
+  "name": "Flywings Simulator",
+  "fullName": "Flywings Simulator Training Centre Limited",
+  "logo": "/images/ipo/flywings-simulator.png",
+  "minInvestment": "₹1,50,000",
+  "open": "28 Nov 2025",
+  "close": "30 Nov 2025",
+  "listing": "05 Dec 2025",
+  "price": "₹145-₹150",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "Flywings Simulator Training Centre Limited",
+    "industry_sector": "Aviation Training & Simulation",
+    "founded_year": "2018",
+    "promoters": [
+      "Arjun Mehta",
+      "Sanjay Kulkarni"
+    ],
+    "description": "Flywings Simulator Training Centre Limited provides aviation training services focused on commercial pilot training and flight simulator programs. The company operates advanced flight simulators and offers certification programs for airline pilots, aviation professionals, and flight instructors. It aims to support the growing aviation sector by providing cost-efficient and technologically advanced pilot training infrastructure."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Flywings Simulator Training Centre Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹145",
+    "price_band_max": "₹150",
+    "lot_size": 1000,
+    "total_issue_size": "₹32.25 Cr",
+    "fresh_issue_size": "₹32.25 Cr",
+    "offer_for_sale": "NIL",
+    "shares_offered": "21,50,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹150",
+    "minimum_investment": "₹1,50,000",
+    "market_cap_post_issue": "Approx ₹120 Cr",
+    "pre_issue_shareholding": "100% (Promoters)",
+    "post_issue_shareholding": "Approx 72% (Promoters)"
+  },
+
+  "company_overview": {
+    "business_model": "Operates aviation training centers equipped with advanced flight simulators and provides pilot training programs for commercial and airline pilots.",
+    "products_services": [
+      "Commercial Pilot Training",
+      "Flight Simulator Training",
+      "Type Rating Programs",
+      "Aviation Instructor Certification",
+      "Aviation Skill Development Programs"
+    ],
+    "competitive_strengths": [
+      "Growing demand for trained pilots globally",
+      "Modern simulator infrastructure",
+      "Experienced aviation instructors",
+      "Strategic partnerships with aviation academies"
+    ],
+    "risks": [
+      "Highly capital intensive aviation training infrastructure",
+      "Dependence on aviation industry growth",
+      "Regulatory approvals required for training operations",
+      "SME stock liquidity risk after listing"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "28 Nov 2025",
+    "ipo_close_date": "30 Nov 2025",
+    "basis_of_allotment_date": "02 Dec 2025",
+    "refund_initiation_date": "03 Dec 2025",
+    "demat_credit_date": "03 Dec 2025",
+    "listing_date": "05 Dec 2025",
+    "upi_mandate_deadline": "30 Nov 2025"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "Purchase of additional flight simulators",
+    "training_infrastructure": "Expansion of aviation training facilities",
+    "working_capital": "Operational expenses and business expansion",
+    "general_corporate_purposes": "Corporate and administrative requirements"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not Applicable (SME IPO)",
+    "retail_quota": "35%",
+    "hni_quota": "50%",
+    "market_maker_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "1000",
+      "amount": "₹1,50,000"
+    },
+    "shni_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹3,00,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "29.7%",
+    "roce": "26.4%",
+    "ronw": "29.7%",
+    "pat_margin": "13.6%",
+    "ebitda_margin": "21.2%",
+    "eps": "₹9.3",
+    "debt_to_equity": "0.42",
+    "pe_ratio": "16.1x",
+    "price_to_book": "3.5"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹52.4 Cr",
+      "total_income": "₹41.3 Cr",
+      "pat": "₹5.6 Cr",
+      "ebitda": "₹8.8 Cr",
+      "net_worth": "₹19.7 Cr",
+      "total_borrowing": "₹8.4 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹44.2 Cr",
+      "total_income": "₹33.6 Cr",
+      "pat": "₹3.9 Cr",
+      "ebitda": "₹6.3 Cr",
+      "net_worth": "₹15.2 Cr",
+      "total_borrowing": "₹7.1 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹36.7 Cr",
+      "total_income": "₹27.4 Cr",
+      "pat": "₹2.8 Cr",
+      "ebitda": "₹4.8 Cr",
+      "net_worth": "₹11.6 Cr",
+      "total_borrowing": "₹6.3 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹22",
+    "kostak_rate": "₹1,200",
+    "subject_to_sauda": "₹20,000",
+    "gmp_last_updated": "04 Dec 2025",
+    "estimated_listing_price": "₹172"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "120.34x",
+    "retail_subscription": "57.92x",
+    "total_subscription": "89.12x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt Ltd",
+    "registrar_website": "https://www.bigshareonline.com",
+    "market_maker": "NVS Brokerage Pvt Ltd",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Fedex Securities Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Mumbai, Maharashtra, India",
+    "company_website": "https://www.flywingssimulator.com",
+    "company_email": "info@flywingssimulator.com",
+    "company_phone": "+91 22 4890 5500"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_05082025183919_DRHP_flywings.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_FWSTC.zip",
+    "prospectus_pdf": "https://nsearchives.nseindia.com/emerge/corporates/content/FlywingsSimulatorTrainingCentreLimited_PROSP.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/flywings-simulator-ipo-anchor-allocation-letter.pdf"
+  },
+
+  "listing_performance": {
+    "issue_price": "₹150",
+    "listing_price": "₹178",
+    "gain_per_share": "₹28",
+    "percentage_gain": "18.67%"
+  }
+},
+
+   {
+  "id": 10,
+  "name": "Encompass Design",
+  "fullName": "Encompass Design India Limited",
+  "logo": "/images/ipo/encompass-design.png",
+  "minInvestment": "₹14,700",
+  "open": "25 Nov 2025",
+  "close": "27 Nov 2025",
+  "listing": "02 Dec 2025",
+  "price": "₹210",
+  "lot": 70,
+
+  "about_company": {
+    "company_name": "Encompass Design India Limited",
+    "industry_sector": "Engineering Design & Technology Services",
+    "founded_year": "2011",
+    "promoters": [
+      "Rajesh Kumar",
+      "Anita Mehta"
+    ],
+    "description": "Encompass Design India Limited provides engineering design, product development, and digital engineering services for global manufacturing and technology companies. The firm focuses on mechanical design, embedded systems, and product lifecycle management solutions for industries such as automotive, aerospace, and industrial equipment."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Encompass Design India Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fixed Price Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹210",
+    "price_band_max": "₹210",
+    "lot_size": 70,
+    "total_issue_size": "₹19.32 Cr",
+    "fresh_issue_size": "₹19.32 Cr",
+    "offer_for_sale": "NIL",
+    "shares_offered": "9,20,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹210",
+    "minimum_investment": "₹14,700",
+    "market_cap_post_issue": "Approx ₹110 Cr",
+    "pre_issue_shareholding": "100% (Promoters)",
+    "post_issue_shareholding": "Approx 73% (Promoters)"
+  },
+
+  "company_overview": {
+    "business_model": "Provides engineering design and digital product development services for global clients across manufacturing, automotive, and aerospace sectors.",
+    "products_services": [
+      "Mechanical Engineering Design",
+      "Embedded Systems Development",
+      "Product Lifecycle Management",
+      "Industrial Product Development",
+      "Digital Engineering Services"
+    ],
+    "competitive_strengths": [
+      "Growing demand for outsourced engineering services",
+      "Skilled engineering workforce",
+      "Diversified global client base",
+      "Strong capabilities in digital product design"
+    ],
+    "risks": [
+      "Highly competitive engineering services market",
+      "Dependence on international clients",
+      "Technology disruption risk",
+      "SME liquidity and volatility risk"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "25 Nov 2025",
+    "ipo_close_date": "27 Nov 2025",
+    "basis_of_allotment_date": "28 Nov 2025",
+    "refund_initiation_date": "29 Nov 2025",
+    "demat_credit_date": "29 Nov 2025",
+    "listing_date": "02 Dec 2025",
+    "upi_mandate_deadline": "27 Nov 2025"
+  },
+
+  "ipo_objectives": {
+    "technology_investment": "Investment in engineering software tools and R&D",
+    "working_capital": "Meeting working capital requirements",
+    "general_corporate_purposes": "Operational expansion and corporate needs"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not Applicable (SME IPO)",
+    "retail_quota": "35%",
+    "hni_quota": "50%",
+    "market_maker_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "70",
+      "amount": "₹14,700"
+    },
+    "shni_minimum": {
+      "lot_size": "2 lots",
+      "shares": "140",
+      "amount": "₹29,400"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "27.4%",
+    "roce": "24.1%",
+    "ronw": "27.4%",
+    "pat_margin": "12.7%",
+    "ebitda_margin": "19.8%",
+    "eps": "₹12.4",
+    "debt_to_equity": "0.31",
+    "pe_ratio": "16.9x",
+    "price_to_book": "3.2"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹48.6 Cr",
+      "total_income": "₹36.8 Cr",
+      "pat": "₹4.6 Cr",
+      "ebitda": "₹7.3 Cr",
+      "net_worth": "₹17.2 Cr",
+      "total_borrowing": "₹5.4 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹39.2 Cr",
+      "total_income": "₹28.5 Cr",
+      "pat": "₹3.1 Cr",
+      "ebitda": "₹5.4 Cr",
+      "net_worth": "₹13.6 Cr",
+      "total_borrowing": "₹4.9 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹31.4 Cr",
+      "total_income": "₹22.3 Cr",
+      "pat": "₹2.2 Cr",
+      "ebitda": "₹3.9 Cr",
+      "net_worth": "₹9.8 Cr",
+      "total_borrowing": "₹4.2 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹28",
+    "kostak_rate": "₹900",
+    "subject_to_sauda": "₹12,000",
+    "gmp_last_updated": "01 Dec 2025",
+    "estimated_listing_price": "₹238"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "71.22x",
+    "retail_subscription": "37.41x",
+    "total_subscription": "54.33x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt Ltd",
+    "registrar_website": "https://www.bigshareonline.com",
+    "market_maker": "Spread X Securities Pvt Ltd",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Fedex Securities Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Pune, Maharashtra, India",
+    "company_website": "https://www.encompassdesignindia.com",
+    "company_email": "info@encompassdesignindia.com",
+    "company_phone": "+91 20 4892 1100"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_25072025175142_EDILDRHP.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_ENCOMPAS.zip",
+    "prospectus_pdf": "https://nsearchives.nseindia.com/emerge/corporates/content/EncompassDesignIndiaLimited_PROSP.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/encompass_designs_anchorallocationreport.pdf"
+  },
+
+  "listing_performance": {
+    "issue_price": "₹210",
+    "listing_price": "₹245",
+    "gain_per_share": "₹35",
+    "percentage_gain": "16.67%"
+  }
+},
+
     {
       id: 11,
       name: "Pajson Agro India",

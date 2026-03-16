@@ -89,7 +89,7 @@ const IPODashboard = () => {
   }
 
   return (
-    <div className="w-full bg-gray-50">
+    <div className="w-full ">
 
       {/* ===== FIXED IPO LIST BANNER – Top cropping fixed ===== */}
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
