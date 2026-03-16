@@ -29,15 +29,26 @@ const IPODashboard = () => {
     loadIPOs();
   }, []);
 
-  const getIPOType = (ipo) => {
-    if (ipo.type) return ipo.type.toUpperCase();
-    const name = (ipo.fullName || ipo.name || "").toLowerCase();
-    return name.includes("sme") ? "SME" : "MAINBOARD";
-  };
+ const getIPOType = (ipo) => {
+  if (ipo?.ipo_basic_details?.ipo_type) {
+    return ipo.ipo_basic_details.ipo_type
+      .replace("IPO", "")
+      .trim()
+      .toUpperCase();
+  }
+
+  if (ipo?.type) {
+    return ipo.type.toUpperCase();
+  }
+
+  const name = (ipo?.fullName || ipo?.name || "").toLowerCase();
+  return name.includes("sme") ? "SME" : "MAINBOARD";
+};
+
 
   const getIPOStatusByDate = (ipo) => {
   const today = new Date();
-  today.setHours(0, 0, 0, 0); // <-- This line fixes it
+  today.setHours(0, 0, 0, 0); 
 
   let openDate = ipo.openDate || ipo.open || null;
   let closeDate = ipo.closeDate || ipo.close || null;
@@ -240,33 +251,35 @@ const IPODashboard = () => {
                           {ipo.lot}
                         </td>
 
-                        <td className="px-6 py-5 text-center" onClick={(e) => e.stopPropagation()}>
-                          <div className="flex justify-center items-center gap-3">
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                if (activeTab === "Open") navigate(`/ipo/${ipo.id}`);
-                              }}
-                              disabled={activeTab !== "Open"}
-                              className={`px-5 py-2 rounded-lg text-sm font-semibold transition ${
-                                activeTab === "Open"
-                                  ? "bg-green-600 text-white hover:bg-green-700 shadow-sm"
-                                  : "bg-gray-200 text-gray-500 cursor-not-allowed"
-                              }`}
-                            >
-                              Apply
-                            </button>
-                            <button
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                navigate(`/ipo/${ipo.id}`);
-                              }}
-                              className="px-5 py-2 rounded-lg border border-gray-400 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition"
-                            >
-                              View
-                            </button>
-                          </div>
-                        </td>
+                        <td
+  className="px-6 py-5 text-center"
+  onClick={(e) => e.stopPropagation()}
+>
+  <div className="flex justify-center items-center gap-3">
+    
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        navigate("/how-to-apply-ipo");
+      }}
+      className="px-5 py-2 rounded-lg text-sm font-semibold transition bg-green-600 text-white hover:bg-green-700 shadow-sm"
+    >
+      Apply
+    </button>
+
+    <button
+      onClick={(e) => {
+        e.stopPropagation();
+        navigate(`/ipo/${ipo.id}`);
+      }}
+      className="px-5 py-2 rounded-lg border border-gray-400 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition"
+    >
+      View
+    </button>
+
+  </div>
+</td>
+
                       </motion.tr>
                     );
                   })

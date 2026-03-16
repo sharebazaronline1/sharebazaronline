@@ -7,11 +7,10 @@ export const fetchIPOs = async () => {
   "name": "Neptune Logitek",
   "fullName": "Neptune Logitek Limited",
   "logo": "/images/ipo/neptune-logitek.png",
-  "minInvestment": "₹2,52,000",
   "open": "15 Dec 2025",
   "close": "17 Dec 2025",
   "listing": "22 Dec 2025",
-  "price": "₹126",
+  "price": "126",
   "lot": 1000,
 
   "about_company": {
@@ -426,7 +425,7 @@ export const fetchIPOs = async () => {
   "open": "10 Dec 2025",
   "close": "12 Dec 2025",
   "listing": "17 Dec 2025",
-  "price": "₹154-162",
+  "price": "154-162",
   "lot": 92,
 
   "about_company": {
@@ -645,7 +644,7 @@ export const fetchIPOs = async () => {
   "open": "10 Dec 2025",
   "close": "12 Dec 2025",
   "listing": "17 Dec 2025",
-  "price": "₹438-460",
+  "price": "438-460",
   "lot": 32,
 
   "about_company": {
@@ -867,7 +866,7 @@ export const fetchIPOs = async () => {
   "open": "12 Dec 2025",
   "close": "16 Dec 2025",
   "listing": "19 Dec 2025",
-  "price": "₹135-142",
+  "price": "135-142",
   "lot": 1000,
 
   "about_company": {
@@ -1090,7 +1089,7 @@ export const fetchIPOs = async () => {
   "open": "10 Dec 2025",
   "close": "12 Dec 2025",
   "listing": "17 Dec 2025",
-  "price": "₹12",
+  "price": "12",
   "lot": 10000,
 
   "about_company": {
@@ -1323,7 +1322,7 @@ export const fetchIPOs = async () => {
   "open": "12 Dec 2025",
   "close": "16 Dec 2025",
   "listing": "19 Dec 2025",
-  "price": "₹2061-₹2165",
+  "price": "2061-₹2165",
   "lot": 24,
 
   "about_company": {
@@ -1502,7 +1501,7 @@ export const fetchIPOs = async () => {
   "open": "02 Dec 2025",
   "close": "04 Dec 2025",
   "listing": "09 Dec 2025",
-  "price": "₹78",
+  "price": "78",
   "lot": 1500,
 
   "about_company": {
@@ -1694,7 +1693,7 @@ export const fetchIPOs = async () => {
   "open": "28 Nov 2025",
   "close": "30 Nov 2025",
   "listing": "05 Dec 2025",
-  "price": "₹145-₹150",
+  "price": "145-₹150",
   "lot": 1000,
 
   "about_company": {
@@ -1888,7 +1887,7 @@ export const fetchIPOs = async () => {
   "open": "25 Nov 2025",
   "close": "27 Nov 2025",
   "listing": "02 Dec 2025",
-  "price": "₹210",
+  "price": "210",
   "lot": 70,
 
   "about_company": {

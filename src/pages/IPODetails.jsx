@@ -34,11 +34,15 @@ const IPODetails = () => {
     window.scrollTo(0, 0);
   }, [id]);
 
-  const getHigherPrice = (priceStr) => {
-    if (!priceStr) return 0;
-    const parts = priceStr.toString().split("-");
-    return parseInt(parts[parts.length - 1].replace(/[^0-9]/g, "")) || 0;
-  };
+ const getHigherPrice = (priceStr) => {
+  if (!priceStr) return 0;
+
+  const clean = priceStr.replace(/[₹,\s]/g, "");
+  const parts = clean.split(/[-–]/);
+
+  return parseInt(parts[parts.length - 1]) || 0;
+};
+
 
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
@@ -65,8 +69,37 @@ const IPODetails = () => {
       </div>
     );
   }
+const getMinInvestment = (ipo) => {
 
-  const minInvestment = ipo.minInvestment || (ipo.lot || 1) * getHigherPrice(ipo.price);
+  // 1️⃣ If already provided in detailed JSON
+  if (ipo.ipo_basic_details?.minimum_investment) {
+    return parseInt(
+      ipo.ipo_basic_details.minimum_investment.replace(/[^0-9]/g, "")
+    );
+  }
+
+  // 2️⃣ If minInvestment exists in root
+  if (ipo.minInvestment) {
+    return parseInt(ipo.minInvestment.replace(/[^0-9]/g, ""));
+  }
+
+  // 3️⃣ Calculate using price band and lot size
+  const lot =
+    ipo.lot ||
+    ipo.minBidQuantity ||
+    ipo.ipo_basic_details?.lot_size ||
+    1;
+
+  const price =
+    getHigherPrice(ipo.price) ||
+    getHigherPrice(
+      `${ipo.ipo_basic_details?.price_band_min || ""}-${ipo.ipo_basic_details?.price_band_max || ""}`
+    );
+
+  return lot * price;
+};
+const minInvestment = getMinInvestment(ipo);
+
 
   const sections = [
     { id: "about", label: "About", icon: Building2 },
