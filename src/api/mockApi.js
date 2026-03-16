@@ -2071,70 +2071,833 @@ export const fetchIPOs = async () => {
   }
 },
 
+   {
+  "id": 11,
+  "name": "Pajson Agro India IPO",
+  "logo": "/images/ipo/pajson-agro-india.png",
+  "minInvestment": "₹2,83,200",
+  "open": "11 Dec 2025",
+  "close": "15 Dec 2025",
+  "listing": "18 Dec 2025",
+  "price": "112 – 118",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Pajson Agro India Limited",
+    "industry_sector": "Agro Processing / Food Products",
+    "founded_year": "2021",
+    "promoters": [
+      "Pulkit Jain",
+      "Aayush Jain",
+      "Anjali Jain"
+    ],
+    "description": "Pajson Agro India Limited operates in the agro-processing industry and primarily focuses on processing raw cashew nuts into cashew kernels. The company supplies cashew products to domestic as well as international markets and also sells cashew by-products such as shells and husk used in various industrial and agricultural applications."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Pajson Agro India Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹112",
+    "price_band_max": "₹118",
+    "lot_size": 1200,
+    "total_issue_size": "₹74.45 Cr",
+    "fresh_issue_size": "₹74.45 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "63,09,600 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹118",
+    "minimum_investment": "₹2,83,200",
+    "market_cap_post_issue": "Approx ₹280 Cr",
+    "pre_issue_shareholding": "85%",
+    "post_issue_shareholding": "62.47%"
+  },
+
+  "company_overview": {
+    "business_model": "The company processes raw cashew nuts into cashew kernels and supplies them to wholesalers, exporters, and food distributors in India and overseas markets.",
+    "products_services": [
+      "Cashew Kernel Processing",
+      "Bulk Cashew Supply",
+      "Cashew Retail Packaging",
+      "Sale of Cashew Shell and Husk By-products"
+    ],
+    "competitive_strengths": [
+      "Integrated cashew processing operations",
+      "Strong distribution network in domestic and export markets",
+      "Experienced promoter group with agro-commodity experience",
+      "Growing demand for processed cashew products"
+    ],
+    "risks": [
+      "Dependence on raw cashew nut supply",
+      "Commodity price volatility",
+      "Working capital intensive operations",
+      "Competition from large food processing companies"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "11 Dec 2025",
+    "ipo_close_date": "15 Dec 2025",
+    "basis_of_allotment_date": "16 Dec 2025",
+    "refund_initiation_date": "17 Dec 2025",
+    "demat_credit_date": "17 Dec 2025",
+    "listing_date": "18 Dec 2025",
+    "upi_mandate_deadline": "15 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "expansion": "Capital expenditure for setting up a second cashew processing facility in Vizianagaram, Andhra Pradesh",
+    "working_capital": "N/A",
+    "debt_repayment": "N/A",
+    "general_corporate_purposes": "Balance of issue proceeds"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "46.82%",
+    "retail_quota": "33.24%",
+    "hni_quota": "14.26%",
+    "market_maker_quota": "5.67%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,83,200"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,83,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹4,24,800"
+    },
+    "shni_maximum": {
+      "lot_size": "7 lots",
+      "shares": "8400",
+      "amount": "₹9,91,200"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "9600",
+      "amount": "₹11,32,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "60.05%",
+    "roce": "48.21%",
+    "ronw": "46.18%",
+    "pat_margin": "10.90%",
+    "ebitda_margin": "16.16%",
+    "eps": "₹11.67 (Pre-IPO) / ₹11.92 (Post-IPO)",
+    "nav_per_share": "₹25.26",
+    "debt_to_equity": "0.33",
+    "pe_ratio": "9.90x",
+    "industry_pe": "18x"
+  },
+
+  "company_financial_data": [
     {
-      id: 11,
-      name: "Pajson Agro India",
-      fullName: "Pajson Agro India Ltd",
-      logo: "/images/ipo/pajson-agro-india.png",
-      open: "11 Dec 2025",
-      close: "15 Dec 2025",
-      listing: "18 Dec 2025",
-      price: "112-118",
-      lot: 1200,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "SME",
-      status: "Closed"
+      "period": "31 Mar 2023",
+      "assets": "₹50 Cr",
+      "total_income": "₹101 Cr",
+      "pat": "₹0.2 Cr",
+      "ebitda": "₹5.3 Cr",
+      "net_worth": "₹20.44 Cr",
+      "total_borrowing": "₹0 Cr"
     },
     {
-      id: 12,
-      name: "HRS Aluglaze",
-      fullName: "HRS Aluglaze Ltd",
-      logo: "/images/ipo/hrs-aluglaze.png",
-      open: "11 Dec 2025",
-      close: "15 Dec 2025",
-      listing: "18 Dec 2025",
-      price: "94-96",
-      lot: 1200,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "SME",
-      status: "Closed"
+      "period": "31 Mar 2024",
+      "assets": "₹55 Cr",
+      "total_income": "₹96 Cr",
+      "pat": "₹3 Cr",
+      "ebitda": "₹8 Cr",
+      "net_worth": "₹23.79 Cr",
+      "total_borrowing": "₹14.57 Cr"
     },
     {
-      id: 13,
-      name: "Exim Routes",
-      fullName: "Exim Routes Ltd",
-      logo: "/images/ipo/exim-routes.png",
-      open: "12 Dec 2025",
-      close: "16 Dec 2025",
-      listing: "19 Dec 2025",
-      price: "83-88",
-      lot: 1600,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "SME",
-      status: "Open"
+      "period": "31 Mar 2025",
+      "assets": "₹66 Cr",
+      "total_income": "₹187 Cr",
+      "pat": "₹20 Cr",
+      "ebitda": "₹30 Cr",
+      "net_worth": "₹44.21 Cr",
+      "total_borrowing": "₹14.57 Cr"
     },
     {
-      id: 14,
-      name: "Stanbik Agro",
-      fullName: "Stanbik Agro Ltd",
-      logo: "/images/ipo/stanbik-agro.png",
-      open: "12 Dec 2025",
-      close: "16 Dec 2025",
-      listing: "19 Dec 2025",
-      price: "30",
-      lot: 4000,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "SME",
-      status: "Open"
+      "period": "30 Sep 2025",
+      "assets": "₹152 Cr",
+      "total_income": "₹118 Cr",
+      "pat": "₹14 Cr",
+      "ebitda": "₹22 Cr",
+      "net_worth": "₹58.40 Cr",
+      "total_borrowing": "₹40.04 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹6",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹124"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "10.92x",
+    "hni_subscription": "5.19x",
+    "retail_subscription": "3.80x",
+    "total_subscription": "6.04x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt Ltd",
+    "registrar_website": "https://www.bigshareonline.com",
+    "market_maker": "Spread X Securities Pvt Ltd",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "GYR Capital Advisors Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Pearl Omaxe Tower, Netaji Subhash Place, Pitampura, New Delhi, India",
+    "company_website": "https://www.pajsonagro.com",
+    "company_email": "investor@pajsonagro.com",
+    "company_phone": "+91-11-43026646"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/307027/SME_IPO%20InPrinciple/DRHPPajsonAgroIndiaLimited_20250927145450.pdf",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/dec-2025/pajson-agro-india-limited_98326.html",
+    "prospectus_pdf": "https://pajsonagro.com/wp-content/uploads/2025/12/Prospectus_PAJSON-revised.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/pajson-agro-anchor-alloaction.pdf"
+  }
+},
+
+   {
+  "id": 12,
+  "name": "HRS Aluglaze IPO",
+  "logo": "/images/ipo/hrs-aluglaze.png",
+  "minInvestment": "₹2,30,400",
+  "open": "11 Dec 2025",
+  "close": "15 Dec 2025",
+  "listing": "18 Dec 2025",
+  "price": "94 – 96",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "HRS Aluglaze Limited",
+    "industry_sector": "Construction Materials / Aluminium & Glass Systems",
+    "founded_year": "2012",
+    "promoters": [
+      "Hitesh Shah",
+      "Rakesh Shah"
+    ],
+    "description": "HRS Aluglaze Limited specializes in designing, manufacturing, and installing aluminium architectural products such as windows, doors, curtain wall systems, glazing structures, and cladding solutions. The company delivers end-to-end façade and glazing services to builders, architects, contractors, and commercial infrastructure developers."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "HRS Aluglaze Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹94",
+    "price_band_max": "₹96",
+    "lot_size": 1200,
+    "total_issue_size": "₹50.92 Cr",
+    "fresh_issue_size": "₹50.92 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "53,04,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹96",
+    "minimum_investment": "₹2,30,400",
+    "market_cap_post_issue": "₹185.11 Cr",
+    "pre_issue_shareholding": "1,39,78,125 shares",
+    "post_issue_shareholding": "1,92,82,125 shares"
+  },
+
+  "company_overview": {
+    "business_model": "The company provides aluminium and glass façade systems including design, fabrication, supply, and installation services for residential, commercial, and institutional infrastructure projects.",
+    "products_services": [
+      "Aluminium Windows & Doors",
+      "Curtain Wall Systems",
+      "Structural Glazing",
+      "Aluminium Composite Panel Cladding",
+      "Architectural Façade Solutions"
+    ],
+    "competitive_strengths": [
+      "Integrated design-to-installation service model",
+      "Advanced CNC manufacturing equipment",
+      "Established client relationships with builders and contractors",
+      "Growing demand from commercial and infrastructure projects"
+    ],
+    "risks": [
+      "Dependence on construction and real estate sector growth",
+      "Raw material price fluctuations",
+      "Project execution delays",
+      "Competition from established façade system manufacturers"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "11 Dec 2025",
+    "ipo_close_date": "15 Dec 2025",
+    "basis_of_allotment_date": "16 Dec 2025",
+    "refund_initiation_date": "17 Dec 2025",
+    "demat_credit_date": "17 Dec 2025",
+    "listing_date": "18 Dec 2025",
+    "anchor_investor_date": "10 Dec 2025",
+    "upi_mandate_deadline": "15 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "expansion": "Expansion of manufacturing facility and additional plant infrastructure",
+    "working_capital": "Working capital requirements",
+    "debt_repayment": "N/A",
+    "general_corporate_purposes": "General corporate purposes and issue expenses"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "46.90%",
+    "retail_quota": "33.67%",
+    "hni_quota": "14.25%",
+    "market_maker_quota": "5.18%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,30,400"
     },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,30,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,45,600"
+    },
+    "shni_maximum": {
+      "lot_size": "8 lots",
+      "shares": "9600",
+      "amount": "₹9,21,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 lots",
+      "shares": "10800",
+      "amount": "₹10,36,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "34.24%",
+    "roce": "15.97%",
+    "ronw": "34.24%",
+    "pat_margin": "12.22%",
+    "ebitda_margin": "25.42%",
+    "eps": "₹3.68",
+    "nav_per_share": "₹17.61",
+    "debt_to_equity": "1.92",
+    "pe_ratio": "26.07x",
+    "industry_pe": "30x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹49 Cr",
+      "total_income": "₹30 Cr",
+      "pat": "₹2.2 Cr",
+      "ebitda": "₹6.1 Cr",
+      "net_worth": "₹7.3 Cr",
+      "total_borrowing": "₹13 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹70 Cr",
+      "total_income": "₹36 Cr",
+      "pat": "₹3.7 Cr",
+      "ebitda": "₹8.5 Cr",
+      "net_worth": "₹10 Cr",
+      "total_borrowing": "₹18 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹82 Cr",
+      "total_income": "₹42.14 Cr",
+      "pat": "₹5.15 Cr",
+      "ebitda": "₹10.70 Cr",
+      "net_worth": "₹14 Cr",
+      "total_borrowing": "₹25 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹91.16 Cr",
+      "total_income": "₹26.35 Cr",
+      "pat": "₹4.54 Cr",
+      "ebitda": "₹8.45 Cr",
+      "net_worth": "₹17 Cr",
+      "total_borrowing": "₹29 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹22",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹118"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "19.48x",
+    "hni_subscription": "60.50x",
+    "retail_subscription": "49.54x",
+    "total_subscription": "42x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Purva Sharegistry (India) Pvt. Ltd.",
+    "registrar_website": "https://www.purvashare.com",
+    "market_maker": "MNM Stock Broking Pvt. Ltd.",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Cumulative Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Village Rajoda, Bavla, Ahmedabad, Gujarat, India",
+    "company_website": "https://www.hrsaluglaze.com",
+    "company_email": "info@hrsaluglaze.com",
+    "company_phone": "+91 7926306595"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/357605/SME_IPO%20InPrinciple/HRS_ALUGLAZE_LIMITED_DRHP_11092025_20250911122618.pdf",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_HRS_091220252206.zip",
+    "prospectus_pdf": "https://hrsaluglaze.com/wp-content/uploads/2025/12/Prospectus-HRS-Aluglaze-Limited-December-15-2025-1.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/hrs-aluglaze-anchor-investor-list.pdf"
+  }
+},
+   {
+  "id": 13,
+  "name": "Exim Routes IPO",
+  "logo": "/images/ipo/exim-routes.png",
+  "minInvestment": "₹2,81,600",
+  "open": "12 Dec 2025",
+  "close": "16 Dec 2025",
+  "listing": "19 Dec 2025",
+  "price": "83 – 88",
+  "lot": 1600,
+
+  "about_company": {
+    "company_name": "Exim Routes Limited",
+    "industry_sector": "Recycling Supply Chain / B2B Digital Platform",
+    "founded_year": "2019",
+    "promoters": [
+      "Abhishek Jain",
+      "Nikita Jain"
+    ],
+    "description": "Exim Routes Limited operates a global recyclable-material exchange platform that connects waste paper suppliers with paper mills. Through its proprietary AI-powered ERIS platform, the company manages sourcing, procurement, quality assurance, and international logistics of recyclable materials used by paper manufacturers."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Exim Routes Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹5 per share",
+    "price_band_min": "₹83",
+    "price_band_max": "₹88",
+    "lot_size": 1600,
+    "total_issue_size": "₹43.73 Cr",
+    "fresh_issue_size": "₹43.73 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "49,69,600 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹88",
+    "minimum_investment": "₹2,81,600",
+    "market_cap_post_issue": "₹165.02 Cr",
+    "pre_issue_shareholding": "1,37,82,400 shares",
+    "post_issue_shareholding": "1,87,52,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "The company operates a digital B2B platform that enables global trade of recyclable paper materials by connecting suppliers with paper mills and managing logistics, quality control, and cross-border procurement.",
+    "products_services": [
+      "Waste Paper Procurement",
+      "Recyclable Material Supply Chain Management",
+      "Quality Assurance and Inspection",
+      "Global Logistics Coordination",
+      "ERIS Digital Trading Platform"
+    ],
+    "competitive_strengths": [
+      "AI-driven ERIS digital platform",
+      "Integrated sourcing and logistics model",
+      "Growing demand for recyclable raw materials",
+      "Established relationships with paper mills and suppliers"
+    ],
+    "risks": [
+      "Dependence on global recyclable material supply",
+      "Commodity price fluctuations",
+      "Logistics and cross-border trade risks",
+      "Competition from established recycling supply companies"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "12 Dec 2025",
+    "ipo_close_date": "16 Dec 2025",
+    "basis_of_allotment_date": "17 Dec 2025",
+    "refund_initiation_date": "18 Dec 2025",
+    "demat_credit_date": "18 Dec 2025",
+    "listing_date": "19 Dec 2025",
+    "anchor_investor_date": "11 Dec 2025",
+    "upi_mandate_deadline": "16 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "technology_development": "Development and maintenance of ERIS digital platform",
+    "working_capital": "Funding working capital requirements",
+    "office_expansion": "Investment in office infrastructure and workforce expansion",
+    "general_corporate_purposes": "Balance of IPO proceeds"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "47.33%",
+    "retail_quota": "33.35%",
+    "hni_quota": "14.29%",
+    "market_maker_quota": "5.02%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,81,600"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,81,600"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "4800",
+      "amount": "₹4,22,400"
+    },
+    "shni_maximum": {
+      "lot_size": "7 lots",
+      "shares": "11200",
+      "amount": "₹9,85,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "12800",
+      "amount": "₹11,26,400"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "42.28%",
+    "roce": "26.81%",
+    "ronw": "42.28%",
+    "pat_margin": "18.52%",
+    "ebitda_margin": "8.24%",
+    "eps": "₹5.49",
+    "nav_per_share": "₹11.89",
+    "debt_to_equity": "0.18",
+    "pe_ratio": "16.04x",
+    "industry_pe": "20x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹32 Cr",
+      "total_income": "₹41 Cr",
+      "pat": "₹3.9 Cr",
+      "ebitda": "₹4.2 Cr",
+      "net_worth": "₹8 Cr",
+      "total_borrowing": "₹2 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹48 Cr",
+      "total_income": "₹55 Cr",
+      "pat": "₹5.1 Cr",
+      "ebitda": "₹6.4 Cr",
+      "net_worth": "₹13 Cr",
+      "total_borrowing": "₹3 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹71 Cr",
+      "total_income": "₹79 Cr",
+      "pat": "₹10 Cr",
+      "ebitda": "₹11 Cr",
+      "net_worth": "₹19 Cr",
+      "total_borrowing": "₹3 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹32",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹120"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "0.00x",
+    "hni_subscription": "4.34x",
+    "retail_subscription": "2.23x",
+    "total_subscription": "2.05x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Maashitla Securities Pvt Ltd",
+    "registrar_website": "https://www.maashitla.com",
+    "market_maker": "Nikunj Stock Brokers Ltd",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Narnolia Financial Services Ltd"
+  },
+
+  "company_information": {
+    "company_address": "451 Krishna Apra Business Square, Netaji Subhash Place, Pitampura, New Delhi, India",
+    "company_website": "https://eximroutes.ai",
+    "company_email": "cs.er@eximroutes.in",
+    "company_phone": "+91-11-45121795"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_16072025120336_DRHP_Exim_Routes.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_EXIMROUTES.zip",
+    "prospectus_pdf": "https://www.chittorgarh.net/reports/ipo_notes/prospectus_exim.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/exim-routes-anchor-list.pdf"
+  }
+}
+ ,
+    {
+  "id": 14,
+  "name": "Stanbik Agro IPO",
+  "logo": "/images/ipo/stanbik-agro.png",
+  "minInvestment": "₹2,40,000",
+  "open": "12 Dec 2025",
+  "close": "16 Dec 2025",
+  "listing": "19 Dec 2025",
+  "price": "30",
+  "lot": 4000,
+
+  "about_company": {
+    "company_name": "Stanbik Agro Limited",
+    "industry_sector": "Agriculture Supply Chain / Agri Commodities",
+    "founded_year": "2021",
+    "promoters": [
+      "Vishal Shah",
+      "Dhruv Shah"
+    ],
+    "description": "Stanbik Agro Limited operates in the agricultural supply chain sector and focuses on contract farming, wholesaling, and distribution of agricultural commodities. The company works directly with farmers to source crops and supplies fresh produce to wholesalers, retailers, and institutional buyers through an integrated farm-to-market model."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Stanbik Agro Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fixed Price Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹30",
+    "price_band_max": "₹30",
+    "lot_size": 4000,
+    "total_issue_size": "₹12.28 Cr",
+    "fresh_issue_size": "₹12.28 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "40,92,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹30",
+    "minimum_investment": "₹2,40,000",
+    "market_cap_post_issue": "₹40 Cr",
+    "pre_issue_shareholding": "98.92%",
+    "post_issue_shareholding": "68.54%"
+  },
+
+  "company_overview": {
+    "business_model": "The company procures agricultural produce directly from farmers and distributes it to retailers, wholesalers, and institutional buyers. It also operates retail outlets and B2B supply channels for agricultural commodities.",
+    "products_services": [
+      "Contract Farming",
+      "Agricultural Commodity Supply",
+      "Retail Sales of Fresh Produce",
+      "B2B Agricultural Distribution"
+    ],
+    "competitive_strengths": [
+      "Direct farmer procurement network",
+      "Integrated farm-to-retail supply chain",
+      "Growing demand for organized agricultural distribution",
+      "Strong revenue growth in recent years"
+    ],
+    "risks": [
+      "Dependence on agricultural output and weather conditions",
+      "Commodity price volatility",
+      "Highly competitive agri-distribution sector",
+      "Working capital intensive operations"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "12 Dec 2025",
+    "ipo_close_date": "16 Dec 2025",
+    "basis_of_allotment_date": "17 Dec 2025",
+    "refund_initiation_date": "18 Dec 2025",
+    "demat_credit_date": "18 Dec 2025",
+    "listing_date": "19 Dec 2025",
+    "upi_mandate_deadline": "16 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "retail_expansion": "Opening new retail outlets",
+    "working_capital": "Funding working capital requirements",
+    "security_deposits": "Deposits for retail operations",
+    "general_corporate_purposes": "Balance of IPO proceeds"
+  },
+
+  "investor_reservation": {
+    "retail_quota": "50%",
+    "hni_quota": "50%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "8000",
+      "amount": "₹2,40,000"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "8000",
+      "amount": "₹2,40,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "12000",
+      "amount": "₹3,60,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "4 lots",
+      "shares": "16000",
+      "amount": "₹4,80,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "48.94%",
+    "roce": "32%",
+    "ronw": "48.94%",
+    "pat_margin": "6.24%",
+    "ebitda_margin": "10%",
+    "eps": "₹6.47",
+    "nav_per_share": "₹20.55",
+    "debt_to_equity": "0.20",
+    "pe_ratio": "4.63x",
+    "industry_pe": "15x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹12 Cr",
+      "total_income": "₹19.96 Cr",
+      "pat": "₹1.02 Cr",
+      "ebitda": "₹2.10 Cr",
+      "net_worth": "₹4 Cr",
+      "total_borrowing": "₹0.5 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹18 Cr",
+      "total_income": "₹26.55 Cr",
+      "pat": "₹1.85 Cr",
+      "ebitda": "₹3.20 Cr",
+      "net_worth": "₹6 Cr",
+      "total_borrowing": "₹0.8 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹28 Cr",
+      "total_income": "₹52.49 Cr",
+      "pat": "₹3.74 Cr",
+      "ebitda": "₹5.10 Cr",
+      "net_worth": "₹10 Cr",
+      "total_borrowing": "₹1.5 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹34 Cr",
+      "total_income": "₹35.55 Cr",
+      "pat": "₹2.22 Cr",
+      "ebitda": "₹3.70 Cr",
+      "net_worth": "₹12 Cr",
+      "total_borrowing": "₹1.8 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹30"
+  },
+
+  "ipo_subscription_data": {
+    "retail_subscription": "2.10x",
+    "hni_subscription": "2.75x",
+    "total_subscription": "2.42x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Purva Sharegistry India Pvt Ltd",
+    "registrar_website": "https://www.purvashare.com",
+    "market_maker": "MNM Stock Broking Pvt Ltd",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Grow House Wealth Management Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "D 1106, Titanium City Centre,Near Sachin Tower 100 Feet Road,SAC",
+    "company_website": "https://stanbikagro.com",
+    "company_email": "info@stanbikagro.com",
+    "company_phone": "+91-8160274723"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/370036/SME_IPO%20InPrinciple/FinalDRHP05092025_20250905203451.pdf",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/stanbik-agro-limited.html",
+    "prospectus_pdf": "https://www.bseindia.com/downloads/ipo/Prospectus%20&%20GID_111220251445.zip",
+    "investor_presentation": "N/A"
+  }
+}
+ ,
     {
       id: 15,
       name: "KSH International",
@@ -2398,7 +3161,7 @@ export const fetchIPOs = async () => {
   "subscription": null,
   "listingPrice": null,
   "performance": null,
-  "type": "Mainboard",
+  "type": "SME",
   "status": "Active"
 },
 {
@@ -2418,7 +3181,7 @@ export const fetchIPOs = async () => {
   "subscription": null,
   "listingPrice": null,
   "performance": null,
-  "type": "Mainboard",
+  "type": "SME",
   "status": "Active"
 },
 {
