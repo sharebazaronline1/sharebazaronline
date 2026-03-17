@@ -2898,118 +2898,1302 @@ export const fetchIPOs = async () => {
   }
 }
  ,
+   {
+  "id": 15,
+  "name": "KSH International",
+  "logo": "/images/ipo/ksh-international.png",
+  "minInvestment": "₹14,976",
+  "open": "16 Dec 2025",
+  "close": "18 Dec 2025",
+  "listing": "23 Dec 2025",
+  "price": "365 – 384",
+  "lot": 39,
+
+  "about_company": {
+    "company_name": "KSH International Limited",
+    "industry_sector": "Electrical Equipment / Magnet Winding Wires",
+    "founded_year": "1981",
+    "promoters": [
+      "Kushal Subbayya Hegde",
+      "Pushpa Kushal Hegde",
+      "Rajesh Kushal Hegde",
+      "Rohit Kushal Hegde"
+    ],
+    "description": "KSH International Limited is one of India's leading manufacturers of magnet winding wires used in transformers, motors, generators, and electrical equipment. The company supplies products to sectors such as power, renewable energy, automotive, railways, and industrial manufacturing, and exports to over 24 countries."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "KSH International Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹5 per share",
+    "price_band_min": "₹365",
+    "price_band_max": "₹384",
+    "lot_size": 39,
+    "total_issue_size": "₹644.45 Cr",
+    "fresh_issue_size": "₹420 Cr",
+    "offer_for_sale": "₹224.45 Cr",
+    "shares_offered": "1,67,82,501 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹384",
+    "minimum_investment": "₹14,976",
+    "market_cap_post_issue": "₹2,600 Cr",
+    "pre_issue_shareholding": "98.4%",
+    "post_issue_shareholding": "71.4%"
+  },
+
+  "company_overview": {
+    "business_model": "The company manufactures specialized magnet winding wires and supplies OEMs in power, renewable energy, railways, automotive, and industrial sectors.",
+    "products_services": [
+      "Enamelled Copper Wires",
+      "Aluminium Magnet Wires",
+      "Paper Insulated Wires",
+      "Continuously Transposed Conductors"
+    ],
+    "competitive_strengths": [
+      "Third-largest magnet winding wire manufacturer in India",
+      "Largest exporter in its segment",
+      "Strong client base including PSU companies",
+      "Presence in high-growth sectors like EVs and renewables"
+    ],
+    "risks": [
+      "Dependence on copper and aluminium price fluctuations",
+      "High working capital requirements",
+      "Customer concentration risk",
+      "Cyclical demand from power and industrial sectors"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "16 Dec 2025",
+    "ipo_close_date": "18 Dec 2025",
+    "basis_of_allotment_date": "19 Dec 2025",
+    "refund_initiation_date": "20 Dec 2025",
+    "demat_credit_date": "22 Dec 2025",
+    "listing_date": "23 Dec 2025",
+    "anchor_investor_date": "15 Dec 2025",
+    "upi_mandate_deadline": "18 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "debt_repayment": "₹225.98 Cr",
+    "expansion": "₹90 Cr for machinery and plant expansion",
+    "solar_project": "₹10.41 Cr rooftop solar plant",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "retail_quota": "35%",
+    "hni_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "39",
+      "amount": "₹14,976"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "507",
+      "amount": "₹1,94,688"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "546",
+      "amount": "₹2,09,664"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 lots",
+      "shares": "2613",
+      "amount": "₹10,03,392"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "18%",
+    "roce": "20%",
+    "ronw": "18%",
+    "pat_margin": "3.5%",
+    "ebitda_margin": "7%",
+    "eps": "₹10.02",
+    "nav_per_share": "₹56",
+    "debt_to_equity": "0.8",
+    "pe_ratio": "38.3x",
+    "industry_pe": "30x"
+  },
+
+  "company_financial_data": [
     {
-      id: 15,
-      name: "KSH International",
-      fullName: "KSH International Ltd",
-      logo: "/images/ipo/ksh-international.png",
-      open: "16 Dec 2025",
-      close: "18 Dec 2025",
-      listing: "23 Dec 2025",
-      price: "365-384",
-      lot: 38,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "Mainboard",
-      status: "live"
+      "period": "31 Mar 2023",
+      "assets": "₹1,200 Cr",
+      "total_income": "₹1,390 Cr",
+      "pat": "₹37 Cr",
+      "ebitda": "₹90 Cr",
+      "net_worth": "₹300 Cr",
+      "total_borrowing": "₹480 Cr"
     },
     {
-      id: 16,
-      name: "MARC Technocrats",
-      fullName: "MARC Technocrats Ltd",
-      logo: "/images/ipo/marc-technocrats.png",
-      open: "17 Dec 2025",
-      close: "19 Dec 2025",
-      listing: "24 Dec 2025",
-      price: "88-93",
-      lot: 1600,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "SME",
-      status: "UpcomingIpo"
+      "period": "31 Mar 2024",
+      "assets": "₹1,500 Cr",
+      "total_income": "₹1,938 Cr",
+      "pat": "₹67.99 Cr",
+      "ebitda": "₹130 Cr",
+      "net_worth": "₹380 Cr",
+      "total_borrowing": "₹519 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹384"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "1.06x",
+    "hni_subscription": "0.41x",
+    "retail_subscription": "0.86x",
+    "total_subscription": "0.83x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt Ltd",
+    "registrar_website": "https://linkintime.co.in",
+    "company_secretary": "N/A",
+    "compliance_officer": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "ICICI Securities Ltd, Nuvama Wealth Management Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Mumbai, Maharashtra, India",
+    "company_website": "https://www.kshinternational.com",
+    "company_email": "cs.connect@kshinternational.com",
+    "company_phone": "+91-22-49186000"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bseindia.com/corporates/download/306344/IPO%20Prior/DRHP_20250523194231.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_KSHINTL.zip",
+    "prospectus_pdf": "https://www.nuvama.com/wp-content/uploads/2025/12/18th-December-2025_KSH_-Prospectus.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/ksh-international-ipo-anchor-allocation.pdf"
+  }
+}
+,
+    {
+  "id": 16,
+  "name": "MARC Technocrats",
+  "logo": "/images/ipo/marc-technocrats.png",
+  "minInvestment": "₹2,23,200",
+  "open": "17 Dec 2025",
+  "close": "19 Dec 2025",
+  "listing": "24 Dec 2025",
+  "price": "88 – 93",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "MARC Technocrats Limited",
+    "industry_sector": "Infrastructure Consultancy / Engineering Services",
+    "founded_year": "2007",
+    "promoters": [
+      "Hitender Kumar"
+    ],
+    "description": "MARC Technocrats Limited provides infrastructure consultancy services including supervision and quality control, preparation of detailed project reports, techno-financial auditing, and pre-bid advisory services. The company primarily operates on a business-to-government model serving sectors like roads, railways, buildings, and water resources."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "MARC Technocrats Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹88",
+    "price_band_max": "₹93",
+    "lot_size": 1200,
+    "total_issue_size": "₹42.59 Cr",
+    "fresh_issue_size": "₹34.13 Cr",
+    "offer_for_sale": "₹8.46 Cr",
+    "shares_offered": "45,79,200 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹93",
+    "minimum_investment": "₹2,23,200",
+    "market_cap_post_issue": "₹122 Cr",
+    "pre_issue_shareholding": "99.99%",
+    "post_issue_shareholding": "73.55%"
+  },
+
+  "company_overview": {
+    "business_model": "The company offers consultancy services across the lifecycle of infrastructure projects, primarily for government departments and agencies.",
+    "products_services": [
+      "Supervision and Quality Control (SQC)",
+      "Detailed Project Reports (DPR)",
+      "Techno-Financial Audits",
+      "Pre-Bid Advisory Services"
+    ],
+    "competitive_strengths": [
+      "Strong presence in government infrastructure projects",
+      "End-to-end consultancy capabilities",
+      "Experienced management team",
+      "Growing infrastructure demand in India"
+    ],
+    "risks": [
+      "Dependence on government contracts",
+      "Project delays affecting cash flows",
+      "High competition in consultancy space",
+      "Working capital intensive operations"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "17 Dec 2025",
+    "ipo_close_date": "19 Dec 2025",
+    "basis_of_allotment_date": "22 Dec 2025",
+    "refund_initiation_date": "23 Dec 2025",
+    "demat_credit_date": "23 Dec 2025",
+    "listing_date": "24 Dec 2025",
+    "upi_mandate_deadline": "19 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "capex": "₹10.25 Cr for equipment and machinery",
+    "working_capital": "₹17.50 Cr",
+    "general_corporate_purposes": "Remaining proceeds"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "N/A",
+    "retail_quota": "35%",
+    "hni_quota": "65%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,23,200"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,23,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,34,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "6 lots",
+      "shares": "7200",
+      "amount": "₹6,69,600"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "31%",
+    "roce": "N/A",
+    "ronw": "31%",
+    "pat_margin": "15.66%",
+    "ebitda_margin": "N/A",
+    "eps": "₹6.65",
+    "nav_per_share": "N/A",
+    "debt_to_equity": "0.03",
+    "pe_ratio": "13.98x",
+    "industry_pe": "20x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹30 Cr",
+      "total_income": "₹26.94 Cr",
+      "pat": "₹3.45 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹12 Cr",
+      "total_borrowing": "₹0.3 Cr"
     },
     {
-      id: 17,
-      name: "Shyam Dhani Industries",
-      fullName: "Shyam Dhani Industries Ltd",
-      logo: "/images/ipo/shyam-dhani-industries.png",
-      open: "22 Dec 2025",
-      close: "24 Dec 2025",
-      listing: "30 Dec 2025",
-      price: "65-70",
-      lot: 2000,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "SME",
-      status: "UpcomingIpo"
+      "period": "31 Mar 2025",
+      "assets": "₹45 Cr",
+      "total_income": "₹48.56 Cr",
+      "pat": "₹7.48 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹20 Cr",
+      "total_borrowing": "₹0.6 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹93"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "N/A",
+    "retail_subscription": "N/A",
+    "total_subscription": "Strong (exact data varies)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Maashitla Securities Pvt Ltd",
+    "registrar_website": "N/A",
+    "market_maker": "Giriraj Stock Broking Pvt Ltd"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Narnolia Financial Services Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Gurgaon, Haryana, India",
+    "company_website": "https://www.mtplonline.in",
+    "company_email": "investorrelations@mtplonline.in",
+    "company_phone": "+91-127-6796960"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_06022025143621_MARC_DRHP.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_MARC.zip",
+    "prospectus_pdf": "https://www.mtplonline.in/dist/pdf/prospectus.pdf",
+    "investor_presentation": "N/A"
+  }
+}
+,
+   {
+  "id": 17,
+  "name": "Shyam Dhani Industries",
+  "logo": "/images/ipo/shyam-dhani-industries.png",
+  "minInvestment": "₹2,80,000",
+  "open": "22 Dec 2025",
+  "close": "24 Dec 2025",
+  "listing": "30 Dec 2025",
+  "price": "65 – 70",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Shyam Dhani Industries Limited",
+    "industry_sector": "FMCG / Spices & Food Processing",
+    "founded_year": "1995",
+    "promoters": [
+      "Ramawtar Agarwal"
+    ],
+    "description": "Shyam Dhani Industries Limited is engaged in the manufacturing, processing, and distribution of spices, herbs, and grocery products under the brand 'Shyam'. The company processes over 160 varieties of spices and supplies products across domestic and export markets through B2B, retail, and online channels."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Shyam Dhani Industries Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹65",
+    "price_band_max": "₹70",
+    "lot_size": 2000,
+    "total_issue_size": "₹38.49 Cr",
+    "fresh_issue_size": "₹38.49 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "55,00,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹70",
+    "minimum_investment": "₹2,80,000",
+    "market_cap_post_issue": "₹144.6 Cr",
+    "pre_issue_shareholding": "100%",
+    "post_issue_shareholding": "73% (approx)"
+  },
+
+  "company_overview": {
+    "business_model": "The company operates a vertically integrated spice processing and distribution business serving B2B, retail, HoReCa, and export markets.",
+    "products_services": [
+      "Whole Spices",
+      "Ground & Blended Spices",
+      "Herbs & Seasonings",
+      "Grocery Products (Poha, Rice, Salt)"
+    ],
+    "competitive_strengths": [
+      "Wide portfolio of 160+ spice products",
+      "Strong distribution across multiple channels",
+      "Established brand presence in FMCG segment",
+      "Integrated processing and packaging capabilities"
+    ],
+    "risks": [
+      "Raw material price volatility (agri commodities)",
+      "High competition in FMCG sector",
+      "Dependence on supply chain and mandis",
+      "SME liquidity risk post listing"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "22 Dec 2025",
+    "ipo_close_date": "24 Dec 2025",
+    "basis_of_allotment_date": "26 Dec 2025",
+    "refund_initiation_date": "29 Dec 2025",
+    "demat_credit_date": "29 Dec 2025",
+    "listing_date": "30 Dec 2025",
+    "upi_mandate_deadline": "24 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "working_capital": "₹13.26 Cr",
+    "debt_repayment": "₹10 Cr",
+    "brand_marketing": "₹6.35 Cr",
+    "capex": "₹1.63 Cr for machinery",
+    "solar_project": "₹6.49 Cr rooftop solar",
+    "general_corporate_purposes": "Remaining proceeds"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "N/A",
+    "retail_quota": "35%",
+    "hni_quota": "65%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,80,000"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,80,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "6000",
+      "amount": "₹4,20,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "7 lots",
+      "shares": "14000",
+      "amount": "₹9,80,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "41%",
+    "roce": "N/A",
+    "ronw": "41%",
+    "pat_margin": "6.4%",
+    "ebitda_margin": "11.7%",
+    "eps": "₹5.6",
+    "nav_per_share": "₹17",
+    "debt_to_equity": "Moderate",
+    "pe_ratio": "12.5x",
+    "industry_pe": "30x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹90 Cr",
+      "total_income": "₹107 Cr",
+      "pat": "₹6.3 Cr",
+      "ebitda": "₹12 Cr",
+      "net_worth": "₹25 Cr",
+      "total_borrowing": "₹20 Cr"
     },
     {
-      id: 18,
-      name: "Global Ocean Logistics India",
-      fullName: "Global Ocean Logistics India Ltd",
-      logo: "/images/ipo/global-ocean-logistics-india.png",
-      open: "17 Dec 2025",
-      close: "19 Dec 2025",
-      listing: "24 Dec 2025",
-      price: "74-78",
-      lot: 1600,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "SME",
-      status: "UpcomingIpo"
+      "period": "31 Mar 2025",
+      "assets": "₹110 Cr",
+      "total_income": "₹124.68 Cr",
+      "pat": "₹8.04 Cr",
+      "ebitda": "₹14.5 Cr",
+      "net_worth": "₹30 Cr",
+      "total_borrowing": "₹25 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹35 – ₹70",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹105 – ₹140"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "Very High",
+    "retail_subscription": "Very High",
+    "total_subscription": "918x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt Ltd",
+    "registrar_website": "https://www.bigshareonline.com",
+    "market_maker": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Holani Consultants Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Jaipur, Rajasthan, India",
+    "company_website": "https://www.shyamspices.co.in/",
+    "company_email": "info@shyamspices.co.in",
+    "company_phone": "+91 9257061811"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_28032025164758_DRHP.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_SHYAMDHANI.zip",
+    "prospectus_pdf": "https://www.holaniconsultants.co.in/download/ipo/Shyam%20Dhani%20Industries%20Limited-prospectus.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/shyam-dhani-industries-ipo-anchor-allocation-letter.pdf"
+  }
+}
+,
+    {
+  "id": 18,
+  "name": "Global Ocean Logistics India",
+  "logo": "/images/ipo/global-ocean-logistics-india.png",
+  "minInvestment": "₹2,49,600",
+  "open": "17 Dec 2025",
+  "close": "19 Dec 2025",
+  "listing": "24 Dec 2025",
+  "price": "74 – 78",
+  "lot": 3200,
+
+  "about_company": {
+    "company_name": "Global Ocean Logistics India Limited",
+    "industry_sector": "Logistics / Freight Forwarding",
+    "founded_year": "2021",
+    "promoters": [
+      "Niraj Nandkishore Narsaria"
+    ],
+    "description": "Global Ocean Logistics India Limited is a multi-modal logistics and freight forwarding company providing end-to-end supply chain solutions across ocean, air, road, and rail transportation. The company operates on an asset-light model and serves importers and exporters across 263 global ports through a network of over 20,000 agents."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Global Ocean Logistics India Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹74",
+    "price_band_max": "₹78",
+    "lot_size": 3200,
+    "total_issue_size": "₹30.41 Cr",
+    "fresh_issue_size": "₹30.41 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "38,99,200 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹78",
+    "minimum_investment": "₹2,49,600",
+    "market_cap_post_issue": "₹113 Cr",
+    "pre_issue_shareholding": "100%",
+    "post_issue_shareholding": "73% (approx)"
+  },
+
+  "company_overview": {
+    "business_model": "The company operates an asset-light logistics model providing freight forwarding, customs clearance, and 3PL services across domestic and international trade routes.",
+    "products_services": [
+      "Ocean Freight Forwarding",
+      "Air Freight Services",
+      "Road & Rail Transport",
+      "Container Freight Station (CFS)",
+      "Customs Clearance",
+      "Project Logistics",
+      "Third-Party Logistics (3PL)"
+    ],
+    "competitive_strengths": [
+      "Asset-light scalable business model",
+      "Global network of 20,000+ agents",
+      "Presence across 23+ Indian states",
+      "Operations across 260+ global ports"
+    ],
+    "risks": [
+      "Thin profit margins in logistics sector",
+      "Dependence on global trade volumes",
+      "Highly competitive industry",
+      "Working capital intensive business"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "17 Dec 2025",
+    "ipo_close_date": "19 Dec 2025",
+    "basis_of_allotment_date": "22 Dec 2025",
+    "refund_initiation_date": "23 Dec 2025",
+    "demat_credit_date": "23 Dec 2025",
+    "listing_date": "24 Dec 2025",
+    "upi_mandate_deadline": "19 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "working_capital": "Funding working capital requirements",
+    "general_corporate_purposes": "Other corporate purposes"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Approx 35%",
+    "retail_quota": "35%",
+    "hni_quota": "30%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "3200",
+      "amount": "₹2,49,600"
+    },
+    "retail_maximum": {
+      "lot_size": "1 lot",
+      "shares": "3200",
+      "amount": "₹2,49,600"
+    },
+    "shni_minimum": {
+      "lot_size": "2 lots",
+      "shares": "6400",
+      "amount": "₹4,99,200"
+    },
+    "bhni_minimum": {
+      "lot_size": "5 lots",
+      "shares": "16000",
+      "amount": "₹12,48,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "High growth phase",
+    "roce": "N/A",
+    "ronw": "N/A",
+    "pat_margin": "3–4%",
+    "ebitda_margin": "4–5%",
+    "eps": "₹3.5 (approx)",
+    "nav_per_share": "₹17 (approx)",
+    "debt_to_equity": "Low",
+    "pe_ratio": "22x (approx)",
+    "industry_pe": "25x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹23.56 Cr",
+      "total_income": "₹103.45 Cr",
+      "pat": "₹2.63 Cr",
+      "ebitda": "₹4.77 Cr",
+      "net_worth": "₹8.57 Cr",
+      "total_borrowing": "Low"
     },
     {
-      id: 19,
-      name: "Gujarat Kidney & Super Speciality",
-      fullName: "Gujarat Kidney & Super Speciality Ltd",
-      logo: "/images/ipo/gujarat-kidney-super-speciality.png",
-      open: "22 Dec 2025",
-      close: "24 Dec 2025",
-      listing: "30 Dec 2025",
-      price: "108-114",
-      lot: 128,
-      subscription: null,
-      listingPrice: null,
-      performance: null,
-      type: "Mainboard",
-      status: "UpcomingIpo"
+      "period": "31 Mar 2025",
+      "assets": "₹35.22 Cr",
+      "total_income": "₹191.60 Cr",
+      "pat": "₹6.82 Cr",
+      "ebitda": "₹9.39 Cr",
+      "net_worth": "₹17.39 Cr",
+      "total_borrowing": "Moderate"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹78"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "Moderate",
+    "hni_subscription": "Moderate",
+    "retail_subscription": "Moderate",
+    "total_subscription": "Good (exact varies)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Limited",
+    "registrar_website": "https://kfintech.com",
+    "market_maker": "Mansi Share & Stock Broking"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Marwadi Chandarana Intermediaries Brokers Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "C-101, Business Square Andheri Kurla Road,Andheri-EastMumbai, Maharashtra, 400093",
+    "company_website": "http://www.globaloceanlogistics.in/",
+    "company_email": "cs@globalocean.in",
+    "company_phone": "+91 22 4877 8888"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/344670/SME_IPO%20InPrinciple/DRHPGlobal07072025_20250707225105.pdf",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP&GID_Global_161220251303.zip",
+    "prospectus_pdf": "https://ib.marwadichandaranagroup.com/images/investorPdf/GLOBAL_OCEAN_LOGISTICS_INDIA_LIMITED_Prospectus-Final.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/global-ocean-logistics-ipo-anchor-allocation-letter.pdf"
+  }
+}
+,
+   {
+  "id": 19,
+  "name": "Gujarat Kidney & Super Speciality ",
+  "logo": "/images/ipo/gujarat-kidney-super-speciality.png",
+  "minInvestment": "₹14,592",
+  "open": "22 Dec 2025",
+  "close": "24 Dec 2025",
+  "listing": "30 Dec 2025",
+  "price": "108 – 114",
+  "lot": 128,
+
+  "about_company": {
+    "company_name": "Gujarat Kidney & Super Speciality Limited",
+    "industry_sector": "Healthcare / Hospitals",
+    "founded_year": "2017",
+    "promoters": [
+      "Pragnesh Yashwantsingh Bharpoda"
+    ],
+    "description": "Gujarat Kidney & Super Speciality Limited operates a chain of multi-speciality hospitals focused on secondary and tertiary healthcare services including nephrology, urology, and critical care. The company runs hospitals across Gujarat with integrated healthcare services."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Gujarat Kidney & Super Speciality Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹2 per share",
+    "price_band_min": "₹108",
+    "price_band_max": "₹114",
+    "lot_size": 128,
+    "total_issue_size": "₹250.80 Cr",
+    "fresh_issue_size": "₹250.80 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "2,20,00,000 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹114",
+    "minimum_investment": "₹14,592",
+    "market_cap_post_issue": "₹899 Cr",
+    "pre_issue_shareholding": "100%",
+    "post_issue_shareholding": "72.1% (approx)"
+  },
+
+  "company_overview": {
+    "business_model": "The company operates multi-speciality hospitals providing secondary and tertiary care services including surgeries and critical care.",
+    "products_services": [
+      "Nephrology & Dialysis",
+      "Urology",
+      "Critical Care",
+      "General Surgery",
+      "Pharmacy Services"
+    ],
+    "competitive_strengths": [
+      "Presence across multiple cities in Gujarat",
+      "Focus on specialised kidney and urology care",
+      "Asset-light expansion via acquisitions",
+      "Growing demand for healthcare services"
+    ],
+    "risks": [
+      "High valuation compared to earnings",
+      "Dependence on regional operations",
+      "Healthcare regulatory risks",
+      "Competition from large hospital chains"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "22 Dec 2025",
+    "ipo_close_date": "24 Dec 2025",
+    "basis_of_allotment_date": "26 Dec 2025",
+    "refund_initiation_date": "27 Dec 2025",
+    "demat_credit_date": "29 Dec 2025",
+    "listing_date": "30 Dec 2025",
+    "upi_mandate_deadline": "24 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "acquisition": "₹77 Cr for Parekhs Hospital (Ahmedabad)",
+    "subsidiary_investment": "₹10.78 Cr for Harmony Medicare",
+    "debt_repayment": "₹1.2 Cr",
+    "capex": "₹30 Cr new hospital (Vadodara)",
+    "equipment": "₹6.8 Cr robotics equipment",
+    "general_corporate_purposes": "Remaining proceeds"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "75%",
+    "retail_quota": "10%",
+    "hni_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "128",
+      "amount": "₹14,592"
     },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "1664",
+      "amount": "₹1,89,312"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "1792",
+      "amount": "₹2,04,288"
+    },
+    "bhni_minimum": {
+      "lot_size": "69 lots",
+      "shares": "8832",
+      "amount": "₹10,06,848"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "N/A",
+    "roce": "N/A",
+    "ronw": "N/A",
+    "pat_margin": "23% (approx)",
+    "ebitda_margin": "N/A",
+    "eps": "₹1.86 (approx)",
+    "nav_per_share": "N/A",
+    "debt_to_equity": "Moderate",
+    "pe_ratio": "61x (approx)",
+    "industry_pe": "35x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹60 Cr",
+      "total_income": "₹4.8 Cr",
+      "pat": "₹1.7 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹15 Cr",
+      "total_borrowing": "Moderate"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹85 Cr",
+      "total_income": "₹40.24 Cr",
+      "pat": "₹9.49 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹30 Cr",
+      "total_borrowing": "Moderate"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹4 – ₹7",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹118 – ₹121"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "Strong",
+    "hni_subscription": "Moderate",
+    "retail_subscription": "Moderate",
+    "total_subscription": "5.21x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt Ltd",
+    "registrar_website": "https://linkintime.co.in"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Nirbhay Capital Services Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "Plot No. 1, City Sarve No. 1537/A,Jetalpur Road, Gokak Mill Compound,Alkapuri,Vadodara, Gujarat, 390020",
+    "company_website": "http://www.gujaratsuperspecialityhospital.com/",
+    "company_email": "info@gujaratsuperspecialityhospital.com",
+    "company_phone": "+91 265 298 4800"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/apr-2025/gujarat-kidney-and-super-speciality-limited_93248.html",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_GKSL.zip",
+    "prospectus_pdf": "https://nsearchives.nseindia.com/corporate/FP_INE0V0W01025_27DEC2025.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/gujarat-kidney-superspeciality-ipo-anchor-allocation.pdf"
+  }
+}
+,
     {
   "id": 20,
   "name": "E to E Transportation",
-  "fullName": "E to E Transportation Infrastructure Ltd",
   "logo": "/images/ipo/e2e-rail.png",
+  "minInvestment": "₹2,78,400",
   "open": "26 Dec 2025",
   "close": "30 Dec 2025",
   "listing": "02 Jan 2026",
-  "price": "164-174",
+  "price": "164 – 174",
   "lot": 800,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Live"
-},
+
+  "about_company": {
+    "company_name": "E to E Transportation Infrastructure Limited",
+    "industry_sector": "Railway Engineering / Infrastructure",
+    "founded_year": "2010",
+    "promoters": [
+      "Vinay Kunjuri Panduranga Rao"
+    ],
+    "description": "E to E Transportation Infrastructure Limited operates as a system integrator in railway engineering, providing end-to-end solutions including signalling, telecommunication, electrification, and turnkey rail infrastructure projects across India."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "E to E Transportation Infrastructure Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹164",
+    "price_band_max": "₹174",
+    "lot_size": 800,
+    "total_issue_size": "₹84.22 Cr",
+    "fresh_issue_size": "₹84.22 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "48,40,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹174",
+    "minimum_investment": "₹2,78,400",
+    "market_cap_post_issue": "₹300.28 Cr",
+    "pre_issue_shareholding": "100%",
+    "post_issue_shareholding": "Approx 72%"
+  },
+
+  "company_overview": {
+    "business_model": "The company executes railway infrastructure projects on a turnkey basis including design, procurement, installation, and maintenance.",
+    "products_services": [
+      "Railway Signalling Systems",
+      "Telecommunication Systems",
+      "Track Electrification",
+      "Turnkey Railway Projects",
+      "Railway Safety Systems (Kavach)"
+    ],
+    "competitive_strengths": [
+      "Strong order book (~₹925 Cr)",
+      "Presence in high-growth railway modernization sector",
+      "Asset-light execution model",
+      "Experienced engineering team"
+    ],
+    "risks": [
+      "Heavy dependence on Indian Railways",
+      "High receivables and delayed payments risk",
+      "Project-based revenue volatility",
+      "Working capital intensive business"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "26 Dec 2025",
+    "ipo_close_date": "30 Dec 2025",
+    "basis_of_allotment_date": "31 Dec 2025",
+    "refund_initiation_date": "01 Jan 2026",
+    "demat_credit_date": "01 Jan 2026",
+    "listing_date": "02 Jan 2026",
+    "upi_mandate_deadline": "30 Dec 2025"
+  },
+
+  "ipo_objectives": {
+    "working_capital": "₹70 Cr",
+    "general_corporate_purposes": "Remaining proceeds"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "retail_quota": "35%",
+    "hni_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "1600",
+      "amount": "₹2,78,400"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "1600",
+      "amount": "₹2,78,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "2400",
+      "amount": "₹4,17,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "7 lots",
+      "shares": "5600",
+      "amount": "₹9,74,400"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "Negative (recent period)",
+    "roce": "Low",
+    "ronw": "Negative",
+    "pat_margin": "-6.7%",
+    "ebitda_margin": "0.29%",
+    "eps": "N/A",
+    "nav_per_share": "₹87.54",
+    "debt_to_equity": "High",
+    "pe_ratio": "21.46x",
+    "industry_pe": "25x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹200.89 Cr",
+      "total_income": "₹172.50 Cr",
+      "pat": "₹10.26 Cr",
+      "ebitda": "₹21.70 Cr",
+      "net_worth": "₹66.85 Cr",
+      "total_borrowing": "₹61.17 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹295.43 Cr",
+      "total_income": "₹250.80 Cr",
+      "pat": "₹14.37 Cr",
+      "ebitda": "₹31.89 Cr",
+      "net_worth": "₹116.05 Cr",
+      "total_borrowing": "₹66.17 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹310.84 Cr",
+      "total_income": "₹110.99 Cr",
+      "pat": "-₹7.48 Cr",
+      "ebitda": "₹0.32 Cr",
+      "net_worth": "₹108.70 Cr",
+      "total_borrowing": "₹113.51 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹120 – ₹130",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Dec 2025",
+    "estimated_listing_price": "₹300+"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "236x",
+    "hni_subscription": "644x",
+    "retail_subscription": "544x",
+    "total_subscription": "526x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt Ltd",
+    "registrar_website": "https://linkintime.co.in",
+    "market_maker": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Hem Securities Ltd"
+  },
+
+  "company_information": {
+    "company_address": "10th Floor, Sattva Galleria Survey, Nos. 19/2 and 20/1,Bellary Road, Byatarayanapura, Bangalore North Bangalore Urban, Karnataka, 560092",
+    "company_website": "https://etoerail.com/",
+    "company_email": "srilakshmi.surendran@etoerail.com",
+    "company_phone": "N/A"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_29092025222107_E_TO_E_DRHP.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/EToETransportationInfrastructureLimited_RHP.pdf",
+    "prospectus_pdf": "https://www.chittorgarh.net/reports/ipo_notes/e-to-e-transportation-ipo-prospectus.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/e-to-e-transportation-ipo-anchor-allocation-letter.pdf"
+  }
+}
+ ,
 {
   "id": 21,
   "name": "Gabion Technologies",
-  "fullName": "Gabion Technologies India Limited",
   "logo": "/images/ipo/Gabion.png",
+  "minInvestment": "₹2,59,200",
   "open": "06 Jan 2026",
   "close": "08 Jan 2026",
   "listing": "13 Jan 2026",
-  "price": "76-81",
+  "price": "76 – 81",
   "lot": 1600,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Live"
-},
+
+  "about_company": {
+    "company_name": "Gabion Technologies India Limited",
+    "industry_sector": "Infrastructure / Geotechnical Engineering",
+    "founded_year": "2008",
+    "promoters": [
+      "N/A"
+    ],
+    "description": "Gabion Technologies India Limited is engaged in the design, manufacturing, and installation of gabions, rockfall protection systems, and geosynthetic materials used in infrastructure, slope stabilisation, mining, and environmental protection projects."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Gabion Technologies India Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Built Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹76",
+    "price_band_max": "₹81",
+    "lot_size": 1600,
+    "total_issue_size": "₹29.16 Cr",
+    "fresh_issue_size": "₹29.16 Cr",
+    "offer_for_sale": "0",
+    "shares_offered": "36,00,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹81",
+    "minimum_investment": "₹2,59,200",
+    "market_cap_post_issue": "Approx ₹110 Cr",
+    "pre_issue_shareholding": "100%",
+    "post_issue_shareholding": "Approx 73%"
+  },
+
+  "company_overview": {
+    "business_model": "The company provides integrated geotechnical engineering solutions including manufacturing and installation for infrastructure and environmental protection projects.",
+    "products_services": [
+      "Gabion Boxes & Mattresses",
+      "Rockfall Protection Systems",
+      "Geosynthetics (Geogrids, Geotextiles)",
+      "Slope Stabilisation Solutions"
+    ],
+    "competitive_strengths": [
+      "Niche geotechnical engineering segment",
+      "End-to-end solution provider (design + execution)",
+      "Presence across infrastructure, mining, irrigation sectors",
+      "Growing demand from government infra projects"
+    ],
+    "risks": [
+      "Project-based revenue variability",
+      "Dependence on government contracts",
+      "Execution and working capital risks",
+      "Limited scalability compared to large infra firms"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "06 Jan 2026",
+    "ipo_close_date": "08 Jan 2026",
+    "basis_of_allotment_date": "09 Jan 2026",
+    "refund_initiation_date": "10 Jan 2026",
+    "demat_credit_date": "12 Jan 2026",
+    "listing_date": "13 Jan 2026",
+    "upi_mandate_deadline": "08 Jan 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital": "₹22.11 Cr",
+    "capex": "₹1.05 Cr (plant & machinery)",
+    "general_corporate_purposes": "Remaining proceeds"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Approx 50%",
+    "retail_quota": "35%",
+    "hni_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,59,200"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,59,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "4800",
+      "amount": "₹3,88,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "12800",
+      "amount": "₹10,36,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "30%",
+    "roce": "19%",
+    "ronw": "30%",
+    "pat_margin": "6.6%",
+    "ebitda_margin": "14.9%",
+    "eps": "₹6.65",
+    "nav_per_share": "N/A",
+    "debt_to_equity": "High (~2.1)",
+    "pe_ratio": "12–17x",
+    "industry_pe": "25x"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹70 Cr",
+      "total_income": "₹104.76 Cr",
+      "pat": "₹5.76 Cr",
+      "ebitda": "₹13.15 Cr",
+      "net_worth": "₹25 Cr",
+      "total_borrowing": "High"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹80 Cr",
+      "total_income": "₹100.36 Cr",
+      "pat": "₹6.61 Cr",
+      "ebitda": "₹15.06 Cr",
+      "net_worth": "₹30 Cr",
+      "total_borrowing": "High"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹20 – ₹25",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jan 2026",
+    "estimated_listing_price": "₹100 – ₹106"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "271x",
+    "hni_subscription": "1467x",
+    "retail_subscription": "867x",
+    "total_subscription": "826x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Limited",
+    "registrar_website": "https://kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "GYR Capital Advisors Pvt Ltd"
+  },
+
+  "company_information": {
+    "company_address": "38, SF Near MCD Park Mohammadpur New Delhi, New Delhi, 110066",
+    "company_website": "https://gabionindia.com/",
+    "company_email": "compliance@gabionindia.com",
+    "company_phone": "9818793385"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/374947/SME_IPO%20InPrinciple/26.Final_DRHP_30.09.2025_Gabion_20250930161543.pdf",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_020120260941.zip",
+    "prospectus_pdf": "https://gabionindia.com//wp-content/themes/gabion/RHP/Final%20Prospectus.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/gabion_technologies_anchorallocationreport.pdf"
+  }
+}
+,
 {
   "id": 22,
   "name": "Victory Electric Vehicles",
