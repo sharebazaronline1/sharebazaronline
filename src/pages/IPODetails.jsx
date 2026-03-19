@@ -31,18 +31,60 @@ const IPODetails = () => {
     fetchIPOs().then((ipos) => {
       setIpo(ipos.find((i) => i.id === parseInt(id)));
     });
+   
     window.scrollTo(0, 0);
   }, [id]);
 
- const getHigherPrice = (priceStr) => {
-  if (!priceStr) return 0;
+const getHigherPrice = (priceStr) => {
+  if (!priceStr || typeof priceStr !== 'string') return 0;
 
-  const clean = priceStr.replace(/[₹,\s]/g, "");
-  const parts = clean.split(/[-–]/);
+  // Remove all non-numeric chars except hyphen/decimal
+  const clean = priceStr.replace(/[^0-9.-]/g, '');
 
-  return parseInt(parts[parts.length - 1]) || 0;
+  // Split on common price band separators
+  const parts = clean.split(/[-–]/).filter(Boolean);
+
+  if (parts.length === 0) return 0;
+
+  // Take the last (higher) number and convert to integer
+  const lastPart = parts[parts.length - 1].trim();
+  const num = parseFloat(lastPart);
+
+  return isNaN(num) ? 0 : Math.round(num);
 };
 
+const getMinInvestment = (ipo) => {
+  // 1. Direct fields (most accurate)
+  if (ipo.minInvestment) {
+    const val = parseInt(ipo.minInvestment.replace(/[^0-9]/g, ''), 10);
+    if (val > 0) return val;
+  }
+
+  if (ipo.ipo_basic_details?.minimum_investment) {
+    const val = parseInt(ipo.ipo_basic_details.minimum_investment.replace(/[^0-9]/g, ''), 10);
+    if (val > 0) return val;
+  }
+
+  // 2. Calculate from lot size + higher price band
+  const lot =
+    ipo.lot ||
+    ipo.minBidQuantity ||
+    ipo.ipo_basic_details?.lot_size ||
+    ipo.market_lot_details?.retail_minimum?.lot_size ||
+    1;
+
+  const price =
+    getHigherPrice(ipo.price) ||
+    getHigherPrice(ipo.ipo_basic_details?.price_band) ||
+    getHigherPrice(`${ipo.ipo_basic_details?.price_band_min || ''}-${ipo.ipo_basic_details?.price_band_max || ''}`) ||
+    getHigherPrice(ipo.priceBand) ||
+    0;
+
+  const calculated = lot * price;
+
+  // 3. Final fallback — never show 0 or 1 if data is missing
+  return calculated > 100 ? calculated : 10000; // sensible default min ~₹10,000
+};
 
   const scrollToSection = (sectionId) => {
     setActiveSection(sectionId);
@@ -69,35 +111,7 @@ const IPODetails = () => {
       </div>
     );
   }
-const getMinInvestment = (ipo) => {
 
-  // 1️⃣ If already provided in detailed JSON
-  if (ipo.ipo_basic_details?.minimum_investment) {
-    return parseInt(
-      ipo.ipo_basic_details.minimum_investment.replace(/[^0-9]/g, "")
-    );
-  }
-
-  // 2️⃣ If minInvestment exists in root
-  if (ipo.minInvestment) {
-    return parseInt(ipo.minInvestment.replace(/[^0-9]/g, ""));
-  }
-
-  // 3️⃣ Calculate using price band and lot size
-  const lot =
-    ipo.lot ||
-    ipo.minBidQuantity ||
-    ipo.ipo_basic_details?.lot_size ||
-    1;
-
-  const price =
-    getHigherPrice(ipo.price) ||
-    getHigherPrice(
-      `${ipo.ipo_basic_details?.price_band_min || ""}-${ipo.ipo_basic_details?.price_band_max || ""}`
-    );
-
-  return lot * price;
-};
 const minInvestment = getMinInvestment(ipo);
 
 
@@ -623,9 +637,9 @@ const minInvestment = getMinInvestment(ipo);
               <div className="space-y-3 text-sm">
                 <p><strong>Registrar:</strong> {ipo.ipo_intermediaries?.registrar}</p>
                 <p><strong>Registrar Website:</strong> <a href={ipo.ipo_intermediaries?.registrar_website} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">{ipo.ipo_intermediaries?.registrar_website}</a></p>
-                <p><strong>Market Maker:</strong> {ipo.ipo_intermediaries?.market_maker}</p>
+                {/* <p><strong>Market Maker:</strong> {ipo.ipo_intermediaries?.market_maker}</p>
                 <p><strong>Company Secretary:</strong> {ipo.ipo_intermediaries?.company_secretary}</p>
-                <p><strong>Compliance Officer:</strong> {ipo.ipo_intermediaries?.compliance_officer}</p>
+                <p><strong>Compliance Officer:</strong> {ipo.ipo_intermediaries?.compliance_officer}</p> */}
               </div>
             </section>
 
