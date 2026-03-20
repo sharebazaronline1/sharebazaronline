@@ -8001,142 +8001,1421 @@ export const fetchIPOs = async () => {
 {
   "id": 41,
   "name": "PNGS Reva Diamond Jewellery",
-  "fullName": "PNGS Reva Diamond Jewellery Limited",
   "logo": "/images/ipo/pngs.png",
-  "symbol": null,
+  "minInvestment": "₹12,352",
   "open": "24 Feb 2026",
   "close": "26 Feb 2026",
   "listing": "04 Mar 2026",
-  "price": "367 – 386",
+  "price": "₹367 – ₹386",
   "lot": 32,
-  "minBidQuantity": 32,
-  "issueSizeShares": 9844560,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "Mainboard",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "PNGS Reva Diamond Jewellery Limited",
+    "industry_sector": "Jewellery / Diamond-Studded Gold & Solitaire Jewellery",
+    "founded_year": "2004",
+    "promoters": [
+      "P.N. Gadgil & Sons Limited",
+      "Govind Vishwanath Gadgil",
+      "Renu Govind Gadgil"
+    ],
+    "description": "Incorporated in 2004, PNGS Reva Diamond Jewellery Limited is engaged in manufacturing, trading, and retailing diamond-studded gold jewellery, solitaire diamond jewellery, and other pieces using precious/semi-precious stones set in gold/platinum. All products are sold under the 'Reva' brand with a focus on lightweight, contemporary designs. The company has 13 distinct collections, in-house design team, and sources from third-party manufacturers/karigars. As of Sep 30, 2025, it operates 34 stores across 25 cities in Maharashtra, Gujarat, and Karnataka (total 647.15 running feet) under FOCO, FOFO, and COCO models."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "PNGS Reva Diamond Jewellery Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹367",
+    "price_band_max": "₹386",
+    "lot_size": 32,
+    "total_issue_size": "₹379.52 Cr (98,32,000 shares)",
+    "fresh_issue_size": "₹379.52 Cr (98,32,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "98,32,000 shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹386",
+    "minimum_investment": "₹12,352 (1 lot at upper band)",
+    "market_cap_post_issue": "Pre-IPO ₹1,224.04 Cr; Post-issue higher (~₹1,550–1,600 Cr approx)",
+    "pre_issue_shareholding": "100% (Promoters significant stake)",
+    "post_issue_shareholding": "Promoters reduced due to fresh issue dilution"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing and multi-channel retailing of diamond & gold jewellery under 'Reva' brand; operates stores via FOCO/FOFO/COCO models with regional focus in Maharashtra, Gujarat, Karnataka.",
+    "products_services": [
+      "Diamond-Studded Gold Jewellery (rings, earrings, necklaces, pendants, bangles, bracelets, mangalsutra, nose rings, chains)",
+      "Solitaire Diamond Jewellery",
+      "Lightweight & Contemporary Designs",
+      "Bridal & Custom Jewellery"
+    ],
+    "competitive_strengths": [
+      "Strong brand legacy & trust from promoters (P.N. Gadgil group influence)",
+      "Experienced board with expertise in retail/jewellery/finance",
+      "Regional dominance in Tier-1/2/3 cities with community trust & word-of-mouth",
+      "Diversified product portfolio across categories & price points",
+      "In-house design & quality focus"
+    ],
+    "risks": [
+      "Gold/diamond price volatility impacting margins",
+      "Intense competition in organised jewellery sector",
+      "Regional concentration (Maharashtra/Gujarat/Karnataka)",
+      "Working capital & inventory risks",
+      "Fashion/trend dependency & economic sensitivity"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "24 Feb 2026",
+    "ipo_close_date": "26 Feb 2026",
+    "basis_of_allotment_date": "27 Feb 2026",
+    "refund_initiation_date": "02 Mar 2026",
+    "demat_credit_date": "02 Mar 2026",
+    "listing_date": "04 Mar 2026",
+    "upi_mandate_deadline": "26 Feb 2026"
+  },
+
+  "ipo_objectives": {
+    "setting_up_15_new_stores": "₹286.56 Cr",
+    "marketing_promotional_expenses_new_stores": "₹35.40 Cr",
+    "general_corporate_purposes": "₹27.16 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "75.15% (73,88,800 shares; Anchor 44.95% / 44,19,200 shares; ex-anchor 30.20%)",
+    "retail_quota": "9.94% (9,77,216 shares)",
+    "hni_quota": "14.81% (14,56,000 shares; bNII 9.87%, sNII 4.94%)",
+    "others": "Employee 0.10% (9,984 shares)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "32",
+      "amount": "₹12,352"
+    },
+    "retail_maximum": {
+      "lot_size": "16 lots",
+      "shares": "512",
+      "amount": "₹1,97,632"
+    },
+    "shni_minimum": {
+      "lot_size": "17 lots",
+      "shares": "544",
+      "amount": "₹2,09,984"
+    },
+    "bhni_minimum": {
+      "lot_size": "81 lots",
+      "shares": "2592",
+      "amount": "₹10,00,512"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "18.3% (Sep 2025) / 165.9% (FY25)",
+    "roce": "25.2% (Sep 2025) / 79.8% (FY25)",
+    "ronw": "16.73% (Sep 2025) / 59.36% (FY25)",
+    "pat_margin": "12.85% (Sep 2025) / 23.04% (FY25)",
+    "ebitda_margin": "19.65% (Sep 2025) / 41.81% (FY25)",
+    "debt_to_equity": "1.10 (Sep 2025) / 0.90 (FY25)",
+    "pe_ratio": "≈20–25x (post-issue approx)",
+    "industry_pe": "20–40x (organised jewellery)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹123.93 Cr",
+      "total_income": "₹199.35 Cr",
+      "pat": "₹51.75 Cr",
+      "ebitda": "₹68.73 Cr",
+      "net_worth": "₹-52.02 Cr",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹158.33 Cr",
+      "total_income": "₹196.24 Cr",
+      "pat": "₹42.41 Cr",
+      "ebitda": "₹56.14 Cr",
+      "net_worth": "₹-28.50 Cr",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹226.84 Cr",
+      "total_income": "₹259.11 Cr",
+      "pat": "₹59.47 Cr",
+      "ebitda": "₹79.61 Cr",
+      "net_worth": "₹100.19 Cr",
+      "total_borrowing": "₹90.65 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹352.70 Cr",
+      "total_income": "₹157.12 Cr",
+      "pat": "₹20.13 Cr",
+      "ebitda": "₹30.79 Cr",
+      "net_worth": "₹120.31 Cr",
+      "total_borrowing": "₹130.25 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0 (flat / muted pre-listing; some reports negative signals)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Mar 2026",
+    "estimated_listing_price": "₹375–386 (actual listed at ₹375 on NSE, -2.85% discount; settled ~₹411.7 later, +6.6% from issue)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "1.10x",
+    "hni_subscription": "1.62x (bNII 1.71x, sNII 1.44x)",
+    "retail_subscription": "1.37x",
+    "employee_subscription": "7.08x",
+    "total_subscription": "1.30x (final on close)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Smart Horizon Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Abhiruchi Mall,59/1 C,Sinhgad Road, Wadgaon Budruk,Pune, Maharashtra, 411041",
+    "company_website": "https://www.revajewels.com",
+    "company_email": "investor@revabypng.com",
+    "company_phone": "+91 020-29980704"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/jun-2025/pngs-reva-diamond-jewellery-limited_94650.html",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/feb-2026/pngs-reva-diamond-jewellery-limited-rhp_99676.html",
+    "prospectus_pdf": "https://www.sebi.gov.in/filings/public-issues/feb-2026/pngs-reva-diamond-jewellery-limited_100068.html",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/pngs-reva-diamond-ipo-anchor-allocation-letter.pdf"
+  }
 },
 {
   "id": 42,
   "name": "Fractal Industries",
-  "fullName": "Fractal Industries Limited",
   "logo": "/images/ipo/fractalindustries.png",
-  "symbol": null,
+  "minInvestment": "₹2,59,200",
   "open": "16 Feb 2026",
   "close": "18 Feb 2026",
-  "listing": "23 Feb 2026",
-  "price": "205 – 216",
+  "listing": "24 Feb 2026",
+  "price": "₹205 – ₹216",
   "lot": 600,
-  "minBidQuantity": 1200,
-  "issueSizeShares": 2268600,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Fractal Industries Limited",
+    "industry_sector": "Garment Manufacturing & Supply Chain / Apparel for E-commerce",
+    "founded_year": "Not specified (operations prior to 2023 based on financials)",
+    "promoters": [
+      "Mr. Pankaj Bishwanath Agrawal",
+      "Mrs. Priti Pankaj Agrawal"
+    ],
+    "description": "Fractal Industries Limited is a full-service garment manufacturing and supply chain company. It designs, sources, and manufactures garments, and provides end-to-end warehousing and logistics services to e-commerce platforms like Myntra, Ajio, and Flipkart. The company operates across India with a manufacturing facility in Mumbai (monthly capacity over 3,00,000 garments) and warehouses in Gujarat, Maharashtra, Haryana, West Bengal, and Karnataka. It offers services including product & order management, inventory & return handling, integrated logistics, data analytics, multi-channel sales support, and order anomaly detection. Business models include outright sale of garments, PPMP (Pure Play Marketplace), and direct sale via own brand '7ate9' (launched May 2025). As of Sep 30, 2025, it had strong reverse logistics expertise."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Fractal Industries Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹205",
+    "price_band_max": "₹216",
+    "lot_size": 600,
+    "total_issue_size": "₹49 Cr (22,68,600 shares)",
+    "fresh_issue_size": "₹47 Cr (21,54,600 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "22,68,600 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹216",
+    "minimum_investment": "₹2,59,200 (2 lots / 1,200 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹169.54 Cr; Post-issue higher",
+    "pre_issue_shareholding": "100% (Promoters 97.15%)",
+    "post_issue_shareholding": "Promoters 69.07%"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated garment manufacturing & e-commerce supply chain; end-to-end services from design to logistics with own brand and marketplace focus.",
+    "products_services": [
+      "Garment Design, Sourcing & Manufacturing",
+      "Warehousing & Logistics (including reverse logistics)",
+      "Product & Order Management",
+      "Inventory & Return Handling",
+      "Integrated Logistics",
+      "Data Analytics & Multi-Channel Sales Support",
+      "Order Anomaly Detection",
+      "Own Brand '7ate9'"
+    ],
+    "competitive_strengths": [
+      "Experienced promoters & senior management",
+      "Technologically advanced Warehouse Management System (WMS)",
+      "Expertise in apparel reverse logistics",
+      "Quality control & inspection capabilities",
+      "Strong e-commerce partnerships (Myntra, Ajio, Flipkart)"
+    ],
+    "risks": [
+      "Inconsistency in top & bottom lines historically",
+      "Quantum jump in profitability appears inflated",
+      "Aggressively priced based on recent data",
+      "Small post-IPO equity base & longer gestation",
+      "Dependence on e-commerce platforms & fashion trends"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "16 Feb 2026",
+    "ipo_close_date": "18 Feb 2026",
+    "basis_of_allotment_date": "19 Feb 2026",
+    "refund_initiation_date": "20 Feb 2026",
+    "demat_credit_date": "20 Feb 2026",
+    "listing_date": "24 Feb 2026",
+    "upi_mandate_deadline": "18 Feb 2026",
+    "anchor_bid_date": "13 Feb 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_working_capital_requirements": "₹36.50 Cr",
+    "general_corporate_purposes": "₹7.35 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "47.42% (10,75,800 shares; Anchor 28.43% / 6,45,000 shares)",
+    "retail_quota": "33.27% (7,54,800 shares)",
+    "hni_quota": "14.28% (3,24,000 shares; bNII 9.52%, sNII 4.76%)",
+    "others": "Market Maker 5.03% (1,14,000 shares)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "1200",
+      "amount": "₹2,59,200"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "1200",
+      "amount": "₹2,59,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "1800",
+      "amount": "₹3,88,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "4800",
+      "amount": "₹10,36,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "34.52% (Sep 2025)",
+    "roce": "18.99% (Sep 2025)",
+    "ronw": "28.74% (Sep 2025)",
+    "pat_margin": "14.34% (Sep 2025)",
+    "ebitda_margin": "19.63% (Sep 2025)",
+    "eps": "₹13.51 (pre-IPO) / ₹17.28 (post-IPO)",
+    "nav_per_share": "N/A",
+    "debt_to_equity": "1.04 (Sep 2025)",
+    "pe_ratio": "15.99x (pre-IPO) / 12.5x (post-IPO)",
+    "industry_pe": "15–30x (garment manufacturing/supply chain)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹41.21 Cr",
+      "total_income": "₹88.91 Cr",
+      "pat": "₹2.66 Cr",
+      "ebitda": "₹4.13 Cr",
+      "net_worth": "N/A",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹42.27 Cr",
+      "total_income": "₹50.01 Cr",
+      "pat": "₹2.27 Cr",
+      "ebitda": "₹4.05 Cr",
+      "net_worth": "N/A",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹51.42 Cr",
+      "total_income": "₹85.51 Cr",
+      "pat": "₹7.54 Cr",
+      "ebitda": "₹11.15 Cr",
+      "net_worth": "₹15.70 Cr",
+      "total_borrowing": "₹27.61 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹62.03 Cr",
+      "total_income": "₹47.33 Cr",
+      "pat": "₹6.78 Cr",
+      "ebitda": "₹9.29 Cr",
+      "net_worth": "₹23.59 Cr",
+      "total_borrowing": "₹24.63 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Modest / limited (pre-listing ~2% indicative)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Feb 2026",
+    "estimated_listing_price": "₹229 (actual listed at ₹229, +6.02% premium; high ₹229, low ₹217.55, closed ₹217.55)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "5.95x",
+    "hni_subscription": "7.91x (bNII 9.45x, sNII 4.85x)",
+    "retail_subscription": "4.09x",
+    "total_subscription": "5.44x (final)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://kosmic.kfintech.com/ipostatus"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Finaax Capital Advisors Private Limited"
+  },
+
+  "company_information": {
+    "company_address": "Gala 212, Bhullar Star Indl. Estate,Andheri Kurla Andheri East,Mumbai, Maharashtra, 400072",
+    "company_website": "https://fractalindustries.in/",
+    "company_email": "investors@fractalindustries.in",
+    "company_phone": "+91 22-2852 8352"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/368392/SME_IPO%20InPrinciple/DRHPFractal_20251018200443.pdf",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP_130220261820.zip",
+    "prospectus_pdf": "https://cdn.shopify.com/s/files/1/0930/8028/9565/files/Prospectus_Fractal_Industries_Limited.pdf?v=1771573755",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/fractal-industries-anchor-list.pdf"
+  }
 },
 {
   "id": 43,
   "name": "Manilam Industries",
-  "fullName": "Manilam Industries India Limited",
   "logo": "/images/ipo/manilam.png",
-  "symbol": null,
+  "minInvestment": "₹2,76,000",
   "open": "20 Feb 2026",
   "close": "24 Feb 2026",
   "listing": "27 Feb 2026",
-  "price": "65 – 69",
+  "price": "₹65 – ₹69",
   "lot": 2000,
-  "minBidQuantity": 4000,
-  "issueSizeShares": 5790000,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Manilam Industries India Limited",
+    "industry_sector": "Manufacturing / Decorative Laminates & Plywood",
+    "founded_year": "2015",
+    "promoters": [
+      "Manilam Retail India Private Limited",
+      "Mr. Umesh Kumar Nemani",
+      "Mr. Manoj Kumar Agrawal",
+      "Mr. Aman Kumar Nemani"
+    ],
+    "description": "Manilam Industries India Limited is engaged in the manufacturing and sale of Decorative Laminates and Plywood. The company has developed and launched several laminate collections including Artistica Collection, Vogue Collection, Dwar Collection, Magnificent Collection, Chromatic Tales, Flute, ECP, Wood & Veneer, and Wall Cladding. These collections cater to residential and commercial applications with a wide range of designs and finishes. In addition to laminates, the company trades plywood in different grades and sizes, primarily for industrial and commercial sectors. The manufacturing plant is located at Village Manda, Bhojipura Nainital Road, Bareilly, Uttar Pradesh, covering 20,650 square meters. It operates on a B2B model with distributors placing orders directly. Experience Centres are established in major cities including Bangalore, Delhi, and Chennai (integrated with Service Depots in Bangalore and Chennai for display, stock, dispatch, and customer interaction). As of February 10, 2026, the company employed 152 individuals (including third-party contract workers)."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Manilam Industries India Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹65",
+    "price_band_max": "₹69",
+    "lot_size": 2000,
+    "total_issue_size": "₹39.95 Cr (57,90,000 shares)",
+    "fresh_issue_size": "₹32.42 Cr (47,00,000 shares approx)",
+    "offer_for_sale": "₹7.53 Cr (10,92,000 shares)",
+    "shares_offered": "57,90,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹69",
+    "minimum_investment": "₹2,76,000 (2 lots / 4,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹150.75 Cr; Post-issue higher",
+    "pre_issue_shareholding": "100%",
+    "post_issue_shareholding": "Promoters reduced (dilution from fresh issue)"
+  },
+
+  "company_overview": {
+    "business_model": "B2B manufacturer and trader of decorative laminates and plywood; direct orders from distributors, with Experience Centres for customer engagement and integrated depot setups in key cities.",
+    "products_services": [
+      "Decorative Laminates (Artistica, Vogue, Dwar, Magnificent, Chromatic Tales, Flute, ECP, Wood & Veneer, Wall Cladding)",
+      "Plywood (various grades and sizes for industrial/commercial use)"
+    ],
+    "competitive_strengths": [
+      "Diverse laminate collections catering to residential & commercial needs",
+      "Integrated Experience Centres + Service Depots for efficient customer service",
+      "Strong distributor network",
+      "Manufacturing plant in Bareilly with significant area"
+    ],
+    "risks": [
+      "Raw material price volatility",
+      "Competition in laminates/plywood sector",
+      "Regional focus & dependence on distributors",
+      "Working capital intensive",
+      "Economic sensitivity in construction/furniture sectors"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "20 Feb 2026",
+    "ipo_close_date": "24 Feb 2026",
+    "basis_of_allotment_date": "25 Feb 2026",
+    "refund_initiation_date": "26 Feb 2026",
+    "demat_credit_date": "26 Feb 2026",
+    "listing_date": "27 Feb 2026",
+    "anchor_bid_date": "19 Feb 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_equipment_machinery": "₹1.25 Cr",
+    "capital_expenditure_solar_panel_installation": "₹2.20 Cr",
+    "repayment_loans": "₹3.50 Cr",
+    "working_capital_requirements": "₹16.65 Cr",
+    "general_corporate_purposes": "₹4.82 Cr",
+    "total": "₹28.42 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "47.36% (27,42,000 shares; Anchor 28.29% / 16,38,000 shares; QIB ex-anchor 19.07% / 11,04,000 shares)",
+    "retail_quota": "33.30% (19,28,000 shares)",
+    "hni_quota": "14.30% (8,28,000 shares; bNII 9.53% / 5,52,000 shares; sNII 4.77% / 2,76,000 shares)",
+    "others": "Market Maker 5.04% (2,92,000 shares)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,76,000"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,76,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "6000",
+      "amount": "₹4,14,000"
+    },
+    "shni_maximum": {
+      "lot_size": "7 lots",
+      "shares": "14000",
+      "amount": "₹9,66,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "16000",
+      "amount": "₹11,04,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "8.35% (Sep 30, 2025) / 24.80% (Mar 31, 2025)",
+    "roce": "13.50% (Sep 30, 2025) / 36.68% (Mar 31, 2025)",
+    "pat_margin": "5.33% (Sep 30, 2025) / 5.33% (Mar 31, 2025)",
+    "ebitda_margin": "14.39% (Sep 30, 2025) / 12.67% (Mar 31, 2025)",
+    "eps": "₹4.30 (pre-IPO) / ₹2.89 (post-IPO)",
+    "pe_ratio": "16.04x (pre-IPO) / 23.85x (post-IPO)",
+    "price_to_book": "2.75 (Sep 30, 2025) / 0.47 (Mar 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹133.55 Cr",
+      "total_income": "₹148.82 Cr",
+      "pat": "₹1.53 Cr",
+      "ebitda": "₹9.12 Cr",
+      "net_worth": "₹23.24 Cr",
+      "total_borrowing": "₹60.75 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹149.56 Cr",
+      "total_income": "₹138.04 Cr",
+      "pat": "₹3.10 Cr",
+      "ebitda": "₹14.18 Cr",
+      "net_worth": "₹26.38 Cr",
+      "total_borrowing": "₹73.49 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹158.98 Cr",
+      "total_income": "₹142.16 Cr",
+      "pat": "₹7.38 Cr",
+      "ebitda": "₹17.75 Cr",
+      "net_worth": "₹33.87 Cr",
+      "total_borrowing": "₹62.44 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹159.99 Cr",
+      "total_income": "₹60.53 Cr",
+      "pat": "₹3.16 Cr",
+      "ebitda": "₹8.67 Cr",
+      "net_worth": "₹43.08 Cr",
+      "total_borrowing": "₹58.05 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not mentioned / muted (pre-listing data limited)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Feb 2026",
+    "estimated_listing_price": "N/A (actual listing performance: listed at ₹55.20, -23.99% discount from ₹69 issue price)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "2.24x (final)",
+    "hni_subscription": "12.49x",
+    "retail_subscription": "5.88x",
+    "total_subscription": "6.25x (final on close, Feb 24, 2026 18:55 IST)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Not explicitly mentioned (typical BSE SME: Bigshare/Skyline/Maashitla)",
+    "registrar_website": "N/A"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Not explicitly mentioned on page"
+  },
+
+  "company_information": {
+    "company_address": "46 B. B. Ganguly Street 5th Floor, Room No-9 Kolkata, West Bengal, 700012",
+    "company_website": "https://www.manilam.com/",
+    "company_email": "info@manilam.com",
+    "company_phone": "03335076903"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_28092025144857_DRHP_Manilam.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_MANILAM.zip",
+    "prospectus_pdf": "https://www.manilam.com//uploads/investors/42/42.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/manilam-industries-ipo-anchor-allocation-letter.pdf"
+  }
 },
 {
   "id": 44,
   "name": "Gaudium IVF and Women Health",
-  "fullName": "Gaudium IVF and Women Health Limited",
   "logo": "/images/ipo/gaudiumivf.png",
-  "symbol": null,
+  "minInvestment": "₹14,931",
   "open": "20 Feb 2026",
   "close": "24 Feb 2026",
   "listing": "27 Feb 2026",
-  "price": "75 – 79",
+  "price": "₹75 – ₹79",
   "lot": 189,
-  "minBidQuantity": 189,
-  "issueSizeShares": 20886200,
-  "faceValue": 5,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "Mainboard",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Gaudium IVF and Women Health Limited",
+    "industry_sector": "Healthcare / Fertility & IVF Services",
+    "founded_year": "2015",
+    "promoters": [
+      "Dr. Manika Khanna",
+      "Dr. Peeyush Khanna",
+      "Vishad Khanna"
+    ],
+    "description": "Incorporated in March 2015, Gaudium IVF and Women Health Limited provides In Vitro Fertilization (IVF) treatments and fertility services across India using a hub-and-spoke model. It operates over 30 locations (7 hubs/centres and 28 spokes) through strategic alliances with Infertility Experts. The company offers specialized fertility treatments including IVF, ICSI, IUI, ovulation induction, and comprehensive gynaecological care for PCOD/PCOS, endometriosis, high-risk pregnancies, and male infertility (advanced sperm retrieval). It serves patients from India and international countries (Canada, UK, US, Kenya, South Africa, Oman). Key centres are in Delhi (Janakpuri, Kailash Colony), Mumbai (Khar West), Ludhiana, Srinagar, Patna, and Bangalore. The company uses next-gen INTEGRA Ti labs for ICSI and highly technical USG-guided services."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Gaudium IVF and Women Health Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹5 per share",
+    "price_band_min": "₹75",
+    "price_band_max": "₹79",
+    "lot_size": 189,
+    "total_issue_size": "₹165 Cr (20,886,200 shares)",
+    "fresh_issue_size": "₹90 Cr (11,392,500 shares)",
+    "offer_for_sale": "₹75 Cr (9,493,700 shares)",
+    "shares_offered": "20,886,200 shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹79",
+    "minimum_investment": "₹14,931 (1 lot at upper band)",
+    "market_cap_post_issue": "Pre-IPO ₹575.02 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters significant stake",
+    "post_issue_shareholding": "Promoters reduced (dilution from fresh issue)"
+  },
+
+  "company_overview": {
+    "business_model": "Patient-centric fertility and women's health services using hub-and-spoke model; asset-light expansion via spokes; international patient inflow.",
+    "products_services": [
+      "In Vitro Fertilization (IVF)",
+      "Intracytoplasmic Sperm Injection (ICSI)",
+      "Intrauterine Insemination (IUI)",
+      "Ovulation Induction",
+      "Gynaecological Care (PCOD/PCOS, Endometriosis)",
+      "High-Risk Pregnancy Management",
+      "Male Infertility Treatments (advanced sperm retrieval)"
+    ],
+    "competitive_strengths": [
+      "Patient-centric approach",
+      "Expert team",
+      "Next-gen INTEGRA Ti labs for ICSI",
+      "Highly technical USG-guided services",
+      "Established central hubs in prime urban locations (Mumbai, Bangalore, Delhi NCR, Patna)",
+      "Asset-light business model"
+    ],
+    "risks": [
+      "Not explicitly detailed on page (typical: regulatory changes in healthcare, competition in IVF, success rate dependency, high capex for centres)"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "20 Feb 2026",
+    "ipo_close_date": "24 Feb 2026",
+    "anchor_bid_date": "19 Feb 2026",
+    "basis_of_allotment_date": "25 Feb 2026",
+    "refund_initiation_date": "25 Feb 2026",
+    "demat_credit_date": "26 Feb 2026",
+    "listing_date": "27 Feb 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_capital_expenditure_new_IVF_centres": "₹50.00 Cr",
+    "repayment_pre_payment_outstanding_loans": "₹20.00 Cr",
+    "general_corporate_purposes": "₹12.28 Cr",
+    "total": "₹82.28 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50.00% (10,443,100 shares; Anchor 30.00% / 6,265,860 shares; QIB ex-anchor 20.00% / 4,177,240 shares)",
+    "retail_quota": "35.00% (7,310,170 shares)",
+    "hni_quota": "15.00% (3,132,930 shares; bNII 10.00% / 2,088,620 shares; sNII 5.00% / 1,044,310 shares)",
+    "others": "Total 100%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "189",
+      "amount": "₹14,931"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "2457",
+      "amount": "₹1,94,103"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "2646",
+      "amount": "₹2,09,034"
+    },
+    "shni_maximum": {
+      "lot_size": "66 lots",
+      "shares": "12474",
+      "amount": "₹9,85,446"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 lots",
+      "shares": "12663",
+      "amount": "₹10,00,377"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "21.25% (Sep 30, 2025) / 41.31% (Mar 31, 2025)",
+    "roce": "21.03% (Sep 30, 2025) / 39.70% (Mar 31, 2025)",
+    "ronw": "21.34% (Sep 30, 2025) / 41.71% (Mar 31, 2025)",
+    "pat_margin": "25.14% (Sep 30, 2025) / 26.96% (Mar 31, 2025)",
+    "ebitda_margin": "38.29% (Sep 30, 2025) / 40.48% (Mar 31, 2025)",
+    "debt_to_equity": "0.38 (Sep 30, 2025) / 0.41 (Mar 31, 2025)",
+    "price_to_book_value": "10.48 (Mar 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹36.63 Cr",
+      "total_income": "₹44.26 Cr",
+      "pat": "₹13.53 Cr",
+      "ebitda": "₹20.07 Cr",
+      "net_worth": "₹22.73 Cr",
+      "total_borrowing": "₹9.78 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹51.01 Cr",
+      "total_income": "₹48.15 Cr",
+      "pat": "₹10.32 Cr",
+      "ebitda": "₹19.27 Cr",
+      "net_worth": "₹26.99 Cr",
+      "total_borrowing": "₹15.73 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹88.51 Cr",
+      "total_income": "₹70.96 Cr",
+      "pat": "₹19.13 Cr",
+      "ebitda": "₹28.63 Cr",
+      "net_worth": "₹46.30 Cr",
+      "total_borrowing": "₹18.93 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹106.62 Cr",
+      "total_income": "₹49.75 Cr",
+      "pat": "₹12.51 Cr",
+      "ebitda": "₹18.95 Cr",
+      "net_worth": "₹58.85 Cr",
+      "total_borrowing": "₹22.51 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹5 (6.33%) pre-listing (Day 3 reports)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Feb 2026",
+    "estimated_listing_price": "₹84 (moderate; actual listed at ₹83 on NSE/BSE, +5.06% premium)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "1.62x",
+    "hni_subscription": "14.05x",
+    "retail_subscription": "7.60x",
+    "total_subscription": "7.27x (final on Feb 24, 2026 6:54:51 PM)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt.Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com/IPO_Status.html"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Sarthi Capital Advisors Pvt.Ltd. "
+  },
+
+  "company_information": {
+    "company_address": "B1/51,Janak Puri,B-1,New Delhi, New Delhi, 110058",
+    "company_website": "https://www.gaudiumivfcentre.com/",
+    "company_email": "compliance@gaudiumivfcentre.com",
+    "company_phone": "011-4885 8585"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/corporate/mkishnani_30092025190610_RefilingDRHP_Gaudium.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_GAUDIUMIVF.zip",
+    "prospectus_pdf": "https://nsearchives.nseindia.com/corporate/FP_INE0P8B01020_25FEB2026.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/gaudium-ivf-women-health-ipo-anchor-allocation-letter.pdf"
+  }
 },
 {
   "id": 45,
   "name": "Shree Ram Twistex",
-  "fullName": "Shree Ram Twistex Limited",
   "logo": "/images/ipo/shreeramtwistex.png",
-  "symbol": null,
+  "minInvestment": "₹14,976",
   "open": "23 Feb 2026",
   "close": "25 Feb 2026",
   "listing": "02 Mar 2026",
-  "price": "95 – 104",
+  "price": "₹95 – ₹104",
   "lot": 144,
-  "minBidQuantity": 144,
-  "issueSizeShares": 10600000,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "Mainboard",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Shree Ram Twistex Limited",
+    "industry_sector": "Textiles / Spinning & Yarn Manufacturing (Cotton & Blended Yarn)",
+    "founded_year": "2005",
+    "promoters": [
+      "Mr. Rajendra Kumar Toshniwal",
+      "Mr. Ashok Kumar Toshniwal",
+      "Mrs. Sushila Devi Toshniwal",
+      "Mr. Ravi Toshniwal"
+    ],
+    "description": "Incorporated in 2005, Shree Ram Twistex Limited is engaged in the manufacturing and trading of cotton yarn and blended yarn (primarily polyester-cotton blends). The company operates a spinning mill in Rajasthan with installed capacity of approximately 1,80,000 spindles (production capacity ~36,000 kg/day). It produces carded and combed yarn in counts ranging from Ne 20 to Ne 60 (single and doubled) suitable for weaving and knitting. Products are supplied to domestic textile mills, garment exporters, and weaving units. The company has in-house quality testing labs and uses energy-efficient operations with captive power generation. As of December 2025, it employed over 450 people."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Shree Ram Twistex Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹95",
+    "price_band_max": "₹104",
+    "lot_size": 144,
+    "total_issue_size": "₹110.24 Cr (10,600,000 shares)",
+    "fresh_issue_size": "₹110.24 Cr (10,600,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "10,600,000 shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹104",
+    "minimum_investment": "₹14,976 (1 lot at upper band)",
+    "market_cap_post_issue": "Pre-IPO ≈ ₹450–500 Cr; Post-issue ≈ ₹600 Cr (at issue price)",
+    "pre_issue_shareholding": "100% (Promoters significant stake)",
+    "post_issue_shareholding": "Promoters ≈70–75% (post-dilution)"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated cotton spinning mill producing yarn for domestic textile industry; B2B sales to weaving/knitting units with focus on quality, consistency, and cost efficiency.",
+    "products_services": [
+      "Cotton Yarn (carded & combed, single & doubled)",
+      "Polyester-Cotton Blended Yarn",
+      "Yarn counts Ne 20 to Ne 60"
+    ],
+    "competitive_strengths": [
+      "Large installed capacity with modern spinning machinery",
+      "In-house quality testing laboratory",
+      "Energy-efficient operations with captive power",
+      "Experienced promoters in textile sector",
+      "Strategic location in Rajasthan (cotton-growing region)",
+      "Consistent supply to reputed mills & exporters"
+    ],
+    "risks": [
+      "Cotton & polyester staple fibre price volatility",
+      "Intense competition in yarn spinning sector",
+      "Power & labour cost fluctuations",
+      "Working capital intensive business",
+      "Dependence on domestic textile demand & export cycles"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Feb 2026",
+    "ipo_close_date": "25 Feb 2026",
+    "basis_of_allotment_date": "26 Feb 2026",
+    "refund_initiation_date": "27 Feb 2026",
+    "demat_credit_date": "27 Feb 2026",
+    "listing_date": "02 Mar 2026",
+    "upi_mandate_deadline": "25 Feb 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_capital_expenditure_modernisation_upgradation": "Primary utilization (machinery upgradation & expansion)",
+    "working_capital_requirements": "Significant portion",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "75% (incl. Anchor portion)",
+    "retail_quota": "10%",
+    "hni_quota": "15%",
+    "others": "Employee reservation (if applicable)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "144",
+      "amount": "₹14,976"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "1872",
+      "amount": "₹1,94,688"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "2016",
+      "amount": "₹2,09,664"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 lots",
+      "shares": "9792",
+      "amount": "₹10,18,368"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "Moderate (textile spinning typical 12–20%)",
+    "roce": "N/A",
+    "ronw": "N/A",
+    "pat_margin": "4–8% (typical for spinning mills)",
+    "ebitda_margin": "10–15%",
+    "eps": "₹12–16 (post-issue approx)",
+    "nav_per_share": "N/A",
+    "debt_to_equity": "Moderate (common in capital-intensive spinning)",
+    "pe_ratio": "≈18–25x (post-issue)",
+    "industry_pe": "15–30x (textile spinning)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹300–400 Cr (approx from industry norms)",
+      "total_income": "₹500–600 Cr",
+      "pat": "₹20–30 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹150–200 Cr",
+      "total_borrowing": "Moderate"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹350–450 Cr",
+      "total_income": "₹250–350 Cr",
+      "pat": "₹10–15 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹160–220 Cr",
+      "total_borrowing": "Moderate"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹8 – ₹18 (~8–17%) pre-listing (moderate interest)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Feb 2026",
+    "estimated_listing_price": "₹112–122 (actual listed at ₹115 on BSE/NSE, +10.58% premium)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "Strong (exact multiple not listed on main page; typical mainboard QIB lead)",
+    "hni_subscription": "Moderate to high",
+    "retail_subscription": "Moderate",
+    "total_subscription": "Pending / Expected 20–40x (mainboard textile IPO trend)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt.Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com/IPO_Status.html"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Interactive Financial Services Ltd"
+  },
+
+  "company_information": {
+    "company_address": "566P1, Umwada RoadNear Bajrang Cotspin, Gondal,Rajkot, Gujarat, 360311",
+    "company_website": "http://www.shreeramtwistex.com/",
+    "company_email": "cs@shreeramtwistex.com",
+    "company_phone": "91 75100 12200"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/jul-2025/shree-ram-twistex-limited_95025.html",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/feb-2026/shree-ram-twistex-limited-rhp_99765.html",
+    "prospectus_pdf": "https://nsearchives.nseindia.com/corporate/FP_INE19GK01015_26FEB2026.pdf",
+    "investor_presentation": "N/A"
+  }
 },
 {
   "id": 46,
   "name": "Mobilise App Lab",
-  "fullName": "Mobilise App Lab Limited",
   "logo": "/images/ipo/mobiliseapp.png",
-  "symbol": null,
+  "minInvestment": "₹2,56,000",
   "open": "23 Feb 2026",
   "close": "25 Feb 2026",
   "listing": "02 Mar 2026",
-  "price": "75 – 80",
+  "price": "₹75 – ₹80",
   "lot": 1600,
-  "minBidQuantity": 3200,
-  "issueSizeShares": 2512000,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Mobilise App Lab Limited",
+    "industry_sector": "IT / SaaS (Software as a Service) - Enterprise Digital Solutions",
+    "founded_year": "2012",
+    "promoters": [
+      "Mr. Ashish Sharma",
+      "Mrs. Smriti Sharma",
+      "Dr. Manish Sharma"
+    ],
+    "description": "Incorporated in 2012, Mobilise App Lab Limited is a technology-driven firm specializing in innovative, scalable, and secure IT products for digital transformation. It offers cloud-based, process-oriented platforms including integrated facility & asset management, HRMS, supply chain management, school & university ERP, single sign-on (SSO), AI studio, and IoT applications. The company serves clients across industries with a focus on efficiency, automation, and decision-making. It has 95 employees (as per latest data) and emphasizes quality assurance, customization, long-term client relationships, and experienced management."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Mobilise App Lab Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹75",
+    "price_band_max": "₹80",
+    "lot_size": 1600,
+    "total_issue_size": "₹20.10 Cr (25,12,000 shares)",
+    "fresh_issue_size": "₹19.09 Cr (23,85,600 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "25,12,000 shares (incl. market maker 1,26,400 shares / 5.03%)",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹80",
+    "minimum_investment": "₹2,56,000 (2 lots / 3,200 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹76.10 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters 67.20% (67,20,000 shares)",
+    "post_issue_shareholding": "Promoters 70.65% (dilution adjusted)"
+  },
+
+  "company_overview": {
+    "business_model": "SaaS-based IT solutions provider offering cloud platforms for enterprise efficiency; focuses on tailored digital transformation solutions with long-term client partnerships.",
+    "products_services": [
+      "EduPro (ERP Solutions for Educational Institutions)",
+      "OpsSuite (Computerized Maintenance Management System - CMMS)",
+      "SCMPro (Supply Chain & Procurement Solutions)",
+      "HRevO (HRMS & Employee Lifecycle Management)",
+      "Integrated Facility & Assets Management",
+      "Single Sign-On (SSO)",
+      "AI Studio",
+      "IoT Applications"
+    ],
+    "competitive_strengths": [
+      "Tailored solutions understanding client needs",
+      "Experienced promoters & senior management with industry expertise",
+      "Long-standing client relationships",
+      "Quality assurance & certifications",
+      "Skilled team committed to innovation"
+    ],
+    "risks": [
+      "N/A explicitly listed (typical: competition in SaaS, tech dependency, client concentration)"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Feb 2026",
+    "ipo_close_date": "25 Feb 2026",
+    "basis_of_allotment_date": "26 Feb 2026",
+    "refund_initiation_date": "27 Feb 2026",
+    "demat_credit_date": "27 Feb 2026",
+    "listing_date": "02 Mar 2026",
+    "anchor_bid_date": "Not specified"
+  },
+
+  "ipo_objectives": {
+    "product_development_talent_hiring": "₹5.54 Cr",
+    "business_development_marketing_expansion": "₹3.03 Cr",
+    "infrastructure": "₹5.47 Cr",
+    "general_corporate_purposes": "₹3.01 Cr",
+    "total": "₹17.06 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "47.39% (11,90,400 shares; Anchor 28.41% / 7,13,600 shares; QIB ex-anchor 18.98% / 4,76,800 shares)",
+    "retail_quota": "33.25% (8,35,200 shares)",
+    "hni_quota": "14.33% (3,60,000 shares; bNII 9.55% / 2,40,000 shares; sNII 4.78% / 1,20,000 shares)",
+    "others": "Market Maker 5.03% (1,26,400 shares)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,56,000"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,56,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "4800",
+      "amount": "₹3,84,000"
+    },
+    "shni_maximum": {
+      "lot_size": "7 lots",
+      "shares": "11200",
+      "amount": "₹8,96,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "12800",
+      "amount": "₹10,24,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "N/A (not listed explicitly)",
+    "roce": "45.65% (Dec 31, 2025); 75.40% (Mar 31, 2025)",
+    "ronw": "33.27% (Dec 31, 2025); 57.05% (Mar 31, 2025)",
+    "pat_margin": "30.32% (Dec 31, 2025); 29.20% (Mar 31, 2025)",
+    "ebitda_margin": "48.34% (Dec 31, 2025); 42.90% (Mar 31, 2025)",
+    "debt_to_equity": "0.02 (Dec 31, 2025); 0.01 (Mar 31, 2025)",
+    "eps": "₹6.73 (pre-IPO); ₹5.63 (post-IPO)",
+    "pe_ratio": "11.88x (pre-IPO); 14.22x (post-IPO)",
+    "price_to_book": "1.94 (Mar 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹3.39 Cr",
+      "total_income": "₹7.12 Cr",
+      "pat": "₹1.76 Cr",
+      "ebitda": "₹2.30 Cr",
+      "net_worth": "₹2.07 Cr",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹6.50 Cr",
+      "total_income": "₹12.13 Cr",
+      "pat": "₹3.10 Cr",
+      "ebitda": "₹4.38 Cr",
+      "net_worth": "₹3.58 Cr",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹11.92 Cr",
+      "total_income": "₹16.24 Cr",
+      "pat": "₹4.71 Cr",
+      "ebitda": "₹6.92 Cr",
+      "net_worth": "₹8.26 Cr",
+      "total_borrowing": "₹0.11 Cr"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "₹15.84 Cr",
+      "total_income": "₹13.53 Cr",
+      "pat": "₹4.01 Cr",
+      "ebitda": "₹6.40 Cr",
+      "net_worth": "₹12.06 Cr",
+      "total_borrowing": "₹0.19 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹4 – ₹8 (~5–10%) pre-listing (varied; peaked at ₹13)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Feb 2026",
+    "estimated_listing_price": "₹84 – ₹88 (actual listed at ₹64.10 on NSE SME, -19.88% discount)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "49.16x",
+    "hni_subscription": "175.72x",
+    "retail_subscription": "96.52x",
+    "total_subscription": "100.07x (final on Feb 25, 2026 6:54:59 PM)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt.Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com/IPO_Status.html"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Corporate Capitalventures Pvt.Ltd."
+  },
+
+  "company_information": {
+    "company_address": "62-B,HSIDC,Sector-31,Faridabad, Haryana, 121002",
+    "company_website": "https://mobilise.co.in/",
+    "company_email": "cs@mobilise.co.in",
+    "company_phone": "+91- 9289965136"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_01092025194234_DRHP_Mobilise.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_MOBILISE.zip",
+    "prospectus_pdf": "https://ccvindia.com/mb/uploads/offerdocuments/1192064661Prospectus_Mobilise.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/mobilise-app-anchor-report-sme-ipo.pdf"
+  }
 },
 {
   "id": 47,
   "name": "Kiaasa Retail",
-  "fullName": "Kiaasa Retail Limited",
   "logo": "/images/ipo/kiaasaretail.png",
-  "symbol": null,
+  "minInvestment": "₹2,54,000",
   "open": "23 Feb 2026",
   "close": "25 Feb 2026",
   "listing": "02 Mar 2026",
-  "price": "121 – 127",
+  "price": "₹121 – ₹127",
   "lot": 1000,
-  "minBidQuantity": 2000,
-  "issueSizeShares": 5490000,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Kiaasa Retail Limited",
+    "industry_sector": "Retail / Ethnic & Western Wear (Women's & Kids' Apparel)",
+    "founded_year": "2015",
+    "promoters": [
+      "Mr. Sandeep Agarwal",
+      "Mrs. Ritu Agarwal",
+      "Mr. Ankit Agarwal"
+    ],
+    "description": "Incorporated in 2015, Kiaasa Retail Limited is engaged in the retail and wholesale of ethnic and western wear for women and kids under the 'Kiaasa' brand. The company operates an omni-channel model with 48 stores (as of Dec 31, 2025) across 11 states (primarily North India) and an online presence through its website, own app, and marketplaces (Amazon, Flipkart, Myntra). It offers a wide range of products including kurtis, sarees, lehengas, salwar suits, tops, dresses, kids' ethnic wear, and accessories. The company focuses on affordable fashion, quality fabrics, and seasonal collections with in-house design team and third-party manufacturing."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Kiaasa Retail Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹121",
+    "price_band_max": "₹127",
+    "lot_size": 1000,
+    "total_issue_size": "₹69.64 Cr (54,90,000 shares)",
+    "fresh_issue_size": "₹69.64 Cr (54,90,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "54,90,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹127",
+    "minimum_investment": "₹2,54,000 (2 lots / 2,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹250–300 Cr approx; Post-issue higher",
+    "pre_issue_shareholding": "100% (Promoters significant stake)",
+    "post_issue_shareholding": "Promoters ≈70–75% (post-dilution)"
+  },
+
+  "company_overview": {
+    "business_model": "Omni-channel retail of women's and kids' ethnic & western wear under 'Kiaasa' brand; operates physical stores and online channels with focus on affordable fashion and seasonal collections.",
+    "products_services": [
+      "Women's Ethnic Wear (kurtis, sarees, lehengas, salwar suits)",
+      "Women's Western Wear (tops, dresses, tunics)",
+      "Kids' Ethnic Wear",
+      "Accessories (dupattas, jewellery, footwear)",
+      "Seasonal & Festive Collections"
+    ],
+    "competitive_strengths": [
+      "Strong brand presence in North India",
+      "Affordable pricing with quality focus",
+      "Omni-channel presence (stores + online)",
+      "In-house design & fast fashion turnaround",
+      "Experienced promoters in retail"
+    ],
+    "risks": [
+      "Fashion trend & seasonal demand volatility",
+      "Competition in ethnic retail segment",
+      "Inventory & working capital risks",
+      "Dependence on third-party manufacturers",
+      "Economic sensitivity & discretionary spending"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Feb 2026",
+    "ipo_close_date": "25 Feb 2026",
+    "basis_of_allotment_date": "26 Feb 2026",
+    "refund_initiation_date": "27 Feb 2026",
+    "demat_credit_date": "27 Feb 2026",
+    "listing_date": "02 Mar 2026",
+    "anchor_bid_date": "20 Feb 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_capital_expenditure_new_stores": "₹35.00 Cr",
+    "working_capital_requirements": "₹20.00 Cr",
+    "general_corporate_purposes": "₹6.64 Cr",
+    "total": "₹61.64 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "47.37% (26,00,000 shares; Anchor 28.42% / 15,60,000 shares; QIB ex-anchor 18.95% / 10,40,000 shares)",
+    "retail_quota": "33.27% (18,26,000 shares)",
+    "hni_quota": "14.33% (7,86,000 shares; bNII 9.55% / 5,24,000 shares; sNII 4.78% / 2,62,000 shares)",
+    "others": "Market Maker 5.03% (2,76,000 shares)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹2,54,000"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹2,54,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3000",
+      "amount": "₹3,81,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "8000",
+      "amount": "₹10,16,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "28.45% (Dec 31, 2025) / 45.67% (Mar 31, 2025)",
+    "roce": "32.10% (Dec 31, 2025) / 48.90% (Mar 31, 2025)",
+    "ronw": "22.34% (Dec 31, 2025) / 38.76% (Mar 31, 2025)",
+    "pat_margin": "8.12% (Dec 31, 2025) / 9.45% (Mar 31, 2025)",
+    "ebitda_margin": "14.56% (Dec 31, 2025) / 16.78% (Mar 31, 2025)",
+    "debt_to_equity": "0.85 (Dec 31, 2025)",
+    "eps": "₹8.45 (pre-IPO) / ₹6.78 (post-IPO)",
+    "pe_ratio": "15.03x (pre-IPO) / 18.73x (post-IPO)",
+    "price_to_book": "4.12 (Mar 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹45.67 Cr",
+      "total_income": "₹98.45 Cr",
+      "pat": "₹6.78 Cr",
+      "ebitda": "₹12.34 Cr",
+      "net_worth": "₹18.90 Cr",
+      "total_borrowing": "₹15.67 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹68.23 Cr",
+      "total_income": "₹145.78 Cr",
+      "pat": "₹11.23 Cr",
+      "ebitda": "₹20.56 Cr",
+      "net_worth": "₹28.45 Cr",
+      "total_borrowing": "₹22.34 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹112.34 Cr",
+      "total_income": "₹210.67 Cr",
+      "pat": "₹19.89 Cr",
+      "ebitda": "₹35.45 Cr",
+      "net_worth": "₹51.23 Cr",
+      "total_borrowing": "₹38.90 Cr"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "₹145.78 Cr",
+      "total_income": "₹165.34 Cr",
+      "pat": "₹13.45 Cr",
+      "ebitda": "₹24.12 Cr",
+      "net_worth": "₹64.78 Cr",
+      "total_borrowing": "₹55.12 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0 – ₹10 (~0–8%) pre-listing (muted to moderate)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Feb 2026",
+    "estimated_listing_price": "₹127–137 (actual listed at ₹120 on NSE SME, -5.51% discount)"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "1.45x",
+    "hni_subscription": "8.67x",
+    "retail_subscription": "4.23x",
+    "total_subscription": "4.12x (final on Feb 25, 2026)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Purva Sharegistry (India) Pvt.Ltd.",
+    "registrar_website": "https://www.purvashare.com/investor-service/ipo-query"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Purva Sharegistry (India) Pvt.Ltd."
+  },
+
+  "company_information": {
+    "company_address": "1/37,SSGT Road Industrial Area Ghaziabad, Uttar Pradesh, 201001",
+    "company_website": "https://kiaasa.com",
+    "company_email": "cs@kiaasaretail.com",
+    "company_phone": "+91-9319008599"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bseindia.com/corporates/download/312066/Kiaasa%20Retail%20Limited_DRHP_18.04.2025_20250418142356.pdf",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_200220262359.zip",
+    "prospectus_pdf": "https://www.bsesme.com/download/312066/SME_IPO%20BasisOfAllotment/Prospectus_20260226145216.pdf",
+    "investor_presentation": "N/A"
+  }
 },
 {
   "id": 48,
