@@ -10697,42 +10697,407 @@ export const fetchIPOs = async () => {
 {
   "id": 67,
   "name": "Amir Chand Jagdish Kumar",
-  "fullName": "Amir Chand Jagdish Kumar (Exports) Limited",
   "logo": "/images/ipo/amirchand.png",
-  "symbol": null,
+  "minInvestment": "₹14,840",
   "open": "24 Mar 2026",
   "close": "27 Mar 2026",
   "listing": "02 Apr 2026",
-  "price": "201 – 212",
+  "price": "₹201 – ₹212",
   "lot": 70,
-  "minBidQuantity": 70,
-  "issueSizeShares": null,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "Mainboard",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Amir Chand Jagdish Kumar (Exports) Limited",
+    "industry_sector": "Agro Processing / Basmati Rice & FMCG (Staple Foods)",
+    "founded_year": "2003",
+    "promoters": [
+      "Jagdish Kumar Suri",
+      "Rahul Suri",
+      "Ramnika Suri"
+    ],
+    "description": "Amir Chand Jagdish Kumar (Exports) Limited is a processor and exporter of basmati rice and other FMCG products. It operates a fully integrated value chain including procurement, storage, processing, marketing, and sales. The company markets products under the flagship brand 'AEROPLANE' and over 40 sub-brands. It has two manufacturing facilities in Punjab and Haryana and one packaging unit in New Delhi. It exports to over 38 countries and focuses on quality basmati and non-basmati rice along with staple FMCG items like aata, maida, sooji, besan, salt, and sugar."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Amir Chand Jagdish Kumar (Exports) Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹201",
+    "price_band_max": "₹212",
+    "lot_size": 70,
+    "total_issue_size": "₹440 Cr (2,07,54,716 shares)",
+    "fresh_issue_size": "₹440 Cr (2,07,54,716 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "2,07,54,716 shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹212",
+    "minimum_investment": "₹14,840 (1 lot at upper band)",
+    "market_cap_post_issue": "Pre-IPO ≈ ₹2,195 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters 99.44%",
+    "post_issue_shareholding": "Promoters 78.78%"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated basmati rice processor and exporter with strong domestic FMCG presence; operates under 'Aeroplane' brand with focus on quality and global exports.",
+    "products_services": [
+      "Basmati Rice & Specialty Rice Varieties",
+      "Non-Basmati Rice (Sona Masuri, Kolam, Idli, Ponni)",
+      "FMCG Staple Products (Aata, Maida, Sooji, Besan, Salt, Sugar)"
+    ],
+    "competitive_strengths": [
+      "Fully integrated operations across value chain",
+      "Strong brand 'Aeroplane' with wide sub-brands",
+      "Export presence in 38+ countries",
+      "Modern manufacturing facilities",
+      "High domestic revenue growth"
+    ],
+    "risks": [
+      "Commodity price volatility (rice)",
+      "Intense competition in rice export & FMCG",
+      "Export regulatory & geopolitical risks",
+      "Working capital intensive"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "24 Mar 2026",
+    "ipo_close_date": "27 Mar 2026",
+    "basis_of_allotment_date": "30 Mar 2026",
+    "refund_initiation_date": "01 Apr 2026",
+    "demat_credit_date": "01 Apr 2026",
+    "listing_date": "02 Apr 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹500 Cr",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50% (incl. Anchor)",
+    "retail_quota": "35%",
+    "hni_quota": "15%",
+    "others": "Total 100%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "70",
+      "amount": "₹14,840"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "910",
+      "amount": "₹1,92,920"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "980",
+      "amount": "₹2,07,760"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 lots",
+      "shares": "4690",
+      "amount": "₹9,94,280"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "17.61% (Mar 31, 2025) / 11.87% (Sep 30, 2025)",
+    "roce": "14.36% (Mar 31, 2025) / 9.16% (Sep 30, 2025)",
+    "pat_margin": "3.04% (Mar 31, 2025) / 4.76% (Sep 30, 2025)",
+    "ebitda_margin": "8.18% (Mar 31, 2025) / 10.36% (Sep 30, 2025)",
+    "debt_to_equity": "2.07 (Mar 31, 2025) / 1.68 (Sep 30, 2025)",
+    "eps": "₹7.35 (pre-IPO)",
+    "pe_ratio": "28.86x (pre-IPO) / 22.56x (post-IPO)",
+    "price_to_book": "4.58"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹1,089.06 Cr",
+      "total_income": "₹1,317.86 Cr",
+      "pat": "₹17.50 Cr",
+      "ebitda": "₹79.69 Cr",
+      "net_worth": "₹280.84 Cr",
+      "total_borrowing": "₹667.53 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹1,283.53 Cr",
+      "total_income": "₹1,551.42 Cr",
+      "pat": "₹30.41 Cr",
+      "ebitda": "₹109.66 Cr",
+      "net_worth": "₹311.48 Cr",
+      "total_borrowing": "₹777.62 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹1,549.03 Cr",
+      "total_income": "₹2,004.03 Cr",
+      "pat": "₹60.82 Cr",
+      "ebitda": "₹163.65 Cr",
+      "net_worth": "₹379.18 Cr",
+      "total_borrowing": "₹784.06 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹1,526.42 Cr",
+      "total_income": "₹1,024.30 Cr",
+      "pat": "₹48.65 Cr",
+      "ebitda": "₹105.76 Cr",
+      "net_worth": "₹440.89 Cr",
+      "total_borrowing": "₹739.74 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹7 (as per recent reports)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Mar 2026",
+    "estimated_listing_price": "₹219 – ₹226"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "3.41x (as of 27 Mar 2026, Day 3, 6:54:40 PM)",
+    "anchor": "1.00x (fully subscribed, ₹60.004 Cr)",
+    "qib_ex_anchor": "1.18x",
+    "hni_subscription": "13.40x",
+    "bNII": "16.04x",
+    "sNII": "8.12x",
+    "retail_subscription": "1.44x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Emkay Global Financial Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "2735, Shop No. 9, Mohan Lal Palace, Naya Bazar, New Delhi, Delhi 110006",
+    "company_website": "https://www.aeroplanerice.com",
+    "company_email": "info@aeroplanerice.com",
+    "company_phone": "+91 8595912447"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/jul-2025/amir-chand-jagdish-kumar-exports-limited_95027.html",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_AMIRCHAND.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/amir_chand_jagdish_kumar_exports_ltd_mainboard_anchor_1774277098.pdf"
+  }
 },
 {
   "id": 68,
   "name": "Emiac Technologies",
-  "fullName": "Emiac Technologies Limited",
   "logo": "/images/ipo/emiac.png",
-  "symbol": null,
+  "minInvestment": "₹2,35,200",
   "open": "27 Mar 2026",
   "close": "08 Apr 2026",
-  "listing": "15 Apr 2026",
-  "price": "93 – 98",
+  "listing": "13 Apr 2026",
+  "price": "₹93 – ₹98",
   "lot": 1200,
-  "minBidQuantity": 2400,
-  "issueSizeShares": null,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Emiac Technologies Limited",
+    "industry_sector": "IT / Digital Marketing & AI-driven Solutions",
+    "founded_year": "Not specified (operations since ~2017)",
+    "promoters": [
+      "Divya Gandotra",
+      "Shivam Bhateja",
+      "Dushyant Gandotra"
+    ],
+    "description": "Emiac Technologies Limited is a technology-driven company providing AI-based digital marketing and business automation solutions. It offers services including content creation (blogs, articles), branding & online reputation management (PR campaigns, LinkedIn content), digital marketing (SEO, paid campaigns), and technical services/business automation (inventory automation, API integrations). The company serves sectors like digital marketing, BFSI, healthcare, IT, education, and automotive. It holds ISO 10002:2018, ISO 9001:2015, and ISO/IEC 27001:2022 certifications. As of January 31, 2026, it had 38 employees. Revenue in FY25 was majorly from content creation (43.42%), branding & reputation management (31.80%), digital marketing (14.75%), and technical services (10.03%)."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Emiac Technologies Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹93",
+    "price_band_max": "₹98",
+    "lot_size": 1200,
+    "total_issue_size": "₹31.75 Cr (32,40,000 shares)",
+    "fresh_issue_size": "₹30 Cr (30,72,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "32,40,000 shares (incl. market maker 1,68,000 shares)",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹98",
+    "minimum_investment": "₹2,35,200 (2 lots / 2,400 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹119.98 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters 68%",
+    "post_issue_shareholding": "Promoters reduced (26.46% of post-IPO capital from fresh issue)"
+  },
+
+  "company_overview": {
+    "business_model": "AI-powered digital marketing and automation solutions provider with focus on content, branding, SEO/paid campaigns, and technical automation for diverse sectors.",
+    "products_services": [
+      "Content Creation (blogs, articles)",
+      "Branding & Online Reputation Management (PR, LinkedIn content)",
+      "Digital Marketing (SEO, paid campaigns)",
+      "Technical Services & Business Automation (inventory, API integrations)"
+    ],
+    "competitive_strengths": [
+      "Diverse client base across multiple sectors",
+      "Recurring and repeat revenues",
+      "Experienced management team",
+      "ROI-first strategy and transparent pricing",
+      "Quality certifications (ISO 9001, 27001, etc.)"
+    ],
+    "risks": [
+      "Competition in digital marketing & AI services",
+      "Dependence on client projects and sectors",
+      "Talent retention in tech industry",
+      "Rapid technological changes"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "27 Mar 2026",
+    "ipo_close_date": "08 Apr 2026",
+    "basis_of_allotment_date": "09 Apr 2026",
+    "refund_initiation_date": "10 Apr 2026",
+    "demat_credit_date": "10 Apr 2026",
+    "listing_date": "13 Apr 2026"
+  },
+
+  "ipo_objectives": {
+    "purchase_computers_laptops_accessories_software_cloud_hosting": "₹5.72 Cr",
+    "working_capital_requirements": "₹8.80 Cr",
+    "hiring_of_manpower": "₹5.42 Cr",
+    "branding_advertisement_and_marketing_activities": "₹3.90 Cr",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "46.67% (15,12,000 shares; Anchor 27.41% / 8,88,000 shares; QIB ex-anchor 19.26% / 6,24,000 shares)",
+    "retail_quota": "33.70% (10,92,000 shares)",
+    "hni_quota": "14.44% (4,68,000 shares; bNII 9.63% / 3,12,000 shares; sNII 4.81% / 1,56,000 shares)",
+    "others": "Market Maker 5.19% (1,68,000 shares)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,35,200"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,35,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,52,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "9600",
+      "amount": "₹9,40,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "40.26% (Sep 30, 2025) / 81.65% (Mar 31, 2025)",
+    "roce": "40.91% (Sep 30, 2025) / 63.52% (Mar 31, 2025)",
+    "ronw": "33.52% (Sep 30, 2025) / 46.74% (Mar 31, 2025)",
+    "pat_margin": "32.20% (Sep 30, 2025) / 21.25% (Mar 31, 2025)",
+    "ebitda_margin": "43.81% (Sep 30, 2025) / 29.83% (Mar 31, 2025)",
+    "eps": "₹4.69 (pre-IPO)",
+    "pe_ratio": "20.91x (pre-IPO) / 13.19x (post-IPO)",
+    "debt_to_equity": "0.09 (Sep 30, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹1.51 Cr",
+      "total_income": "₹2.95 Cr",
+      "pat": "₹0.39 Cr",
+      "ebitda": "₹0.60 Cr",
+      "net_worth": "₹0.47 Cr",
+      "total_borrowing": "₹0.00 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹3.19 Cr",
+      "total_income": "₹5.38 Cr",
+      "pat": "₹0.84 Cr",
+      "ebitda": "₹1.24 Cr",
+      "net_worth": "₹1.31 Cr",
+      "total_borrowing": "₹0.00 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹16.94 Cr",
+      "total_income": "₹20.06 Cr",
+      "pat": "₹4.22 Cr",
+      "ebitda": "₹5.92 Cr",
+      "net_worth": "₹9.03 Cr",
+      "total_borrowing": "₹0.01 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹20.08 Cr",
+      "total_income": "₹14.49 Cr",
+      "pat": "₹4.55 Cr",
+      "ebitda": "₹6.19 Cr",
+      "net_worth": "₹13.57 Cr",
+      "total_borrowing": "₹1.30 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0 (flat as of 24 Mar 2026)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Mar 2026",
+    "estimated_listing_price": "₹98 (flat listing expected)"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "0.11x (as of 27 Mar 2026, Day 1, 5:05:47 PM)",
+    "anchor": "1.00x (fully subscribed, ₹8.702 Cr)",
+    "qib_ex_anchor": "0.00x",
+    "hni_subscription": "0.31x",
+    "bNII": "0.37x",
+    "sNII": "0.18x",
+    "retail_subscription": "0.09x",
+    "total_applications": "53"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Smart Horizon Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No. 102, Maa Karni Nagar, Amrapali Marg, Vaishali Nagar Extension, Panchyawala, Jaipur, Rajasthan 302034",
+    "company_website": "https://emiactech.com",
+    "company_email": "investors@nantatech.com",
+    "company_phone": "+91 9119391191"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/331764/SME_IPO%20InPrinciple/DRHPEmiacTechnologiesLimited_20250930205604.pdf",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP&GID-%20Emiac%20technologies%20Limited_250320261939.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/emiac-technologies-anchor_letter46fd3972-84ff-495a-858a-beff64db2a42.pdf"
+  }
 }
 
 
