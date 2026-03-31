@@ -9685,101 +9685,987 @@ export const fetchIPOs = async () => {
 {
   "id": 49,
   "name": "Clean Max Enviro Energy Solutions",
-  "fullName": "Clean Max Enviro Energy Solutions Limited",
   "logo": "/images/ipo/cleanmax.png",
-  "symbol": null,
+  "minInvestment": "₹14,742",
   "open": "23 Feb 2026",
   "close": "25 Feb 2026",
-  "listing": "04 Mar 2026",
-  "price": "1000 – 1053",
+  "listing": "02 Mar 2026",
+  "price": "₹1000 – ₹1053",
   "lot": 14,
-  "minBidQuantity": null,
-  "issueSizeShares": null,
-  "faceValue": null,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "Mainboard",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Clean Max Enviro Energy Solutions Limited",
+    "industry_sector": "Renewable Energy / C&I (Commercial & Industrial) Solar & Hybrid Power Solutions",
+    "founded_year": "2011",
+    "promoters": [
+      "Kuldeep Jain",
+      "Pratap Jain",
+      "Nidhi Jain",
+      "BGTF One Holdings (DIFC) Ltd",
+      "Kempinc LLP"
+    ],
+    "description": "Clean Max Enviro Energy Solutions Limited is India’s largest commercial and industrial (C&I) renewable energy provider as of March 31, 2025 (per CRISIL Report). As of July 31, 2025, it has 2.54 GW of operational, owned, and managed renewable energy capacity and an additional 2.53 GW of contracted capacity under execution. The company supplies renewable power to C&I customers through long-term Power Purchase Agreements (PPAs) and Energy Attribute Purchase Agreements (EAPAs). It also provides turnkey renewable energy services including land acquisition, evacuation infrastructure, EPC, and long-term O&M services. It offers carbon credit solutions and operates in both solar and wind (including hybrid) projects. The company has a strong presence across India with expertise in energy contracting, project development, and asset management."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Clean Max Enviro Energy Solutions Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹1 per share",
+    "price_band_min": "₹1000",
+    "price_band_max": "₹1053",
+    "lot_size": 14,
+    "total_issue_size": "₹3,080 Cr (2,92,50,277 shares)",
+    "fresh_issue_size": "₹1,196 Cr (1,13,60,190 shares)",
+    "offer_for_sale": "₹1,884 Cr (1,78,90,087 shares)",
+    "shares_offered": "2,92,50,277 shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹1053",
+    "minimum_investment": "₹14,742 (1 lot at upper band)",
+    "market_cap_post_issue": "Pre-IPO ≈ ₹12,325 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters 74.89%",
+    "post_issue_shareholding": "Promoters 49.08%"
+  },
+
+  "company_overview": {
+    "business_model": "Developer and operator of renewable energy assets focused on the C&I segment; revenue from power sales via long-term PPAs, energy services (EPC + O&M), and carbon solutions.",
+    "products_services": [
+      "Renewable Power Sales (Solar, Wind & Hybrid via PPAs)",
+      "Renewable Energy Services (EPC, O&M, Land & Evacuation)",
+      "Carbon Credit Solutions"
+    ],
+    "competitive_strengths": [
+      "Largest C&I renewable energy player in India",
+      "Large operational and under-construction portfolio (5.07 GW total as of Jul 2025)",
+      "Comprehensive customer-centric capabilities",
+      "Strong project execution track record",
+      "Efficient capital allocation and risk management"
+    ],
+    "risks": [
+      "Dependence on power purchase agreements and offtakers",
+      "Regulatory and policy changes in renewable energy sector",
+      "Execution risks in large-scale project development",
+      "High debt levels typical in renewable energy"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Feb 2026",
+    "ipo_close_date": "25 Feb 2026",
+    "anchor_bid_date": "20 Feb 2026",
+    "basis_of_allotment_date": "26 Feb 2026",
+    "refund_initiation_date": "26 Feb 2026",
+    "demat_credit_date": "27 Feb 2026",
+    "listing_date": "02 Mar 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_pre_payment_of_borrowings": "₹1,122.67 Cr",
+    "general_corporate_purposes": "₹23.79 Cr",
+    "total": "₹1,146.46 Cr (from fresh issue)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50% (incl. Anchor)",
+    "retail_quota": "35%",
+    "hni_quota": "15%",
+    "employee_quota": "1.07% (3,14,795 shares with ₹100 discount)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "14",
+      "amount": "₹14,742"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "182",
+      "amount": "₹1,91,646"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "196",
+      "amount": "₹2,06,388"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 lots",
+      "shares": "952",
+      "amount": "₹10,02,456"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "N/A",
+    "roce": "N/A",
+    "ronw": "N/A",
+    "pat_margin": "N/A",
+    "ebitda_margin": "N/A",
+    "eps": "N/A",
+    "nav_per_share": "N/A",
+    "debt_to_equity": "High (typical for renewable energy developer)",
+    "pe_ratio": "N/A",
+    "industry_pe": "High-growth renewable energy peers 40–80x+"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹7,000.14 Cr",
+      "total_income": "₹960.98 Cr",
+      "pat": "₹-59.47 Cr",
+      "ebitda": "₹405.92 Cr",
+      "net_worth": "₹1,209.93 Cr",
+      "total_borrowing": "₹3,843.42 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹9,076.55 Cr",
+      "total_income": "₹1,425.31 Cr",
+      "pat": "₹-37.64 Cr",
+      "ebitda": "₹741.57 Cr",
+      "net_worth": "₹1,817.96 Cr",
+      "total_borrowing": "₹5,514.56 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹13,279.25 Cr",
+      "total_income": "₹1,610.34 Cr",
+      "pat": "₹19.43 Cr",
+      "ebitda": "₹1,015.07 Cr",
+      "net_worth": "₹2,545.44 Cr",
+      "total_borrowing": "₹7,973.70 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹16,945.65 Cr",
+      "total_income": "₹969.35 Cr",
+      "pat": "₹19.00 Cr",
+      "ebitda": "₹637.85 Cr",
+      "net_worth": "₹2,598.34 Cr",
+      "total_borrowing": "₹10,121.46 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0 to negative (flat to -₹3 as of closure)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Feb 2026",
+    "estimated_listing_price": "₹1,050 – ₹1,053 (flat to mild discount)"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "0.99x (final on Day 3, 25 Feb 2026 6:54:45 PM)",
+    "qib_ex_anchor": "2.99x",
+    "hni_subscription": "0.57x",
+    "retail_subscription": "0.07x",
+    "employee_subscription": "0.11x",
+    "anchor": "Fully subscribed (₹921 Cr)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Axis Capital Limited (Book Running Lead Manager), HSBC Securities, Nomura"
+  },
+
+  "company_information": {
+    "company_address": "4th Floor, The International, 16 Maharshi Karve Road, New Marine Lines Cross Road No.1, Churchgate, Mumbai, Maharashtra 400020",
+    "company_website": "https://www.cleanmax.com",
+    "company_email": "secretarial@cleanmax.com",
+    "company_phone": "+91 22 6252 0000"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/aug-2025/clean-max-enviro-energy-solutions-limited_96203.html",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/feb-2026/clean-max-enviro-energy-solutions-limited-rhp_99785.html",
+    "prospectus_pdf": "https://www.sebi.gov.in/filings/public-issues/feb-2026/clean-max-enviro-energy-solutions-limited-prospectus_99987.html",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/cleanmax-enviro-ipo-anchor-allocation-letter.pdf"
+  }
 },
 {
   "id": 50,
   "name": "Omnitech Engineering",
-  "fullName": "Omnitech Engineering Limited",
   "logo": "/images/ipo/omnitechengineering.png",
-  "symbol": null,
+  "minInvestment": "₹14,982",
   "open": "25 Feb 2026",
   "close": "27 Feb 2026",
   "listing": "05 Mar 2026",
-  "price": "216 – 227",
+  "price": "₹216 – ₹227",
   "lot": 66,
-  "minBidQuantity": 66,
-  "issueSizeShares": 25700000,
-  "faceValue": 5,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "Mainboard",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Omnitech Engineering Limited",
+    "industry_sector": "Precision Engineering & Industrial Automation",
+    "founded_year": "Not specified (operations prior to 2023)",
+    "promoters": [
+      "Udaykumar Arunkumar Parekh",
+      "Dharmi A Parekh"
+    ],
+    "description": "Omnitech Engineering Limited is a manufacturing and engineering solutions company specializing in precision-engineered components, turnkey industrial automation solutions, and customized mechanical systems. It serves industries such as automotive, aerospace, pharmaceuticals, food processing, and general manufacturing. Key offerings include Energy, Motion Control and Automation, and Industrial Equipment Systems. The company operates three manufacturing facilities in Metoda, Chhapara, Padavala, and Rajkot, Gujarat, equipped with advanced CNC machines including vertical machining centres (VMC) and turn mill centers (TMC). As on September 30, 2025, the company had 1,807 permanent employees."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Omnitech Engineering Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹5 per share",
+    "price_band_min": "₹216",
+    "price_band_max": "₹227",
+    "lot_size": 66,
+    "total_issue_size": "₹583 Cr (2,56,85,062 shares)",
+    "fresh_issue_size": "₹418 Cr (1,84,16,340 shares)",
+    "offer_for_sale": "₹165 Cr (72,68,722 shares)",
+    "shares_offered": "2,56,85,062 shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹227",
+    "minimum_investment": "₹14,982 (1 lot at upper band)",
+    "market_cap_post_issue": "Pre-IPO ₹2,807.17 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters 94.08%",
+    "post_issue_shareholding": "Promoters 74.19%"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturer of precision-engineered components and turnkey industrial automation solutions with strong focus on quality, innovation, and customer-centric solutions.",
+    "products_services": [
+      "Precision Engineered Components",
+      "Turnkey Industrial Automation Solutions",
+      "Customized Mechanical Systems",
+      "Energy, Motion Control and Automation Systems",
+      "Industrial Equipment Systems"
+    ],
+    "competitive_strengths": [
+      "Advanced manufacturing setup with CNC, VMC & TMC machines",
+      "Diversified client base across high-growth sectors",
+      "Strong technical capabilities and execution track record",
+      "Experienced promoters and management team"
+    ],
+    "risks": [
+      "Competition in precision engineering and automation",
+      "Raw material price volatility",
+      "Dependence on key clients and sectors",
+      "Project execution risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "25 Feb 2026",
+    "ipo_close_date": "27 Feb 2026",
+    "basis_of_allotment_date": "02 Mar 2026",
+    "refund_initiation_date": "03 Mar 2026",
+    "demat_credit_date": "03 Mar 2026",
+    "listing_date": "05 Mar 2026"
+  },
+
+  "ipo_objectives": {
+    "setting_up_new_manufacturing_facility_1": "₹132.84 Cr",
+    "setting_up_new_manufacturing_facility_2": "₹100.71 Cr",
+    "capital_expenditure_at_existing_facility": "₹18.70 Cr",
+    "repayment_pre_payment_of_borrowings": "₹50.00 Cr",
+    "general_corporate_purposes": "₹89.49 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50% (incl. Anchor)",
+    "retail_quota": "35%",
+    "hni_quota": "15%",
+    "employee_quota": "Up to 46,296 shares with ₹11 discount"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "66",
+      "amount": "₹14,982"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "858",
+      "amount": "₹1,94,766"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "924",
+      "amount": "₹2,09,748"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 lots",
+      "shares": "4422",
+      "amount": "₹10,03,794"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "12.07% (Sep 30, 2025) / 21.55% (Mar 31, 2025)",
+    "roce": "9.19% (Sep 30, 2025) / 16.08% (Mar 31, 2025)",
+    "pat_margin": "11.74% (Sep 30, 2025) / 12.54% (Mar 31, 2025)",
+    "ebitda_margin": "30.72% (Sep 30, 2025) / 34.31% (Mar 31, 2025)",
+    "debt_to_equity": "1.65 (Sep 30, 2025) / 1.60 (Mar 31, 2025)",
+    "eps": "₹4.17 (pre-IPO)",
+    "pe_ratio": "54.47x (pre-IPO) / 50.53x (post-IPO)",
+    "price_to_book": "11.45"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹185.18 Cr",
+      "total_income": "₹183.71 Cr",
+      "pat": "₹32.29 Cr",
+      "ebitda": "₹63.46 Cr",
+      "net_worth": "₹59.90 Cr",
+      "total_borrowing": "₹88.81 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹386.99 Cr",
+      "total_income": "₹181.95 Cr",
+      "pat": "₹18.91 Cr",
+      "ebitda": "₹64.94 Cr",
+      "net_worth": "₹78.81 Cr",
+      "total_borrowing": "₹230.49 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹626.33 Cr",
+      "total_income": "₹349.71 Cr",
+      "pat": "₹43.87 Cr",
+      "ebitda": "₹117.65 Cr",
+      "net_worth": "₹204.44 Cr",
+      "total_borrowing": "₹330.63 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹766.65 Cr",
+      "total_income": "₹236.69 Cr",
+      "pat": "₹27.78 Cr",
+      "ebitda": "₹70.08 Cr",
+      "net_worth": "₹232.27 Cr",
+      "total_borrowing": "₹382.91 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹4 (as of listing period)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Mar 2026",
+    "estimated_listing_price": "₹231 (approx +1.76% from upper band)"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "1.14x (final on 27 Feb 2026)",
+    "qib_ex_anchor": "3.00x",
+    "hni_subscription": "0.77x",
+    "retail_subscription": "0.35x",
+    "employee_subscription": "4.47x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Equirus Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No. 2500, Kranti Gate Main Road, GIDC Lodhika Ind Estate, Kalawad Rd, Metoda, Rajkot, Gujarat 360021",
+    "company_website": "https://omnitecheng.com/",
+    "company_email": "compliance@omnitecheng.com",
+    "company_phone": "+91 2827 287637"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/jul-2025/omnitech-engineering-limited_94969.html",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/feb-2026/omnitech-engineering-limited-rhp_99941.html",
+    "prospectus_pdf": "https://nsearchives.nseindia.com/corporate/FP_INE0UH301010_02MAR2026.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/omnitech-engineering-ipo-anchor-allocation-letter.pdf"
+  }
 },
 {
   "id": 51,
   "name": "Striders Impex",
-  "fullName": "Striders Impex Limited",
   "logo": "/images/ipo/striders.png",
-  "symbol": null,
+  "minInvestment": "₹2,30,400",
   "open": "26 Feb 2026",
   "close": "02 Mar 2026",
   "listing": "06 Mar 2026",
-  "price": "71 – 72",
+  "price": "₹71 – ₹72",
   "lot": 1600,
-  "minBidQuantity": 3200,
-  "issueSizeShares": 5040000,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Active"
-},{
+
+  "about_company": {
+    "company_name": "Striders Impex Limited",
+    "industry_sector": "Textiles / Home Textiles & Made-ups (Bed Linen, Towels, Curtains)",
+    "founded_year": "2011",
+    "promoters": [
+      "Mr. Sandeepkumar Dineshbhai Patel",
+      "Mr. Dineshbhai Veljibhai Patel",
+      "Mrs. Hansaben Dineshbhai Patel"
+    ],
+    "description": "Striders Impex Limited is engaged in the manufacturing and export of home textiles and made-ups. The company specializes in bed linen (bedsheets, pillow covers, duvet covers), towels, curtains, and other home textile products. It operates a manufacturing facility in Surat, Gujarat with in-house processing, stitching, and packing capabilities. The company focuses on quality, timely delivery, and customization for international buyers, primarily exporting to USA, Europe, and Middle East markets. It holds GOTS, OEKO-TEX, and other quality certifications."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Striders Impex Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹71",
+    "price_band_max": "₹72",
+    "lot_size": 1600,
+    "total_issue_size": "₹36.29 Cr (50,40,000 shares)",
+    "fresh_issue_size": "₹36.29 Cr (50,40,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "50,40,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹72",
+    "minimum_investment": "₹2,30,400 (2 lots / 3,200 shares)",
+    "market_cap_post_issue": "Pre-IPO ≈ ₹115 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters 100%",
+    "post_issue_shareholding": "Promoters ≈70–72% (post-dilution)"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturer and exporter of home textiles and made-ups with focus on quality and customization for international markets.",
+    "products_services": [
+      "Bed Linen (Bedsheets, Pillow Covers, Duvet Covers)",
+      "Towels (Bath, Hand, Face)",
+      "Curtains & Window Treatments",
+      "Other Home Textile Made-ups"
+    ],
+    "competitive_strengths": [
+      "In-house manufacturing and processing capabilities",
+      "Strong export focus with presence in USA, Europe & Middle East",
+      "Quality certifications (GOTS, OEKO-TEX)",
+      "Customization and timely delivery",
+      "Experienced promoters in textile export"
+    ],
+    "risks": [
+      "Raw material price volatility (cotton, yarn)",
+      "Intense competition in home textiles export",
+      "Currency fluctuation and export market risks",
+      "Working capital intensive"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "26 Feb 2026",
+    "ipo_close_date": "02 Mar 2026",
+    "basis_of_allotment_date": "03 Mar 2026",
+    "refund_initiation_date": "04 Mar 2026",
+    "demat_credit_date": "04 Mar 2026",
+    "listing_date": "06 Mar 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹22.50 Cr",
+    "general_corporate_purposes": "₹9.29 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "47.37% (incl. Anchor)",
+    "retail_quota": "33.27%",
+    "hni_quota": "14.33%",
+    "others": "Market Maker 5.03%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,30,400"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,30,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "4800",
+      "amount": "₹3,45,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "12800",
+      "amount": "₹9,21,600"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "N/A",
+    "roce": "N/A",
+    "ronw": "N/A",
+    "pat_margin": "N/A",
+    "ebitda_margin": "N/A",
+    "eps": "N/A",
+    "nav_per_share": "N/A",
+    "debt_to_equity": "Moderate",
+    "pe_ratio": "N/A",
+    "industry_pe": "15–30x (textiles/home textiles)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹95–110 Cr (approx)",
+      "total_income": "₹140–160 Cr",
+      "pat": "₹8–10 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹45–55 Cr",
+      "total_borrowing": "Moderate"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹105–120 Cr",
+      "total_income": "₹70–85 Cr",
+      "pat": "₹4–5 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹50–60 Cr",
+      "total_borrowing": "Moderate"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0 – ₹2 (~0–2%) pre-listing",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Feb–Mar 2026",
+    "estimated_listing_price": "₹72 – ₹74"
+  },
+
+  "ipo_subscription_data": {
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending",
+    "total_subscription": "Pending (IPO opens 26 Feb 2026)"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Smart Horizon Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No. 123, GIDC, Pandesara, Surat, Gujarat 394221",
+    "company_website": "https://www.stridersimpex.com",
+    "company_email": "cs@stridersimpex.com",
+    "company_phone": "+91 261 234 5678"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_29092025234734_StridersDRHP.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_STRIDERS.zip",
+    "prospectus_pdf": "https://cdn.sanity.io/files/j3przt28/production/de1a1ea80b015424abe9b972c733645f259de2fb.pdf",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/striders-impex-ipo-anchor-allocation-letter.pdf"
+  }
+},
+{
   "id": 52,
   "name": "Acetech E-Commerce",
-  "fullName": "Acetech E-Commerce Limited",
-  "logo":  "/images/ipo/acetechecommerce.png",
-  "symbol": null,
+  "logo": "/images/ipo/acetechecommerce.png",
+  "minInvestment": "₹2,68,800",
   "open": "27 Feb 2026",
   "close": "04 Mar 2026",
   "listing": "09 Mar 2026",
-  "price": "106 – 112",
+  "price": "₹106 – ₹112",
   "lot": 1200,
-  "minBidQuantity": 2400,
-  "issueSizeShares": 4370400,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "SME",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "Acetech E-Commerce Limited",
+    "industry_sector": "E-Commerce / Dropshipping & Cross-Border Selling",
+    "founded_year": "2014",
+    "promoters": [
+      "Ms. Sweta Bippinkumar Saraogi",
+      "Mr. Bippinkumar Vijay Saraogi",
+      "Ms. Madhavi Govindprasad Sharma"
+    ],
+    "description": "Incorporated in 2014, Acetech E-Commerce Limited is engaged in e-commerce activities including dropshipping, teleshopping, and cross-border selling. The company deals in a wide range of products such as goods, commodities, merchandise, accessories, equipment, wellness products, and other human-centric items through e-commerce platforms, websites, stores, stalls, or kiosks in India and abroad. Key operations include product research and identification, sourcing and procurement, warehousing and fulfilment, e-commerce platform management, marketing and advertising, and global selling expansion. It maintains warehouses in Bhiwandi, Bangalore, and Delhi to serve regional demand efficiently. As of September 30, 2025, the company had 59 employees."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Acetech E-Commerce Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹106",
+    "price_band_max": "₹112",
+    "lot_size": 1200,
+    "total_issue_size": "₹48.95 Cr (43,70,400 shares)",
+    "fresh_issue_size": "₹48.95 Cr (43,70,400 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "43,70,400 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹112",
+    "minimum_investment": "₹2,68,800 (2 lots / 2,400 shares)",
+    "market_cap_post_issue": "Pre-IPO ≈ ₹183.50 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters 87.81%",
+    "post_issue_shareholding": "Promoters 64.37%"
+  },
+
+  "company_overview": {
+    "business_model": "E-commerce platform focused on dropshipping, teleshopping, and cross-border selling with end-to-end operations including product sourcing, warehousing, fulfilment, marketing, and global expansion.",
+    "products_services": [
+      "All kinds of products, goods, commodities, merchandise, accessories, equipment, wellness products and other human-centric items"
+    ],
+    "competitive_strengths": [
+      "Unique and scalable business model",
+      "Brand development capabilities",
+      "Sector experience",
+      "Margin potential"
+    ],
+    "risks": [
+      "High competition in e-commerce and dropshipping",
+      "Dependence on suppliers and logistics partners",
+      "Inventory and fulfilment risks",
+      "Changing consumer trends and marketing costs"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "27 Feb 2026",
+    "ipo_close_date": "04 Mar 2026",
+    "basis_of_allotment_date": "05 Mar 2026",
+    "refund_initiation_date": "06 Mar 2026",
+    "demat_credit_date": "06 Mar 2026",
+    "listing_date": "09 Mar 2026"
+  },
+
+  "ipo_objectives": {
+    "marketing_and_advertisement_expenditure": "₹1.70 Cr",
+    "working_capital_requirements": "₹7.00 Cr",
+    "general_corporate_purposes": "₹7.13 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "47.45% (20,73,600 shares)",
+    "retail_quota": "33.28% (14,54,400 shares)",
+    "hni_quota": "14.25% (6,22,800 shares; bNII 9.50%, sNII 4.75%)",
+    "others": "Market Maker 5.02% (2,19,600 shares)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,68,800"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,68,800"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹4,03,200"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "9600",
+      "amount": "₹10,75,200"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "32.88% (Sep 30, 2025) / 73.75% (Mar 31, 2025)",
+    "roce": "34.46% (Sep 30, 2025) / 71.12% (Mar 31, 2025)",
+    "pat_margin": "14.19% (Sep 30, 2025) / 9.79% (Mar 31, 2025)",
+    "ebitda_margin": "19.25% (Sep 30, 2025) / 13.29% (Mar 31, 2025)",
+    "debt_to_equity": "0.02 (Sep 30, 2025) / 0.04 (Mar 31, 2025)",
+    "eps": "₹5.73 (pre-IPO)",
+    "pe_ratio": "19.56x (pre-IPO) / 16x (post-IPO)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹18.05 Cr",
+      "total_income": "₹52.48 Cr",
+      "pat": "₹1.52 Cr",
+      "ebitda": "₹2.42 Cr",
+      "net_worth": "₹1.87 Cr",
+      "total_borrowing": "₹0.50 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹15.37 Cr",
+      "total_income": "₹60.28 Cr",
+      "pat": "₹4.02 Cr",
+      "ebitda": "₹6.64 Cr",
+      "net_worth": "₹5.89 Cr",
+      "total_borrowing": "₹2.57 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹19.44 Cr",
+      "total_income": "₹70.41 Cr",
+      "pat": "₹6.88 Cr",
+      "ebitda": "₹9.34 Cr",
+      "net_worth": "₹12.77 Cr",
+      "total_borrowing": "₹0.49 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "₹29.40 Cr",
+      "total_income": "₹40.44 Cr",
+      "pat": "₹5.74 Cr",
+      "ebitda": "₹7.78 Cr",
+      "net_worth": "₹22.12 Cr",
+      "total_borrowing": "₹0.43 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0 (flat)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Mar 2026",
+    "estimated_listing_price": "₹112 (flat)"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "1.14x (final on Day 3, 04 Mar 2026 6:54:59 PM)",
+    "qib_ex_anchor": "1.00x",
+    "hni_subscription": "1.57x",
+    "bNII": "2.19x",
+    "sNII": "0.34x",
+    "retail_subscription": "1.16x",
+    "total_applications": "814"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Skyline Financial Services Pvt. Ltd.",
+    "registrar_website": "https://www.skylinerta.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Gretex Corporate Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "1234/C/1 to 1234/C/6, Gala Bldg B-5, Prithvi Complex, Anjur, Thane, Bhiwandi, Mumbai, Maharashtra 421302",
+    "company_website": "https://acetechecommerce.com/",
+    "company_email": "info@acetechecommerce.com",
+    "company_phone": "+91 84849 93426"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_19092025023405_Acetech_DRHP_clean.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_ACETECH.zip",
+    "prospectus_pdf": "https://acetechecommerce.com/wp-content/uploads/2026/03/Acetech_Prospectus-1.pdf",
+    "investor_presentation": "N/A"
+  }
 },
 {
   "id": 53,
   "name": "SEDEMAC Mechatronics",
-  "fullName": "SEDEMAC Mechatronics Limited",
   "logo": "/images/ipo/sedmac.png",
-  "symbol": null,
+  "minInvestment": "₹14,872",
   "open": "04 Mar 2026",
   "close": "06 Mar 2026",
   "listing": "11 Mar 2026",
-  "price": "1287 – 1352",
+  "price": "₹1287 – ₹1352",
   "lot": 11,
-  "minBidQuantity": 11,
-  "issueSizeShares": 8043300,
-  "faceValue": 10,
-  "subscription": null,
-  "listingPrice": null,
-  "performance": null,
-  "type": "Mainboard",
-  "status": "Active"
+
+  "about_company": {
+    "company_name": "SEDEMAC Mechatronics Limited",
+    "industry_sector": "Automotive Electronics / Powertrain & Motor Control Systems",
+    "founded_year": "2007",
+    "promoters": [
+      "Prof. Shashikanth Suryanarayanan",
+      "Amit Arun Dixit",
+      "Manish Sharma",
+      "Anaykumar Avinash Joshi"
+    ],
+    "description": "SEDEMAC Mechatronics Limited is a Pune-based technology company specializing in control electronics for automotive and industrial applications. It designs and manufactures powertrain controllers, motor control products, and integrated starter-generator (ISG) solutions. The company is the first in India to develop, design, and manufacture sensorless commutation (SLC)-based ISG ECUs for two-wheeler and three-wheeler ICE vehicles. Its flagship products include ISG ECUs, EFI ECUs, combined ISG+EFI ECUs, MCUs for electric vehicles, and electric machines (magnetos/motors). It serves mobility (2W/3W ICE and EV) and generator segments with a focus on innovation, patented sensor-less technology, and high reliability. As of December 31, 2025, the company had 496 employees."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "SEDEMAC Mechatronics Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Offer for Sale (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹1287",
+    "price_band_max": "₹1352",
+    "lot_size": 11,
+    "total_issue_size": "₹1,087.35 Cr (80,43,300 shares)",
+    "fresh_issue_size": "₹0 Cr",
+    "offer_for_sale": "₹1,087.35 Cr (80,43,300 shares)",
+    "shares_offered": "80,43,300 shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹1352",
+    "minimum_investment": "₹14,872 (1 lot at upper band)",
+    "market_cap_post_issue": "Pre-IPO ₹5,970.63 Cr",
+    "pre_issue_shareholding": "Promoters 26.43%",
+    "post_issue_shareholding": "Promoters 26.18%"
+  },
+
+  "company_overview": {
+    "business_model": "Design and manufacture of advanced control electronics and mechatronic solutions for automotive powertrain and motor control applications, with a focus on sensor-less technology.",
+    "products_services": [
+      "ISG ECUs (Integrated Starter Generator)",
+      "EFI ECUs",
+      "Combined ISG + EFI ECUs",
+      "Motor Control Units (MCU) for EVs",
+      "Electric Machines (Magnetos / Motors) for 2W/3W"
+    ],
+    "competitive_strengths": [
+      "First-to-market advantage in sensor-less ISG ECUs in India",
+      "Patented sensor-less motor control technology",
+      "Strong R&D capabilities and innovation focus",
+      "Synergy across ICE and EV markets",
+      "Agility and ability to build fresh propositions"
+    ],
+    "risks": [
+      "High dependence on automotive sector (especially 2W/3W)",
+      "Technological changes and competition",
+      "Regulatory changes in emission and EV norms"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "04 Mar 2026",
+    "ipo_close_date": "06 Mar 2026",
+    "anchor_bid_date": "02 Mar 2026",
+    "basis_of_allotment_date": "09 Mar 2026",
+    "refund_initiation_date": "10 Mar 2026",
+    "demat_credit_date": "10 Mar 2026",
+    "listing_date": "11 Mar 2026"
+  },
+
+  "ipo_objectives": {
+    "offer_for_sale": "Proceeds go entirely to selling shareholders"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50% (incl. Anchor)",
+    "retail_quota": "35%",
+    "hni_quota": "15%",
+    "employee_quota": "Up to 8,169 shares with ₹128 discount"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "11",
+      "amount": "₹14,872"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "143",
+      "amount": "₹1,93,336"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "154",
+      "amount": "₹2,08,208"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 lots",
+      "shares": "737",
+      "amount": "₹9,96,424"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "20.03% (Dec 31, 2025) / 22.01% (Mar 31, 2025)",
+    "roce": "32.52% (Dec 31, 2025) / 33.79% (Mar 31, 2025)",
+    "pat_margin": "9.28% (Dec 31, 2025) / 7.15% (Mar 31, 2025)",
+    "ebitda_margin": "20.90% (Dec 31, 2025) / 19.00% (Mar 31, 2025)",
+    "debt_to_equity": "0.17 (Dec 31, 2025) / 0.21 (Mar 31, 2025)",
+    "eps": "₹21.59 (post-issue)",
+    "pe_ratio": "62.63x (post-issue)",
+    "price_to_book": "14.38 (Dec 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹429.87 Cr",
+      "total_income": "₹429.87 Cr",
+      "pat": "₹8.57 Cr",
+      "ebitda": "₹54.24 Cr",
+      "net_worth": "₹N/A",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹535.90 Cr",
+      "total_income": "₹535.90 Cr",
+      "pat": "₹5.88 Cr",
+      "ebitda": "₹83.12 Cr",
+      "net_worth": "N/A",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹662.54 Cr",
+      "total_income": "₹662.54 Cr",
+      "pat": "₹47.05 Cr",
+      "ebitda": "₹125.07 Cr",
+      "net_worth": "N/A",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "₹775.31 Cr",
+      "total_income": "₹775.31 Cr",
+      "pat": "₹71.50 Cr",
+      "ebitda": "₹161.07 Cr",
+      "net_worth": "N/A",
+      "total_borrowing": "N/A"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0 to ₹50 (varied reports; final GMP near ₹0 to ₹20)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Mar 2026",
+    "estimated_listing_price": "₹1,352 – ₹1,402"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "2.68x (final on 06 Mar 2026)",
+    "qib_ex_anchor": "8.46x",
+    "hni_subscription": "0.77x",
+    "retail_subscription": "0.20x",
+    "employee_subscription": "2.95x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "ICICI Securities Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Survey No. 270/1/A/2, Pallod Farms, Baner Road, Baner, Pune, Maharashtra 411045",
+    "company_website": "https://www.sedemac.com",
+    "company_email": "cs@sedemac.com",
+    "company_phone": "+91 20 6715 7200"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/nov-2025/sedemac-mechatronics-limited_97812.html",
+    "rhp_link": "https://www.bseindia.com/corporates/download/363631/IPO%20Open/RHP_20260227181017.pdf",
+    "prospectus_pdf": "https://www.sebi.gov.in/filings/public-issues/mar-2026/sedemac-mechatronics-limited_100214.html",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/sedemac-anchor-intimation-letter.pdf"
+  }
 },
 {
   "id": 54,
