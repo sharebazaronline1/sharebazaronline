@@ -15316,164 +15316,173 @@ export const fetchInsightDetails = async () => {
 
 export const fetchPreIPODetails = async () => {
   return [
-    {
-      id: 1,
-      name: "APL Metals Limited",
-      price: 12,
-      logo: "/images/preipo/image1.png",
+   {
+  "id": 1,
+  "name": "APL Metals Limited",
+  "price": 12,
+  "logo": "/images/preipo/image1.png",
 
-      overview: `Associated Pigments Limited (APL Metals) is a leading Indian manufacturer specializing in lead and lead oxide products. Established in 1948, the company has built a strong reputation in the Indian metals industry through decades of operational excellence, consistent quality, and customer satisfaction. APL Metals has played a significant role in contributing to India’s self-sufficiency in lead-based products and continues to be a trusted supplier across multiple industrial sectors.
+  "overview": `Associated Pigments Limited (now APL Metals Limited) is a leading Indian manufacturer specializing in lead and lead oxide products. Established in 1948, the company has built a strong reputation in the Indian metals industry through decades of operational excellence, consistent quality, and customer satisfaction. APL Metals has played a significant role in contributing to India’s self-sufficiency in lead-based products and continues to be a trusted supplier across multiple industrial sectors.
+
 The company manufactures and supplies a wide range of lead products, including Refined Lead, Lead Alloys, Red Lead, Lead Sub Oxide, and Litharge. All products are customizable to meet specific client requirements, ensuring precise specifications and consistent quality standards. APL Metals maintains product purity levels of up to 99.97%, with ongoing efforts to achieve 99.99% purity, setting new benchmarks in the industry.
 
 APL Metals’ product portfolio serves diverse industrial applications. Lead and Lead Alloys are extensively used in batteries, cable sheathing, ammunition, radiation shielding, and other critical applications. Lead Oxides find widespread usage in battery manufacturing, ceramics, glass, and pigments. Additionally, Tin and Tin Alloys produced by the company are utilized in soldering, plating, and specialized industrial applications, further strengthening its diversified product base.
+
 To support efficient production and supply chain operations, APL Metals operates three state-of-the-art manufacturing facilities strategically located across India. These facilities are situated at Panskura (West Bengal), B.T. Road (West Bengal), and Malwan, Fatehpur (Uttar Pradesh). Each unit is equipped with advanced manufacturing technology, enabling the production of high-quality lead and lead oxide products while maintaining stringent safety and quality controls.
-The company serves a prestigious clients, reflecting its strong market position and industry trust. Notable clients include: Exide Industries Ltd, Luminous Power Technologies, Okaya Batteries (Delhi), HBL Power Systems Ltd, and Ned Energy Ltd. Long-standing relationships with such established brands underline APL Metals’ reliability and product excellence.
+
+The company serves prestigious clients, reflecting its strong market position and industry trust. Notable clients include: Exide Industries Ltd, Luminous Power Technologies, Okaya Batteries (Delhi), HBL Power Systems Ltd, and Ned Energy Ltd. Long-standing relationships with such established brands underline APL Metals’ reliability and product excellence.
 
 Beyond its manufacturing capabilities, APL Metals remains committed to employee welfare, environmental responsibility, and sustainable operations. The company actively follows environmentally responsible manufacturing practices, promotes workplace safety, and continuously adapts its operations to meet evolving industry standards and regulatory requirements. This long-term commitment ensures that APL Metals remains resilient, competitive, and future-ready in an ever-changing industrial landscape.
 
+The Indian lead industry is driven by strong demand from the battery sector (automotive and inverter batteries), which accounts for the majority of consumption. With the growth of renewable energy storage and electric vehicles, the outlook for organized players like APL Metals remains positive in the long term, though the company faces challenges from volatile lead prices, high debt levels, and margin pressure.`,
 
-`,
+  "products": [
+    "Refined Lead",
+    "Lead Alloys",
+    "Red Lead",
+    "Lead Sub Oxide",
+    "Litharge",
+    "Tin & Tin Alloys"
+  ],
 
-      products: [
-        "Refined Lead",
-        "Lead Alloys",
-        "Red Lead",
-        "Lead Sub Oxide",
-        "Litharge",
-        "Tin & Tin Alloys"
-      ],
+  "manufacturingUnits": [
+    "Panskura (West Bengal)",
+    "B.T. Road (West Bengal)",
+    "Malwan, Fatehpur (Uttar Pradesh)"
+  ],
 
-      manufacturingUnits: [
-        "Panskura (West Bengal)",
-        "B.T. Road (West Bengal)",
-        "Malwan, Fatehpur (Uttar Pradesh)"
-      ],
+  "clients": [
+    "Exide Industries Ltd",
+    "Luminous Power Technologies",
+    "Okaya Batteries (Delhi)",
+    "HBL Power Systems Ltd",
+    "Ned Energy Ltd"
+  ],
 
-      clients: [
-        "Exide Industries Ltd",
-        "Luminous Power Technologies",
-        "Okaya Batteries (Delhi)",
-        "HBL Power Systems Ltd",
-        "Ned Energy Ltd"
-      ],
+  "shareDetails": {
+    "companyName": "APL Metals Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹12 - ₹14",
+    "marketCapitalization": "₹13 Crore (Approx.)",
+    "lotSize": "5,000 Shares",
+    "52WeekHigh": "₹65.50",
+    "52WeekLow": "₹11.40",
+    "faceValue": "₹10",
+    "bookValue": "₹53.81",
+    "peRatio": "NA",
+    "pbRatio": "0.22",
+    "debtToEquity": "2.81",
+    "returnOnEquity": "-20.96%",
+    "totalOutstandingShares": "1,07,26,387",
+    "isin": "INE578E01019",
+    "depository": "NSDL & CDSL",
+    "pan": "AACCA4264P",
+    "cin": "L24242WB1948PLC017455",
+    "rta": "M/s Niche Technologies Private Limited"
+  },
 
-      shareDetails: {
-        companyName: "APL Metals Limited (Unlisted)",
-        indicativeSharePrice: "₹14",
-        marketCapitalization: "₹13 Crore (Approx.)",
-        lotSize: "5,000 Shares",
-        high52Week: "₹12",
-        low52Week: "₹8",
-        faceValue: "₹10",
-        bookValue: "₹53.81",
-        peRatio: "NA",
-        pbRatio: "0.22",
-        debtToEquity: "2.81",
-        roe: "-20.96%",
-        totalOutstandingShares: "1,07,26,387",
-        isin: "INE578E01019",
-        depository: "NSDL & CDSL",
-        pan: "AACCA4264P",
-        cin: "L24242WB1948PLC017455",
-        rta: "M/s Niche Technologies Private Limited"
-      },
+  "financials": {
+    "annualReportSummary": "Audited financials show stable revenue around ₹700-736 Cr over FY22-FY24, but declining profitability due to higher finance costs and raw material volatility. FY24 saw a net loss amid margin compression. The company maintains a asset-heavy balance sheet with significant inventory and borrowings. Overall performance reflects challenges in the lead industry but benefits from established client relationships.",
 
-      financials: {
-        incomeStatement: [
-          { label: "Revenue", fy22: 724, fy23: 736, fy24: 703 },
-          { label: "Cost of Material Consumed", fy22: 664, fy23: 678, fy24: 663 },
-          { label: "Change in Inventory", fy22: -11, fy23: -21, fy24: -26 },
-          { label: "EBITDA", fy22: 21, fy23: 25, fy24: 14 },
-          { label: "Operating Profit Margin (%)", fy22: 2.9, fy23: 3.4, fy24: 1.99 },
-          { label: "Finance Cost", fy22: 14, fy23: 19, fy24: 24 },
-          { label: "Profit Before Tax", fy22: 7, fy23: 5, fy24: -13 },
-          { label: "Profit After Tax", fy22: 5, fy23: 3, fy24: -10 },
-          { label: "EPS", fy22: 4.66, fy23: 2.8, fy24: -9.33 }
-        ],
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 724, "fy23": 736, "fy24": 703 },
+      { "label": "EBITDA", "fy22": 21, "fy23": 25, "fy24": 14 },
+      { "label": "Operating Profit", "fy22": 21, "fy23": 25, "fy24": 14 },
+      { "label": "Profit Before Tax", "fy22": 7, "fy23": 5, "fy24": -13 },
+      { "label": "Net Profit / Loss", "fy22": 5, "fy23": 3, "fy24": -10 },
+      { "label": "EPS", "fy22": 4.66, "fy23": 2.8, "fy24": -9.33 }
+    ],
 
-        keyRatios: [
-          { label: "Operating Margin (%)", fy22: 2.9, fy23: 3.4, fy24: 1.99 },
-          { label: "Net Profit Margin (%)", fy22: 0.69, fy23: 0.41, fy24: -1.42 },
-          { label: "EPS (Diluted)", fy22: 4.66, fy23: 2.8, fy24: -9.33 }
-        ],
+    "keyRatios": [
+      { "label": "ROE (%)", "fy22": "Positive", "fy23": "Positive", "fy24": "-20.96" },
+      { "label": "ROCE (%)", "fy22": "-", "fy23": "-", "fy24": "Low" },
+      { "label": "Net Profit Margin (%)", "fy22": 0.69, "fy23": 0.41, "fy24": -1.42 },
+      { "label": "EBITDA Margin (%)", "fy22": 2.9, "fy23": 3.4, "fy24": 1.99 },
+      { "label": "Debt-to-Equity", "fy22": "-", "fy23": "-", "fy24": "2.81" },
+      { "label": "EPS", "fy22": 4.66, "fy23": 2.8, "fy24": -9.33 }
+    ],
 
-        investorInsight: [
-          "Revenue remained stable, but margins declined in FY24.",
-          "Higher finance costs impacted profitability.",
-          "Negative PAT and EPS signal short-term stress."
-        ]
-      },
+    "investorInsight": [
+      "Revenue remained relatively stable between ₹703-736 Cr, showing resilience in core lead business.",
+      "EBITDA and margins declined sharply in FY24 due to higher input costs and finance expenses.",
+      "Negative net profit and EPS in FY24 indicate short-term profitability stress, common in commodity-linked businesses.",
+      "High debt levels remain a concern, but established client base and manufacturing infrastructure provide long-term stability."
+    ]
+  },
 
-      balanceSheet: {
-        assets: [
-          { label: "Fixed Assets", fy22: 22.4, fy23: 23, fy24: 25 },
-          { label: "Inventory", fy22: 152, fy23: 166, fy24: 244 },
-          { label: "Trade Receivables", fy22: 5, fy23: 11, fy24: 7 },
-          { label: "Total Assets", fy22: 213, fy23: 217, fy24: 314 }
-        ],
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 22.4, "fy23": 23, "fy24": 25 },
+      { "label": "Inventory", "fy22": 152, "fy23": 166, "fy24": 244 },
+      { "label": "Trade Receivables", "fy22": 5, "fy23": 11, "fy24": 7 },
+      { "label": "Total Assets", "fy22": 213, "fy23": 217, "fy24": 314 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 10.72, "fy23": 10.72, "fy24": 10.72 },
+      { "label": "Reserves & Surplus", "fy22": 14, "fy23": 16, "fy24": 37 },
+      { "label": "Borrowings", "fy22": 139, "fy23": 161, "fy24": 134 },
+      { "label": "Trade Payables", "fy22": 42, "fy23": 19, "fy24": 120 },
+      { "label": "Total Liabilities & Equity", "fy22": 213, "fy23": 217, "fy24": 314 }
+    ],
+    "insights": "Inventory grew significantly in FY24, driving asset expansion. Borrowings remain high but showed some reduction. Equity base is modest with reserves supporting operations."
+  },
 
-        liabilities: [
-          { label: "Share Capital", fy22: 10.72, fy23: 10.72, fy24: 10.72 },
-          { label: "Reserves & Surplus", fy22: 14, fy23: 16, fy24: 37 },
-          { label: "Borrowings", fy22: 139, fy23: 161, fy24: 134 },
-          { label: "Trade Payables", fy22: 42, fy23: 19, fy24: 120 },
-          { label: "Total Liabilities", fy22: 213, fy23: 217, fy24: 314 }
-        ],
+  "liabilitiesBreakdown": "Short-term liabilities include trade payables (sharp rise in FY24 to ₹120 Cr). Long-term borrowings stood at elevated levels (~₹134 Cr in FY24). Other obligations relate to working capital and finance costs.",
 
-        insights: [
-          "Inventory-led asset growth in FY24",
-          "Borrowings remain elevated but reduced YoY",
-          "Sharp increase in trade payables"
-        ]
-      },
+  "balanceSheetInsights": "The balance sheet reflects high leverage and working capital intensity typical of the lead manufacturing sector. Financial stability is moderate with inventory acting as a buffer, but elevated debt-to-equity and negative ROE in FY24 signal solvency risks that need monitoring. Asset growth is inventory-led rather than capex-driven.",
 
-      cashFlow: {
-        data: [
-          { label: "Cash Flow from Operations", fy22: -11, fy23: -16, fy24: 60 },
-          { label: "Cash Flow from Investing", fy22: -3, fy23: -2, fy24: -3 },
-          { label: "Cash Flow from Financing", fy22: 24, fy23: 2, fy24: -51 },
-          { label: "Net Cash Generated", fy22: 10, fy23: -16, fy24: 6 }
-        ],
-        insights: [
-          "Strong operating cash flow in FY24 driven by payables",
-          "Negative CFO in FY22–23 indicates working capital stress",
-          "Reduction in borrowings in FY24"
-        ]
-      },
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": -11, "fy23": -16, "fy24": 60 },
+      { "label": "Investing Cash Flow", "fy22": -3, "fy23": -2, "fy24": -3 },
+      { "label": "Financing Cash Flow", "fy22": 24, "fy23": 2, "fy24": -51 }
+    ],
+    "insights": [
+      "Strong positive operating cash flow in FY24 mainly from working capital changes (higher payables).",
+      "Negative CFO in FY22 and FY23 highlights prior working capital stress.",
+      "Financing cash flow turned negative in FY24 due to debt reduction."
+    ]
+  },
 
-      shareholding: [
-        { year: 2022, promoters: "99.99%", public: "0.01%" },
-        { year: 2023, promoters: "73.26%", public: "26.74%" },
-        { year: 2024, promoters: "73.26%", public: "26.74%" }
-      ],
+  "shareholding": [
+    { "year": "FY22", "promoters": "99.99%", "institutional": "0%", "public": "0.01%" },
+    { "year": "FY23", "promoters": "73.26%", "institutional": "0%", "public": "26.74%" },
+    { "year": "FY24", "promoters": "73.26%", "institutional": "0%", "public": "26.74%" }
+  ],
 
-      management: [
-        { name: "Sanjiv Nandan Sahaya", role: "Chairman & Managing Director", experience: "20+ Years" },
-        { name: "Rajendra Sahay", role: "Director", experience: "20+ Years" },
-        { name: "Prakash Kumar Damani", role: "Director", experience: "15+ Years" }
-      ],
+  "promotersManagement": "Promoters hold significant stake with deep industry experience in metals and manufacturing. Key management includes professionals with decades in operations and finance.",
 
-      managementInsight:
-        "The leadership team at APL Metals Limited brings decades of experience in manufacturing, operations, and strategic management within the metals and industrial sector. Their long-standing industry expertise supports stable operations and long-term business continuity."
-    },
-    {
-  id: 109,
-  name: "OYO (Oravel Stays Limited)",
-  price: 37,
-  logo: "/images/oyo.png",
+  "management": [
+    { "name": "Sanjiv Nandan Sahaya", "role": "Chairman & Managing Director", "experience": "20+ Years in metals industry" },
+    { "name": "Rajendra Sahay", "role": "Director", "experience": "20+ Years" },
+    { "name": "Prakash Kumar Damani", "role": "Director", "experience": "15+ Years" }
+  ],
 
-  overview: `OYO, officially known as Oravel Stays Limited, is one of India’s most well-known hospitality technology companies. Founded in 2013 by Ritesh Agarwal, OYO disrupted the traditional hotel industry by standardizing budget accommodations and leveraging technology to connect property owners with travelers. Over the years, OYO has grown from a small Indian startup into a global hospitality brand operating across multiple countries.
+  "rta": {
+    "registrar": "M/s Niche Technologies Private Limited",
+    "website": "https://www.nichetechpl.com/"
+  },
 
-OYO operates as a hospitality aggregation and technology platform. Instead of owning hotels, it partners with hotel owners, homestay operators, and property managers. The company provides branding, technology infrastructure, pricing algorithms, marketing, and operational support, while property owners benefit from higher occupancy and standardized services.
+  "managementInsight": "The leadership team brings extensive experience in lead manufacturing, supply chain management, and client relationship handling. Their strategy focuses on maintaining quality, operational efficiency, and long-term client partnerships in a volatile commodity market. Corporate governance appears standard for an unlisted entity with promoter-driven decision making."
+},
+   {
+  "id": 109,
+  "name": "OYO (Oravel Stays Limited)",
+  "price": 37,
+  "logo": "/images/oyo.png",
 
-Over time, OYO has diversified its offerings beyond budget hotels into premium and mid-scale hotels, vacation homes, serviced apartments, long-term stays, and corporate accommodations. This asset-light model allows OYO to scale rapidly with comparatively lower capital expenditure.
+  "overview": `OYO, officially known as Oravel Stays Limited, is one of India’s most well-known hospitality technology companies. Founded in 2013 by Ritesh Agarwal, OYO disrupted the traditional hotel industry by standardizing budget accommodations and leveraging technology to connect property owners with travelers. Over the years, OYO has grown from a small Indian startup into a global hospitality brand operating across multiple countries.
 
-India remains OYO’s largest and most important market, while international operations across Southeast Asia, the Middle East, Europe, and the United States have been strategically restructured to improve profitability. OYO’s strong brand recall and deep penetration in Tier-2 and Tier-3 cities strengthen its long-term growth prospects.
+OYO operates as a hospitality aggregation and technology platform. Instead of owning hotels, it partners with hotel owners, homestay operators, and property managers. The company provides branding, technology infrastructure (including pricing algorithms, booking systems, and operational tools), marketing, and operational support, while property owners benefit from higher occupancy and standardized services.
 
-Historically criticized for aggressive expansion and high losses, OYO has shifted its focus toward cost optimization, operational efficiency, and profitability. The company has reported improving EBITDA margins, reduced losses, and positive operating cash flows in recent years, strengthening its pre-IPO investment narrative.
-`,
+Over time, OYO has diversified its offerings beyond budget hotels into premium and mid-scale hotels (Townhouse, Sunday Hotels), vacation homes, serviced apartments, long-term stays, and corporate accommodations. This asset-light model allows OYO to scale rapidly with comparatively lower capital expenditure.
 
-  products: [
+India remains OYO’s largest and most important market (contributing ~20-25% of revenue), while international operations across Southeast Asia, the Middle East, Europe, and the United States (including the Motel 6 acquisition) have been strategically restructured to improve profitability. OYO’s strong brand recall and deep penetration in Tier-2 and Tier-3 cities strengthen its long-term growth prospects.
+
+Historically criticized for aggressive expansion and high losses, OYO has shifted its focus toward cost optimization, operational efficiency, and profitability. The company has reported improving EBITDA margins, reduced losses turning into modest profits, and positive operating cash flows in recent years. FY24 marked the first full-year profit, and FY25 showed continued stabilization with revenue growth and EBITDA expansion, strengthening its pre-IPO investment narrative.
+
+The Indian hospitality sector is witnessing strong tailwinds from rising domestic tourism, increasing middle-class travel, corporate demand, and recovery in international travel. OYO is well-positioned to benefit from this with its tech-driven model, though challenges like high finance costs, competition, and global economic volatility remain.`,
+
+  "products": [
     "Budget Hotels",
     "Premium & Mid-scale Hotels",
     "Vacation Homes",
@@ -15482,9 +15491,9 @@ Historically criticized for aggressive expansion and high losses, OYO has shifte
     "Corporate Accommodations"
   ],
 
-  manufacturingUnits: [],
+  "manufacturingUnits": [],
 
-  clients: [
+  "clients": [
     "Individual Travelers",
     "Corporate Travelers",
     "Hotel Owners",
@@ -15492,106 +15501,111 @@ Historically criticized for aggressive expansion and high losses, OYO has shifte
     "Property Managers"
   ],
 
-  shareDetails: {
-    companyName: "Oravel Stays Limited (OYO – Unlisted)",
-    indicativeSharePrice: "₹50 per share",
-    marketCapitalization: "₹36,000 – ₹40,000+ Crore (Approx.)",
-    lotSize: "1,000 Shares",
-    high52Week: "₹58",
-    low52Week: "₹26",
-    faceValue: "₹1",
-    bookValue: "₹2.7 – ₹14 per share",
-    peRatio: "70 – 160",
-    pbRatio: "2 – 10+",
-    debtToEquity: "1.8 – 5.0",
-    roe: "Negative historically",
-    totalOutstandingShares: "695 – 1,401 Crore shares",
-    isin: "INE561T01021",
-    depository: "NSDL & CDSL",
-    pan: "AABCO6063D",
-    cin: "U63090GJ2012PLC107088",
-    rta: "MUFG Intime India Pvt. Ltd."
+  "shareDetails": {
+    "companyName": "Oravel Stays Limited (OYO – Unlisted)",
+    "indicativeUnlistedSharePrice": "₹22 - ₹37",
+    "marketCapitalization": "₹29,000 – ₹36,000 Crore (Approx.)",
+    "lotSize": "500 - 1,000 Shares",
+    "52WeekHigh": "₹58",
+    "52WeekLow": "₹20",
+    "faceValue": "₹1",
+    "bookValue": "₹2.7 - ₹5.4",
+    "peRatio": "115 - 145",
+    "pbRatio": "6 - 8.5",
+    "debtToEquity": "1.89 - 2.27",
+    "returnOnEquity": "5.13% - 6.47%",
+    "totalOutstandingShares": "1,400 Crore (Approx.)",
+    "isin": "INE561T01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AABCO6063D",
+    "cin": "U63090GJ2012PLC107088",
+    "rta": "MUFG Intime India Pvt. Ltd. (Link Intime)"
   },
 
-  financials: {
-    incomeStatement: [
-      { label: "Revenue", fy22: 4781, fy23: 5464, fy24: 5389, fy25: 6253 },
-      { label: "Employee Benefit Expenses", fy22: 1862, fy23: 1549, fy24: 744, fy25: 616 },
-      { label: "Other Expenses", fy22: 4079, fy23: 4289, fy24: 3937, fy25: 4601 },
-      { label: "EBITDA", fy22: -1160, fy23: -374, fy24: 708, fy25: 1036 },
-      { label: "Operating Profit Margin (%)", fy22: -24.26, fy23: -6.84, fy24: 13.14, fy25: 16.57 },
-      { label: "Finance Cost", fy22: 746, fy23: 681, fy24: 844, fy25: 959 },
-      { label: "Profit Before Tax", fy22: -1919, fy23: -1286, fy24: 236, fy25: -489 },
-      { label: "Profit After Tax", fy22: -1942, fy23: -1286, fy24: 230, fy25: 245 },
-      { label: "EPS", fy22: -14.63, fy23: -9.68, fy24: 1.72, fy25: 0.36 }
+  "financials": {
+    "annualReportSummary": "OYO has shown a strong turnaround. Revenue grew from ₹4,781 Cr in FY22 to ₹5,389 Cr in FY24 and further to ₹6,253 Cr in FY25. EBITDA turned positive in FY24 (~₹860-1,100 Cr range across reports) and improved in FY25. The company posted its first full-year net profit in FY24 (₹230 Cr) and continued with modest profit in FY25 (₹245 Cr, supported by deferred tax). Focus has shifted to operational efficiency, cost control, and premium segment growth. Finance costs remain elevated due to borrowings for restructuring and acquisitions.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 4781, "fy23": 5464, "fy24": 5389, "fy25": 6253 },
+      { "label": "EBITDA", "fy22": -1160, "fy23": -374, "fy24": 708, "fy25": 1036 },
+      { "label": "Operating Profit", "fy22": -1160, "fy23": -374, "fy24": 708, "fy25": 1036 },
+      { "label": "Profit Before Tax", "fy22": -1919, "fy23": -1286, "fy24": 236, "fy25": -489 },
+      { "label": "Net Profit / Loss", "fy22": -1942, "fy23": -1286, "fy24": 230, "fy25": 245 },
+      { "label": "EPS", "fy22": -14.63, "fy23": -9.68, "fy24": 1.72, "fy25": 0.36 }
     ],
 
-    keyRatios: [
-      { label: "Operating Margin (%)", fy22: -24.26, fy23: -6.84, fy24: 13.14, fy25: 16.57 },
-      { label: "Net Profit Margin (%)", fy22: -40.62, fy23: -23.54, fy24: 4.27, fy25: 3.92 },
-      { label: "EPS (Diluted)", fy22: -14.63, fy23: -9.68, fy24: 1.72, fy25: 0.36 }
+    "keyRatios": [
+      { "label": "ROE (%)", "fy22": "-", "fy23": "-", "fy24": "25.49", "fy25": "5.13 - 6.47" },
+      { "label": "ROCE (%)", "fy22": "-", "fy23": "-", "fy24": "13.39", "fy25": "4.43" },
+      { "label": "Net Profit Margin (%)", "fy22": -40.62, "fy23": -23.54, "fy24": 4.27, "fy25": "3.92" },
+      { "label": "EBITDA Margin (%)", "fy22": -24.26, "fy23": -6.84, "fy24": 13.14, "fy25": "16.57" },
+      { "label": "Debt-to-Equity", "fy22": "3.23", "fy23": "8.71", "fy24": "4.00", "fy25": "1.89 - 2.27" },
+      { "label": "EPS", "fy22": -14.63, "fy23": -9.68, "fy24": 1.72, "fy25": 0.36 }
     ],
 
-    investorInsight: [
-      "OYO has transitioned from a loss-making growth startup to a profitability-focused organization.",
-      "Improving EBITDA margins and positive PAT highlight operational discipline.",
-      "Asset-light model supports scalable growth with lower capital requirements.",
-      "IPO preparations and financial turnaround strengthen pre-IPO investment appeal."
+    "investorInsight": [
+      "OYO has successfully transitioned from heavy losses to profitability through aggressive cost optimization and network restructuring.",
+      "EBITDA turned consistently positive with improving margins, supported by higher contribution from premium formats.",
+      "Asset-light model enables scalable growth with lower capex intensity.",
+      "Positive operating cash flow in recent years and IPO preparations enhance long-term appeal, though high borrowings and finance costs need monitoring."
     ]
   },
 
-  balanceSheet: {
-    assets: [
-      { label: "Fixed Assets", fy22: 1605, fy23: 1582, fy24: 1490, fy25: 4998 },
-      { label: "Investments", fy22: 605, fy23: 510, fy24: 455, fy25: 532 },
-      { label: "Trade Receivables", fy22: 256, fy23: 158, fy24: 203, fy25: 488 },
-      { label: "Other Assets", fy22: 5985, fy23: 5682, fy24: 4293.8, fy25: 10646 },
-      { label: "Total Assets", fy22: 8452, fy23: 7932, fy24: 6443, fy25: 16695 }
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 1605, "fy23": 1582, "fy24": 1490, "fy25": 4998 },
+      { "label": "Investments", "fy22": 605, "fy23": 510, "fy24": 455, "fy25": 532 },
+      { "label": "Trade Receivables", "fy22": 256, "fy23": 158, "fy24": 203, "fy25": 488 },
+      { "label": "Other Assets", "fy22": 5985, "fy23": 5682, "fy24": 4294, "fy25": 10646 },
+      { "label": "Total Assets", "fy22": 8452, "fy23": 7932, "fy24": 6443, "fy25": 16695 }
     ],
-
-    liabilities: [
-      { label: "Share Capital", fy22: 132.7, fy23: 132.8, fy24: 133.8, fy25: 678.7 },
-      { label: "Reserves", fy22: 1311, fy23: 449.7, fy24: 767, fy25: 3108 },
-      { label: "Borrowings", fy22: 4664, fy23: 5071, fy24: 3603, fy25: 7144 },
-      { label: "Trade Payables", fy22: 1087, fy23: 935, fy24: 961, fy25: 1240 },
-      { label: "Other Liabilities", fy22: 1257.3, fy23: 1343.5, fy24: 978.2, fy25: 4524.3 },
-      { label: "Total Liabilities", fy22: 8452, fy23: 7932, fy24: 6443, fy25: 16695 }
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 133, "fy23": 133, "fy24": 134, "fy25": 679 },
+      { "label": "Reserves & Surplus", "fy22": 1311, "fy23": 450, "fy24": 767, "fy25": 3108 },
+      { "label": "Borrowings", "fy22": 4664, "fy23": 5071, "fy24": 3603, "fy25": 7144 },
+      { "label": "Trade Payables", "fy22": 1087, "fy23": 935, "fy24": 961, "fy25": 1240 },
+      { "label": "Other Liabilities", "fy22": 1257, "fy23": 1344, "fy24": 978, "fy25": 4524 },
+      { "label": "Total Liabilities & Equity", "fy22": 8452, "fy23": 7932, "fy24": 6443, "fy25": 16695 }
     ],
+    "insights": "Significant expansion in assets in FY25 driven by acquisitions and operations. Borrowings remain material but debt-to-equity has moderated. Equity base strengthened via infusions."
+  },
 
-    insights: [
-      "Significant asset base expansion in FY25.",
-      "Borrowings increased to support restructuring and growth.",
-      "Reserve growth reflects equity infusion and retained earnings."
+  "liabilitiesBreakdown": "Short-term liabilities primarily include trade payables and other current obligations. Long-term borrowings are elevated (₹7,144 Cr in FY25) due to restructuring, acquisitions (e.g., Motel 6), and working capital needs. Other obligations relate to lease liabilities and deferred payments typical in the hospitality tech sector.",
+
+  "balanceSheetInsights": "The balance sheet reflects an improving but still leveraged position. Financial stability has strengthened with positive EBITDA and PAT, but high borrowings and finance costs pose solvency risks if growth slows. Leverage has moderated from peak levels, and asset growth supports scalability. Overall, the company demonstrates better solvency compared to loss-making years.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": -922, "fy23": 142, "fy24": 598, "fy25": 321 },
+      { "label": "Investing Cash Flow", "fy22": -711, "fy23": -109, "fy24": 1425, "fy25": -4212 },
+      { "label": "Financing Cash Flow", "fy22": 704, "fy23": -705, "fy24": -2413, "fy25": 4160 }
+    ],
+    "insights": [
+      "Operating cash flow turned positive from FY23, indicating improved working capital management and operational health.",
+      "Investing cash flow in FY25 reflects heavy outflows for acquisitions and growth initiatives.",
+      "Financing activities show equity infusions and debt movements to support expansion.",
+      "Overall cash position has stabilized, reflecting better liquidity management."
     ]
   },
 
-  cashFlow: {
-    data: [
-      { label: "Cash Flow from Operations", fy22: -922, fy23: 142, fy24: 598, fy25: 321 },
-      { label: "Cash Flow from Investing", fy22: -711, fy23: -109, fy24: 1425, fy25: -4212 },
-      { label: "Cash Flow from Financing", fy22: 703.5, fy23: -705, fy24: -2413, fy25: 4160 },
-      { label: "Net Cash Generated", fy22: -929.5, fy23: -672, fy24: -390, fy25: 269 }
-    ],
-    insights: [
-      "Operating cash flow turned positive from FY23 onward.",
-      "FY24 investing inflow reflects asset monetization.",
-      "FY25 financing inflow driven by borrowings and equity issuance.",
-      "Cash balance stabilized indicating improved financial discipline."
-    ]
-  },
-
-  shareholding: [
-    { year: 2025, promoters: "64.55%", public: "35.45%" }
+  "shareholding": [
+    { "year": "FY24/FY25", "promoters": "34.05%", "institutional": "High (Funds ~55-57%)", "public": "65.95%" }
   ],
 
-  management: [
-    { name: "Ritesh Agarwal", role: "Chairman & CEO", experience: "10 Years" },
-    { name: "Aditya Ghosh", role: "Executive Director", experience: "26 Years" },
-    { name: "Abhishek Gupta", role: "Chief Financial Officer (CFO)", experience: "20 Years" }
+  "promotersManagement": "Founder Ritesh Agarwal holds a significant promoter stake (~25-32% through direct and entities like RA Hospitality). The company has a mix of founder-led vision and institutional backing from global funds like SoftBank.",
+
+  "management": [
+    { "name": "Ritesh Agarwal", "role": "Founder, Chairman & CEO", "experience": "12+ Years" },
+    { "name": "Aditya Ghosh", "role": "Executive Director", "experience": "26+ Years" },
+    { "name": "Abhishek Gupta", "role": "Chief Financial Officer", "experience": "20+ Years" }
   ],
 
-  managementInsight:
-    "OYO is led by founder Ritesh Agarwal, ensuring strategic continuity and entrepreneurial leadership. A professionally managed executive team supports governance, profitability focus, and operational execution, strengthening investor confidence ahead of the IPO."
+  "rta": {
+    "registrar": "MUFG Intime India Pvt. Ltd. (formerly Link Intime)",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Under Ritesh Agarwal’s leadership, OYO has evolved from a high-growth, loss-making startup to a profitability-focused organization with strong operational discipline. The professional executive team brings deep expertise in hospitality, finance, and technology. Corporate governance has improved with better cost controls and transparency, boosting investor confidence ahead of the anticipated IPO. The vision centers on leveraging technology for scalable, asset-light growth while expanding into premium segments globally."
 }
 
   ];

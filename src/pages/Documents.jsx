@@ -192,43 +192,54 @@ useEffect(() => {
     alert("Details saved successfully!");
   };
 
-  const handleFileSelect = async (docType, file) => {
-    if (!user || !file) return;
+ const handleFileSelect = async (docType, file) => {
+  if (!user || !file) return;
 
-    const fileExt = file.name.split(".").pop();
-    const filePath = `${user.id}/${docType}_${Date.now()}.${fileExt}`;
+  const fileExt = file.name.split(".").pop();
+  const filePath = `${user.id}/${docType}_${Date.now()}.${fileExt}`;
 
-    const { error: uploadError } = await supabase.storage
-      .from("kyc-documents")
-      .upload(filePath, file, { upsert: true });
+  const { error: uploadError } = await supabase.storage
+    .from("kyc-documents")
+    .upload(filePath, file, { upsert: true });
 
-    if (uploadError) {
-      console.error("Upload error:", uploadError);
-      alert("File upload failed");
-      return;
-    }
+  if (uploadError) {
+    console.error("Upload error:", uploadError);
+    alert("File upload failed");
+    return;
+  }
 
-    const { error: updateError } = await supabase
-      .from("user_kyc")
-      .update({
-        [`${docType}_file`]: filePath,
-        [`${docType}_status`]: "Pending",
-      })
-      .eq("user_id", user.id);
-
-    if (updateError) {
-      console.error("Status update failed:", updateError);
-      alert("Could not update document status");
-      return;
-    }
-
-    setSelectedFiles((prev) => ({ ...prev, [docType]: file }));
-    if (docType === "pan") setPanStatus("Pending");
-    if (docType === "aadhar") setAadhaarStatus("Pending");
-    if (docType === "cmr") setCmrStatus("Pending");
-    if (docType === "cheque") setChequeStatus("Pending");
+  // Fixed mapping
+  const columnMap = {
+    pan: "pan_file",
+    aadhar: "aadhaar_file",     // ← changed to aadhaar_file
+    cmr: "cmr_file",
+    cheque: "cheque_file"
   };
 
+  const fileColumn = columnMap[docType];
+  const statusColumn = `${docType === "aadhar" ? "aadhaar" : docType}_status`;
+
+  const { error: updateError } = await supabase
+    .from("user_kyc")
+    .update({
+      [fileColumn]: filePath,
+      [statusColumn]: "Pending",
+    })
+    .eq("user_id", user.id);
+
+  if (updateError) {
+    console.error("Status update failed:", updateError);
+    alert("Could not update document status: " + updateError.message);
+    return;
+  }
+
+  // Update local state
+  setSelectedFiles((prev) => ({ ...prev, [docType]: { name: file.name } }));
+  if (docType === "pan") setPanStatus("Pending");
+  if (docType === "aadhar") setAadhaarStatus("Pending");
+  if (docType === "cmr") setCmrStatus("Pending");
+  if (docType === "cheque") setChequeStatus("Pending");
+};
   // Only consider saved if at least one meaningful field exists
   const hasAnyData = savedData && (
     savedData.name_as_per_pan ||

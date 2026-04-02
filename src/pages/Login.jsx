@@ -21,6 +21,7 @@ const Login = () => {
   };
 
   useEffect(() => {
+    
     const params = new URLSearchParams(location.search);
     const refCode = params.get("ref");
     if (refCode) localStorage.setItem("referral_code", refCode);
@@ -61,16 +62,26 @@ const Login = () => {
   if (insertError) {
     console.error("PROFILE INSERT ERROR:", insertError);
   }
-}  else if (!profileData.email) {
-  const { error: updateError } = await supabase
-    .from("profiles")
-    .update({
-      email: user.email,
-    })
-    .eq("id", user.id);
+} else {
+  const updates = {};
 
-  if (updateError) {
-    console.error("PROFILE UPDATE ERROR:", updateError);
+  if (!profileData.email) {
+    updates.email = user.email;
+  }
+
+  if (!profileData.sb_user_id) {
+    updates.sb_user_id = generateShortId(user.id);
+  }
+
+  if (Object.keys(updates).length > 0) {
+    const { error: updateError } = await supabase
+      .from("profiles")
+      .update(updates)
+      .eq("id", user.id);
+
+    if (updateError) {
+      console.error("PROFILE UPDATE ERROR:", updateError);
+    }
   }
 }
         // 2️⃣ if no referral → go dashboard

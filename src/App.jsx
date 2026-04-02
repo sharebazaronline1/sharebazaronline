@@ -31,6 +31,7 @@ import Settings from "./pages/Settings";
 import Referrals from "./pages/Referrals";
 import AdminLogin from "./pages/AdminLogin";         
 import AdminDashboard from "./pages/AdminDashboard";  
+import AdminReferrals from "./pages/AdminReferrals";  
 import ReferralRedirect from "./pages/ReferralRedirect";
 import AdminKycDocuments from "./pages/AdminKycDocuments"
 import { AuthProvider } from "./context/AuthContext";
@@ -122,7 +123,7 @@ function AppLayout() {
                 <Route path="/admin-login" element={<AdminLogin />} />
                 <Route path="/admin-dashboard" element={<AdminDashboard />} />
                 <Route path="/admin-kyc" element={<AdminKycDocuments />} />
-                {/* <Route path="/admin-referrals" element={<AdminReferrals />} /> */}
+                <Route path="/admin-referrals" element={<AdminReferrals />} />
                 <Route path="/admin-users" element={<AdminUsers />} />
               </Route>
 
