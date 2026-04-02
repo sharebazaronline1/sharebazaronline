@@ -15,7 +15,7 @@ import {
   Clock,
   CreditCard,
   UserPlus,
-  DollarSign,
+  IndianRupee,
 } from "lucide-react";
 
 const AdminReferrals = () => {
@@ -130,7 +130,7 @@ const AdminReferrals = () => {
       <AdminSidebar />
 
       <main className="md:ml-64 transition-all duration-300">
-        <header className="sticky top-0 z-10 bg-white/95 backdrop-blur-lg border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-6 shadow-sm">
+        <header className="sticky top-0 z-10 bg-white backdrop-blur-lg border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-6 shadow-sm">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 max-w-7xl mx-auto">
             <div>
               <h1 className="text-3xl font-semibold text-gray-900 tracking-tight">Referrals Overview</h1>
@@ -291,7 +291,7 @@ const AdminReferrals = () => {
                                 {/* Commission - Highlighted */}
                                 <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm h-full flex flex-col">
                                   <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
-                                    <DollarSign size={18} className="text-emerald-600" />
+                                    <IndianRupee size={18} className="text-emerald-600" />
                                     Commission Earned
                                   </h4>
                                   <div className="mt-auto">
