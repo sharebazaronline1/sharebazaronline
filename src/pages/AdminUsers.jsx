@@ -17,6 +17,8 @@ import {
   X,
   TrendingUp,
   FileText,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 const AdminUsers = () => {
@@ -25,10 +27,19 @@ const AdminUsers = () => {
   const [error, setError] = useState(null);
   const [expandedUserId, setExpandedUserId] = useState(null);
 
-  // Modal state for referred user details
+  // Referred User Modal
   const [selectedReferred, setSelectedReferred] = useState(null);
   const [referredOrders, setReferredOrders] = useState([]);
   const [modalLoading, setModalLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Main User Orders Modal
+  const [selectedMainUser, setSelectedMainUser] = useState(null);
+  const [mainUserOrders, setMainUserOrders] = useState([]);
+  const [mainModalLoading, setMainModalLoading] = useState(false);
+  const [mainCurrentPage, setMainCurrentPage] = useState(1);
+
+  const itemsPerPage = 5;
 
   useEffect(() => {
     fetchUsers();
@@ -41,53 +52,48 @@ const AdminUsers = () => {
     try {
       const { data: profiles, error: profilesError } = await supabase
         .from("profiles")
-        .select("id, full_name, email, sb_user_id, created_at")
+        .select("id, full_name, email, sb_user_id, created_at, account_status, commission_rate")
         .order("created_at", { ascending: false });
 
       if (profilesError) throw profilesError;
 
       const enriched = await Promise.all(
         profiles.map(async (profile) => {
-          // Referral count
           const { count: referralCount } = await supabase
             .from("referrals")
             .select("*", { count: "exact", head: true })
-            .eq("referrer_id", profile.id);
+            .eq("referrer_sb_user_id", profile.id);
 
-          // Referred users with full referral details + commission
           const { data: referredUsers } = await supabase
             .from("referrals")
             .select(`
               referred_name,
               referred_email,
               referred_mobile,
-              referred_user_id,
+              referred_sb_user_id,
               reward_amount,
               commission_earned,
               status,
-              created_at,
-              profiles:referred_user_id (
-                sb_user_id
-              )
+              created_at
             `)
-            .eq("referrer_id", profile.id)
+            .eq("referrer_sb_user_id", profile.id)
             .limit(10);
 
-          // Order count for main user
           const { count: orderCount } = await supabase
             .from("orders")
             .select("*", { count: "exact", head: true })
             .eq("user_id", profile.id);
 
-          // Portfolio value
+          let totalPortfolio = 0;
           const { data: portfolio } = await supabase
             .from("portfolios")
             .select("value")
             .eq("user_id", profile.id);
 
-          const totalPortfolio = portfolio?.reduce((sum, p) => sum + (p.value || 0), 0) || 0;
+          if (portfolio) {
+            totalPortfolio = portfolio.reduce((sum, p) => sum + (p.value || 0), 0);
+          }
 
-          // KYC
           const { data: kycData } = await supabase
             .from("user_kyc")
             .select(`
@@ -122,6 +128,7 @@ const AdminUsers = () => {
             totalPortfolioValue: totalPortfolio,
             kycStatus,
             bankAccount,
+            commission_rate: profile.commission_rate || 0.0025,
           };
         })
       );
@@ -139,43 +146,111 @@ const AdminUsers = () => {
     setExpandedUserId(expandedUserId === userId ? null : userId);
   };
 
-  // Open modal for a referred user
-  const openReferredModal = async (referred) => {
-    setSelectedReferred(referred);
+  const updateCommissionRate = async (userId, newRatePercent) => {
+    const newRate = Math.max(0, Math.min(5, newRatePercent)) / 100;
+
+    const { error } = await supabase
+      .from("profiles")
+      .update({ commission_rate: newRate })
+      .eq("id", userId);
+
+    if (!error) {
+      setUsers(users.map(u => 
+        u.id === userId ? { ...u, commission_rate: newRate } : u
+      ));
+    }
+  };
+
+  const openReferredModal = async (referred, referrer) => {
+    const referredWithRate = {
+      ...referred,
+      commission_rate: referrer.commission_rate || 0.0025
+    };
+
+    setSelectedReferred(referredWithRate);
     setModalLoading(true);
     setReferredOrders([]);
+    setCurrentPage(1);
 
     try {
-      // Fetch orders of the referred user
-      const { data: ordersData, error: ordersError } = await supabase
+      let userId = referred.referred_sb_user_id;
+
+      if (!userId && referred.referred_email) {
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("sb_user_id")
+          .ilike("email", referred.referred_email.trim())
+          .maybeSingle();
+        userId = profile?.sb_user_id;
+      }
+
+      if (!userId) return;
+
+      const { data, error } = await supabase
         .from("orders")
         .select(`
-          id,
-          asset_name,
-          price,
-          quantity,
-          status,
-          order_type,
-          created_at
+          id, asset_name, price, quantity, total, order_type, status, commission_amount, created_at
         `)
-        .eq("user_id", referred.referred_user_id)
+        .eq("user_id", String(userId).trim())
         .order("created_at", { ascending: false });
 
-      if (ordersError) throw ordersError;
-
-      setReferredOrders(ordersData || []);
+      if (error) throw error;
+      setReferredOrders(data || []);
     } catch (err) {
-      console.error("Failed to load referred user orders:", err);
-      setReferredOrders([]);
+      console.error("❌ ERROR:", err);
     } finally {
       setModalLoading(false);
     }
   };
 
-  const closeModal = () => {
+  const openMainUserOrders = async (user) => {
+    setSelectedMainUser(user);
+    setMainModalLoading(true);
+    setMainUserOrders([]);
+    setMainCurrentPage(1);
+
+    try {
+      const { data, error } = await supabase
+        .from("orders")
+        .select(`
+          id, asset_name, price, quantity, total, order_type, status, commission_amount, created_at
+        `)
+        .eq("user_id", user.id)
+        .order("created_at", { ascending: false });
+
+      if (error) throw error;
+      setMainUserOrders(data || []);
+    } catch (err) {
+      console.error("Error fetching main user orders:", err);
+    } finally {
+      setMainModalLoading(false);
+    }
+  };
+
+  const closeReferredModal = () => {
     setSelectedReferred(null);
     setReferredOrders([]);
+    setCurrentPage(1);
   };
+
+  const closeMainModal = () => {
+    setSelectedMainUser(null);
+    setMainUserOrders([]);
+    setMainCurrentPage(1);
+  };
+
+  // Pagination
+  const referredTotalPages = Math.ceil(referredOrders.length / itemsPerPage);
+  const referredPaginated = referredOrders.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  const mainTotalPages = Math.ceil(mainUserOrders.length / itemsPerPage);
+  const mainPaginated = mainUserOrders.slice(
+    (mainCurrentPage - 1) * itemsPerPage,
+    mainCurrentPage * itemsPerPage
+  );
 
   if (loading) {
     return (
@@ -193,7 +268,6 @@ const AdminUsers = () => {
       <AdminSidebar />
 
       <main className="md:ml-64 transition-all duration-300">
-        {/* Header */}
         <header className="sticky top-0 z-10 bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-6 shadow-sm">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 max-w-7xl mx-auto">
             <div>
@@ -214,7 +288,6 @@ const AdminUsers = () => {
           </div>
         </header>
 
-        {/* Content */}
         <div className="px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto">
           {error && (
             <div className="mb-10 p-6 bg-red-50 border border-red-200 rounded-3xl flex items-center gap-4">
@@ -241,6 +314,8 @@ const AdminUsers = () => {
                     <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Portfolio</th>
                     <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Referrals</th>
                     <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">KYC</th>
+                    <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Status</th>
+                    <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Comm %</th>
                     <th className="w-12 px-4 py-5"></th>
                   </tr>
                 </thead>
@@ -272,33 +347,39 @@ const AdminUsers = () => {
                         </td>
                         <td className="px-4 py-5 text-center font-semibold text-gray-900 text-sm">{user.referralCount}</td>
                         <td className="px-4 py-5 text-center">
-                          <span
-                            className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
-                              user.kycStatus === "Verified"
-                                ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
-                                : user.kycStatus === "Pending"
-                                ? "bg-amber-100 text-amber-700 border border-amber-200"
-                                : "bg-gray-100 text-gray-600 border border-gray-200"
-                            }`}
-                          >
+                          <span className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${user.kycStatus === "Verified" ? "bg-emerald-100 text-emerald-700 border border-emerald-200" : user.kycStatus === "Pending" ? "bg-amber-100 text-amber-700 border border-amber-200" : "bg-gray-100 text-gray-600 border border-gray-200"}`}>
                             {user.kycStatus}
                           </span>
                         </td>
                         <td className="px-4 py-5 text-center">
-                          {expandedUserId === user.id ? (
-                            <ChevronUp size={19} className="text-gray-400 group-hover:text-emerald-600 transition-colors" />
-                          ) : (
-                            <ChevronDown size={19} className="text-gray-400 group-hover:text-emerald-600 transition-colors" />
-                          )}
+                          <span className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${user.account_status === "active" || !user.account_status ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
+                            {user.account_status ? user.account_status.toUpperCase() : "ACTIVE"}
+                          </span>
                         </td>
+                        {/* <td className="px-4 py-5 text-center">
+                          <div className="flex items-center justify-center gap-1">
+                            <input
+                              type="number"
+                              step="0.01"
+                              min="0"
+                              max="5"
+                              value={(user.commission_rate * 100).toFixed(2)}
+                              onChange={(e) => {
+                                const val = parseFloat(e.target.value);
+                                if (!isNaN(val)) updateCommissionRate(user.id, val);
+                              }}
+                              className="w-16 text-center text-sm font-medium bg-white border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                            />
+                            <span className="text-xs text-gray-500 font-medium">%</span>
+                          </div>
+                        </td> */}
+                        <td className="px-4 py-5 text-center"></td>
                       </tr>
 
-                      {/* Expanded Content */}
                       {expandedUserId === user.id && (
                         <tr>
-                          <td colSpan={9} className="p-0 bg-gray-50">
+                          <td colSpan={11} className="p-0 bg-gray-50">
                             <div className="px-6 py-8">
-                              {/* Info Cards Grid */}
                               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 mb-10">
                                 {/* Account Details */}
                                 <div className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm h-full">
@@ -321,7 +402,10 @@ const AdminUsers = () => {
                                 </div>
 
                                 {/* Activity */}
-                                <div className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm h-full">
+                                <div 
+                                  className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm h-full cursor-pointer hover:bg-emerald-50 transition-colors"
+                                  onClick={() => openMainUserOrders(user)}
+                                >
                                   <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
                                     <Package size={18} className="text-gray-500" />
                                     Activity
@@ -329,7 +413,7 @@ const AdminUsers = () => {
                                   <div className="space-y-2.5 text-sm">
                                     <div className="flex justify-between">
                                       <span className="text-gray-500">Orders</span>
-                                      <span className="font-medium">{user.orderCount || 0}</span>
+                                      <span className="font-medium text-emerald-600 underline">{user.orderCount || 0}</span>
                                     </div>
                                     <div className="flex justify-between">
                                       <span className="text-gray-500">Portfolio</span>
@@ -358,15 +442,7 @@ const AdminUsers = () => {
                                     <ShieldCheck size={18} className="text-gray-500" />
                                     KYC Status
                                   </h4>
-                                  <span
-                                    className={`inline-flex px-5 py-2 rounded-2xl text-sm font-semibold ${
-                                      user.kycStatus === "Verified"
-                                        ? "bg-emerald-100 text-emerald-700"
-                                        : user.kycStatus === "Pending"
-                                        ? "bg-amber-100 text-amber-700"
-                                        : "bg-gray-100 text-gray-600"
-                                    }`}
-                                  >
+                                  <span className={`inline-flex px-5 py-2 rounded-2xl text-sm font-semibold ${user.kycStatus === "Verified" ? "bg-emerald-100 text-emerald-700" : user.kycStatus === "Pending" ? "bg-amber-100 text-amber-700" : "bg-gray-100 text-gray-600"}`}>
                                     {user.kycStatus}
                                   </span>
                                 </div>
@@ -418,14 +494,14 @@ const AdminUsers = () => {
                                     {user.referredUsers.map((ref, index) => (
                                       <div
                                         key={`${user.id}-ref-${index}`}
-                                        onClick={() => openReferredModal(ref)}
+                                        onClick={() => openReferredModal(ref, user)}
                                         className="bg-white border border-gray-100 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group"
                                       >
                                         <div className="font-medium text-gray-900 group-hover:text-emerald-700 transition-colors">
                                           {ref.referred_name || "Unnamed User"}
                                         </div>
                                         <div className="text-sm text-gray-600 mt-3">
-                                          SB ID: {ref.profiles?.sb_user_id || "Not Registered"}
+                                          SB ID: {ref.referred_sb_user_id || "Not Registered"}
                                         </div>
                                         {ref.referred_email && (
                                           <div className="text-xs text-gray-500 mt-2 truncate">{ref.referred_email}</div>
@@ -456,28 +532,23 @@ const AdminUsers = () => {
         </div>
       </main>
 
-      {/* REFERRED USER MODAL */}
+      {/* Referred User Modal - Commission Earned now uses latest rate */}
       {selectedReferred && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 px-4 py-8 overflow-y-auto">
-          <div className="bg-white rounded-3xl shadow-2xl max-w-5xl w-full max-h-[92vh] flex flex-col">
-            {/* Modal Header */}
-            <div className="flex items-center justify-between px-8 py-6 border-b">
+        <div className="fixed inset-0 z-[200] flex items-start justify-center bg-black/70 px-4 pt-24 pb-8 overflow-y-auto">
+          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[70vh] flex flex-col mx-auto">
+            <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b">
               <div>
-                <h2 className="text-2xl font-semibold text-gray-900">{selectedReferred.referred_name}</h2>
+                <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">{selectedReferred.referred_name}</h2>
                 <p className="text-sm text-gray-500 mt-1">{selectedReferred.referred_email}</p>
               </div>
-              <button
-                onClick={closeModal}
-                className="p-3 hover:bg-gray-100 rounded-2xl transition-colors"
-              >
+              <button onClick={closeReferredModal} className="p-3 hover:bg-gray-100 rounded-2xl transition-colors">
                 <X size={24} className="text-gray-500" />
               </button>
             </div>
 
-            <div className="flex-1 overflow-auto p-8">
+            <div className="flex-1 overflow-auto p-6 sm:p-8">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                {/* Referral & Commission Card */}
-                <div className="lg:col-span-4 bg-emerald-50 border border-emerald-100 rounded-3xl p-6 h-fit">
+                <div className="lg:col-span-4 bg-emerald-50 border border-emerald-100 rounded-3xl p-6 h-fit sticky top-0">
                   <h4 className="flex items-center gap-2 text-emerald-700 font-semibold mb-5">
                     <TrendingUp size={20} />
                     Referral Commission
@@ -485,43 +556,40 @@ const AdminUsers = () => {
                   <div className="space-y-6">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600">Commission Earned</span>
-                      <span className="text-3xl font-semibold text-emerald-700">₹{selectedReferred.commission_earned || 0}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Reward Amount</span>
-                      <span className="font-medium">₹{selectedReferred.reward_amount || 0}</span>
+                      <span className="text-2xl font-semibold text-emerald-700">
+                        ₹{referredOrders.reduce((sum, o) => {
+                          const amount = o.total || (o.price * o.quantity) || 0;
+                          // Use latest commission rate from users array
+                          const currentUser = users.find(u => u.id === selectedReferred.referred_sb_user_id) || selectedReferred;
+                          const rate = currentUser.commission_rate || 0.0025;
+                          return sum + amount * rate;
+                        }, 0).toFixed(2)}
+                      </span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600">Referral Date</span>
                       <span className="font-medium">
-                        {selectedReferred.created_at
-                          ? new Date(selectedReferred.created_at).toLocaleDateString("en-IN")
-                          : "—"}
+                        {selectedReferred.created_at ? new Date(selectedReferred.created_at).toLocaleDateString("en-IN") : "—"}
                       </span>
                     </div>
                     <div className="pt-4 border-t text-xs flex items-center justify-between">
                       <span className="text-gray-500">Status</span>
-                      <span
-                        className={`px-4 py-1 rounded-2xl font-medium ${
-                          selectedReferred.status === "pending"
-                            ? "bg-amber-100 text-amber-700"
-                            : "bg-emerald-100 text-emerald-700"
-                        }`}
-                      >
+                      <span className={`px-4 py-1 rounded-2xl font-medium ${selectedReferred.status === "pending" ? "bg-amber-100 text-amber-700" : "bg-emerald-100 text-emerald-700"}`}>
                         {selectedReferred.status || "Pending"}
                       </span>
                     </div>
                   </div>
                 </div>
 
-                {/* Orders Section */}
                 <div className="lg:col-span-8">
                   <div className="flex items-center justify-between mb-5">
                     <h4 className="flex items-center gap-2 text-lg font-semibold text-gray-800">
                       <FileText size={20} />
                       Orders Placed by {selectedReferred.referred_name}
                     </h4>
-                    <span className="text-sm text-gray-500">{referredOrders.length} orders</span>
+                    <span className="text-sm text-gray-500">
+                      {referredOrders.length} orders • Page {currentPage} of {referredTotalPages || 1}
+                    </span>
                   </div>
 
                   {modalLoading ? (
@@ -533,65 +601,168 @@ const AdminUsers = () => {
                       <p className="text-gray-500">No orders placed yet by this referred user.</p>
                     </div>
                   ) : (
-                    <div className="overflow-x-auto rounded-3xl border border-gray-100">
-                      <table className="min-w-full text-sm">
-                        <thead className="bg-gray-50">
-                          <tr>
-                            <th className="px-6 py-4 text-left font-medium text-gray-600">Asset</th>
-                            <th className="px-6 py-4 text-right font-medium text-gray-600">Price</th>
-                            <th className="px-6 py-4 text-right font-medium text-gray-600">Qty</th>
-                            <th className="px-6 py-4 text-center font-medium text-gray-600">Type</th>
-                            <th className="px-6 py-4 text-center font-medium text-gray-600">Status</th>
-                            <th className="px-6 py-4 text-right font-medium text-gray-600">Date</th>
-                          </tr>
-                        </thead>
-                        <tbody className="divide-y divide-gray-100">
-                          {referredOrders.map((order) => (
-                            <tr key={order.id} className="hover:bg-gray-50">
-                              <td className="px-6 py-4 font-medium text-gray-900">{order.asset_name}</td>
-                              <td className="px-6 py-4 text-right font-medium">₹{order.price}</td>
-                              <td className="px-6 py-4 text-right font-medium">{order.quantity}</td>
-                              <td className="px-6 py-4 text-center">
-                                <span
-                                  className={`inline-flex px-4 py-1 text-xs font-semibold rounded-2xl ${
-                                    order.order_type === "BUY"
-                                      ? "bg-emerald-100 text-emerald-700"
-                                      : "bg-red-100 text-red-700"
-                                  }`}
-                                >
-                                  {order.order_type}
-                                </span>
-                              </td>
-                              <td className="px-6 py-4 text-center">
-                                <span
-                                  className={`inline-flex px-4 py-1 text-xs font-semibold rounded-2xl ${
-                                    order.status === "PENDING"
-                                      ? "bg-amber-100 text-amber-700"
-                                      : "bg-emerald-100 text-emerald-700"
-                                  }`}
-                                >
-                                  {order.status}
-                                </span>
-                              </td>
-                              <td className="px-6 py-4 text-right text-xs text-gray-500">
-                                {new Date(order.created_at).toLocaleDateString("en-IN")}
-                              </td>
+                    <>
+                      <div className="overflow-x-auto rounded-3xl border border-gray-100 max-h-[28vh] overflow-y-auto">
+                        <table className="min-w-full text-sm">
+                          <thead className="bg-gray-50 sticky top-0 z-10">
+                            <tr>
+                              <th className="px-4 py-4 text-left font-medium text-gray-600 w-40">Asset</th>
+                              <th className="px-4 py-4 text-right font-medium text-gray-600">Price</th>
+                              <th className="px-4 py-4 text-right font-medium text-gray-600 w-16">Qty</th>
+                              <th className="px-4 py-4 text-center font-medium text-gray-600 w-20">Type</th>
+                              <th className="px-4 py-4 text-center font-medium text-gray-600 w-24">Status</th>
+                              <th className="px-4 py-4 text-right font-medium text-emerald-600">Commission</th>
+                              <th className="px-4 py-4 text-right font-medium text-gray-600 w-28">Date</th>
                             </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
+                          </thead>
+                          <tbody className="divide-y divide-gray-100">
+                            {referredPaginated.map((order) => (
+                              <tr key={order.id} className="hover:bg-gray-50">
+                                <td className="px-4 py-4 font-medium text-gray-900 truncate max-w-[160px]" title={order.asset_name}>
+                                  {order.asset_name}
+                                </td>
+                                <td className="px-4 py-4 text-right font-medium">₹{order.price?.toLocaleString("en-IN") || 0}</td>
+                                <td className="px-4 py-4 text-right font-medium">{order.quantity}</td>
+                                <td className="px-4 py-4 text-center">
+                                  <span className={`inline-flex px-3 py-1 text-xs font-semibold rounded-2xl ${order.order_type === "BUY" ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
+                                    {order.order_type}
+                                  </span>
+                                </td>
+                                <td className="px-4 py-4 text-center">
+                                  <span className={`inline-flex px-3 py-1 text-xs font-semibold rounded-2xl ${order.status === "PENDING" ? "bg-amber-100 text-amber-700" : "bg-emerald-100 text-emerald-700"}`}>
+                                    {order.status}
+                                  </span>
+                                </td>
+                                <td className="px-4 py-4 text-right font-medium text-emerald-700">
+                                  ₹{(order.commission_amount || 0).toLocaleString("en-IN")}
+                                </td>
+                                <td className="px-4 py-4 text-right text-xs text-gray-500 whitespace-nowrap">
+                                  {new Date(order.created_at).toLocaleDateString("en-IN")}
+                                </td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+
+                      {referredTotalPages > 1 && (
+                        <div className="flex items-center justify-center gap-4 mt-6">
+                          <button onClick={() => setCurrentPage(p => Math.max(p-1,1))} disabled={currentPage===1} className="p-3 rounded-2xl hover:bg-gray-100 disabled:opacity-50">
+                            <ChevronLeft size={20} />
+                          </button>
+                          <span className="text-sm font-medium text-gray-700">Page {currentPage} of {referredTotalPages}</span>
+                          <button onClick={() => setCurrentPage(p => Math.min(p+1, referredTotalPages))} disabled={currentPage===referredTotalPages} className="p-3 rounded-2xl hover:bg-gray-100 disabled:opacity-50">
+                            <ChevronRight size={20} />
+                          </button>
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               </div>
             </div>
 
-            {/* Modal Footer */}
-            <div className="px-8 py-6 border-t flex justify-end">
-              <button
-                onClick={closeModal}
-                className="px-8 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-2xl transition-colors"
-              >
+            <div className="px-6 sm:px-8 py-5 border-t flex justify-end">
+              <button onClick={closeReferredModal} className="px-8 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-2xl transition-colors">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Main User Orders Modal */}
+      {selectedMainUser && (
+        <div className="fixed inset-0 z-[200] flex items-start justify-center bg-black/70 px-4 pt-24 pb-8 overflow-y-auto">
+          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[70vh] flex flex-col mx-auto">
+            <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">{selectedMainUser.full_name}'s Orders</h2>
+                <p className="text-sm text-gray-500 mt-1">{selectedMainUser.email}</p>
+              </div>
+              <button onClick={closeMainModal} className="p-3 hover:bg-gray-100 rounded-2xl transition-colors">
+                <X size={24} className="text-gray-500" />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-auto p-6 sm:p-8">
+              <div className="flex items-center justify-between mb-5">
+                <h4 className="text-lg font-semibold text-gray-800">All Orders</h4>
+                <span className="text-sm text-gray-500">
+                  {mainUserOrders.length} orders • Page {mainCurrentPage} of {mainTotalPages || 1}
+                </span>
+              </div>
+
+              {mainModalLoading ? (
+                <div className="flex justify-center py-12">
+                  <Loader2 className="w-8 h-8 animate-spin text-emerald-600" />
+                </div>
+              ) : mainUserOrders.length === 0 ? (
+                <div className="bg-gray-50 border border-gray-100 rounded-3xl py-12 text-center">
+                  <p className="text-gray-500">No orders found for this user.</p>
+                </div>
+              ) : (
+                <>
+                  <div className="overflow-x-auto rounded-3xl border border-gray-100 max-h-[32vh] overflow-y-auto">
+                    <table className="min-w-full text-sm">
+                      <thead className="bg-gray-50 sticky top-0 z-10">
+                        <tr>
+                          <th className="px-4 py-4 text-left font-medium text-gray-600 w-40">Asset</th>
+                          <th className="px-4 py-4 text-right font-medium text-gray-600">Price</th>
+                          <th className="px-4 py-4 text-right font-medium text-gray-600 w-16">Qty</th>
+                          <th className="px-4 py-4 text-center font-medium text-gray-600 w-20">Type</th>
+                          <th className="px-4 py-4 text-center font-medium text-gray-600 w-24">Status</th>
+                          <th className="px-4 py-4 text-right font-medium text-emerald-600">Commission</th>
+                          <th className="px-4 py-4 text-right font-medium text-gray-600 w-28">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {mainPaginated.map((order) => (
+                          <tr key={order.id} className="hover:bg-gray-50">
+                            <td className="px-4 py-4 font-medium text-gray-900 truncate max-w-[160px]" title={order.asset_name}>
+                              {order.asset_name}
+                            </td>
+                            <td className="px-4 py-4 text-right font-medium">₹{order.price?.toLocaleString("en-IN") || 0}</td>
+                            <td className="px-4 py-4 text-right font-medium">{order.quantity}</td>
+                            <td className="px-4 py-4 text-center">
+                              <span className={`inline-flex px-3 py-1 text-xs font-semibold rounded-2xl ${order.order_type === "BUY" ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
+                                {order.order_type}
+                              </span>
+                            </td>
+                            <td className="px-4 py-4 text-center">
+                              <span className={`inline-flex px-3 py-1 text-xs font-semibold rounded-2xl ${order.status === "PENDING" ? "bg-amber-100 text-amber-700" : "bg-emerald-100 text-emerald-700"}`}>
+                                {order.status}
+                              </span>
+                            </td>
+                            <td className="px-4 py-4 text-right font-medium text-emerald-700">
+                              ₹{(order.commission_amount || 0).toLocaleString("en-IN")}
+                            </td>
+                            <td className="px-4 py-4 text-right text-xs text-gray-500 whitespace-nowrap">
+                              {new Date(order.created_at).toLocaleDateString("en-IN")}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {mainTotalPages > 1 && (
+                    <div className="flex items-center justify-center gap-4 mt-6">
+                      <button onClick={() => setMainCurrentPage(p => Math.max(p-1,1))} disabled={mainCurrentPage===1} className="p-3 rounded-2xl hover:bg-gray-100 disabled:opacity-50">
+                        <ChevronLeft size={20} />
+                      </button>
+                      <span className="text-sm font-medium text-gray-700">Page {mainCurrentPage} of {mainTotalPages}</span>
+                      <button onClick={() => setMainCurrentPage(p => Math.min(p+1, mainTotalPages))} disabled={mainCurrentPage===mainTotalPages} className="p-3 rounded-2xl hover:bg-gray-100 disabled:opacity-50">
+                        <ChevronRight size={20} />
+                      </button>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+
+            <div className="px-6 sm:px-8 py-5 border-t flex justify-end">
+              <button onClick={closeMainModal} className="px-8 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-2xl transition-colors">
                 Close
               </button>
             </div>
