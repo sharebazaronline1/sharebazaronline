@@ -52,7 +52,7 @@ const Login = () => {
       if (!profileData) {
   const { error: insertError } = await supabase
     .from("profiles")
-    .insert({
+    .upsert({
       id: user.id,
       full_name: userName,
       sb_user_id: generateShortId(user.id),
