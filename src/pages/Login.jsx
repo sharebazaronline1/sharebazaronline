@@ -46,8 +46,10 @@ const Login = () => {
               commission_rate: 0.0025,
             }, { onConflict: "id" });
 
-          if (profileError) console.error("Profile Error:", profileError);
-
+if (profileError) {
+  console.error("FULL ERROR:", profileError);
+  alert(profileError.message);
+}
           // Handle Referral if exists
           if (referralCode) {
             const { data: referrer } = await supabase
