@@ -21,124 +21,68 @@ const Login = () => {
   };
 
   useEffect(() => {
-    
     const params = new URLSearchParams(location.search);
     const refCode = params.get("ref");
     if (refCode) localStorage.setItem("referral_code", refCode);
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-        if (event !== "SIGNED_IN") return;
-        if (!session?.user) return;
+        if (event !== "SIGNED_IN" || !session?.user) return;
 
         const user = session.user;
         const referralCode = localStorage.getItem("referral_code");
+        const userName = user.user_metadata?.full_name || fullName || "New User";
 
-
-        // Get the best available name from user_metadata
-        const userName =
-          user.user_metadata?.full_name ||
-          user.user_metadata?.name ||
-          user.user_metadata?.fullName ||  // in case it's stored differently
-          "New Friend";
-
-        // 1️⃣ ensure profile exists + set name if missing
-        const { data: profileData } = await supabase
-          .from("profiles")
-          .select("*")
-          .eq("id", user.id)
-          .maybeSingle();
-
-      if (!profileData) {
-  const { error: insertError } = await supabase
-    .from("profiles")
-    .upsert({
-      id: user.id,
-      full_name: userName,
-      sb_user_id: generateShortId(user.id),
-      email: user.email,
-      account_status: "inactive",
-        commission_rate: 0.0025,
+        try {
+          // Create / Update Profile safely
+          const { error: profileError } = await supabase
+            .from("profiles")
+            .upsert({
+              id: user.id,
+              full_name: userName,
+              sb_user_id: generateShortId(user.id),
+              email: user.email,
+              account_status: "inactive",
+              commission_rate: 0.0025,
             }, { onConflict: "id" });
 
-  if (insertError) {
-    console.error("PROFILE INSERT ERROR:", insertError);
-  }
-} else {
-  const updates = {};
+          if (profileError) console.error("Profile Error:", profileError);
 
-  if (!profileData.email) {
-    updates.email = user.email;
-  }
+          // Handle Referral if exists
+          if (referralCode) {
+            const { data: referrer } = await supabase
+              .from("profiles")
+              .select("sb_user_id")
+              .eq("sb_user_id", referralCode)
+              .single();
 
-  if (!profileData.sb_user_id) {
-    updates.sb_user_id = generateShortId(user.id);
-  }
-
-  if (Object.keys(updates).length > 0) {
-    const { error: updateError } = await supabase
-      .from("profiles")
-      .update(updates)
-      .eq("id", user.id);
-
-    if (updateError) {
-      console.error("PROFILE UPDATE ERROR:", updateError);
-    }
-  }
-}
-        // 2️⃣ if no referral → go dashboard
-        if (!referralCode) {
-          navigate("/dashboard", { replace: true });
-          return;
-        }
-
-        // 3️⃣ find referrer
-        const { data: referrer, error: refErr } = await supabase
-          .from("profiles")
-          .select("id")
-          .eq("sb_user_id", referralCode)
-          .single();
-
-        console.log("REFERRER:", referrer, refErr);
-
-        if (!referrer || refErr) {
-          navigate("/dashboard", { replace: true });
-          return;
-        }
-
-        // 4️⃣ prevent duplicate referral
-        const { data: existing } = await supabase
-          .from("referrals")
-          .select("id")
-          .eq("referrer_id", referrer.id)
-          .eq("referred_user_id", user.id)
-          .maybeSingle();
-
-        if (!existing) {
-          const { error: insertError } = await supabase.from("referrals").insert({
-            referrer_id: referrer.id,
-            referred_user_id: user.id,
-            referred_name: userName,                    // ← Use reliable name from metadata
-            referred_email: user.email,
-            referred_mobile: null,
-            status: "pending",
-            reward_amount: 0,
-          });
-
-          if (insertError) {
-            console.error("REFERRAL INSERT ERROR:", insertError);
-          } else {
-            console.log("Referral recorded with name:", userName);
+            if (referrer) {
+              await supabase
+                .from("referrals")
+                .insert({
+                  referrer_sb_user_id: referrer.sb_user_id,
+                  referred_sb_user_id: generateShortId(user.id),
+                  referred_user_id: user.id,
+                  referred_name: userName,
+                  referred_email: user.email,
+                  status: "pending",
+                  reward_amount: 0,
+                })
+                .catch(() => {}); // Ignore duplicate errors
+            }
           }
-        }
 
-        localStorage.removeItem("referral_code");
-        navigate("/dashboard", { replace: true });
+          localStorage.removeItem("referral_code");
+          navigate("/dashboard", { replace: true });
+        } catch (err) {
+          console.error("Post signup error:", err);
+          navigate("/dashboard", { replace: true });
+        }
       }
     );
 
     return () => subscription.unsubscribe();
-  }, [navigate, location.search]);
+  }, [navigate, location.search, fullName]);
 
   const handleEmailAuth = async (e) => {
     e.preventDefault();
@@ -156,9 +100,7 @@ const Login = () => {
           email,
           password,
           options: {
-            data: {
-              full_name: fullName.trim(),          // ← This goes to user_metadata
-            },
+            data: { full_name: fullName.trim() },
             emailRedirectTo: `${window.location.origin}/login`,
           },
         });
@@ -226,7 +168,6 @@ const Login = () => {
               </p>
             </div>
 
-            {/* EMAIL / PASSWORD FORM */}
             <form className="space-y-4" onSubmit={handleEmailAuth}>
               {isSignUp && (
                 <div>
@@ -294,7 +235,6 @@ const Login = () => {
               </div>
             </div>
 
-            {/* GOOGLE LOGIN */}
             <button
               type="button"
               onClick={handleGoogleLogin}
