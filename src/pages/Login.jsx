@@ -27,7 +27,7 @@ const Login = () => {
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       async (event, session) => {
-      if (!session?.user) return;
+     if (event !== "SIGNED_IN" || !session?.user) return; 
 
         const user = session.user;
         const referralCode = localStorage.getItem("referral_code");
