@@ -25,6 +25,7 @@ const AdminUsers = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [editingRates, setEditingRates] = useState({});
   const [expandedUserId, setExpandedUserId] = useState(null);
 
   // Referred User Modal
@@ -64,20 +65,23 @@ const AdminUsers = () => {
             .select("*", { count: "exact", head: true })
             .eq("referrer_sb_user_id", profile.id);
 
-          const { data: referredUsers } = await supabase
-            .from("referrals")
-            .select(`
-              referred_name,
-              referred_email,
-              referred_mobile,
-              referred_sb_user_id,
-              reward_amount,
-              commission_earned,
-              status,
-              created_at
-            `)
-            .eq("referrer_sb_user_id", profile.id)
-            .limit(10);
+         const { data: referredUsers } = await supabase
+  .from("referrals")
+  .select(`
+    referred_name,
+    referred_email,
+    referred_mobile,
+    referred_sb_user_id,
+    reward_amount,
+    commission_earned,
+    status,
+    created_at,
+    profiles:referred_sb_user_id (
+      sb_user_id
+    )
+  `)
+  .eq("referrer_sb_user_id", profile.id)
+  .limit(10);
 
           const { count: orderCount } = await supabase
             .from("orders")
@@ -123,7 +127,30 @@ const AdminUsers = () => {
           return {
             ...profile,
             referralCount: referralCount || 0,
-            referredUsers: referredUsers || [],
+           referredUsers: await Promise.all(
+  (referredUsers || []).map(async (ref) => {
+    let totalCommission = 0;
+
+    if (ref.referred_sb_user_id) {
+      const { data: orders } = await supabase
+        .from("orders")
+        .select("price, quantity, total")
+        .eq("user_id", ref.referred_sb_user_id);
+
+      if (orders) {
+        totalCommission = orders.reduce((sum, o) => {
+          const amount = o.total || (o.price * o.quantity) || 0;
+          return sum + (amount * (profile.commission_rate || 0)) / 100;
+        }, 0);
+      }
+    }
+
+    return {
+      ...ref,
+      calculatedCommission: totalCommission,
+    };
+  })
+),
             orderCount: orderCount || 0,
             totalPortfolioValue: totalPortfolio,
             kycStatus,
@@ -145,21 +172,38 @@ const AdminUsers = () => {
   const toggleExpand = (userId) => {
     setExpandedUserId(expandedUserId === userId ? null : userId);
   };
+const updateCommissionRate = async (userId, newRatePercent) => {
+  const cleanPercent = Number(newRatePercent);
 
-  const updateCommissionRate = async (userId, newRatePercent) => {
-    const newRate = Math.max(0, Math.min(5, newRatePercent)) / 100;
+  if (isNaN(cleanPercent)) return;
 
-    const { error } = await supabase
-      .from("profiles")
-      .update({ commission_rate: newRate })
-      .eq("id", userId);
+  const newRate = cleanPercent; // ✅ store directly
 
-    if (!error) {
-      setUsers(users.map(u => 
-        u.id === userId ? { ...u, commission_rate: newRate } : u
-      ));
-    }
-  };
+  console.log("Updating:", userId, newRate);
+
+  const { data, error } = await supabase
+    .from("profiles")
+    .update({ commission_rate: newRate })
+    .eq("id", userId)
+    .select();
+
+  if (error) {
+    console.error("❌ Update failed:", error);
+    return;
+  }
+
+  console.log("✅ DB Updated:", data);
+
+  if (data && data.length > 0) {
+    setUsers((prev) =>
+      prev.map((u) =>
+        u.id === userId
+          ? { ...u, commission_rate: data[0].commission_rate }
+          : u
+      )
+    );
+  }
+};
 
   const openReferredModal = async (referred, referrer) => {
     const referredWithRate = {
@@ -352,27 +396,46 @@ const AdminUsers = () => {
                           </span>
                         </td>
                         <td className="px-4 py-5 text-center">
-                          <span className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${user.account_status === "active" || !user.account_status ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
+                          <span className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${user.account_status === "active" || !user.account_status ? "bg-green-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
                             {user.account_status ? user.account_status.toUpperCase() : "ACTIVE"}
                           </span>
                         </td>
-                        {/* <td className="px-4 py-5 text-center">
-                          <div className="flex items-center justify-center gap-1">
-                            <input
-                              type="number"
-                              step="0.01"
-                              min="0"
-                              max="5"
-                              value={(user.commission_rate * 100).toFixed(2)}
-                              onChange={(e) => {
-                                const val = parseFloat(e.target.value);
-                                if (!isNaN(val)) updateCommissionRate(user.id, val);
-                              }}
-                              className="w-16 text-center text-sm font-medium bg-white border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
-                            />
-                            <span className="text-xs text-gray-500 font-medium">%</span>
-                          </div>
-                        </td> */}
+           <td className="px-4 py-5 text-center">
+  <div className="flex items-center justify-center gap-2">
+  <input
+  type="number"
+  step="0.01"
+  min="0"
+  max="100"
+  value={
+    editingRates[user.id] !== undefined
+      ? editingRates[user.id]
+      : user.commission_rate
+  }
+  onChange={(e) => {
+    const val = e.target.value;
+    setEditingRates((prev) => ({
+      ...prev,
+      [user.id]: val,
+    }));
+  }}
+  onBlur={async (e) => {
+    const val = parseFloat(e.target.value);
+
+    if (!isNaN(val)) {
+      await updateCommissionRate(user.id, val);
+    }
+
+    setEditingRates((prev) => {
+      const copy = { ...prev };
+      delete copy[user.id];
+      return copy;
+    });
+  }}
+/>
+    <span className="text-xs text-gray-500 font-medium">%</span>
+  </div>
+</td>
                         <td className="px-4 py-5 text-center"></td>
                       </tr>
 
@@ -501,14 +564,14 @@ const AdminUsers = () => {
                                           {ref.referred_name || "Unnamed User"}
                                         </div>
                                         <div className="text-sm text-gray-600 mt-3">
-                                          SB ID: {ref.referred_sb_user_id || "Not Registered"}
+                                         SB ID: {ref.profiles?.sb_user_id || "Not Registered"}
                                         </div>
                                         {ref.referred_email && (
                                           <div className="text-xs text-gray-500 mt-2 truncate">{ref.referred_email}</div>
                                         )}
                                         <div className="mt-6 flex items-center justify-between text-xs">
                                           <span className="text-emerald-600 font-medium">
-                                            Commission: ₹{ref.commission_earned || 0}
+                                           Commission: ₹{ref.calculatedCommission?.toFixed(2) || 0}
                                           </span>
                                           <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-2xl font-medium">
                                             {ref.status || "Pending"}
@@ -556,13 +619,15 @@ const AdminUsers = () => {
                   <div className="space-y-6">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600">Commission Earned</span>
-                      <span className="text-2xl font-semibold text-emerald-700">
+                      <span className="text-md font-semibold text-emerald-700">
                         ₹{referredOrders.reduce((sum, o) => {
                           const amount = o.total || (o.price * o.quantity) || 0;
                           // Use latest commission rate from users array
-                          const currentUser = users.find(u => u.id === selectedReferred.referred_sb_user_id) || selectedReferred;
-                          const rate = currentUser.commission_rate || 0.0025;
-                          return sum + amount * rate;
+                          const currentUser = users.find(
+  u => u.sb_user_id === selectedReferred.referred_sb_user_id
+) || selectedReferred;
+                          const rate = currentUser.commission_rate || 0;
+return sum + (amount * rate) / 100;
                         }, 0).toFixed(2)}
                       </span>
                     </div>

@@ -37,15 +37,15 @@ const AdminReferrals = () => {
         .from("referrals")
         .select(`
           id,
-          referrer_id,
+          referrer_sb_user_id,
           referred_name,
           referred_email,
           referred_mobile,
-          referred_user_id,
+          referred_sb_user_id,
           status,
           created_at,
-          profiles:referrer_id (full_name, sb_user_id, email),
-          referred_profile:referred_user_id (id, full_name, sb_user_id, email, created_at)
+          profiles:referrer_sb_user_id (full_name, sb_user_id, email),
+          referred_profile:referred_sb_user_id (id, full_name, sb_user_id, email, created_at)
         `)
         .order("created_at", { ascending: false });
 
@@ -53,22 +53,20 @@ const AdminReferrals = () => {
 
       const enriched = await Promise.all(
         data.map(async (ref) => {
-          // Orders placed by the referred user
+          // Orders by referred user
           const { data: ordersData } = await supabase
             .from("orders")
             .select("total")
-            .eq("user_id", ref.referred_user_id);
+            .eq("user_id", ref.referred_sb_user_id);
 
           const totalOrderValue = ordersData?.reduce((sum, o) => sum + (o.total || 0), 0) || 0;
-
-          // Commission = 20% of 0.25% of total order value = 0.0005 * totalOrderValue
-          const commissionEarned = Math.round(totalOrderValue * 0.0005 * 100) / 100; // rounded to 2 decimals
+          const commissionEarned = Math.round(totalOrderValue * 0.0005 * 100) / 100;
 
           // Portfolio
           const { data: portfolioData } = await supabase
             .from("portfolios")
             .select("value")
-            .eq("user_id", ref.referred_user_id);
+            .eq("user_id", ref.referred_sb_user_id);
 
           const totalPortfolio = portfolioData?.reduce((sum, p) => sum + (p.value || 0), 0) || 0;
 
@@ -76,7 +74,7 @@ const AdminReferrals = () => {
           const { data: kycData } = await supabase
             .from("user_kyc")
             .select("pan_status, aadhaar_status, cmr_status, cheque_status")
-            .eq("user_id", ref.referred_user_id)
+            .eq("user_id", ref.referred_sb_user_id)
             .maybeSingle();
 
           let kycStatus = "Not Uploaded";
@@ -92,6 +90,7 @@ const AdminReferrals = () => {
             referrer_name: ref.profiles?.full_name || "Unknown",
             referred_full_name: ref.referred_profile?.full_name || ref.referred_name || "Unnamed",
             referred_sb_id: ref.referred_profile?.sb_user_id || "Not Registered",
+            joinedDate: ref.referred_profile?.created_at,
             orderCount: ordersData?.length || 0,
             totalOrderValue,
             totalPortfolioValue: totalPortfolio,
@@ -232,14 +231,13 @@ const AdminReferrals = () => {
                         </td>
                       </tr>
 
-                      {/* Expanded Row - Same clean style as AdminUsers */}
                       {expandedId === ref.id && (
                         <tr>
                           <td colSpan={9} className="p-0 bg-gray-50">
                             <div className="px-6 py-9">
                               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-                                {/* Referred User Details */}
-                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm h-full">
+                                {/* Referred User */}
+                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
                                   <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
                                     <Users size={18} className="text-gray-500" />
                                     Referred User
@@ -256,8 +254,8 @@ const AdminReferrals = () => {
                                     <div className="flex justify-between">
                                       <span className="text-gray-500">Joined</span>
                                       <span className="font-medium">
-                                        {ref.referred_profile?.created_at
-                                          ? new Date(ref.referred_profile.created_at).toLocaleDateString("en-IN", {
+                                        {ref.joinedDate
+                                          ? new Date(ref.joinedDate).toLocaleDateString("en-IN", {
                                               day: "numeric",
                                               month: "short",
                                               year: "numeric",
@@ -269,7 +267,7 @@ const AdminReferrals = () => {
                                 </div>
 
                                 {/* Activity */}
-                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm h-full">
+                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
                                   <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
                                     <Package size={18} className="text-gray-500" />
                                     Activity
@@ -288,20 +286,8 @@ const AdminReferrals = () => {
                                   </div>
                                 </div>
 
-                                {/* Commission - Highlighted */}
-                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm h-full flex flex-col">
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
-                                    <IndianRupee size={18} className="text-emerald-600" />
-                                    Commission Earned
-                                  </h4>
-                                  <div className="mt-auto">
-                                    <div className="text-5xl font-semibold text-emerald-700 tracking-tighter">₹{ref.commissionEarned.toLocaleString("en-IN")}</div>
-                                    <p className="text-sm text-gray-500 mt-1">0.05% of referred user's order value</p>
-                                  </div>
-                                </div>
-
-                                {/* KYC */}
-                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm h-full">
+                                {/* KYC Status */}
+                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
                                   <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
                                     <ShieldCheck size={18} className="text-gray-500" />
                                     KYC Status
@@ -320,7 +306,7 @@ const AdminReferrals = () => {
                                 </div>
 
                                 {/* Referred By */}
-                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm h-full">
+                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
                                   <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
                                     <UserPlus size={18} className="text-gray-500" />
                                     Referred By
