@@ -21,112 +21,98 @@ const Login = () => {
   };
 
   useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const refCode = params.get("ref");
-    if (refCode) localStorage.setItem("referral_code", refCode);
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-     if (event !== "SIGNED_IN" || !session?.user) return; 
-
-        const user = session.user;
-        const referralCode = localStorage.getItem("referral_code");
-        const userName = user.user_metadata?.full_name || fullName || "New User";
-
-        try {
-          // Create / Update Profile safely
-          const { error: profileError } = await supabase
-            .from("profiles")
-            .upsert({
-              id: user.id,
-              full_name: userName,
-              sb_user_id: generateShortId(user.id),
-              email: user.email,
-              account_status: "inactive",
-              commission_rate: 0.0025,
-            }, { onConflict: "id" });
-
-if (profileError) {
-  console.error("PROFILE ERROR:", profileError);
-  return; // 🚨 STOP here (IMPORTANT)
-}
-          // Handle Referral if exists
-      if (referralCode) {
-  try {
-    const { data: referrer } = await supabase
-      .from("profiles")
-      .select("sb_user_id")
-      .eq("sb_user_id", referralCode)
-      .single();
-
-    if (referrer) {
-      await supabase.from("referrals").insert({
-        referrer_sb_user_id: referrer.sb_user_id,
-        referred_sb_user_id: generateShortId(user.id),
-        referred_user_id: user.id,
-        referred_name: userName,
-        referred_email: user.email,
-        status: "pending",
-        reward_amount: 0,
-      });
-    }
-  } catch (err) {
-    console.error("Referral error:", err);
-  }
-}
-          localStorage.removeItem("referral_code");
-          navigate("/dashboard", { replace: true });
-        } catch (err) {
-          console.error("Post signup error:", err);
-          navigate("/dashboard", { replace: true });
-        }
-      }
-    );
-
-    return () => subscription.unsubscribe();
-  }, [navigate, location.search, fullName]);
+  const params = new URLSearchParams(location.search);
+  const refCode = params.get("ref");
+  if (refCode) localStorage.setItem("referral_code", refCode);
+}, [location.search]);
 
   const handleEmailAuth = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      if (isSignUp) {
-        if (!fullName.trim()) {
-          alert("Please enter your full name");
-          setLoading(false);
-          return;
-        }
+   if (isSignUp) {
+  if (!fullName.trim()) {
+    alert("Please enter your full name");
+    setLoading(false);
+    return;
+  }
 
-        const { data, error } = await supabase.auth.signUp({
-  email,
-  password,
-  options: {
-    data: { full_name: fullName.trim() },
-    emailRedirectTo: `${window.location.origin}/login`,
-  },
-});
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+    options: {
+      data: { full_name: fullName.trim() },
+      emailRedirectTo: `${window.location.origin}/login`,
+    },
+  });
 
-if (error) throw error;
+  if (error) throw error;
 
-// 🚨 IMPORTANT
-if (!data.user) {
-  alert("Signup failed");
+  const user = data.user;
+  if (!user) {
+    alert("Signup failed");
+    return;
+  }
+
+  const userName = fullName.trim();
+  const referralCode = localStorage.getItem("referral_code");
+
+  // ✅ CREATE PROFILE (IMPORTANT)
+  const { error: profileError } = await supabase
+    .from("profiles")
+    .insert({
+      id: user.id,
+      full_name: userName,
+      sb_user_id: generateShortId(user.id),
+      email: user.email,
+      account_status: "inactive",
+      commission_rate: 0.0025,
+    });
+
+  if (profileError) {
+    console.error("PROFILE ERROR:", profileError);
+    alert("Error creating profile");
+    return;
+  }
+
+  // ✅ HANDLE REFERRAL (FIXED)
+  if (referralCode) {
+    try {
+      const { data: referrer } = await supabase
+        .from("profiles")
+        .select("id")
+        .eq("sb_user_id", referralCode)
+        .single();
+
+      if (referrer) {
+        await supabase.from("referrals").insert({
+          referrer_sb_user_id: referrer.id, // ✅ UUID
+          referred_sb_user_id: user.id,     // ✅ UUID
+          referred_user_id: user.id,
+          referred_name: userName,
+          referred_email: user.email,
+          status: "pending",
+          reward_amount: 0,
+        });
+      }
+    } catch (err) {
+      console.error("Referral error:", err);
+    }
+  }
+
+  localStorage.removeItem("referral_code");
+
+  alert("Account created! Please check your email to verify.");
+  setIsSignUp(false);
   return;
 }
-
-        if (error) throw error;
-
-        alert("Account created! Please check your email to verify.");
-        setIsSignUp(false);
-        return;
-      }
 
       const { error } = await supabase.auth.signInWithPassword({
         email,
         password,
       });
-      if (error) throw error;
+    
     } catch (error) {
       alert(
         error.message.includes("Invalid login credentials")
