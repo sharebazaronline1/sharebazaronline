@@ -34,18 +34,7 @@ const Login = () => {
         const userName = user.user_metadata?.full_name || fullName || "New User";
 
         try {
-          // Create / Update Profile safely
-          const { error: profileError } = await supabase
-            .from("profiles")
-            .insert({
-  id: user.id,
-  full_name: userName,
-  sb_user_id: generateShortId(user.id),
-  email: user.email,
-  account_status: "inactive",
-  commission_rate: 0.0025,
-}, { onConflict: "id" });
-
+          
 if (profileError) {
   console.error("PROFILE ERROR:", profileError);
   return; // 🚨 STOP here (IMPORTANT)
