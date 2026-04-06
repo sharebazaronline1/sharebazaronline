@@ -13589,6 +13589,189 @@ export const fetchIPOs = async () => {
     "prospectus_pdf": "N/A",
     "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/emiac-technologies-anchor_letter46fd3972-84ff-495a-858a-beff64db2a42.pdf"
   }
+},
+{
+  "id": 69,
+  "name": "Safety Controls & Devices",
+  "logo": "/images/ipo/safetydevices.png",
+  "minInvestment": "₹2,56,000",
+  "open": "06 Apr 2026",
+  "close": "08 Apr 2026",
+  "listing": "13 Apr 2026",
+  "price": "₹75 – ₹80",
+  "lot": 1600,
+
+  "about_company": {
+    "company_name": "Safety Controls & Devices Limited",
+    "industry_sector": "Electrical Infrastructure & Renewable Energy EPC",
+    "founded_year": "2015",
+    "promoters": [
+      "Rajnish Chopra",
+      "Anjali Chopra",
+      "Abhishek Chopra"
+    ],
+    "description": "Safety Controls & Devices Limited is an EPC company specializing in electrical infrastructure projects, including substation installation, solar power plants, firefighting systems, and hospital electrification. It primarily works with government utilities, power companies, and renewable energy developers. The company has executed multiple projects across India and holds ISO 9001:2015 certification."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Safety Controls & Devices Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹75",
+    "price_band_max": "₹80",
+    "lot_size": 1600,
+    "total_issue_size": "₹32.90 Cr (41,12,000 shares)",
+    "fresh_issue_size": "₹32.90 Cr (41,12,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "41,12,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹80",
+    "minimum_investment": "₹2,56,000 (2 lots / 3,200 shares)",
+    "market_cap_post_issue": "Pre-IPO ≈ ₹130 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters significant stake",
+    "post_issue_shareholding": "Promoters reduced due to fresh issue"
+  },
+
+  "company_overview": {
+    "business_model": "EPC contractor for electrical substations, solar plants, firefighting systems, and hospital projects with focus on government and utility clients.",
+    "products_services": [
+      "Substation Installation",
+      "Solar Power Plant EPC",
+      "Firefighting Equipment Installation",
+      "Hospital Electrification Projects"
+    ],
+    "competitive_strengths": [
+      "Strong execution capability in electrical infrastructure",
+      "Experienced team in government projects",
+      "Growing presence in renewable energy",
+      "Quality and safety compliance focus"
+    ],
+    "risks": [
+      "Dependence on government tenders",
+      "Project delay and execution risks",
+      "Working capital intensive",
+      "Competition in EPC segment"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "06 Apr 2026",
+    "ipo_close_date": "08 Apr 2026",
+    "basis_of_allotment_date": "09 Apr 2026",
+    "refund_initiation_date": "10 Apr 2026",
+    "demat_credit_date": "10 Apr 2026",
+    "listing_date": "13 Apr 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_pre_payment_of_borrowings": "₹6.00 Cr",
+    "funding_working_capital_requirements": "₹20.50 Cr",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "46.67%",
+    "retail_quota": "33.70%",
+    "hni_quota": "14.44%",
+    "others": "Market Maker 5.19%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,56,000"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,56,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,52,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "9600",
+      "amount": "₹9,40,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "21.17% (31 Jan 2026)",
+    "roce": "33.73% (31 Jan 2026)",
+    "pat_margin": "12.64% (31 Jan 2026)",
+    "ebitda_margin": "24.04% (31 Jan 2026)",
+    "debt_to_equity": "0.72 (31 Jan 2026)",
+    "eps": "₹6.50 (pre-IPO)",
+    "pe_ratio": "12.3x (pre-IPO)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹120.28 Cr",
+      "total_income": "₹103.50 Cr",
+      "pat": "₹8.99 Cr",
+      "ebitda": "₹17.27 Cr",
+      "net_worth": "₹42.17 Cr",
+      "total_borrowing": "₹33.84 Cr"
+    },
+    {
+      "period": "31 Jan 2026",
+      "assets": "₹164.41 Cr",
+      "total_income": "₹68.51 Cr",
+      "pat": "₹8.52 Cr",
+      "ebitda": "₹16.21 Cr",
+      "net_worth": "₹54.47 Cr",
+      "total_borrowing": "₹39.18 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0 (flat)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Apr 2026",
+    "estimated_listing_price": "₹80 (flat expected)"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "0.33x (as of 06 Apr 2026, Day 1, 6:54:41 PM)",
+    "anchor": "1.00x (fully subscribed, ₹12.672 Cr)",
+    "qib_ex_anchor": "0.21x",
+    "hni_subscription": "0.18x",
+    "bNII": "0.24x",
+    "sNII": "0.04x",
+    "retail_subscription": "0.46x",
+    "total_applications": "310"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Maashitla Securities Pvt. Ltd.",
+    "registrar_website": "https://maashitla.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Sobhagya Capital Options Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "C-43/28/1, Nawal Kishore Road, Hazratganj, Lucknow, Uttar Pradesh 226001",
+    "company_website": "https://www.safetygroup.in/",
+    "company_email": "cs@safetygroup.in",
+    "company_phone": "+91 522 402 6070"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bsesme.com/download/381468/SME_IPO%20InPrinciple/26.DRHP_Safety_20250930234556.pdf",
+    "rhp_link": "https://www.bsesme.com/download/381468/SME_IPO%20Open/RHP%20Safety_%20270326_Clean%20version_20260329221600.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/safety-control-devices-ipo-anchor-allocation-letter.pdf"
+  }
 }
 
 
