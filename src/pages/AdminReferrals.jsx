@@ -175,7 +175,6 @@ const AdminReferrals = () => {
                     <th className="px-4 py-5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden lg:table-cell">Email</th>
                     <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Orders</th>
                     <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Portfolio</th>
-                    <th className="px-4 py-5 text-center text-xs font-semibold text-emerald-600 uppercase tracking-wider">Commission</th>
                     <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">KYC</th>
                     <th className="w-12 px-4 py-5"></th>
                   </tr>
@@ -206,9 +205,7 @@ const AdminReferrals = () => {
                         <td className="px-4 py-5 text-center font-medium text-emerald-700 text-sm">
                           ₹{ref.totalPortfolioValue.toLocaleString("en-IN")}
                         </td>
-                        <td className="px-4 py-5 text-center font-medium text-emerald-700 text-sm">
-                          ₹{ref.commissionEarned.toLocaleString("en-IN")}
-                        </td>
+                       
                         <td className="px-4 py-5 text-center">
                           <span
                             className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
