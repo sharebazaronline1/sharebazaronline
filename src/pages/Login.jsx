@@ -25,53 +25,87 @@ const Login = () => {
     const refCode = params.get("ref");
     if (refCode) localStorage.setItem("referral_code", refCode);
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-     if (event !== "SIGNED_IN" || !session?.user) return; 
+const { data: { subscription } } = supabase.auth.onAuthStateChange(
+  async (event, session) => {
+    if (event !== "SIGNED_IN" || !session?.user) return;
 
-        const user = session.user;
-        const referralCode = localStorage.getItem("referral_code");
-        const userName = user.user_metadata?.full_name || fullName || "New User";
+    const user = session.user;
+    const referralCode = localStorage.getItem("referral_code");
+    const userName =
+      user.user_metadata?.full_name || fullName || "New User";
 
-        try {
-          
-if (profileError) {
-  console.error("PROFILE ERROR:", profileError);
-  return; // 🚨 STOP here (IMPORTANT)
-}
-          // Handle Referral if exists
-      if (referralCode) {
+    try {
+      
+     if (referralCode) {
   try {
-   const { data: referrer } = await supabase
-  .from("profiles")
-  .select("id, sb_user_id")
-  .eq("sb_user_id", referralCode)
-  .single();
+    // ✅ Wait for profile to exist
+    let retries = 6;
+    let userProfile = null;
 
-    if (referrer) {
-     await supabase.from("referrals").insert({
-  referrer_sb_user_id: referrer.id, // ✅ UUID (CORRECT)
-  referred_sb_user_id: user.id,     // ✅ UUID (CORRECT)
-  referred_user_id: user.id,
-  referred_name: userName,
-  referred_email: user.email,
-  status: "pending",
-  reward_amount: 0,
-});
+    while (retries > 0) {
+      const { data } = await supabase
+        .from("profiles")
+        .select("id")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      if (data) {
+        userProfile = data;
+        break;
+      }
+
+      await new Promise((res) => setTimeout(res, 500));
+      retries--;
     }
+
+    if (!userProfile) {
+      console.log("Profile not ready");
+      return;
+    }
+
+    // ✅ Get referrer using SB code
+    const { data: referrer } = await supabase
+      .from("profiles")
+      .select("id")
+      .eq("sb_user_id", referralCode)
+      .maybeSingle();
+
+    if (!referrer) {
+      console.log("Invalid referral code");
+      return;
+    }
+
+    // ✅ Insert referral (CORRECT STRUCTURE)
+    const { error } = await supabase.from("referrals").insert({
+      referrer_sb_user_id: referrer.id,
+      referred_sb_user_id: user.id,
+      referred_name: userName,
+      referred_email: user.email,
+      status: "pending",
+      reward_amount: 0,
+    });
+
+    if (error) {
+      console.error("Referral insert error:", error);
+    } else {
+      console.log("Referral inserted ✅");
+    }
+
   } catch (err) {
     console.error("Referral error:", err);
   }
-}
-          localStorage.removeItem("referral_code");
-          navigate("/dashboard", { replace: true });
-        } catch (err) {
-          console.error("Post signup error:", err);
-          navigate("/dashboard", { replace: true });
-        }
-      }
-    );
 
+  localStorage.removeItem("referral_code");
+}
+ 
+      navigate("/dashboard", { replace: true });
+
+    } catch (err) {
+      console.error("Post signup error:", err);
+      navigate("/dashboard", { replace: true });
+    }
+  }
+);
     return () => subscription.unsubscribe();
   }, [navigate, location.search, fullName]);
 

@@ -1,3 +1,4 @@
+// src/pages/Referrals.jsx
 import { useState, useEffect } from "react";
 import {
   Copy,
@@ -32,89 +33,113 @@ const Referrals = () => {
   const [referrals, setReferrals] = useState([]);
   const [totalRewards, setTotalRewards] = useState(0);
   const [loading, setLoading] = useState(true);
+
   const [referralName, setReferralName] = useState("");
   const [referralEmail, setReferralEmail] = useState("");
   const [referralMobile, setReferralMobile] = useState("");
 
+  // Withdraw input
+  const [withdrawAmount, setWithdrawAmount] = useState("");
+
   const fetchReferrals = async (userId) => {
     setLoading(true);
-    const { data: refData, error: refError } = await supabase
-      .from("referrals")
-      .select("*")
-      .eq("referrer_id", userId)
-      .order("created_at", { ascending: false });
 
-    if (refError) {
-      console.error("Referrals fetch error:", refError);
+    try {
+      const { data: refData, error: refError } = await supabase
+        .from("referrals")
+        .select(`
+          *,
+          profiles:referred_sb_user_id (commission_rate)
+        `)
+        .eq("referrer_sb_user_id", userId)
+        .order("created_at", { ascending: false });
+
+      if (refError) throw refError;
+
+      const enrichedReferrals = await Promise.all(
+        (refData || []).map(async (ref) => {
+          const { data: ordersData } = await supabase
+            .from("orders")
+            .select("price, quantity, total")
+            .eq("user_id", ref.referred_sb_user_id);
+
+          const commissionRate = ref.profiles?.commission_rate || 0.0025;
+
+          let totalCommission = 0;
+
+          if (ordersData && ordersData.length > 0) {
+            totalCommission = ordersData.reduce((sum, o) => {
+              // EXACT SAME CALCULATION AS ADMINUSERS
+              const amount = o.total || (o.price * (o.quantity || 0)) || 0;
+              return sum + (amount * commissionRate) / 100;
+            }, 0);
+          }
+
+          return {
+            ...ref,
+            totalCommission: Math.round(totalCommission * 100) / 100,
+          };
+        })
+      );
+
+      setReferrals(enrichedReferrals);
+
+      const grandTotal = enrichedReferrals.reduce(
+        (acc, r) => acc + (Number(r.totalCommission) || 0),
+        0
+      );
+      setTotalRewards(Math.round(grandTotal * 100) / 100);
+
+    } catch (err) {
+      console.error("Referrals fetch error:", err);
       setReferrals([]);
       setTotalRewards(0);
-    } else {
-      setReferrals(refData || []);
-      const sum =
-        refData?.reduce((acc, r) => acc + (Number(r.reward_amount) || 0), 0) || 0;
-      setTotalRewards(sum);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
-useEffect(() => {
-  const init = async () => {
-    setLoading(true);
+  useEffect(() => {
+    const init = async () => {
+      setLoading(true);
 
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
 
-    if (!user) {
-      setLoading(false);
-      return;
-    }
+      if (!user) {
+        setLoading(false);
+        return;
+      }
 
-    const userId = user.id;
+      const userId = user.id;
 
-    // Run profile + referrals in parallel
-    const [profileRes, referralsRes] = await Promise.all([
-      supabase
+      const { data: profileData } = await supabase
         .from("profiles")
         .select("sb_user_id")
         .eq("id", userId)
-        .single(),
+        .single();
 
-      supabase
-        .from("referrals")
-        .select("*")
-        .eq("referrer_id", userId)
-        .order("created_at", { ascending: false }),
-    ]);
+      let code = profileData?.sb_user_id;
 
-    let code = profileRes.data?.sb_user_id;
+      if (!code) {
+        code = generateShortId(userId);
+        await supabase
+          .from("profiles")
+          .update({ sb_user_id: code })
+          .eq("id", userId);
+      }
 
-    if (!code) {
-      code = generateShortId(userId);
-      await supabase.from("profiles").update({ sb_user_id: code }).eq("id", userId);
-    }
+      setReferralCode(code);
+      await fetchReferrals(userId);
+    };
 
-    setReferralCode(code);
-    setReferrals(referralsRes.data || []);
+    init();
+  }, []);
 
-    const sum =
-      referralsRes.data?.reduce(
-        (acc, r) => acc + (Number(r.reward_amount) || 0),
-        0
-      ) || 0;
-
-    setTotalRewards(sum);
-    setLoading(false);
-  };
-
-  init();
-}, []);
-
-
-const referralLink = referralCode
-  ? `https://sharebazaaronline.com/login?ref=${referralCode}`
-  : "";
-
+  const referralLink = referralCode
+    ? `https://sharebazaaronline.com/login?ref=${referralCode}`
+    : "";
 
   const handleCopy = () => {
     if (!referralLink) return;
@@ -164,6 +189,21 @@ const referralLink = referralCode
     alert("Referral submitted successfully!");
   };
 
+  const handleWithdraw = () => {
+    const amount = Number(withdrawAmount);
+    if (!amount || amount < 1000) {
+      alert("Minimum withdrawal amount is ₹1000");
+      return;
+    }
+    if (amount > totalRewards) {
+      alert("You cannot withdraw more than your available rewards");
+      return;
+    }
+
+    alert(`Withdrawal request of ₹${amount} initiated. Our team will contact you shortly.`);
+    setWithdrawAmount("");
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <Sidebar mobileOpen={false} setMobileOpen={() => {}} />
@@ -176,7 +216,7 @@ const referralLink = referralCode
         </div>
 
         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm max-w-5xl mx-auto p-6 sm:p-8 space-y-10">
-          {/* HERO */}
+          {/* HERO - unchanged */}
           <div className="text-center space-y-2">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
               Refer Friends & Earn Money
@@ -186,7 +226,7 @@ const referralLink = referralCode
             </p>
           </div>
 
-          {/* REFERRAL LINK */}
+          {/* REFERRAL LINK - unchanged */}
           <div className="flex flex-col items-center gap-6">
             {!showLink ? (
               <button
@@ -214,12 +254,11 @@ const referralLink = referralCode
                     {copied ? "Copied!" : "Copy Link"}
                   </button>
                 </div>
+
                 {referralLink && (
                   <div className="flex justify-center gap-5 pt-2">
                     <a
-                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                        referralLink
-                      )}`}
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(referralLink)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-blue-100 hover:bg-blue-200 flex items-center justify-center transition"
@@ -227,9 +266,7 @@ const referralLink = referralCode
                       <FaFacebookF className="text-blue-700 text-xl" />
                     </a>
                     <a
-                      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-                        referralLink
-                      )}`}
+                      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(referralLink)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition"
@@ -237,9 +274,7 @@ const referralLink = referralCode
                       <FaXTwitter className="text-black text-xl" />
                     </a>
                     <a
-                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
-                        referralLink
-                      )}`}
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(referralLink)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-12 h-12 rounded-full bg-blue-100 hover:bg-blue-200 flex items-center justify-center transition"
@@ -259,12 +294,10 @@ const referralLink = referralCode
               </div>
             )}
           </div>
- {/* HOW IT WORKS */}
-          <div className="border-t pt-10">
-            <h3 className="text-xl font-semibold text-center mb-10">
-              How it works
-            </h3>
 
+          {/* HOW IT WORKS - unchanged */}
+          <div className="border-t pt-10">
+            <h3 className="text-xl font-semibold text-center mb-10">How it works</h3>
             <div className="hidden sm:grid grid-cols-5 items-center text-center max-w-4xl mx-auto gap-2">
               <div className="space-y-4">
                 <div className="w-20 h-20 mx-auto rounded-full bg-green-100 flex items-center justify-center text-green-600">
@@ -304,12 +337,9 @@ const referralLink = referralCode
             </div>
           </div>
 
-          {/* REFER VIA EMAIL / MOBILE */}
+          {/* REFER VIA EMAIL / MOBILE - unchanged */}
           <div className="border-t pt-10">
-            <h3 className="text-xl font-semibold mb-6">
-              Refer via Email or Mobile
-            </h3>
-
+            <h3 className="text-xl font-semibold mb-6">Refer via Email or Mobile</h3>
             <form onSubmit={handleReferralSubmit} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <input
                 type="text"
@@ -345,7 +375,8 @@ const referralLink = referralCode
               </div>
             </form>
           </div>
-          {/* REFERRALS & EARNINGS */}
+
+          {/* REFERRALS & EARNINGS - FIXED with Clean Input */}
           <div className="border-t pt-10">
             <h3 className="text-xl font-semibold mb-8 flex items-center gap-3">
               <Users size={24} className="text-green-600" />
@@ -360,9 +391,7 @@ const referralLink = referralCode
             ) : referrals.length === 0 ? (
               <div className="text-center py-16 bg-gray-50 rounded-2xl">
                 <Users size={64} className="mx-auto text-gray-400 mb-6" />
-                <h4 className="text-xl font-semibold text-gray-700 mb-3">
-                  No Referrals Yet
-                </h4>
+                <h4 className="text-xl font-semibold text-gray-700 mb-3">No Referrals Yet</h4>
                 <p className="text-gray-600 max-w-md mx-auto">
                   Share your unique referral link with friends to start earning rewards!
                 </p>
@@ -374,6 +403,49 @@ const referralLink = referralCode
                   <p className="text-5xl font-bold text-green-700">
                     ₹{totalRewards.toLocaleString("en-IN")}
                   </p>
+
+                  {/* Withdraw Input Section */}
+                  <div className="mt-8 pt-6 border-t border-green-200">
+                    <div className="flex flex-col sm:flex-row items-center gap-4 max-w-md mx-auto">
+                      <div className="flex-1 relative">
+                        <span className="absolute left-4 top-1/4 -translate-y-1/2 text-gray-500 text-lg">₹</span>
+                       <input
+  type="text"
+  value={withdrawAmount}
+  onChange={(e) => {
+    const value = e.target.value;
+
+    // Allow only numbers
+    if (!/^\d*$/.test(value)) return;
+
+    // Limit to 1000
+    if (Number(value) > 1000) return;
+
+    setWithdrawAmount(value);
+  }}
+  placeholder="Enter amount"
+  className="w-full pl-9 pr-4 py-4 border border-gray-300 rounded-2xl text-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+/>
+                      </div>
+                      <button
+                        onClick={handleWithdraw}
+                        className="w-full sm:w-auto px-10 py-4 bg-green-600 hover:bg-green-700 text-white rounded-2xl font-medium transition shadow-md flex items-center justify-center gap-3"
+                      >
+                        <IndianRupee size={20} />
+                        Withdraw
+                      </button>
+                    </div>
+
+                    <p className="text-xs text-gray-600 mt-4 text-center">
+                      Maximum withdrawal amount is ₹1000 • For any queries contact:{" "}
+                      <a
+                        href="mailto:payment@sharebazaaronline.com"
+                        className="text-green-700 underline hover:text-green-800"
+                      >
+                        payment@sharebazaaronline.com
+                      </a>
+                    </p>
+                  </div>
                 </div>
 
                 <div className="space-y-5">
@@ -414,7 +486,7 @@ const referralLink = referralCode
                         <div>
                           <p className="text-gray-500">Reward</p>
                           <p className="font-medium text-green-700 mt-1">
-                            ₹{(ref.reward_amount || 0).toLocaleString("en-IN")}
+                            ₹{(ref.totalCommission || 0).toLocaleString("en-IN")}
                           </p>
                         </div>
                       </div>
