@@ -65,23 +65,23 @@ const AdminUsers = () => {
             .select("*", { count: "exact", head: true })
             .eq("referrer_sb_user_id", profile.id);
 
-         const { data: referredUsers } = await supabase
-  .from("referrals")
-  .select(`
-    referred_name,
-    referred_email,
-    referred_mobile,
-    referred_sb_user_id,
-    reward_amount,
-    commission_earned,
-    status,
-    created_at,
-    profiles:referred_sb_user_id (
-      sb_user_id
-    )
-  `)
-  .eq("referrer_sb_user_id", profile.id)
-  .limit(10);
+          const { data: referredUsers } = await supabase
+            .from("referrals")
+            .select(`
+              referred_name,
+              referred_email,
+              referred_mobile,
+              referred_sb_user_id,
+              reward_amount,
+              commission_earned,
+              status,
+              created_at,
+              profiles:referred_sb_user_id (
+                sb_user_id
+              )
+            `)
+            .eq("referrer_sb_user_id", profile.id)
+            .limit(10);
 
           const { count: orderCount } = await supabase
             .from("orders")
@@ -123,34 +123,48 @@ const AdminUsers = () => {
                 account_holder_name: kycData.name_as_per_pan || kycData.name_as_per_demat || profile.full_name,
               }
             : null;
+            
 
-          return {
-            ...profile,
-            referralCount: referralCount || 0,
-           referredUsers: await Promise.all(
+// ✅ ADD HERE
+const referredUsersWithCommission = await Promise.all(
   (referredUsers || []).map(async (ref) => {
-    let totalCommission = 0;
+    let userId = ref.referred_sb_user_id;
 
-    if (ref.referred_sb_user_id) {
+    if (!userId && ref.referred_email) {
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("id")
+        .ilike("email", ref.referred_email.trim())
+        .maybeSingle();
+
+      userId = profile?.id;
+    }
+
+    let commission = 0;
+
+    if (userId) {
       const { data: orders } = await supabase
         .from("orders")
-        .select("price, quantity, total")
-        .eq("user_id", ref.referred_sb_user_id);
+        .select("total")
+        .eq("user_id", userId);
 
-      if (orders) {
-        totalCommission = orders.reduce((sum, o) => {
-          const amount = o.total || (o.price * o.quantity) || 0;
-          return sum + (amount * (profile.commission_rate || 0)) / 100;
-        }, 0);
-      }
+      commission = (orders || []).reduce(
+  (sum, o) =>
+    sum + ((Number(o.total) || 0) * (profile.commission_rate || 0) / 100),
+  0
+);
     }
 
     return {
       ...ref,
-      calculatedCommission: totalCommission,
+      calculatedCommission: commission,
     };
   })
-),
+);
+          return {
+            ...profile,
+            referralCount: referralCount || 0,
+           referredUsers: referredUsersWithCommission,
             orderCount: orderCount || 0,
             totalPortfolioValue: totalPortfolio,
             kycStatus,
@@ -172,49 +186,40 @@ const AdminUsers = () => {
   const toggleExpand = (userId) => {
     setExpandedUserId(expandedUserId === userId ? null : userId);
   };
-const updateCommissionRate = async (userId, newRatePercent) => {
-  const cleanPercent = Number(newRatePercent);
 
-  if (isNaN(cleanPercent)) return;
+  const updateCommissionRate = async (userId, newRatePercent) => {
+    const cleanPercent = Number(newRatePercent);
+    if (isNaN(cleanPercent)) return;
 
-  const newRate = cleanPercent; // ✅ store directly
+    const newRate = cleanPercent;
 
-  console.log("Updating:", userId, newRate);
+    const { data, error } = await supabase
+      .from("profiles")
+      .update({ commission_rate: newRate })
+      .eq("id", userId)
+      .select();
 
-  const { data, error } = await supabase
-    .from("profiles")
-    .update({ commission_rate: newRate })
-    .eq("id", userId)
-    .select();
+    if (error) {
+      console.error("❌ Update failed:", error);
+      return;
+    }
 
-  if (error) {
-    console.error("❌ Update failed:", error);
-    return;
-  }
+    if (data && data.length > 0) {
+      setUsers((prev) =>
+        prev.map((u) =>
+          u.id === userId
+            ? { ...u, commission_rate: data[0].commission_rate }
+            : u
+        )
+      );
+    }
+  };
 
-  console.log("✅ DB Updated:", data);
-
-  if (data && data.length > 0) {
-    setUsers((prev) =>
-      prev.map((u) =>
-        u.id === userId
-          ? { ...u, commission_rate: data[0].commission_rate }
-          : u
-      )
-    );
-  }
-};
-
-  const openReferredModal = async (referred, referrer) => {
-    const referredWithRate = {
-      ...referred,
-      commission_rate: referrer.commission_rate || 0.0025
-    };
-
-    setSelectedReferred(referredWithRate);
-    setModalLoading(true);
-    setReferredOrders([]);
-    setCurrentPage(1);
+ const openReferredModal = async (referred, referrer) => {
+  setSelectedReferred({
+    ...referred,
+    referrer,
+  })
 
     try {
       let userId = referred.referred_sb_user_id;
@@ -222,10 +227,10 @@ const updateCommissionRate = async (userId, newRatePercent) => {
       if (!userId && referred.referred_email) {
         const { data: profile } = await supabase
           .from("profiles")
-          .select("sb_user_id")
+          .select("id")
           .ilike("email", referred.referred_email.trim())
           .maybeSingle();
-        userId = profile?.sb_user_id;
+        userId = profile?.id;
       }
 
       if (!userId) return;
@@ -400,42 +405,40 @@ const updateCommissionRate = async (userId, newRatePercent) => {
                             {user.account_status ? user.account_status.toUpperCase() : "ACTIVE"}
                           </span>
                         </td>
-           <td className="px-4 py-5 text-center">
-  <div className="flex items-center justify-center gap-2">
-  <input
-  type="number"
-  step="0.01"
-  min="0"
-  max="100"
-  value={
-    editingRates[user.id] !== undefined
-      ? editingRates[user.id]
-      : user.commission_rate
-  }
-  onChange={(e) => {
-    const val = e.target.value;
-    setEditingRates((prev) => ({
-      ...prev,
-      [user.id]: val,
-    }));
-  }}
-  onBlur={async (e) => {
-    const val = parseFloat(e.target.value);
-
-    if (!isNaN(val)) {
-      await updateCommissionRate(user.id, val);
-    }
-
-    setEditingRates((prev) => {
-      const copy = { ...prev };
-      delete copy[user.id];
-      return copy;
-    });
-  }}
-/>
-    <span className="text-xs text-gray-500 font-medium">%</span>
-  </div>
-</td>
+                        <td className="px-4 py-5 text-center">
+                          <div className="flex items-center justify-center gap-2">
+                            <input
+                              type="number"
+                              step="0.01"
+                              min="0"
+                              max="100"
+                              value={
+                                editingRates[user.id] !== undefined
+                                  ? editingRates[user.id]
+                                  : user.commission_rate
+                              }
+                              onChange={(e) => {
+                                const val = e.target.value;
+                                setEditingRates((prev) => ({
+                                  ...prev,
+                                  [user.id]: val,
+                                }));
+                              }}
+                              onBlur={async (e) => {
+                                const val = parseFloat(e.target.value);
+                                if (!isNaN(val)) {
+                                  await updateCommissionRate(user.id, val);
+                                }
+                                setEditingRates((prev) => {
+                                  const copy = { ...prev };
+                                  delete copy[user.id];
+                                  return copy;
+                                });
+                              }}
+                            />
+                            <span className="text-xs text-gray-500 font-medium">%</span>
+                          </div>
+                        </td>
                         <td className="px-4 py-5 text-center"></td>
                       </tr>
 
@@ -564,14 +567,15 @@ const updateCommissionRate = async (userId, newRatePercent) => {
                                           {ref.referred_name || "Unnamed User"}
                                         </div>
                                         <div className="text-sm text-gray-600 mt-3">
-                                         SB ID: {ref.profiles?.sb_user_id || "Not Registered"}
+                                          SB ID:{ref.profiles?.sb_user_id || "Not Registered"}
+
                                         </div>
                                         {ref.referred_email && (
                                           <div className="text-xs text-gray-500 mt-2 truncate">{ref.referred_email}</div>
                                         )}
                                         <div className="mt-6 flex items-center justify-between text-xs">
                                           <span className="text-emerald-600 font-medium">
-                                           Commission: ₹{ref.calculatedCommission?.toFixed(2) || 0}
+                                          ₹{Number(ref.calculatedCommission || 0).toFixed(2)}
                                           </span>
                                           <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-2xl font-medium">
                                             {ref.status || "Pending"}
@@ -595,7 +599,7 @@ const updateCommissionRate = async (userId, newRatePercent) => {
         </div>
       </main>
 
-      {/* Referred User Modal - Commission Earned now uses latest rate */}
+      {/* Referred User Modal - FIXED: Use pre-calculated commission_amount */}
       {selectedReferred && (
         <div className="fixed inset-0 z-[200] flex items-start justify-center bg-black/70 px-4 pt-24 pb-8 overflow-y-auto">
           <div className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[70vh] flex flex-col mx-auto">
@@ -620,16 +624,9 @@ const updateCommissionRate = async (userId, newRatePercent) => {
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600">Commission Earned</span>
                       <span className="text-md font-semibold text-emerald-700">
-                        ₹{referredOrders.reduce((sum, o) => {
-                          const amount = o.total || (o.price * o.quantity) || 0;
-                          // Use latest commission rate from users array
-                          const currentUser = users.find(
-  u => u.sb_user_id === selectedReferred.referred_sb_user_id
-) || selectedReferred;
-                          const rate = currentUser.commission_rate || 0;
-return sum + (amount * rate) / 100;
-                        }, 0).toFixed(2)}
-                      </span>
+                   ₹{referredOrders.reduce((sum, o) => 
+  sum + ((Number(o.total) || 0) * ((selectedReferred?.referrer?.commission_rate || 0) / 100)),
+0).toFixed(2)}  </span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600">Referral Date</span>
@@ -699,7 +696,7 @@ return sum + (amount * rate) / 100;
                                   </span>
                                 </td>
                                 <td className="px-4 py-4 text-right font-medium text-emerald-700">
-                                  ₹{(order.commission_amount || 0).toLocaleString("en-IN")}
+                               ₹{((order.total || 0) * (selectedReferred?.referrer?.commission_rate || 0)).toLocaleString("en-IN")}
                                 </td>
                                 <td className="px-4 py-4 text-right text-xs text-gray-500 whitespace-nowrap">
                                   {new Date(order.created_at).toLocaleDateString("en-IN")}
@@ -736,7 +733,7 @@ return sum + (amount * rate) / 100;
         </div>
       )}
 
-      {/* Main User Orders Modal */}
+      {/* Main User Orders Modal - unchanged */}
       {selectedMainUser && (
         <div className="fixed inset-0 z-[200] flex items-start justify-center bg-black/70 px-4 pt-24 pb-8 overflow-y-auto">
           <div className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[70vh] flex flex-col mx-auto">

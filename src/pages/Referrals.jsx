@@ -33,7 +33,7 @@ const Referrals = () => {
   const [referrals, setReferrals] = useState([]);
   const [totalRewards, setTotalRewards] = useState(0);
   const [loading, setLoading] = useState(true);
-
+const [commissionRate, setCommissionRate] = useState(0);
   const [referralName, setReferralName] = useState("");
   const [referralEmail, setReferralEmail] = useState("");
   const [referralMobile, setReferralMobile] = useState("");
@@ -41,63 +41,74 @@ const Referrals = () => {
   // Withdraw input
   const [withdrawAmount, setWithdrawAmount] = useState("");
 
-  const fetchReferrals = async (userId) => {
-    setLoading(true);
+  const fetchReferrals = async (userId, commissionRate) => {
+  setLoading(true);
 
-    try {
-      const { data: refData, error: refError } = await supabase
-        .from("referrals")
-        .select(`
-          *,
-          profiles:referred_sb_user_id (commission_rate)
-        `)
-        .eq("referrer_sb_user_id", userId)
-        .order("created_at", { ascending: false });
+  try {
+    const { data: refData, error: refError } = await supabase
+      .from("referrals")
+      .select(`
+        *,
+        profiles:referred_sb_user_id ( id )
+      `)
+      .eq("referrer_sb_user_id", userId)
+      .order("created_at", { ascending: false });
 
-      if (refError) throw refError;
+    if (refError) throw refError;
 
-      const enrichedReferrals = await Promise.all(
-        (refData || []).map(async (ref) => {
-          const { data: ordersData } = await supabase
+    const enrichedReferrals = await Promise.all(
+      (refData || []).map(async (ref) => {
+        let userId = ref.referred_sb_user_id;
+
+        // fallback using email
+        if (!userId && ref.referred_email) {
+          const { data: profile } = await supabase
+            .from("profiles")
+            .select("id")
+            .ilike("email", ref.referred_email.trim())
+            .maybeSingle();
+
+          userId = profile?.id;
+        }
+
+        let commission = 0;
+
+        if (userId) {
+          const { data: orders } = await supabase
             .from("orders")
-            .select("price, quantity, total")
-            .eq("user_id", ref.referred_sb_user_id);
+            .select("total")
+            .eq("user_id", userId);
 
-          const commissionRate = ref.profiles?.commission_rate || 0.0025;
+          commission = (orders || []).reduce(
+            (sum, o) => sum + ((Number(o.total) || 0) * commissionRate),
+            0
+          );
+        }
 
-          let totalCommission = 0;
+        return {
+          ...ref,
+          totalCommission: commission,
+        };
+      })
+    );
 
-          if (ordersData && ordersData.length > 0) {
-            totalCommission = ordersData.reduce((sum, o) => {
-              // EXACT SAME CALCULATION AS ADMINUSERS
-              const amount = o.total || (o.price * (o.quantity || 0)) || 0;
-              return sum + (amount * commissionRate) / 100;
-            }, 0);
-          }
+    setReferrals(enrichedReferrals);
 
-          return {
-            ...ref,
-            totalCommission: Math.round(totalCommission * 100) / 100,
-          };
-        })
-      );
+    const grandTotal = enrichedReferrals.reduce(
+      (acc, r) => acc + (Number(r.totalCommission) || 0),
+      0
+    );
 
-      setReferrals(enrichedReferrals);
+    setTotalRewards(Math.round(grandTotal * 100) / 100);
 
-      const grandTotal = enrichedReferrals.reduce(
-        (acc, r) => acc + (Number(r.totalCommission) || 0),
-        0
-      );
-      setTotalRewards(Math.round(grandTotal * 100) / 100);
-
-    } catch (err) {
-      console.error("Referrals fetch error:", err);
-      setReferrals([]);
-      setTotalRewards(0);
-    } finally {
-      setLoading(false);
-    }
-  };
+  } catch (err) {
+    console.error("Referrals fetch error:", err);
+    setReferrals([]);
+    setTotalRewards(0);
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
     const init = async () => {
@@ -115,13 +126,13 @@ const Referrals = () => {
       const userId = user.id;
 
       const { data: profileData } = await supabase
-        .from("profiles")
-        .select("sb_user_id")
+  .from("profiles")
+  .select("sb_user_id, commission_rate")
         .eq("id", userId)
         .single();
 
       let code = profileData?.sb_user_id;
-
+const commissionRate = (profileData?.commission_rate || 0) / 100;
       if (!code) {
         code = generateShortId(userId);
         await supabase
@@ -131,7 +142,10 @@ const Referrals = () => {
       }
 
       setReferralCode(code);
-      await fetchReferrals(userId);
+      const rate = (profileData?.commission_rate || 0) / 100;
+setCommissionRate(rate);
+
+     await fetchReferrals(userId, commissionRate); 
     };
 
     init();
@@ -167,7 +181,7 @@ const Referrals = () => {
     if (!user) return;
 
     const { error } = await supabase.from("referrals").insert({
-      referrer_id: user.id,
+       referrer_sb_user_id: user.id,
       referred_name: referralName,
       referred_email: referralEmail || null,
       referred_mobile: referralMobile,
@@ -181,8 +195,7 @@ const Referrals = () => {
       return;
     }
 
-    await fetchReferrals(user.id);
-
+await fetchReferrals(user.id, commissionRate);
     setReferralName("");
     setReferralEmail("");
     setReferralMobile("");
