@@ -13794,7 +13794,7 @@ export const fetchPreIPOs = async () => {
   {
     "id": 2,
     "name": "ASK Investment Managers Limited",
-    "price": 1407,
+    "price": 945,
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
@@ -13803,7 +13803,7 @@ export const fetchPreIPOs = async () => {
   {
     "id": 3,
     "name": "Amol Minechem Limited",
-    "price": 1125,
+    "price": 900,
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
@@ -13812,7 +13812,7 @@ export const fetchPreIPOs = async () => {
   {
     "id": 4,
     "name": "Anheuser Busch Inbev (Sabmiller) India Limited Unlisted Shares",
-    "price": 688,
+    "price": 495,
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
@@ -15647,6 +15647,389 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
   "managementInsight": "The leadership team brings extensive experience in lead manufacturing, supply chain management, and client relationship handling. Their strategy focuses on maintaining quality, operational efficiency, and long-term client partnerships in a volatile commodity market. Corporate governance appears standard for an unlisted entity with promoter-driven decision making."
 },
+{
+  "id": 2,
+  "name": "ASK Investment Managers Limited",
+  "price": 945,
+  "logo": "/images/preipo/image2.png",
+
+  "overview": `ASK Investment Managers Limited is one of India's leading discretionary Portfolio Management Services (PMS) and Alternative Investment Fund (AIF) managers. Founded in 2004, the company specializes in listed equity investments with a focus on high-conviction, long-term wealth creation for HNIs, UHNIs, family offices, and institutions. It is backed by Blackstone (majority stakeholder). ASKIM is known for its disciplined investment process, strong risk management, and consistent risk-adjusted returns. The company manages significant AUM through segregated PMS accounts and AIFs.`,
+
+  "products": [
+    "Discretionary PMS",
+    "Category III AIFs",
+    "Equity Investment Strategies",
+    "Wealth Management Solutions"
+  ],
+
+  "manufacturingUnits": [
+    "Mumbai - Head Office (Maharashtra)",
+    "GIFT City - International Operations (Gujarat)"
+  ],
+
+  "clients": [
+    "High Net Worth Individuals (HNIs)",
+    "Ultra High Net Worth Individuals (UHNIs)",
+    "Family Offices",
+    "Institutions & Endowments"
+  ],
+
+  "shareDetails": {
+    "companyName": "ASK Investment Managers Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹945",
+    "marketCapitalization": "₹8,233 Crore (Approx.)",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹1,395",
+    "52WeekLow": "₹925",
+    "faceValue": "₹2",
+    "bookValue": "₹208",
+    "peRatio": "18.58",
+    "pbRatio": "4.5",
+    "debtToEquity": "0.02",
+    "returnOnEquity": "25+",
+    "totalOutstandingShares": "87,125,755",
+    "isin": "INE925L01025",
+    "depository": "NSDL & CDSL",
+    "pan": "AAFCA2302P",
+    "cin": "U65993MH2004PLC147890",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Strong profitability with high margins typical of asset management business. Revenue stable with marginal decline in FY25, but PAT improved due to lower tax and better other income. Excellent ROE and negligible debt highlight financial strength.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 909, "fy23": 936, "fy24": 1063, "fy25": 1038 },
+      { "label": "EBITDA", "fy22": 391, "fy23": 421, "fy24": 471, "fy25": 376 },
+      { "label": "EBIT", "fy22": 376, "fy23": 405, "fy24": 461, "fy25": 360 },
+      { "label": "PBT", "fy22": 406, "fy23": 439, "fy24": 516, "fy25": 429 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 310, "fy23": 335, "fy24": 403, "fy25": 443 },
+      { "label": "EPS", "fy22": 37.78, "fy23": 40.02, "fy24": 47.78, "fy25": 50.86 }
+    ],
+
+    "keyRatios": [
+      { "label": "Net Profit Margin (%)", "fy22": 34.1, "fy23": 35.79, "fy24": 37.91, "fy25": 42.68 },
+      { "label": "EBITDA Margin (%)", "fy22": 43.01, "fy23": 44.98, "fy24": 44.31, "fy25": 36.22 },
+      { "label": "Debt-to-Equity", "fy22": "Negligible", "fy23": "0", "fy24": "0", "fy25": "0.02" },
+      { "label": "EPS", "fy22": 37.78, "fy23": 40.02, "fy24": 47.78, "fy25": 50.86 }
+    ],
+
+    "investorInsight": [
+      "High-margin, annuity-based revenue model with strong cash conversion.",
+      "PAT grew steadily; FY25 showed improved bottom line despite slight revenue dip.",
+      "Negligible debt and robust balance sheet position the company well for growth.",
+      "Valuations remain attractive for a premium asset management franchise."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 34, "fy23": 29, "fy24": 25, "fy25": 19 },
+      { "label": "Investments", "fy22": 621, "fy23": 895, "fy24": 1127, "fy25": 1393 },
+      { "label": "Trade Receivables", "fy22": 232, "fy23": 210, "fy24": 225, "fy25": 169 },
+      { "label": "Other Assets", "fy22": 397, "fy23": 760, "fy24": 754, "fy25": 618.61 },
+      { "label": "Total Assets", "fy22": 1285, "fy23": 1895, "fy24": 2131, "fy25": 2200 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 16.41, "fy23": 16.74, "fy24": 16.87, "fy25": 17.42 },
+      { "label": "Reserves & Surplus", "fy22": 1045, "fy23": 1372, "fy24": 1542, "fy25": 1796 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables & Other Liabilities", "fy22": 223.59, "fy23": 506.26, "fy24": 572.13, "fy25": 386.58 },
+      { "label": "Total Liabilities & Equity", "fy22": 1285, "fy23": 1895, "fy24": 2131, "fy25": 2200 }
+    ],
+    "insights": "Strong growth in investments and reserves. Debt-free balance sheet with high liquidity."
+  },
+
+  "liabilitiesBreakdown": "Minimal borrowings. Liabilities mainly consist of trade payables and operational provisions.",
+
+  "balanceSheetInsights": "Extremely healthy and liquid balance sheet. Equity-heavy with significant reserves supporting future growth and dividend payouts.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 363, "fy23": 390, "fy24": 511, "fy25": 211 },
+      { "label": "Investing Cash Flow", "fy22": -196, "fy23": -274, "fy24": -257, "fy25": -60 },
+      { "label": "Financing Cash Flow", "fy22": -178, "fy23": -12, "fy24": -234, "fy25": -167 }
+    ],
+    "insights": [
+      "Consistent positive operating cash flows driven by core fee income.",
+      "Financing cash flows reflect regular dividend distributions.",
+      "Strong cash generation supports business scalability."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "~17-82% (Blackstone majority + founders)", "institutional": "High (Blackstone)", "public": "Minimal" }
+  ],
+
+  "promotersManagement": "Blackstone holds majority stake. Professional management with deep experience in asset & wealth management.",
+
+  "management": [
+    { "name": "Sunil Rohokale", "role": "MD & CEO", "experience": "30+ Years" },
+    { "name": "Bharat Shah", "role": "Whole-time Director", "experience": "30+ Years" },
+    { "name": "Sumit Jain", "role": "Chief Investment Officer", "experience": "20+ Years" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Experienced leadership focused on delivering superior risk-adjusted returns and client-centric solutions in the Indian equity market."
+},
+{
+  "id": 3,
+  "name": "Amol Minechem Limited",
+  "price": 900,
+  "logo": "/images/preipo/image3.jpg",
+
+  "overview": `Amol Minechem Limited (formerly Amol Dicalite Limited) is India's leading and pioneering manufacturer of Perlite products since 1979. The company is the largest producer of Perlite Filter Aid and other Perlite-based products in India. It specializes in manufacturing a wide range of Perlite products used in filtration, cryogenic insulation, horticulture, construction, and industrial applications. The company operates a state-of-the-art manufacturing facility at Kadi, Gujarat.`,
+
+  "products": [
+    "Perlite Ore",
+    "Expanded Perlite",
+    "Perlite Filteraid",
+    "Cryogenic Perlite",
+    "Thermal Insulation Perlite",
+    "Horticulture Perlite",
+    "Construction Grade Perlite"
+  ],
+
+  "manufacturingUnits": [
+    "Kadi, Mehsana District, Gujarat"
+  ],
+
+  "clients": [
+    "Filtration Industry (Beverages, Pharmaceuticals, Chemicals)",
+    "Cryogenic & Industrial Insulation",
+    "Horticulture & Agriculture",
+    "Oil & Gas, Construction & Refractories"
+  ],
+
+  "shareDetails": {
+    "companyName": "Amol Minechem Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹900",
+    "marketCapitalization": "₹74 Crore (Approx.)",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹1,075",
+    "52WeekLow": "₹900",
+    "faceValue": "₹10",
+    "bookValue": "₹846",
+    "peRatio": "11.85",
+    "pbRatio": "1.06",
+    "debtToEquity": "0.09",
+    "returnOnEquity": "8.97",
+    "totalOutstandingShares": "8,19,135",
+    "isin": "INE404C01012",
+    "depository": "NSDL & CDSL",
+    "pan": "AABCA2807K",
+    "cin": "U14100GJ1979PLC003439",
+    "rta": "MUFG Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Revenue has shown steady growth from ₹43 Cr in FY22 to ₹63 Cr in FY25. Profitability peaked in FY23-FY24 but moderated in FY25 due to higher employee and raw material costs. The company maintains a strong balance sheet with low debt and healthy reserves.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 4323, "fy23": 5780, "fy24": 6215, "fy25": 6292 },
+      { "label": "EBITDA", "fy22": 235, "fy23": 874, "fy24": 1244, "fy25": 442 },
+      { "label": "EBIT", "fy22": 162, "fy23": 809, "fy24": 1188, "fy25": 376 },
+      { "label": "PBT", "fy22": 378, "fy23": 1089, "fy24": 1690, "fy25": 830 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 282, "fy23": 1286, "fy24": 1184, "fy25": 622 },
+      { "label": "EPS", "fy22": 41.65, "fy23": 157.02, "fy24": 144.57, "fy25": 75.94 }
+    ],
+
+    "keyRatios": [
+      { "label": "Net Profit Margin (%)", "fy22": 6.52, "fy23": 22.25, "fy24": 19.05, "fy25": 9.89 },
+      { "label": "EBITDA Margin (%)", "fy22": 5.44, "fy23": 15.12, "fy24": 20.02, "fy25": 7.02 },
+      { "label": "Debt-to-Equity", "fy22": "Low", "fy23": "Low", "fy24": "Low", "fy25": "0.09" },
+      { "label": "EPS", "fy22": 41.65, "fy23": 157.02, "fy24": 144.57, "fy25": 75.94 }
+    ],
+
+    "investorInsight": [
+      "Steady revenue growth driven by strong demand for Perlite products.",
+      "Peak profitability in FY24 followed by margin compression in FY25 due to cost pressures.",
+      "Low debt and robust reserves provide financial stability.",
+      "Niche market leadership supports long-term prospects in specialty minerals."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 440, "fy23": 394, "fy24": 356, "fy25": 520 },
+      { "label": "Investments", "fy22": 144, "fy23": 220, "fy24": 354, "fy25": 392 },
+      { "label": "Trade Receivables", "fy22": 974, "fy23": 877, "fy24": 1379, "fy25": 1295 },
+      { "label": "Inventory", "fy22": 674, "fy23": 671, "fy24": 490, "fy25": 516 },
+      { "label": "Other Assets", "fy22": 3667, "fy23": 4590, "fy24": 5298, "fy25": 5560 },
+      { "label": "Total Assets", "fy22": 5899, "fy23": 6752, "fy24": 7877, "fy25": 8283 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 67.7, "fy23": 81.9, "fy24": 81.9, "fy25": 81.91 },
+      { "label": "Reserves & Surplus", "fy22": 3944, "fy23": 5140, "fy24": 6293, "fy25": 6849 },
+      { "label": "Borrowings", "fy22": "Low", "fy23": "Low", "fy24": "Low", "fy25": "Low" },
+      { "label": "Total Equity & Liabilities", "fy22": 5899, "fy23": 6752, "fy24": 7877, "fy25": 8283 }
+    ],
+    "insights": "Strong equity base with reserves growing consistently. Asset growth supported by other assets and receivables."
+  },
+
+  "liabilitiesBreakdown": "Low borrowings with debt-to-equity ratio of 0.09. Liabilities are primarily operational (trade payables and provisions).",
+
+  "balanceSheetInsights": "Extremely healthy, equity-heavy, and low-leverage balance sheet with significant reserves and strong liquidity.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": "Positive", "fy23": "Positive", "fy24": "Positive", "fy25": "Positive" },
+      { "label": "Investing Cash Flow", "fy22": "-", "fy23": "-", "fy24": "-", "fy25": "-" },
+      { "label": "Financing Cash Flow", "fy22": -31, "fy23": -596, "fy24": -78, "fy25": -116 }
+    ],
+    "insights": [
+      "Consistent positive operating cash flows.",
+      "Financing cash flows reflect dividend payouts.",
+      "Stable cash position maintained."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Promoter & Promoter Group)", "institutional": "Minimal", "public": "Low" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with deep domain expertise in Perlite manufacturing and minerals processing.",
+
+  "management": [
+    { "name": "Shreyas C. Sheth", "role": "Chairman & Managing Director", "experience": "40+ Years" },
+    { "name": "Priti S. Sheth", "role": "Director", "experience": "25+ Years" },
+    { "name": "Naishadh I. Parikh", "role": "Director", "experience": "25+ Years" }
+  ],
+
+  "rta": {
+    "registrar": "MUFG Intime India Private Limited",
+    "website": "https://www.in.mpms.mufg.com/"
+  },
+
+  "managementInsight": "Experienced leadership team with strong focus on operational excellence, quality, and maintaining leadership in the Indian Perlite market."
+},
+{
+  "id": 4,
+  "name": "Anheuser-Busch InBev SABMiller India Limited",
+  "price": 495,
+  "logo": "/images/preipo/image4.png",
+
+  "overview": `Anheuser-Busch InBev SABMiller India Limited (formerly SABMiller India Limited) is a subsidiary of the global brewing leader Anheuser-Busch InBev. The company manufactures and markets a premium portfolio of beer brands including Budweiser, Corona, Stella Artois, Hoegaarden, Beck's and others. It operates through owned and contract breweries across India and is focused on premiumisation and expanding market share in the fast-growing Indian beer industry.`,
+
+  "products": [
+    "Budweiser",
+    "Corona",
+    "Stella Artois",
+    "Hoegaarden",
+    "Beck's",
+    "Other Premium Beers"
+  ],
+
+  "manufacturingUnits": [
+    "Multiple Owned and Contract Breweries across India"
+  ],
+
+  "clients": [
+    "Distributors & Retail Partners (On-Premise & Off-Premise)"
+  ],
+
+  "shareDetails": {
+    "companyName": "Anheuser-Busch InBev SABMiller India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹495",
+    "marketCapitalization": "₹45,956 Crore (Approx.)",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹620",
+    "52WeekLow": "₹350",
+    "faceValue": "₹10",
+    "bookValue": "₹2.37",
+    "peRatio": "-65.2",
+    "pbRatio": "High (Negative due to accumulated losses)",
+    "debtToEquity": "High",
+    "returnOnEquity": "Negative",
+    "totalOutstandingShares": "1,01,64,31,695",
+    "isin": "INE038G01019",
+    "depository": "NSDL & CDSL",
+    "pan": "AAICS2238R",
+    "cin": "U15511KA1988PLC009325",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Steady revenue growth over the years but continued losses due to high operating and marketing expenses. EBITDA improved sharply in FY25, nearing breakeven. Operations are strongly supported by the global parent AB InBev.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 3608, "fy23": 6177, "fy24": 7302, "fy25": 7891 },
+      { "label": "EBITDA", "fy22": -207, "fy23": -230, "fy24": -286, "fy25": -22 },
+      { "label": "EBIT", "fy22": -433, "fy23": -417, "fy24": -484, "fy25": -242 },
+      { "label": "PBT", "fy22": -365, "fy23": -438, "fy24": -591, "fy25": -356 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -365, "fy23": -438, "fy24": -591, "fy25": -356 },
+      { "label": "EPS", "fy22": -4.07, "fy23": -4.72, "fy24": -6.37, "fy25": -3.50 }
+    ],
+
+    "keyRatios": [
+      { "label": "Net Profit Margin (%)", "fy22": -10.12, "fy23": -7.09, "fy24": -8.09, "fy25": -4.51 },
+      { "label": "EBITDA Margin (%)", "fy22": -5.74, "fy23": -3.72, "fy24": -3.92, "fy25": -0.28 },
+      { "label": "EPS", "fy22": -4.07, "fy23": -4.72, "fy24": -6.37, "fy25": -3.50 }
+    ],
+
+    "investorInsight": [
+      "Consistent revenue growth driven by premium beer demand.",
+      "Significant EBITDA improvement in FY25 (near breakeven).",
+      "Losses reduced in FY25 due to better cost management.",
+      "Strong brand value and parent backing support long-term potential."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 1180, "fy23": 1094, "fy24": 1058, "fy25": 1123 },
+      { "label": "CWIP", "fy22": 14.3, "fy23": 80.5, "fy24": 3, "fy25": 61 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 1, "fy25": 1 },
+      { "label": "Trade Receivables", "fy22": 440, "fy23": 614, "fy24": 617, "fy25": 643 },
+      { "label": "Inventory", "fy22": 610, "fy23": 1046, "fy24": 799, "fy25": 867 },
+      { "label": "Other Assets", "fy22": 433.9, "fy23": 554, "fy24": 900, "fy25": 998 },
+      { "label": "Total Assets", "fy22": 2678.2, "fy23": 3388.5, "fy24": 3378, "fy25": 3693 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 897, "fy23": 928.4, "fy24": 928.4, "fy25": 1016.4 },
+      { "label": "Reserves", "fy22": 55.2, "fy23": -190, "fy24": -779, "fy25": -776 },
+      { "label": "Borrowings", "fy22": 347, "fy23": 926, "fy24": 1589, "fy25": 1665 },
+      { "label": "Trade Payables", "fy22": 583, "fy23": 852, "fy24": 754, "fy25": 910 },
+      { "label": "Other Liabilities", "fy22": 796, "fy23": 872.1, "fy24": 885.6, "fy25": 877.6 },
+      { "label": "Total Liabilities", "fy22": 2678.2, "fy23": 3388.5, "fy24": 3378, "fy25": 3693 }
+    ],
+    "insights": "Net worth remains low due to accumulated losses. Borrowings have increased significantly to support operations."
+  },
+
+  "liabilitiesBreakdown": "High borrowings (₹1665 Cr in FY25). Negative reserves due to continuous losses. Share capital increased in FY25 through preferential allotment.",
+
+  "balanceSheetInsights": "Asset base growing with inventory and other assets. Weak equity position offset by strong parent company support.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Operating cash flow showed improvement in FY25.",
+      "Financing activities supported by parent infusions and increased borrowings."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "99.67%", "institutional": "Minimal", "public": "0.33%" }
+  ],
+
+  "promotersManagement": "Majority owned by Anheuser-Busch InBev (global leader).",
+
+  "management": [
+    { "name": "Mahesh Kumar Mittal", "role": "Whole Time Director", "experience": "Senior AB InBev leadership" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Professional management backed by global AB InBev expertise, focusing on premium beer growth, operational efficiency, and market expansion in India."
+},
+
    {
   "id": 109,
   "name": "OYO (Oravel Stays Limited)",
