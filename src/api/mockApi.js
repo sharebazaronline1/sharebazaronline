@@ -13772,6 +13772,206 @@ export const fetchIPOs = async () => {
     "prospectus_pdf": "N/A",
     "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/safety-control-devices-ipo-anchor-allocation-letter.pdf"
   }
+},
+
+{
+  "id": 70,
+  "name": "Om Power Transmission",
+  "logo": "/images/ipo/ompowertransmission.png",
+  "minInvestment": "₹14,875",
+  "open": "09 Apr 2026",
+  "close": "13 Apr 2026",
+  "listing": "17 Apr 2026",
+  "price": "₹166 – ₹175",
+  "lot": 85,
+
+  "about_company": {
+    "company_name": "Om Power Transmission Limited",
+    "industry_sector": "Power Transmission Infrastructure EPC",
+    "founded_year": "2011",
+    "promoters": [
+      "Kalpesh Dhanjibhai Patel",
+      "Kanubhai Patel",
+      "Vasantkumar Narayanbhai Patel"
+    ],
+    "description": "Om Power Transmission Limited is an EPC company with over 14 years of experience in high-voltage (HV) and extra-high voltage (EHV) transmission lines, substations, and underground cabling projects on a turnkey basis. It provides design, engineering, supply, erection, installation, testing, commissioning, and O&M services. The company holds ISO 9001:2015, ISO 45001:2018, and ISO 14001:2015 certifications. As of December 31, 2025, it had an unexecuted order book of ₹744.60 Cr across 58 projects and was operating & maintaining 124 substations. It had 1,164 permanent employees."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Om Power Transmission Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹166",
+    "price_band_max": "₹175",
+    "lot_size": 85,
+    "total_issue_size": "₹150.06 Cr (85,75,000 shares)",
+    "fresh_issue_size": "₹132.56 Cr (75,75,000 shares)",
+    "offer_for_sale": "₹17.50 Cr (10,00,000 shares)",
+    "shares_offered": "85,75,000 shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹175",
+    "minimum_investment": "₹14,875 (1 lot at upper band)",
+    "market_cap_post_issue": "Pre-IPO ₹599.29 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters 92.26%",
+    "post_issue_shareholding": "Promoters 68.92%"
+  },
+
+  "company_overview": {
+    "business_model": "EPC contractor specializing in HV/EHV transmission lines, substations, and underground cabling projects with full turnkey and O&M services.",
+    "products_services": [
+      "HV/EHV Transmission Line EPC Projects",
+      "Substation EPC Projects",
+      "Underground Cable Projects",
+      "Operation & Maintenance Services"
+    ],
+    "competitive_strengths": [
+      "Strong execution capabilities and timely project completion",
+      "Large unexecuted order book of ₹744.60 Cr",
+      "Strong and consistent financial performance",
+      "Experienced promoters and senior management with domain knowledge"
+    ],
+    "risks": [
+      "Dependence on government/power sector tenders",
+      "Project execution delays",
+      "Raw material price volatility",
+      "Competition in transmission EPC segment"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "09 Apr 2026",
+    "ipo_close_date": "13 Apr 2026",
+    "anchor_bid_date": "08 Apr 2026",
+    "basis_of_allotment_date": "15 Apr 2026",
+    "refund_initiation_date": "16 Apr 2026",
+    "demat_credit_date": "16 Apr 2026",
+    "listing_date": "17 Apr 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_capital_expenditure": "₹11.21 Cr",
+    "repayment_of_borrowings": "₹25.00 Cr",
+    "funding_working_capital": "₹55.00 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50% (incl. Anchor)",
+    "retail_quota": "35%",
+    "hni_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "85",
+      "amount": "₹14,875"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "1,105",
+      "amount": "₹1,93,375"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "1,190",
+      "amount": "₹2,08,250"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 lots",
+      "shares": "5,780",
+      "amount": "₹10,11,500"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "24.28% (31 Dec 2025)",
+    "roce": "26.53% (31 Dec 2025)",
+    "pat_margin": "8.45% (31 Dec 2025)",
+    "ebitda_margin": "12.38% (31 Dec 2025)",
+    "debt_to_equity": "0.32 (31 Dec 2025)",
+    "eps": "₹8.28 (pre-IPO)",
+    "pe_ratio": "21.13x (pre-IPO)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "₹105.14 Cr",
+      "total_income": "₹121.71 Cr",
+      "pat": "₹6.23 Cr",
+      "ebitda": "₹11.93 Cr",
+      "net_worth": "₹43.36 Cr",
+      "total_borrowing": "₹25.57 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "₹117.85 Cr",
+      "total_income": "₹184.39 Cr",
+      "pat": "₹7.41 Cr",
+      "ebitda": "₹14.47 Cr",
+      "net_worth": "₹50.64 Cr",
+      "total_borrowing": "₹26.23 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "₹150.17 Cr",
+      "total_income": "₹281.65 Cr",
+      "pat": "₹22.08 Cr",
+      "ebitda": "₹35.66 Cr",
+      "net_worth": "₹72.65 Cr",
+      "total_borrowing": "₹18.90 Cr"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "₹240.06 Cr",
+      "total_income": "₹276.50 Cr",
+      "pat": "₹23.37 Cr",
+      "ebitda": "₹34.24 Cr",
+      "net_worth": "₹119.84 Cr",
+      "total_borrowing": "₹38.47 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹1.5 – ₹2 (~0.86% – 1.14%)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "08 Apr 2026",
+    "estimated_listing_price": "₹176.5 – ₹177"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 09 Apr 2026)",
+    "anchor": "Fully subscribed (25,72,270 shares @ ₹175 = ₹45.01 Cr)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Beeline Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "703 to 706, 7th Floor, Fortune Business Hub, Nr. Shell Petrol Pump, Science City Road, Sola, Ahmedabad, Gujarat 380060",
+    "company_website": "https://www.ompowertransmission.com/",
+    "company_email": "cs@optl.in",
+    "company_phone": "+91 75748 80021"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.bseindia.com/downloads/ipo/Surat%20Municipal%20Corporation-%20Offer%20Document%20dated%20September%2018,%202025_20250925190011_011020252305.pdf",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_OMPOWER.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/anchor_allocation-om-power-transmission.pdf"
+  }
 }
 
 
