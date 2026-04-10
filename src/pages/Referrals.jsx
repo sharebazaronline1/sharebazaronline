@@ -461,50 +461,48 @@ await fetchReferrals(user.id, commissionRate);
                   </div>
                 </div>
 
-                <div className="space-y-5">
-                  {referrals.map((ref, index) => (
-                    <div
-                      key={index}
-                      className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-all"
-                    >
-                      <div className="flex items-center gap-5">
-                        <div className="w-14 h-14 rounded-full bg-gradient-to-br from-indigo-100 to-blue-100 flex items-center justify-center text-indigo-700 font-bold text-2xl shrink-0">
-                          {ref.referred_name?.charAt(0).toUpperCase() || "?"}
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-lg font-semibold text-gray-900">
-                            {ref.referred_name || "New Friend"}
-                          </p>
-                          <p className="text-sm text-gray-600 mt-1">
-                            {ref.referred_email || ref.referred_mobile || "No contact added"}
-                          </p>
-                        </div>
-                      </div>
+               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {referrals.map((ref, index) => (
+  <div
+    key={index}
+    className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-all"
+  >
+    <div className="flex items-center gap-3">
+      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-100 to-blue-100 flex items-center justify-center text-indigo-700 font-bold text-lg shrink-0">
+        {ref.referred_name?.charAt(0).toUpperCase() || "?"}
+      </div>
+      <div className="flex-1">
+        <p className="text-sm font-semibold text-gray-900 truncate">
+          {ref.referred_name || "New Friend"}
+        </p>
+      </div>
+    </div>
 
-                      <div className="mt-5 grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <p className="text-gray-500">Status</p>
-                          <p
-                            className={`font-medium mt-1 ${
-                              ref.status === "completed"
-                                ? "text-green-600"
-                                : ref.status === "rejected"
-                                ? "text-red-600"
-                                : "text-yellow-600"
-                            }`}
-                          >
-                            {ref.status?.toUpperCase() || "PENDING"}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="text-gray-500">Reward</p>
-                          <p className="font-medium text-green-700 mt-1">
-                            ₹{(ref.totalCommission || 0).toLocaleString("en-IN")}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+    <div className="mt-3 grid grid-cols-2 gap-2 text-xs">
+      <div>
+        <p className="text-gray-500">Status</p>
+        <p
+          className={`font-medium mt-1 ${
+            ref.status === "completed"
+              ? "text-green-600"
+              : ref.status === "rejected"
+              ? "text-red-600"
+              : "text-yellow-600"
+          }`}
+        >
+          {ref.status?.toUpperCase() || "PENDING"}
+        </p>
+      </div>
+
+      <div>
+        <p className="text-gray-500">Reward</p>
+        <p className="font-medium text-green-700 mt-1">
+          ₹{(ref.totalCommission || 0).toLocaleString("en-IN")}
+        </p>
+      </div>
+    </div>
+  </div>
+))}
                 </div>
               </>
             )}

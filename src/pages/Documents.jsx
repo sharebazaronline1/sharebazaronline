@@ -358,25 +358,37 @@ useEffect(() => {
                     <div className="flex flex-col gap-1.5">
                       <label className="text-xs text-gray-500">Demat ID</label>
                       <input
-                        type="text"
-                        name="dematId"
-                        value={formData.dematId}
-                        onChange={handleInputChange}
-                        placeholder="Enter Demat ID"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
-                      />
+  type="text"
+  name="dematId"
+  value={formData.dematId}
+  onChange={(e) => {
+    const value = e.target.value;
+
+    // Allow only numbers & max 16 digits
+    if (!/^\d*$/.test(value)) return;
+    if (value.length > 16) return;
+
+    setFormData((prev) => ({ ...prev, dematId: value }));
+  }}
+  placeholder="Enter 16-digit Demat ID"
+  maxLength={16}
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
+/>
                     </div>
 
                     <div className="flex flex-col gap-1.5">
                       <label className="text-xs text-gray-500">Depository Name</label>
-                      <input
-                        type="text"
-                        name="depositoryName"
-                        value={formData.depositoryName}
-                        onChange={handleInputChange}
-                        placeholder="CDSL / NSDL"
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm"
-                      />
+                    <select
+  name="depositoryName"
+  value={formData.depositoryName}
+  onChange={handleInputChange}
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 text-sm bg-white"
+>
+  <option value="">Select Depository</option>
+  <option value="MSEI">MSEI</option>
+  <option value="CDSL">CDSL</option>
+  <option value="NSDL">NSDL</option>
+</select>
                     </div>
                   </>
                 )}

@@ -20,32 +20,35 @@ const Dashboard = () => {
   const [accountStatus, setAccountStatus] = useState(null);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const checkUser = async () => {
-      const {
-        data: { session },
-      } = await supabase.auth.getSession();
+  const checkUser = async () => {
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
 
-      if (!session) {
-        navigate("/login");
-      } else {
-        setUser(session.user);
+  if (!session) {
+    navigate("/login");
+  } else {
+    setUser(session.user);
 
-        const { data: profile } = await supabase
-          .from("profiles")
-          .select("account_status")
-          .eq("id", session.user.id)
-          .single();
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("account_status")
+      .eq("id", session.user.id)
+      .single();
 
-        setAccountStatus(profile?.account_status || "inactive");
-      }
-    };
+    setAccountStatus(profile?.account_status || "inactive");
+  }
+
+  setLoading(false); // ✅ IMPORTANT
+};
 
     checkUser();
   }, [navigate]);
 
-  if (!user) return null;
+if (!user || loading) return null;
 
   return (
     <div className="min-h-screen bg-gray-50">

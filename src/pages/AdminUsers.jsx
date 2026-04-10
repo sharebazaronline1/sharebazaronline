@@ -66,22 +66,18 @@ const AdminUsers = () => {
             .eq("referrer_sb_user_id", profile.id);
 
           const { data: referredUsers } = await supabase
-            .from("referrals")
-            .select(`
-              referred_name,
-              referred_email,
-              referred_mobile,
-              referred_sb_user_id,
-              reward_amount,
-              commission_earned,
-              status,
-              created_at,
-              profiles:referred_sb_user_id (
-                sb_user_id
-              )
-            `)
-            .eq("referrer_sb_user_id", profile.id)
-            .limit(10);
+  .from("referrals")
+  .select(`
+    referred_name,
+    referred_email,
+    referred_mobile,
+    referred_sb_user_id,
+    reward_amount,
+    commission_earned,
+    status,
+    created_at
+  `)
+  .eq("referrer_sb_user_id", profile.id);
 
           const { count: orderCount } = await supabase
             .from("orders")
@@ -128,17 +124,29 @@ const AdminUsers = () => {
 // ✅ ADD HERE
 const referredUsersWithCommission = await Promise.all(
   (referredUsers || []).map(async (ref) => {
-    let userId = ref.referred_sb_user_id;
+   let userId = null;
 
-    if (!userId && ref.referred_email) {
-      const { data: profile } = await supabase
-        .from("profiles")
-        .select("id")
-        .ilike("email", ref.referred_email.trim())
-        .maybeSingle();
+// ALWAYS get real user id from profiles
+if (ref.referred_sb_user_id) {
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("id")
+    .eq("id", ref.referred_sb_user_id) // assuming you store UUID here
+    .maybeSingle();
 
-      userId = profile?.id;
-    }
+  userId = profile?.id;
+}
+
+// fallback using email (safe)
+if (!userId && ref.referred_email) {
+  const { data: profile } = await supabase
+    .from("profiles")
+    .select("id")
+    .ilike("email", ref.referred_email.trim())
+    .maybeSingle();
+
+  userId = profile?.id;
+}
 
     let commission = 0;
 
@@ -215,42 +223,53 @@ const referredUsersWithCommission = await Promise.all(
     }
   };
 
- const openReferredModal = async (referred, referrer) => {
-  setSelectedReferred({
-    ...referred,
-    referrer,
-  })
+const openReferredModal = async (referred, referrer) => {
+  setSelectedReferred({ ...referred, referrer });
+  setModalLoading(true);
+  setReferredOrders([]);
+console.log("REF DATA:", referred);
+console.log("REFERRER:", referrer);
+  try {
+const userId = referred.referred_sb_user_id;
+    if (!userId && referred.referred_email) {
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("id")
+        .ilike("email", referred.referred_email.trim())
+        .maybeSingle();
 
-    try {
-      let userId = referred.referred_sb_user_id;
-
-      if (!userId && referred.referred_email) {
-        const { data: profile } = await supabase
-          .from("profiles")
-          .select("id")
-          .ilike("email", referred.referred_email.trim())
-          .maybeSingle();
-        userId = profile?.id;
-      }
-
-      if (!userId) return;
-
-      const { data, error } = await supabase
-        .from("orders")
-        .select(`
-          id, asset_name, price, quantity, total, order_type, status, commission_amount, created_at
-        `)
-        .eq("user_id", String(userId).trim())
-        .order("created_at", { ascending: false });
-
-      if (error) throw error;
-      setReferredOrders(data || []);
-    } catch (err) {
-      console.error("❌ ERROR:", err);
-    } finally {
-      setModalLoading(false);
+      userId = profile?.id;
     }
-  };
+
+    if (!userId) {
+      console.warn("No userId found");
+      return;
+    }
+console.log("QUERY PARAMS:", {
+  user_id: userId,
+  referrer_id: referrer.id
+});
+    // ✅ STEP 2: CORRECT QUERY (THIS IS THE FIX)
+    const { data, error } = await supabase
+      .from("orders")
+      .select(`
+        id, asset_name, price, quantity, total,
+        order_type, status, commission_amount, created_at
+      `)
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false });
+
+    if (error) throw error;
+
+    console.log("✅ Orders found:", data);
+
+    setReferredOrders(data || []);
+  } catch (err) {
+    console.error("❌ ERROR:", err);
+  } finally {
+    setModalLoading(false);
+  }
+};
 
   const openMainUserOrders = async (user) => {
     setSelectedMainUser(user);
@@ -401,7 +420,7 @@ const referredUsersWithCommission = await Promise.all(
                           </span>
                         </td>
                         <td className="px-4 py-5 text-center">
-                          <span className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${user.account_status === "active" || !user.account_status ? "bg-green-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
+                          <span className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${user.account_status === "active" ? "bg-green-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
                             {user.account_status ? user.account_status.toUpperCase() : "ACTIVE"}
                           </span>
                         </td>
@@ -673,7 +692,7 @@ const referredUsersWithCommission = await Promise.all(
                               <th className="px-4 py-4 text-right font-medium text-gray-600 w-16">Qty</th>
                               <th className="px-4 py-4 text-center font-medium text-gray-600 w-20">Type</th>
                               <th className="px-4 py-4 text-center font-medium text-gray-600 w-24">Status</th>
-                              <th className="px-4 py-4 text-right font-medium text-emerald-600">Commission</th>
+                           
                               <th className="px-4 py-4 text-right font-medium text-gray-600 w-28">Date</th>
                             </tr>
                           </thead>
@@ -695,9 +714,7 @@ const referredUsersWithCommission = await Promise.all(
                                     {order.status}
                                   </span>
                                 </td>
-                                <td className="px-4 py-4 text-right font-medium text-emerald-700">
-                               ₹{((order.total || 0) * (selectedReferred?.referrer?.commission_rate || 0)).toLocaleString("en-IN")}
-                                </td>
+                               
                                 <td className="px-4 py-4 text-right text-xs text-gray-500 whitespace-nowrap">
                                   {new Date(order.created_at).toLocaleDateString("en-IN")}
                                 </td>
@@ -774,7 +791,6 @@ const referredUsersWithCommission = await Promise.all(
                           <th className="px-4 py-4 text-right font-medium text-gray-600 w-16">Qty</th>
                           <th className="px-4 py-4 text-center font-medium text-gray-600 w-20">Type</th>
                           <th className="px-4 py-4 text-center font-medium text-gray-600 w-24">Status</th>
-                          <th className="px-4 py-4 text-right font-medium text-emerald-600">Commission</th>
                           <th className="px-4 py-4 text-right font-medium text-gray-600 w-28">Date</th>
                         </tr>
                       </thead>
