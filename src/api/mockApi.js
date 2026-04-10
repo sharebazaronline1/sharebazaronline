@@ -14021,7 +14021,7 @@ export const fetchPreIPOs = async () => {
   {
     "id": 5,
     "name": "Anugraha Valve Castings Limited Unlisted Shares",
-    "price": 744,
+    "price": 650,
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
     "status": "upcoming",
@@ -14030,7 +14030,7 @@ export const fetchPreIPOs = async () => {
   {
     "id": 6,
     "name": "Apollo Fashion International Unlisted Shares",
-    "price": 70,
+    "price": 46,
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
     "status": "upcoming",
@@ -14039,7 +14039,7 @@ export const fetchPreIPOs = async () => {
   {
     "id": 7,
     "name": "Apollo Green Energy Limited Unlisted Shares",
-    "price": 140,
+    "price": 64,
     "depository": "NSDL & CDSL",
     "minLotSize": 500,
     "status": "upcoming",
@@ -14048,7 +14048,7 @@ export const fetchPreIPOs = async () => {
   {
     "id": 8,
     "name": "Arohan Financial Services Unlisted Shares",
-    "price": 282,
+    "price": 235,
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
     "status": "upcoming",
@@ -16229,6 +16229,524 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
   "managementInsight": "Professional management backed by global AB InBev expertise, focusing on premium beer growth, operational efficiency, and market expansion in India."
 },
+{
+  "id": 5,
+  "name": "Anugraha Valve Castings Limited",
+  "price": 650,
+  "logo": "/images/preipo/image5.png",
+
+  "overview": `Anugraha Valve Castings Limited is a Coimbatore-based manufacturer specializing in high-quality steel and alloy castings, primarily for valves and pumps. Established in 1992, the company has a strong export focus and serves industries such as oil & gas, power, chemicals, and engineering. It operates a modern foundry with significant production capacity and maintains high quality standards.`,
+
+  "products": [
+    "Steel Castings",
+    "Alloy Castings",
+    "Valve Castings",
+    "Pump Castings",
+    "Industrial Castings",
+    "Custom Engineered Components"
+  ],
+
+  "manufacturingUnits": [
+    "Coimbatore, Tamil Nadu"
+  ],
+
+  "clients": [
+    "Valve Manufacturers",
+    "Pump Manufacturers",
+    "Oil & Gas, Power, Chemical & Engineering Sectors (Domestic & Export)"
+  ],
+
+  "shareDetails": {
+    "companyName": "Anugraha Valve Castings Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹650",
+    "marketCapitalization": "₹229 Crore (Approx.)",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹750",
+    "52WeekLow": "₹550",
+    "faceValue": "₹10",
+    "bookValue": "₹708",
+    "peRatio": "12.06",
+    "pbRatio": "0.92",
+    "debtToEquity": "0.15",
+    "returnOnEquity": "7.61",
+    "totalOutstandingShares": "35,26,650",
+    "isin": "INE629Z01015",
+    "depository": "NSDL & CDSL",
+    "pan": "AACCA1234P",
+    "cin": "U27109TZ1992PLC003873",
+    "rta": "Cameo Corporate Services Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Revenue grew steadily from ₹242 Cr in FY22 to ₹378 Cr in FY25. Profitability improved significantly after FY23 with strong operating margins in FY24-FY25. The company has low debt, healthy liquidity, and consistent cash generation.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 242, "fy23": 316, "fy24": 375, "fy25": 378 },
+      { "label": "EBITDA", "fy22": 5, "fy23": 9, "fy24": 36, "fy25": 33 },
+      { "label": "EBIT", "fy22": -4, "fy23": 0, "fy24": 27, "fy25": 23 },
+      { "label": "PBT", "fy22": 6, "fy23": 3, "fy24": 28, "fy25": 27 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 4, "fy23": 2, "fy24": 20, "fy25": 19 },
+      { "label": "EPS", "fy22": 11.36, "fy23": 5.68, "fy24": 56.82, "fy25": 53.98 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 2.07, "fy23": 2.85, "fy24": 9.6, "fy25": 8.73 },
+      { "label": "Net Profit Margin (%)", "fy22": 1.65, "fy23": 0.63, "fy24": 5.33, "fy25": 5.03 },
+      { "label": "ROE (%)", "fy25": "7.61" },
+      { "label": "EPS", "fy22": 11.36, "fy23": 5.68, "fy24": 56.82, "fy25": 53.98 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth and sharp improvement in operating margins since FY24.",
+      "PAT increased significantly from FY23 levels.",
+      "Low debt and healthy cash flow position.",
+      "Attractive valuation in unlisted market compared to book value."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 140, "fy23": 135, "fy24": 147, "fy25": 144.3 },
+      { "label": "CWIP", "fy22": 6, "fy23": 18, "fy24": 0.83, "fy25": 1.26 },
+      { "label": "Trade Receivables", "fy22": 68, "fy23": 89, "fy24": 106, "fy25": 106 },
+      { "label": "Inventory", "fy22": 55, "fy23": 73, "fy24": 91, "fy25": 61 },
+      { "label": "Other Assets", "fy22": 36, "fy23": 31, "fy24": 27.17, "fy25": 26.44 },
+      { "label": "Total Assets", "fy22": 305, "fy23": 346, "fy24": 372, "fy25": 339 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 3.52, "fy23": 3.52, "fy24": 3.52, "fy25": 3.52 },
+      { "label": "Reserves", "fy22": 205, "fy23": 207, "fy24": 228, "fy25": 246 },
+      { "label": "Borrowings", "fy22": 54, "fy23": 80, "fy24": 85, "fy25": 38 },
+      { "label": "Trade Payables", "fy22": 16, "fy23": 26, "fy24": 25, "fy25": 18 },
+      { "label": "Other Liabilities", "fy22": 26.48, "fy23": 29.48, "fy24": 30.48, "fy25": 33.48 },
+      { "label": "Total Liabilities", "fy22": 305, "fy23": 346, "fy24": 372, "fy25": 339 }
+    ],
+    "insights": "Strong equity base with growing reserves. Debt reduced significantly in FY25."
+  },
+
+  "liabilitiesBreakdown": "Borrowings reduced to ₹38 Cr in FY25. Low leverage with debt-to-equity ratio around 0.15.",
+
+  "balanceSheetInsights": "Healthy and conservative balance sheet with low debt, improving reserves, and stable asset base.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Generated From Operations", "fy22": -10, "fy23": -10, "fy24": 7.3, "fy25": 66.8 },
+      { "label": "Cash Flow From Operations", "fy22": -11, "fy23": -10, "fy24": -0.8, "fy25": 59.8 },
+      { "label": "Cash Flow From Investing", "fy22": -17.6, "fy23": -18, "fy24": -0.05, "fy25": -8.14 },
+      { "label": "Cash Flow From Financing", "fy22": 27.5, "fy23": 24, "fy24": 0.85, "fy25": -51.24 },
+      { "label": "Net Cash Generated", "fy22": -1.1, "fy23": -4, "fy24": 0, "fy25": 0.42 }
+    ],
+    "insights": [
+      "Strong operating cash flow in FY25 (₹59.8 Cr).",
+      "Significant reduction in borrowings in FY25.",
+      "Stable cash position maintained."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "2025", "promoters": "86.16%", "institutional": "0%", "public": "13.84%" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with strong technical expertise in foundry and castings.",
+
+  "management": [
+    { "name": "R. Suresh", "role": "Managing Director", "experience": "30+ Years in steel castings industry" }
+  ],
+
+  "rta": {
+    "registrar": "Cameo Corporate Services Limited",
+    "website": "https://www.cameoindia.com/"
+  },
+
+  "managementInsight": "Experienced leadership focused on quality manufacturing, export growth, operational efficiency, and maintaining strong client relationships in the valve and engineering sector."
+},
+{
+  "id": 6,
+  "name": "Apollo Fashion International Limited",
+  "price": 46,
+  "logo": "/images/preipo/image6.png",
+
+  "overview": `Apollo Fashion International Limited is part of the Apollo Group and is engaged in the manufacturing, trading, and export of fashion apparel, garments, textiles, leather accessories, and lifestyle products. Led by Raaja Kanwar, the company has diversified from traditional businesses into fashion and lifestyle segments with a focus on domestic and international markets.`,
+
+  "products": [
+    "Apparel & Garments",
+    "Fashion Wear",
+    "Textiles & Fabrics",
+    "Leather Accessories",
+    "Lifestyle Products"
+  ],
+
+  "manufacturingUnits": [
+    "Garment Manufacturing Facilities in India"
+  ],
+
+  "clients": [
+    "Domestic Retailers & Brands",
+    "International Buyers & Exporters"
+  ],
+
+  "shareDetails": {
+    "companyName": "Apollo Fashion International Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹46",
+    "marketCapitalization": "₹137 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹89",
+    "52WeekLow": "₹46",
+    "faceValue": "₹10",
+    "bookValue": "₹16.69",
+    "peRatio": "10.48",
+    "pbRatio": "2.76",
+    "debtToEquity": "1.33",
+    "returnOnEquity": "26.36",
+    "totalOutstandingShares": "2,97,65,210",
+    "isin": "INE0RYY01014",
+    "depository": "NSDL & CDSL",
+    "pan": "AAZCA3436G",
+    "cin": "U46411DL2023PLC419636",
+    "rta": "Maashita Securities"
+  },
+
+  "financials": {
+    "annualReportSummary": "Revenue showed high volatility with a sharp decline in FY24 followed by recovery in FY25. The company maintains healthy profitability with strong ROE. High working capital requirements and moderate leverage are key characteristics.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 19785, "fy23": 20843, "fy24": 8998, "fy25": 18244 },
+      { "label": "EBITDA", "fy22": 2880, "fy23": 2230, "fy24": 1786, "fy25": 2195 },
+      { "label": "EBIT", "fy22": 2704, "fy23": 2021, "fy24": 1505, "fy25": 1905 },
+      { "label": "PBT", "fy22": 2870, "fy23": 1688, "fy24": 1625, "fy25": 1747 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 2870, "fy23": 1688, "fy24": 1215, "fy25": 1307 },
+      { "label": "EPS", "fy22": "-", "fy23": 9.38, "fy24": 8.39, "fy25": 4.39 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 14.56, "fy23": 10.7, "fy24": 19.85, "fy25": 12.03 },
+      { "label": "Net Profit Margin (%)", "fy22": 14.51, "fy23": 8.1, "fy24": 13.5, "fy25": 7.16 },
+      { "label": "ROE (%)", "fy25": "26.36" },
+      { "label": "Debt to Equity", "fy25": "1.33" },
+      { "label": "EPS", "fy22": "-", "fy23": 9.38, "fy24": 8.39, "fy25": 4.39 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue recovery in FY25 after a weak FY24.",
+      "Healthy absolute PAT and good ROE of 26.36%.",
+      "Moderate leverage with Debt/Equity at 1.33.",
+      "Attractive valuation at current unlisted price."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 2157, "fy23": 2506, "fy24": 2171, "fy25": 2356.07 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 21, "fy25": 36 },
+      { "label": "Investments", "fy22": 442, "fy23": 442, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy22": 4078, "fy23": 4668, "fy24": 2171, "fy25": 4675 },
+      { "label": "Inventory", "fy22": 3663, "fy23": 4243, "fy24": 5255, "fy25": 4858 },
+      { "label": "Other Assets", "fy22": 5005, "fy23": 8814, "fy24": 1676, "fy25": 2994.93 },
+      { "label": "Total Assets", "fy22": 15345, "fy23": 20673, "fy24": 11294, "fy25": 14920 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 0, "fy23": 1800, "fy24": 1447.3, "fy25": 2976.5 },
+      { "label": "Reserves", "fy22": 11255, "fy23": 12944, "fy24": 1338, "fy25": 1981 },
+      { "label": "Borrowings", "fy22": 1803, "fy23": 3520, "fy24": 1495, "fy25": 6581 },
+      { "label": "Trade Payables", "fy22": 2092, "fy23": 1928, "fy24": 819, "fy25": 2391 },
+      { "label": "Other Liabilities", "fy22": 195, "fy23": 481, "fy24": 6194.7, "fy25": 990.5 },
+      { "label": "Total Liabilities", "fy22": 15345, "fy23": 20673, "fy24": 11294, "fy25": 14920 }
+    ],
+    "insights": "High working capital cycle (Receivables + Inventory). Borrowings increased in FY25."
+  },
+
+  "liabilitiesBreakdown": "Borrowings stood at ₹6581 lakhs in FY25. Debt to Equity ratio is 1.33.",
+
+  "balanceSheetInsights": "Working capital intensive business. Equity strengthened through capital infusion. Moderate leverage.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy24": 1612, "fy25": 1327 },
+      { "label": "Cash Flow From Investing", "fy24": -1085, "fy25": -6780 },
+      { "label": "Cash Flow From Financing", "fy24": -149, "fy25": 4949 },
+      { "label": "Net Cash Generated", "fy24": 378, "fy25": -504 }
+    ],
+    "insights": [
+      "Strong operating cash flow in FY24 & FY25.",
+      "Significant investing outflow in FY25.",
+      "Financing through equity and borrowings."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Promoter Group)", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Part of Apollo Group. Led by Raaja Kanwar with diversification experience across multiple sectors.",
+
+  "management": [
+    { "name": "Raaja Kanwar", "role": "Key Promoter / Director", "experience": "Diversified business leadership" }
+  ],
+
+  "rta": {
+    "registrar": "Maashita Securities",
+    "website": "https://www.maashitasecurities.com/"
+  },
+
+  "managementInsight": "Focus on revenue growth, operational efficiency, and expansion in the fashion and lifestyle segment under the Apollo Group umbrella."
+},
+{
+  "id": 7,
+  "name": "Apollo Green Energy Limited",
+  "price": 64,
+  "logo": "/images/preipo/image7.png",
+
+  "overview": `Apollo Green Energy Limited (AGEL) is a prominent player in India's renewable energy sector. Incorporated in 1994, it is part of the diversified Apollo Group. The company specializes in solar power, wind energy, energy storage solutions, and comprehensive renewable energy projects. It focuses on developing, owning, and operating green energy assets with a strong emphasis on sustainability and long-term value creation.`,
+
+  "products": [
+    "Solar Power Projects",
+    "Wind Energy Solutions",
+    "Energy Storage Systems",
+    "Renewable Energy Infrastructure",
+    "Green Energy Consulting & Services"
+  ],
+
+  "manufacturingUnits": [
+    "Solar & Wind Project Sites across India"
+  ],
+
+  "clients": [
+    "Corporate Off-takers",
+    "Government & PSU Entities",
+    "Institutional Investors in Renewable Energy"
+  ],
+
+  "shareDetails": {
+    "companyName": "Apollo Green Energy Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹64",
+    "marketCapitalization": "₹260 Crore",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹230",
+    "52WeekLow": "₹64",
+    "faceValue": "₹10",
+    "bookValue": "₹166.22",
+    "peRatio": "7.65",
+    "pbRatio": "0.39",
+    "debtToEquity": "0.74",
+    "returnOnEquity": "5.11",
+    "totalOutstandingShares": "4,06,10,287",
+    "isin": "INE838A01015",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACA6447N",
+    "cin": "U74899DL1994PLC061080",
+    "rta": "Alankit Assignments"
+  },
+
+  "financials": {
+    "annualReportSummary": "The company has shown steady revenue with moderate profitability. PAT has been consistent in recent years. Moderate debt levels and healthy book value reflect a stable position in the renewable energy sector.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 810, "fy23": 753, "fy24": 1234, "fy25": 806 },
+      { "label": "EBITDA", "fy22": 59, "fy23": 22, "fy24": 71.45, "fy25": 23 },
+      { "label": "EBIT", "fy22": 25, "fy23": 16, "fy24": 62.45, "fy25": 16 },
+      { "label": "PBT", "fy22": 78, "fy23": 32, "fy24": 41, "fy25": 43 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 41, "fy23": 25, "fy24": 38.5, "fy25": 34 },
+      { "label": "EPS", "fy22": 21.58, "fy23": 13.16, "fy24": 20.26, "fy25": 10.62 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 7.28, "fy23": 2.92, "fy24": 5.79, "fy25": 2.85 },
+      { "label": "Net Profit Margin (%)", "fy22": 5.06, "fy23": 3.32, "fy24": 3.12, "fy25": 4.22 },
+      { "label": "ROE (%)", "fy25": "5.11" },
+      { "label": "Debt to Equity", "fy25": "0.74" },
+      { "label": "EPS", "fy22": 21.58, "fy23": 13.16, "fy24": 20.26, "fy25": 10.62 }
+    ],
+
+    "investorInsight": [
+      "Stable revenue with some volatility across years.",
+      "Consistent PAT and improving operational efficiency.",
+      "Low P/B ratio of 0.39 offers attractive valuation.",
+      "Strong long-term growth potential in India's renewable energy sector."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 444, "fy23": 43, "fy24": 45, "fy25": 40 },
+      { "label": "Investments", "fy22": 268, "fy23": 480, "fy24": 331, "fy25": 659 },
+      { "label": "Trade Receivables", "fy22": 210, "fy23": 209, "fy24": 396, "fy25": 239 },
+      { "label": "Inventory", "fy22": 37, "fy23": 43, "fy24": 53, "fy25": 0.07 },
+      { "label": "Other Assets", "fy22": 510.2, "fy23": 428, "fy24": 658, "fy25": 642.93 },
+      { "label": "Total Assets", "fy22": 1470, "fy23": 1203, "fy24": 1483, "fy25": 1581 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 19, "fy23": 19, "fy24": 19, "fy25": 32.03 },
+      { "label": "Reserves", "fy22": 412, "fy23": 450, "fy24": 532, "fy25": 633 },
+      { "label": "Borrowings", "fy22": 609, "fy23": 340, "fy24": 401, "fy25": 493 },
+      { "label": "Trade Payables", "fy22": 139, "fy23": 139, "fy24": 0, "fy25": 202 },
+      { "label": "Other Liabilities", "fy22": 291, "fy23": 255, "fy24": 531, "fy25": 220.97 },
+      { "label": "Total Liabilities", "fy22": 1470, "fy23": 1203, "fy24": 1483, "fy25": 1581 }
+    ],
+    "insights": "Healthy reserves and moderate debt. Significant investment holdings support future growth."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio stands at 0.74. Borrowings moderated in recent years.",
+
+  "balanceSheetInsights": "Strong book value of ₹166.22 per share. Conservative leverage suitable for the capital-intensive renewable energy sector.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": 33, "fy23": -80, "fy24": 14.2, "fy25": 2 },
+      { "label": "Cash Flow From Investing", "fy22": 50, "fy23": 381, "fy24": -35.17, "fy25": -180 },
+      { "label": "Cash Flow From Financing", "fy22": -69, "fy23": -304, "fy24": 5.45, "fy25": 183 },
+      { "label": "Net Cash Generated", "fy22": 14, "fy23": -3, "fy24": -15.52, "fy25": 5 }
+    ],
+    "insights": [
+      "Positive operating cash flow in FY22, FY24 & FY25.",
+      "Significant investing activity reflecting project development.",
+      "Stable cash position maintained around ₹50-70 Cr."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Apollo Group)", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Part of the Apollo Group with strong promoter backing and diversified business experience.",
+
+  "management": [
+    { "name": "Raaja Kanwar / Promoter Team", "role": "Leadership", "experience": "Diversified conglomerate leadership" }
+  ],
+
+  "rta": {
+    "registrar": "Alankit Assignments",
+    "website": "https://www.alankit.com/"
+  },
+
+  "managementInsight": "Leadership focuses on expanding renewable energy portfolio, project execution, and contributing to India's sustainable energy goals under the Apollo Group."
+},
+{
+  "id": 8,
+  "name": "Arohan Financial Services Limited",
+  "price": 235,
+  "logo": "/images/preipo/image8.png",
+
+  "overview": `Arohan Financial Services Limited is one of the largest NBFC-MFIs in Eastern India and the fifth largest in India by Gross Loan Portfolio. Established in 2006, Arohan focuses on financial inclusion by providing microloans primarily to low-income women in rural and semi-urban areas. The company follows a strong operational framework with emphasis on responsible lending, high recovery rates, and sustainable growth.`,
+
+  "products": [
+    "Income Generating Loans (IGL)",
+    "Microfinance Group Loans",
+    "Individual Loans",
+    "Financial Inclusion Products"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Low-income Women & Groups",
+    "Rural & Semi-urban Customers in Eastern India"
+  ],
+
+  "shareDetails": {
+    "companyName": "Arohan Financial Services Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹235",
+    "marketCapitalization": "₹3734 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹260",
+    "52WeekLow": "₹225",
+    "faceValue": "₹10",
+    "bookValue": "₹128.05",
+    "peRatio": "33.96",
+    "pbRatio": "1.84",
+    "debtToEquity": "2.13",
+    "returnOnEquity": "5.43",
+    "totalOutstandingShares": "1,58,91,2300",
+    "isin": "INE808K01017",
+    "depository": "NSDL & CDSL",
+    "pan": "AAECA6121D",
+    "cin": "U74140WB1991PLC053189",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Strong growth in loan portfolio (Advances) and Interest Earned. PAT peaked in FY24 at ₹314 Cr. Asset quality remains healthy with low Net NPA. Company maintains stable profitability in the competitive microfinance sector.",
+
+    "incomeStatement": [
+      { "label": "Interest Earned", "fy22": 858, "fy23": 930.96, "fy24": 1380, "fy25": 1581 },
+      { "label": "Other Income", "fy22": 62, "fy23": 160.02, "fy24": 254, "fy25": 114 },
+      { "label": "Interest Expended", "fy22": 402, "fy23": 468.64, "fy24": 592, "fy25": 632 },
+      { "label": "Operating Expenses", "fy22": 294, "fy23": 334.98, "fy24": 451, "fy25": 527 },
+      { "label": "Provisions & Contingencies", "fy22": 136, "fy23": 192.64, "fy24": 179, "fy25": 389 },
+      { "label": "Profit After Tax (PAT)", "fy22": 61, "fy23": 70.71, "fy24": 314, "fy25": 110 }
+    ],
+
+    "keyRatios": [
+      { "label": "Advances (₹ Cr)", "fy22": 3710, "fy23": 4782.21, "fy24": 6616, "fy25": 5705 },
+      { "label": "Book Value (₹)", "fy22": 85.25, "fy23": 88.98, "fy24": 121.62, "fy25": 127.43 },
+      { "label": "P/B Ratio", "fy22": 2.17, "fy23": 2.08, "fy24": 1.52, "fy25": 2.04 },
+      { "label": "ROE (%)", "fy22": 5.96, "fy23": 5.28, "fy24": 16.4, "fy25": 5.43 },
+      { "label": "Gross NPA (%)", "fy22": 4.5, "fy23": 2.8, "fy24": 1.64, "fy25": 2.77 },
+      { "label": "Net NPA (%)", "fy22": 1.32, "fy23": 0.21, "fy24": 0, "fy25": 0.47 },
+      { "label": "EPS (₹)", "fy22": 5.08, "fy23": 4.7, "fy24": 19.95, "fy25": 6.92 }
+    ],
+
+    "investorInsight": [
+      "Consistent growth in loan book and interest income.",
+      "Peak profitability in FY24; moderated in FY25 due to higher provisions.",
+      "Excellent asset quality with near-zero Net NPA in FY24.",
+      "Stable book value growth reflecting strong capital position."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 4, "fy23": 5.3, "fy24": 11, "fy25": 13 },
+      { "label": "Cash and Balances", "fy22": 1308, "fy23": 556.56, "fy24": 1268, "fy25": 673 },
+      { "label": "Investments", "fy22": 0, "fy23": 78.77, "fy24": 90, "fy25": 363 },
+      { "label": "Advances", "fy22": 3710, "fy23": 4782.21, "fy24": 6616, "fy25": 5705 },
+      { "label": "Other Assets", "fy22": 207, "fy23": 595.3, "fy24": 130, "fy25": 132 },
+      { "label": "Total Assets", "fy22": 5229, "fy23": 6018.14, "fy24": 8115, "fy25": 6886 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 120, "fy23": 150.38, "fy24": 157.41, "fy25": 158.9 },
+      { "label": "Reserves", "fy22": 903, "fy23": 1187.63, "fy24": 1757, "fy25": 1866 },
+      { "label": "Borrowings", "fy22": 3694, "fy23": 3809.36, "fy24": 5617, "fy25": 4304 },
+      { "label": "Other Liabilities", "fy22": 512, "fy23": 870.77, "fy24": 583.59, "fy25": 557.1 },
+      { "label": "Total Liabilities", "fy22": 5229, "fy23": 6018.14, "fy24": 8115, "fy25": 6886 }
+    ],
+    "insights": "Loan portfolio (Advances) is the largest asset. Cash balance remains healthy. Borrowings increased in line with portfolio growth."
+  },
+
+  "liabilitiesBreakdown": "Borrowings stood at ₹4304 Cr in FY25. Debt to Equity ratio around 2.13, typical for NBFC-MFI operations.",
+
+  "balanceSheetInsights": "Strong and consistent growth in book value. Well-capitalized balance sheet with controlled leverage for the microfinance sector.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": 226, "fy23": -936.18, "fy24": -1230, "fy25": 1019 },
+      { "label": "Cash Flow From Investing", "fy22": -162.94, "fy23": -108.81, "fy24": -11, "fy25": -210 },
+      { "label": "Cash Flow From Financing", "fy22": -268.84, "fy23": 632.92, "fy24": 1628, "fy25": -1305 }
+    ],
+    "insights": [
+      "Negative operating cash flow in FY23–24 due to rapid loan book expansion.",
+      "Strong positive operating cash flow in FY25.",
+      "Financing activities reflect heavy borrowing to support growth."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Moderate", "public": "Low" }
+  ],
+
+  "promotersManagement": "Professionally managed NBFC-MFI with experienced leadership in microfinance.",
+
+  "management": [
+    { "name": "Professional Leadership Team", "role": "Management", "experience": "Microfinance & NBFC Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focus on responsible lending, maintaining high recovery rates, asset quality control, and sustainable expansion while serving underserved markets."
+},
+
 
    {
   "id": 109,
