@@ -39,10 +39,9 @@ if (!currentSession?.user) {
   return;
 }
 
-console.log("AUTH USER ID:", user.id);
-     
+const user = currentSession.user;
 
-     const user = currentSession.user;
+console.log("AUTH USER ID:", user.id);
 // 🔥 attach referral code ONLY (SAFE VERSION)
 const referralCode = localStorage.getItem("referral_code");
 
