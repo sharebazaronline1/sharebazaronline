@@ -20,147 +20,110 @@ const Login = () => {
     return `SB-${hash}`;
   };
 
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const refCode = params.get("ref");
-    if (refCode) localStorage.setItem("referral_code", refCode);
+useEffect(() => {
+  const params = new URLSearchParams(location.search);
+  const refCode = params.get("ref");
+  if (refCode) localStorage.setItem("referral_code", refCode);
 
-const { data: { subscription } } = supabase.auth.onAuthStateChange(
-  async (event, session) => {
-    if (event !== "SIGNED_IN" || !session?.user) return;
+  const { data: { subscription } } = supabase.auth.onAuthStateChange(
+    async (event, session) => {
+    if (event !== "SIGNED_IN") return;
 
-    const user = session.user;
-    const referralCode = localStorage.getItem("referral_code");
-    const userName =
-      user.user_metadata?.full_name || fullName || "New User";
+// 🔥 ALWAYS GET FRESH SESSION (VERY IMPORTANT)
+const {
+  data: { session: currentSession },
+} = await supabase.auth.getSession();
 
-    try {
-      
-     if (referralCode) {
-  try {
-    // ✅ Wait for profile to exist
-    let retries = 6;
-    let userProfile = null;
+if (!currentSession?.user) {
+  console.error("Session not ready ❌");
+  return;
+}
 
-    while (retries > 0) {
-      const { data } = await supabase
-        .from("profiles")
-        .select("id")
-        .eq("id", user.id)
-        .maybeSingle();
+console.log("AUTH USER ID:", user.id);
+     
 
-      if (data) {
-        userProfile = data;
-        break;
-      }
+     const user = currentSession.user;
+// 🔥 attach referral code ONLY (SAFE VERSION)
+const referralCode = localStorage.getItem("referral_code");
 
-      await new Promise((res) => setTimeout(res, 500));
-      retries--;
-    }
+if (referralCode) {
+  console.log("Referral code found:", referralCode);
 
-    if (!userProfile) {
-      console.log("Profile not ready");
-      return;
-    }
+  // ⏳ wait for trigger to create profile
+  await new Promise((res) => setTimeout(res, 500));
 
-    // ✅ Get referrer using SB code
-    const { data: referrer } = await supabase
-      .from("profiles")
-      .select("id")
-      .eq("sb_user_id", referralCode)
-      .maybeSingle();
+  const { error } = await supabase
+    .from("profiles")
+    .update({ referred_by_code: referralCode })
+    .eq("id", user.id);
 
-    if (!referrer) {
-      console.log("Invalid referral code");
-      return;
-    }
-
-    // ✅ Insert referral (CORRECT STRUCTURE)
-    const { error } = await supabase.from("referrals").insert({
-      referrer_sb_user_id: referrer.id,
-      referred_sb_user_id: user.id,
-      referred_name: userName,
-      referred_email: user.email,
-      status: "pending",
-      reward_amount: 0,
-    });
-
-    if (error) {
-      console.error("Referral insert error:", error);
-    } else {
-      console.log("Referral inserted ✅");
-    }
-
-  } catch (err) {
-    console.error("Referral error:", err);
+  if (error) {
+    console.error("Referral attach failed:", error);
+  } else {
+    console.log("Referral code attached ✅");
   }
 
   localStorage.removeItem("referral_code");
 }
- 
-      navigate("/dashboard", { replace: true });
 
-    } catch (err) {
-      console.error("Post signup error:", err);
-      navigate("/dashboard", { replace: true });
+// ✅ redirect
+navigate("/dashboard", { replace: true });
     }
-  }
-);
-    return () => subscription.unsubscribe();
-  }, [navigate, location.search, fullName]);
+  );
 
-  const handleEmailAuth = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  return () => subscription.unsubscribe();
+}, [navigate, location.search, fullName]);
 
-    try {
-      if (isSignUp) {
-        if (!fullName.trim()) {
-          alert("Please enter your full name");
-          setLoading(false);
-          return;
-        }
+ const handleEmailAuth = async (e) => {
+  e.preventDefault();
+  setLoading(true);
 
-        const { data, error } = await supabase.auth.signUp({
-  email,
-  password,
-  options: {
-    data: { full_name: fullName.trim() },
-    emailRedirectTo: `${window.location.origin}/login`,
-  },
-});
-
-if (error) throw error;
-
-// 🚨 IMPORTANT
-if (!data.user) {
-  alert("Signup failed");
-  return;
-}
-
-        if (error) throw error;
-
-        alert("Account created! Please check your email to verify.");
-        setIsSignUp(false);
+  try {
+    // =========================
+    // SIGNUP
+    // =========================
+    if (isSignUp) {
+      if (!fullName.trim()) {
+        alert("Please enter your full name");
         return;
       }
 
-      const { error } = await supabase.auth.signInWithPassword({
+      const { error } = await supabase.auth.signUp({
         email,
         password,
+        options: {
+          data: { full_name: fullName.trim() },
+          emailRedirectTo: `${window.location.origin}/login`,
+        },
       });
-      if (error) throw error;
-    } catch (error) {
-      alert(
-        error.message.includes("Invalid login credentials")
-          ? "Incorrect email or password"
-          : error.message
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
 
+      if (error) throw error;
+
+      alert("Account created! Please check your email to verify.");
+      setIsSignUp(false);
+      return;
+    }
+
+    // =========================
+    // LOGIN
+    // =========================
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) throw error;
+
+  } catch (error) {
+    alert(
+      error.message.includes("Invalid login credentials")
+        ? "Incorrect email or password"
+        : error.message
+    );
+  } finally {
+    setLoading(false);
+  }
+};
   const handleGoogleLogin = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
