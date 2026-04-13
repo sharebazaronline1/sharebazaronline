@@ -1,6 +1,7 @@
 /* ================= IMPORTS ================= */
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
 import {
   ArrowLeft,
   BarChart3,
@@ -46,10 +47,37 @@ const PreIPODetails = () => {
       .replace(/^./, (str) => str.toUpperCase());
 
   useEffect(() => {
-    fetchPreIPODetails().then((res) =>
-      setData(res.find((x) => x.id === Number(id)))
-    );
-  }, [id]);
+  const load = async () => {
+    const mockData = await fetchPreIPODetails();
+    const selected = mockData.find((x) => x.id === Number(id));
+
+    if (!selected) return;
+
+    const { data: dbData, error } = await supabase
+      .from("pre_ipo_companies")
+      .select("name, price");
+
+    if (error) console.error(error);
+
+    const dbItem = dbData?.find((d) => d.name === selected.name);
+
+    const updatedPrice = dbItem ? Number(dbItem.price) : selected.price;
+
+    const merged = {
+      ...selected,
+      price: updatedPrice,
+
+      shareDetails: {
+        ...selected.shareDetails,
+        indicativeUnlistedSharePrice: `₹${updatedPrice}`, // override here
+      },
+    };
+
+    setData(merged);
+  };
+
+  load();
+}, [id]);
 
   if (!data) {
     return (

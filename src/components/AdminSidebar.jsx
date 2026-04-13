@@ -5,6 +5,7 @@ import {
   FileCheck,
   Share2,
   Settings,
+  TrendingUp,
   ShieldCheck,
   ScrollText,
 } from "lucide-react";
@@ -46,6 +47,7 @@ const AdminSidebar = ({ mobileOpen, setMobileOpen }) => {
           <SidebarLink to="/admin-users" icon={<Users size={18} />} label="Users" />
           <SidebarLink to="/admin-kyc" icon={<FileCheck size={18} />} label="KYC Verification" />
           <SidebarLink to="/admin-referrals" icon={<Share2 size={18} />} label="Referrals" />
+          <SidebarLink to="/admin-preipo" icon={<TrendingUp size={18} />} label="Pre IPO" />
           <SidebarLink to="/admin-settings" icon={<Settings size={18} />} label="Settings" />
         </nav>
 
