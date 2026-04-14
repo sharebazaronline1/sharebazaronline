@@ -19,7 +19,9 @@ import {
   FileText,
   ChevronLeft,
   ChevronRight,
+  Download,
 } from "lucide-react";
+import * as XLSX from "xlsx";
 
 const AdminUsers = () => {
   const [users, setUsers] = useState([]);
@@ -28,17 +30,18 @@ const AdminUsers = () => {
   const [editingRates, setEditingRates] = useState({});
   const [expandedUserId, setExpandedUserId] = useState(null);
 
-  // Referred User Modal
+  // Modals
   const [selectedReferred, setSelectedReferred] = useState(null);
   const [referredOrders, setReferredOrders] = useState([]);
   const [modalLoading, setModalLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
-  // Main User Orders Modal
   const [selectedMainUser, setSelectedMainUser] = useState(null);
   const [mainUserOrders, setMainUserOrders] = useState([]);
   const [mainModalLoading, setMainModalLoading] = useState(false);
   const [mainCurrentPage, setMainCurrentPage] = useState(1);
+
+  const [showDownloadDropdown, setShowDownloadDropdown] = useState(false);
 
   const itemsPerPage = 5;
 
@@ -66,18 +69,18 @@ const AdminUsers = () => {
             .eq("referrer_sb_user_id", profile.id);
 
           const { data: referredUsers } = await supabase
-  .from("referrals")
-  .select(`
-    referred_name,
-    referred_email,
-    referred_mobile,
-    referred_sb_user_id,
-    reward_amount,
-    commission_earned,
-    status,
-    created_at
-  `)
-  .eq("referrer_sb_user_id", profile.id);
+            .from("referrals")
+            .select(`
+              referred_name,
+              referred_email,
+              referred_mobile,
+              referred_sb_user_id,
+              reward_amount,
+              commission_earned,
+              status,
+              created_at
+            `)
+            .eq("referrer_sb_user_id", profile.id);
 
           const { count: orderCount } = await supabase
             .from("orders")
@@ -119,60 +122,11 @@ const AdminUsers = () => {
                 account_holder_name: kycData.name_as_per_pan || kycData.name_as_per_demat || profile.full_name,
               }
             : null;
-            
 
-// ✅ ADD HERE
-const referredUsersWithCommission = await Promise.all(
-  (referredUsers || []).map(async (ref) => {
-   let userId = null;
-
-// ALWAYS get real user id from profiles
-if (ref.referred_sb_user_id) {
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("id")
-    .eq("id", ref.referred_sb_user_id) // assuming you store UUID here
-    .maybeSingle();
-
-  userId = profile?.id;
-}
-
-// fallback using email (safe)
-if (!userId && ref.referred_email) {
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("id")
-    .ilike("email", ref.referred_email.trim())
-    .maybeSingle();
-
-  userId = profile?.id;
-}
-
-    let commission = 0;
-
-    if (userId) {
-      const { data: orders } = await supabase
-        .from("orders")
-        .select("total")
-        .eq("user_id", userId);
-
-      commission = (orders || []).reduce(
-  (sum, o) =>
-    sum + ((Number(o.total) || 0) * (profile.commission_rate || 0) / 100),
-  0
-);
-    }
-
-    return {
-      ...ref,
-      calculatedCommission: commission,
-    };
-  })
-);
           return {
             ...profile,
             referralCount: referralCount || 0,
-           referredUsers: referredUsersWithCommission,
+            referredUsers: referredUsers || [],
             orderCount: orderCount || 0,
             totalPortfolioValue: totalPortfolio,
             kycStatus,
@@ -191,6 +145,62 @@ if (!userId && ref.referred_email) {
     }
   };
 
+  // ================= DOWNLOAD DROPDOWN FUNCTIONS =================
+  const downloadUserReport = () => {
+    const userSummary = users.map((user) => ({
+      "Full Name": user.full_name || "",
+      "SB ID": user.sb_user_id || "",
+      "Email": user.email || "",
+      "Joined Date": new Date(user.created_at).toLocaleDateString("en-IN"),
+      "Account Status": user.account_status || "Active",
+      "Commission Rate (%)": user.commission_rate || 0.25,
+      "Total Orders": user.orderCount || 0,
+      "Portfolio Value (₹)": user.totalPortfolioValue || 0,
+      "Total Referrals": user.referralCount || 0,
+      "KYC Status": user.kycStatus || "Not Uploaded",
+      "Bank Name": user.bankAccount?.bank_name || "",
+      "Account Number": user.bankAccount?.account_number || "",
+      "IFSC": user.bankAccount?.ifsc_code || "",
+    }));
+
+    const ws = XLSX.utils.json_to_sheet(userSummary);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Users Summary");
+    XLSX.writeFile(wb, `ShareBazaar_Users_Summary_${new Date().toISOString().slice(0,10)}.xlsx`);
+  };
+
+  const downloadOrderReport = async () => {
+    let allOrders = [];
+
+    for (const user of users) {
+      const { data: orders } = await supabase
+        .from("orders")
+        .select("asset_name, price, quantity, total, order_type, status, commission_amount, created_at")
+        .eq("user_id", user.id);
+
+      orders?.forEach((order) => {
+        allOrders.push({
+          "User Name": user.full_name,
+          "SB ID": user.sb_user_id,
+          "Email": user.email,
+          "Asset Name": order.asset_name,
+          "Order Type": order.order_type,
+          "Price (₹)": order.price,
+          "Quantity": order.quantity,
+          "Total Amount (₹)": order.total,
+          "Commission (₹)": order.commission_amount || 0,
+          "Status": order.status,
+          "Order Date": new Date(order.created_at).toLocaleDateString("en-IN"),
+        });
+      });
+    }
+
+    const ws = XLSX.utils.json_to_sheet(allOrders);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "All Orders");
+    XLSX.writeFile(wb, `ShareBazaar_All_Orders_Report_${new Date().toISOString().slice(0,10)}.xlsx`);
+  };
+
   const toggleExpand = (userId) => {
     setExpandedUserId(expandedUserId === userId ? null : userId);
   };
@@ -199,16 +209,14 @@ if (!userId && ref.referred_email) {
     const cleanPercent = Number(newRatePercent);
     if (isNaN(cleanPercent)) return;
 
-    const newRate = cleanPercent;
-
     const { data, error } = await supabase
       .from("profiles")
-      .update({ commission_rate: newRate })
+      .update({ commission_rate: cleanPercent })
       .eq("id", userId)
       .select();
 
     if (error) {
-      console.error("❌ Update failed:", error);
+      console.error("Update failed:", error);
       return;
     }
 
@@ -268,8 +276,8 @@ console.log("QUERY PARAMS:", {
     console.error("❌ ERROR:", err);
   } finally {
     setModalLoading(false);
-  }
-};
+    }
+  };
 
   const openMainUserOrders = async (user) => {
     setSelectedMainUser(user);
@@ -343,7 +351,7 @@ console.log("QUERY PARAMS:", {
               <p className="text-sm text-gray-600 mt-1">All registered users • Orders • Portfolio • Referrals • KYC</p>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 relative">
               <button
                 onClick={fetchUsers}
                 className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm"
@@ -351,6 +359,42 @@ console.log("QUERY PARAMS:", {
                 <RefreshCw size={17} />
                 Refresh
               </button>
+
+              {/* DOWNLOAD DROPDOWN */}
+              <div className="relative">
+                <button
+                  onClick={() => setShowDownloadDropdown(!showDownloadDropdown)}
+                  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm"
+                >
+                  <Download size={17} />
+                  Download Report
+                  <ChevronDown size={16} />
+                </button>
+
+                {showDownloadDropdown && (
+                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
+                    <button
+                      onClick={() => {
+                        downloadUserReport();
+                        setShowDownloadDropdown(false);
+                      }}
+                      className="w-full text-left px-6 py-3 hover:bg-gray-50 flex items-center gap-3 text-sm"
+                    >
+                      User Summary Report
+                    </button>
+                    <button
+                      onClick={() => {
+                        downloadOrderReport();
+                        setShowDownloadDropdown(false);
+                      }}
+                      className="w-full text-left px-6 py-3 hover:bg-gray-50 flex items-center gap-3 text-sm"
+                    >
+                      All Orders Report
+                    </button>
+                  </div>
+                )}
+              </div>
+
               <UserProfileDropdown />
             </div>
           </div>
@@ -594,7 +638,9 @@ console.log("QUERY PARAMS:", {
                                         )}
                                         <div className="mt-6 flex items-center justify-between text-xs">
                                           <span className="text-emerald-600 font-medium">
-                                          ₹{Number(ref.calculatedCommission || 0).toFixed(2)}
+                                         ₹{referredOrders.reduce((sum, o) => 
+  sum + ((Number(o.total) || 0) * ((selectedReferred?.referrer?.commission_rate || 0) / 100)),
+0).toFixed(2)} 
                                           </span>
                                           <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-2xl font-medium">
                                             {ref.status || "Pending"}
