@@ -5,24 +5,29 @@ import AdminSidebar from "../components/AdminSidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
 import {
   Users,
-  ChevronDown,
-  ChevronUp,
   Loader2,
   AlertCircle,
   RefreshCw,
   Package,
   ShieldCheck,
-  Clock,
-  CreditCard,
   UserPlus,
   IndianRupee,
+  X,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
 
 const AdminReferrals = () => {
   const [referrals, setReferrals] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [expandedId, setExpandedId] = useState(null);
+
+  // Orders Modal
+  const [selectedReferredForOrders, setSelectedReferredForOrders] = useState(null);
+  const [referredOrders, setReferredOrders] = useState([]);
+  const [modalLoading, setModalLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
 
   useEffect(() => {
     fetchReferrals();
@@ -33,7 +38,7 @@ const AdminReferrals = () => {
     setError(null);
 
     try {
-      const { data, error: fetchError } = await supabase
+      const { data: rawReferrals, error: fetchError } = await supabase
         .from("referrals")
         .select(`
           id,
@@ -43,24 +48,38 @@ const AdminReferrals = () => {
           referred_mobile,
           referred_sb_user_id,
           status,
-          created_at,
-          profiles:referrer_sb_user_id (full_name, sb_user_id, email),
-          referred_profile:referred_sb_user_id (id, full_name, sb_user_id, email, created_at)
+          reward_amount,
+          commission_earned,
+          created_at
         `)
         .order("created_at", { ascending: false });
 
       if (fetchError) throw fetchError;
 
       const enriched = await Promise.all(
-        data.map(async (ref) => {
-          // Orders by referred user
+        rawReferrals.map(async (ref) => {
+          // Referrer (Referred By)
+          const { data: referrerData } = await supabase
+            .from("profiles")
+            .select("full_name, sb_user_id, email")
+            .eq("id", ref.referrer_sb_user_id)
+            .single();
+
+          // Referred User Profile
+          const { data: referredProfile } = await supabase
+            .from("profiles")
+            .select("sb_user_id, full_name")
+            .eq("id", ref.referred_sb_user_id)
+            .single();
+
+          // Orders
           const { data: ordersData } = await supabase
             .from("orders")
-            .select("total")
+            .select("total, commission_amount")
             .eq("user_id", ref.referred_sb_user_id);
 
           const totalOrderValue = ordersData?.reduce((sum, o) => sum + (o.total || 0), 0) || 0;
-          const commissionEarned = Math.round(totalOrderValue * 0.0005 * 100) / 100;
+          const commissionEarned = ordersData?.reduce((sum, o) => sum + (o.commission_amount || 0), 0) || 0;
 
           // Portfolio
           const { data: portfolioData } = await supabase
@@ -87,10 +106,10 @@ const AdminReferrals = () => {
 
           return {
             ...ref,
-            referrer_name: ref.profiles?.full_name || "Unknown",
-            referred_full_name: ref.referred_profile?.full_name || ref.referred_name || "Unnamed",
-            referred_sb_id: ref.referred_profile?.sb_user_id || "Not Registered",
-            joinedDate: ref.referred_profile?.created_at,
+            referrer_name: referrerData?.full_name || "Unknown Referrer",
+            referrer_sb_id: referrerData?.sb_user_id || "—",
+            referred_full_name: ref.referred_name || referredProfile?.full_name || "Unnamed",
+            referred_sb_id: referredProfile?.sb_user_id || "Not Registered",
             orderCount: ordersData?.length || 0,
             totalOrderValue,
             totalPortfolioValue: totalPortfolio,
@@ -109,9 +128,42 @@ const AdminReferrals = () => {
     }
   };
 
-  const toggleExpand = (id) => {
-    setExpandedId(expandedId === id ? null : id);
+  const openReferredOrdersModal = async (ref) => {
+    setSelectedReferredForOrders(ref);
+    setModalLoading(true);
+    setReferredOrders([]);
+    setCurrentPage(1);
+
+    try {
+      const { data, error } = await supabase
+        .from("orders")
+        .select(`
+          id, asset_name, price, quantity, total, order_type, status, 
+          commission_amount, created_at
+        `)
+        .eq("user_id", ref.referred_sb_user_id)
+        .order("created_at", { ascending: false });
+
+      if (error) throw error;
+      setReferredOrders(data || []);
+    } catch (err) {
+      console.error("Error fetching referred user orders:", err);
+    } finally {
+      setModalLoading(false);
+    }
   };
+
+  const closeOrdersModal = () => {
+    setSelectedReferredForOrders(null);
+    setReferredOrders([]);
+    setCurrentPage(1);
+  };
+
+  const totalPages = Math.ceil(referredOrders.length / itemsPerPage);
+  const paginatedOrders = referredOrders.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   if (loading) {
     return (
@@ -134,7 +186,7 @@ const AdminReferrals = () => {
             <div>
               <h1 className="text-3xl font-semibold text-gray-900 tracking-tight">Referrals Overview</h1>
               <p className="text-sm text-gray-600 mt-1">
-                All referred users • Orders • Commission (0.05% of order value) • Referrer details
+                All referred users • Orders • Commission • Referrer details
               </p>
             </div>
 
@@ -172,159 +224,67 @@ const AdminReferrals = () => {
                     <th className="w-12 px-4 py-5"></th>
                     <th className="px-4 py-5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Referred User</th>
                     <th className="px-4 py-5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden md:table-cell">Referred By</th>
-                    <th className="px-4 py-5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden lg:table-cell">Email</th>
+                    <th className="px-4 py-5 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider hidden lg:table-cell">Contact</th>
                     <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Orders</th>
                     <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">Portfolio</th>
                     <th className="px-4 py-5 text-center text-xs font-semibold text-gray-600 uppercase tracking-wider">KYC</th>
-                    <th className="w-12 px-4 py-5"></th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
                   {referrals.map((ref) => (
-                    <>
-                      <tr
-                        key={ref.id}
-                        className="hover:bg-emerald-50/60 transition-colors cursor-pointer group"
-                        onClick={() => toggleExpand(ref.id)}
+                    <tr
+                      key={ref.id}
+                      className="hover:bg-emerald-50/60 transition-colors"
+                    >
+                      <td className="px-4 py-5">
+                        <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-100 to-blue-100 flex items-center justify-center text-indigo-700 font-semibold text-lg">
+                          {ref.referred_full_name?.charAt(0)?.toUpperCase() || "?"}
+                        </div>
+                      </td>
+
+                      {/* Referred User */}
+                      <td className="px-4 py-5">
+                        <div className="font-semibold text-gray-900">{ref.referred_full_name}</div>
+                        <div className="text-xs font-mono text-gray-500 mt-0.5">
+                          {ref.referred_sb_id}
+                        </div>
+                      </td>
+
+                      {/* Referred By - Now with SB ID */}
+                      <td className="px-4 py-5 text-sm text-gray-600 hidden md:table-cell">
+                        <div>{ref.referrer_name}</div>
+                        <div className="text-xs font-mono text-gray-500">
+                          {ref.referrer_sb_id}
+                        </div>
+                      </td>
+
+                      <td className="px-4 py-5 whitespace-nowrap text-sm text-gray-600 hidden lg:table-cell">
+                        {ref.referred_email || ref.referred_mobile || "—"}
+                      </td>
+
+                      <td 
+                        className="px-4 py-5 text-center font-medium text-emerald-600 underline hover:text-emerald-700 cursor-pointer"
+                        onClick={() => openReferredOrdersModal(ref)}
                       >
-                        <td className="px-4 py-5">
-                          <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-100 to-blue-100 flex items-center justify-center text-indigo-700 font-semibold text-lg shadow-sm group-hover:scale-105 transition-transform">
-                            {ref.referred_full_name?.charAt(0)?.toUpperCase() || "?"}
-                          </div>
-                        </td>
-                        <td className="px-4 py-5">
-                          <div className="font-semibold text-gray-900">{ref.referred_full_name}</div>
-                        </td>
-                        <td className="px-4 py-5 text-sm text-gray-600 hidden md:table-cell">
-                          {ref.referrer_name}
-                        </td>
-                        <td className="px-4 py-5 whitespace-nowrap text-sm text-gray-600 hidden lg:table-cell truncate max-w-[200px]">
-                          {ref.referred_email || "—"}
-                        </td>
-                        <td className="px-4 py-5 text-center font-medium text-gray-900 text-sm">{ref.orderCount}</td>
-                        <td className="px-4 py-5 text-center font-medium text-emerald-700 text-sm">
-                          ₹{ref.totalPortfolioValue.toLocaleString("en-IN")}
-                        </td>
-                       
-                        <td className="px-4 py-5 text-center">
-                          <span
-                            className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
-                              ref.kycStatus === "Verified"
-                                ? "bg-emerald-100 text-emerald-700 border border-emerald-200"
-                                : ref.kycStatus === "Pending"
-                                ? "bg-amber-100 text-amber-700 border border-amber-200"
-                                : "bg-gray-100 text-gray-600 border border-gray-200"
-                            }`}
-                          >
-                            {ref.kycStatus}
-                          </span>
-                        </td>
-                        <td className="px-4 py-5 text-center">
-                          {expandedId === ref.id ? (
-                            <ChevronUp size={19} className="text-gray-400 group-hover:text-emerald-600 transition-colors" />
-                          ) : (
-                            <ChevronDown size={19} className="text-gray-400 group-hover:text-emerald-600 transition-colors" />
-                          )}
-                        </td>
-                      </tr>
+                        {ref.orderCount}
+                      </td>
 
-                      {expandedId === ref.id && (
-                        <tr>
-                          <td colSpan={9} className="p-0 bg-gray-50">
-                            <div className="px-6 py-9">
-                              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-                                {/* Referred User */}
-                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
-                                    <Users size={18} className="text-gray-500" />
-                                    Referred User
-                                  </h4>
-                                  <div className="space-y-2.5 text-sm">
-                                    <div className="flex justify-between">
-                                      <span className="text-gray-500">Name</span>
-                                      <span className="font-medium">{ref.referred_full_name}</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                      <span className="text-gray-500">SB ID</span>
-                                      <span className="font-medium">{ref.referred_sb_id}</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                      <span className="text-gray-500">Joined</span>
-                                      <span className="font-medium">
-                                        {ref.joinedDate
-                                          ? new Date(ref.joinedDate).toLocaleDateString("en-IN", {
-                                              day: "numeric",
-                                              month: "short",
-                                              year: "numeric",
-                                            })
-                                          : "—"}
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
+                      <td className="px-4 py-5 text-center font-medium text-emerald-700 text-sm">
+                        ₹{ref.totalPortfolioValue.toLocaleString("en-IN")}
+                      </td>
 
-                                {/* Activity */}
-                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
-                                    <Package size={18} className="text-gray-500" />
-                                    Activity
-                                  </h4>
-                                  <div className="space-y-2.5 text-sm">
-                                    <div className="flex justify-between">
-                                      <span className="text-gray-500">Orders</span>
-                                      <span className="font-medium">{ref.orderCount}</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                      <span className="text-gray-500">Portfolio</span>
-                                      <span className="font-medium text-emerald-700">
-                                        ₹{ref.totalPortfolioValue.toLocaleString("en-IN")}
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
+                    
 
-                                {/* KYC Status */}
-                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
-                                    <ShieldCheck size={18} className="text-gray-500" />
-                                    KYC Status
-                                  </h4>
-                                  <span
-                                    className={`inline-flex px-5 py-2 rounded-2xl text-sm font-semibold ${
-                                      ref.kycStatus === "Verified"
-                                        ? "bg-emerald-100 text-emerald-700"
-                                        : ref.kycStatus === "Pending"
-                                        ? "bg-amber-100 text-amber-700"
-                                        : "bg-gray-100 text-gray-600"
-                                    }`}
-                                  >
-                                    {ref.kycStatus}
-                                  </span>
-                                </div>
-
-                                {/* Referred By */}
-                                <div className="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
-                                    <UserPlus size={18} className="text-gray-500" />
-                                    Referred By
-                                  </h4>
-                                  <div className="text-sm space-y-2">
-                                    <div>
-                                      <span className="text-gray-500 block text-xs">Name</span>
-                                      <span className="font-medium text-gray-800">{ref.referrer_name}</span>
-                                    </div>
-                                    <div>
-                                      <span className="text-gray-500 block text-xs">SB ID</span>
-                                      <span className="font-medium text-gray-800">{ref.profiles?.sb_user_id || "—"}</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                      )}
-                    </>
+                      <td className="px-4 py-5 text-center">
+                        <span className={`inline-flex px-3.5 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
+                          ref.kycStatus === "Verified" ? "bg-emerald-100 text-emerald-700 border border-emerald-200" : 
+                          ref.kycStatus === "Pending" ? "bg-amber-100 text-amber-700 border border-amber-200" : 
+                          "bg-gray-100 text-gray-600 border border-gray-200"
+                        }`}>
+                          {ref.kycStatus}
+                        </span>
+                      </td>
+                    </tr>
                   ))}
                 </tbody>
               </table>
@@ -332,6 +292,97 @@ const AdminReferrals = () => {
           )}
         </div>
       </main>
+
+      {/* Orders Modal */}
+      {selectedReferredForOrders && (
+        <div className="fixed inset-0 z-[200] flex items-start justify-center bg-black/70 px-4 pt-32 pb-8 overflow-y-auto">
+          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[70vh] flex flex-col mx-auto">
+            <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-semibold text-gray-900">
+                  Orders by {selectedReferredForOrders.referred_full_name}
+                </h2>
+                <p className="text-sm text-gray-500 mt-1">
+                  SB ID: {selectedReferredForOrders.referred_sb_id}
+                </p>
+              </div>
+              <button onClick={closeOrdersModal} className="p-3 hover:bg-gray-100 rounded-2xl transition-colors">
+                <X size={24} className="text-gray-500" />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-auto p-6 sm:p-8">
+              {modalLoading ? (
+                <div className="flex justify-center py-12">
+                  <Loader2 className="w-8 h-8 animate-spin text-emerald-600" />
+                </div>
+              ) : referredOrders.length === 0 ? (
+                <div className="bg-gray-50 border border-gray-100 rounded-3xl py-12 text-center">
+                  <p className="text-gray-500">No orders found for this user.</p>
+                </div>
+              ) : (
+                <>
+                  <div className="overflow-x-auto rounded-3xl border border-gray-100 max-h-[45vh] overflow-y-auto">
+                    <table className="min-w-full text-sm">
+                      <thead className="bg-gray-50 sticky top-0 z-10">
+                        <tr>
+                          <th className="px-4 py-4 text-left font-medium text-gray-600">Asset</th>
+                          <th className="px-4 py-4 text-right font-medium text-gray-600">Price</th>
+                          <th className="px-4 py-4 text-right font-medium text-gray-600">Qty</th>
+                          <th className="px-4 py-4 text-center font-medium text-gray-600">Type</th>
+                          <th className="px-4 py-4 text-center font-medium text-gray-600">Status</th>
+                          <th className="px-4 py-4 text-right font-medium text-gray-600">Date</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        {paginatedOrders.map((order) => (
+                          <tr key={order.id} className="hover:bg-gray-50">
+                            <td className="px-4 py-4 font-medium">{order.asset_name}</td>
+                            <td className="px-4 py-4 text-right">₹{order.price?.toLocaleString("en-IN")}</td>
+                            <td className="px-4 py-4 text-right">{order.quantity}</td>
+                            <td className="px-4 py-4 text-center">
+                              <span className={`inline-flex px-3 py-1 text-xs font-semibold rounded-2xl ${order.order_type === "BUY" ? "bg-emerald-100 text-emerald-700" : "bg-red-100 text-red-700"}`}>
+                                {order.order_type}
+                              </span>
+                            </td>
+                            <td className="px-4 py-4 text-center">
+                              <span className={`inline-flex px-3 py-1 text-xs font-semibold rounded-2xl ${order.status === "PENDING" ? "bg-amber-100 text-amber-700" : "bg-emerald-100 text-emerald-700"}`}>
+                                {order.status}
+                              </span>
+                            </td>
+                           
+                            <td className="px-4 py-4 text-right text-xs text-gray-500">
+                              {new Date(order.created_at).toLocaleDateString("en-IN")}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {totalPages > 1 && (
+                    <div className="flex items-center justify-center gap-4 mt-6">
+                      <button onClick={() => setCurrentPage(p => Math.max(p-1,1))} disabled={currentPage===1} className="p-3 rounded-2xl hover:bg-gray-100 disabled:opacity-50">
+                        <ChevronLeft size={20} />
+                      </button>
+                      <span className="text-sm font-medium text-gray-700">Page {currentPage} of {totalPages}</span>
+                      <button onClick={() => setCurrentPage(p => Math.min(p+1, totalPages))} disabled={currentPage===totalPages} className="p-3 rounded-2xl hover:bg-gray-100 disabled:opacity-50">
+                        <ChevronRight size={20} />
+                      </button>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+
+            <div className="px-6 sm:px-8 py-5 border-t flex justify-end">
+              <button onClick={closeOrdersModal} className="px-8 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-2xl transition-colors">
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
