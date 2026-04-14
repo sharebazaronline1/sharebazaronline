@@ -15573,7 +15573,6 @@ export const fetchUnlistedShares = async () => {
 
 
 
-// src/api/mockApi.js - Add this as the first blog in fetchBlogs()
 
 export const fetchInsightDetails = async () => {
   return [
@@ -15695,14 +15694,13 @@ export const fetchInsightDetails = async () => {
   ];
 };
 
-// src/api/fetchPreIPODetails.js
 
 export const fetchPreIPODetails = async () => {
   return [
    {
   "id": 1,
   "name": "APL Metals Limited",
-  "price": 12,
+  "price": 1,
   "logo": "/images/preipo/image1.png",
 
   "overview": `Associated Pigments Limited (now APL Metals Limited) is a leading Indian manufacturer specializing in lead and lead oxide products. Established in 1948, the company has built a strong reputation in the Indian metals industry through decades of operational excellence, consistent quality, and customer satisfaction. APL Metals has played a significant role in contributing to India’s self-sufficiency in lead-based products and continues to be a trusted supplier across multiple industrial sectors.
@@ -16746,6 +16744,670 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
   "managementInsight": "Focus on responsible lending, maintaining high recovery rates, asset quality control, and sustainable expansion while serving underserved markets."
 },
+{
+  "id": 9,
+  "name": "Assam Carbon Products Limited",
+  "price": 475,
+  "logo": "/images/preipo/image9.png",
+
+  "overview": "Assam Carbon Products Limited is one of India’s oldest manufacturers of carbon and carbon-based components, established in 1963. The company specializes in electrical, mechanical, and specialty carbon products used across industries such as railways, cement, steel, power, and petrochemicals. It holds a strong market position with decades of experience and a diversified industrial client base.",
+
+  "products": [
+    "Carbon Brushes",
+    "Mechanical Carbon Components",
+    "Graphite Components",
+    "Specialty Carbon Products"
+  ],
+
+  "manufacturingUnits": [
+    "Guwahati, Assam"
+  ],
+
+  "clients": [
+    "Railways",
+    "Steel Industry",
+    "Cement Industry",
+    "Power & Petrochemical Companies"
+  ],
+
+  "shareDetails": {
+    "companyName": "Assam Carbon Products Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹475",
+    "marketCapitalization": "₹120–130 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹660–669",
+    "52WeekLow": "₹265–295",
+    "faceValue": "₹10",
+    "bookValue": "₹181.2",
+    "peRatio": "14–16",
+    "pbRatio": "2.4–2.6",
+    "debtToEquity": "0.02",
+    "returnOnEquity": "16–20%",
+    "totalOutstandingShares": "27,55,600",
+    "isin": "INE496C01018",
+    "depository": "NSDL & CDSL",
+    "pan": "AACCA4236D",
+    "cin": "L23101AS1963PLC001206",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "The company has shown steady profitability with strong margins in niche industrial carbon products. Revenue growth remains moderate, but high operating efficiency and low debt contribute to stable earnings.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 48.4, "fy23": 50, "fy24": 55, "fy25": 62 },
+      { "label": "Operating Profit", "fy22": 13.3, "fy23": 14, "fy24": 16, "fy25": 18 },
+      { "label": "Profit Before Tax", "fy22": 12, "fy23": 13, "fy24": 15, "fy25": 17 },
+      { "label": "Profit After Tax (PAT)", "fy22": 7.8, "fy23": 8.5, "fy24": 9.5, "fy25": 10.5 }
+    ],
+
+    "keyRatios": [
+      { "label": "EPS (₹)", "fy22": 28.5, "fy23": 29, "fy24": 29.85, "fy25": 30 },
+      { "label": "Net Profit Margin (%)", "fy22": 16, "fy23": 17, "fy24": 17, "fy25": 17 },
+      { "label": "ROE (%)", "fy22": 15, "fy23": 16, "fy24": 18, "fy25": 17 }
+    ],
+
+    "investorInsight": [
+      "Consistent profitability with strong margins in niche segment.",
+      "Very low debt improves financial stability.",
+      "Moderate growth but high return ratios.",
+      "Small-cap unlisted company with limited liquidity."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 14, "fy23": 14.5, "fy24": 15, "fy25": 16 },
+      { "label": "Cash and Balances", "fy22": 2, "fy23": 3, "fy24": 4, "fy25": 5 },
+      { "label": "Other Assets", "fy22": 35, "fy23": 37, "fy24": 40, "fy25": 45 },
+      { "label": "Total Assets", "fy22": 51, "fy23": 54.5, "fy24": 59, "fy25": 66 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 2.75, "fy23": 2.75, "fy24": 2.75, "fy25": 2.75 },
+      { "label": "Reserves", "fy22": 45, "fy23": 47, "fy24": 50, "fy25": 54 },
+      { "label": "Borrowings", "fy22": 2, "fy23": 2, "fy24": 1.5, "fy25": 1 },
+      { "label": "Other Liabilities", "fy22": 1.25, "fy23": 2.75, "fy24": 4.75, "fy25": 8.25 },
+      { "label": "Total Liabilities", "fy22": 51, "fy23": 54.5, "fy24": 59, "fy25": 66 }
+    ],
+    "insights": "Strong balance sheet with high reserves and negligible debt, indicating financial stability."
+  },
+
+  "liabilitiesBreakdown": "Debt levels are extremely low (D/E ~0.02), making the company almost debt-free.",
+
+  "balanceSheetInsights": "High reserves and low leverage highlight strong internal accrals and conservative financial management.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": 7, "fy23": 8, "fy24": 9, "fy25": 10 },
+      { "label": "Cash Flow From Investing", "fy22": -3, "fy23": -2, "fy24": -3, "fy25": -4 },
+      { "label": "Cash Flow From Financing", "fy22": -2, "fy23": -2, "fy24": -2, "fy25": -1 }
+    ],
+    "insights": [
+      "Consistent positive operating cash flows.",
+      "Low capex requirements.",
+      "Minimal dependence on external financing."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+
+  "promotersManagement": "Promoted by Himatsingka group with decades of experience in carbon manufacturing.",
+
+  "management": [
+    { "name": "Rakesh Himatsingka", "role": "Chairman", "experience": "Industrial Manufacturing" },
+    { "name": "Professional Leadership Team", "role": "Management", "experience": "Carbon & Engineering Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focused on niche industrial carbon segments with emphasis on quality, long-term industrial relationships, and operational efficiency."
+},
+{
+  "id": 10,
+  "name": "Axles India Limited",
+  "price": 145,
+  "logo": "/images/preipo/image10.jpg",
+
+  "overview": "Axles India Limited is a leading manufacturer of axle housings and components for commercial vehicles in India. Established in 1982 as a joint venture between Wheels India Limited (TVS Group) and Dana Incorporated (USA), the company supplies critical drivetrain components to major OEMs. It has built a strong reputation for quality, engineering capability, and long-term relationships with commercial vehicle manufacturers.",
+
+  "products": [
+    "Drive Axle Housings",
+    "Non-Drive Axle Housings",
+    "Trailer Axle Assemblies",
+    "Fabricated Automotive Components"
+  ],
+
+  "manufacturingUnits": [
+    "Sriperumbudur, Tamil Nadu",
+    "Cheyyar, Tamil Nadu"
+  ],
+
+  "clients": [
+    "Ashok Leyland",
+    "Tata Motors",
+    "Dana Group",
+    "Other Commercial Vehicle OEMs"
+  ],
+
+  "shareDetails": {
+    "companyName": "Axles India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹145",
+    "marketCapitalization": "₹700–750 Crore (Approx)",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹160",
+    "52WeekLow": "₹130",
+    "faceValue": "₹10",
+    "bookValue": "₹220 (Approx)",
+    "peRatio": "6–8 (Estimated)",
+    "pbRatio": "0.65",
+    "debtToEquity": "0.3",
+    "returnOnEquity": "10–12%",
+    "totalOutstandingShares": "Approx 4.8 Crore",
+    "isin": "INE449A01011",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACA6104G",
+    "cin": "U34100TN1982PLC009715",
+    "rta": "Cameo Corporate Services Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Stable revenue growth driven by strong demand from commercial vehicle OEMs. The company maintains consistent profitability with healthy margins due to operational efficiency and long-term client relationships.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1350, "fy23": 1650, "fy24": 1800, "fy25": 1900 },
+      { "label": "Other Income", "fy22": 20, "fy23": 25, "fy24": 30, "fy25": 28 },
+      { "label": "Total Expenses", "fy22": 1180, "fy23": 1400, "fy24": 1500, "fy25": 1600 },
+      { "label": "Profit Before Tax", "fy22": 190, "fy23": 275, "fy24": 330, "fy25": 328 },
+      { "label": "Profit After Tax (PAT)", "fy22": 140, "fy23": 205, "fy24": 245, "fy25": 240 }
+    ],
+
+    "keyRatios": [
+      { "label": "Net Profit Margin (%)", "fy22": 10.3, "fy23": 12.4, "fy24": 13.6, "fy25": 12.6 },
+      { "label": "EPS (₹)", "fy22": 29, "fy23": 42, "fy24": 50, "fy25": 49 },
+      { "label": "Book Value (₹)", "fy22": 180, "fy23": 200, "fy24": 215, "fy25": 220 },
+      { "label": "ROE (%)", "fy22": 8.5, "fy23": 10.5, "fy24": 11.5, "fy25": 10.9 }
+    ],
+
+    "investorInsight": [
+      "Consistent profitability with strong OEM relationships.",
+      "Low debt provides financial stability.",
+      "Trading below book value indicating potential undervaluation.",
+      "Growth linked to commercial vehicle industry cycles."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 350, "fy23": 370, "fy24": 390, "fy25": 410 },
+      { "label": "Cash and Balances", "fy22": 80, "fy23": 95, "fy24": 110, "fy25": 120 },
+      { "label": "Inventory", "fy22": 200, "fy23": 240, "fy24": 260, "fy25": 275 },
+      { "label": "Receivables", "fy22": 300, "fy23": 350, "fy24": 380, "fy25": 400 },
+      { "label": "Other Assets", "fy22": 70, "fy23": 80, "fy24": 85, "fy25": 90 },
+      { "label": "Total Assets", "fy22": 1000, "fy23": 1135, "fy24": 1225, "fy25": 1295 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 48, "fy23": 48, "fy24": 48, "fy25": 48 },
+      { "label": "Reserves", "fy22": 820, "fy23": 920, "fy24": 1030, "fy25": 1080 },
+      { "label": "Borrowings", "fy22": 90, "fy23": 85, "fy24": 80, "fy25": 75 },
+      { "label": "Other Liabilities", "fy22": 42, "fy23": 82, "fy24": 67, "fy25": 92 },
+      { "label": "Total Liabilities", "fy22": 1000, "fy23": 1135, "fy24": 1225, "fy25": 1295 }
+    ],
+    "insights": "Strong equity base with low leverage. Stable asset growth supported by retained earnings."
+  },
+
+  "liabilitiesBreakdown": "Borrowings are low and declining, indicating conservative financial management and strong internal accruals.",
+
+  "balanceSheetInsights": "Company maintains a strong balance sheet with high reserves and minimal debt, reflecting financial discipline.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": 180, "fy23": 220, "fy24": 260, "fy25": 255 },
+      { "label": "Cash Flow From Investing", "fy22": -70, "fy23": -60, "fy24": -65, "fy25": -80 },
+      { "label": "Cash Flow From Financing", "fy22": -50, "fy23": -40, "fy24": -30, "fy25": -20 }
+    ],
+    "insights": [
+      "Strong positive operating cash flows.",
+      "Regular capital expenditure for capacity expansion.",
+      "Minimal reliance on external financing."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (TVS Group)", "institutional": "Moderate", "public": "Low" }
+  ],
+
+  "promotersManagement": "Promoted by Wheels India Limited (TVS Group) in partnership with Dana Incorporated, USA.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Management", "experience": "Automotive Manufacturing & Engineering" }
+  ],
+
+  "rta": {
+    "registrar": "Cameo Corporate Services Limited",
+    "website": "https://www.cameoindia.com/"
+  },
+
+  "managementInsight": "Focus on OEM relationships, cost efficiency, technological collaboration with Dana, and maintaining leadership in axle component manufacturing."
+},
+{
+  "id": 11,
+  "name": "BLSX Limited",
+  "price": 24,
+  "logo": "/images/preipo/image11.png",
+
+  "overview": "BLSX Limited is an industrial manufacturing company engaged in producing high-performance rubber and engineering components, serving sectors such as steel, mining, defense, aerospace, and infrastructure. The company has expanded into infrastructure solutions like bridge rehabilitation and operates with a global presence.",
+
+  "products": [
+    "Industrial Hoses",
+    "Rubber-to-Metal Components",
+    "Custom Engineering Rubber Products",
+    "Infrastructure Solutions"
+  ],
+
+  "manufacturingUnits": [
+    "Hyderabad, Telangana, India"
+  ],
+
+  "clients": [
+    "Steel Plants",
+    "Mining Industry",
+    "Defense & Aerospace",
+    "Infrastructure Companies"
+  ],
+
+  "shareDetails": {
+    "companyName": "BLSX Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹24",
+    "marketCapitalization": "₹207 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹32",
+    "52WeekLow": "₹24",
+    "faceValue": "₹1",
+    "bookValue": "₹1.53",
+    "peRatio": "133.33",
+    "pbRatio": "15.69",
+    "debtToEquity": "0",
+    "returnOnEquity": "12.73",
+    "totalOutstandingShares": "8,62,32,180",
+    "isin": "INE0MDG01016",
+    "depository": "NSDL & CDSL",
+    "pan": "AAKCB8340F",
+    "cin": "U29309TG2022PLC163679",
+    "rta": "Bigshare Services Pvt Ltd"
+  },
+
+  "financials": {
+    "annualReportSummary": "Financials show strong growth from FY23 to FY25 with improving profitability, turning from losses to positive earnings and expanding margins.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 2.76, "fy24": 8.97, "fy25": 15.09 },
+      { "label": "Cost of Material Consumed", "fy23": 1.55, "fy24": 5.52, "fy25": 7.52 },
+      { "label": "Change in Inventory", "fy23": 0, "fy24": -2.54, "fy25": -0.88 },
+      { "label": "Gross Margin", "fy23": 43.84, "fy24": 65.78, "fy25": 56 },
+      { "label": "Employee Benefit Expenses", "fy23": 0.65, "fy24": 2.79, "fy25": 3.94 },
+      { "label": "Other Expenses", "fy23": 0.3, "fy24": 1.14, "fy25": 1.86 },
+      { "label": "EBITDA", "fy23": 0.26, "fy24": 2.06, "fy25": 2.85 },
+      { "label": "Operating Profit Margin (%)", "fy23": 9.42, "fy24": 22.97, "fy25": 18.89 },
+      { "label": "Other Income", "fy23": 0, "fy24": 0, "fy25": 0.07 },
+      { "label": "Finance Cost", "fy23": 0, "fy24": 0, "fy25": 0.05 },
+      { "label": "Depreciation", "fy23": 0.76, "fy24": 0.85, "fy25": 0.73 },
+      { "label": "EBIT", "fy23": -0.51, "fy24": 1.21, "fy25": 2.12 },
+      { "label": "EBIT Margin (%)", "fy23": -18.12, "fy24": 13.49, "fy25": 14.05 },
+      { "label": "PBT", "fy23": -0.51, "fy24": 1.15, "fy25": 2.13 },
+      { "label": "PBT Margin (%)", "fy23": -18.48, "fy24": 12.82, "fy25": 14.12 },
+      { "label": "Tax", "fy23": -0.05, "fy24": 0.34, "fy25": 0.58 },
+      { "label": "PAT", "fy23": -0.46, "fy24": 0.81, "fy25": 1.55 },
+      { "label": "Net Profit Margin (%)", "fy23": -16.67, "fy24": 9.03, "fy25": 10.27 },
+      { "label": "EPS (₹)", "fy23": -0.05, "fy24": 0.09, "fy25": 0.18 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 9.42, "fy24": 22.97, "fy25": 18.89 },
+      { "label": "Net Profit Margin (%)", "fy23": -16.67, "fy24": 9.03, "fy25": 10.27 },
+      { "label": "Earning Per Share (₹)", "fy23": -0.05, "fy24": 0.09, "fy25": 0.18 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth from FY23 to FY25.",
+      "Turnaround from losses in FY23 to profitability in FY24–FY25.",
+      "Improving operating margins.",
+      "Still relatively low EPS compared to valuation."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 3.66, "fy24": 2.82, "fy25": 2.33 },
+      { "label": "CWIP", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy23": 0.79, "fy24": 1.42, "fy25": 0.96 },
+      { "label": "Inventory", "fy23": 4.07, "fy24": 6.61, "fy25": 7.49 },
+      { "label": "Other Assets", "fy23": 1.68, "fy24": 2.98, "fy25": 3.59 },
+      { "label": "Total Assets", "fy23": 10.2, "fy24": 13.83, "fy25": 14.37 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 8.62, "fy24": 8.62, "fy25": 8.62 },
+      { "label": "Face Value", "fy23": 1, "fy24": 1, "fy25": 1 },
+      { "label": "Reserves", "fy23": 1.2, "fy24": 2.02, "fy25": 3.56 },
+      { "label": "Borrowings", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy23": 0.22, "fy24": 1, "fy25": 0.84 },
+      { "label": "Other Liabilities", "fy23": 0.16, "fy24": 2.19, "fy25": 1.35 },
+      { "label": "Total Liabilities", "fy23": 10.2, "fy24": 13.83, "fy25": 14.37 }
+    ],
+    "insights": "Assets growth driven by inventory buildup and rising reserves. Company remains debt-free."
+  },
+
+  "liabilitiesBreakdown": "No borrowings across all years → completely debt-free structure.",
+
+  "balanceSheetInsights": "Growth funded internally via equity and retained earnings; inventory-heavy working capital structure.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "PBT", "fy23": -0.51, "fy24": 1.15, "fy25": 2.13 },
+      { "label": "OPBWC", "fy23": 0.77, "fy24": 0.85, "fy25": 2.86 },
+      { "label": "Change in Receivables", "fy23": -0.8, "fy24": -0.63, "fy25": 0.46 },
+      { "label": "Change in Inventories", "fy23": -4.07, "fy24": -2.54, "fy25": -0.88 },
+      { "label": "Change in Payables", "fy23": 0.22, "fy24": 0.78, "fy25": -0.16 },
+      { "label": "Other Changes", "fy23": -0.38, "fy24": 2.34, "fy25": -1.71 },
+      { "label": "Working Capital Change", "fy23": -5.03, "fy24": -0.05, "fy25": -2.29 },
+      { "label": "Cash Generated From Operations", "fy23": -4.26, "fy24": 0.8, "fy25": 0.57 },
+      { "label": "Tax", "fy23": 0, "fy24": 0, "fy25": -0.4 },
+      { "label": "Cash Flow From Operations", "fy23": -4.26, "fy24": 0.8, "fy25": 0.17 },
+      { "label": "Purchase of PPE", "fy23": -4.42, "fy24": -0.01, "fy25": -0.24 },
+      { "label": "Cash Flow From Investing", "fy23": -4.42, "fy24": -0.01, "fy25": -0.24 },
+      { "label": "Equity", "fy23": 10.28, "fy24": 0, "fy25": 0 },
+      { "label": "Cash Flow from Financing", "fy23": 10.28, "fy24": 0, "fy25": 0 },
+      { "label": "Net Cash Generated", "fy23": 1.6, "fy24": 0.79, "fy25": -0.07 },
+      { "label": "Cash at Start", "fy23": 0, "fy24": 1.6, "fy25": 2.39 },
+      { "label": "Cash at End", "fy23": 1.6, "fy24": 2.39, "fy25": 2.32 }
+    ],
+    "insights": [
+      "Heavy working capital usage (inventory driven).",
+      "Positive operating cash flow achieved from FY24.",
+      "Initial funding via equity in FY23.",
+      "No debt financing used."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "2025", "promoters": "65.35%", "others": "34.65%" }
+  ],
+
+  "promotersManagement": "Promoted by Vipul Trivedi and associated leadership.",
+
+  "management": [
+    { "name": "Vipul Trivedi", "role": "Chairman", "experience": "20+ years" },
+    { "name": "Umesh Trivedi", "role": "MD", "experience": "20+ years" }
+  ],
+
+  "rta": {
+    "registrar": "Bigshare Services Pvt Ltd",
+    "website": ""
+  },
+
+  "managementInsight": "Focused on scaling manufacturing operations and improving profitability while remaining debt-free."
+},
+{
+  "id": 12,
+  "name": "BVG India Limited",
+  "price": 395,
+  "logo": "/images/preipo/image12.jpg",
+
+  "overview": `BVG India Limited (Bharat Vikas Group) is one of India’s largest integrated facility management and services companies. Founded in 2002, the company provides end-to-end solutions across facility management, emergency medical services, solid waste management, infrastructure projects, logistics, and renewable energy. It operates pan-India with major government and corporate contracts.`,
+
+  "products": [
+    "Integrated Facility Management Services",
+    "Emergency Medical & Ambulance Services",
+    "Solid Waste Management",
+    "Infrastructure & EPC Projects",
+    "Solar EPC & Renewable Energy",
+    "Logistics & Transport Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Indian Railways",
+    "Airports Authority of India",
+    "ONGC, IOCL & PSUs",
+    "ITC, HUL & Large Corporates",
+    "State Governments & Municipal Corporations"
+  ],
+
+  "shareDetails": {
+    "companyName": "BVG India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹395",
+    "marketCapitalization": "₹5078 Crore (Approx.)",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹395",
+    "52WeekLow": "₹315",
+    "faceValue": "₹2",
+    "bookValue": "₹79.5",
+    "peRatio": "24.5",
+    "pbRatio": "3.7",
+    "debtToEquity": "0.35",
+    "returnOnEquity": "12.5",
+    "totalOutstandingShares": "12,85,00,000 (Approx.)",
+    "isin": "INE257H01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AACCB0943N",
+    "cin": "U74999PN2002PLC016834",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "BVG has shown robust revenue growth with consistent improvement in profitability. Strong order book from government and corporate contracts supports stable growth. The company maintains moderate leverage and healthy cash flows.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 4704, "fy23": 5489, "fy24": 6264, "fy25": 6835 },
+      { "label": "EBITDA", "fy22": 724, "fy23": 892, "fy24": 1113, "fy25": 1246 },
+      { "label": "EBIT", "fy22": 608, "fy23": 777, "fy24": 997, "fy25": 1126 },
+      { "label": "PBT", "fy22": 883, "fy23": 954, "fy24": 1155, "fy25": 1252 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 631, "fy23": 634, "fy24": 823, "fy25": 937 },
+      { "label": "EPS", "fy22": 22.9, "fy23": 23.01, "fy24": 29.82, "fy25": 34.01 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 15.39, "fy23": 16.25, "fy24": 17.77, "fy25": 18.23 },
+      { "label": "Net Profit Margin (%)", "fy22": 13.41, "fy23": 11.55, "fy24": 13.14, "fy25": 13.71 },
+      { "label": "ROE (%)", "fy25": "12.5" },
+      { "label": "EPS (₹)", "fy22": 22.9, "fy23": 23.01, "fy24": 29.82, "fy25": 34.01 }
+    ],
+
+    "investorInsight": [
+      "Steady revenue growth driven by large government and corporate contracts.",
+      "Consistent margin improvement and strong PAT growth.",
+      "Healthy order book provides good revenue visibility.",
+      "Attractive unlisted valuation with strong fundamentals."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 180, "fy23": 170, "fy24": 187, "fy25": 253 },
+      { "label": "CWIP", "fy22": 0.06, "fy23": 0.01, "fy24": 71, "fy25": 1.5 },
+      { "label": "Investments", "fy22": 0.1, "fy23": 3.2, "fy24": 11, "fy25": 12 },
+      { "label": "Trade Receivables", "fy22": 910, "fy23": 965, "fy24": 938, "fy25": 1038 },
+      { "label": "Inventory", "fy22": 198, "fy23": 10, "fy24": 31, "fy25": 42 },
+      { "label": "Other Assets", "fy22": 851.84, "fy23": 768.7, "fy24": 886, "fy25": 1032.5 },
+      { "label": "Total Assets", "fy22": 2190, "fy23": 1917, "fy24": 2122, "fy25": 2379 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 25.71, "fy23": 25.71, "fy24": 25.71, "fy25": 25.7 },
+      { "label": "Reserves", "fy22": 877, "fy23": 996, "fy24": 1152, "fy25": 1343 },
+      { "label": "Borrowings", "fy22": 368, "fy23": 420, "fy24": 480, "fy25": 683 },
+      { "label": "Trade Payables", "fy22": 14.6, "fy23": 203, "fy24": 126, "fy25": 13.6 },
+      { "label": "Other Liabilities", "fy22": 475.29, "fy23": 292.29, "fy24": 320.29, "fy25": 648.3 },
+      { "label": "Total Liabilities", "fy22": 2190, "fy23": 1917, "fy24": 2122, "fy25": 2379 }
+    ],
+    "insights": "Strong growth in reserves. Borrowings increased moderately to support expansion."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity remains comfortable. Working capital requirements are moderate.",
+
+  "balanceSheetInsights": "Healthy equity base with growing reserves. Asset base expanding steadily.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": 225.3, "fy23": 150.7, "fy24": 176, "fy25": 218 },
+      { "label": "Cash Flow From Investing", "fy22": -13.9, "fy23": -5.4, "fy24": -54, "fy25": -41 },
+      { "label": "Cash Flow From Financing", "fy22": -250, "fy23": -88.4, "fy24": -103.5, "fy25": -79 }
+    ],
+    "insights": [
+      "Positive operating cash flows across years.",
+      "Moderate investing and financing activities.",
+      "Stable cash position maintained."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Founder Group)", "institutional": "Moderate", "public": "Low" }
+  ],
+
+  "promotersManagement": "Founded by Hanmantrao Gaikwad. Strong promoter involvement with professional management.",
+
+  "management": [
+    { "name": "Hanmantrao Gaikwad", "role": "Founder & Managing Director", "experience": "25+ Years in Services Industry" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focus on large-scale government contracts, operational excellence, diversification into renewable energy & infrastructure, and maintaining high service quality standards."
+},
+{
+  "id": 13,
+  "name": "Bazar India Limited",
+  "price": 85,
+  "logo": "/images/preipo/image13.png",
+
+  "overview": `Bazar India Limited is engaged in the wholesale trading and distribution of FMCG products, groceries, consumer goods, and general merchandise. The company operates in the highly competitive B2B wholesale segment, supplying to kirana stores and retailers. It has faced continuous revenue decline over the past few years due to intense competition and thin margins.`,
+
+  "products": [
+    "FMCG Products",
+    "Groceries & Staples",
+    "Consumer Goods",
+    "General Merchandise"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Kirana Stores",
+    "Retailers",
+    "Wholesale Buyers"
+  ],
+
+  "shareDetails": {
+    "companyName": "Bazar India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹85",
+    "marketCapitalization": "₹255 Crore (Approx.)",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹110",
+    "52WeekLow": "₹75",
+    "faceValue": "₹10",
+    "bookValue": "₹10.01",
+    "peRatio": "NA",
+    "pbRatio": "8.49",
+    "debtToEquity": "0.95",
+    "returnOnEquity": "Negative",
+    "totalOutstandingShares": "3,00,00,000",
+    "isin": "INE0RYY01014",
+    "depository": "NSDL & CDSL",
+    "pan": "AACCB0943N",
+    "cin": "U52100MH2019PLC327XXX",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Revenue has declined sharply from ₹359 Cr in FY20 to ₹152.58 Cr in FY23. The company turned profitable in FY21-22 but profitability remains extremely thin. High competition and working capital pressure continue to impact performance.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy20": 359, "fy21": 187, "fy22": 165, "fy23": 152.58 },
+      { "label": "EBITDA", "fy20": 4, "fy21": 10, "fy22": 18, "fy23": 1.03 },
+      { "label": "PBT", "fy20": -17.5, "fy21": 5.8, "fy22": 9.57, "fy23": 1.45 },
+      { "label": "Net Profit / Loss (PAT)", "fy20": -18, "fy21": 1.8, "fy22": 9.4, "fy23": 0.96 },
+      { "label": "EPS", "fy20": -7.2, "fy21": 0.72, "fy22": 3.19, "fy23": 0.32 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy20": 1.11, "fy21": 5.35, "fy22": 10.91, "fy23": 0.68 },
+      { "label": "Net Profit Margin (%)", "fy20": -5.01, "fy21": 0.96, "fy22": 5.7, "fy23": 0.63 },
+      { "label": "EPS (₹)", "fy20": -7.2, "fy21": 0.72, "fy22": 3.19, "fy23": 0.32 }
+    ],
+
+    "investorInsight": [
+      "Continuous decline in revenue over 4 years.",
+      "Very thin profitability with high business risk.",
+      "Extremely small scale operations.",
+      "High-risk investment in a low-margin wholesale segment."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy20": 34, "fy21": 26, "fy22": 24, "fy23": 20.93 },
+      { "label": "CWIP", "fy20": 1.4, "fy21": 0, "fy22": 0, "fy23": 0 },
+      { "label": "Investments", "fy20": 0, "fy21": 0, "fy22": 0, "fy23": 0.05 },
+      { "label": "Trade Receivables", "fy20": 0, "fy21": 0.1, "fy22": 0.15, "fy23": 0.09 },
+      { "label": "Inventory", "fy20": 120, "fy21": 104, "fy22": 109, "fy23": 106.35 },
+      { "label": "Other Assets", "fy20": 18.6, "fy21": 27.9, "fy22": 21.25, "fy23": 20.54 },
+      { "label": "Total Assets", "fy20": 174, "fy21": 158, "fy22": 154.4, "fy23": 147.96 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy20": 25, "fy21": 25, "fy22": 29.5, "fy23": 30 },
+      { "label": "Reserves", "fy20": -23, "fy21": -14, "fy22": -3, "fy23": 0.008 },
+      { "label": "Borrowings", "fy20": 22, "fy21": 18, "fy22": 11, "fy23": 28.43 },
+      { "label": "Trade Payables", "fy20": 142, "fy21": 125, "fy22": 102, "fy23": 81.59 },
+      { "label": "Other Liabilities", "fy20": 8, "fy21": 4, "fy22": 14.9, "fy23": 7.93 },
+      { "label": "Total Liabilities", "fy20": 174, "fy21": 158, "fy22": 154.4, "fy23": 147.96 }
+    ],
+    "insights": "Heavy inventory and trade payables. Negative reserves turned marginally positive in FY23."
+  },
+
+  "liabilitiesBreakdown": "Borrowings increased in FY23. High dependence on trade payables for working capital.",
+
+  "balanceSheetInsights": "Small and shrinking balance sheet with very limited equity cushion.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy20": 9, "fy21": 3.76, "fy22": 3.4, "fy23": -17.35 },
+      { "label": "Cash Flow From Investing", "fy20": -1.6, "fy21": 3.8, "fy22": -1.3, "fy23": -0.3 },
+      { "label": "Cash Flow From Financing", "fy20": -9, "fy21": -6.99, "fy22": 3.6, "fy23": 18.19 }
+    ],
+    "insights": [
+      "Weak operating cash flows.",
+      "Negative cash generation in FY23.",
+      "Reliance on financing activities."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with experience in wholesale trading and distribution.",
+
+  "management": [
+    { "name": "Mr. Sushil Kumar Agarwal", "role": "Director", "experience": "Wholesale Trading Sector" },
+    { "name": "Mr. Rajesh Kumar Gupta", "role": "Director", "experience": "Finance & Operations" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focus on sustaining wholesale operations and managing working capital in a highly competitive, low-margin FMCG distribution market."
+},
+
 
 
    {
