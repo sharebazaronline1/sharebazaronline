@@ -12,6 +12,7 @@ const Login = () => {
   const [fullName, setFullName] = useState("");
   const [isSignUp, setIsSignUp] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [mobile, setMobile] = useState("");
 
   const generateShortId = (uid) => {
     if (!uid) return "SB-GUEST000";
@@ -20,109 +21,154 @@ const Login = () => {
     return `SB-${hash}`;
   };
 
-useEffect(() => {
-  const params = new URLSearchParams(location.search);
-  const refCode = params.get("ref");
-  if (refCode) localStorage.setItem("referral_code", refCode);
+  // 🔹 Step 1: Pure referral capture (runs on every URL change)
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const refCode = params.get("ref");
 
-  const { data: { subscription } } = supabase.auth.onAuthStateChange(
-    async (event, session) => {
-    if (event !== "SIGNED_IN") return;
-
-// 🔥 ALWAYS GET FRESH SESSION (VERY IMPORTANT)
-const {
-  data: { session: currentSession },
-} = await supabase.auth.getSession();
-
-if (!currentSession?.user) {
-  console.error("Session not ready ❌");
-  return;
-}
-
-const user = currentSession.user;
-
-console.log("AUTH USER ID:", user.id);
-// 🔥 attach referral code ONLY (SAFE VERSION)
-const referralCode = localStorage.getItem("referral_code");
-
-if (referralCode) {
-  console.log("Referral code found:", referralCode);
-
-  // ⏳ wait for trigger to create profile
-  await new Promise((res) => setTimeout(res, 500));
-
-  const { error } = await supabase
-    .from("profiles")
-    .update({ referred_by_code: referralCode })
-    .eq("id", user.id);
-
-  if (error) {
-    console.error("Referral attach failed:", error);
-  } else {
-    console.log("Referral code attached ✅");
-  }
-
-  localStorage.removeItem("referral_code");
-}
-
-// ✅ redirect
-navigate("/dashboard", { replace: true });
+    if (refCode) {
+      localStorage.setItem("referral_code", refCode);
     }
-  );
+  }, [location.search]);
 
-  return () => subscription.unsubscribe();
-}, [navigate, location.search, fullName]);
+  // 🔹 Minimal auth listener - only for session & verification
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event) => {
+        if (event !== "SIGNED_IN") return;
 
- const handleEmailAuth = async (e) => {
-  e.preventDefault();
-  setLoading(true);
+        const {
+          data: { session: currentSession },
+        } = await supabase.auth.getSession();
 
-  try {
-    // =========================
-    // SIGNUP
-    // =========================
-    if (isSignUp) {
-      if (!fullName.trim()) {
-        alert("Please enter your full name");
+        if (!currentSession?.user) return;
+
+        const user = currentSession.user;
+
+        if (!user.email_confirmed_at) {
+          alert("Please verify your email before logging in.");
+          await supabase.auth.signOut();
+          return;
+        }
+
+        // Light profile update only
+        await supabase
+          .from("profiles")
+          .update({
+            mobile: user.user_metadata?.mobile || null,
+            email_verified: true,
+          })
+          .eq("id", user.id);
+      }
+    );
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleEmailAuth = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      // =========================
+      // SIGNUP
+      // =========================
+      if (isSignUp) {
+        if (!fullName.trim()) {
+          alert("Please enter your full name");
+          setLoading(false);
+          return;
+        }
+
+        if (!mobile.trim()) {
+          alert("Please enter mobile number");
+          setLoading(false);
+          return;
+        }
+
+        const referralCode = localStorage.getItem("referral_code");
+
+        const { error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            data: {
+              full_name: fullName.trim(),
+              mobile: mobile.trim(),
+              referral_code: referralCode || null, // Best practice: pass on signup
+            },
+            emailRedirectTo: `${window.location.origin}/login`,
+          },
+        });
+
+        if (error) throw error;
+
+        alert("Check your email to verify your account 📩");
+
+        setIsSignUp(false);
+        setLoading(false);
         return;
       }
 
-      const { error } = await supabase.auth.signUp({
+      // =========================
+      // LOGIN
+      // =========================
+      const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
-        options: {
-          data: { full_name: fullName.trim() },
-          emailRedirectTo: `${window.location.origin}/login`,
-        },
       });
 
       if (error) throw error;
 
-      alert("Account created! Please check your email to verify.");
-      setIsSignUp(false);
+      const user = data.user;
+
+      if (!user.email_confirmed_at) {
+        alert("Please verify your email before logging in 📩");
+        await supabase.auth.signOut();
+        setLoading(false);
+        return;
+      }
+
+      // Light profile update
+      await supabase
+        .from("profiles")
+        .update({
+          mobile: user.user_metadata?.mobile || null,
+          email_verified: true,
+        })
+        .eq("id", user.id);
+
+      // ✅ Referral logic AFTER login (Step 2)
+      const referralCode = localStorage.getItem("referral_code");
+
+      // Redirect FIRST for instant UX
+      navigate("/dashboard", { replace: true });
+
+      // Background referral update (Step 3)
+      if (referralCode) {
+        setTimeout(async () => {
+          await supabase
+            .from("profiles")
+            .update({ referred_by_code: referralCode })
+            .eq("id", user.id);
+
+          localStorage.removeItem("referral_code");
+        }, 0);
+      }
+
+      setLoading(false);
       return;
+    } catch (error) {
+      alert(
+        error.message.includes("Invalid login credentials")
+          ? "Incorrect email or password"
+          : error.message
+      );
+    } finally {
+      setLoading(false);
     }
+  };
 
-    // =========================
-    // LOGIN
-    // =========================
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
-
-    if (error) throw error;
-
-  } catch (error) {
-    alert(
-      error.message.includes("Invalid login credentials")
-        ? "Incorrect email or password"
-        : error.message
-    );
-  } finally {
-    setLoading(false);
-  }
-};
   const handleGoogleLogin = async () => {
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
@@ -179,7 +225,21 @@ navigate("/dashboard", { replace: true });
                   />
                 </div>
               )}
-
+              {isSignUp && (
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                    Mobile Number
+                  </label>
+                  <input
+                    type="tel"
+                    value={mobile}
+                    onChange={(e) => setMobile(e.target.value)}
+                    className="w-full px-3 py-2.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
+                    placeholder="9876543210"
+                    required
+                  />
+                </div>
+              )}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   Email Address
