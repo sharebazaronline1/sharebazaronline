@@ -59,7 +59,13 @@ const PreIPODetails = () => {
 
     if (error) console.error(error);
 
-    const dbItem = dbData?.find((d) => d.name === selected.name);
+   const normalize = (str) =>
+  str.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+const dbItem = dbData?.find((d) =>
+  normalize(d.name).includes(normalize(selected.name)) ||
+  normalize(selected.name).includes(normalize(d.name))
+);
 
     const updatedPrice = dbItem ? Number(dbItem.price) : selected.price;
 

@@ -14011,7 +14011,7 @@ export const fetchPreIPOs = async () => {
   },
   {
     "id": 4,
-    "name": "Anheuser Busch Inbev (Sabmiller) India Limited Unlisted Shares",
+    "name": "Anheuser-Busch InBev SABMiller India Limited",
     "price": 495,
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
@@ -14020,7 +14020,7 @@ export const fetchPreIPOs = async () => {
   },
   {
     "id": 5,
-    "name": "Anugraha Valve Castings Limited Unlisted Shares",
+    "name": "Anugraha Valve Castings Limited ",
     "price": 650,
     "depository": "NSDL & CDSL",
     "minLotSize": 50,
@@ -14029,7 +14029,7 @@ export const fetchPreIPOs = async () => {
   },
   {
     "id": 6,
-    "name": "Apollo Fashion International Unlisted Shares",
+    "name": "Apollo Fashion International Limited",
     "price": 46,
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
@@ -14047,7 +14047,7 @@ export const fetchPreIPOs = async () => {
   },
   {
     "id": 8,
-    "name": "Arohan Financial Services Unlisted Shares",
+    "name": "Arohan Financial Services Limited",
     "price": 235,
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
@@ -14092,7 +14092,7 @@ export const fetchPreIPOs = async () => {
   },
   {
     "id": 13,
-    "name": "Bazar India Unlisted Shares",
+    "name": "Bazar India Limited",
     "price": 30,
     "depository": "NSDL & CDSL",
     "minLotSize": 1000,
@@ -16641,7 +16641,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
   ],
 
   "shareDetails": {
-    "companyName": "Arohan Financial Services Limited (Unlisted)",
+    "companyName": "Arohan Financial Services Limited",
     "indicativeUnlistedSharePrice": "₹235",
     "marketCapitalization": "₹3734 Crore",
     "lotSize": "100 Shares",
