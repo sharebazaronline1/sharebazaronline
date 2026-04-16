@@ -14101,7 +14101,7 @@ export const fetchPreIPOs = async () => {
   },
   {
     "id": 14,
-    "name": "Bharat Hotels Unlisted Shares",
+    "name": "Bharat Hotels Limited",
     "price": 438,
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
@@ -14119,7 +14119,7 @@ export const fetchPreIPOs = async () => {
   },
   {
     "id": 16,
-    "name": "Bira Unlisted Shares",
+    "name": "Bira 91 (B9 Beverages Limited)",
     "price": 232,
     "depository": "NSDL & CDSL",
     "minLotSize": 100,
@@ -17406,6 +17406,410 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
   },
 
   "managementInsight": "Focus on sustaining wholesale operations and managing working capital in a highly competitive, low-margin FMCG distribution market."
+},
+{
+  "id": 14,
+  "name": "Bharat Hotels Limited",
+  "price": 375,
+  "logo": "/images/preipo/image14.png",
+
+  "overview": "Bharat Hotels Limited, operating under 'The Lalit' brand, is a leading luxury hospitality company in India. Established in 1981, it owns and manages luxury hotels, resorts, and palaces across India and internationally. The company has shown a strong post-COVID recovery with significant improvement in revenue and profitability driven by travel demand revival.",
+
+  "products": [
+    "Luxury Hotels & Resorts",
+    "Hospitality Services",
+    "Event & Banquet Services",
+    "International Hotel Operations"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Corporate Clients",
+    "Tourism & Hospitality Customers",
+    "Government & International Guests"
+  ],
+
+  "shareDetails": {
+    "companyName": "Bharat Hotels Limited",
+    "indicativeUnlistedSharePrice": "₹375",
+    "marketCapitalization": "₹2800–3000 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹400",
+    "52WeekLow": "₹350",
+    "faceValue": "₹10",
+    "bookValue": "₹124.2",
+    "peRatio": "33.5",
+    "pbRatio": "3.0",
+    "debtToEquity": "0.98",
+    "returnOnEquity": "9.0%",
+    "totalOutstandingShares": "7,59,91,199",
+    "isin": "INE466A01015",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACB1298E",
+    "cin": "U74899DL1981PLC011274",
+    "rta": "KFin Technologies Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Bharat Hotels has demonstrated strong recovery post COVID, with revenue rising sharply and profitability turning positive. EBITDA and margins have improved significantly due to operating leverage and cost optimization.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 309, "fy23": 800, "fy24": 862, "fy25": 901 },
+      { "label": "Cost of Material Consumed", "fy22": 30, "fy23": 77, "fy24": 84, "fy25": 88 },
+      { "label": "Change in Inventory", "fy22": 0.1, "fy23": 0, "fy24": 0, "fy25": -0.06 },
+      { "label": "Employee Benefit Expenses", "fy22": 50, "fy23": 92, "fy24": 112, "fy25": 129 },
+      { "label": "Other Expenses", "fy22": 119, "fy23": 275, "fy24": 304, "fy25": 305 },
+      { "label": "EBITDA", "fy22": 109.9, "fy23": 356, "fy24": 362, "fy25": 370.06 },
+      { "label": "Operating Profit Margin (%)", "fy22": 35.57, "fy23": 44.5, "fy24": 42, "fy25": 42.07 },
+      { "label": "Other Income", "fy22": 5.7, "fy23": 30, "fy24": 39, "fy25": 16 },
+      { "label": "Finance Cost", "fy22": 176, "fy23": 185, "fy24": 202, "fy25": 188 },
+      { "label": "Depreciation", "fy22": 65, "fy23": 68, "fy24": 59, "fy25": 55 },
+      { "label": "EBIT", "fy22": -44.9, "fy23": 288, "fy24": 303, "fy25": 324.06 },
+      { "label": "PBT", "fy22": -125, "fy23": 134, "fy24": 141, "fy25": 152 },
+      { "label": "Tax", "fy22": -66, "fy23": 85, "fy24": 56, "fy25": 67 },
+      { "label": "PAT", "fy22": -59, "fy23": 49, "fy24": 85, "fy25": 85 },
+      { "label": "Net Profit Margin (%)", "fy22": -19.09, "fy23": 6.13, "fy24": 9.86, "fy25": 9.43 },
+      { "label": "EPS (₹)", "fy22": -7.77, "fy23": 6.46, "fy24": 11.19, "fy25": 11.19 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 35.57, "fy23": 44.5, "fy24": 42, "fy25": 42.07 },
+      { "label": "Net Profit Margin (%)", "fy22": -19.09, "fy23": 6.13, "fy24": 9.86, "fy25": 9.43 },
+      { "label": "EPS (₹)", "fy22": -7.77, "fy23": 6.46, "fy24": 11.19, "fy25": 11.19 }
+    ],
+
+    "investorInsight": [
+      "Strong turnaround from losses to profitability.",
+      "High EBITDA margins (~40%+).",
+      "Revenue recovery driven by hospitality boom.",
+      "Debt-heavy structure still a concern."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 1277, "fy23": 1624, "fy24": 1593, "fy25": 1561 },
+      { "label": "CWIP", "fy22": 302, "fy23": 286, "fy24": 291, "fy25": 288 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0.03 },
+      { "label": "Trade Receivables", "fy22": 19, "fy23": 37, "fy24": 26, "fy25": 20 },
+      { "label": "Inventory", "fy22": 17, "fy23": 18, "fy24": 17, "fy25": 16 },
+      { "label": "Other Assets", "fy22": 950, "fy23": 509, "fy24": 410, "fy25": 382.97 },
+      { "label": "Total Assets", "fy22": 2565, "fy23": 2474, "fy24": 2337, "fy25": 2268 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 75.9, "fy23": 75.9, "fy24": 75.99, "fy25": 75.99 },
+      { "label": "Reserves", "fy22": 728, "fy23": 699, "fy24": 786, "fy25": 868 },
+      { "label": "Borrowings", "fy22": 1338, "fy23": 1347, "fy24": 1107, "fy25": 922 },
+      { "label": "Trade Payables", "fy22": 77, "fy23": 82, "fy24": 89, "fy25": 108 },
+      { "label": "Other Liabilities", "fy22": 346.1, "fy23": 270.1, "fy24": 280.01, "fy25": 274.01 },
+      { "label": "Total Liabilities", "fy22": 2565, "fy23": 2474, "fy24": 2337, "fy25": 2268 }
+    ],
+    "insights": "High debt but reducing trend; asset base stable with deleveraging strategy."
+  },
+
+  "cashFlow": {
+    "data": [
+      { "label": "PBT", "fy22": -125, "fy23": 134, "fy24": 141, "fy25": 152 },
+      { "label": "Cash Flow From Operations", "fy22": 135.7, "fy23": 316, "fy24": 375, "fy25": 372.4 },
+      { "label": "Cash Flow From Investing", "fy22": -27.6, "fy23": 33, "fy24": 37, "fy25": -7.6 },
+      { "label": "Cash Flow From Financing", "fy22": -76, "fy23": -389.02, "fy24": -422, "fy25": -378 },
+      { "label": "Net Cash Generated", "fy22": 32.1, "fy23": -20.02, "fy24": -10, "fy25": -13.2 },
+      { "label": "Cash at End", "fy22": 52.1, "fy23": 48.98, "fy24": 40, "fy25": 27 }
+    ],
+    "insights": [
+      "Strong operating cash flow generation.",
+      "Heavy financing outflows due to debt repayment.",
+      "Consistent deleveraging strategy."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "49.97%", "public": "50.03%" }
+  ],
+
+  "promotersManagement": "Promoted by Lalit Suri family; led by Dr. Jyotsna Suri.",
+
+  "management": [
+    { "name": "Dr. Jyotsna Suri", "role": "Chairperson & MD", "experience": "Hospitality Leader" },
+    { "name": "Keshav Suri", "role": "Executive Director", "experience": "Hotel Operations" }
+  ],
+
+  "rta": {
+    "registrar": "KFin Technologies Limited",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "managementInsight": "Focused on premium hospitality expansion, deleveraging balance sheet, and improving profitability through operational efficiency."
+},
+{
+  "id": 15,
+  "name": "Bharat Nidhi (Bharat Bank)",
+  "price": 11300,
+  "logo": "/images/preipo/image15.jpg",
+
+  "overview": "Bharat Nidhi Limited, formerly known as Bharat Bank, is a legacy investment holding company established in 1942 and headquartered in New Delhi. The company primarily focuses on investments and holds a significant stake in Bennett, Coleman & Co. Ltd. (Times Group). It has transitioned away from operational businesses like newspaper distribution and now derives value from its investment portfolio.",
+
+  "products": [
+    "Investment Holdings",
+    "Equity Investments in Associate Companies",
+    "Financial Investments (FDs, Mutual Funds)"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Bennett Coleman & Co. Ltd.",
+    "Associated Investment Entities"
+  ],
+
+  "shareDetails": {
+    "companyName": "Bharat Nidhi Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹11300",
+    "marketCapitalization": "₹3200–3500 Crore (Approx)",
+    "lotSize": "1 Share",
+    "52WeekHigh": "₹15000",
+    "52WeekLow": "₹9800",
+    "faceValue": "₹10",
+    "bookValue": "₹1593 (Approx FY25)",
+    "peRatio": "7.18",
+    "pbRatio": "7.1",
+    "debtToEquity": "0",
+    "returnOnEquity": "9.8%",
+    "totalOutstandingShares": "2,87,00,000 (Approx)",
+    "isin": "INE286F01016",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACB1298E",
+    "cin": "U65993DL1942PLC000886",
+    "rta": "Skyline Financial Service"
+  },
+
+  "financials": {
+    "annualReportSummary": "The company shows low operating revenue but extremely high profitability due to large investment income. Earnings are driven primarily by other income rather than core operations.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 27, "fy23": 33, "fy24": 14, "fy25": 0 },
+      { "label": "Cost of Material Consumed", "fy22": 21, "fy23": 26, "fy24": 11, "fy25": 0 },
+      { "label": "Employee Benefit Expenses", "fy22": 0.7, "fy23": 0.6, "fy24": 0.3, "fy25": 0.33 },
+      { "label": "Other Expenses", "fy22": 8, "fy23": 9, "fy24": 7, "fy25": 5.17 },
+      { "label": "EBITDA", "fy22": -2.7, "fy23": -2.6, "fy24": -4.3, "fy25": -5.5 },
+      { "label": "Operating Profit Margin (%)", "fy22": -10, "fy23": -7.88, "fy24": -30.71, "fy25": null },
+      { "label": "Other Income", "fy22": 222, "fy23": 14, "fy24": 513, "fy25": 462 },
+      { "label": "Finance Cost", "fy22": 0.04, "fy23": 0, "fy24": 0.04, "fy25": 0.01 },
+      { "label": "Depreciation", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "EBIT", "fy22": -2.7, "fy23": -2.6, "fy24": -4.3, "fy25": -5.5 },
+      { "label": "PBT", "fy22": 219, "fy23": -37, "fy24": 508, "fy25": 456 },
+      { "label": "Tax", "fy22": 2, "fy23": 3, "fy24": 4, "fy25": 4 },
+      { "label": "PAT", "fy22": 217, "fy23": -40, "fy24": 504, "fy25": 452 },
+      { "label": "Net Profit Margin (%)", "fy22": 803.7, "fy23": -121.21, "fy24": 3600, "fy25": null },
+      { "label": "EPS (₹)", "fy22": 748.28, "fy23": -137.93, "fy24": 1762.24, "fy25": 1574.91 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": -10, "fy23": -7.88, "fy24": -30.71 },
+      { "label": "Net Profit Margin (%)", "fy22": 803.7, "fy23": -121.21, "fy24": 3600 },
+      { "label": "EPS (₹)", "fy22": 748.28, "fy23": -137.93, "fy24": 1762.24, "fy25": 1574.91 }
+    ],
+
+    "investorInsight": [
+      "Profit driven almost entirely by investment income.",
+      "Core operations are loss-making.",
+      "Very high EPS due to low share capital and high investment gains.",
+      "Valuation depends heavily on underlying investments (especially BCCL stake)."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 3572, "fy23": 3538, "fy24": 3992, "fy25": 4485 },
+      { "label": "Trade Receivables", "fy22": 0.6, "fy23": 0.6, "fy24": 0.13, "fy25": 0.06 },
+      { "label": "Other Assets", "fy22": 133.4, "fy23": 127.4, "fy24": 132.87, "fy25": 91.94 },
+      { "label": "Total Assets", "fy22": 3706, "fy23": 3666, "fy24": 4125, "fy25": 4577 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 2.9, "fy23": 2.9, "fy24": 2.86, "fy25": 2.87 },
+      { "label": "Reserves", "fy22": 3701, "fy23": 3660, "fy24": 4122, "fy25": 4574 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 1.3, "fy23": 1, "fy24": 0.08, "fy25": 0.07 },
+      { "label": "Other Liabilities", "fy22": 0.8, "fy23": 2.1, "fy24": 0.06, "fy25": 0.06 },
+      { "label": "Total Liabilities", "fy22": 3706, "fy23": 3666, "fy24": 4125, "fy25": 4577 }
+    ],
+    "insights": "Investment portfolio dominates assets; company is completely debt-free."
+  },
+
+  "liabilitiesBreakdown": "Zero debt across all years → extremely strong balance sheet.",
+
+  "balanceSheetInsights": "Massive reserves driven by investment gains; value tied to BCCL stake.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "PBT", "fy22": 9, "fy23": 11, "fy24": 18, "fy25": 22 },
+      { "label": "Cash Flow From Operations", "fy22": -5.38, "fy23": -11.44, "fy24": -9.5, "fy25": -10.4 },
+      { "label": "Cash Flow From Investing", "fy22": 5.85, "fy23": 11.6, "fy24": 51.1, "fy25": 10.6 },
+      { "label": "Cash Flow From Financing", "fy22": -0.17, "fy23": -0.17, "fy24": -43, "fy25": -0.17 },
+      { "label": "Net Cash Generated", "fy22": 0.3, "fy23": -0.01, "fy24": -1.4, "fy25": 0.03 },
+      { "label": "Cash at End", "fy22": 1.8, "fy23": 1.69, "fy24": 0.04, "fy25": 0.15 }
+    ],
+    "insights": [
+      "Negative operating cash flow (non-operating business).",
+      "Cash inflow mainly from investments.",
+      "Low capital expenditure."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "public": "Low" }
+  ],
+
+  "promotersManagement": "Legacy ownership structure with long-standing stakeholders.",
+
+  "management": [
+    { "name": "Board of Directors", "role": "Management", "experience": "Investment & Financial Oversight" }
+  ],
+
+  "rta": {
+    "registrar": "—",
+    "website": ""
+  },
+
+  "managementInsight": "Focus remains on investment holdings rather than operational business growth."
+},
+{
+  "id": 16,
+  "name": "Bira 91 (B9 Beverages Limited)",
+  "price": 650,
+  "logo": "/images/preipo/image16.png",
+
+  "overview": "B9 Beverages Limited, popularly known as Bira 91, is one of India’s leading craft beer companies founded in 2012. The company disrupted the Indian beer market with premium and flavored craft beers and expanded globally across multiple countries. Despite strong brand recall and revenue growth, the company has faced profitability challenges due to high costs and expansion investments.",
+
+  "products": [
+    "Craft Beer (Bira 91 White, Blonde, Strong, IPA)",
+    "Canned & Draft Beer",
+    "Flavored Beer Variants",
+    "Hard Seltzers (Grizly)"
+  ],
+
+  "manufacturingUnits": [
+    "India (Multiple Breweries)",
+    "International Contract Manufacturing (Belgium initially)"
+  ],
+
+  "clients": [
+    "Retail Consumers",
+    "Restaurants & Bars",
+    "International Distributors"
+  ],
+
+  "shareDetails": {
+    "companyName": "B9 Beverages Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹650",
+    "marketCapitalization": "₹3900 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹650",
+    "52WeekLow": "₹108",
+    "faceValue": "₹10",
+    "bookValue": "Negative",
+    "peRatio": "N/A (Loss Making)",
+    "pbRatio": "N/A",
+    "debtToEquity": "1.9",
+    "returnOnEquity": "Negative",
+    "totalOutstandingShares": "Approx 6 Crore",
+    "isin": "INE833U01014",
+    "depository": "NSDL & CDSL",
+    "pan": "AAECD6739Q",
+    "cin": "U80903DL2012PLC236595",
+    "rta": "Skyline Financial Services Pvt Ltd"
+  },
+
+  "financials": {
+    "annualReportSummary": "Bira has achieved strong revenue growth but continues to incur losses due to high marketing, expansion, and operational costs. EBITDA and net margins remain negative, highlighting ongoing profitability challenges.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy21": 428.2, "fy22": 717.7, "fy23": 824.32, "fy24": 638 },
+      { "label": "Cost of Material Consumed", "fy21": 87.17, "fy22": 164.4, "fy23": 265.38, "fy24": 201 },
+      { "label": "Change in Inventory", "fy21": -4.8, "fy22": 68.64, "fy23": -26.27, "fy24": 33 },
+      { "label": "Employee Benefit Expenses", "fy21": 62.96, "fy22": 90.71, "fy23": 114.98, "fy24": 182 },
+      { "label": "Other Expenses", "fy21": 378.01, "fy22": 567.45, "fy23": 710.29, "fy24": 696 },
+      { "label": "EBITDA", "fy21": -104.12, "fy22": -173.23, "fy23": -240.08, "fy24": -474 },
+      { "label": "Operating Profit Margin (%)", "fy21": -24.39, "fy22": -24.13, "fy23": -29.12, "fy24": -74.29 },
+      { "label": "Other Income", "fy21": 34.61, "fy22": 15.98, "fy23": 21.39, "fy24": 30 },
+      { "label": "Finance Cost", "fy21": 76.2, "fy22": 87.72, "fy23": 96.59, "fy24": 160 },
+      { "label": "Depreciation", "fy21": 74.26, "fy22": 90.09, "fy23": 121.41, "fy24": 144 },
+      { "label": "EBIT", "fy21": -178.66, "fy22": -263.32, "fy23": -361.47, "fy24": -618 },
+      { "label": "PBT", "fy21": -211.28, "fy22": -335.07, "fy23": -433.89, "fy24": -749 },
+      { "label": "Tax", "fy21": 0, "fy22": 0, "fy23": 11.78, "fy24": 0 },
+      { "label": "PAT", "fy21": -211.28, "fy22": -335.07, "fy23": -445.47, "fy24": -749 },
+      { "label": "Net Profit Margin (%)", "fy21": -49.34, "fy22": -46.68, "fy23": -54.04, "fy24": -117.4 },
+      { "label": "EPS (₹)", "fy21": -159.22, "fy22": -69.51, "fy23": -79.56, "fy24": -125.04 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy21": -24.39, "fy22": -24.13, "fy23": -29.12, "fy24": -74.29 },
+      { "label": "Net Profit Margin (%)", "fy21": -49.34, "fy22": -46.68, "fy23": -54.04, "fy24": -117.4 },
+      { "label": "EPS (₹)", "fy21": -159.22, "fy22": -69.51, "fy23": -79.56, "fy24": -125.04 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth but widening losses.",
+      "High marketing and expansion costs hurting profitability.",
+      "Negative EBITDA and PAT across all years.",
+      "Business scalability proven but financial sustainability remains a concern."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy21": 76.36, "fy22": 84.45, "fy23": 43.45, "fy24": 507 },
+      { "label": "CWIP", "fy21": 7.01, "fy22": 7.16, "fy23": 15.16, "fy24": 29 },
+      { "label": "Investments", "fy21": 355.2, "fy22": 54.7, "fy23": 11, "fy24": 1 },
+      { "label": "Trade Receivables", "fy21": 124.57, "fy22": 126.68, "fy23": 180.68, "fy24": 108 },
+      { "label": "Inventory", "fy21": 99.25, "fy22": 74.05, "fy23": 164.2, "fy24": 108 },
+      { "label": "Other Assets", "fy21": 578.2, "fy22": 645.76, "fy23": 492.54, "fy24": 397 },
+      { "label": "Total Assets", "fy21": 920.87, "fy22": 992.83, "fy23": 1247.13, "fy24": 1150 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy21": 13.27, "fy22": 48.206, "fy23": 55.99, "fy24": 59.9 },
+      { "label": "Reserves", "fy21": 28.07, "fy22": -72, "fy23": -106, "fy24": -422 },
+      { "label": "Borrowings", "fy21": 246.94, "fy22": 346.71, "fy23": 314.6, "fy24": 594 },
+      { "label": "Trade Payables", "fy21": 138.07, "fy22": 187.26, "fy23": 290.05, "fy24": 438 },
+      { "label": "Other Liabilities", "fy21": 434.52, "fy22": 482.45, "fy23": 507.83, "fy24": 556.1 },
+      { "label": "Total Liabilities", "fy21": 920.87, "fy22": 992.83, "fy23": 1247.27, "fy24": 1228 }
+    ],
+    "insights": "Negative reserves indicate erosion of net worth. Rising debt and liabilities highlight financial stress."
+  },
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy21": -21.48, "fy22": -19.73, "fy23": -28.21, "fy24": -65 },
+      { "label": "Cash Flow From Investing", "fy21": -66.04, "fy22": -57.24, "fy23": -27.18, "fy24": -189 },
+      { "label": "Cash Flow From Financing", "fy21": 188.25, "fy22": 231.05, "fy23": 136.36, "fy24": 178 },
+      { "label": "Net Cash Generated", "fy21": 0.73, "fy22": -5.92, "fy23": 25.97, "fy24": -76 },
+      { "label": "Cash at End", "fy21": 12.8, "fy22": 6.88, "fy23": 34.8, "fy24": -52 }
+    ],
+    "insights": [
+      "Consistently negative operating cash flow.",
+      "Heavy dependence on financing.",
+      "Cash burn increasing significantly."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "64.33%", "public": "35.67%" }
+  ],
+
+  "promotersManagement": "Founded by Ankur Jain, backed by investors like Sequoia Capital and Sofina.",
+
+  "management": [
+    { "name": "Ankur Jain", "role": "Founder & CEO", "experience": "Startup & FMCG" }
+  ],
+
+  "rta": {
+    "registrar": "Skyline Financial Services Pvt Ltd",
+    "website": ""
+  },
+
+  "managementInsight": "Focused on brand expansion and global growth, but financial discipline and profitability remain key challenges."
 },
 
 
