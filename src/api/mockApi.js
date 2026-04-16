@@ -17811,6 +17811,963 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
   "managementInsight": "Focused on brand expansion and global growth, but financial discipline and profitability remain key challenges."
 },
+{
+  "id": 17,
+  "name": "Boat Unlisted Share (Imagine Marketing)",
+  "price": 850,
+  "logo": "/images/preipo/image17.jpg",
+
+  "overview": "Imagine Marketing Limited, popularly known as boAt, is one of India’s leading digital-first consumer electronics brands specializing in audio products, wearables, and accessories. Founded in 2013, the company has built a strong presence in India’s D2C segment with products like earphones, headphones, and smartwatches. While the company scaled rapidly in revenue, recent years show pressure on profitability due to rising costs and competition.",
+
+  "products": [
+    "Audio Devices (Earphones, Headphones, Speakers)",
+    "Wearables (Smartwatches)",
+    "Mobile Accessories",
+    "Charging & Lifestyle Electronics"
+  ],
+
+  "manufacturingUnits": [
+    "India (Multiple Contract Manufacturing Units)",
+    "China & Vietnam (Supply Chain)"
+  ],
+
+  "clients": [
+    "Retail Consumers (D2C)",
+    "E-commerce Platforms (Amazon, Flipkart)",
+    "Offline Retail Chains"
+  ],
+
+  "shareDetails": {
+    "companyName": "Imagine Marketing Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹850",
+    "marketCapitalization": "₹8000–12000 Crore",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹1800",
+    "52WeekLow": "₹750",
+    "faceValue": "₹1",
+    "bookValue": "₹48–50",
+    "peRatio": "200+ (volatile)",
+    "pbRatio": "18–25",
+    "debtToEquity": "2.0+",
+    "returnOnEquity": "Negative to Low",
+    "totalOutstandingShares": "Approx 9–13 Crore",
+    "isin": "INE03AV01027",
+    "depository": "NSDL & CDSL",
+    "pan": "AADCI3821M",
+    "cin": "U52300MH2013PLC249758",
+    "rta": "Link Intime India Pvt Ltd"
+  },
+
+  "financials": {
+    "annualReportSummary": "boAt has experienced rapid growth in revenue but has recently turned loss-making due to rising costs, marketing spend, and competition. Margins have deteriorated significantly in FY23–FY24.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 2873, "fy23": 3377, "fy24": 3104, "fy25": 3073 },
+      { "label": "Cost of Material Consumed", "fy22": 2591, "fy23": 2527, "fy24": 2263, "fy25": 2070 },
+      { "label": "Change in Inventory", "fy22": -245, "fy23": 84, "fy24": 32, "fy25": 105 },
+      { "label": "Employee Benefit Expenses", "fy22": 56, "fy23": 99, "fy24": 97, "fy25": 155 },
+      { "label": "Other Expenses", "fy22": 341, "fy23": 748, "fy24": 715, "fy25": 663 },
+      { "label": "EBITDA", "fy22": 130, "fy23": -81, "fy24": -3, "fy25": 100 },
+      { "label": "Operating Profit Margin (%)", "fy22": 4.52, "fy23": -2.4, "fy24": -0.1, "fy25": 3.25 },
+      { "label": "Other Income", "fy22": 12, "fy23": 21, "fy24": 18, "fy25": 42 },
+      { "label": "Finance Cost", "fy22": 34, "fy23": 78, "fy24": 63, "fy25": 28 },
+      { "label": "Depreciation", "fy22": 9, "fy23": 25, "fy24": 22, "fy25": 40 },
+      { "label": "EBIT", "fy22": 121, "fy23": -106, "fy24": -25, "fy25": 60 },
+      { "label": "PBT", "fy22": 99, "fy23": -163, "fy24": -70, "fy25": 75 },
+      { "label": "Tax", "fy22": 30, "fy23": -34, "fy24": -17, "fy25": 14 },
+      { "label": "PAT", "fy22": 69, "fy23": -129, "fy24": -53, "fy25": 61 },
+      { "label": "Net Profit Margin (%)", "fy22": 2.4, "fy23": -3.82, "fy24": -1.71, "fy25": 1.99 },
+      { "label": "EPS (₹)", "fy22": 7.19, "fy23": -13.44, "fy24": -5.52, "fy25": 6.35 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 4.52, "fy23": -2.4, "fy24": -0.1, "fy25": 3.25 },
+      { "label": "Net Profit Margin (%)", "fy22": 2.4, "fy23": -3.82, "fy24": -1.71, "fy25": 1.99 },
+      { "label": "EPS (₹)", "fy22": 7.19, "fy23": -13.44, "fy24": -5.52, "fy25": 6.35 }
+    ],
+
+    "investorInsight": [
+      "Revenue peaked in FY23 and declined slightly in FY24.",
+      "Profitability turned negative in FY23–FY24.",
+      "Signs of recovery in FY25 with positive PAT.",
+      "Highly competitive consumer electronics market."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 2.8, "fy23": 15.5, "fy24": 63, "fy25": 127 },
+      { "label": "CWIP", "fy22": 14, "fy23": 8, "fy24": 0, "fy25": 2.2 },
+      { "label": "Investments", "fy22": 32, "fy23": 30, "fy24": 325, "fy25": 15 },
+      { "label": "Trade Receivables", "fy22": 332, "fy23": 276, "fy24": 150, "fy25": 255 },
+      { "label": "Inventory", "fy22": 554, "fy23": 470, "fy24": 429, "fy25": 326 },
+      { "label": "Other Assets", "fy22": 1060.2, "fy23": 1213, "fy24": 738, "fy25": 735.8 },
+      { "label": "Total Assets", "fy22": 1986, "fy23": 2152, "fy24": 1705, "fy25": 1561 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 9.6, "fy23": 9.6, "fy24": 9.6, "fy25": 9.6 },
+      { "label": "Reserves", "fy22": 592, "fy23": 449, "fy24": 462, "fy25": 461 },
+      { "label": "Borrowings", "fy22": 921, "fy23": 723.6, "fy24": 880, "fy25": 565 },
+      { "label": "Trade Payables", "fy22": 219, "fy23": 259, "fy24": 217, "fy25": 371 },
+      { "label": "Other Liabilities", "fy22": 264.4, "fy23": 198.4, "fy24": 156.4, "fy25": 174.4 },
+      { "label": "Total Liabilities", "fy22": 1986, "fy23": 2152, "fy24": 1705, "fy25": 1561 }
+    ],
+    "insights": "High debt levels and working capital-intensive business model; some deleveraging seen in FY25."
+  },
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": -369, "fy23": -64, "fy24": -9.5, "fy25": -41 },
+      { "label": "Cash Flow From Investing", "fy22": -632, "fy23": -75, "fy24": -40, "fy25": -94 },
+      { "label": "Cash Flow From Financing", "fy22": 894.9, "fy23": 226, "fy24": -446, "fy25": -323 },
+      { "label": "Net Cash Generated", "fy22": -106.1, "fy23": 87, "fy24": -86, "fy25": -20 },
+      { "label": "Cash at End", "fy22": 58.9, "fy23": 147, "fy24": 53, "fy25": 84 }
+    ],
+    "insights": [
+      "Negative operating cash flow indicates working capital stress.",
+      "Heavy dependence on external financing.",
+      "Improvement in cash position in FY23 but volatile thereafter."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "79.82%", "public": "20.18%" }
+  ],
+
+  "promotersManagement": "Founded by Aman Gupta and Sameer Mehta, backed by investors like Warburg Pincus and Fireside Ventures.",
+
+  "management": [
+    { "name": "Aman Gupta", "role": "Co-Founder & CMO", "experience": "Consumer Brand Strategy" },
+    { "name": "Sameer Mehta", "role": "Co-Founder", "experience": "Business & Operations" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Pvt Ltd",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focused on brand-led growth, product expansion, and improving profitability after a period of aggressive scaling."
+},
+{
+  "id": 18,
+  "name": "Bolzen and Mutter Unlisted Share",
+  "price": 325,
+  "logo": "/images/preipo/image18.jpg",
+
+  "overview": "Bolzen and Mutter Limited is a fast-growing industrial manufacturing company engaged in producing high-precision fasteners such as bolts, nuts, screws, rivets, and washers. Incorporated in 2017 and headquartered in Aurangabad, the company serves industries like automobile, electrical, electronics, and renewable energy. It operates using CNC and part-former machines and focuses on quality-driven manufacturing.",
+
+  "products": [
+    "Nuts & Bolts",
+    "Screws",
+    "Rivets",
+    "Washers",
+    "Industrial Fasteners"
+  ],
+
+  "manufacturingUnits": [
+    "Aurangabad, Maharashtra (Single Manufacturing Facility)"
+  ],
+
+  "clients": [
+    "Automobile Industry",
+    "Electrical & Electronics Industry",
+    "Renewable Energy Sector"
+  ],
+
+  "shareDetails": {
+    "companyName": "Bolzen and Mutter Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹325",
+    "marketCapitalization": "₹80 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹335",
+    "52WeekLow": "₹195",
+    "faceValue": "₹10",
+    "bookValue": "₹35.1",
+    "peRatio": "21.78",
+    "pbRatio": "9.26",
+    "debtToEquity": "2.25",
+    "returnOnEquity": "43.01%",
+    "totalOutstandingShares": "24,46,194",
+    "isin": "INE0UWB01010",
+    "depository": "NSDL & CDSL",
+    "pan": "AAHCB4724C",
+    "cin": "U27209MH2017PTC300388",
+    "rta": "Skyline Financial Services Pvt Ltd"
+  },
+
+  "financials": {
+    "annualReportSummary": "Bolzen and Mutter has shown strong revenue and profitability growth over FY23–FY25, with improving margins and rising earnings driven by industrial demand.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 1656, "fy24": 3654, "fy25": 7657 },
+      { "label": "Cost of Material Consumed", "fy23": 1289, "fy24": 2283, "fy25": 5039 },
+      { "label": "Change in Inventory", "fy23": 0, "fy24": 0, "fy25": 105 },
+      { "label": "Employee Benefit Expenses", "fy23": 71, "fy24": 108, "fy25": 344 },
+      { "label": "Other Expenses", "fy23": 378, "fy24": 820, "fy25": 959 },
+      { "label": "EBITDA", "fy23": 136, "fy24": 493, "fy25": 615 },
+      { "label": "Operating Profit Margin (%)", "fy23": 7.44, "fy24": 13.49, "fy25": 7.83 },
+      { "label": "Other Income", "fy23": 24, "fy24": 5, "fy25": 90 },
+      { "label": "Finance Cost", "fy23": 58, "fy24": 103, "fy25": 90 },
+      { "label": "Depreciation", "fy23": 71, "fy24": 72, "fy25": 117 },
+      { "label": "EBIT", "fy23": 61, "fy24": 421, "fy25": 438 },
+      { "label": "PBT", "fy23": 33, "fy24": 323, "fy25": 498 },
+      { "label": "Tax", "fy23": -2, "fy24": 99, "fy25": 133 },
+      { "label": "PAT", "fy23": 35, "fy24": 224, "fy25": 365 },
+      { "label": "Net Profit Margin (%)", "fy23": 1.89, "fy24": 6.13, "fy25": 4.65 },
+      { "label": "EPS (₹)", "fy23": 15, "fy24": 9.16, "fy25": 14.92 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 7.44, "fy24": 13.49, "fy25": 7.83 },
+      { "label": "Net Profit Margin (%)", "fy23": 1.89, "fy24": 6.13, "fy25": 4.65 },
+      { "label": "EPS (₹)", "fy23": 15, "fy24": 9.16, "fy25": 14.92 }
+    ],
+
+    "investorInsight": [
+      "Revenue growth is extremely strong (multi-fold increase).",
+      "Profitability improved significantly in FY24–FY25.",
+      "Margins slightly volatile due to cost pressures.",
+      "Industrial demand tailwinds support growth."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 291, "fy24": 529, "fy25": 1045 },
+      { "label": "CWIP", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy23": 0, "fy24": 0, "fy25": 127 },
+      { "label": "Trade Receivables", "fy23": 371, "fy24": 454, "fy25": 643 },
+      { "label": "Inventory", "fy23": 262, "fy24": 475, "fy25": 717 },
+      { "label": "Other Assets", "fy23": 109, "fy24": 69, "fy25": 1029 },
+      { "label": "Total Assets", "fy23": 1033, "fy24": 1527, "fy25": 3561 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 233, "fy24": 244.6, "fy25": 244.6 },
+      { "label": "Reserves", "fy23": -134, "fy24": 239, "fy25": 604 },
+      { "label": "Borrowings", "fy23": 444, "fy24": 686, "fy25": 1912 },
+      { "label": "Trade Payables", "fy23": 300, "fy24": 350, "fy25": 425 },
+      { "label": "Other Liabilities", "fy23": 100, "fy24": 98.4, "fy25": 315.4 },
+      { "label": "Total Liabilities", "fy23": 1033, "fy24": 1527, "fy25": 3561 }
+    ],
+    "insights": "Aggressive asset expansion funded by rising debt; improving reserves indicate profitability growth."
+  },
+
+  "liabilitiesBreakdown": "Borrowings increased significantly to ₹1912 Cr in FY25, indicating leveraged expansion.",
+
+  "balanceSheetInsights": "Rapid scale-up with heavy capital investment; leverage is a key risk factor.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "PBT", "fy23": 0, "fy24": 0, "fy25": 498 },
+      { "label": "Cash Flow From Operations", "fy23": 0, "fy24": 0, "fy25": -54 },
+      { "label": "Cash Flow From Investing", "fy23": 0, "fy24": 0, "fy25": -757 },
+      { "label": "Cash Flow From Financing", "fy23": 0, "fy24": 0, "fy25": 1152 },
+      { "label": "Net Cash Generated", "fy23": 0, "fy24": 0, "fy25": 331 },
+      { "label": "Cash at End", "fy23": 0, "fy24": 0, "fy25": 350 }
+    ],
+    "insights": [
+      "Heavy investment outflows in FY25.",
+      "Financing inflows driving expansion.",
+      "Negative operating cash flow indicates working capital pressure."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "95.25%", "public": "4.75%" }
+  ],
+
+  "promotersManagement": "Promoted by Hemant Mirkhelkar and team with strong control over operations.",
+
+  "management": [
+    { "name": "Hemant Madhavrao Mirkhelkar", "role": "Managing Director", "experience": "Manufacturing Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Skyline Financial Services Pvt Ltd",
+    "website": ""
+  },
+
+  "managementInsight": "Focused on scaling manufacturing capacity and expanding into high-growth sectors like renewable energy."
+},
+{
+  "id": 19,
+  "name": "Bootes Impex Tech Ltd.",
+  "price": 850,
+  "logo": "/images/preipo/image19.jpg",
+
+  "overview": "Bootes Impex Tech Ltd. is an infrastructure and EPC company specializing in sustainable construction, green buildings, and turnkey project execution. The company focuses on eco-friendly construction technologies and has positioned itself in the fast-growing green infrastructure segment in India.",
+
+  "products": [
+    "EPC Construction Services",
+    "Green Building Solutions",
+    "Turnkey Infrastructure Projects",
+    "Sustainable Construction Technologies"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Government Infrastructure Projects",
+    "Real Estate Developers",
+    "Corporate Clients"
+  ],
+
+ "shareDetails": {
+  "companyName": "Bootes Impex Tech Ltd. (Unlisted)",
+  "indicativeUnlistedSharePrice": "₹875",
+  "marketCapitalization": "₹736 Crore",
+  "lotSize": "50 Shares",
+  "52WeekHigh": "₹3100",
+  "52WeekLow": "₹875",
+  "faceValue": "₹10",
+  "bookValue": "₹199.99",
+  "peRatio": "20.69",
+  "pbRatio": "4.38",
+  "debtToEquity": "0.05",
+  "returnOnEquity": "21.16%",
+  "totalOutstandingShares": "8,41,634",
+  "isin": "INE03UR01016",
+  "depository": "NSDL & CDSL",
+  "pan": "AAACB6841Q",
+  "cin": "U51909HR2021PLC093155",
+  "rta": "N/A"
+},
+
+  "financials": {
+    "annualReportSummary": "Bootes Impex has shown explosive revenue growth from FY23 to FY25 with strong profitability expansion, driven by infrastructure demand and project execution scale.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 1656, "fy24": 3654, "fy25": 7657 },
+      { "label": "Cost of Material Consumed", "fy23": 1269, "fy24": 2233, "fy25": 5039 },
+      { "label": "Employee Benefit Expenses", "fy23": 71, "fy24": 108, "fy25": 344 },
+      { "label": "Other Expenses", "fy23": 378, "fy24": 820, "fy25": 959 },
+      { "label": "EBITDA", "fy23": 138, "fy24": 493, "fy25": 615 },
+      { "label": "Operating Profit Margin (%)", "fy23": 7.44, "fy24": 13.49, "fy25": 7.83 },
+      { "label": "Other Income", "fy23": 24, "fy24": 5, "fy25": 90 },
+      { "label": "Finance Cost", "fy23": 58, "fy24": 103, "fy25": 90 },
+      { "label": "Depreciation", "fy23": 71, "fy24": 72, "fy25": 117 },
+      { "label": "EBIT", "fy23": 61, "fy24": 421, "fy25": 438 },
+      { "label": "PBT", "fy23": 33, "fy24": 323, "fy25": 498 },
+      { "label": "Tax", "fy23": -2, "fy24": 99, "fy25": 133 },
+      { "label": "PAT", "fy23": 35, "fy24": 224, "fy25": 365 },
+      { "label": "Net Profit Margin (%)", "fy23": 1.89, "fy24": 6.13, "fy25": 4.65 },
+      { "label": "EPS (₹)", "fy23": 15, "fy24": 9.16, "fy25": 14.92 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 7.44, "fy24": 13.49, "fy25": 7.83 },
+      { "label": "Net Profit Margin (%)", "fy23": 1.89, "fy24": 6.13, "fy25": 4.65 },
+      { "label": "EPS (₹)", "fy23": 15, "fy24": 9.16, "fy25": 14.92 }
+    ],
+
+    "investorInsight": [
+      "Revenue scaled rapidly (4–5x growth in 2 years).",
+      "Profitability improved significantly.",
+      "Margins slightly volatile due to execution costs.",
+      "Strong infrastructure demand tailwinds."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 12, "fy24": 56, "fy25": 2889 },
+      { "label": "Investments", "fy23": 1.4, "fy24": 0.5, "fy25": 0.6 },
+      { "label": "Trade Receivables", "fy23": 269, "fy24": 1632, "fy25": 8267 },
+      { "label": "Inventory", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Assets", "fy23": 174.6, "fy24": 1083.5, "fy25": 15594.4 },
+      { "label": "Total Assets", "fy23": 457, "fy24": 2772, "fy25": 26774 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 1, "fy24": 710.6, "fy25": 8415.3 },
+      { "label": "Reserves", "fy23": 37.5, "fy24": 1226, "fy25": 15980 },
+      { "label": "Borrowings", "fy23": 126, "fy24": 82, "fy25": 610 },
+      { "label": "Trade Payables", "fy23": 6.6, "fy24": 390, "fy25": 6219 },
+      { "label": "Other Liabilities", "fy23": 285.9, "fy24": 363.4, "fy25": 2923.7 },
+      { "label": "Total Liabilities", "fy23": 457, "fy24": 2772, "fy25": 26774 }
+    ],
+    "insights": "Massive scale-up in assets and liabilities indicates aggressive expansion and capital infusion."
+  },
+
+  "liabilitiesBreakdown": "Moderate leverage with increasing equity infusion supporting growth.",
+
+  "balanceSheetInsights": "Huge jump in receivables and assets indicates large project-based execution model.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "PBT", "fy23": 0, "fy24": 1143, "fy25": 4967 },
+      { "label": "Cash Flow From Operations", "fy23": 0, "fy24": -426, "fy25": -173 },
+      { "label": "Cash Flow From Investing", "fy23": 0, "fy24": -59, "fy25": -2664 },
+      { "label": "Cash Flow From Financing", "fy23": 0, "fy24": 951, "fy25": 12063 },
+      { "label": "Net Cash Generated", "fy23": 0, "fy24": 459, "fy25": 7788 },
+      { "label": "Cash at End", "fy23": 0, "fy24": 463, "fy25": 8251 }
+    ],
+    "insights": [
+      "Negative operating cash flow due to working capital heavy business.",
+      "Large financing inflows driving expansion.",
+      "High receivables impacting cash conversion."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "public": "Low" }
+  ],
+
+  "promotersManagement": "Promoted by infrastructure-focused leadership with emphasis on sustainable construction.",
+
+  "management": [
+    { "name": "Leadership Team", "role": "Management", "experience": "Infrastructure & EPC" }
+  ],
+
+  "rta": {
+    "registrar": "Not Publicly Disclosed",
+    "website": ""
+  },
+
+  "managementInsight": "Focused on scaling EPC operations and leveraging green construction demand, but execution risk and working capital management remain key factors."
+},
+{
+  "id": 20,
+  "name": "CSK Unlisted Shares",
+  "price": 240,
+  "logo": "/images/preipo/image20.jpg",
+
+  "overview": "Chennai Super Kings Cricket Limited (CSK) owns and operates one of the most successful franchises in the Indian Premier League (IPL). Known for its strong brand value, consistent performance, and massive fan base, CSK generates revenue through media rights, sponsorships, ticket sales, and merchandise. The company benefits significantly from IPL’s centralized broadcasting revenues.",
+
+  "products": [
+    "IPL Franchise Operations",
+    "Media & Broadcasting Revenue",
+    "Sponsorship & Brand Deals",
+    "Merchandising & Licensing"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "BCCI (IPL Revenue Pool)",
+    "Sponsors & Advertisers",
+    "Fans & Viewers"
+  ],
+
+  "shareDetails": {
+    "companyName": "Chennai Super Kings Cricket Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹240",
+    "marketCapitalization": "₹9000–9600 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹313",
+    "52WeekLow": "₹179",
+    "faceValue": "₹0.10",
+    "bookValue": "₹18.8",
+    "peRatio": "35–60",
+    "pbRatio": "13–15",
+    "debtToEquity": "0.58",
+    "returnOnEquity": "21%",
+    "totalOutstandingShares": "37,94,25,004",
+    "isin": "INE852S01026",
+    "depository": "NSDL & CDSL",
+    "pan": "AAFCC8730K",
+    "cin": "U74900TN2014PLC098517",
+    "rta": "Integrated Registry Management Services Pvt Ltd"
+  },
+
+  "financials": {
+    "annualReportSummary": "CSK has shown strong revenue and profitability growth driven by IPL media rights and sponsorship income. FY24 marked a significant jump in revenue and PAT due to new broadcasting deals.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1405, "fy23": 2735, "fy24": 6505, "fy25": 6780 },
+      { "label": "Cost of Material Consumed", "fy22": 2615, "fy23": 2018, "fy24": 4181, "fy25": 4588 },
+      { "label": "Employee Benefit Expenses", "fy22": 318, "fy23": 538, "fy24": 688, "fy25": 1851 },
+      { "label": "Other Expenses", "fy22": 1496, "fy23": 2488, "fy24": 6586, "fy25": 1432 },
+      { "label": "EBITDA", "fy22": 4133, "fy23": 6502, "fy24": 28638, "fy25": 19137 },
+      { "label": "Operating Profit Margin (%)", "fy22": 12.12, "fy23": 23.8, "fy24": 37.91, "fy25": 28.4 },
+      { "label": "Other Income", "fy22": 809, "fy23": 1919, "fy24": 2783, "fy25": 3049 },
+      { "label": "Finance Cost", "fy22": 567, "fy23": 1005, "fy24": 756, "fy25": 218 },
+      { "label": "Depreciation", "fy22": 240, "fy23": 363, "fy24": 474, "fy25": 1016 },
+      { "label": "EBIT", "fy22": 3983, "fy23": 6137, "fy24": 55889, "fy25": 18721 },
+      { "label": "PBT", "fy22": 4133, "fy23": 7053, "fy24": 27916, "fy25": 20952 },
+      { "label": "Tax", "fy22": 920, "fy23": 1835, "fy24": 7766, "fy25": 6119 },
+      { "label": "PAT", "fy22": 3213, "fy23": 5218, "fy24": 20150, "fy25": 14832 },
+      { "label": "Net Profit Margin (%)", "fy22": 9.42, "fy23": 19.1, "fy24": 28.97, "fy25": 22.01 },
+      { "label": "EPS (₹)", "fy22": 1.04, "fy23": 1.69, "fy24": 5.32, "fy25": 3.91 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 12.12, "fy23": 23.8, "fy24": 37.91, "fy25": 28.4 },
+      { "label": "Net Profit Margin (%)", "fy22": 9.42, "fy23": 19.1, "fy24": 28.97, "fy25": 22.01 },
+      { "label": "EPS (₹)", "fy22": 1.04, "fy23": 1.69, "fy24": 5.32, "fy25": 3.91 }
+    ],
+
+    "investorInsight": [
+      "Revenue surged due to IPL media rights deal.",
+      "Strong profitability with high margins.",
+      "Stable and predictable income model.",
+      "Brand-driven business with loyal fan base."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 12963, "fy23": 13801, "fy24": 21010, "fy25": 27211 },
+      { "label": "Investments", "fy22": 10, "fy23": 5204, "fy24": 6651, "fy25": 3074 },
+      { "label": "Trade Receivables", "fy22": 3740, "fy23": 5710, "fy24": 1558, "fy25": 3831 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0, "fy24": 85, "fy25": 128 },
+      { "label": "Other Assets", "fy22": 22318, "fy23": 27965, "fy24": 52195, "fy25": 46952 },
+      { "label": "Total Assets", "fy22": 39031, "fy23": 49041, "fy24": 83911, "fy25": 113214 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 308, "fy23": 308, "fy24": 379, "fy25": 379.43 },
+      { "label": "Reserves", "fy22": 24515, "fy23": 27992, "fy24": 52420, "fy25": 71454 },
+      { "label": "Borrowings", "fy22": 6500, "fy23": 6500, "fy24": 0, "fy25": 513 },
+      { "label": "Trade Payables", "fy22": 2822, "fy23": 3637, "fy24": 800, "fy25": 4765 },
+      { "label": "Other Liabilities", "fy22": 4886, "fy23": 8804, "fy24": 30312, "fy25": 36310.57 },
+      { "label": "Total Liabilities", "fy22": 39031, "fy23": 49041, "fy24": 83911, "fy25": 113214 }
+    ],
+    "insights": "Strong balance sheet with rising reserves and reduced debt exposure."
+  },
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": 1607, "fy23": 3780, "fy24": 32356, "fy25": 20634 },
+      { "label": "Cash Flow From Investing", "fy22": 316, "fy23": -24413, "fy24": -18076, "fy25": -7461 },
+      { "label": "Cash Flow From Financing", "fy22": -563, "fy23": -585, "fy24": -756, "fy25": 3790 },
+      { "label": "Net Cash Generated", "fy22": 1359, "fy23": -11588, "fy24": 15524, "fy25": 16963 },
+      { "label": "Cash at End", "fy22": 13235, "fy23": 1946, "fy24": 16678, "fy25": 33639 }
+    ],
+    "insights": [
+      "Strong operating cash flows.",
+      "Heavy investing outflows for expansion.",
+      "Improving cash reserves."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "2025", "promoters": "41.65%", "public": "58.35%" }
+  ],
+
+  "promotersManagement": "Promoted by India Cements group led by N. Srinivasan.",
+
+  "management": [
+    { "name": "N. Srinivasan", "role": "Chairman", "experience": "Cricket & Corporate Leadership" },
+    { "name": "Kasi Viswanathan", "role": "CEO", "experience": "IPL Operations" }
+  ],
+
+  "rta": {
+    "registrar": "Integrated Registry Management Services Pvt Ltd",
+    "website": ""
+  },
+
+  "managementInsight": "Focus on maximizing IPL revenue streams, expanding brand globally, and leveraging media rights growth."
+},
+{
+  "id": 21,
+  "name": "Capgemini Technology Services India Limited Unlisted Shares",
+  "price": 11000,
+  "logo": "/images/preipo/image21.jpg",
+
+  "overview": "Capgemini Technology Services India Limited is the Indian arm of Capgemini SE, a global leader in consulting, technology services, and digital transformation. Formerly known as IGATE Global Solutions, the company provides IT services, engineering solutions, cloud integration, and business process outsourcing to global clients.",
+
+  "products": [
+    "IT Consulting Services",
+    "Digital Transformation",
+    "Cloud & Engineering Services",
+    "Business Process Outsourcing (BPO)"
+  ],
+
+  "manufacturingUnits": [
+    "India (Multiple Delivery Centers)",
+    "Global Delivery Network"
+  ],
+
+  "clients": [
+    "Fortune 500 Companies",
+    "Global Enterprises",
+    "Technology & Financial Firms"
+  ],
+
+  "shareDetails": {
+    "companyName": "Capgemini Technology Services India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹11,000",
+    "marketCapitalization": "₹64,000–66,000 Crore",
+    "lotSize": "2–10 Shares",
+    "52WeekHigh": "₹15,500",
+    "52WeekLow": "₹10,750",
+    "faceValue": "₹10",
+    "bookValue": "₹3,361",
+    "peRatio": "18–22",
+    "pbRatio": "3.2–3.3",
+    "debtToEquity": "0",
+    "returnOnEquity": "18–22%",
+    "totalOutstandingShares": "5,92,71,296",
+    "isin": "INE177B01032",
+    "depository": "NSDL & CDSL",
+    "pan": "AABCM4573E",
+    "cin": "U85110PN1993PLC145950",
+    "rta": "KFin Technologies Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Capgemini India shows stable revenue growth with consistent profitability, strong margins, and zero debt, making it one of the most stable unlisted IT companies.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 22629, "fy23": 27875, "fy24": 27786, "fy25": 29068 },
+      { "label": "Employee Benefit Expenses", "fy22": 15349, "fy23": 20688, "fy24": 20450, "fy25": 21293 },
+      { "label": "Other Expenses", "fy22": 2584, "fy23": 3104, "fy24": 2942, "fy25": 2979 },
+      { "label": "EBITDA", "fy22": 3696, "fy23": 4503, "fy24": 4394, "fy25": 4796 },
+      { "label": "Operating Profit Margin (%)", "fy22": 16.33, "fy23": 16.15, "fy24": 15.81, "fy25": 16.5 },
+      { "label": "Other Income", "fy22": 436, "fy23": 510, "fy24": 964, "fy25": 934 },
+      { "label": "Finance Cost", "fy22": 76, "fy23": 57, "fy24": 63, "fy25": 69.5 },
+      { "label": "Depreciation", "fy22": 875, "fy23": 983, "fy24": 1004, "fy25": 935 },
+      { "label": "EBIT", "fy22": 2821, "fy23": 3520, "fy24": 3390, "fy25": 3861 },
+      { "label": "PBT", "fy22": 3180, "fy23": 3973, "fy24": 4291, "fy25": 4727 },
+      { "label": "Tax", "fy22": 874, "fy23": 798, "fy24": 1045, "fy25": 1114 },
+      { "label": "PAT", "fy22": 2306, "fy23": 3175, "fy24": 3246, "fy25": 3613 },
+      { "label": "Net Profit Margin (%)", "fy22": 10.19, "fy23": 11.39, "fy24": 11.68, "fy25": 12.43 },
+      { "label": "EPS (₹)", "fy22": 390.19, "fy23": 535.41, "fy24": 547.39, "fy25": 609.27 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 16.33, "fy23": 16.15, "fy24": 15.81, "fy25": 16.5 },
+      { "label": "Net Profit Margin (%)", "fy22": 10.19, "fy23": 11.39, "fy24": 11.68, "fy25": 12.43 },
+      { "label": "EPS (₹)", "fy22": 390.19, "fy23": 535.41, "fy24": 547.39, "fy25": 609.27 }
+    ],
+
+    "investorInsight": [
+      "Consistent revenue growth with stable margins.",
+      "High-quality earnings and strong EPS growth.",
+      "Debt-free balance sheet.",
+      "Predictable IT services business model."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 2995, "fy23": 2753, "fy24": 2504, "fy25": 2338 },
+      { "label": "CWIP", "fy22": 23, "fy23": 23, "fy24": 61, "fy25": 127 },
+      { "label": "Investments", "fy22": 5761, "fy23": 8162, "fy24": 9431, "fy25": 8345 },
+      { "label": "Trade Receivables", "fy22": 4867, "fy23": 5156, "fy24": 4969, "fy25": 5088 },
+      { "label": "Other Assets", "fy22": 5849, "fy23": 6455, "fy24": 8160, "fy25": 8658 },
+      { "label": "Total Assets", "fy22": 19495, "fy23": 22549, "fy24": 25125, "fy25": 24556 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 59.1, "fy23": 59.3, "fy24": 59.3, "fy25": 59.3 },
+      { "label": "Reserves", "fy22": 14742, "fy23": 17994, "fy24": 20651, "fy25": 19772 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 832, "fy23": 895, "fy24": 795, "fy25": 950 },
+      { "label": "Other Liabilities", "fy22": 3861.9, "fy23": 3600.7, "fy24": 3619.7, "fy25": 3774.7 },
+      { "label": "Total Liabilities", "fy22": 19495, "fy23": 22549, "fy24": 25125, "fy25": 24556 }
+    ],
+    "insights": "Strong balance sheet with zero debt and growing reserves; capital-efficient IT business."
+  },
+
+  "liabilitiesBreakdown": "Completely debt-free company with strong reserves backing growth.",
+
+  "balanceSheetInsights": "Highly stable financial structure with strong cash reserves and minimal capital intensity.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": 1908, "fy23": 3303, "fy24": 3687, "fy25": 3762 },
+      { "label": "Cash Flow From Investing", "fy22": -1638, "fy23": -2572, "fy24": -2309, "fy25": 1456 },
+      { "label": "Cash Flow From Financing", "fy22": -446, "fy23": -497, "fy24": -572, "fy25": -5185 },
+      { "label": "Net Cash Generated", "fy22": -176, "fy23": 234, "fy24": 806, "fy25": 33 },
+      { "label": "Cash at End", "fy22": 735, "fy23": 928, "fy24": 1772, "fy25": 1805 }
+    ],
+    "insights": [
+      "Strong and consistent operating cash flows.",
+      "Minimal capital expenditure requirement.",
+      "Regular dividend payouts impacting financing cash flow."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "Capgemini Group (Majority)", "public": "Minority" }
+  ],
+
+  "promotersManagement": "Owned by Capgemini SE (France), a global IT leader.",
+
+  "management": [
+    { "name": "Ashwin Yardi", "role": "CEO India", "experience": "25+ years" }
+  ],
+
+  "rta": {
+    "registrar": "KFin Technologies Limited",
+    "website": ""
+  },
+
+  "managementInsight": "Focused on digital transformation, cloud, and AI-driven services with strong global demand tailwinds."
+},
+{
+  "id": 22,
+  "name": "Care Health (Previously Religare Health) Insurance Company Limited Unlisted Shares",
+  "price": 150,
+  "logo": "/images/preipo/image22.png",
+
+  "overview": "Care Health Insurance Limited (formerly Religare Health Insurance) is a leading standalone health insurer in India offering retail health insurance, group health plans, travel insurance, and wellness services. The company has a strong hospital network and focuses on individual and SME segments.",
+
+  "products": [
+    "Retail Health Insurance",
+    "Group Health Insurance",
+    "Top-up & Critical Illness Plans",
+    "Travel Insurance",
+    "Wellness & Preventive Healthcare"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Individual Policyholders",
+    "Corporate Clients",
+    "SMEs",
+    "Insurance Brokers & Agents"
+  ],
+
+  "shareDetails": {
+    "companyName": "Care Health Insurance Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹150",
+    "marketCapitalization": "₹13,500–17,000 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹190–210",
+    "52WeekLow": "₹130–140",
+    "faceValue": "₹10",
+    "bookValue": "₹22–24",
+    "peRatio": "40–90",
+    "pbRatio": "5–10",
+    "debtToEquity": "0",
+    "returnOnEquity": "7–10%",
+    "totalOutstandingShares": "97.2 Crore",
+    "isin": "INE119J01011",
+    "depository": "NSDL & CDSL",
+    "pan": "AADCR6281N",
+    "cin": "U66000DL2007PLC161503",
+    "rta": "KFin Technologies Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Care Health has shown strong premium growth with improving profitability, although margins remain volatile due to claims and underwriting cycles.",
+
+    "incomeStatement": [
+      { "label": "Gross Written Premium (GWP)", "fy22": 3880, "fy23": 5141, "fy24": 6864, "fy25": 8318 },
+      { "label": "Net Earned Premium", "fy22": 3088, "fy23": 4590, "fy24": 6047, "fy25": 6733 },
+      { "label": "Premium Earned", "fy22": 2510, "fy23": 3932, "fy24": 5329, "fy25": 6347 },
+      { "label": "Total Revenue", "fy22": 2961.6, "fy23": 4525, "fy24": 5678, "fy25": 6724 },
+      { "label": "Claims Incurred", "fy22": 1633, "fy23": 2116, "fy24": 3074, "fy25": 4096 },
+      { "label": "Commission", "fy22": 110, "fy23": 442, "fy24": 1070, "fy25": 1357 },
+      { "label": "Operating Expenses", "fy22": 1070, "fy23": 1322, "fy24": 1178, "fy25": 1222 },
+      { "label": "Operating Profit", "fy22": 283.6, "fy23": 645, "fy24": 356, "fy25": 49 },
+      { "label": "Income from Investment", "fy22": 59, "fy23": 105, "fy24": 143, "fy25": 173 },
+      { "label": "PBT", "fy22": 15, "fy23": 327, "fy24": 410, "fy25": 208 },
+      { "label": "Tax", "fy22": 4, "fy23": 82, "fy24": 105, "fy25": 53 },
+      { "label": "PAT", "fy22": 11, "fy23": 245, "fy24": 305, "fy25": 155 },
+      { "label": "EPS (₹)", "fy22": 0.12, "fy23": 2.6, "fy24": 3.14, "fy25": 1.59 }
+    ],
+
+    "keyRatios": [
+      { "label": "Combined Ratio", "fy22": 112.07, "fy23": 98.68, "fy24": 99.87, "fy25": 105.17 },
+      { "label": "Net Loss Ratio", "fy22": 0.65, "fy23": 0.54, "fy24": 0.58, "fy25": 0.65 },
+      { "label": "Market Cap / GWP", "fy22": 4.33, "fy23": 3.3, "fy24": 2.97, "fy25": 1.93 }
+    ],
+
+    "investorInsight": [
+      "Strong premium growth (₹3880 Cr → ₹8318 Cr).",
+      "Profitability improved till FY24 but declined in FY25.",
+      "Insurance business highly sensitive to claims ratio.",
+      "Combined ratio near 100% indicates tight underwriting margins."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 94, "fy23": 56, "fy24": 42, "fy25": 34 },
+      { "label": "Cash and Balances", "fy22": 78, "fy23": 99, "fy24": 96, "fy25": 193 },
+      { "label": "Investment - Shareholder", "fy22": 1105, "fy23": 1921, "fy24": 2130, "fy25": 2466 },
+      { "label": "Investment - Policyholder", "fy22": 2460, "fy23": 3155, "fy24": 4502, "fy25": 5933 },
+      { "label": "Advances & Other Assets", "fy22": 250, "fy23": 283, "fy24": 342, "fy25": 350 },
+      { "label": "Total Assets", "fy22": 3987, "fy23": 5514, "fy24": 7112, "fy25": 8976 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 908.5, "fy23": 942, "fy24": 972, "fy25": 974 },
+      { "label": "Reserves & Surplus", "fy22": 380, "fy23": 806, "fy24": 1198, "fy25": 1399 },
+      { "label": "Current Liabilities", "fy22": 1161, "fy23": 1559, "fy24": 2002, "fy25": 3343 },
+      { "label": "Provisions", "fy22": 1529, "fy23": 2213, "fy24": 2913, "fy25": 3306 },
+      { "label": "Other Liabilities", "fy22": 0, "fy23": -6, "fy24": 27, "fy25": -46 },
+      { "label": "Total Liabilities", "fy22": 3987.5, "fy23": 5514, "fy24": 7112, "fy25": 8976 }
+    ],
+    "insights": "Investment portfolio (policyholder funds) dominates assets, typical for insurance companies."
+  },
+
+  "liabilitiesBreakdown": "Insurance liabilities driven by policyholder reserves and claim provisions.",
+
+  "balanceSheetInsights": "Strong growth in assets and reserves aligned with premium growth.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": 667.3, "fy23": 1031, "fy24": 1048, "fy25": 1377 },
+      { "label": "Cash Flow From Investing", "fy22": -787.2, "fy23": -1306.86, "fy24": -1168, "fy25": -1286 },
+      { "label": "Cash Flow From Financing", "fy22": 153, "fy23": 296, "fy24": 116, "fy25": 7.2 },
+      { "label": "Net Cash Generated", "fy22": 33.1, "fy23": 20.14, "fy24": -4, "fy25": 98.2 },
+      { "label": "Cash at End", "fy22": 78.1, "fy23": 99.14, "fy24": 96, "fy25": 194.2 }
+    ],
+    "insights": [
+      "Strong operating cash flows from premiums.",
+      "Heavy investment outflows (insurance model).",
+      "Stable liquidity position."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "Religare Enterprises & Investors", "public": "Limited" }
+  ],
+
+  "promotersManagement": "Backed by Religare Enterprises and private equity investors.",
+
+  "management": [
+    { "name": "Anuj Gulati", "role": "MD & CEO", "experience": "Insurance Industry" }
+  ],
+
+  "rta": {
+    "registrar": "KFin Technologies Limited",
+    "website": ""
+  },
+
+  "managementInsight": "Focused on retail health insurance expansion with increasing premium base and improving underwriting discipline."
+},
+{
+  "id": 23,
+  "name": "Carrier Airconditioning & Refrigeration Limited Unlisted Shares",
+  "price": 535,
+  "logo": "/images/preipo/image23.png",
+
+  "overview": "Carrier Airconditioning & Refrigeration Limited is a leading HVAC (heating, ventilation, air conditioning, and refrigeration) solutions provider in India. It is part of Carrier Global Corporation and operates across residential, commercial, and industrial cooling solutions with a strong brand presence and distribution network.",
+
+  "products": [
+    "Residential Air Conditioners",
+    "Commercial HVAC Systems",
+    "Refrigeration Systems",
+    "After-sales Services & Maintenance"
+  ],
+
+  "manufacturingUnits": [
+    "Gurugram, Haryana, India",
+    "Multiple Service & Distribution Centers"
+  ],
+
+  "clients": [
+    "Commercial Buildings",
+    "Industrial Clients",
+    "Retail & Residential Customers"
+  ],
+
+  "shareDetails": {
+    "companyName": "Carrier Airconditioning & Refrigeration Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹535",
+    "marketCapitalization": "₹5,200–5,600 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹605–650",
+    "52WeekLow": "₹480–495",
+    "faceValue": "₹10",
+    "bookValue": "₹54.5",
+    "peRatio": "26–27",
+    "pbRatio": "~9",
+    "debtToEquity": "0",
+    "returnOnEquity": "25–30%",
+    "totalOutstandingShares": "10.64 Crore",
+    "isin": "INE040I01011",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACC8414B",
+    "cin": "U74999HR1992FLC036104",
+    "rta": "Link Intime India Pvt Ltd"
+  },
+
+  "financials": {
+    "annualReportSummary": "Carrier India has shown consistent revenue growth with improving profitability and margins. The company operates with strong operational efficiency and a debt-free balance sheet.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1612, "fy23": 2197, "fy24": 2131, "fy25": 2496 },
+      { "label": "Cost of Material Consumed", "fy22": 1087, "fy23": 1502, "fy24": 1363, "fy25": 1534 },
+      { "label": "Change in Inventory", "fy22": -66, "fy23": -28, "fy24": -45, "fy25": -23 },
+      { "label": "Employee Benefit Expenses", "fy22": 166, "fy23": 169, "fy24": 177, "fy25": 187 },
+      { "label": "Other Expenses", "fy22": 362, "fy23": 413, "fy24": 461, "fy25": 540 },
+      { "label": "EBITDA", "fy22": 63, "fy23": 141, "fy24": 175, "fy25": 258 },
+      { "label": "Operating Profit Margin (%)", "fy22": 3.91, "fy23": 6.42, "fy24": 8.21, "fy25": 10.34 },
+      { "label": "Other Income", "fy22": 20, "fy23": 24, "fy24": 47, "fy25": 47 },
+      { "label": "Finance Cost", "fy22": 3, "fy23": 2, "fy24": 2, "fy25": 2 },
+      { "label": "Depreciation", "fy22": 23, "fy23": 21, "fy24": 25, "fy25": 28 },
+      { "label": "EBIT", "fy22": 40, "fy23": 120, "fy24": 150, "fy25": 230 },
+      { "label": "PBT", "fy22": 57, "fy23": 142, "fy24": 195, "fy25": 275 },
+      { "label": "Tax", "fy22": 15, "fy23": 32, "fy24": 44, "fy25": 73 },
+      { "label": "PAT", "fy22": 42, "fy23": 110, "fy24": 151, "fy25": 202 },
+      { "label": "Net Profit Margin (%)", "fy22": 2.61, "fy23": 5.01, "fy24": 7.09, "fy25": 8.09 },
+      { "label": "EPS (₹)", "fy22": 3.95, "fy23": 10.38, "fy24": 14.21, "fy25": 18.99 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 3.91, "fy23": 6.42, "fy24": 8.21, "fy25": 10.34 },
+      { "label": "Net Profit Margin (%)", "fy22": 2.61, "fy23": 5.01, "fy24": 7.09, "fy25": 8.09 },
+      { "label": "EPS (₹)", "fy22": 3.95, "fy23": 10.38, "fy24": 14.21, "fy25": 18.99 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth and margin expansion.",
+      "Profitability improving steadily each year.",
+      "High EPS growth trajectory.",
+      "Operating leverage kicking in."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 68, "fy23": 65, "fy24": 84, "fy25": 79 },
+      { "label": "CWIP", "fy22": 0.6, "fy23": 9, "fy24": 5, "fy25": 33 },
+      { "label": "Trade Receivables", "fy22": 257, "fy23": 324, "fy24": 332, "fy25": 383 },
+      { "label": "Inventory", "fy22": 337, "fy23": 344, "fy24": 379, "fy25": 422 },
+      { "label": "Other Assets", "fy22": 249.4, "fy23": 395, "fy24": 683, "fy25": 731 },
+      { "label": "Total Assets", "fy22": 912, "fy23": 1137, "fy24": 1483, "fy25": 1648 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 106.3, "fy23": 106, "fy24": 106.3, "fy25": 106.38 },
+      { "label": "Reserves", "fy22": 166, "fy23": 266, "fy24": 403, "fy25": 473 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 431, "fy23": 529, "fy24": 687, "fy25": 788 },
+      { "label": "Other Liabilities", "fy22": 208.7, "fy23": 236, "fy24": 286.7, "fy25": 280.62 },
+      { "label": "Total Liabilities", "fy22": 912, "fy23": 1137, "fy24": 1483, "fy25": 1648 }
+    ],
+    "insights": "Debt-free balance sheet with improving reserves and stable working capital."
+  },
+
+  "liabilitiesBreakdown": "Zero debt company with strong internal accruals funding growth.",
+
+  "balanceSheetInsights": "Healthy balance sheet with consistent reserve growth and no leverage risk.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow From Operations", "fy22": 76, "fy23": 162, "fy24": 273, "fy25": 171 },
+      { "label": "Cash Flow From Investing", "fy22": -9, "fy23": -8, "fy24": -21.6, "fy25": 284 },
+      { "label": "Cash Flow From Financing", "fy22": -15.5, "fy23": -20, "fy24": -21.6, "fy25": -394 },
+      { "label": "Net Cash Generated", "fy22": 51.5, "fy23": 134, "fy24": 229.8, "fy25": 61 },
+      { "label": "Cash at End", "fy22": 64.5, "fy23": 199, "fy24": 428, "fy25": 481 }
+    ],
+    "insights": [
+      "Strong operating cash flow growth.",
+      "Low capex requirements.",
+      "Dividend payouts impacting financing cash flow."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "Carrier Global Corporation (~96%)", "public": "Low float" }
+  ],
+
+  "promotersManagement": "Subsidiary of Carrier Global Corporation (USA).",
+
+  "management": [
+    { "name": "Leadership Team", "role": "Management", "experience": "HVAC Industry" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Pvt Ltd",
+    "website": ""
+  },
+
+  "managementInsight": "Focused on expanding HVAC market share in India with strong brand backing and improving margins."
+},
 
 
 
