@@ -18768,7 +18768,378 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
   "managementInsight": "Focused on expanding HVAC market share in India with strong brand backing and improving margins."
 },
+{
+  "id": 24,
+  "name": "Cheelizza Pizza Unlisted Shares",
+  "price": 69,
+  "logo": "/images/preipo/image24.jpg",
 
+  "overview": "Cheelizza Pizza India Limited is a Mumbai-based 100% pure vegetarian quick service restaurant (QSR) chain operating under the EatVeg multi-brand platform. The company focuses on providing contamination-free vegetarian food, addressing a significant gap in India's QSR market dominated by mixed kitchens. Founded with a vision to build a scalable vegetarian-first ecosystem, Cheelizza operates multiple outlets across cities like Mumbai, Pune, and Gujarat, while also expanding via delivery platforms like Zomato and Swiggy. :contentReference[oaicite:0]{index=0}\n\nThe company is positioned as a high-growth brand in the food service sector, leveraging a central kitchen model, strong repeat customer base, and multi-brand expansion strategy including Cheelizza (pizza), BiryaniCan, and Indian Combos. With rising vegetarian demand and increasing digital adoption, Cheelizza aims to scale rapidly across Tier-1 and Tier-2 cities. :contentReference[oaicite:1]{index=1}\n\nHowever, the company is still in a growth and investment phase, with ongoing losses and high capital expenditure typical of early-stage QSR expansion businesses.",
+
+  "products": [
+    "Pure Veg Pizza",
+    "Pasta & Italian Food",
+    "Biryani (BiryaniCan)",
+    "Indian Meals (Indian Combos)"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Retail Customers",
+    "Online Delivery Users (Zomato, Swiggy)",
+    "Vegetarian Consumers",
+    "Franchise Partners"
+  ],
+
+  "shareDetails": {
+    "companyName": "Cheelizza Pizza India Limited",
+    "indicativeUnlistedSharePrice": "₹60 - ₹75",
+    "marketCapitalization": "₹350 - ₹400 Crore (Approx.)",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹100",
+    "52WeekLow": "₹36",
+    "faceValue": "₹1",
+    "bookValue": "Negative",
+    "peRatio": "Negative",
+    "pbRatio": "Negative",
+    "debtToEquity": "Negative",
+    "returnOnEquity": "Negative",
+    "totalOutstandingShares": "10.78 Crore",
+    "isin": "INE0MSX01027",
+    "depository": "NSDL & CDSL",
+    "pan": "",
+    "cin": "U15400MH2021PLC355218",
+    "rta": "Bigshare Services Pvt. Ltd."
+  },
+
+  "financials": {
+    "annualReportSummary": "Cheelizza is in an aggressive expansion phase with strong revenue growth but continued losses. Revenue grew significantly from ₹320 Cr in FY22 to ₹1935 Cr in FY25, driven by store expansion and digital demand. However, EBITDA and PAT remain negative due to high operating costs, expansion expenses, and finance costs. Losses are narrowing gradually, indicating early signs of operational improvement.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 320, "fy23": 1336, "fy24": 1813, "fy25": 1935 },
+      { "label": "EBITDA", "fy22": -9, "fy23": -203, "fy24": -441, "fy25": -313 },
+      { "label": "Operating Profit (EBIT)", "fy22": -28, "fy23": -289, "fy24": -605, "fy25": -449 },
+      { "label": "Profit Before Tax", "fy22": -30.4, "fy23": -289, "fy24": -681.6, "fy25": -545 },
+      { "label": "Net Profit", "fy22": -20.7, "fy23": -209, "fy24": -509.1, "fy25": -393 },
+      { "label": "EPS", "fy22": -207, "fy23": -1607.69, "fy24": -3886.26, "fy25": -278.72 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin", "fy22": -2.81, "fy23": -15.19, "fy24": -24.32, "fy25": -16.18 },
+      { "label": "Net Profit Margin", "fy22": -6.47, "fy23": -15.64, "fy24": -28.08, "fy25": -20.31 },
+      { "label": "EPS", "fy22": -207, "fy23": -1607.69, "fy24": -3886.26, "fy25": -278.72 }
+    ],
+
+    "investorInsight": [
+      "Revenue growth is strong due to aggressive expansion and increasing brand penetration.",
+      "Profitability remains negative due to high operational and expansion costs.",
+      "Improvement in EBITDA losses suggests better cost control in FY25.",
+      "QSR sector is capital-intensive, making profitability timeline longer.",
+      "Vegetarian-only positioning provides strong differentiation in Indian market."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 176, "fy23": 516, "fy24": 593, "fy25": 388 },
+      { "label": "Trade Receivables", "fy22": 15, "fy23": 24, "fy24": 39, "fy25": 41 },
+      { "label": "Inventory", "fy22": 36, "fy23": 48, "fy24": 46.5, "fy25": 30 },
+      { "label": "Other Assets", "fy22": 68, "fy23": 278, "fy24": 547.5, "fy25": 577 },
+      { "label": "Total Assets", "fy22": 295, "fy23": 866, "fy24": 1226, "fy25": 1036 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 1, "fy23": 1.3, "fy24": 1.31, "fy25": 1.41 },
+      { "label": "Reserves", "fy22": -20.69, "fy23": 338.6, "fy24": -170, "fy25": -53 },
+      { "label": "Borrowings", "fy22": 106, "fy23": 382, "fy24": 727, "fy25": 651 },
+      { "label": "Trade Payables", "fy22": 78, "fy23": 80, "fy24": 55.6, "fy25": 128 },
+      { "label": "Other Liabilities", "fy22": 130.69, "fy23": 64.1, "fy24": 612.09, "fy25": 308.59 },
+      { "label": "Total Liabilities", "fy22": 295, "fy23": 866, "fy24": 1226, "fy25": 1036 }
+    ],
+    "insights": "Balance sheet shows rapid scaling with rising assets and borrowings. Debt levels increased significantly till FY24 and moderated slightly in FY25, indicating partial deleveraging. Negative reserves reflect accumulated losses."
+  },
+
+  "liabilitiesBreakdown": "Major liabilities consist of borrowings and operational payables. Increase in borrowings reflects funding for expansion, while rising payables indicate working capital pressure typical in QSR businesses.",
+
+  "balanceSheetInsights": "The company is in a high-growth but leveraged phase. While asset base has expanded significantly, negative reserves and high debt indicate financial stress. However, improving operating cash flow suggests stabilization beginning in FY25.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 76, "fy23": -174.5, "fy24": -307, "fy25": 16 },
+      { "label": "Investing Cash Flow", "fy22": -195.6, "fy23": -425, "fy24": -241, "fy25": 70 },
+      { "label": "Financing Cash Flow", "fy22": 128, "fy23": 668, "fy24": 584.5, "fy25": -197 }
+    ],
+    "insights": [
+      "Operating cash flow turned positive in FY25 indicating early operational stability.",
+      "Heavy investing outflows reflect aggressive store and infrastructure expansion.",
+      "Financing inflows in FY23–FY24 show reliance on debt/equity funding.",
+      "FY25 shows deleveraging with repayment of borrowings."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "Founded by Animesh Lodha, Cheelizza operates under the EatVeg platform with a founder-led growth strategy focused on vegetarian QSR expansion. :contentReference[oaicite:2]{index=2}",
+
+  "management": [
+    { "name": "Animesh Lodha", "role": "Founder", "experience": "10+ Years" }
+  ],
+
+  "rta": {
+  "registrar": "Bigshare Services Pvt. Ltd.",
+  "website": "https://www.bigshareonline.com/"
+},
+
+  "managementInsight": "Management is focused on scaling a differentiated vegetarian-first QSR model. Execution risk remains high due to expansion intensity, but strong brand positioning and digital growth provide long-term potential."
+},
+{
+  "id":25,
+  "name": "Claps Oiltech Unlisted Share",
+  "price": 46,
+  "logo": "/images/preipo/image25.png",
+
+  "overview": "Claps Oiltech Private Limited is an emerging player in the energy and industrial fuels sector, focusing on biofuels, industrial oils, and fuel supply solutions. Incorporated in 2021 and based in Hyderabad, the company operates across multiple verticals including manufacturing of specialty oils, biofuel development, and commodity trading. It serves key industrial clients such as cement companies and energy-intensive industries. The company is positioning itself as a sustainable energy solutions provider, aligning with India’s biofuel and renewable energy push. With plans to expand manufacturing capacity and scale operations, Claps Oiltech aims to capitalize on the growing demand for alternative fuels and industrial lubricants. :contentReference[oaicite:0]{index=0}",
+
+  "products": [
+    "Industrial Oils (Base Oil, Lubricants)",
+    "Biofuels",
+    "Petrol & Diesel Supply",
+    "Commodity Trading",
+    "Specialty Products (Glycerol, Bitumen)"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Cement Industry Players",
+    "Industrial Manufacturers",
+    "Energy Sector Companies"
+  ],
+
+  "shareDetails": {
+    "companyName": "Claps Oiltech Private Limited",
+    "indicativeUnlistedSharePrice": "₹46",
+    "marketCapitalization": "₹30.82 Cr",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹46",
+    "52WeekLow": "₹46",
+    "faceValue": "₹10",
+    "bookValue": "₹10.96",
+    "peRatio": "60.53",
+    "pbRatio": "4.2",
+    "debtToEquity": "0.71",
+    "returnOnEquity": "7.04%",
+    "totalOutstandingShares": "67,00,000",
+    "isin": "INE0UGF01014",
+    "depository": "Only CDSL",
+    "pan": "AAJCC8125G",
+    "cin": "U52399TG2021PTC155582",
+    "rta": "N/A"
+  },
+
+  "financials": {
+    "annualReportSummary": "Claps Oiltech has shown early-stage growth with a sharp increase in revenue from ₹35 lakh in FY22 to ₹4046 lakh in FY23. Profitability improved significantly with PAT rising to ₹51 lakh in FY23. However, margins remain volatile due to scale-up costs and operational expansion. The company is still in an early growth phase with improving earnings visibility.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 35, "fy23": 4046 },
+      { "label": "EBITDA", "fy22": 2, "fy23": 58 },
+      { "label": "Operating Profit", "fy22": 2, "fy23": 58 },
+      { "label": "Profit Before Tax", "fy22": 4, "fy23": 69 },
+      { "label": "Net Profit / Loss", "fy22": 3, "fy23": 51 },
+      { "label": "EPS", "fy22": 30, "fy23": 0.76 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 5.71, "fy23": 1.43 },
+      { "label": "Net Profit Margin (%)", "fy22": 8.57, "fy23": 1.25 },
+      { "label": "EPS", "fy22": 30, "fy23": 0.76 }
+    ],
+
+    "investorInsight": [
+      "Revenue growth is extremely strong but comes from a low base, indicating early-stage scaling.",
+      "Profitability improved in absolute terms but margins declined due to rapid expansion.",
+      "Business is aligned with biofuel and energy transition themes, which offer long-term growth potential.",
+      "Small scale and limited track record increase investment risk compared to mature peers."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 15, "fy23": 21 },
+      { "label": "Trade Receivables", "fy22": 0, "fy23": 982 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0 },
+      { "label": "Other Assets", "fy22": 11, "fy23": 810 },
+      { "label": "Total Assets", "fy22": 26, "fy23": 1813 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 1, "fy23": 670 },
+      { "label": "Reserves", "fy22": 3, "fy23": 54 },
+      { "label": "Borrowings", "fy22": 17, "fy23": 57 },
+      { "label": "Trade Payables", "fy22": 0, "fy23": 470 },
+      { "label": "Other Liabilities", "fy22": 5, "fy23": 162 },
+      { "label": "Total Liabilities", "fy22": 26, "fy23": 1813 }
+    ],
+    "insights": "The balance sheet expanded sharply in FY23 driven by higher receivables and capital infusion. Working capital intensity is high, which is typical for trading and fuel businesses. The company remains moderately leveraged but manageable at current scale."
+  },
+
+  "liabilitiesBreakdown": "Short-term liabilities are largely driven by trade payables and working capital financing. Borrowings remain relatively controlled but are expected to rise as the company scales operations.",
+
+  "balanceSheetInsights": "Claps Oiltech is in an expansion phase with rapid asset growth. However, the high receivables indicate potential working capital pressure. Sustaining growth while maintaining liquidity will be critical.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 0, "fy23": 0 },
+      { "label": "Investing Cash Flow", "fy22": 0, "fy23": 0 },
+      { "label": "Financing Cash Flow", "fy22": 0, "fy23": 0 }
+    ],
+    "insights": [
+      "Cash flow data is limited or not disclosed clearly.",
+      "Rapid growth suggests increasing working capital requirements.",
+      "Future cash flow sustainability depends on execution and scale."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is promoted by Chandra Sekar Kumarswamy and Srilalitha Kallepalli, who are actively involved in operations and strategic direction. :contentReference[oaicite:1]{index=1}",
+
+  "management": [
+    { "name": "Chandra Sekar Kumarswamy", "role": "Director", "experience": "" },
+    { "name": "Srilalitha Kallepalli", "role": "Director", "experience": "" }
+  ],
+
+  "rta": {
+    "registrar": "N/A",
+    "website": ""
+  },
+
+  "managementInsight": "The management is promoter-driven with a focus on scaling operations in the energy and biofuel sector. Being a young company, execution capability and capital allocation decisions will be key to long-term success."
+},
+{
+  "id": 26,
+  "name": "Cochin International Airport Limited Unlisted Shares",
+  "price": 438,
+  "logo": "/images/preipo/image26.png",
+
+  "overview": "Cochin International Airport Limited (CIAL) is India’s first public-private partnership (PPP) airport and the world’s first fully solar-powered airport. Located in Kerala, it serves as a major gateway for domestic and international travel, particularly for the Middle East corridor. The company operates airport infrastructure, cargo services, duty-free retail, and allied aviation services. CIAL has consistently demonstrated strong operational efficiency and profitability, benefiting from high passenger traffic, NRI travel demand, and diversified revenue streams including aeronautical and non-aeronautical income such as retail, parking, and real estate development.",
+
+  "products": [
+    "Airport Operations",
+    "Passenger Services",
+    "Cargo Handling",
+    "Duty Free Retail",
+    "Ground Handling Services",
+    "Solar Power Generation"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Domestic & International Passengers",
+    "Airlines",
+    "Cargo Operators",
+    "Retail & Duty-Free Customers"
+  ],
+
+  "shareDetails": {
+    "companyName": "Cochin International Airport Limited",
+    "indicativeUnlistedSharePrice": "₹438",
+    "marketCapitalization": "₹20,946 Cr",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹495",
+    "52WeekLow": "₹425",
+    "faceValue": "₹10",
+    "bookValue": "₹55.94",
+    "peRatio": "40.59",
+    "pbRatio": "7.83",
+    "debtToEquity": "0.17",
+    "returnOnEquity": "19.36%",
+    "totalOutstandingShares": "47,82,18,436",
+    "isin": "INE02KH01019",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACC9658B",
+    "cin": "U63033KL1994PLC007803",
+    "rta": "SKDC Consultants"
+  },
+
+  "financials": {
+    "annualReportSummary": "Cochin International Airport has demonstrated strong and consistent growth post-COVID recovery. Revenue increased from ₹502 Cr in FY22 to ₹1310 Cr in FY25, supported by rising passenger traffic and strong non-aeronautical income. EBITDA margins remain robust above 50%, highlighting operational efficiency. Profitability and cash flow generation remain strong, making it one of the most stable and profitable unlisted infrastructure assets in India.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 502, "fy23": 940, "fy24": 1158, "fy25": 1310 },
+      { "label": "EBITDA", "fy22": 227, "fy23": 563, "fy24": 722, "fy25": 789 },
+      { "label": "Operating Profit", "fy22": 227, "fy23": 563, "fy24": 722, "fy25": 789 },
+      { "label": "EBIT", "fy22": 82, "fy23": 421, "fy24": 574, "fy25": 644 },
+      { "label": "Profit Before Tax", "fy22": 48, "fy23": 392, "fy24": 598, "fy25": 603 },
+      { "label": "Net Profit / Loss", "fy22": 48, "fy23": 392, "fy24": 598, "fy25": 603 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 45.22, "fy23": 59.89, "fy24": 62.35, "fy25": 60.23 },
+      { "label": "Debt to Equity", "fy22": 0.17, "fy23": 0.17, "fy24": 0.17, "fy25": 0.17 },
+      { "label": "ROE (%)", "fy22": 19.36, "fy23": 19.36, "fy24": 19.36, "fy25": 19.36 }
+    ],
+
+    "investorInsight": [
+      "CIAL is one of the most profitable airport operators in India with consistently high EBITDA margins.",
+      "Strong recovery post-COVID with significant revenue and profit growth.",
+      "Diversified revenue streams including non-aero income reduce dependency on passenger fees.",
+      "Low debt levels and strong cash generation make it financially stable."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 2131, "fy23": 2075, "fy24": 2076, "fy25": 2221 },
+      { "label": "CWIP", "fy22": 90, "fy23": 113, "fy24": 181, "fy25": 174 },
+      { "label": "Investments", "fy22": 10, "fy23": 196, "fy24": 111, "fy25": 32 },
+      { "label": "Trade Receivables", "fy22": 93, "fy23": 100, "fy24": 116, "fy25": 108 },
+      { "label": "Inventory", "fy22": 22, "fy23": 55, "fy24": 48, "fy25": 66 },
+      { "label": "Other Assets", "fy22": 166, "fy23": 892, "fy24": 1143, "fy25": 1241 },
+      { "label": "Total Assets", "fy22": 2512, "fy23": 3431, "fy24": 3573, "fy25": 3842 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 382.5, "fy23": 382.5, "fy24": 478.21, "fy25": 478.21 },
+      { "label": "Reserves", "fy22": 964, "fy23": 1733, "fy24": 1869, "fy25": 2187 },
+      { "label": "Borrowings", "fy22": 680, "fy23": 674, "fy24": 585, "fy25": 465 },
+      { "label": "Trade Payables", "fy22": 35, "fy23": 58, "fy24": 44, "fy25": 55 },
+      { "label": "Other Liabilities", "fy22": 450.5, "fy23": 583.5, "fy24": 576.79, "fy25": 656.79 },
+      { "label": "Total Liabilities", "fy22": 2512, "fy23": 3431, "fy24": 3573, "fy25": 3842 }
+    ],
+    "insights": "The balance sheet reflects strong asset growth driven by infrastructure expansion. Borrowings have reduced over time, indicating deleveraging. High reserves and retained earnings demonstrate consistent profitability and strong internal accruals."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are well balanced with a strong equity base and declining borrowings. Trade payables and other liabilities are operational in nature and manageable relative to revenue scale.",
+
+  "balanceSheetInsights": "CIAL maintains a strong financial position with low leverage and high profitability. Continuous reinvestment into infrastructure and expansion supports long-term growth while maintaining financial stability.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 159.2, "fy23": 645, "fy24": 592, "fy25": 649 },
+      { "label": "Investing Cash Flow", "fy22": -110.7, "fy23": 80, "fy24": 229, "fy25": -234 },
+      { "label": "Financing Cash Flow", "fy22": -1.2, "fy23": -94, "fy24": -394, "fy25": -368 }
+    ],
+    "insights": [
+      "Strong and consistent operating cash flows indicate high business stability.",
+      "Investing cash flows reflect infrastructure expansion and asset investments.",
+      "Negative financing cash flow shows debt repayment and dividend payouts.",
+      "Overall liquidity position remains strong with healthy cash generation."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "Cochin International Airport is promoted by the Government of Kerala along with public and institutional investors, making it one of the earliest successful PPP models in Indian infrastructure.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "SKDC Consultants",
+    "website": ""
+  },
+
+  "managementInsight": "CIAL benefits from strong government backing combined with professional management. Its PPP structure ensures operational efficiency while maintaining public accountability. The company has consistently demonstrated strong governance and execution capabilities."
+},
 
 
    {
