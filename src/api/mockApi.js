@@ -19140,6 +19140,585 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
   "managementInsight": "CIAL benefits from strong government backing combined with professional management. Its PPP structure ensures operational efficiency while maintaining public accountability. The company has consistently demonstrated strong governance and execution capabilities."
 },
+{
+  "id": 27,
+  "name": "Dantech Digital Dental Solutions Private Limited",
+  "price": 450,
+  "logo": "/images/preipo/dantech.png",
+
+  "overview": `Dantech Digital Dental Solutions Private Limited (operating as Dentacity) is a rapidly growing dental technology company incorporated in April 2023. The company specializes in digital dental solutions, manufacturing of dental prosthetics, implants, crowns, aligners, and advanced CAD/CAM-based dental products. It aims to revolutionize the dental industry through technology-driven manufacturing and services.`,
+
+  "products": [
+    "Digital Dental Prosthetics",
+    "CAD/CAM Crowns & Bridges",
+    "Dental Implants & Abutments",
+    "Orthodontic Aligners",
+    "Surgical Guides & Stents",
+    "Customized Dental Solutions"
+  ],
+
+  "manufacturingUnits": [
+    "Chennai, Tamil Nadu"
+  ],
+
+  "clients": [
+    "Dental Clinics & Hospitals",
+    "Dental Laboratories",
+    "Dental Practitioners",
+    "Dental Chains"
+  ],
+
+  "shareDetails": {
+    "companyName": "Dantech Digital Dental Solutions Private Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹450",
+    "marketCapitalization": "₹168 Crore (Approx.)",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹500",
+    "52WeekLow": "₹400",
+    "faceValue": "₹10",
+    "bookValue": "₹12-15",
+    "peRatio": "NA",
+    "pbRatio": "High",
+    "debtToEquity": "Low",
+    "returnOnEquity": "NA",
+    "totalOutstandingShares": "37,324,850",
+    "isin": "INE0SCF01017",
+    "depository": "NSDL & CDSL",
+    "pan": "AAJCD9521H",
+    "cin": "U32501TN2023PTC159624",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "As a newly incorporated company (April 2023), detailed historical financials are limited. The company is in the growth stage with focus on product development, technology adoption, and market expansion in the digital dentistry segment.",
+
+    "incomeStatement": [],
+
+    "keyRatios": [],
+
+    "investorInsight": [
+      "Early-stage company with high growth potential in dental technology.",
+      "Strong focus on innovation and digital manufacturing.",
+      "High-risk, high-reward investment typical of startup in healthcare tech.",
+      "Backed by strong founder expertise in dentistry."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [],
+    "liabilities": [],
+    "insights": "Early-stage balance sheet focused on technology assets, inventory, and initial capital deployment."
+  },
+
+  "liabilitiesBreakdown": "Low debt profile as a recently funded startup.",
+
+  "balanceSheetInsights": "Asset base primarily consists of technology, equipment, and working capital for dental solutions manufacturing.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flows primarily from equity funding and early operations.",
+      "Investing in R&D, manufacturing setup, and market expansion."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Founders)", "institutional": "Low", "public": "Minimal" }
+  ],
+
+  "promotersManagement": "Founder-led company with deep domain expertise in dentistry and technology.",
+
+  "management": [
+    { "name": "Shravan Gunaseelan", "role": "Founder & Director", "experience": "Dental Technology & Entrepreneurship" },
+    { "name": "Varun Gunaseelan", "role": "Director", "experience": "Operations & Business Development" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "The leadership is focused on building a technology-first dental solutions company, scaling manufacturing capabilities, and capturing significant market share in India's growing digital dentistry sector."
+},
+{
+  "id": 28,
+  "name": "Dalmia Bharat Refractories Limited Unlisted Shares",
+  "price": 235,
+  "logo": "/images/preipo/image27.jpg",
+
+  "overview": `Dalmia Bharat Refractories Limited is a leading manufacturer of high-quality refractories in India. The company produces a wide range of refractory products used in steel, cement, glass, and other high-temperature industries. It is part of the Dalmia Bharat Group and focuses on advanced refractory solutions with strong emphasis on quality, innovation, and customer service.`,
+
+  "products": [
+    "Basic Refractories",
+    "Acid Refractories",
+    "Monolithics",
+    "Castables",
+    "Bricks & Shapes",
+    "Specialty Refractories"
+  ],
+
+  "manufacturingUnits": [
+    "Katni, Madhya Pradesh",
+    "Other Facilities in India"
+  ],
+
+  "clients": [
+    "Steel Manufacturers",
+    "Cement Plants",
+    "Glass Industry",
+    "Non-Ferrous Metals Industry"
+  ],
+
+  "shareDetails": {
+    "companyName": "Dalmia Bharat Refractories Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹235",
+    "marketCapitalization": "₹1039 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹255",
+    "52WeekLow": "₹215",
+    "faceValue": "₹10",
+    "bookValue": "₹551.6",
+    "peRatio": "NA",
+    "pbRatio": "0.43",
+    "debtToEquity": "0.32",
+    "returnOnEquity": "-1.52",
+    "totalOutstandingShares": "44,20,01,07",
+    "isin": "INE0B0I01025",
+    "depository": "NSDL & CDSL",
+    "pan": "AAICS3708C",
+    "cin": "L28100TN2008PLC069252",
+    "rta": "KFin Technologies Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Revenue peaked in FY23 and declined in FY24-FY25 due to market conditions in steel and cement sectors. The company reported losses in FY25 due to higher costs and lower volumes. Strong book value provides a solid base despite recent challenges.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 300, "fy23": 346, "fy24": 116, "fy25": 106 },
+      { "label": "EBITDA", "fy22": 4.8, "fy23": 25, "fy24": -21, "fy25": -20 },
+      { "label": "PBT", "fy22": 11.6, "fy23": 105, "fy24": 58, "fy25": -37 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 22, "fy23": 135, "fy24": 9, "fy25": -37 },
+      { "label": "EPS", "fy22": 5.2, "fy23": 302.04, "fy24": 10.65, "fy25": -8.37 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 15.33, "fy23": 7.23, "fy24": -20.16, "fy25": -18.87 },
+      { "label": "Net Profit Margin (%)", "fy22": 7.67, "fy23": 38.5, "fy24": 8.05, "fy25": -34.91 },
+      { "label": "EPS (₹)", "fy22": 5.2, "fy23": 302.04, "fy24": 10.65, "fy25": -8.37 }
+    ],
+
+    "investorInsight": [
+      "Revenue volatility linked to steel and cement industry cycles.",
+      "Strong PAT in FY23 followed by losses in FY25.",
+      "Very high book value provides downside protection.",
+      "Attractive valuation for long-term investors in refractories sector."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 256, "fy23": 97, "fy24": 286, "fy25": 271 },
+      { "label": "Trade Receivables", "fy22": 337, "fy23": 148, "fy24": 252, "fy25": 19 },
+      { "label": "Inventory", "fy22": 392, "fy23": 87, "fy24": 29, "fy25": 39 },
+      { "label": "Other Assets", "fy22": 424, "fy23": 521, "fy24": 358, "fy25": 188 },
+      { "label": "Total Assets", "fy22": 1536, "fy23": 3007, "fy24": 3279, "fy25": 1316 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 64.2, "fy23": 64.2, "fy24": 64.2, "fy25": 64.2 },
+      { "label": "Reserves", "fy22": 907, "fy23": 2232, "fy24": 2567, "fy25": 2383 },
+      { "label": "Borrowings", "fy22": 150, "fy23": 89, "fy24": 577, "fy25": 767 },
+      { "label": "Trade Payables", "fy22": 283, "fy23": 181, "fy24": 31, "fy25": 37 },
+      { "label": "Other Liabilities", "fy22": 112.8, "fy23": 514.78, "fy24": 509.8, "fy25": 84.8 },
+      { "label": "Total Liabilities", "fy22": 1536, "fy23": 3007, "fy24": 3279, "fy25": 1316 }
+    ],
+    "insights": "Significant reserves growth. Borrowings increased in FY25."
+  },
+
+  "liabilitiesBreakdown": "Borrowings rose to ₹767 Cr in FY25. Strong equity cushion due to high reserves.",
+
+  "balanceSheetInsights": "Very strong book value. Asset base supported by substantial reserves despite recent losses.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flow volatility due to working capital changes and industry cycles.",
+      "Company is managing liquidity amid challenging market conditions."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Dalmia Bharat Group)", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Part of the reputed Dalmia Bharat Group with strong promoter backing.",
+
+  "management": [
+    { "name": "Promoter Led Team", "role": "Management", "experience": "Refractories & Heavy Industry" }
+  ],
+
+  "rta": {
+    "registrar": "KFin Technologies Limited",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "managementInsight": "Focus on maintaining leadership in refractories, improving operational efficiency, and navigating cyclical demand in steel and cement sectors."
+},
+{
+  "id": 29,
+  "name": "Delta Galaxy Unlisted Shares",
+  "price": 42,
+  "logo": "/images/preipo/image28.png",
+
+  "overview": `Delta Galaxy Limited is engaged in the business of construction, infrastructure development, real estate, and related activities. The company is involved in civil construction, project development, and allied services. It has shown significant revenue growth in recent years while improving profitability.`,
+
+  "products": [
+    "Civil Construction Services",
+    "Infrastructure Projects",
+    "Real Estate Development",
+    "Project Management Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Government & PSU Contracts",
+    "Private Developers",
+    "Corporate Clients"
+  ],
+
+  "shareDetails": {
+    "companyName": "Delta Galaxy Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹42",
+    "marketCapitalization": "₹112 Crore",
+    "lotSize": "1200 Shares",
+    "52WeekHigh": "₹59",
+    "52WeekLow": "₹39",
+    "faceValue": "₹10",
+    "bookValue": "₹22.48",
+    "peRatio": "4.47",
+    "pbRatio": "0.9",
+    "debtToEquity": "0.25",
+    "returnOnEquity": "22",
+    "totalOutstandingShares": "2,66,22,966",
+    "isin": "INE0DGH01020",
+    "depository": "NSDL & CDSL",
+    "pan": "AAECD0851H",
+    "cin": "U45309TN2017PTC117932",
+    "rta": "Maashita Securities"
+  },
+
+  "financials": {
+    "annualReportSummary": "Delta Galaxy has shown exceptional revenue growth from ₹15.2 Cr in FY22 to ₹234 Cr in FY25. Profitability has improved significantly with PAT rising sharply. The company is in a high growth phase with strong operational performance.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 15.2, "fy23": 79.5, "fy24": 171, "fy25": 234 },
+      { "label": "EBITDA", "fy22": 2, "fy23": 5.23, "fy24": 25, "fy25": 38 },
+      { "label": "PBT", "fy22": 0.61, "fy23": 3.25, "fy24": 20.6, "fy25": 36 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 0.13, "fy23": 2.7, "fy24": 16, "fy25": 25 },
+      { "label": "EPS", "fy22": 2.60, "fy23": 54.00, "fy24": 93.58, "fy25": 93.39 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 13.16, "fy23": 6.58, "fy24": 13.22, "fy25": 16.24 },
+      { "label": "Net Profit Margin (%)", "fy22": 0.88, "fy23": 3.4, "fy24": 8.05, "fy25": 10.68 },
+      { "label": "ROE (%)", "fy25": "22" },
+      { "label": "EPS (₹)", "fy22": 2.60, "fy23": 54.00, "fy24": 93.58, "fy25": 93.39 }
+    ],
+
+    "investorInsight": [
+      "Explosive revenue growth over the last 3 years.",
+      "Sharp improvement in profitability and margins.",
+      "Strong execution capability in construction projects.",
+      "Attractive valuation at current unlisted price."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 3.2, "fy23": 7.3, "fy24": 5.3, "fy25": 5.4 },
+      { "label": "Trade Receivables", "fy22": 8.2, "fy23": 28.2, "fy24": 58, "fy25": 131 },
+      { "label": "Inventory", "fy22": 2.7, "fy23": 17.3, "fy24": 58, "fy25": 70 },
+      { "label": "Other Assets", "fy22": 4.8, "fy23": 17.8, "fy24": 16.7, "fy25": 26.8 },
+      { "label": "Total Assets", "fy22": 18.3, "fy23": 70.29, "fy24": 127, "fy25": 233 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 0.05, "fy23": 0.05, "fy24": 15, "fy25": 26.62 },
+      { "label": "Reserves", "fy22": 0.55, "fy23": 3.19, "fy24": 12, "fy25": 87 },
+      { "label": "Borrowings", "fy22": 11, "fy23": 31.8, "fy24": 29, "fy25": 28 },
+      { "label": "Trade Payables", "fy22": 5, "fy23": 31, "fy24": 39, "fy25": 76 },
+      { "label": "Other Liabilities", "fy22": 1.5, "fy23": 1.25, "fy24": 32, "fy25": 15.38 },
+      { "label": "Total Liabilities", "fy22": 18.1, "fy23": 70.29, "fy24": 127, "fy25": 233 }
+    ],
+    "insights": "Rapid balance sheet expansion driven by revenue growth and capital infusion."
+  },
+
+  "liabilitiesBreakdown": "Borrowings remain moderate. Significant increase in share capital and reserves in FY25.",
+
+  "balanceSheetInsights": "Strong growth in net worth with improving equity base. Working capital intensive business.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Limited cash flow visibility due to early-stage aggressive growth.",
+      "Company is investing in projects and working capital."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with focus on construction and infrastructure projects.",
+
+  "management": [
+    { "name": "Promoter Led Team", "role": "Management", "experience": "Construction & Infrastructure Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Maashita Securities",
+    "website": "https://www.maashitasecurities.com/"
+  },
+
+  "managementInsight": "Focus on executing large construction and infrastructure projects, improving operational efficiency, and scaling the business rapidly."
+},
+{
+  "id": 30,
+  "name": "Digvijay Finlease Unlisted Shares",
+  "price": 187.5,
+  "logo": "/images/preipo/image29.jpg",
+
+  "overview": `Digvijay Finlease Limited is a Non-Banking Financial Company (NBFC) engaged in the business of financing, investment, and lending activities. The company provides loans, advances, and other financial services. It has shown steady growth in revenue with improving profitability in recent years.`,
+
+  "products": [
+    "Loans & Advances",
+    "Financing Services",
+    "Investment Activities",
+    "NBFC Lending Solutions"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Individual Borrowers",
+    "Corporate Clients",
+    "SME Segment"
+  ],
+
+  "shareDetails": {
+    "companyName": "Digvijay Finlease Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹187.5",
+    "marketCapitalization": "₹222 Crore",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹187.5",
+    "52WeekLow": "₹160",
+    "faceValue": "₹10",
+    "bookValue": "₹551.6",
+    "peRatio": "NA",
+    "pbRatio": "0.34",
+    "debtToEquity": "0.28",
+    "returnOnEquity": "-1.52",
+    "totalOutstandingShares": "1,18,40,000",
+    "isin": "INE0B0I01025",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACD9990D",
+    "cin": "U67120WB2001PLC099999",
+    "rta": "Maheshwari Datamatics"
+  },
+
+  "financials": {
+    "annualReportSummary": "The company has shown volatile revenue with improvement in FY24. Profitability turned positive in FY23-FY24 but slipped into loss in FY25. The business is in a growth phase with focus on expanding lending operations.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 59, "fy23": 45.6, "fy24": 81.5, "fy25": 54 },
+      { "label": "EBITDA", "fy22": 4.8, "fy23": 25, "fy24": -21, "fy25": -20 },
+      { "label": "PBT", "fy22": 11.6, "fy23": 105, "fy24": 58, "fy25": -37 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 22, "fy23": 135, "fy24": 9, "fy25": -37 },
+      { "label": "EPS", "fy22": 29.55, "fy23": 251.5, "fy24": 32.45, "fy25": 28.68 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 15.33, "fy23": 7.23, "fy24": -20.16, "fy25": -18.87 },
+      { "label": "Net Profit Margin (%)", "fy22": 7.67, "fy23": 38.5, "fy24": 8.05, "fy25": -34.91 },
+      { "label": "EPS (₹)", "fy22": 29.55, "fy23": 251.5, "fy24": 32.45, "fy25": 28.68 }
+    ],
+
+    "investorInsight": [
+      "Revenue volatility typical of NBFC lending business.",
+      "Strong profitability in FY23 followed by loss in FY25.",
+      "High book value provides some downside protection.",
+      "Suitable for investors seeking exposure in small NBFC space."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 5, "fy23": 5.19, "fy24": 5.5, "fy25": 5.19 },
+      { "label": "Investments", "fy22": 1031, "fy23": 12215.03, "fy24": 12522, "fy25": 15491 },
+      { "label": "Trade Receivables", "fy22": 17, "fy23": 0, "fy24": 0, "fy25": 0.48 },
+      { "label": "Inventory", "fy22": 28, "fy23": 3.58, "fy24": 1, "fy25": 1.55 },
+      { "label": "Other Assets", "fy22": 28, "fy23": 3.58, "fy24": 1, "fy25": 1.55 },
+      { "label": "Total Assets", "fy22": 10319, "fy23": 12221.8, "fy24": 12528, "fy25": 15408 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 13.2, "fy23": 13.25, "fy24": 13.25, "fy25": 13.25 },
+      { "label": "Reserves", "fy22": 10817, "fy23": 11683.47, "fy24": 11776, "fy25": 13588 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 767 },
+      { "label": "Trade Payables", "fy22": 0, "fy23": 0.25, "fy24": 0, "fy25": 37 },
+      { "label": "Other Liabilities", "fy22": 314.8, "fy23": 538.75, "fy24": 538.75, "fy25": 896.75 },
+      { "label": "Total Liabilities", "fy22": 10319, "fy23": 12221.8, "fy24": 12528, "fy25": 15408 }
+    ],
+    "insights": "Huge investment portfolio. Strong reserves growth reflecting retained earnings."
+  },
+
+  "liabilitiesBreakdown": "Low borrowings in most years. Significant other liabilities and strong equity base.",
+
+  "balanceSheetInsights": "Extremely strong net worth and book value. Investment-heavy balance sheet typical of NBFC.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flows impacted by investment activities and lending operations.",
+      "Stable cash position maintained."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven NBFC with focus on lending and investment activities.",
+
+  "management": [
+    { "name": "Promoter Led Team", "role": "Management", "experience": "Finance & NBFC Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Maheshwari Datamatics",
+    "website": "https://www.mdpl.in/"
+  },
+
+  "managementInsight": "Focus on expanding lending portfolio, maintaining asset quality, and generating consistent returns through prudent financial management."
+},
+{
+  "id": 31,
+  "name": "Down Town Hospital Limited Unlisted Shares",
+  "price": 375,
+  "logo": "/images/preipo/image30.jpg",
+
+  "overview": `Down Town Hospital Limited is a prominent multi-specialty tertiary care hospital located in Guwahati, Assam. Established in 1985, it is one of the largest and most reputed private hospitals in North-East India. The hospital provides comprehensive healthcare services across various specialties with modern infrastructure and advanced medical technology.`,
+
+  "products": [
+    "Multi-Specialty Healthcare Services",
+    "Emergency & Critical Care",
+    "Advanced Diagnostic Services",
+    "Surgical Services",
+    "Outpatient & Inpatient Care",
+    "Medical Tourism Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Patients from North-East India",
+    "Corporate Clients",
+    "Government Health Schemes",
+    "Medical Tourists"
+  ],
+
+  "shareDetails": {
+    "companyName": "Down Town Hospital Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹375",
+    "marketCapitalization": "₹113 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹375",
+    "52WeekLow": "₹375",
+    "faceValue": "₹10",
+    "bookValue": "₹246.73",
+    "peRatio": "19.6",
+    "pbRatio": "1.52",
+    "debtToEquity": "0.31",
+    "returnOnEquity": "9.06",
+    "totalOutstandingShares": "30,00,000",
+    "isin": "INE0DN01012",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACD7267B",
+    "cin": "U85110AS1985PLC002477",
+    "rta": "Integrated Registry Management Services"
+  },
+
+  "financials": {
+    "annualReportSummary": "Down Town Hospital has shown consistent revenue growth from ₹55 Cr in FY22 to ₹107 Cr in FY25. Profitability has remained stable with healthy margins. The hospital benefits from strong brand reputation and increasing patient footfall in North-East India.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 55.09, "fy23": 79, "fy24": 86, "fy25": 107 },
+      { "label": "EBITDA", "fy22": 7.89, "fy23": 11, "fy24": 11.12, "fy25": 11.1 },
+      { "label": "PBT", "fy22": 5.82, "fy23": 7, "fy24": 9, "fy25": 8.8 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 6.36, "fy23": 8.53, "fy24": 6.98, "fy25": 5.9 },
+      { "label": "EPS", "fy22": 15.8, "fy23": 18.67, "fy24": 20, "fy25": 19.21 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 12.12, "fy23": 13.92, "fy24": 13.02, "fy25": 12.26 },
+      { "label": "Net Profit Margin (%)", "fy22": 9.36, "fy23": 8.33, "fy24": 8.09, "fy25": 6.39 },
+      { "label": "EPS (₹)", "fy22": 15.8, "fy23": 18.67, "fy24": 20, "fy25": 19.21 }
+    ],
+
+    "investorInsight": [
+      "Steady revenue growth driven by increasing healthcare demand in North-East.",
+      "Stable profitability with healthy margins.",
+      "Strong brand equity and high book value.",
+      "Attractive valuation for a regional hospital chain."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 28.75, "fy23": 26, "fy24": 48, "fy25": 49 },
+      { "label": "Trade Receivables", "fy22": 9.35, "fy23": 11, "fy24": 12, "fy25": 16 },
+      { "label": "Inventory", "fy22": 119, "fy23": 1.5, "fy24": 2, "fy25": 18 },
+      { "label": "Other Assets", "fy22": 22.65, "fy23": 28, "fy24": 12, "fy25": 15.92 },
+      { "label": "Total Assets", "fy22": 59.95, "fy23": 67, "fy24": 75, "fy25": 92 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 8, "fy23": 8, "fy24": 8, "fy25": 8.02 },
+      { "label": "Reserves", "fy22": 43.77, "fy23": 49, "fy24": 55, "fy25": 81 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 7 },
+      { "label": "Trade Payables", "fy22": 8.18, "fy23": 10, "fy24": 11, "fy25": 15.5 },
+      { "label": "Other Liabilities", "fy22": 5.02, "fy23": 5, "fy24": 8, "fy25": 15.48 },
+      { "label": "Total Liabilities", "fy22": 59.95, "fy23": 67, "fy24": 75, "fy25": 92 }
+    ],
+    "insights": "Strong equity base with growing reserves. Low debt profile."
+  },
+
+  "liabilitiesBreakdown": "Very low borrowings. Strong net worth with high book value of ₹246.73 per share.",
+
+  "balanceSheetInsights": "Extremely healthy balance sheet with negligible debt and robust reserves.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Stable cash generation from hospital operations.",
+      "Consistent cash flow supporting growth and dividend payouts."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven hospital with strong local reputation in North-East India.",
+
+  "management": [
+    { "name": "Promoter Led Team", "role": "Management", "experience": "Healthcare & Hospital Administration" }
+  ],
+
+  "rta": {
+    "registrar": "Integrated Registry Management Services",
+    "website": "https://www.irms.in/"
+  },
+
+  "managementInsight": "Focus on delivering quality healthcare, expanding facilities, maintaining high occupancy, and strengthening position as a leading multi-specialty hospital in North-East India."
+},
 
 
    {
