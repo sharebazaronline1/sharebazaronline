@@ -19719,6 +19719,613 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
   "managementInsight": "Focus on delivering quality healthcare, expanding facilities, maintaining high occupancy, and strengthening position as a leading multi-specialty hospital in North-East India."
 },
+{
+  "id": 32,
+  "name": "ESDS Unlisted Shares",
+  "price": 465,
+  "logo": "/images/preipo/image31.jpg",
+
+  "overview": `ESDS is a leading Indian company providing cloud computing, data center, managed IT services, and digital transformation solutions. The company is known for its secure and scalable IT infrastructure services and has a strong presence in the government and enterprise segments.`,
+
+  "products": [
+    "Cloud Computing Services",
+    "Data Center Colocation",
+    "Managed IT Services",
+    "Cyber Security Solutions",
+    "Digital Transformation Services",
+    "Disaster Recovery Solutions"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Government Departments",
+    "Public Sector Undertakings",
+    "Large Enterprises",
+    "SMEs"
+  ],
+
+  "shareDetails": {
+    "companyName": "ESDS Software Solution Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹465",
+    "marketCapitalization": "₹670 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹555",
+    "52WeekLow": "₹365",
+    "faceValue": "₹10",
+    "bookValue": "₹41.72",
+    "peRatio": "83.35",
+    "pbRatio": "11.15",
+    "debtToEquity": "0.15",
+    "returnOnEquity": "13.4",
+    "totalOutstandingShares": "1,00,42,773",
+    "isin": "INE0DDH01029",
+    "depository": "NSDL & CDSL",
+    "pan": "AABCE0914A",
+    "cin": "U72200MH2005PLC155433",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "ESDS has shown strong revenue growth from ₹195 Cr in FY22 to ₹381 Cr in FY25. Profitability improved significantly in FY24-FY25 with healthy margins. The company is benefiting from rising demand for cloud and data center services in India.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 195, "fy23": 207, "fy24": 287, "fy25": 381 },
+      { "label": "EBITDA", "fy22": 29.76, "fy23": 22.71, "fy24": 92.36, "fy25": 62.94 },
+      { "label": "PBT", "fy22": 11.6, "fy23": 105, "fy24": 58, "fy25": -37 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 22, "fy23": 135, "fy24": 9, "fy25": -37 },
+      { "label": "EPS", "fy22": -0.27, "fy23": -2.48, "fy24": 1.46, "fy25": 5.8 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 29.76, "fy23": 22.71, "fy24": 35.54, "fy25": 62.94 },
+      { "label": "Net Profit Margin (%)", "fy22": 7.67, "fy23": 38.5, "fy24": 8.05, "fy25": -34.91 },
+      { "label": "EPS (₹)", "fy22": -0.27, "fy23": -2.48, "fy24": 1.46, "fy25": 5.8 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue CAGR driven by cloud and data center demand.",
+      "Improving profitability and operating margins.",
+      "Low debt and healthy return ratios.",
+      "Well-positioned for long-term growth in digital infrastructure."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 204, "fy23": 197, "fy24": 317, "fy25": 288 },
+      { "label": "Investments", "fy22": 105, "fy23": 2261, "fy24": 2512, "fy25": 2667 },
+      { "label": "Trade Receivables", "fy22": 64, "fy23": 57, "fy24": 183, "fy25": 103 },
+      { "label": "Other Assets", "fy22": 254, "fy23": 261, "fy24": 227, "fy25": 227 },
+      { "label": "Total Assets", "fy22": 522, "fy23": 499, "fy24": 512.29, "fy25": 658 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 91, "fy23": 9.28, "fy24": 9.289, "fy25": 10 },
+      { "label": "Reserves", "fy22": 208, "fy23": 201, "fy24": 245, "fy25": 408 },
+      { "label": "Borrowings", "fy22": 133, "fy23": 105, "fy24": 82.8, "fy25": 767 },
+      { "label": "Trade Payables", "fy22": 2.6, "fy23": 28, "fy24": 22, "fy25": 29 },
+      { "label": "Other Liabilities", "fy22": 116.9, "fy23": 65.72, "fy24": 181, "fy25": 149.4 },
+      { "label": "Total Liabilities", "fy22": 522, "fy23": 499, "fy24": 512.29, "fy25": 658 }
+    ],
+    "insights": "Significant investment in assets. Strong reserves growth."
+  },
+
+  "liabilitiesBreakdown": "Moderate borrowings. Strong equity base with growing reserves.",
+
+  "balanceSheetInsights": "Healthy balance sheet with focus on asset creation and capacity expansion.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Positive operating cash flows in recent years.",
+      "Investing in infrastructure and technology expansion."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Moderate", "public": "Low" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with strong domain expertise in IT infrastructure.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "IT Infrastructure & Cloud Services" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focus on expanding cloud and data center capacity, delivering secure digital solutions, and maintaining leadership in the Indian IT infrastructure market."
+},
+{
+  "id": 33,
+  "name": "Ecosure Unlisted Shares",
+  "price": 38,
+  "logo": "/images/preipo/image32.jpg",
+
+  "overview": `Ecosure Limited is engaged in the business of environmental services, waste management, recycling, and sustainability solutions. The company provides eco-friendly waste management, recycling services, and related environmental compliance solutions to industries and municipalities.`,
+
+  "products": [
+    "Waste Management Services",
+    "Recycling Solutions",
+    "Environmental Compliance Services",
+    "Sustainable Waste Processing",
+    "Eco-Friendly Disposal Solutions"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Industrial Clients",
+    "Municipal Corporations",
+    "Corporate Entities",
+    "Government Departments"
+  ],
+
+  "shareDetails": {
+    "companyName": "Ecosure Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹38",
+    "marketCapitalization": "₹136 Crore",
+    "lotSize": "5000 Shares",
+    "52WeekHigh": "₹38",
+    "52WeekLow": "₹38",
+    "faceValue": "₹2",
+    "bookValue": "₹10.05",
+    "peRatio": "21.47",
+    "pbRatio": "3.78",
+    "debtToEquity": "0.84",
+    "returnOnEquity": "17.59",
+    "totalOutstandingShares": "3,57,89,473",
+    "isin": "INE0D0H01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACF739L",
+    "cin": "U29305DL2019PLC355433",
+    "rta": "Maashita Securities"
+  },
+
+  "financials": {
+    "annualReportSummary": "Ecosure has shown strong revenue growth from ₹351 Cr in FY23 to ₹718 Cr in FY25. Profitability has improved significantly with PAT rising sharply. The company is benefiting from increasing demand for environmental and waste management services.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 351, "fy24": 500.4, "fy25": 718 },
+      { "label": "EBITDA", "fy23": 114, "fy24": 879, "fy25": 1132 },
+      { "label": "PBT", "fy23": 95, "fy24": 808, "fy25": 852 },
+      { "label": "Net Profit / Loss (PAT)", "fy23": 71, "fy24": 583, "fy25": 852 },
+      { "label": "EPS", "fy23": 1.42, "fy24": 11.66, "fy25": 17.04 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 3.41, "fy24": 17.57, "fy25": 15.9 },
+      { "label": "Net Profit Margin (%)", "fy23": 2.15, "fy24": 11.65, "fy25": 8.88 },
+      { "label": "EPS (₹)", "fy23": 1.42, "fy24": 11.66, "fy25": 17.04 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth driven by environmental compliance demand.",
+      "Significant improvement in profitability and margins.",
+      "Healthy return ratios with good scalability.",
+      "Attractive valuation in the growing green economy sector."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 26, "fy24": 89, "fy25": 571 },
+      { "label": "Trade Receivables", "fy23": 627, "fy24": 1416, "fy25": 2552 },
+      { "label": "Inventory", "fy23": 588, "fy24": 683, "fy25": 1053 },
+      { "label": "Other Assets", "fy23": 1158, "fy24": 2050, "fy25": 2843.9 },
+      { "label": "Total Assets", "fy23": 2397, "fy24": 4638, "fy25": 7020 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 5, "fy24": 5, "fy25": 71.6 },
+      { "label": "Reserves", "fy23": 410, "fy24": 1361, "fy25": 2208 },
+      { "label": "Borrowings", "fy23": 0, "fy24": 850, "fy25": 0 },
+      { "label": "Trade Payables", "fy23": 209, "fy24": 850, "fy25": 0 },
+      { "label": "Other Liabilities", "fy23": 1663, "fy24": 1429, "fy25": 1135.5 },
+      { "label": "Total Liabilities", "fy23": 2397, "fy24": 4638, "fy25": 7020 }
+    ],
+    "insights": "Rapid balance sheet expansion with strong growth in assets and reserves."
+  },
+
+  "liabilitiesBreakdown": "Borrowings moderated in FY25. Strong equity growth through retained earnings and capital infusion.",
+
+  "balanceSheetInsights": "Healthy and fast-growing balance sheet with improving net worth.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Positive operating cash flows supporting business expansion.",
+      "Investing in fixed assets and working capital for growth."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with expertise in environmental services.",
+
+  "management": [
+    { "name": "Promoter Led Team", "role": "Management", "experience": "Environmental & Waste Management Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Maashita Securities",
+    "website": "https://www.maashitasecurities.com/"
+  },
+
+  "managementInsight": "Focus on expanding waste management and recycling operations, meeting regulatory compliance, and capitalizing on India's growing green economy."
+},
+{
+  "id": 34,
+  "name": "Electrosteel Steels Limited Unlisted Shares",
+  "price": 36,
+  "logo": "/images/preipo/electrosteel.png",
+
+  "overview": `Electrosteel Steels Limited is a major integrated steel manufacturer in India, part of the Vedanta Group. The company produces a wide range of steel products including TMT bars, wire rods, billets, and structural steel. It operates a modern steel plant with captive power and raw material security, catering to construction, infrastructure, and manufacturing sectors.`,
+
+  "products": [
+    "TMT Bars",
+    "Wire Rods",
+    "Billets",
+    "Structural Steel",
+    "Pig Iron",
+    "Sponge Iron"
+  ],
+
+  "manufacturingUnits": [
+    "Bokaro, Jharkhand (Integrated Steel Plant)"
+  ],
+
+  "clients": [
+    "Construction & Infrastructure Companies",
+    "Real Estate Developers",
+    "Manufacturing Industries",
+    "Government Projects"
+  ],
+
+  "shareDetails": {
+    "companyName": "Electrosteel Steels Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹36",
+    "marketCapitalization": "₹6657 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹40",
+    "52WeekLow": "₹36",
+    "faceValue": "₹10",
+    "bookValue": "₹23.48",
+    "peRatio": "83.33",
+    "pbRatio": "1.53",
+    "debtToEquity": "0.55",
+    "returnOnEquity": "-6.34",
+    "totalOutstandingShares": "1,84,90,2773",
+    "isin": "INE0DDH01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AABCE6673H",
+    "cin": "U27310JH2005PLC012683",
+    "rta": "KFin Technologies Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Electrosteel Steels has shown strong revenue growth. However, profitability has been volatile due to raw material price fluctuations and steel cycle. The company maintains a sizable asset base with significant fixed assets and working capital.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 65098, "fy23": 7977, "fy24": 8147, "fy25": 8167 },
+      { "label": "EBITDA", "fy22": 563, "fy23": 343, "fy24": 287, "fy25": 115 },
+      { "label": "PBT", "fy22": 218, "fy23": -170, "fy24": -302, "fy25": -29 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -94, "fy23": -358, "fy24": -287, "fy25": -364 },
+      { "label": "EPS", "fy22": -0.51, "fy23": -1.92, "fy24": -1.55, "fy25": -1.44 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 8.54, "fy23": 3.43, "fy24": 1.89, "fy25": 5.09 },
+      { "label": "Net Profit Margin (%)", "fy22": -1.43, "fy23": -4.49, "fy24": -3.52, "fy25": -4.45 },
+      { "label": "EPS (₹)", "fy22": -0.51, "fy23": -1.92, "fy24": -1.55, "fy25": -1.44 }
+    ],
+
+    "investorInsight": [
+      "Revenue stable but profitability impacted by steel price volatility.",
+      "High fixed asset base with modern steel plant.",
+      "Part of Vedanta Group provides strong backing.",
+      "Cyclical business with long-term infrastructure demand tailwind."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 4587, "fy23": 4656, "fy24": 4859, "fy25": 4625 },
+      { "label": "CWIP", "fy22": 806, "fy23": 1299, "fy24": 1700, "fy25": 2222 },
+      { "label": "Investments", "fy22": 180, "fy23": 20, "fy24": 20, "fy25": 21 },
+      { "label": "Trade Receivables", "fy22": 80, "fy23": 269, "fy24": 111, "fy25": 95 },
+      { "label": "Inventory", "fy22": 1379, "fy23": 1394, "fy24": 3063, "fy25": 907 },
+      { "label": "Other Assets", "fy22": 4338, "fy23": 3330, "fy24": 3055, "fy25": 2228 },
+      { "label": "Total Assets", "fy22": 11550, "fy24": 10808, "fy25": 10836 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 1849, "fy23": 1849.03, "fy24": 1819.03, "fy25": 1819.03 },
+      { "label": "Reserves", "fy22": 4282, "fy23": 378, "fy24": 2750, "fy25": 2642 },
+      { "label": "Borrowings", "fy22": 2692, "fy23": 2408, "fy24": 2295, "fy25": 2178 },
+      { "label": "Trade Payables", "fy22": 1499, "fy23": 836, "fy24": 780, "fy25": 769 },
+      { "label": "Other Liabilities", "fy22": 1169, "fy23": 1057.2, "fy24": 3599.97, "fy25": 3599.97 },
+      { "label": "Total Liabilities", "fy22": 11550, "fy23": 11919, "fy24": 10808, "fy25": 10836 }
+    ],
+    "insights": "Large fixed asset and CWIP base. Significant borrowing for operations."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.55. High working capital requirements typical of steel manufacturing.",
+
+  "balanceSheetInsights": "Asset-heavy balance sheet with modern plant and infrastructure. Moderate leverage.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flows impacted by working capital movements and capex.",
+      "Steel sector cyclicality affects cash flow predictability."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Vedanta Group)", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Part of Vedanta Group with strong promoter backing and professional management.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Steel & Metals Industry" }
+  ],
+
+  "rta": {
+    "registrar": "KFin Technologies Limited",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "managementInsight": "Focus on operational efficiency, cost optimization, capacity utilization, and leveraging group synergies in the steel sector."
+},
+{
+  "id": 35,
+  "name": "Elofic Industries Limited Unlisted Shares",
+  "price": 385,
+  "logo": "/images/preipo/image34.png",
+
+  "overview": `Elofic Industries Limited is a leading Indian manufacturer of automotive filters, oil filters, fuel filters, air filters, and industrial filtration products. The company supplies to major OEMs in the automotive and industrial sectors and has a strong presence in the aftermarket segment. It is known for high-quality filtration solutions and consistent innovation.`,
+
+  "products": [
+    "Automotive Oil Filters",
+    "Fuel Filters",
+    "Air Filters",
+    "Industrial Filters",
+    "Hydraulic Filters",
+    "Custom Filtration Solutions"
+  ],
+
+  "manufacturingUnits": [
+    "Faridabad, Haryana"
+  ],
+
+  "clients": [
+    "Automotive OEMs",
+    "Two-Wheeler & Four-Wheeler Manufacturers",
+    "Industrial Equipment Companies",
+    "Aftermarket Distributors"
+  ],
+
+  "shareDetails": {
+    "companyName": "Elofic Industries Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹385",
+    "marketCapitalization": "₹815 Crore",
+    "lotSize": "25 Shares",
+    "52WeekHigh": "₹385",
+    "52WeekLow": "₹270",
+    "faceValue": "₹10",
+    "bookValue": "₹1385.43",
+    "peRatio": "10.59",
+    "pbRatio": "2.38",
+    "debtToEquity": "0.84",
+    "returnOnEquity": "17.59",
+    "totalOutstandingShares": "25,06,370",
+    "isin": "INE0D0H01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACD425C",
+    "cin": "U74999HR1979PLC009262",
+    "rta": "Alankit Assignments Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Elofic Industries has delivered strong and consistent growth. Revenue increased from ₹330 Cr in FY22 to ₹450 Cr in FY25. Profitability has improved steadily with healthy margins and strong return ratios, reflecting robust operational performance in the filtration industry.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 330, "fy23": 369, "fy24": 382, "fy25": 450 },
+      { "label": "EBITDA", "fy22": 68, "fy23": 89, "fy24": 72, "fy25": 112 },
+      { "label": "PBT", "fy22": 56, "fy23": 59.3, "fy24": 67, "fy25": 97 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 39, "fy23": 37.55, "fy24": 48.5, "fy25": 71 },
+      { "label": "EPS", "fy22": 156, "fy23": 150.28, "fy24": 192, "fy25": 308 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 20, "fy23": 19.22, "fy24": 20.15, "fy25": 20.89 },
+      { "label": "Net Profit Margin (%)", "fy22": 11.82, "fy23": 10.17, "fy24": 15.84, "fy25": 17.11 },
+      { "label": "EPS (₹)", "fy22": 156, "fy23": 150.28, "fy24": 192, "fy25": 308 }
+    ],
+
+    "investorInsight": [
+      "Consistent revenue and profitability growth.",
+      "Healthy operating margins and strong ROE.",
+      "Low debt and robust book value.",
+      "Well-positioned in the growing automotive and industrial filtration market."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 48, "fy23": 58, "fy24": 69, "fy25": 70 },
+      { "label": "Trade Receivables", "fy22": 38, "fy23": 41, "fy24": 56, "fy25": 64.6 },
+      { "label": "Inventory", "fy22": 59, "fy23": 56, "fy24": 61, "fy25": 88 },
+      { "label": "Other Assets", "fy22": 84, "fy23": 93, "fy24": 111.8, "fy25": 154.2 },
+      { "label": "Total Assets", "fy22": 219, "fy23": 209.38, "fy24": 299, "fy25": 384 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 2.5, "fy23": 2.5, "fy24": 2.5, "fy25": 2.5 },
+      { "label": "Reserves", "fy22": 169, "fy23": 208, "fy24": 254, "fy25": 330 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 38, "fy23": 32, "fy24": 33, "fy25": 33 },
+      { "label": "Other Liabilities", "fy22": 9.5, "fy23": 9.5, "fy24": 9.5, "fy25": 18.5 },
+      { "label": "Total Liabilities", "fy22": 219, "fy23": 209.38, "fy24": 299, "fy25": 384 }
+    ],
+    "insights": "Debt-free balance sheet. Strong reserves growth reflecting consistent profitability."
+  },
+
+  "liabilitiesBreakdown": "Zero borrowings. Extremely healthy and debt-free balance sheet.",
+
+  "balanceSheetInsights": "Very strong equity position with high book value and negligible debt.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Positive operating cash flows supporting growth.",
+      "Debt-free status provides excellent financial flexibility."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with deep expertise in filtration technology.",
+
+  "management": [
+    { "name": "Promoter Led Team", "role": "Management", "experience": "Automotive Filtration Industry" }
+  ],
+
+  "rta": {
+    "registrar": "Alankit Assignments Limited",
+    "website": "https://www.alankit.com/"
+  },
+
+  "managementInsight": "Focus on product innovation, quality excellence, capacity expansion, and maintaining leadership in the Indian automotive and industrial filtration market."
+},
+{
+  "id": 36,
+  "name": "Empire Spices and Foods Limited Unlisted Shares",
+  "price": 575,
+  "logo": "/images/preipo/image35.png",
+
+  "overview": `Empire Spices and Foods Limited is engaged in the processing, manufacturing, and trading of spices, masalas, and food products. The company offers a wide range of blended spices, whole spices, and ready-to-use masala mixes. It caters to both domestic and institutional customers with a focus on quality and traditional Indian flavors.`,
+
+  "products": [
+    "Blended Spices & Masalas",
+    "Whole Spices",
+    "Ready-to-Cook Mixes",
+    "Turmeric Powder",
+    "Chilli Powder",
+    "Coriander Powder"
+  ],
+
+  "manufacturingUnits": [
+    "Spice Processing Unit in India"
+  ],
+
+  "clients": [
+    "Retail Consumers",
+    "Institutional Buyers",
+    "HoReCa Sector",
+    "Export Markets"
+  ],
+
+  "shareDetails": {
+    "companyName": "Empire Spices and Foods Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹575",
+    "marketCapitalization": "₹278 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹585",
+    "52WeekLow": "₹575",
+    "faceValue": "₹10",
+    "bookValue": "₹267.57",
+    "peRatio": "17.84",
+    "pbRatio": "2.32",
+    "debtToEquity": "0.36",
+    "returnOnEquity": "14.2",
+    "totalOutstandingShares": "48,40,837",
+    "isin": "INE0D0H01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACD425C",
+    "cin": "U15100MH1994PLC079772",
+    "rta": "Freedom Registry Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Empire Spices and Foods has shown steady revenue growth from ₹247 Cr in FY22 to ₹313 Cr in FY25. Profitability has remained stable with consistent PAT. The company benefits from strong brand presence in the spices segment and improving operational efficiency.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 247, "fy23": 287, "fy24": 295, "fy25": 313 },
+      { "label": "EBITDA", "fy22": 21, "fy23": 26, "fy24": 27, "fy25": 32.7 },
+      { "label": "PBT", "fy22": 19, "fy23": 17.41, "fy24": 17, "fy25": 21.3 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 16, "fy23": 15.88, "fy24": 13, "fy25": 15.6 },
+      { "label": "EPS", "fy22": 29.17, "fy23": 28.5, "fy24": 27.08, "fy25": 32.25 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 8.5, "fy23": 8.75, "fy24": 9.15, "fy25": 10.45 },
+      { "label": "Net Profit Margin (%)", "fy22": 5.67, "fy23": 5.53, "fy24": 4.41, "fy25": 4.98 },
+      { "label": "EPS (₹)", "fy22": 29.17, "fy23": 28.5, "fy24": 27.08, "fy25": 32.25 }
+    ],
+
+    "investorInsight": [
+      "Steady revenue growth in the spices and food processing sector.",
+      "Stable profitability with healthy margins.",
+      "Strong brand recall in Indian masala market.",
+      "Attractive valuation with consistent performance."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 77, "fy23": 76, "fy24": 119, "fy25": 128 },
+      { "label": "Trade Receivables", "fy22": 35, "fy23": 9.035, "fy24": 41, "fy25": 38.6 },
+      { "label": "Inventory", "fy22": 8, "fy23": 20.07, "fy24": 11, "fy25": 10.2 },
+      { "label": "Other Assets", "fy22": 8, "fy23": 20.07, "fy24": 11, "fy25": 10.2 },
+      { "label": "Total Assets", "fy22": 125, "fy23": 168, "fy24": 180, "fy25": 181 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 4.8, "fy23": 4.8, "fy24": 4.8, "fy25": 4.84 },
+      { "label": "Reserves", "fy22": 85, "fy23": 77.55, "fy24": 90, "fy25": 105 },
+      { "label": "Borrowings", "fy22": 29, "fy23": 18, "fy24": 37, "fy25": 17 },
+      { "label": "Trade Payables", "fy22": 1.6, "fy23": 26, "fy24": 22, "fy25": 19 },
+      { "label": "Other Liabilities", "fy22": 12.2, "fy23": 16.45, "fy24": 18, "fy25": 19.16 },
+      { "label": "Total Liabilities", "fy22": 125, "fy23": 168, "fy24": 180, "fy25": 181 }
+    ],
+    "insights": "Healthy reserves growth. Low debt profile."
+  },
+
+  "liabilitiesBreakdown": "Low borrowings. Strong equity cushion with growing reserves.",
+
+  "balanceSheetInsights": "Stable and healthy balance sheet with low leverage.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Positive operating cash flows supporting steady growth.",
+      "Moderate investing and financing activities."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with expertise in spices and food processing.",
+
+  "management": [
+    { "name": "Promoter Led Team", "role": "Management", "experience": "Spices & Food Industry" }
+  ],
+
+  "rta": {
+    "registrar": "Freedom Registry Limited",
+    "website": "https://www.freedomregistry.in/"
+  },
+
+  "managementInsight": "Focus on quality, product innovation, expanding distribution network, and maintaining strong presence in the competitive Indian spices market."
+},
 
 
    {
