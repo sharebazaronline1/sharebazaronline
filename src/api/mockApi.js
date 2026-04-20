@@ -22344,96 +22344,1383 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
     }
   ]
 },
-  {
-    "id": 61,
-    "name": "House of Kieraya Limited (Furlenco)",
-    "price": 235,
+ {
+  "id": 61,
+  "name": "House of Kieraya Limited (Furlenco)",
+  "price": 182,
+  "logo": "/images/preipo/image59.jpg",
+  "overview": "For more than a decade, Furlenco has played in a tricky corner of the consumer economy—renting furniture to customers in India. House of Kieraya Limited operates as a furniture rental platform serving residential and commercial segments.",
+  "products": [],
+  "manufacturingUnits": [],
+  "clients": [],
+  "shareDetails": {
+    "companyName": "House of Kieraya Limited (Furlenco) (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹182",
+    "marketCapitalization": "₹1390 Crore",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹182",
+    "52WeekLow": "₹182",
+    "faceValue": "₹1",
+    "bookValue": "11.05",
+    "peRatio": "466.67",
+    "pbRatio": "16.47",
+    "debtToEquity": "1.6",
+    "returnOnEquity": "Not Available",
+    "totalOutstandingShares": "76377014",
+    "isin": "Not Available",
     "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image59.jpg"
+    "pan": "AABCK7357H",
+    "cin": "U31000KA2013PLC068617",
+    "rta": "KFin Technologies"
   },
-  {
-    "id": 62,
-    "name": "ICEX (Indian Commodity Exchange) Limited Unlisted Shares",
-    "price": 5,
+  "financials": {
+    "annualReportSummary": "The company has shown revenue growth with a significant improvement in FY25, turning EBITDA and PAT positive. It is on track for an upcoming IPO.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 129, "fy23": 156, "fy24": 140, "fy25": 229 },
+      { "label": "EBITDA", "fy22": -100, "fy23": -33, "fy24": -76, "fy25": 55 },
+      { "label": "PBT", "fy22": -151, "fy23": -128, "fy24": -130, "fy25": 3 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -151, "fy23": -128, "fy24": -130, "fy25": 3 },
+      { "label": "EPS", "fy22": -6.64, "fy23": -1.39, "fy24": -1.17, "fy25": 0.06 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": -77.52, "fy23": -21.15, "fy24": -54.29, "fy25": 24.02 },
+      { "label": "Net Profit Margin (%)", "fy22": -117.05, "fy23": -82.05, "fy24": -92.86, "fy25": 1.31 },
+      { "label": "Earning Per Share (Diluted)", "fy22": -6.64, "fy23": -1.39, "fy24": -1.17, "fy25": 0.06 }
+    ],
+    "investorInsight": [
+      "Turnaround in FY25 with positive PAT of ₹3 Cr.",
+      "Significant reduction in losses compared to previous years.",
+      "Strong revenue growth in FY25.",
+      "Upcoming IPO expected."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 79, "fy23": 112, "fy24": 188, "fy25": 340 },
+      { "label": "CWIP", "fy22": 5.7, "fy23": 11, "fy24": 0.5, "fy25": 3 },
+      { "label": "Investments", "fy22": 1, "fy23": 1, "fy24": 1, "fy25": 0 },
+      { "label": "Trade Receivables", "fy22": 8, "fy23": 14, "fy24": 7, "fy25": 8 },
+      { "label": "Inventory", "fy22": 3, "fy23": 3.5, "fy24": 5, "fy25": 10 },
+      { "label": "Other Assets", "fy22": 54.3, "fy23": 46.5, "fy24": 83.5, "fy25": 100 },
+      { "label": "Total Assets", "fy22": 151, "fy23": 188, "fy24": 285, "fy25": 461 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 22.73, "fy23": 91.9, "fy24": 111, "fy25": 50.39 },
+      { "label": "FV", "fy22": 1, "fy23": 1, "fy24": 1, "fy25": 1 },
+      { "label": "Reserves", "fy22": -199, "fy23": -322, "fy24": -136, "fy25": 33 },
+      { "label": "Borrowings", "fy22": 195, "fy23": 185, "fy24": 79, "fy25": 150 },
+      { "label": "Trade Payables", "fy22": 76, "fy23": 25, "fy24": 20, "fy25": 26 },
+      { "label": "Other Liabilities", "fy22": 56.27, "fy23": 208.1, "fy24": 211, "fy25": 201.61 },
+      { "label": "Total Liabilities", "fy22": 151, "fy23": 188, "fy24": 285, "fy25": 461 }
+    ],
+    "insights": "Debt to Equity ratio stands at 1.6. Negative reserves improving in FY25. Heavy investment in Fixed Assets."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 1.6. Borrowings reduced significantly in FY24.",
+  "balanceSheetInsights": "Balance sheet shows heavy capex on fixed assets. Reserves turned positive in FY25 projection.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 17, "fy23": 45, "fy24": -75, "fy25": 51 },
+      { "label": "Cash from Investing Activities", "fy22": -23, "fy23": -41, "fy24": -78.5, "fy25": -199 },
+      { "label": "Cash from Financing Activities", "fy22": -9, "fy23": -7, "fy24": 179, "fy25": 144 }
+    ],
+    "insights": [
+      "Operating cash flow turned positive in FY25.",
+      "High capex on PPE in FY25 (₹208 Cr purchase)."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Not Available", "institutional": "Not Available", "public": "Not Available" }
+  ],
+  "promotersManagement": "Led by Ajith Mohan Karimpana (Managing Director with 26+ years experience).",
+  "management": [
+    { "name": "Ajith Mohan Karimpana", "role": "Managing Director", "experience": "26+ Years" },
+    { "name": "Ravindra Dhariwal", "role": "Director", "experience": "" },
+    { "name": "Rahul Gautam", "role": "Director", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+  "managementInsight": "Focus on furniture rental business expansion in residential and commercial segments.",
+  "faq": [
+    {
+      "question": "How to buy House of Kieraya Limited (Furlenco)?",
+      "answer": "Please find below the procedure for buying House of Kieraya Limited (Furlenco) at UnlistedZone."
+    },
+    {
+      "question": "How to sell House of Kieraya Limited (Furlenco)?",
+      "answer": "Please find below the procedure for selling House of Kieraya Limited (Furlenco) at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of House of Kieraya Limited (Furlenco)?",
+      "answer": "The lock-in period for House of Kieraya Limited (Furlenco) varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in House of Kieraya Limited (Furlenco)?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying House of Kieraya Limited (Furlenco) legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 62,
+  "name": "Fusion Techstack Limited (Formerly Indian Commodity Exchange Limited - ICEX)",
+  "price": 2.33,
+  "logo": "/images/preipo/image60.png",
+  "overview": "Fusion Techstack Limited (formerly known as Indian Commodity Exchange Limited - ICEX) is a SEBI-recognized commodity exchange in India with a demutualized corporate structure. It offers online trading, clearing, and settlement services for various agricultural and non-agricultural commodities. The company is undergoing a strategic shift towards technology and IT-enabled solutions including software, cloud, data management, AI, and blockchain.",
+  "products": [
+    "Commodity Futures & Options Trading",
+    "Agricultural Commodities (Spices, Oilseeds, Cereals, etc.)",
+    "Non-Agricultural Commodities (Diamond, Steel, etc.)",
+    "Mutual Fund Distribution"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Commodity Traders",
+    "Farmers & Agri Businesses",
+    "Institutional Investors",
+    "Retail Investors"
+  ],
+  "shareDetails": {
+    "companyName": "Fusion Techstack Limited (Formerly Indian Commodity Exchange Limited) (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹2.33",
+    "marketCapitalization": "₹124.44 Crore",
+    "lotSize": "5000 Shares",
+    "52WeekHigh": "₹7.35",
+    "52WeekLow": "₹2.33",
+    "faceValue": "₹5",
+    "bookValue": "1.4",
+    "peRatio": "182.75",
+    "pbRatio": "2.33",
+    "debtToEquity": "0.00",
+    "returnOnEquity": "1.58",
+    "totalOutstandingShares": "533507676",
+    "isin": "INE678L01012",
     "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image60.png"
+    "pan": "AABCF7947D",
+    "cin": "U66190GJ2008PLC099142",
+    "rta": "KFin Technologies"
   },
+  "financials": {
+    "annualReportSummary": "The company reported minimal revenue in recent years with continued losses. It is in the process of business transformation post-SEBI license changes.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1.2, "fy23": 0.3, "fy24": 0.01, "fy25": 0 },
+      { "label": "EBITDA", "fy22": -131, "fy23": -46.6, "fy24": -5.7, "fy25": -4.6 },
+      { "label": "PBT", "fy22": -151.07, "fy23": -206.88, "fy24": -56.68, "fy25": -4.4 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -151, "fy23": -202.91, "fy24": -58.3, "fy25": 11 },
+      { "label": "EPS", "fy22": -0.41, "fy23": -1.09, "fy24": 0.007, "fy25": 0.02 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": -10927, "fy23": -20688.33, "fy24": -56900, "fy25": "N/A" },
+      { "label": "Net Profit Margin (%)", "fy22": -12583.33, "fy23": -67636.67, "fy24": "50000", "fy25": "N/A" },
+      { "label": "Earning Per Share (Diluted)", "fy22": -0.41, "fy23": -1.09, "fy24": 0.007, "fy25": 0.02 }
+    ],
+    "investorInsight": [
+      "Significant reduction in losses in FY24-FY25.",
+      "Company shifting focus from commodity exchange to tech solutions.",
+      "Debt-free balance sheet.",
+      "Upcoming strategic transformation."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 55, "fy23": 2.2, "fy24": 2.3, "fy25": 2.5 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 1, "fy23": 22, "fy24": 15, "fy25": 13.6 },
+      { "label": "Trade Receivables", "fy22": 1, "fy23": 0, "fy24": 0, "fy25": 0.42 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Assets", "fy22": 58, "fy23": 60.8, "fy24": 61.7, "fy25": 61.88 },
+      { "label": "Total Assets", "fy22": 115, "fy23": 85, "fy24": 79, "fy25": 78 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 268.75, "fy23": 268.7, "fy24": 268.7, "fy25": 268.75 },
+      { "label": "FV", "fy22": 5, "fy23": 5, "fy24": 5, "fy25": 5 },
+      { "label": "Reserves", "fy22": -184, "fy23": -243.3, "fy24": -260, "fy25": -197 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 13.8, "fy23": 13, "fy24": 0.5, "fy25": 0.37 },
+      { "label": "Other Liabilities", "fy22": 16.45, "fy23": 46.6, "fy24": 69.8, "fy25": 5.88 },
+      { "label": "Total Liabilities", "fy22": 115, "fy23": 85, "fy24": 79, "fy25": 78 }
+    ],
+    "insights": "Debt-free company with negative reserves due to accumulated losses. Significant reduction in total assets over the years."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.00 (Debt-free).",
+  "balanceSheetInsights": "Strong equity base with no borrowings. Focus needed on improving reserves and revenue generation post-restructuring.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -19.5, "fy23": 44.2, "fy24": -9.8, "fy25": -37.7 },
+      { "label": "Cash from Investing Activities", "fy22": 15.2, "fy23": -44.3, "fy24": 10.2, "fy25": 7.9 },
+      { "label": "Cash from Financing Activities", "fy22": -0.8, "fy23": -0.5, "fy24": -0.36, "fy25": -0.54 }
+    ],
+    "insights": [
+      "Fluctuating operating cash flows.",
+      "Limited capex requirements."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Not Available", "institutional": "Not Available", "public": "Not Available" }
+  ],
+  "promotersManagement": "Professional management team with focus on technology transformation.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+  "managementInsight": "Strategic shift towards technology services, AI, blockchain, and IT-enabled solutions.",
+  "faq": [
+    {
+      "question": "How to buy Fusion Techstack Limited (Formerly ICEX)?",
+      "answer": "Please find below the procedure for buying Fusion Techstack Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Fusion Techstack Limited (Formerly ICEX)?",
+      "answer": "Please find below the procedure for selling Fusion Techstack Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period?",
+      "answer": "The lock-in period varies depending on the category of investors. For SME IPOs, it is One year."
+    },
+    {
+      "question": "Minimum Ticket Size?",
+      "answer": "Minimum investment required is in the range of 35-50k."
+    },
+    {
+      "question": "Is buying legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 63,
-    "name": "ICL Fincorp Limited Unlisted Shares",
-    "price": 32,
+  "id": 63,
+  "name": "ICL Fincorp Limited",
+  "price": 25,
+  "logo": "/images/preipo/image61.png",
+  "overview": "ICL Fincorp Limited is a Non-Banking Financial Company (NBFC) registered with RBI, primarily engaged in providing loans and advances, investment in securities, and other financial services. The company focuses on retail and SME lending with strong asset quality (NPA below 2%).",
+  "products": [
+    "Personal Loans",
+    "Business Loans",
+    "Vehicle Loans",
+    "Gold Loans",
+    "Investment Services"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Retail Customers",
+    "Small & Medium Enterprises (SME)",
+    "Corporate Clients"
+  ],
+  "shareDetails": {
+    "companyName": "ICL Fincorp Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹25",
+    "marketCapitalization": "₹175 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹26",
+    "52WeekLow": "₹25",
+    "faceValue": "₹10",
+    "bookValue": "17.13",
+    "peRatio": "71.43",
+    "pbRatio": "1.46",
+    "debtToEquity": "4.59",
+    "returnOnEquity": "2.04",
+    "totalOutstandingShares": "69823055",
+    "isin": "INE191T01013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image61.png"
+    "pan": "AAAC17860C",
+    "cin": "U65191TN1991PLC021815",
+    "rta": "M/s Cameo Corporate Services"
   },
+  "financials": {
+    "annualReportSummary": "ICL Fincorp has shown consistent growth in interest income and profitability. The company maintains healthy asset quality with low NPAs and is expanding its lending book.",
+    "incomeStatement": [
+      { "label": "Interest Earned", "fy22": 8737, "fy23": 11219, "fy24": 14318, "fy25": 19002 },
+      { "label": "Other Income", "fy22": 206, "fy23": 45, "fy24": 256, "fy25": 166 },
+      { "label": "Interest Expended", "fy22": 5873, "fy23": 4706, "fy24": 5870, "fy25": 7175 },
+      { "label": "Operating Expenses", "fy22": 4699, "fy23": 6068, "fy24": 8701, "fy25": 10149 },
+      { "label": "Provisions and Contingencies", "fy22": -1.64, "fy23": 67, "fy24": 90, "fy25": -186 },
+      { "label": "PBT", "fy22": 271, "fy23": 304, "fy24": 8, "fy25": 214 },
+      { "label": "PAT", "fy22": 271, "fy23": 304, "fy24": 8, "fy25": 214 },
+      { "label": "EPS", "fy22": 0.81, "fy23": 0.84, "fy24": 0.02, "fy25": 0.42 }
+    ],
+    "keyRatios": [
+      { "label": "Gross NPA (%)", "fy22": 1.9, "fy23": 3.52, "fy24": 1.39, "fy25": 0.88 },
+      { "label": "Advances", "fy22": 35984, "fy23": 40284, "fy24": 47627, "fy25": 65718 },
+      { "label": "Book Value", "fy22": 19.27, "fy23": 19.27, "fy24": 19.48, "fy25": 20.14 },
+      { "label": "P/B", "fy22": 1.42, "fy23": 1.45, "fy24": 1.35, "fy25": 1.27 },
+      { "label": "ROE (%)", "fy22": 3.35, "fy23": 3.33, "fy24": 0.08, "fy25": 2.04 }
+    ],
+    "investorInsight": [
+      "Strong growth in loan book (Advances).",
+      "Healthy interest margins and controlled NPAs.",
+      "Consistent profitability with improvement in FY25.",
+      "Debt to Equity at 4.59 (typical for NBFC)."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 2058, "fy23": 3525, "fy24": 4702, "fy25": 4773 },
+      { "label": "Cash and Balances", "fy22": 1626, "fy23": 1811, "fy24": 2702, "fy25": 4988 },
+      { "label": "Investments", "fy22": 412, "fy23": 671, "fy24": 869, "fy25": 1869 },
+      { "label": "Advances", "fy22": 35984, "fy23": 40284, "fy24": 47627, "fy25": 65718 },
+      { "label": "Other Assets", "fy22": 5698, "fy23": 7225, "fy24": 8585, "fy25": 7970 },
+      { "label": "Total Assets", "fy22": 45684, "fy23": 52786, "fy24": 63715, "fy25": 85201 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 6431, "fy23": 6979, "fy24": 6979, "fy25": 6979 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 3685, "fy23": 4794, "fy24": 4720, "fy25": 6133 },
+      { "label": "Borrowings", "fy22": 29627, "fy23": 36145, "fy24": 42398, "fy25": 54888 },
+      { "label": "Deposits", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Liabilities", "fy22": 8939, "fy23": 9868, "fy24": 11718, "fy25": 14201 },
+      { "label": "Total Liabilities", "fy22": 45684, "fy23": 52786, "fy24": 63715, "fy25": 85201 }
+    ],
+    "insights": "Healthy growth in loan book (Advances) and borrowings. Strong capital adequacy with improving reserves."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 4.59 (typical for NBFC lending business).",
+  "balanceSheetInsights": "Strong asset growth driven by lending book expansion. Debt-funded growth with good asset quality.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -3812, "fy23": -2799, "fy24": -6930, "fy25": -15997 },
+      { "label": "Cash from Investing Activities", "fy22": -2077, "fy23": -1556, "fy24": -1998, "fy25": -1470 },
+      { "label": "Cash from Financing Activities", "fy22": 5999, "fy23": 3966, "fy24": 7539, "fy25": 18671 }
+    ],
+    "insights": [
+      "Negative operating cash flow due to lending book expansion (typical for NBFCs).",
+      "Funded through borrowings and equity."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Not Available", "institutional": "Not Available", "public": "Not Available" }
+  ],
+  "promotersManagement": "Promoter-led NBFC with experienced management in financial services.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "M/s Cameo Corporate Services",
+    "website": "https://cameoindia.com/"
+  },
+  "managementInsight": "Focus on expanding retail & SME lending portfolio while maintaining low NPAs.",
+  "faq": [
+    {
+      "question": "How to buy ICL Fincorp Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying ICL Fincorp Limited Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell ICL Fincorp Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling ICL Fincorp Limited Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of ICL Fincorp Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in ICL Fincorp Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying ICL Fincorp Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 64,
+  "name": "Imperative Business Ventures Limited",
+  "price": 140,
+  "logo": "/images/preipo/image62.jpg",
+  "overview": "Imperative Business Ventures Limited is a digital transformation and IT services company offering solutions in IT, AI, BPO/KPO, Cybersecurity, System Integration, and Smart Infrastructure. Founded in 2011 and headquartered in Mumbai, the company has over 15+ years of experience with a 1200+ strong team serving 75+ clients globally.",
+  "products": [
+    "Digital Transformation Solutions",
+    "AI & Machine Learning Services",
+    "BPO & KPO Services",
+    "Cybersecurity Solutions",
+    "System Integration",
+    "Smart Infrastructure",
+    "IT Consulting & Outsourcing"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Enterprises across various industries",
+    "Global Clients requiring digital transformation"
+  ],
+  "shareDetails": {
+    "companyName": "Imperative Business Ventures Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹140",
+    "marketCapitalization": "₹112 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹140",
+    "52WeekLow": "₹135",
+    "faceValue": "₹10",
+    "bookValue": "15.8",
+    "peRatio": "24.65",
+    "pbRatio": "8.86",
+    "debtToEquity": "3.38",
+    "returnOnEquity": "36.2",
+    "totalOutstandingShares": "8000000",
+    "isin": "Not Available",
+    "depository": "NSDL & CDSL",
+    "pan": "AACCI7893N",
+    "cin": "U74140MH2011PLC225110",
+    "rta": "Bigshare Services"
+  },
+  "financials": {
+    "annualReportSummary": "The company has shown strong revenue growth and improving profitability. It maintains healthy margins and is expanding its digital services portfolio.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1426, "fy23": 2411 },
+      { "label": "Cost of Material Consumed", "fy22": 0, "fy23": 0 },
+      { "label": "Change in Inventory", "fy22": 0, "fy23": 100 },
+      { "label": "Gross Margins", "fy22": 1426, "fy23": 2311 },
+      { "label": "Employee Benefit Expenses", "fy22": 537, "fy23": 1301 },
+      { "label": "Other Expenses", "fy22": 292, "fy23": 454 },
+      { "label": "EBITDA", "fy22": 597, "fy23": 556 },
+      { "label": "Other Income", "fy22": 158, "fy23": 213 },
+      { "label": "Finance Cost", "fy22": 174, "fy23": 353 },
+      { "label": "PBT", "fy22": 535, "fy23": 608 },
+      { "label": "Tax", "fy22": 134, "fy23": 154 },
+      { "label": "PAT", "fy22": 401, "fy23": 454 },
+      { "label": "EPS", "fy22": 13.37, "fy23": 5.68 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 41.87, "fy23": 39.65 },
+      { "label": "Net Profit Margin (%)", "fy22": 28.12, "fy23": 18.83 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 13.37, "fy23": 5.68 }
+    ],
+    "investorInsight": [
+      "Strong revenue growth from FY22 to FY23.",
+      "Healthy EBITDA and PAT margins.",
+      "Focus on high-value digital transformation services."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 1881, "fy23": 2513 },
+      { "label": "CWIP", "fy22": 455, "fy23": 512 },
+      { "label": "Investments", "fy22": 3011, "fy23": 2575 },
+      { "label": "Trade Receivables", "fy22": 352, "fy23": 360 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0 },
+      { "label": "Other Assets", "fy22": 315, "fy23": 405 },
+      { "label": "Total Assets", "fy22": 6014, "fy23": 5965 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 300, "fy23": 800 },
+      { "label": "FV", "fy22": 10, "fy23": 10 },
+      { "label": "Reserves", "fy22": 524, "fy23": 464 },
+      { "label": "Borrowings", "fy22": 4792, "fy23": 4243 },
+      { "label": "Trade Payables", "fy22": 141, "fy23": 14 },
+      { "label": "Other Liabilities", "fy22": 305, "fy23": 454 },
+      { "label": "Total Liabilities", "fy22": 6014, "fy23": 5965 }
+    ],
+    "insights": "Debt to Equity ratio of 3.38. Significant investment in fixed assets and CWIP."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 3.38.",
+  "balanceSheetInsights": "Balanced growth in assets with focus on investments and fixed assets. Borrowings form major part of liabilities.",
+  "cashFlow": {
+    "data": [
+      { "label": "PBT", "fy22": 535, "fy23": 608 },
+      { "label": "Cash from Operating Activities", "fy22": -1223, "fy23": 1019 },
+      { "label": "Cash from Investing Activities", "fy22": -289, "fy23": -152 },
+      { "label": "Cash from Financing Activities", "fy22": 1813, "fy23": -512 },
+      { "label": "Net Cash Generated", "fy22": 1, "fy23": -16 }
+    ],
+    "insights": [
+      "Positive cash flow from operations in FY23.",
+      "Financing activities used for debt management and expansion."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Not Available", "institutional": "Not Available", "public": "Not Available" }
+  ],
+  "promotersManagement": "Led by women entrepreneurs with strong focus on digital innovation. Founded by Manjusha Paithankar.",
+  "management": [
+    { "name": "Manjusha Paithankar", "role": "Founder & Chairperson / Managing Director", "experience": "14+ Years" }
+  ],
+  "rta": {
+    "registrar": "Bigshare Services",
+    "website": "https://www.bigshareonline.com/"
+  },
+  "managementInsight": "Focus on AI, digital transformation, BPO, and cybersecurity to drive enterprise growth.",
+  "faq": [
+    {
+      "question": "How to buy Imperative Business Ventures Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Imperative Business Ventures Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Imperative Business Ventures Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Imperative Business Ventures Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 64,
-    "name": "Imperative Business Ventures Limited",
-    "price": 175,
+  "id": 65,
+  "name": "Incred Holdings Limited",
+  "price": 148,
+  "logo": "/images/preipo/image63.png",
+  "overview": "Incred Holdings Limited is a diversified financial services holding company. It operates through its subsidiaries in lending, insurance, asset management, and other financial services. The company focuses on providing credit solutions, insurance distribution, and wealth management services.",
+  "products": [
+    "Personal & Business Loans",
+    "Insurance Products",
+    "Asset Management",
+    "Wealth Management Services",
+    "Credit Solutions"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Retail Customers",
+    "Small & Medium Enterprises",
+    "Corporate Clients"
+  ],
+  "shareDetails": {
+    "companyName": "Incred Holdings Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹148",
+    "marketCapitalization": "₹9409 Crore",
+    "lotSize": "250 Shares",
+    "52WeekHigh": "₹180",
+    "52WeekLow": "₹148",
+    "faceValue": "₹10",
+    "bookValue": "59.42",
+    "peRatio": "25.47",
+    "pbRatio": "2.49",
+    "debtToEquity": "2.2",
+    "returnOnEquity": "9.81",
+    "totalOutstandingShares": "641187562",
+    "isin": "Not Available",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image62.jpg"
+    "pan": "AAECK1978B",
+    "cin": "U67190MH2017PLC211378",
+    "rta": "Link Intime"
   },
+  "financials": {
+    "annualReportSummary": "Incred Holdings has demonstrated strong growth in interest income and profitability over the years. The company continues to expand its lending book with controlled asset quality.",
+    "incomeStatement": [
+      { "label": "Interest Earned", "fy22": 488, "fy23": 886, "fy24": 1194, "fy25": 1952 },
+      { "label": "Other Income", "fy22": 36, "fy23": -45, "fy24": 103, "fy25": 622 },
+      { "label": "Interest Expended", "fy22": 219, "fy23": 356, "fy24": 463, "fy25": 627 },
+      { "label": "Operating Expenses", "fy22": 263, "fy23": 273, "fy24": 642, "fy25": 871 },
+      { "label": "Provisions and Contingencies", "fy22": 0, "fy23": 0, "fy24": -19, "fy25": 188 },
+      { "label": "PAT", "fy22": 31, "fy23": 109, "fy24": 309, "fy25": 573 },
+      { "label": "EPS", "fy22": 1.81, "fy23": 1.85, "fy24": 4.81, "fy25": 5.76 }
+    ],
+    "keyRatios": [
+      { "label": "Advances", "fy22": 3733, "fy23": 5405, "fy24": 7259, "fy25": 10467 },
+      { "label": "Gross NPA (%)", "fy22": 2.8, "fy23": 2.1, "fy24": 3.1, "fy25": 0.73 },
+      { "label": "Book Value", "fy22": 57.83, "fy23": 42.01, "fy24": 52.77, "fy25": 58.31 },
+      { "label": "P/B", "fy22": 1.03, "fy23": 4.29, "fy24": 3.13, "fy25": 2.81 },
+      { "label": "ROE (%)", "fy22": 2.78, "fy23": 4.28, "fy24": 9.12, "fy25": 9.81 }
+    ],
+    "investorInsight": [
+      "Strong growth in loan book (Advances) and profitability.",
+      "Improving ROE and stable asset quality.",
+      "Healthy interest income growth."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 39, "fy23": 50, "fy24": 54, "fy25": 57 },
+      { "label": "Cash and Balances", "fy22": 85, "fy23": 393, "fy24": 168, "fy25": 812 },
+      { "label": "Investments", "fy22": 81, "fy23": 70, "fy24": 813, "fy25": 515 },
+      { "label": "Advances", "fy22": 3733, "fy23": 5405, "fy24": 7259, "fy25": 10467 },
+      { "label": "Other Assets", "fy22": 97, "fy23": 761, "fy24": 674, "fy25": 599 },
+      { "label": "Total Assets", "fy22": 4035, "fy23": 6679, "fy24": 8768, "fy25": 12500 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 192.75, "fy23": 595.25, "fy24": 641.81, "fy25": 841.51 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 1022, "fy23": 1983, "fy24": 2745, "fy25": 3158 },
+      { "label": "Borrowings", "fy22": 2816, "fy23": 3864, "fy24": 5017, "fy25": 8359 },
+      { "label": "Deposits", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Liabilities", "fy22": 104.25, "fy23": 266.77, "fy24": 364.19, "fy25": 337.49 },
+      { "label": "Total Liabilities", "fy22": 4035, "fy23": 6679, "fy24": 8768, "fy25": 12500 }
+    ],
+    "insights": "Strong growth in Advances and Borrowings. Reserves have increased significantly."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 2.2.",
+  "balanceSheetInsights": "Healthy expansion in lending book supported by borrowings and equity infusion.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -1122, "fy23": -726, "fy24": -1372, "fy25": -2818 },
+      { "label": "Cash from Investing Activities", "fy22": -615, "fy23": -449, "fy24": 1021, "fy25": 16762 },
+      { "label": "Cash from Financing Activities", "fy22": 1150, "fy23": 622, "fy24": 1507, "fy25": 8343 }
+    ],
+    "insights": [
+      "Negative operating cash flow due to lending book expansion (typical for NBFC/Holding Company).",
+      "Funded through borrowings and equity raises."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Not Available", "institutional": "Not Available", "public": "Not Available" }
+  ],
+  "promotersManagement": "Professional management team with expertise in financial services and lending.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on scaling lending operations, insurance, and asset management verticals.",
+  "faq": [
+    {
+      "question": "How to buy Incred Holdings Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Incred Holdings Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Incred Holdings Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Incred Holdings Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Incred Holdings Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Incred Holdings Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Incred Holdings Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 65,
-    "name": "Incred Holdings Limited Unlisted Shares",
-    "price": 207,
+ "id": 66,
+ "name": "India Carbon Limited",
+ "price": 895,
+ "logo": "/images/preipo/image64.jpg",
+ "overview": "India Carbon Limited is one of the leading manufacturers of Calcined Petroleum Coke (CPC) and Coal Tar Pitch in India. The company caters to the aluminum, steel, and graphite industries with high-quality carbon products. It operates manufacturing facilities in Assam and has a strong presence in the domestic and international markets.",
+ "products": [
+ "Calcined Petroleum Coke (CPC)",
+ "Coal Tar Pitch",
+ "Anode Grade CPC",
+ "Graphite Electrodes Raw Materials"
+ ],
+ "manufacturingUnits": [
+ "Manufacturing Plant in Guwahati, Assam"
+ ],
+ "clients": [
+ "Aluminum Smelters",
+ "Steel Manufacturers",
+ "Graphite Industry",
+ "Foundries"
+ ],
+ "shareDetails": {
+ "companyName": "India Carbon Limited (Unlisted)",
+ "indicativeUnlistedSharePrice": "₹895",
+ "marketCapitalization": "₹237 Crore",
+ "lotSize": "100 Shares",
+ "52WeekHigh": "₹895",
+ "52WeekLow": "₹895",
+ "faceValue": "₹10",
+ "bookValue": "2055.28",
+ "peRatio": "N/A",
+ "pbRatio": "0.44",
+ "debtToEquity": "0.1",
+ "returnOnEquity": "-2.43",
+ "totalOutstandingShares": "2650000",
+ "isin": "Not Available",
+ "depository": "NSDL & CDSL",
+ "pan": "AAACB184L",
+ "cin": "L23101AS1961PLC001173",
+ "rta": "C B Management Services"
+ },
+ "financials": {
+ "annualReportSummary": "India Carbon Limited has shown fluctuating revenue with marginal profitability. The company maintains a strong balance sheet with very low debt and high book value per share.",
+ "incomeStatement": [
+ { "label": "Revenue", "fy22": 438, "fy23": 566, "fy24": 420, "fy25": 178 },
+ { "label": "Cost of Material Consumed", "fy22": 357, "fy23": 501, "fy24": 308, "fy25": 136 },
+ { "label": "Change in Inventory", "fy22": -59, "fy23": -35, "fy24": 62, "fy25": 17 },
+ { "label": "Gross Margins", "fy22": 36.65, "fy23": 33.18, "fy24": 82, "fy25": 12.17 },
+ { "label": "Employee Benefit Expenses", "fy22": 19, "fy23": 12, "fy24": 11, "fy25": 12 },
+ { "label": "Other Expenses", "fy22": 40, "fy23": 53, "fy24": 4.5, "fy25": 36 },
+ { "label": "EBITDA", "fy22": 21.03, "fy23": 5.85, "fy24": -0.95, "fy25": -18.14 },
+ { "label": "Other Income", "fy22": 20, "fy23": 10.65, "fy24": 37, "fy25": 16 },
+ { "label": "Finance Cost", "fy22": 1, "fy23": 7, "fy24": 6, "fy25": 1.7 },
+ { "label": "PBT", "fy22": 116, "fy23": 31, "fy24": 27, "fy25": -11 },
+ { "label": "Tax", "fy22": 35, "fy23": 10, "fy24": -5, "fy25": -2 },
+ { "label": "PAT", "fy22": 81, "fy23": 24, "fy24": 30, "fy25": -7.13 },
+ { "label": "EPS", "fy22": 31.54, "fy23": 90.57, "fy24": 113.21, "fy25": -49.06 }
+ ],
+ "keyRatios": [
+ { "label": "Operating Profit Margin (%)", "fy22": 21.92, "fy23": 5.83, "fy24": -0.95, "fy25": -23.16 },
+ { "label": "Net Profit Margin (%)", "fy22": 17.36, "fy23": 4.24, "fy24": 7.14, "fy25": -7.48 },
+ { "label": "Earning Per Share (Diluted)", "fy22": 31.54, "fy23": 90.57, "fy24": 113.21, "fy25": -49.06 }
+ ],
+ "investorInsight": [
+ "Very low debt (D/E = 0.1).",
+ "Extremely high book value per share (₹2055).",
+ "Fluctuating profitability due to raw material price volatility."
+ ]
+ },
+ "balanceSheet": {
+ "assets": [
+ { "label": "Fixed Assets", "fy22": 14, "fy23": 15, "fy24": 19, "fy25": 19 },
+ { "label": "CWIP", "fy22": 5, "fy23": 7, "fy24": 6, "fy25": 3 },
+ { "label": "Investments", "fy22": 207, "fy23": 204, "fy24": 361, "fy25": 469 },
+ { "label": "Trade Receivables", "fy22": 60, "fy23": 48, "fy24": 18, "fy25": 9 },
+ { "label": "Inventory", "fy22": 161, "fy23": 272, "fy24": 82, "fy25": 60 },
+ { "label": "Other Assets", "fy22": 70, "fy23": 78, "fy24": 75, "fy25": 24 },
+ { "label": "Total Assets", "fy22": 537, "fy23": 582, "fy24": 533, "fy25": 607 }
+ ],
+ "liabilities": [
+ { "label": "Share Capital", "fy22": 2.65, "fy23": 2.65, "fy24": 2.65, "fy25": 2.65 },
+ { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+ { "label": "Reserves", "fy22": 435, "fy23": 431, "fy24": 510, "fy25": 532 },
+ { "label": "Borrowings", "fy22": 58, "fy23": 115, "fy24": 0, "fy25": 0 },
+ { "label": "Trade Payables", "fy22": 28, "fy23": 5.5, "fy24": 3, "fy25": 5 },
+ { "label": "Other Liabilities", "fy22": 15.4, "fy23": 27.75, "fy24": 8.35, "fy25": 15.35 },
+ { "label": "Total Liabilities", "fy22": 537, "fy23": 582, "fy24": 533, "fy25": 607 }
+ ],
+ "insights": "Extremely strong equity base with negligible debt. High reserves reflecting accumulated profits."
+ },
+ "liabilitiesBreakdown": "Debt to Equity ratio of 0.1 (Almost debt-free).",
+ "balanceSheetInsights": "Very healthy and conservative balance sheet with high liquidity and minimal leverage.",
+ "cashFlow": {
+ "data": [
+ { "label": "Cash from Operating Activities", "fy22": -57, "fy23": -12, "fy24": 172, "fy25": 11 },
+ { "label": "Cash from Investing Activities", "fy22": 36, "fy23": -30, "fy24": -32, "fy25": -80 },
+ { "label": "Cash from Financing Activities", "fy22": 38, "fy23": 68.9, "fy24": -120, "fy25": 50 }
+ ],
+ "insights": [
+ "Positive operating cash flow in FY24.",
+ "Low capex requirements."
+ ]
+ },
+ "shareholding": [
+ { "year": "Recent", "promoters": "Not Available", "institutional": "Not Available", "public": "Not Available" }
+ ],
+ "promotersManagement": "Promoter-driven company with decades of experience in carbon products manufacturing.",
+ "management": [
+ { "name": "Not Available on page", "role": "", "experience": "" }
+ ],
+ "rta": {
+ "registrar": "C B Management Services",
+ "website": "https://www.cbmsl.com/"
+ },
+ "managementInsight": "Focus on maintaining quality standards in CPC and Coal Tar Pitch production while optimizing costs in a volatile commodity environment.",
+ "faq": [
+ {
+ "question": "How to buy India Carbon Limited Unlisted Shares?",
+ "answer": "Please find below the procedure for buying India Carbon Limited at UnlistedZone."
+ },
+ {
+ "question": "How to sell India Carbon Limited Unlisted Shares?",
+ "answer": "Please find below the procedure for selling India Carbon Limited at UnlistedZone."
+ },
+ {
+ "question": "What is the lock-in period of India Carbon Limited Unlisted Shares?",
+ "answer": "The lock-in period varies depending on the category of investors."
+ },
+ {
+ "question": "Minimum Ticket Size for investment in India Carbon Limited?",
+ "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+ },
+ {
+ "question": "Is buying India Carbon Limited Unlisted Shares legal in India?",
+ "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+ }
+ ],
+ "status": "upcoming"
+},
+ {
+  "id": 67,
+  "name": "India Exposition Mart Ltd",
+  "price": 122,
+  "logo": "/images/preipo/image67.png",
+
+  "overview": "India Exposition Mart Limited (IEML) is a leading infrastructure company focused on organizing exhibitions, trade fairs, and conventions in India. It operates one of the largest integrated exhibition-cum-convention centers in Greater Noida, serving as a hub for international trade events, business summits, and industry exhibitions. The company plays a critical role in promoting exports and facilitating B2B interactions across sectors such as handicrafts, textiles, engineering goods, and consumer products. With increasing demand for organized exhibition spaces and India’s growing global trade footprint, IEML is well-positioned to benefit from rising event-driven commerce and international participation.",
+
+  "products": [
+    "Exhibition Infrastructure",
+    "Convention & Conference Services",
+    "Trade Fair Hosting",
+    "Business Event Management"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Export Promotion Councils",
+    "Government Bodies",
+    "International Exhibitors",
+    "Domestic Businesses",
+    "Trade Visitors"
+  ],
+
+  "shareDetails": {
+    "companyName": "India Exposition Mart Ltd",
+    "indicativeUnlistedSharePrice": "₹122",
+    "marketCapitalization": "₹904 Cr",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹135",
+    "52WeekLow": "₹118",
+    "faceValue": "₹5",
+    "bookValue": "₹34.94",
+    "peRatio": "23.78",
+    "pbRatio": "3.49",
+    "debtToEquity": "0.06",
+    "returnOnEquity": "14.96%",
+    "totalOutstandingShares": "74,11,675",
+    "isin": "INE01IH01021",
     "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image63.png"
+    "pan": "AAACF6786M",
+    "cin": "U99999DL2011PLC110396",
+    "rta": "KFin Technologies"
   },
+
+  "financials": {
+    "annualReportSummary": "India Exposition Mart has shown a strong recovery and growth trajectory post-pandemic. Revenue increased significantly from ₹42.87 Cr in FY22 to ₹217 Cr in FY23, stabilizing around ₹195–211 Cr in FY24–FY25. Profitability improved sharply with PAT rising from losses in FY22 to ₹69.63 Cr in FY23 and sustaining at ₹38 Cr in FY25. Margins remain healthy, supported by high operating leverage inherent in exhibition infrastructure businesses.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 42.87, "fy23": 217.07, "fy24": 195, "fy25": 211 },
+      { "label": "EBITDA", "fy22": 8.59, "fy23": 104.8, "fy24": 47, "fy25": 68.1 },
+      { "label": "Operating Profit", "fy22": 8.59, "fy23": 104.8, "fy24": 47, "fy25": 68.1 },
+      { "label": "EBIT", "fy22": -2.61, "fy23": 93.01, "fy24": 25, "fy25": 46.8 },
+      { "label": "Profit Before Tax", "fy22": -2.48, "fy23": 97.49, "fy24": 29, "fy25": 52 },
+      { "label": "Net Profit / Loss", "fy22": -2.33, "fy23": 69.63, "fy24": 23, "fy25": 38 },
+      { "label": "EPS", "fy22": -0.63, "fy23": 18.82, "fy24": 3.11, "fy25": 5.14 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 20.04, "fy23": 48.28, "fy24": 24.1, "fy25": 28.26 },
+      { "label": "Net Profit Margin (%)", "fy22": -5.44, "fy23": 32.08, "fy24": 11.79, "fy25": 15.77 },
+      { "label": "EPS", "fy22": -0.63, "fy23": 18.82, "fy24": 3.11, "fy25": 5.14 }
+    ],
+
+    "investorInsight": [
+      "Strong post-COVID recovery driven by revival of exhibitions and trade events.",
+      "High operating leverage leads to strong profitability once utilization increases.",
+      "Low debt and strong margins improve financial stability.",
+      "Revenue volatility may persist due to event-based business model."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 73.35, "fy23": 154.91, "fy24": 139, "fy25": 141 },
+      { "label": "CWIP", "fy22": 44.66, "fy23": 1.55, "fy24": 2, "fy25": 2 },
+      { "label": "Trade Receivables", "fy22": 11.68, "fy23": 24.27, "fy24": 26, "fy25": 30 },
+      { "label": "Inventory", "fy22": 0.8, "fy23": 1.91, "fy24": 5, "fy25": 7 },
+      { "label": "Other Assets", "fy22": 86.89, "fy23": 139.05, "fy24": 159, "fy25": 162 },
+      { "label": "Total Assets", "fy22": 217.38, "fy23": 321.69, "fy24": 331, "fy25": 344 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 37, "fy23": 37, "fy24": 37, "fy25": 37 },
+      { "label": "Reserves", "fy22": 97.41, "fy23": 169.56, "fy24": 187, "fy25": 217 },
+      { "label": "Borrowings", "fy22": 20.35, "fy23": 30.23, "fy24": 20, "fy25": 16.5 },
+      { "label": "Trade Payables", "fy22": 6.37, "fy23": 15.68, "fy24": 31, "fy25": 20 },
+      { "label": "Other Liabilities", "fy22": 56.25, "fy23": 69.22, "fy24": 56, "fy25": 53.5 },
+      { "label": "Total Liabilities", "fy22": 217.38, "fy23": 321.69, "fy24": 331, "fy25": 344 }
+    ],
+    "insights": "The company maintains a strong balance sheet with low debt levels and increasing reserves."
+  },
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 16.18, "fy23": 81.66, "fy24": 25, "fy25": 38.5 },
+      { "label": "Investing Cash Flow", "fy22": -27.83, "fy23": -9.53, "fy24": 16, "fy25": -13.4 },
+      { "label": "Financing Cash Flow", "fy22": 17.51, "fy23": 8.29, "fy24": -23, "fy25": -19 }
+    ]
+  },
+
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "faq": [
+    {
+      "question": "How to buy India Exposition Mart Ltd unlisted shares?",
+      "answer": "You can buy India Exposition Mart Ltd unlisted shares through registered brokers or platforms dealing in unlisted shares after completing KYC and fund transfer."
+    },
+    {
+      "question": "Is India Exposition Mart Ltd a good investment?",
+      "answer": "The company benefits from strong exhibition infrastructure and high operating leverage, but revenues can be cyclical due to event-based business."
+    },
+    {
+      "question": "What is the lot size for India Exposition Mart Ltd shares?",
+      "answer": "The minimum lot size is 500 shares."
+    },
+    {
+      "question": "Is buying unlisted shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares is legal in India and regulated under SEBI guidelines."
+    },
+    {
+      "question": "What are the risks in investing in this company?",
+      "answer": "Key risks include revenue volatility due to event dependency, economic slowdowns, and dependence on exhibition industry growth."
+    }
+  ]
+},
   {
-    "id": 66,
-    "name": "India Carbon Limited Unlisted Shares",
-    "price": 1119,
+  "id": 68,
+  "name": "Indian Potash Limited",
+  "price": 2750,
+  "logo": "/images/preipo/image66.png",
+
+  "overview": "Indian Potash Limited (IPL) is one of India’s leading fertilizer and agri-input companies, primarily engaged in importing, manufacturing, and distribution of potash, complex fertilizers, and agri-products. Established in 1955 and promoted by cooperative institutions, IPL plays a critical role in supporting Indian agriculture by ensuring the availability of essential nutrients like potash. The company has diversified into dairy, sugar, and rural retail initiatives, strengthening its integrated rural ecosystem. With strong government linkage, nationwide distribution network, and stable demand from the agriculture sector, IPL maintains a dominant position in India’s fertilizer industry.",
+
+  "products": [
+    "Potash Fertilizers",
+    "Complex Fertilizers",
+    "Agro Inputs",
+    "Dairy Products",
+    "Sugar",
+    "Rural Retail Products"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Farmers",
+    "Cooperative Societies",
+    "Agricultural Distributors",
+    "Government Agencies"
+  ],
+
+  "shareDetails": {
+    "companyName": "Indian Potash Limited",
+    "indicativeUnlistedSharePrice": "₹2750",
+    "marketCapitalization": "₹7864 Cr",
+    "lotSize": "25 Shares",
+    "52WeekHigh": "₹3600",
+    "52WeekLow": "₹2750",
+    "faceValue": "₹10",
+    "bookValue": "₹3962.49",
+    "peRatio": "4.73",
+    "pbRatio": "0.69",
+    "debtToEquity": "0.46",
+    "returnOnEquity": "14.67%",
+    "totalOutstandingShares": "2,85,97,200",
+    "isin": "INE863S01015",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image64.jpg"
+    "pan": "AAACI0888H",
+    "cin": "U14219TN1955PLC000961",
+    "rta": "Cameo Corporate Services"
   },
+
+  "financials": {
+    "annualReportSummary": "Indian Potash Limited has shown stable revenue with moderate profitability. Revenue has remained in the ₹18,000–33,000 Cr range over FY22–FY25. EBITDA and PAT show fluctuations due to fertilizer pricing, subsidies, and raw material costs. The company benefits from steady agricultural demand and government support, ensuring consistent earnings visibility.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 18504, "fy23": 33323, "fy24": 20496, "fy25": 20689 },
+      { "label": "EBITDA", "fy22": 778, "fy23": 1082, "fy24": 401, "fy25": 1082 },
+      { "label": "Operating Profit", "fy22": 778, "fy23": 1082, "fy24": 401, "fy25": 1082 },
+      { "label": "EBIT", "fy22": 732, "fy23": 1034, "fy24": 340, "fy25": 1014 },
+      { "label": "Profit Before Tax", "fy22": 2033, "fy23": 2707, "fy24": 2213, "fy25": 2687 },
+      { "label": "Net Profit / Loss", "fy22": 1818, "fy23": 1874, "fy24": 1258, "fy25": 1661 },
+      { "label": "EPS", "fy22": 565.93, "fy23": 655.47, "fy24": 439.86, "fy25": 580.77 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 4.2, "fy23": 3.25, "fy24": 1.91, "fy25": 5.23 },
+      { "label": "Net Profit Margin (%)", "fy22": 8.74, "fy23": 5.62, "fy24": 6.01, "fy25": 8.03 },
+      { "label": "EPS", "fy22": 565.93, "fy23": 655.47, "fy24": 439.86, "fy25": 580.77 }
+    ],
+
+    "investorInsight": [
+      "Strong government-backed fertilizer business ensures demand stability.",
+      "Revenue volatility driven by subsidy cycles and raw material prices.",
+      "Low valuation multiples indicate potential undervaluation.",
+      "Diversification into dairy and rural sectors adds growth avenues."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 882, "fy23": 1221, "fy24": 1213, "fy25": 1542 },
+      { "label": "CWIP", "fy22": 157, "fy23": 24, "fy24": 217, "fy25": 83 },
+      { "label": "Investments", "fy22": 6185, "fy23": 4906, "fy24": 5784, "fy25": 7764 },
+      { "label": "Trade Receivables", "fy22": 1900, "fy23": 5454, "fy24": 3670, "fy25": 4597 },
+      { "label": "Inventory", "fy22": 6067, "fy23": 4013, "fy24": 3792, "fy25": 4690 },
+      { "label": "Other Assets", "fy22": 6187, "fy23": 3407, "fy24": 2945, "fy25": 3534 },
+      { "label": "Total Assets", "fy22": 21378, "fy23": 19065, "fy24": 17621, "fy25": 22110 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 28.59, "fy23": 28.59, "fy24": 28.6, "fy25": 28.6 },
+      { "label": "Reserves", "fy22": 6008, "fy23": 8211, "fy24": 9488, "fy25": 11293 },
+      { "label": "Borrowings", "fy22": 5564, "fy23": 3964, "fy24": 4575, "fy25": 5264 },
+      { "label": "Trade Payables", "fy22": 8626, "fy23": 5384, "fy24": 2087, "fy25": 3747 },
+      { "label": "Other Liabilities", "fy22": 1081.41, "fy23": 1497.41, "fy24": 1442.6, "fy25": 1777.4 },
+      { "label": "Total Liabilities", "fy22": 21378, "fy23": 19065, "fy24": 17621, "fy25": 22110 }
+    ],
+    "insights": "The company maintains strong reserves and large investment holdings. Working capital is significant due to inventory and receivables, typical for fertilizer distribution businesses."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are largely driven by trade payables, borrowings, and subsidy-linked working capital. Debt remains moderate relative to total assets.",
+
+  "balanceSheetInsights": "Indian Potash Limited has a strong balance sheet supported by reserves and investments. However, high working capital requirements due to subsidy cycles can impact liquidity.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 4199, "fy23": -514, "fy24": -1475, "fy25": 504 },
+      { "label": "Investing Cash Flow", "fy22": -3180, "fy23": 3710, "fy24": 641, "fy25": -881 },
+      { "label": "Financing Cash Flow", "fy22": 2701, "fy23": -2310, "fy24": 192, "fy25": 131 }
+    ],
+    "insights": [
+      "Operating cash flow fluctuates due to working capital cycles.",
+      "Investment activity reflects large treasury and capital allocation.",
+      "Financing shows active debt and repayment cycles.",
+      "Cash position varies with subsidy inflows and inventory levels."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "Indian Potash Limited is promoted by cooperative institutions and operates under a strong government-linked ecosystem.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Cameo Corporate Services",
+    "website": "https://cameoindia.com/"
+  },
+
+  "managementInsight": "The company benefits from a stable promoter base and strong government linkage. Its focus on fertilizer distribution and diversification into rural sectors supports long-term stability.",
+
+  "faq": [
+    {
+      "question": "How to buy Indian Potash Limited unlisted shares?",
+      "answer": "You can buy Indian Potash Limited unlisted shares through registered brokers or platforms dealing in unlisted shares after completing KYC."
+    },
+    {
+      "question": "What is the lot size of Indian Potash shares?",
+      "answer": "The minimum lot size is 25 shares."
+    },
+    {
+      "question": "Is Indian Potash Limited a good investment?",
+      "answer": "The company offers stable demand due to agriculture dependence and government backing, but margins can fluctuate due to subsidy policies."
+    },
+    {
+      "question": "Is buying unlisted shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares is legal in India under SEBI regulations."
+    },
+    {
+      "question": "What are the risks in investing in Indian Potash Limited?",
+      "answer": "Key risks include dependency on government subsidies, working capital cycles, and fluctuations in fertilizer prices."
+    }
+  ],
+
+  "status": "upcoming"
+},
   {
-    "id": 67,
-    "name": "India Exposition Mart Ltd Unlisted Share",
-    "price": 157,
+  "id": 69,
+  "name": "Indofil Industries Limited",
+  "price": 1460,
+  "logo": "/images/preipo/image67.png",
+
+  "overview": "Indofil Industries Limited is a leading Indian agrochemical and specialty chemicals company, part of the K.K. Modi Group. The company manufactures crop protection chemicals including fungicides, insecticides, herbicides, and also operates in specialty chemicals and contract manufacturing. With exports to over 90 countries and strong R&D capabilities, Indofil has established itself as a global player in agrochemicals. The company benefits from rising demand for food security, agricultural productivity, and specialty chemical applications, positioning it well for long-term growth.",
+
+  "products": [
+    "Fungicides",
+    "Insecticides",
+    "Herbicides",
+    "Crop Protection Chemicals",
+    "Specialty Chemicals",
+    "Contract Manufacturing"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Farmers",
+    "Agrochemical Distributors",
+    "Global Agriculture Companies",
+    "Industrial Chemical Buyers"
+  ],
+
+  "shareDetails": {
+    "companyName": "Indofil Industries Limited",
+    "indicativeUnlistedSharePrice": "₹1460",
+    "marketCapitalization": "₹2320 Cr",
+    "lotSize": "25 Shares",
+    "52WeekHigh": "₹1995",
+    "52WeekLow": "₹1195",
+    "faceValue": "₹10",
+    "bookValue": "₹1528.51",
+    "peRatio": "7.36",
+    "pbRatio": "0.95",
+    "debtToEquity": "0.07",
+    "returnOnEquity": "12.92%",
+    "totalOutstandingShares": "22,95,82,822",
+    "isin": "INE07101016",
     "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image65.jpg"
+    "pan": "AABCI4565B",
+    "cin": "U24110MH1965PLC007785",
+    "rta": "MAS Services Limited"
   },
+
+  "financials": {
+    "annualReportSummary": "Indofil Industries has demonstrated steady revenue growth and improving profitability. Revenue increased from ₹2,795 Cr in FY22 to ₹3,325 Cr in FY25. EBITDA margins have improved consistently, and PAT has shown strong growth. The company benefits from stable demand in agrochemicals and strong export markets, while maintaining low leverage.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 2795, "fy23": 3037, "fy24": 3069, "fy25": 3325 },
+      { "label": "EBITDA", "fy22": 357, "fy23": 380, "fy24": 442, "fy25": 542 },
+      { "label": "Operating Profit", "fy22": 357, "fy23": 380, "fy24": 442, "fy25": 542 },
+      { "label": "EBIT", "fy22": 267, "fy23": 293, "fy24": 353, "fy25": 450.3 },
+      { "label": "Profit Before Tax", "fy22": 308, "fy23": 339, "fy24": 422, "fy25": 589 },
+      { "label": "Net Profit / Loss", "fy22": 219, "fy23": 242, "fy24": 332, "fy25": 452 },
+      { "label": "EPS", "fy22": 102.82, "fy23": 113.62, "fy24": 155.87, "fy25": 198.86 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 12.77, "fy23": 12.51, "fy24": 14.4, "fy25": 16.3 },
+      { "label": "Net Profit Margin (%)", "fy22": 7.84, "fy23": 7.97, "fy24": 10.82, "fy25": 13.59 },
+      { "label": "EPS", "fy22": 102.82, "fy23": 113.62, "fy24": 155.87, "fy25": 198.86 }
+    ],
+
+    "investorInsight": [
+      "Consistent growth in revenue and profitability indicates strong business fundamentals.",
+      "Improving margins reflect operational efficiency and pricing power.",
+      "Very low debt levels strengthen financial stability.",
+      "Exposure to global agrochemical demand provides long-term growth potential."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 602, "fy23": 698, "fy24": 687, "fy25": 651 },
+      { "label": "CWIP", "fy22": 119, "fy23": 150, "fy24": 138, "fy25": 140 },
+      { "label": "Investments", "fy22": 809, "fy23": 1464, "fy24": 2333, "fy25": 4768 },
+      { "label": "Trade Receivables", "fy22": 785, "fy23": 758, "fy24": 903, "fy25": 1109 },
+      { "label": "Inventory", "fy22": 641, "fy23": 689, "fy24": 525, "fy25": 584.5 },
+      { "label": "Other Assets", "fy22": 798, "fy23": 373.5, "fy24": 571, "fy25": 750.5 },
+      { "label": "Total Assets", "fy22": 3844, "fy23": 4132.5, "fy24": 5157, "fy25": 8003 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 21.3, "fy23": 21.3, "fy24": 21.3, "fy25": 22.73 },
+      { "label": "Reserves", "fy22": 2199, "fy23": 2896, "fy24": 3973, "fy25": 3476 },
+      { "label": "Borrowings", "fy22": 679, "fy23": 559, "fy24": 363, "fy25": 237 },
+      { "label": "Trade Payables", "fy22": 818, "fy23": 439, "fy24": 477, "fy25": 521 },
+      { "label": "Other Liabilities", "fy22": 126.7, "fy23": 217.2, "fy24": 322.7, "fy25": 3746.27 },
+      { "label": "Total Liabilities", "fy22": 3844, "fy23": 4132.5, "fy24": 5157, "fy25": 8003 }
+    ],
+    "insights": "The balance sheet shows strong asset growth driven by investments. Debt has reduced significantly, indicating improved leverage and financial discipline."
+  },
+
+  "liabilitiesBreakdown": "Liabilities consist mainly of reserves, trade payables, and operational obligations. Borrowings have reduced over time, improving financial health.",
+
+  "balanceSheetInsights": "Indofil maintains a strong financial position with rising reserves and declining debt. Growth in investments indicates expansion and capital allocation toward future opportunities.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 397, "fy23": -67, "fy24": 426, "fy25": 332 },
+      { "label": "Investing Cash Flow", "fy22": -15, "fy23": 1, "fy24": 48, "fy25": -12 },
+      { "label": "Financing Cash Flow", "fy22": -151, "fy23": -184, "fy24": -257, "fy25": -144 }
+    ],
+    "insights": [
+      "Operating cash flow remains positive overall despite some fluctuations.",
+      "Investment activity reflects expansion and strategic capital allocation.",
+      "Financing cash flow shows consistent debt reduction.",
+      "Overall cash position remains stable with disciplined financial management."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "Indofil Industries Limited is part of the K.K. Modi Group, a well-established industrial group in India.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "MAS Services Limited",
+    "website": "https://www.masserv.com/"
+  },
+
+  "managementInsight": "The company benefits from strong promoter backing and global presence. Focus on R&D and exports supports long-term growth and competitiveness.",
+
+  "faq": [
+    {
+      "question": "How to buy Indofil Industries Limited unlisted shares?",
+      "answer": "You can buy Indofil Industries Limited unlisted shares through brokers or platforms dealing in unlisted shares after completing KYC."
+    },
+    {
+      "question": "What is the lot size of Indofil Industries shares?",
+      "answer": "The minimum lot size is 25 shares."
+    },
+    {
+      "question": "Is Indofil Industries a good investment?",
+      "answer": "The company shows strong growth, improving margins, and low debt, making it attractive for long-term investors."
+    },
+    {
+      "question": "Is buying unlisted shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares is legal and regulated under SEBI guidelines."
+    },
+    {
+      "question": "What are the risks in investing in Indofil Industries?",
+      "answer": "Key risks include raw material price volatility, regulatory changes in agrochemicals, and global demand fluctuations."
+    }
+  ],
+
+  "status": "upcoming"
+},
   {
-    "id": 68,
-    "name": "Indian Potash Limited Unlisted Share",
-    "price": 4063,
+  "id": 70,
+  "name": "Inkel Limited",
+  "price": 20,
+  "logo": "/images/preipo/image68.png",
+
+  "overview": "Inkel Limited is a public-private partnership initiative promoted by the Government of Kerala to facilitate infrastructure development in the state. The company focuses on project development, engineering services, and infrastructure execution across sectors such as roads, bridges, urban infrastructure, and industrial projects. Inkel plays a key role in enabling private participation in public infrastructure and aims to accelerate development through efficient project management and execution.",
+
+  "products": [
+    "Infrastructure Development Projects",
+    "Engineering & Project Management Services",
+    "Public-Private Partnership (PPP) Projects",
+    "Urban Infrastructure Development"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Government of Kerala",
+    "Public Sector Agencies",
+    "Infrastructure Developers",
+    "Urban Development Authorities"
+  ],
+
+  "shareDetails": {
+    "companyName": "Inkel Limited",
+    "indicativeUnlistedSharePrice": "₹20",
+    "marketCapitalization": "₹356 Cr",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹20",
+    "52WeekLow": "₹19",
+    "faceValue": "₹10",
+    "bookValue": "₹13.82",
+    "peRatio": "14.81",
+    "pbRatio": "1.45",
+    "debtToEquity": "0.1",
+    "returnOnEquity": "10.18%",
+    "totalOutstandingShares": "17,78,14,334",
+    "isin": "INE058U01017",
     "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image66.png"
+    "pan": "AAACI6802J",
+    "cin": "U45209KL2007PLC020471",
+    "rta": "Integrated Registry Management Services"
   },
-  {
-    "id": 69,
-    "name": "Indofil Industries Limited Unlisted Shares",
-    "price": 2119,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image67.png"
+
+  "financials": {
+    "annualReportSummary": "Inkel Limited has shown stable growth in revenue and profitability over the years. Revenue has remained steady around ₹82–114 Cr between FY22 and FY25. EBITDA and operating margins have improved significantly, indicating better project execution and cost control. Net profit has grown consistently, reflecting improving operational efficiency.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 92, "fy23": 82, "fy24": 98, "fy25": 114 },
+      { "label": "EBITDA", "fy22": 25.52, "fy23": 23.56, "fy24": 40, "fy25": 46 },
+      { "label": "Operating Profit", "fy22": 25.52, "fy23": 23.56, "fy24": 40, "fy25": 46 },
+      { "label": "EBIT", "fy22": 23.04, "fy23": 20.34, "fy24": 37, "fy25": 44 },
+      { "label": "Profit Before Tax", "fy22": 15, "fy23": 18, "fy24": 40, "fy25": 33 },
+      { "label": "Net Profit / Loss", "fy22": 7.82, "fy23": 14.44, "fy24": 31, "fy25": 24 },
+      { "label": "EPS", "fy22": 0.44, "fy23": 0.82, "fy24": 1.74, "fy25": 1.35 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 27.74, "fy23": 28.73, "fy24": 40.82, "fy25": 40.35 },
+      { "label": "Net Profit Margin (%)", "fy22": 8.5, "fy23": 17.61, "fy24": 31.63, "fy25": 21.05 },
+      { "label": "EPS", "fy22": 0.44, "fy23": 0.82, "fy24": 1.74, "fy25": 1.35 }
+    ],
+
+    "investorInsight": [
+      "Stable revenue with improving profitability indicates strong operational efficiency.",
+      "Significant margin expansion reflects better project execution and cost control.",
+      "Low debt levels provide financial stability.",
+      "Dependence on government projects may lead to revenue variability."
+    ]
   },
-  {
-    "id": 70,
-    "name": "Inkel Limited Unlisted Shares",
-    "price": 24,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image68.png"
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 74, "fy23": 73, "fy24": 65, "fy25": 60 },
+      { "label": "CWIP", "fy22": 1.2, "fy23": 18, "fy24": 2, "fy25": 5 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 18, "fy25": 16 },
+      { "label": "Trade Receivables", "fy22": 76, "fy23": 100, "fy24": 95, "fy25": 140 },
+      { "label": "Inventory", "fy22": 0.48, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Assets", "fy22": 317, "fy23": 260, "fy24": 274, "fy25": 234.92 },
+      { "label": "Total Assets", "fy22": 468.68, "fy23": 451, "fy24": 454, "fy25": 456 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 177.81, "fy23": 177, "fy24": 177.81, "fy25": 177.8 },
+      { "label": "Reserves", "fy22": 34, "fy23": 27, "fy24": 38, "fy25": 58 },
+      { "label": "Borrowings", "fy22": 148, "fy23": 130, "fy24": 118, "fy25": 97 },
+      { "label": "Trade Payables", "fy22": 36, "fy23": 33, "fy24": 30, "fy25": 37 },
+      { "label": "Other Liabilities", "fy22": 73, "fy23": 84, "fy24": 90.19, "fy25": 86.2 },
+      { "label": "Total Liabilities", "fy22": 468.81, "fy23": 451, "fy24": 454, "fy25": 456 }
+    ],
+    "insights": "The balance sheet remains stable with moderate assets and declining borrowings. The company shows improving reserves and controlled leverage, indicating disciplined financial management."
   },
+
+  "liabilitiesBreakdown": "Liabilities are primarily composed of borrowings and operational payables. Debt levels have been gradually reducing, improving financial stability.",
+
+  "balanceSheetInsights": "Inkel maintains a stable balance sheet with low growth in assets but improving capital structure. Reduced debt and stable reserves support long-term sustainability.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 58.59, "fy23": 9.81, "fy24": 24, "fy25": 17 },
+      { "label": "Investing Cash Flow", "fy22": -12, "fy23": -12.72, "fy24": 21, "fy25": 8 },
+      { "label": "Financing Cash Flow", "fy22": -32.01, "fy23": -17.02, "fy24": -28, "fy25": -1 }
+    ],
+    "insights": [
+      "Operating cash flow remains positive but volatile.",
+      "Investment activity reflects moderate capital allocation.",
+      "Financing cash flow indicates gradual debt reduction.",
+      "Cash position remains stable overall."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "Inkel Limited is promoted by the Government of Kerala along with private sector participation, focusing on infrastructure development.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Integrated Registry Management Services",
+    "website": ""
+  },
+
+  "managementInsight": "Strong government backing provides credibility and project pipeline visibility. Execution efficiency and diversification beyond government contracts will be key growth drivers.",
+
+  "faq": [
+    {
+      "question": "How to buy Inkel Limited unlisted shares?",
+      "answer": "You can purchase Inkel Limited shares through brokers dealing in unlisted shares after completing KYC formalities."
+    },
+    {
+      "question": "What is the lot size of Inkel Limited shares?",
+      "answer": "The minimum lot size is 1000 shares."
+    },
+    {
+      "question": "Is Inkel Limited a government company?",
+      "answer": "Yes, it is a public-private partnership initiative promoted by the Government of Kerala."
+    },
+    {
+      "question": "Is investing in Inkel Limited risky?",
+      "answer": "Risks include dependency on government projects and moderate growth pace, but low debt provides stability."
+    },
+    {
+      "question": "Is buying unlisted shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares is legal under SEBI regulations."
+    }
+  ],
+
+  "status": "upcoming"
+},
   {
     "id": 71,
     "name": "Innov8 Workspaces India Limited",
