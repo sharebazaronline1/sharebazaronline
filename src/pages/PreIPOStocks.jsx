@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import { supabase } from "../lib/supabase";
-import { fetchPreIPOs } from "../api/mockApi";   // ← Your mock API
+import { fetchPreIPODetails } from "../api/mockApi";   // ← Updated API
 
 const ITEMS_PER_PAGE = 10;
 
@@ -19,10 +19,10 @@ const PreIPOStocks = () => {
     const load = async () => {
       setLoading(true);
 
-      // 1. Get all mock data (for logos, minLotSize, etc.)
-      const mockData = await fetchPreIPOs();
+      // Get detailed data
+      const detailedData = await fetchPreIPODetails();
 
-      // 2. Get latest prices from Supabase
+      // Get latest prices from Supabase
       const { data: dbData, error } = await supabase
         .from("pre_ipo_companies")
         .select("name, price");
@@ -31,21 +31,21 @@ const PreIPOStocks = () => {
         console.error("Error fetching prices from DB:", error);
       }
 
-      // 3. Merge: Use mock data as base, but override price from DB
-      const merged = mockData.map((mock) => {
-        const dbItem = dbData?.find((db) => db.name === mock.name);
+      // Merge data and map required fields
+      const merged = detailedData.map((item) => {
+        const dbItem = dbData?.find((db) => db.name === item.name);
+
         return {
-          ...mock,
-          price: dbItem ? Number(dbItem.price) : mock.price || 0,   // ← Price from Supabase
+          ...item,
+          price: dbItem ? Number(dbItem.price) : item.price || 0,
+          // Extract from shareDetails for table display
+          minLotSize: item.shareDetails?.lotSize || item.lotSize || "-",
+          depository: item.shareDetails?.depository || item.depository || "-",
         };
       });
 
-      const upcoming = merged.filter(
-        (item) => item?.status?.toLowerCase() === "upcoming"
-      );
-
-      setIPOs(upcoming);
-      setVisibleCount(upcoming.length);
+      setIPOs(merged);
+      setVisibleCount(merged.length);
       setLoading(false);
     };
 
@@ -93,7 +93,7 @@ const PreIPOStocks = () => {
 
   return (
     <div className="w-full ">
-      {/* BANNER - unchanged */}
+      {/* BANNER */}
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
           <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
@@ -108,7 +108,7 @@ const PreIPOStocks = () => {
 
       <div className="w-full max-w-none px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-          {/* Header - unchanged */}
+          {/* Header */}
           <div className="px-6 sm:px-8 py-6 bg-gradient-to-r from-gray-50 to-gray-100 border-b border-gray-200 text-center">
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
               Pre-IPO & Unlisted Shares
@@ -118,7 +118,7 @@ const PreIPOStocks = () => {
             </p>
           </div>
 
-          {/* TABLE - unchanged */}
+          {/* TABLE */}
           <div className="overflow-x-auto">
             <table className="w-full min-w-[900px]">
               <thead>
@@ -134,7 +134,26 @@ const PreIPOStocks = () => {
               <tbody className="divide-y">
                 {loading &&
                   Array.from({ length: ITEMS_PER_PAGE }).map((_, i) => (
-                    <tr key={i} className="animate-pulse"> {/* ... same loading rows ... */} </tr>
+                    <tr key={i} className="animate-pulse">
+                      <td className="px-6 py-4">
+                        <div className="flex items-center gap-3">
+                          <div className="w-12 h-12 bg-gray-200 rounded-xl" />
+                          <div className="h-4 bg-gray-200 rounded w-48" />
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        <div className="h-4 bg-gray-200 rounded w-16 mx-auto" />
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        <div className="h-4 bg-gray-200 rounded w-20 mx-auto" />
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        <div className="h-4 bg-gray-200 rounded w-24 mx-auto" />
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        <div className="h-8 bg-gray-200 rounded w-28 mx-auto" />
+                      </td>
+                    </tr>
                   ))}
 
                 {!loading &&
@@ -162,7 +181,7 @@ const PreIPOStocks = () => {
                       </td>
 
                       <td className="px-6 py-4 text-center">
-                        {ipo.minLotSize || "-"} shares
+                        {ipo.minLotSize || "-"} 
                       </td>
 
                       <td className="px-6 py-4 text-center">
@@ -194,7 +213,7 @@ const PreIPOStocks = () => {
             </table>
           </div>
 
-          {/* FOOTER - unchanged */}
+          {/* FOOTER */}
           {!loading && ipos.length > 0 && (
             <div className="px-6 py-4 bg-gray-50 border-t text-center text-xs sm:text-sm text-gray-600">
               Prices are indicative • Subject to availability • Contact for latest quotes

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FiSearch } from "react-icons/fi";
 import {
   fetchIPOs,
-  fetchPreIPOs,
+  fetchPreIPODetails,
   fetchBrokers,
   fetchBlogs,
   fetchUnlistedShares,
@@ -21,7 +21,7 @@ const GlobalSearch = () => {
     const fetchAllData = async () => {
       const [ipos, preIpos, brokers, blogs, unlistedShares] = await Promise.all([
         fetchIPOs(),
-        fetchPreIPOs(),
+        fetchPreIPODetails(),
         fetchBrokers(),
         fetchBlogs(),
       ]);

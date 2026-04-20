@@ -11,6 +11,8 @@ import {
   IndianRupee,
   Wallet,
   Factory,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import { fetchPreIPODetails } from "../api/mockApi";
 
@@ -40,50 +42,57 @@ const PreIPODetails = () => {
   const [data, setData] = useState(null);
   const navigate = useNavigate();
   const [showFullOverview, setShowFullOverview] = useState(false);
+  const [openFaqs, setOpenFaqs] = useState({});
 
   const formatKey = (key) =>
     key
       .replace(/([A-Z])/g, " $1")
       .replace(/^./, (str) => str.toUpperCase());
 
-  useEffect(() => {
-  const load = async () => {
-    const mockData = await fetchPreIPODetails();
-    const selected = mockData.find((x) => x.id === Number(id));
-
-    if (!selected) return;
-
-    const { data: dbData, error } = await supabase
-      .from("pre_ipo_companies")
-      .select("name, price");
-
-    if (error) console.error(error);
-
-   const normalize = (str) =>
-  str.toLowerCase().replace(/[^a-z0-9]/g, "");
-
-const dbItem = dbData?.find((d) =>
-  normalize(d.name).includes(normalize(selected.name)) ||
-  normalize(selected.name).includes(normalize(d.name))
-);
-
-    const updatedPrice = dbItem ? Number(dbItem.price) : selected.price;
-
-    const merged = {
-      ...selected,
-      price: updatedPrice,
-
-      shareDetails: {
-        ...selected.shareDetails,
-        indicativeUnlistedSharePrice: `₹${updatedPrice}`, // override here
-      },
-    };
-
-    setData(merged);
+  const toggleFaq = (index) => {
+    setOpenFaqs((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
   };
 
-  load();
-}, [id]);
+  useEffect(() => {
+    const load = async () => {
+      const mockData = await fetchPreIPODetails();
+      const selected = mockData.find((x) => x.id === Number(id));
+
+      if (!selected) return;
+
+      const { data: dbData, error } = await supabase
+        .from("pre_ipo_companies")
+        .select("name, price");
+
+      if (error) console.error(error);
+
+      const normalize = (str) =>
+        str.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+      const dbItem = dbData?.find((d) =>
+        normalize(d.name).includes(normalize(selected.name)) ||
+        normalize(selected.name).includes(normalize(d.name))
+      );
+
+      const updatedPrice = dbItem ? Number(dbItem.price) : selected.price;
+
+      const merged = {
+        ...selected,
+        price: updatedPrice,
+        shareDetails: {
+          ...selected.shareDetails,
+          indicativeUnlistedSharePrice: `₹${updatedPrice}`,
+        },
+      };
+
+      setData(merged);
+    };
+
+    load();
+  }, [id]);
 
   if (!data) {
     return (
@@ -131,44 +140,15 @@ const dbItem = dbData?.find((d) =>
           </div>
 
           {/* FULL-WIDTH sticky bar with integrated price */}
-          <div
-            className="
-              sticky
-              top-[72px] sm:top-[88px]
-              left-0 right-0
-              w-screen
-              rounded-lg
-              z-40
-              bg-blue-100 
-              shadow-lg
-            "
-          >
-            <div
-              className="
-                max-w-7xl
-                mx-auto
-                flex flex-col sm:flex-row
-                items-center justify-between
-                gap-4 py-4 px-4 sm:px-6 lg:px-8
-              "
-            >
+          <div className="sticky top-[72px] sm:top-[88px] left-0 right-0 w-screen rounded-lg z-40 bg-blue-100 shadow-lg">
+            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-4 sm:px-6 lg:px-8">
               <div className="flex items-center gap-4 text-blue-700 font-medium">
                 <span className="text-lg">Ready to invest in this opportunity? Apply now through our trusted platforms.</span>
               </div>
 
               <button
                 onClick={() => navigate('/login')}
-                className="
-                  px-10 py-4
-                  bg-green-600 text-white
-                  font-bold text-lg
-                  rounded-full
-                  shadow-2xl hover:shadow-xl
-                  hover:bg-green-700
-                  transform hover:-translate-y-1
-                  transition-all duration-200
-                  flex items-center gap-2 whitespace-nowrap
-                "
+                className="px-10 py-4 bg-green-600 text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-xl hover:bg-green-700 transform hover:-translate-y-1 transition-all duration-200 flex items-center gap-2 whitespace-nowrap"
               >
                 Buy Now @ ₹{displayPrice}
               </button>
@@ -176,7 +156,7 @@ const dbItem = dbData?.find((d) =>
           </div>
         </header>
 
-        {/* ================= 1. COMPANY OVERVIEW (Minimum 1000 words) ================= */}
+        {/* ================= 1. COMPANY OVERVIEW ================= */}
         <Card>
           <SectionHeader icon={Building2} title="About the Company" />
           <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed text-[15px]">
@@ -437,6 +417,35 @@ const dbItem = dbData?.find((d) =>
             {data.managementInsight || "Leadership strategy, vision, execution capability, and corporate governance overview."}
           </div>
         </Card>
+
+        {/* ================= FAQ SECTION ================= */}
+        {data.faq && data.faq.length > 0 && (
+          <section id="faq" className="bg-white p-6 rounded-xl border shadow-sm">
+            <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQ)</h2>
+            <div className="space-y-3">
+              {data.faq.map((item, index) => (
+                <div key={index} className="border rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex justify-between items-center px-4 py-3 text-left bg-gray-50 hover:bg-gray-100 transition"
+                  >
+                    <span className="font-medium text-gray-800">{item.question}</span>
+                    {openFaqs[index] ? (
+                      <ChevronUp size={20} className="text-gray-600" />
+                    ) : (
+                      <ChevronDown size={20} className="text-gray-600" />
+                    )}
+                  </button>
+                  {openFaqs[index] && (
+                    <div className="px-4 pb-4 pt-2 text-gray-700 text-sm md:text-base border-t">
+                      {item.answer}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* ================= BACK BUTTON ================= */}
         <div className="text-center pt-4">

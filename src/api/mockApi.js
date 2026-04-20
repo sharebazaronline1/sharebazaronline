@@ -13979,1390 +13979,6 @@ export const fetchIPOs = async () => {
 
   ]
 }
-export const fetchPreIPOs = async () => {
-  return [
-
-  {
-    "id": 1,
-    "name": "APL Metals Unlisted Shares",
-    "price": 12,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image1.png"
-  },
-  {
-    "id": 2,
-    "name": "ASK Investment Managers Limited",
-    "price": 945,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image2.png"
-  },
-  {
-    "id": 3,
-    "name": "Amol Minechem Limited",
-    "price": 900,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image3.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Anheuser-Busch InBev SABMiller India Limited",
-    "price": 495,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image4.png"
-  },
-  {
-    "id": 5,
-    "name": "Anugraha Valve Castings Limited ",
-    "price": 650,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image5.png"
-  },
-  {
-    "id": 6,
-    "name": "Apollo Fashion International Limited",
-    "price": 46,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image6.png"
-  },
-  {
-    "id": 7,
-    "name": "Apollo Green Energy Limited Unlisted Shares",
-    "price": 64,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image7.jpg"
-  },
-  {
-    "id": 8,
-    "name": "Arohan Financial Services Limited",
-    "price": 235,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image8.png"
-  },
-  {
-    "id": 9,
-    "name": "Assam Carbon Products Limited Unlisted Shares",
-    "price": 688,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image9.png"
-  },
-  {
-    "id": 10,
-    "name": "Axles India Limited Unlisted Shares",
-    "price": 844,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image10.jpg"
-  },
-  {
-    "id": 11,
-    "name": "BLSX Limited",
-    "price": 35,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image11.png"
-  },
-  {
-    "id": 12,
-    "name": "BVG India Limited Unlisted Share",
-    "price": 482,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image12.jpg"
-  },
-  {
-    "id": 13,
-    "name": "Bazar India Limited",
-    "price": 30,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image13.png"
-  },
-  {
-    "id": 14,
-    "name": "Bharat Hotels Limited",
-    "price": 438,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image14.jpg"
-  },
-  {
-    "id": 15,
-    "name": "Bharat Nidhi (Bharat Bank) Unlisted Shares",
-    "price": 14125,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image15.jpg"
-  },
-  {
-    "id": 16,
-    "name": "Bira 91 (B9 Beverages Limited)",
-    "price": 232,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image16.png"
-  },
-  {
-    "id": 17,
-    "name": "Boat Unlisted Share (Imagine Marketing)",
-    "price": 1438,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image17.jpg"
-  },
-  {
-    "id": 18,
-    "name": "Bolzen and Mutter Unlisted Share",
-    "price": 407,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image18.jpg"
-  },
-  {
-    "id": 19,
-    "name": "Bootes Impex Tech Ltd.",
-    "price": 1550,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image19.jpg"
-  },
-  {
-    "id": 20,
-    "name": "CSK Unlisted Shares",
-    "price": 268,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image20.jpg"
-  },
-  {
-    "id": 21,
-    "name": "Capgemini Technology Services India Limited Unlisted Shares",
-    "price": 13750,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image21.jpg"
-  },
-  {
-    "id": 22,
-    "name": "Care Health (Previously Religare Health) Insurance Company Limited Unlisted Shares",
-    "price": 185,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image22.png"
-  },
-  {
-    "id": 23,
-    "name": "Carrier Airconditioning & Refrigeration Limited Unlisted Shares",
-    "price": 657,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image23.png"
-  },
-  {
-    "id": 24,
-    "name": "Cheelizza Pizza Unlisted Shares",
-    "price": 83,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image24.jpg"
-  },
-  {
-    "id": 25,
-    "name": "Claps Oiltech Unlisted Share",
-    "price": 58,
-    "depository": "Only CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image25.png"
-  },
-  {
-    "id": 26,
-    "name": "Cochin International Airport Limited Unlisted Shares",
-    "price": 575,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image26.png"
-  },
-  {
-    "id": 27,
-    "name": "DANTECH DIGITAL DENTAL SOLUTIONS PRIVATE LIMITED",
-    "price": 563,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/dantech.png"
-  },
-  {
-    "id": 28,
-    "name": "Dalmia Bharat Refractories Limited Unlisted Shares",
-    "price": 275,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image27.jpg"
-  },
-  {
-    "id": 29,
-    "name": "Delta Galaxy Unlisted Shares",
-    "price": 57,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1200,
-    "status": "upcoming",
-    "logo": "/images/preipo/image28.jpg"
-  },
-  {
-    "id": 30,
-    "name": "Digvijay Finlease Unlisted Shares",
-    "price": 2188,
-    "depository": "NSDL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image29.jpg"
-  },
-  {
-    "id": 31,
-    "name": "Down Town Hospital Limited Unlisted Shares",
-    "price": 469,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image30.jpg"
-  },
-  {
-    "id": 32,
-    "name": "ESDS Unlisted Shares",
-    "price": 594,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image31.jpg"
-  },
-  {
-    "id": 33,
-    "name": "Ecosure Unlisted Shares",
-    "price": 65,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image32.jpg"
-  },
-  {
-    "id": 34,
-    "name": "Electrosteel Steels Limited Unlisted Shares",
-    "price": 48,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/electrosteel.png"
-  },
-  {
-    "id": 35,
-    "name": "Elofic Industries Limited Unlisted Shares",
-    "price": 4313,
-    "depository": "NSDL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image34.png"
-  },
-  {
-    "id": 36,
-    "name": "Empire Spices and Foods Limited Unlisted Shares",
-    "price": 719,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image35.png"
-  },
-  {
-    "id": 37,
-    "name": "Fino Paytech Limited Unlisted Shares",
-    "price": 138,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image36.png"
-  },
-  {
-    "id": 38,
-    "name": "Frick India Limited Unlisted Shares",
-    "price": 2500,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/frick.png"
-  },
-  {
-    "id": 39,
-    "name": "GFCL EV Products Limited",
-    "price": 58,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image38.jpg"
-  },
-  {
-    "id": 40,
-    "name": "GKN Driveline India Limited Unlisted Shares",
-    "price": 2157,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image39.jpg"
-  },
-  {
-    "id": 41,
-    "name": "GRE Renew Enertech Private Limited",
-    "price": 223,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 600,
-    "status": "upcoming",
-    "logo": "/images/preipo/image40.jpg"
-  },
-  {
-    "id": 42,
-    "name": "Goa Shipyard Limited Unlisted Shares",
-    "price": 4813,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/goashipyard.png"
-  },
-  {
-    "id": 43,
-    "name": "Goodluck Defence And Aerospace Unlisted Shares",
-    "price": 469,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image42.jpg"
-  },
-  {
-    "id": 44,
-    "name": "Goodluck Green Energy Limited",
-    "price": 170,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image42.jpg"
-  },
-  {
-    "id": 45,
-    "name": "Graand Prix Luxury Elevators Limited Unlisted Shares",
-    "price": 58,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image43.jpg"
-  },
-  {
-    "id": 46,
-    "name": "Greenzo Energy India Limited Unlisted Shares",
-    "price": 794,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image44.png"
-  },
-  {
-    "id": 47,
-    "name": "Gynofem Healthcare Unlisted Shares Price",
-    "price": 75,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image45.png"
-  },
-  {
-    "id": 48,
-    "name": "HCIN Networks Private Limited",
-    "price": 219,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 600,
-    "status": "upcoming",
-    "logo": "/images/preipo/image46.jpg"
-  },
-  {
-    "id": 49,
-    "name": "HDFC Securities Limited Unlisted Shares",
-    "price": 11563,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image47.png"
-  },
-  {
-    "id": 50,
-    "name": "Hella Infra Market Private Limited",
-    "price": 256250,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1,
-    "status": "upcoming",
-    "logo": "/images/preipo/image48.jpg"
-  },
-  {
-    "id": 51,
-    "name": "Hero Fincorp Limited Unlisted Shares",
-    "price": 1563,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image49.png"
-  },
-  {
-    "id": 52,
-    "name": "Hero motors Limited",
-    "price": 360,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image50.jpg"
-  },
-  {
-    "id": 53,
-    "name": "Hicks Thermometers India Limited Unlisted Shares",
-    "price": 2250,
-    "depository": "CDSL ONLY",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image51.jpg"
-  },
-  {
-    "id": 54,
-    "name": "Himalayan Heli Services",
-    "price": 219,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/HimalayanHeli.png"
-  },
-  {
-    "id": 55,
-    "name": "Hindon Mercantile Limited",
-    "price": 1094,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/hindonmercantile.png"
-  },
-  {
-    "id": 56,
-    "name": "Hindustan Power Exchange Limited (HPX India)",
-    "price": 42,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image54.jpg"
-  },
-  {
-    "id": 57,
-    "name": "Hindustan Times Unlisted Shares",
-    "price": 1188,
-    "depository": "NSDL ONLY",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image55.png"
-  },
-  {
-    "id": 58,
-    "name": "Hindusthan Engineering & Industries Limited Unlisted Shares",
-    "price": 1469,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image56.jpg"
-  },
-  {
-    "id": 59,
-    "name": "Hive Hostels",
-    "price": 3000,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image57.jpg"
-  },
-  {
-    "id": 60,
-    "name": "Honeywell Electrical Devices and Systems India Unlisted Shares",
-    "price": 10625,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image58.png"
-  },
-  {
-    "id": 61,
-    "name": "House of Kieraya Limited (Furlenco)",
-    "price": 235,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image59.jpg"
-  },
-  {
-    "id": 62,
-    "name": "ICEX (Indian Commodity Exchange) Limited Unlisted Shares",
-    "price": 5,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image60.png"
-  },
-  {
-    "id": 63,
-    "name": "ICL Fincorp Limited Unlisted Shares",
-    "price": 32,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image61.png"
-  },
-  {
-    "id": 64,
-    "name": "Imperative Business Ventures Limited",
-    "price": 175,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image62.jpg"
-  },
-  {
-    "id": 65,
-    "name": "Incred Holdings Limited Unlisted Shares",
-    "price": 207,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image63.png"
-  },
-  {
-    "id": 66,
-    "name": "India Carbon Limited Unlisted Shares",
-    "price": 1119,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image64.jpg"
-  },
-  {
-    "id": 67,
-    "name": "India Exposition Mart Ltd Unlisted Share",
-    "price": 157,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image65.jpg"
-  },
-  {
-    "id": 68,
-    "name": "Indian Potash Limited Unlisted Share",
-    "price": 4063,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image66.png"
-  },
-  {
-    "id": 69,
-    "name": "Indofil Industries Limited Unlisted Shares",
-    "price": 2119,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image67.png"
-  },
-  {
-    "id": 70,
-    "name": "Inkel Limited Unlisted Shares",
-    "price": 24,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image68.png"
-  },
-  {
-    "id": 71,
-    "name": "Innov8 Workspaces India Limited",
-    "price": 73,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image69.jpg"
-  },
-  {
-    "id": 72,
-    "name": "Inox Clean Energy Limited",
-    "price": 994,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image70.jpg"
-  },
-  {
-    "id": 73,
-    "name": "Inox Leasing and Finance Limited Unlisted Shares",
-    "price": 20625,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image71.jpg"
-  },
-  {
-    "id": 74,
-    "name": "Inox Renewable Solutions Limited",
-    "price": 719,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image72.jpg"
-  },
-  {
-    "id": 75,
-    "name": "Insolare Energy Unlisted Shares",
-    "price": 248,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image73.jpg"
-  },
-  {
-    "id": 76,
-    "name": "Jupiter International Limited",
-    "price": 444,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image74.png"
-  },
-  {
-    "id": 77,
-    "name": "KLM Axiva Finvest Unlisted Shares Price",
-    "price": 23,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 2000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image75.png"
-  },
-  {
-    "id": 78,
-    "name": "KURLON Enterprise Limited Unlisted Shares",
-    "price": 563,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image76.jpg"
-  },
-  {
-    "id": 79,
-    "name": "Kanara Consumer Products (Formerly Kurl-on Limited) Unlisted Shares",
-    "price": 1282,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image77.png"
-  },
-  {
-    "id": 80,
-    "name": "Kannur International Airport Limited Unlisted Shares",
-    "price": 163,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image78.png"
-  },
-  {
-    "id": 81,
-    "name": "Kineco Limited Unlisted Share",
-    "price": 4375,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image79.png"
-  },
-  {
-    "id": 82,
-    "name": "LAVA International Limited Unlisted Shares",
-    "price": 48,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image80.png"
-  },
-  {
-    "id": 83,
-    "name": "Lakeshore Hospital Unlisted Share Price",
-    "price": 144,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image81.png"
-  },
-  {
-    "id": 84,
-    "name": "Lords Mark Industries Limited",
-    "price": 100,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image82.jpg"
-  },
-  {
-    "id": 85,
-    "name": "Machint Solutions Limited",
-    "price": 335,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image83.jpg"
-  },
-  {
-    "id": 86,
-    "name": "Madbow Ventures Unlisted Shares",
-    "price": 44,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image84.png"
-  },
-  {
-    "id": 87,
-    "name": "Madhur Iron and Steel (India)",
-    "price": 173,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image85.jpg"
-  },
-  {
-    "id": 88,
-    "name": "Maharaja Shree Umaid Mills Unlisted Shares",
-    "price": 169,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image86.png"
-  },
-  {
-    "id": 89,
-    "name": "Maharashtra Knowledge Corporation (MKCL) Limited Unlisted Shares",
-    "price": 544,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image87.png"
-  },
-  {
-    "id": 90,
-    "name": "Manipal Payment & Identity Solutions Ltd (Manipal Cards)",
-    "price": 544,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image88.png"
-  },
-  {
-    "id": 91,
-    "name": "Manjushree Technopack India Limited Unlisted Shares",
-    "price": 1282,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/Manjushree.png"
-  },
-  {
-    "id": 92,
-    "name": "Market Simplified Unlisted Shares Price",
-    "price": 43,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image90.jpg"
-  },
-  {
-    "id": 93,
-    "name": "Martin and Harris Laboratories Limited Unlisted Shares",
-    "price": 1188,
-    "depository": "NSDL Only",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image91.jpg"
-  },
-  {
-    "id": 94,
-    "name": "Matrix Gas And Renewables Unlisted Shares",
-    "price": 38,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image92.png"
-  },
-  {
-    "id": 95,
-    "name": "Maverick Simulation Solutions Limited",
-    "price": 2750,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image93.png"
-  },
-  {
-    "id": 96,
-    "name": "Maxvalue Credits and Investments Unlisted Shares",
-    "price": 6,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image94.jpg"
-  },
-  {
-    "id": 97,
-    "name": "Merino Industries Limited Unlisted Shares",
-    "price": 3969,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image95.jpg"
-  },
-  {
-    "id": 98,
-    "name": "Metropolitan Stock Exchange (MSEI) Unlisted Shares",
-    "price": 4,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image96.png"
-  },
-  {
-    "id": 99,
-    "name": "Midland Micro Finance Limited Unlisted Shares",
-    "price": 244,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image97.jpg"
-  },
-  {
-    "id": 100,
-    "name": "Milton Cycle Industries Limited Unlisted Shares",
-    "price": 244,
-    "depository": "NSDL ONLY",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image98.jpg"
-  },
-  {
-    "id": 101,
-    "name": "Mohan Meakin Limited Unlisted Shares",
-    "price": 2657,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image99.jpg"
-  },
-  {
-    "id": 102,
-    "name": "Motilal Oswal Home Finance Limited Unlisted Shares",
-    "price": 17,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 2000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image100.jpg"
-  },
-  {
-    "id": 103,
-    "name": "NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares",
-    "price": 285,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image101.png"
-  },
-  {
-    "id": 104,
-    "name": "NCL Holdings Unlisted Shares",
-    "price": 160,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image102.jpg"
-  },
-  {
-    "id": 105,
-    "name": "NSE India Limited Unlisted Shares",
-    "price": 2438,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/NSE.png"
-  },
-  {
-    "id": 106,
-    "name": "National Commodity & Derivatives Exchange (NCDEX) Limited Unlisted Shares",
-    "price": 600,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image104.jpg"
-  },
-  {
-    "id": 107,
-    "name": "National E-Repository Limited (NeRL)",
-    "price": 78,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 2000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image105.png"
-  },
-  {
-    "id": 108,
-    "name": "Nilliampathy Tea & Produce Company Limites Unlisted Shares",
-    "price": 687,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image107.jpg"
-  },
-  {
-    "id": 109,
-    "name": "ORAVEL STAYS LIMITED (Oyo Unlisted Shares)",
-    "price": 37,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image106.jpg"
-  },
-  {
-    "id": 110,
-    "name": "ORBIS FINANCIAL CORPORATION Unlisted Shares",
-    "price": 582,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image107.jpg"
-  },
-  {
-    "id": 111,
-    "name": "Onix Renewable Limited",
-    "price": 95,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image108.jpg"
-  },
-  {
-    "id": 112,
-    "name": "Otis Elevator (India) Limited Unlisted Shares",
-    "price": 4688,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image109.png"
-  },
-  {
-    "id": 113,
-    "name": "PNB Finance & Industries Limited Unlisted Shares",
-    "price": 14375,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image110.jpg"
-  },
-  {
-    "id": 114,
-    "name": "Parag Parikh Financial Advisory Services Ltd. (PPFAS)",
-    "price": 20313,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image111.jpg"
-  },
-  {
-    "id": 115,
-    "name": "Parry Agro Industries Limited Unlisted Shares",
-    "price": 1500,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image112.png"
-  },
-  {
-    "id": 116,
-    "name": "Paymate India Limited",
-    "price": 619,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/Paymate.png"
-  },
-  {
-    "id": 117,
-    "name": "PharmEasy Unlisted Shares",
-    "price": 9,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image114.png"
-  },
-  {
-    "id": 118,
-    "name": "Polymatech Unlisted Shares",
-    "price": 88,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image115.png"
-  },
-  {
-    "id": 119,
-    "name": "Power Exchange India Limited (PXIL)",
-    "price": 732,
-    "depository": "Only NSDL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image116.jpg"
-  },
-  {
-    "id": 120,
-    "name": "RKB Global Limited",
-    "price": 150,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image117.jpg"
-  },
-  {
-    "id": 121,
-    "name": "RRP S4E innovation Unlisted Shares Price",
-    "price": 388,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 400,
-    "status": "upcoming",
-    "logo": "/images/preipo/image118.png"
-  },
-  {
-    "id": 122,
-    "name": "Ramaraju Surgical Cotton Mills Limited Unlisted Shares",
-    "price": 357,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/RamarajuSurgical.png"
-  },
-  {
-    "id": 123,
-    "name": "Raviraj Process Control Ltd",
-    "price": 107,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 2000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image120.jpg"
-  },
-  {
-    "id": 124,
-    "name": "Resin & Plastic Limited Unlisted Shares",
-    "price": 619,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image121.png"
-  },
-  {
-    "id": 125,
-    "name": "Roop Telsonic Ultrasonix Limited Unlisted Shares",
-    "price": 235,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image122.png"
-  },
-  {
-    "id": 126,
-    "name": "Roots Multiclean Limited Unlisted Share",
-    "price": 5000,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/Roots.png"
-  },
-  {
-    "id": 127,
-    "name": "Royalcare Super Speciality Hospitals",
-    "price": 178,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image124.png"
-  },
-  {
-    "id": 128,
-    "name": "S3V Vascular Technologies Limited",
-    "price": 438,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image125.png"
-  },
-  {
-    "id": 129,
-    "name": "SBI Mutual Fund Unlisted Shares",
-    "price": 3369,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image126.png"
-  },
-  {
-    "id": 130,
-    "name": "SMILE Microfinance Unlisted Shares",
-    "price": 103,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image127.jpg"
-  },
-  {
-    "id": 131,
-    "name": "San Engineering and Locomotive Company Limited Unlisted Shares",
-    "price": 1063,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image128.jpg"
-  },
-  {
-    "id": 132,
-    "name": "Schneider Electric President Systems Unlisted Shares",
-    "price": 1563,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image129.png"
-  },
-  {
-    "id": 133,
-    "name": "Shivchem Agro Limited",
-    "price": 90,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1600,
-    "status": "upcoming",
-    "logo": "/images/preipo/image130.png"
-  },
-  {
-    "id": 134,
-    "name": "Sigachi Laboratories Limited Unlisted Shares",
-    "price": 65,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image131.jpg"
-  },
-  {
-    "id": 135,
-    "name": "Signify Innovations (Previously Phillips Lighting) India Limited Unlisted Shares",
-    "price": 1438,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image132.jpg"
-  },
-  {
-    "id": 136,
-    "name": "Skyways Air Services Limited",
-    "price": 194,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image133.png"
-  },
-  {
-    "id": 137,
-    "name": "Spencer and Company Limited Unlisted Shares",
-    "price": 1349,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/Spencer.png"
-  },
-  {
-    "id": 138,
-    "name": "Spray Engineering Devices Unlisted Shares",
-    "price": 335,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image134.png"
-  },
-  {
-    "id": 139,
-    "name": "Sri Vishnu Shankar Mill Limited Unlisted Shares",
-    "price": 532,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image135.jpg"
-  },
-  {
-    "id": 140,
-    "name": "Srichakra Cement Limited Unlisted Shares",
-    "price": 87,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/Srichakra.png"
-  },
-  {
-    "id": 141,
-    "name": "Sterlite Electric Limited (formerly Sterlite Power) Unlisted Shares",
-    "price": 619,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image136.png"
-  },
-  {
-    "id": 142,
-    "name": "Sterlite Grid 5 Unlisted Shares",
-    "price": 407,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/sterlitegrid.png"
-  },
-  {
-    "id": 143,
-    "name": "TRL Krosaki Refractories Limited Unlisted Shares",
-    "price": 2313,
-    "depository": "NSDL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/Krosaki.png"
-  },
-  {
-    "id": 144,
-    "name": "Tea Time Unlisted Shares",
-    "price": 45,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image139.jpg"
-  },
-  {
-    "id": 145,
-    "name": "Ticker Limited",
-    "price": 43,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image140.png"
-  },
-  {
-    "id": 146,
-    "name": "Transline Technologies Limited",
-    "price": 175,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image141.jpg"
-  },
-  {
-    "id": 147,
-    "name": "Urban Tots Unlisted Shares",
-    "price": 78,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image142.png"
-  },
-  {
-    "id": 148,
-    "name": "Usha Shriram Unlisted Share",
-    "price": 244,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image143.png"
-  },
-  {
-    "id": 149,
-    "name": "Utkarsh Micro Finance(Core Invest) Unlisted Shares",
-    "price": 244,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image144.jpg"
-  },
-  {
-    "id": 150,
-    "name": "VCI Chemicals Industries",
-    "price": 79,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image145.jpg"
-  },
-  {
-    "id": 151,
-    "name": "Veeda Clinical Research Limited",
-    "price": 575,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image146.png"
-  },
-  {
-    "id": 152,
-    "name": "XtraNet Technologies Pvt. Ltd.",
-    "price": 219,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 2500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image147.png"
-  },
-  {
-    "id": 153,
-    "name": "Zak Venture Ltd",
-    "price": 207,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image148.png"
-  } 
-  ];
-};
-
-
 
 export const fetchUnlisted = async () => {
   return [
@@ -16492,7 +15108,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
   "id": 7,
   "name": "Apollo Green Energy Limited",
   "price": 64,
-  "logo": "/images/preipo/image7.png",
+  "logo": "/images/preipo/image7.jpg",
 
   "overview": `Apollo Green Energy Limited (AGEL) is a prominent player in India's renewable energy sector. Incorporated in 1994, it is part of the diversified Apollo Group. The company specializes in solar power, wind energy, energy storage solutions, and comprehensive renewable energy projects. It focuses on developing, owning, and operating green energy assets with a strong emphasis on sustainability and long-term value creation.`,
 
@@ -17411,7 +16027,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
   "id": 14,
   "name": "Bharat Hotels Limited",
   "price": 375,
-  "logo": "/images/preipo/image14.png",
+  "logo": "/images/preipo/image14.jpg",
 
   "overview": "Bharat Hotels Limited, operating under 'The Lalit' brand, is a leading luxury hospitality company in India. Established in 1981, it owns and manages luxury hotels, resorts, and palaces across India and internationally. The company has shown a strong post-COVID recovery with significant improvement in revenue and profitability driven by travel demand revival.",
 
@@ -19367,7 +17983,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
   "id": 29,
   "name": "Delta Galaxy Unlisted Shares",
   "price": 42,
-  "logo": "/images/preipo/image28.png",
+  "logo": "/images/preipo/image28.jpg",
 
   "overview": `Delta Galaxy Limited is engaged in the business of construction, infrastructure development, real estate, and related activities. The company is involved in civil construction, project development, and allied services. It has shown significant revenue growth in recent years while improving profitability.`,
 
@@ -20326,7 +18942,3676 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
   "managementInsight": "Focus on quality, product innovation, expanding distribution network, and maintaining strong presence in the competitive Indian spices market."
 },
+ {
+  "id": 38,
+  "name": "Frick India Limited",
+  "price": 1825,
+  "logo": "/images/preipo/frick.png",
 
+  "overview": `Frick India Limited is a leading manufacturer of refrigeration and air conditioning equipment in India. The company specializes in industrial refrigeration systems, compressors, cooling towers, and cold chain solutions. With a strong legacy, it serves various industries including food processing, pharmaceuticals, dairy, beverages, and cold storage.`,
+
+  "products": [
+    "Industrial Refrigeration Systems",
+    "Refrigeration Compressors",
+    "Cooling Towers",
+    "Evaporative Condensers",
+    "Cold Storage Solutions",
+    "Ice Making Machines"
+  ],
+
+  "manufacturingUnits": [
+    "Faridabad, Haryana"
+  ],
+
+  "clients": [
+    "Food Processing Industries",
+    "Pharmaceutical Companies",
+    "Dairy & Beverage Sector",
+    "Cold Chain & Logistics Companies"
+  ],
+
+  "shareDetails": {
+    "companyName": "Frick India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹1825",
+    "marketCapitalization": "₹1095 Crore",
+    "lotSize": "10 Shares",
+    "52WeekHigh": "₹3100",
+    "52WeekLow": "₹1825",
+    "faceValue": "₹10",
+    "bookValue": "₹112.57",
+    "peRatio": "31.28",
+    "pbRatio": "3.44",
+    "debtToEquity": "0.02",
+    "returnOnEquity": "11.57",
+    "totalOutstandingShares": "5999880",
+    "isin": "INE0DDH01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACF010C",
+    "cin": "L74999HR1962PLC003618",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Frick India has shown healthy revenue growth and strong profitability improvement over the years. The company maintains a very low debt profile and consistent profit margins, reflecting strong operational efficiency in the industrial refrigeration sector.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 260, "fy23": 363, "fy24": 448, "fy25": 437 },
+      { "label": "EBITDA", "fy22": 19, "fy23": 36, "fy24": 48, "fy25": 41 },
+      { "label": "PBT", "fy22": 22, "fy23": 38, "fy24": 53, "fy25": 48 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 17, "fy23": 28, "fy24": 82, "fy25": 85 },
+      { "label": "EPS", "fy22": 283.53, "fy23": 466.67, "fy24": 700, "fy25": 99.32 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 8.79, "fy23": 9.92, "fy24": 9.58, "fy25": 9.38 },
+      { "label": "Net Profit Margin (%)", "fy22": 6.07, "fy23": 7.71, "fy24": 8.75, "fy25": 8.01 },
+      { "label": "EPS (₹)", "fy22": 283.53, "fy23": 466.67, "fy24": 700, "fy25": 99.32 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth and improving profitability.",
+      "Extremely low debt (Debt to Equity 0.02).",
+      "Consistent operating margins.",
+      "Well-established player in industrial refrigeration with stable demand."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 9, "fy23": 10, "fy24": 11, "fy25": 20 },
+      { "label": "Investments", "fy22": 28, "fy23": 81, "fy24": 42, "fy25": 87 },
+      { "label": "Trade Receivables", "fy22": 76, "fy23": 88, "fy24": 113, "fy25": 109 },
+      { "label": "Inventory", "fy22": 61, "fy23": 90, "fy24": 88, "fy25": 84 },
+      { "label": "Other Assets", "fy22": 118, "fy23": 130, "fy24": 135, "fy25": 152.8 },
+      { "label": "Total Assets", "fy22": 200, "fy23": 347, "fy24": 389, "fy25": 413 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 0.6, "fy23": 0.6, "fy24": 0.6, "fy25": 5.9 },
+      { "label": "Reserves", "fy22": 203, "fy23": 281, "fy24": 275, "fy25": 302 },
+      { "label": "Borrowings", "fy22": 15, "fy23": 17, "fy24": 21, "fy25": 7 },
+      { "label": "Trade Payables", "fy22": 18, "fy23": 21, "fy24": 26, "fy25": 21 },
+      { "label": "Other Liabilities", "fy22": 58.4, "fy23": 77.4, "fy24": 76.4, "fy25": 77.1 },
+      { "label": "Total Liabilities", "fy22": 200, "fy23": 347, "fy24": 389, "fy25": 413 }
+    ],
+    "insights": "Extremely low debt and strong reserve growth."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio is only 0.02. Very healthy and almost debt-free balance sheet.",
+
+  "balanceSheetInsights": "Strong financial position with high reserves and minimal leverage.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Positive operating cash flows supporting steady growth.",
+      "Low capex requirements with stable working capital management."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with decades of experience in refrigeration engineering.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Refrigeration & Engineering Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focus on technological advancement, expanding product portfolio, and maintaining leadership in the industrial refrigeration and cold chain segment in India."
+},
+ {
+  "id": 39,
+  "name": "GFCL EV Products Limited",
+  "price": 42,
+  "logo": "/images/preipo/image38.jpg",
+
+  "overview": `GFCL EV Products Limited is a wholly owned subsidiary of Gujarat Fluorochemicals Limited (GFCL). The company is engaged in the manufacturing of advanced materials for lithium-ion batteries and other EV components. It is currently in the aggressive capacity expansion phase to support India's electric vehicle and energy storage ambitions.`,
+
+  "products": [
+    "Lithium-ion Battery Materials",
+    "EV Battery Electrolytes",
+    "Cathode & Anode Materials",
+    "Specialty Fluorochemicals for EV",
+    "Battery Chemicals"
+  ],
+
+  "manufacturingUnits": [
+    "Dahej, Gujarat"
+  ],
+
+  "clients": [
+    "EV Battery Manufacturers",
+    "Automotive OEMs"
+  ],
+
+  "shareDetails": {
+    "companyName": "GFCL EV Products Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹42",
+    "marketCapitalization": "₹310.26 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹54",
+    "52WeekLow": "₹42",
+    "faceValue": "₹10",
+    "bookValue": "2.05",
+    "peRatio": "N/A",
+    "pbRatio": "20.49",
+    "debtToEquity": "0.00",
+    "returnOnEquity": "-1.79",
+    "totalOutstandingShares": "7387115.432",
+    "isin": "INE0DDH01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AAJCG5460K",
+    "cin": "U24296GJ2022PLC127819",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "GFCL EV Products is in the early investment and commissioning phase. Revenue has grown sharply in FY25, but the company continues to report significant losses due to heavy depreciation, finance costs, and pre-operative expenses typical for large-scale EV battery material projects.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 0, "fy24": 37, "fy25": 944 },
+      { "label": "EBITDA", "fy23": -315, "fy24": -177, "fy25": -2779 },
+      { "label": "PBT", "fy23": -315, "fy24": -362, "fy25": -3203 },
+      { "label": "Net Profit / Loss (PAT)", "fy23": -274, "fy24": -300, "fy25": -2700 },
+      { "label": "EPS", "fy23": -0.01, "fy24": 0, "fy25": -0.04 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": "-", "fy24": "-478.38", "fy25": "-294.39" },
+      { "label": "Net Profit Margin (%)", "fy23": "-", "fy24": "-810.81", "fy25": "-286.02" }
+    ],
+
+    "investorInsight": [
+      "Sharp revenue ramp-up in FY25 indicates project execution progress.",
+      "Heavy losses expected due to high capex and pre-operative costs.",
+      "Zero debt with strong parent company backing.",
+      "Positioned for long-term growth in India's EV battery ecosystem."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 0, "fy24": 44114, "fy25": 48042 },
+      { "label": "CWIP", "fy23": 32443, "fy24": 17740, "fy25": 57682.5 },
+      { "label": "Investments", "fy23": 0, "fy24": 167, "fy25": 18834 },
+      { "label": "Trade Receivables", "fy23": 0, "fy24": 40, "fy25": 982 },
+      { "label": "Inventory", "fy23": 0, "fy24": 3503, "fy25": 13182 },
+      { "label": "Other Assets", "fy23": 12037, "fy24": 15874, "fy25": 27779.5 },
+      { "label": "Total Assets", "fy23": 44480, "fy24": 81438, "fy25": 166502 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 39299.8, "fy24": 70752.6, "fy25": 73035.52 },
+      { "label": "Reserves", "fy23": -316, "fy24": -676, "fy25": 7814.2 },
+      { "label": "Borrowings", "fy23": 1132, "fy24": 4522, "fy25": 0 },
+      { "label": "Trade Payables", "fy23": 103, "fy24": 2115, "fy25": 4436 },
+      { "label": "Other Liabilities", "fy23": 4261.2, "fy24": 4724.4, "fy25": 10888.48 },
+      { "label": "Total Liabilities", "fy23": 44480, "fy24": 81438, "fy25": 166502 }
+    ],
+    "insights": "Massive capital expenditure in progress. Balance sheet expanding rapidly with equity infusion and asset creation."
+  },
+
+  "liabilitiesBreakdown": "Debt-free as of FY25. Funded primarily through equity from parent company.",
+
+  "balanceSheetInsights": "Strong equity base with negligible debt. Heavy investment in CWIP and fixed assets for future growth.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow from Operations", "fy23": -4353, "fy24": -6085, "fy25": -15448 },
+      { "label": "Cash Flow from Investing", "fy23": -31935, "fy24": -28771, "fy25": -61206 },
+      { "label": "Cash Flow from Financing", "fy23": 36262, "fy24": 34730, "fy25": 77154 },
+      { "label": "Net Cash Generated", "fy23": -26, "fy24": -126, "fy25": 500 }
+    ],
+    "insights": [
+      "Heavy negative cash flow from investing due to plant and machinery purchases.",
+      "Financing activities supported by equity infusion and borrowings.",
+      "Company is cash negative due to large-scale project execution."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "100%", "institutional": "0%", "public": "0%" }
+  ],
+
+  "promotersManagement": "100% subsidiary of Gujarat Fluorochemicals Limited (GFCL).",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Chemicals & New Energy Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focus on rapid execution of manufacturing facilities and becoming a strategic supplier in India's EV battery value chain with full support from GFCL.",
+
+  "faq": [
+    {
+      "question": "What is the core business of GFCL EV Products?",
+      "answer": "Manufacturing of lithium-ion battery materials, electrolytes, and other critical components for electric vehicles."
+    },
+    {
+      "question": "Why is the company reporting heavy losses?",
+      "answer": "The company is in the investment phase with massive capex. High depreciation and pre-operative expenses are causing losses, which is normal for new projects in the EV sector."
+    },
+    {
+      "question": "Who owns GFCL EV Products Limited?",
+      "answer": "It is a 100% subsidiary of Gujarat Fluorochemicals Limited (GFCL)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "1000 shares."
+    },
+    {
+      "question": "Is this a high-risk high-reward investment?",
+      "answer": "Yes. High growth potential due to EV boom, but execution risk exists as the company is still building its manufacturing facilities."
+    },
+    {
+      "question": "What is the current status of the project?",
+      "answer": "Significant progress in FY25 with sharp revenue increase. Major capacity is under construction."
+    }
+  ]
+},
+ {
+  "id": 40,
+  "name": "GKN Driveline India Limited",
+  "price": 1725,
+  "logo": "/images/preipo/image39.jpg",
+
+  "overview": `GKN Driveline India Limited is a leading manufacturer of driveline components and systems for the automotive industry in India. The company is a subsidiary of GKN Automotive, a global leader in driveline technology. It specializes in manufacturing constant velocity joints (CVJ), propeller shafts, and other transmission components for passenger vehicles, commercial vehicles, and off-highway applications.`,
+
+  "products": [
+    "Constant Velocity Joints (CVJ)",
+    "Propeller Shafts",
+    "Drive Shafts",
+    "Transmission Components",
+    "Automotive Driveline Systems"
+  ],
+
+  "manufacturingUnits": [
+    "Chennai, Tamil Nadu",
+    "Other facilities in India"
+  ],
+
+  "clients": [
+    "Major Indian & Global Automotive OEMs",
+    "Passenger Vehicle Manufacturers",
+    "Commercial Vehicle Manufacturers"
+  ],
+
+  "shareDetails": {
+    "companyName": "GKN Driveline India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹1725",
+    "marketCapitalization": "₹2203 Crore",
+    "lotSize": "25 Shares",
+    "52WeekHigh": "₹1850",
+    "52WeekLow": "₹1725",
+    "faceValue": "₹10",
+    "bookValue": "62.42",
+    "peRatio": "22.72",
+    "pbRatio": "42.38",
+    "debtToEquity": "0.00",
+    "returnOnEquity": "217",
+    "totalOutstandingShares": "12773041",
+    "isin": "INE0DDH01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACG2798B",
+    "cin": "U74999HR1985PLC0256079",
+    "rta": "MCS Share Transfer Agent"
+  },
+
+  "financials": {
+    "annualReportSummary": "GKN Driveline India has shown steady revenue growth with strong profitability. The company maintains a debt-free balance sheet and healthy margins, reflecting stable performance in the automotive driveline segment.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 853, "fy23": 989, "fy24": 1052, "fy25": 1092 },
+      { "label": "EBITDA", "fy22": 130, "fy23": 140, "fy24": 151, "fy25": 167 },
+      { "label": "PBT", "fy22": 86, "fy23": 105, "fy24": 116, "fy25": 130 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 73, "fy23": 79, "fy24": 88, "fy25": 97 },
+      { "label": "EPS", "fy22": 51.97, "fy23": 61.42, "fy24": 67.72, "fy25": 76.38 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 15.24, "fy23": 14.15, "fy24": 14.35, "fy25": 15.29 },
+      { "label": "Net Profit Margin (%)", "fy22": 8.56, "fy23": 7.99, "fy24": 8.37, "fy25": 8.88 }
+    ],
+
+    "investorInsight": [
+      "Consistent revenue and profit growth.",
+      "Debt-free balance sheet with strong ROE.",
+      "Stable margins in the automotive component sector.",
+      "Beneficiary of rising vehicle production in India."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 263, "fy23": 266, "fy24": 259, "fy25": 258 },
+      { "label": "CWIP", "fy22": 2, "fy23": 9, "fy24": 10, "fy25": 18 },
+      { "label": "Trade Receivables", "fy22": 100, "fy23": 94, "fy24": 122, "fy25": 138 },
+      { "label": "Inventory", "fy22": 87, "fy23": 88, "fy24": 100, "fy25": 98.5 },
+      { "label": "Other Assets", "fy22": 180, "fy23": 85, "fy24": 170, "fy25": 112.5 },
+      { "label": "Total Assets", "fy22": 652, "fy23": 642, "fy24": 681, "fy25": 625 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 12.7, "fy23": 12.7, "fy24": 12.7, "fy25": 12.7 },
+      { "label": "Reserves", "fy22": 293, "fy23": 283, "fy24": 288, "fy25": 32 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 162, "fy23": 162, "fy24": 195, "fy25": 184 },
+      { "label": "Other Liabilities", "fy22": 184.3, "fy23": 184.3, "fy24": 185.3, "fy25": 296.3 },
+      { "label": "Total Liabilities", "fy22": 652, "fy23": 642, "fy24": 681, "fy25": 625 }
+    ],
+    "insights": "Debt-free balance sheet with stable asset base."
+  },
+
+  "liabilitiesBreakdown": "Zero borrowings. Extremely strong and debt-free financial position.",
+
+  "balanceSheetInsights": "Healthy reserves and negligible debt. Strong equity cushion.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow from Operations", "fy22": 130.9, "fy23": 93, "fy24": 113, "fy25": 108 },
+      { "label": "Cash Flow from Investing", "fy22": -1, "fy23": -41, "fy24": -38.8, "fy25": -30 },
+      { "label": "Cash Flow from Financing", "fy22": -80, "fy23": -188, "fy24": -2, "fy25": -133 }
+    ],
+    "insights": [
+      "Strong and consistent operating cash flows.",
+      "Debt-free status provides excellent financial flexibility."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (GKN Group)", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Subsidiary of GKN Automotive (UK) with strong global technical and financial support.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Automotive Driveline Industry" }
+  ],
+
+  "rta": {
+    "registrar": "MCS Share Transfer Agent",
+    "website": "https://www.mcsregistrars.com/"
+  },
+
+  "managementInsight": "Focus on technological excellence, quality manufacturing, and expanding presence in the growing Indian automotive driveline market with global GKN standards.",
+
+  "faq": [
+    {
+      "question": "What does GKN Driveline India manufacture?",
+      "answer": "Constant Velocity Joints (CVJ), propeller shafts, and other driveline components for automobiles."
+    },
+    {
+      "question": "Who owns GKN Driveline India Limited?",
+      "answer": "It is a subsidiary of GKN Automotive, a global leader in driveline technology."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "25 shares."
+    },
+    {
+      "question": "Is the company debt-free?",
+      "answer": "Yes, GKN Driveline India maintains a zero-debt balance sheet."
+    },
+    {
+      "question": "What is the outlook for the company?",
+      "answer": "Positive, due to rising vehicle production in India and strong parent company support."
+    },
+    {
+      "question": "When is the expected listing?",
+      "answer": "No official IPO announcement has been made yet."
+    }
+  ]
+},
+  {
+  "id": 41,
+  "name": "GRE Renew Enertech Limited",
+  "price": 223,
+  "logo": "/images/preipo/image40.jpg",
+
+  "overview": `GRE Renew Enertech Limited is a growing renewable energy company engaged in solar EPC projects, manufacturing of solar modules, and energy-efficient LED lighting solutions. The company provides complete solar power solutions and is benefiting from India's strong push towards renewable energy.`,
+
+  "products": [
+    "Solar Modules & Panels",
+    "Solar EPC Projects",
+    "Rooftop & Ground Mount Solar Systems",
+    "LED Lighting Products",
+    "Solar Inverters & Batteries"
+  ],
+
+  "manufacturingUnits": [
+    "Gujarat, India"
+  ],
+
+  "clients": [
+    "Industrial & Commercial Clients",
+    "Government & PSU Projects",
+    "Residential & Institutional Customers"
+  ],
+
+  "shareDetails": {
+    "companyName": "GRE Renew Enertech Limited",
+    "indicativeUnlistedSharePrice": "₹223",
+    "marketCapitalization": "Approx ₹300 Crore",
+    "lotSize": "600 Shares",
+    "52WeekHigh": "₹250",
+    "52WeekLow": "₹180",
+    "faceValue": "₹10",
+    "bookValue": "49.54",
+    "peRatio": "22-25",
+    "pbRatio": "4.5",
+    "debtToEquity": "0.15",
+    "returnOnEquity": "26.9",
+    "totalOutstandingShares": "Approx 1.4 Crore",
+    "isin": "INE0U8P01015",
+    "depository": "NSDL & CDSL",
+    "pan": "AADCG3041P",
+    "cin": "U31100GJ2008PLC055304",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "GRE Renew Enertech has shown strong revenue growth in the solar sector. The company maintains healthy profitability with improving operational efficiency.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 52, "fy24": 90, "fy25": 84 },
+      { "label": "Net Profit / Loss (PAT)", "fy23": "-", "fy24": "7.03", "fy25": "-" }
+    ],
+
+    "keyRatios": [
+      { "label": "ROE (%)", "fy23": "-", "fy24": "26.9", "fy25": "-" }
+    ],
+
+    "investorInsight": [
+      "Strong growth in solar EPC and module business.",
+      "Benefiting from national solar energy targets.",
+      "Healthy return ratios."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 2.66, "fy23": 3.20, "fy24": 5.33, "fy25": 15.53 },
+      { "label": "CWIP", "fy22": 0.00, "fy23": 0.00, "fy24": 1.53, "fy25": 1.78 },
+      { "label": "Investments", "fy22": 0.11, "fy23": 0.11, "fy24": 9.04, "fy25": 1.76 },
+      { "label": "Other Assets", "fy22": 48.88, "fy23": 45.81, "fy24": 31.08, "fy25": 27.35 },
+      { "label": "Total Assets", "fy22": 51.65, "fy23": 49.12, "fy24": 45.46, "fy25": 42.77 }
+    ],
+    "liabilities": [
+      { "label": "Equity Capital", "fy22": 1.25, "fy23": 1.25, "fy24": 10.52, "fy25": 10.52 },
+      { "label": "Reserves", "fy22": 9.89, "fy23": 19.78, "fy24": 26.71, "fy25": 24.70 },
+      { "label": "Borrowings", "fy22": 4.75, "fy23": 4.57, "fy24": 1.59, "fy25": 1.44 },
+      { "label": "Other Liabilities", "fy22": 35.76, "fy23": 23.52, "fy24": 12.64, "fy25": 6.11 },
+      { "label": "Total Liabilities", "fy22": 51.65, "fy23": 49.12, "fy24": 45.46, "fy25": 42.77 }
+    ],
+    "insights": "Balance sheet shows steady growth in fixed assets and CWIP due to capacity expansion."
+  },
+
+  "liabilitiesBreakdown": "Low debt levels. Equity has increased significantly.",
+
+  "balanceSheetInsights": "Healthy financial position with controlled borrowings and growing net worth.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy23": -2.87, "fy24": 5.81, "fy25": 10.06 },
+      { "label": "Cash from Investing Activities", "fy23": 5.87, "fy24": -0.83, "fy25": -10.32 },
+      { "label": "Cash from Financing Activities", "fy23": -3.34, "fy24": 4.80, "fy25": -0.05 },
+      { "label": "Net Cash Flow", "fy23": -0.34, "fy24": 9.78, "fy25": -0.31 }
+    ],
+    "insights": [
+      "Positive operating cash flow in recent periods.",
+      "Investing activities reflect ongoing capacity expansion.",
+      "Financing mix includes equity infusion and debt repayment."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "95.06%", "institutional": "Low", "public": "4.94%" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with strong focus on solar and renewable energy.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Renewable Energy & Solar Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Strategy focused on scaling solar manufacturing and EPC business to capitalize on India's renewable energy growth.",
+
+  "faq": [
+    {
+      "question": "What is the main business of GRE Renew Enertech?",
+      "answer": "Solar EPC projects, solar module manufacturing, and LED lighting solutions."
+    },
+    {
+      "question": "What is the current share price?",
+      "answer": "₹223 (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "600 shares."
+    },
+    {
+      "question": "Is the company listed?",
+      "answer": "Recently listed on BSE SME platform."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Very positive due to strong government support for solar energy."
+    }
+  ]
+},
+  
+ {
+  "id": 42,
+  "name": "Goa Shipyard Limited",
+  "price": 2825,
+  "logo": "/images/preipo/goashipyard.png",
+
+  "overview": `Goa Shipyard Limited is a premier shipbuilding company in India, engaged in the design, construction, and repair of naval and commercial vessels. It is a Mini-Ratna Category I Public Sector Undertaking (PSU) under the Ministry of Defence. The company specializes in building advanced warships, offshore patrol vessels, and commercial ships for the Indian Navy, Coast Guard, and international clients.`,
+
+  "products": [
+    "Naval Warships",
+    "Offshore Patrol Vessels",
+    "Missile Boats",
+    "Commercial Vessels",
+    "Ship Repairs & Refits",
+    "Advanced Defence Platforms"
+  ],
+
+  "manufacturingUnits": [
+    "Vasco da Gama, Goa (Main Shipyard)"
+  ],
+
+  "clients": [
+    "Indian Navy",
+    "Indian Coast Guard",
+    "Ministry of Defence",
+    "International Navies"
+  ],
+
+  "shareDetails": {
+    "companyName": "Goa Shipyard Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹2825",
+    "marketCapitalization": "₹22883 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹4000",
+    "52WeekLow": "₹2400",
+    "faceValue": "₹10",
+    "bookValue": "139.51",
+    "peRatio": "113.77",
+    "pbRatio": "20.32",
+    "debtToEquity": "0.00",
+    "returnOnEquity": "17.83",
+    "totalOutstandingShares": "11600000",
+    "isin": "INE0DDH01021",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACG7559F",
+    "cin": "U63032GA1984GOI000079",
+    "rta": "Purva Sharegistry (India) Pvt Ltd"
+  },
+
+  "financials": {
+    "annualReportSummary": "Goa Shipyard has demonstrated robust growth with revenue more than tripling from ₹740 Cr in FY22 to ₹2851 Cr in FY25. Profitability has improved significantly with strong order execution from defence contracts. The company maintains a debt-free balance sheet and healthy margins.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 740, "fy23": 869, "fy24": 1753, "fy25": 2851 },
+      { "label": "EBITDA", "fy22": 71, "fy23": 90, "fy24": 102, "fy25": 121 },
+      { "label": "PBT", "fy22": 185, "fy23": 204, "fy24": 364, "fy25": 379 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 101, "fy23": 154, "fy24": 271, "fy25": 289 },
+      { "label": "EPS", "fy22": 8.68, "fy23": 13.23, "fy24": 23.28, "fy25": 24.83 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 9.59, "fy23": 10.36, "fy24": 5.82, "fy25": 4.26 },
+      { "label": "Net Profit Margin (%)", "fy22": 13.65, "fy23": 17.72, "fy24": 15.46, "fy25": 10.14 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth driven by defence orders.",
+      "Debt-free balance sheet with healthy profitability.",
+      "Key player in India's naval shipbuilding program.",
+      "Consistent order book visibility as a Mini-Ratna PSU."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 754, "fy23": 972, "fy24": 1034, "fy25": 972 },
+      { "label": "CWIP", "fy22": 333, "fy23": 110, "fy24": 5, "fy25": 13 },
+      { "label": "Trade Receivables", "fy22": 180, "fy23": 169, "fy24": 188, "fy25": 61 },
+      { "label": "Inventory", "fy22": 48, "fy23": 51, "fy24": 369, "fy25": 71 },
+      { "label": "Other Assets", "fy22": 3634, "fy23": 4768, "fy24": 5505, "fy25": 5576 },
+      { "label": "Total Assets", "fy22": 4759, "fy23": 6131, "fy24": 7116, "fy25": 7580 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 58.2, "fy23": 58.2, "fy24": 58.2, "fy25": 58.2 },
+      { "label": "Reserves", "fy22": 1091, "fy23": 1189, "fy24": 1580, "fy25": 1563 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 271, "fy23": 413, "fy24": 480, "fy25": 554 },
+      { "label": "Other Liabilities", "fy22": 3338.8, "fy23": 4470.8, "fy24": 4997.8, "fy25": 5404.8 },
+      { "label": "Total Liabilities", "fy22": 4759, "fy23": 6131, "fy24": 7116, "fy25": 7580 }
+    ],
+    "insights": "Debt-free balance sheet with strong reserves growth."
+  },
+
+  "liabilitiesBreakdown": "Zero borrowings. Extremely strong financial position with high reserves.",
+
+  "balanceSheetInsights": "Very healthy and debt-free balance sheet backed by strong government support as a Defence PSU.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash Flow from Operations", "fy22": 577, "fy23": 1075, "fy24": 538, "fy25": -724 },
+      { "label": "Cash Flow from Investing", "fy22": -13, "fy23": -280, "fy24": -38.8, "fy25": -19 },
+      { "label": "Cash Flow from Financing", "fy22": -91, "fy23": -58, "fy24": -77, "fy25": -101 }
+    ],
+    "insights": [
+      "Strong operating cash flows in most years.",
+      "Low capex relative to operations.",
+      "Debt-free status maintained consistently."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "100% (Government of India)", "institutional": "0%", "public": "0%" }
+  ],
+
+  "promotersManagement": "Wholly owned by the Government of India under Ministry of Defence.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Defence Shipbuilding" }
+  ],
+
+  "rta": {
+    "registrar": "Purva Sharegistry (India) Pvt Ltd",
+    "website": "https://www.purvashare.com/"
+  },
+
+  "managementInsight": "Focus on timely delivery of naval vessels, modernization of facilities, and strengthening India's maritime defence capabilities as a key Defence PSU.",
+
+  "faq": [
+    {
+      "question": "What does Goa Shipyard Limited do?",
+      "answer": "It builds and repairs naval warships, offshore patrol vessels, and commercial ships for the Indian Navy and Coast Guard."
+    },
+    {
+      "question": "Is Goa Shipyard a government company?",
+      "answer": "Yes, it is a Mini-Ratna Category I PSU under the Ministry of Defence."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "100 shares."
+    },
+    {
+      "question": "Is the company debt-free?",
+      "answer": "Yes, Goa Shipyard maintains a zero-debt balance sheet."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Strong, driven by increasing defence spending and focus on indigenization under Atmanirbhar Bharat."
+    },
+    {
+      "question": "When is the expected IPO?",
+      "answer": "No official IPO date has been announced yet."
+    }
+  ]
+},
+ {
+  "id": 43,
+  "name": "Goodluck Defence And Aerospace Limited",
+  "price": 312,
+  "logo": "/images/preipo/image42.jpg",
+
+  "overview": `Goodluck Defence And Aerospace Limited is a wholly owned subsidiary of Goodluck India Limited. The company is engaged in the manufacturing of high-precision forged, machined, and metallurgically treated components for defence and aerospace applications. It is rapidly building capabilities to support India's Atmanirbhar Bharat initiative in defence manufacturing.`,
+
+  "products": [
+    "Defence Forged Components",
+    "Aerospace Precision Parts",
+    "Artillery & Ammunition Components",
+    "High-Strength Metal Forgings",
+    "Specialized Machined Parts for Defence"
+  ],
+
+  "manufacturingUnits": [
+    "Ghaziabad / Uttar Pradesh"
+  ],
+
+  "clients": [
+    "Indian Defence Forces",
+    "Defence PSUs",
+    "Aerospace & Defence OEMs"
+  ],
+
+  "shareDetails": {
+    "companyName": "Goodluck Defence And Aerospace Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹312",
+    "marketCapitalization": "₹1532 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹395",
+    "52WeekLow": "₹240",
+    "faceValue": "₹10",
+    "bookValue": "₹37.49",
+    "peRatio": "394.54",
+    "pbRatio": "8.32",
+    "debtToEquity": "0.72",
+    "returnOnEquity": "2.23",
+    "totalOutstandingShares": "49110000",
+    "isin": "INE0S7401019",
+    "depository": "NSDL & CDSL",
+    "pan": "AAKCG6927D",
+    "cin": "U24103UP2023PLC188289",
+    "rta": "M/s Nivesh Corporate LLP"
+  },
+
+  "financials": {
+    "annualReportSummary": "Goodluck Defence is in the early operational phase. Revenue has started coming in FY25. The company is investing heavily in capacity building for defence forging. Profitability is improving with strong parent support.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy24": 0, "fy25": 6.99 },
+      { "label": "EBITDA", "fy24": -0.43, "fy25": 0 },
+      { "label": "PBT", "fy24": 2.60, "fy25": 5.25 },
+      { "label": "Net Profit / Loss (PAT)", "fy24": 1.84, "fy25": 3.88 },
+      { "label": "EPS", "fy24": 0.37, "fy25": 0.79 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy24": "-", "fy25": "-" },
+      { "label": "Net Profit Margin (%)", "fy24": "-", "fy25": "-" }
+    ],
+
+    "investorInsight": [
+      "Early-stage revenue generation in defence sector.",
+      "Heavy investment phase for future growth.",
+      "Strong parent company (Goodluck India) backing.",
+      "High growth potential in defence indigenization."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy24": 16.6, "fy25": 18.7 },
+      { "label": "CWIP", "fy24": 3.64, "fy25": 212 },
+      { "label": "Investments", "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy24": 0, "fy25": 0 },
+      { "label": "Inventory", "fy24": 0, "fy25": 138 },
+      { "label": "Other Assets", "fy24": 150.8, "fy25": 98.12 },
+      { "label": "Total Assets", "fy24": 171, "fy25": 326 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy24": 49.11, "fy25": 49.11 },
+      { "label": "Reserves", "fy24": 121.03, "fy25": 125 },
+      { "label": "Borrowings", "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy24": 0, "fy25": 0.34 },
+      { "label": "Other Liabilities", "fy24": 0.86, "fy25": 26.75 },
+      { "label": "Total Liabilities", "fy24": 171, "fy25": 326 }
+    ],
+    "insights": "Significant CWIP buildup for new defence manufacturing plant."
+  },
+
+  "liabilitiesBreakdown": "Almost debt-free with strong equity infusion from parent company.",
+
+  "balanceSheetInsights": "Rapid asset expansion driven by heavy capital expenditure in defence facilities.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy24": -46.68, "fy25": -27 },
+      { "label": "Cash from Investing Activities", "fy24": -20.3, "fy25": -208 },
+      { "label": "Cash from Financing Activities", "fy24": 168.1, "fy25": 125 }
+    ],
+    "insights": [
+      "Negative operating cash flow due to pre-operative expenses.",
+      "Heavy investing outflow for plant & machinery.",
+      "Financing through equity infusion from parent."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "100%", "institutional": "0%", "public": "0%" }
+  ],
+
+  "promotersManagement": "100% subsidiary of Goodluck India Limited.",
+
+  "management": [
+    { "name": "Mahesh Chandra Garg", "role": "Director", "experience": "20+ Years" },
+    { "name": "Ramesh Chandra Garg", "role": "Director", "experience": "20+ Years" }
+  ],
+
+  "rta": {
+    "registrar": "M/s Nivesh Corporate LLP",
+    "website": ""
+  },
+
+  "managementInsight": "Aggressive focus on setting up state-of-the-art defence forging facilities to meet rising demand from Indian Armed Forces.",
+
+  "faq": [
+    {
+      "question": "What does Goodluck Defence manufacture?",
+      "answer": "High-precision forged and machined components for defence and aerospace applications."
+    },
+    {
+      "question": "Who owns the company?",
+      "answer": "It is a 100% subsidiary of Goodluck India Limited."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "100 shares."
+    },
+    {
+      "question": "What is the current indicative price?",
+      "answer": "₹312 per share."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Very strong due to India's focus on defence indigenization."
+    }
+  ]
+},
+ {
+  "id": 44,
+  "name": "Goodluck Green Energy Limited",
+  "price": 128,
+  "logo": "/images/preipo/image42.jpg",
+
+  "overview": `Goodluck Green Energy Limited is a wholly owned subsidiary of Goodluck India Limited, focused on green energy solutions, solar power projects, and renewable energy initiatives. The company is in the early stage of operations with plans for large-scale solar and green hydrogen related projects.`,
+
+  "products": [
+    "Solar Power Projects",
+    "Green Energy Solutions",
+    "Renewable Energy Systems",
+    "Solar EPC Services"
+  ],
+
+  "manufacturingUnits": [
+    "Upcoming Facilities in India"
+  ],
+
+  "clients": [
+    "Industrial Clients",
+    "Government & PSU Projects"
+  ],
+
+  "shareDetails": {
+    "companyName": "Goodluck Green Energy Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹128",
+    "marketCapitalization": "₹1143 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹175",
+    "52WeekLow": "₹128",
+    "faceValue": "₹10",
+    "bookValue": "12.95",
+    "peRatio": "N/A",
+    "pbRatio": "9.88",
+    "debtToEquity": "0.00",
+    "returnOnEquity": "1.46",
+    "totalOutstandingShares": "92393550",
+    "isin": "INE4Z701011",
+    "depository": "NSDL & CDSL",
+    "pan": "AAKCG6927D",
+    "cin": "UA3299UP2024PTC1956449",
+    "rta": "Nivesh Corporate LLP"
+  },
+
+  "financials": {
+    "annualReportSummary": "Goodluck Green Energy is in the initial investment and project development phase. Revenue is yet to scale up significantly. The company reported small losses in FY24 due to pre-operative expenses, with improvement visible in FY25.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy24": 0, "fy25": 0 },
+      { "label": "EBITDA", "fy24": -0.12, "fy25": -0.5 },
+      { "label": "PBT", "fy24": -0.12, "fy25": 259 },
+      { "label": "Net Profit / Loss (PAT)", "fy24": -0.12, "fy25": 176 },
+      { "label": "EPS", "fy24": -1.2, "fy25": 0.41 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy24": "-", "fy25": "-" },
+      { "label": "Net Profit Margin (%)", "fy24": "-", "fy25": "-" }
+    ],
+
+    "investorInsight": [
+      "Early-stage green energy company with strong parent backing.",
+      "Significant CWIP buildup indicating large upcoming projects.",
+      "Potential high growth in solar and renewable energy sector."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy24": 0, "fy25": 0 },
+      { "label": "CWIP", "fy24": 0, "fy25": 766 },
+      { "label": "Other Assets", "fy24": 1, "fy25": 11277 },
+      { "label": "Total Assets", "fy24": 1, "fy25": 12043 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy24": 1, "fy25": 424.36 },
+      { "label": "Reserves", "fy24": -0.12, "fy25": 7740 },
+      { "label": "Other Liabilities", "fy24": 0.12, "fy25": 88.65 },
+      { "label": "Total Liabilities", "fy24": 1, "fy25": 12043 }
+    ],
+    "insights": "Massive equity infusion and CWIP creation for upcoming green energy projects."
+  },
+
+  "liabilitiesBreakdown": "Virtually debt-free with strong equity funding from parent company.",
+
+  "balanceSheetInsights": "Rapid balance sheet expansion due to heavy investment in renewable energy projects.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy24": -0.12, "fy25": -339.5 },
+      { "label": "Cash from Investing Activities", "fy24": 0, "fy25": -766 },
+      { "label": "Cash from Financing Activities", "fy24": 0, "fy25": 11779.3 },
+      { "label": "Net Cash Generated", "fy24": -0.12, "fy25": 3966.5 }
+    ],
+    "insights": [
+      "Heavy investing outflow for project development.",
+      "Strong financing inflow through equity from parent."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "100%", "institutional": "0%", "public": "0%" }
+  ],
+
+  "promotersManagement": "100% subsidiary of Goodluck India Limited.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Renewable Energy Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Nivesh Corporate LLP",
+    "website": ""
+  },
+
+  "managementInsight": "Focus on developing large-scale solar and green energy projects with strong technical and financial support from the parent company.",
+
+  "faq": [
+    {
+      "question": "What is the business of Goodluck Green Energy?",
+      "answer": "Solar power projects, renewable energy solutions, and green energy initiatives."
+    },
+    {
+      "question": "Who owns the company?",
+      "answer": "It is a 100% subsidiary of Goodluck India Limited."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "1000 shares."
+    },
+    {
+      "question": "What is the current indicative price?",
+      "answer": "₹128 per share."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Very positive due to India's massive renewable energy targets."
+    }
+  ]
+},
+{
+  "id": 45,
+  "name": "Graand Prix Luxury Elevators Limited",
+  "price": 46,
+  "logo": "/images/preipo/image43.jpg",
+
+  "overview": `Graand Prix Luxury Elevators Limited is a premium elevator manufacturing company specializing in luxury passenger elevators, home lifts, hospital elevators, and high-speed elevators. The company focuses on elegant design, advanced safety features, and superior quality for residential, commercial, and hospitality projects.`,
+
+  "products": [
+    "Luxury Passenger Elevators",
+    "Home Lifts & Villa Elevators",
+    "Hospital Elevators",
+    "High-Speed Elevators",
+    "Panoramic Glass Elevators",
+    "Escalators & Moving Walks"
+  ],
+
+  "manufacturingUnits": [
+    "Manufacturing Facility in India"
+  ],
+
+  "clients": [
+    "Luxury Real Estate Developers",
+    "Premium Hotels & Resorts",
+    "High-End Residential Projects",
+    "Commercial & Office Complexes"
+  ],
+
+  "shareDetails": {
+    "companyName": "Graand Prix Luxury Elevators Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹46",
+    "marketCapitalization": "₹0 (Newly Incorporated)",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹55",
+    "52WeekLow": "₹46",
+    "faceValue": "₹10",
+    "bookValue": "N/A",
+    "peRatio": "N/A",
+    "pbRatio": "N/A",
+    "debtToEquity": "N/A",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "0",
+    "isin": "INE0QEY01018",
+    "depository": "NSDL & CDSL",
+    "pan": "AACCG1284F",
+    "cin": "U43291MH2023PLC402779",
+    "rta": "N/A"
+  },
+
+  "financials": {
+    "annualReportSummary": "Graand Prix Luxury Elevators is a newly incorporated company. Financial data is not yet available as the company is in the initial setup and project execution phase.",
+
+    "incomeStatement": [],
+
+    "keyRatios": [],
+
+    "investorInsight": [
+      "Newly established premium elevator manufacturer.",
+      "Focus on luxury and high-end segment.",
+      "Growing demand from real estate sector.",
+      "Early-stage company with expansion plans."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [],
+    "liabilities": [],
+    "insights": "Company is in the initial phase with limited financial data available."
+  },
+
+  "liabilitiesBreakdown": "Financial details yet to be disclosed.",
+
+  "balanceSheetInsights": "Newly incorporated company. Balance sheet details will be available after first full year of operations.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flow data not available as the company is newly incorporated."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with expertise in elevator manufacturing.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Elevator & Engineering Industry" }
+  ],
+
+  "rta": {
+    "registrar": "N/A",
+    "website": ""
+  },
+
+  "managementInsight": "Focus on delivering luxury elevators with international design standards, safety, and quality for premium real estate projects.",
+
+  "faq": [
+    {
+      "question": "What does Graand Prix Luxury Elevators specialize in?",
+      "answer": "Manufacturing of luxury passenger elevators, home lifts, and high-end vertical transportation solutions."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹46 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "1000 shares."
+    },
+    {
+      "question": "Is the company new?",
+      "answer": "Yes, it is a newly incorporated company with limited financial history."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Positive due to rising demand for luxury real estate and premium infrastructure."
+    }
+  ]
+},
+  {
+  "id": 46,
+  "name": "Greenzo Energy India Limited",
+  "price": 595,
+  "logo": "/images/preipo/image44.png",
+
+  "overview": `Greenzo Energy India Limited is a renewable energy company engaged in solar power generation, solar EPC projects, and green energy solutions. The company focuses on developing solar power plants and providing clean energy solutions to industrial, commercial, and utility-scale clients.`,
+
+  "products": [
+    "Solar Power Plants",
+    "Solar EPC Services",
+    "Renewable Energy Solutions",
+    "Solar Module Installation",
+    "Green Energy Projects"
+  ],
+
+  "manufacturingUnits": [
+    "Gujarat, India"
+  ],
+
+  "clients": [
+    "Industrial Clients",
+    "Commercial Establishments",
+    "Utility-Scale Projects"
+  ],
+
+  "shareDetails": {
+    "companyName": "Greenzo Energy India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹595",
+    "marketCapitalization": "₹925 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹675",
+    "52WeekLow": "₹595",
+    "faceValue": "₹10",
+    "bookValue": "63.04",
+    "peRatio": "601.01",
+    "pbRatio": "9.46",
+    "debtToEquity": "0.00",
+    "returnOnEquity": "1.46",
+    "totalOutstandingShares": "15572425",
+    "isin": "INE0GAI01013",
+    "depository": "NSDL & CDSL",
+    "pan": "AAKCG1558H",
+    "cin": "U29309GJ2022PLC407203",
+    "rta": "Maashita Securities"
+  },
+
+  "financials": {
+    "annualReportSummary": "Greenzo Energy India has shown steady revenue growth. The company is in the growth phase with improving profitability and strong focus on solar project execution.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy24": 14.8, "fy25": 15.88 },
+      { "label": "EBITDA", "fy24": 1.27, "fy25": 0.98 },
+      { "label": "PBT", "fy24": 1.31, "fy25": 1.38 },
+      { "label": "Net Profit / Loss (PAT)", "fy24": 0.83, "fy25": 1.16 },
+      { "label": "EPS", "fy24": 0.91, "fy25": 1.16 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy24": 8.58, "fy25": 6.14 },
+      { "label": "Net Profit Margin (%)", "fy24": 5.61, "fy25": 7.31 }
+    ],
+
+    "investorInsight": [
+      "Steady growth in solar energy segment.",
+      "Debt-free balance sheet.",
+      "Improving profitability and margins.",
+      "Well-positioned in India's renewable energy boom."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy24": 8.76, "fy25": 10.2 },
+      { "label": "CWIP", "fy24": 1.31, "fy25": 10.6 },
+      { "label": "Investments", "fy24": 0, "fy25": 0.56 },
+      { "label": "Trade Receivables", "fy24": 12.6, "fy25": 18 },
+      { "label": "Inventory", "fy24": 0.09, "fy25": 0 },
+      { "label": "Other Assets", "fy24": 68.04, "fy25": 28.86 },
+      { "label": "Total Assets", "fy24": 84, "fy25": 82 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy24": 10.93, "fy25": 11.85 },
+      { "label": "Reserves", "fy24": 0.27, "fy25": 65.6 },
+      { "label": "Borrowings", "fy24": 0.51, "fy25": 0 },
+      { "label": "Trade Payables", "fy24": 8.3, "fy25": 3.4 },
+      { "label": "Other Liabilities", "fy24": 19.26, "fy25": 1.15 },
+      { "label": "Total Liabilities", "fy24": 84, "fy25": 82 }
+    ],
+    "insights": "Debt-free balance sheet with strong reserve growth."
+  },
+
+  "liabilitiesBreakdown": "Zero debt. Strong equity position.",
+
+  "balanceSheetInsights": "Healthy financial position with minimal leverage and growing reserves.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy24": -5.89, "fy25": -64.56 },
+      { "label": "Cash from Investing Activities", "fy24": -5.3, "fy25": -15.39 },
+      { "label": "Cash from Financing Activities", "fy24": 54.88, "fy25": 20.18 }
+    ],
+    "insights": [
+      "Negative operating cash flow due to working capital changes.",
+      "Financing activities supported by equity infusion."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with expertise in renewable energy.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Renewable Energy Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Maashita Securities",
+    "website": "https://www.maashitasecurities.com/"
+  },
+
+  "managementInsight": "Focus on expanding solar project portfolio, improving operational efficiency, and contributing to India's renewable energy targets.",
+
+  "faq": [
+    {
+      "question": "What is the main business of Greenzo Energy India?",
+      "answer": "Solar power generation, solar EPC projects, and renewable energy solutions."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹595 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "100 shares."
+    },
+    {
+      "question": "Is the company debt-free?",
+      "answer": "Yes, it maintains a very low debt profile."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Positive, due to strong government support for solar energy in India."
+    }
+  ]
+},
+  {
+  "id": 47,
+  "name": "Gynofem Healthcare Limited",
+  "price": 60,
+  "logo": "/images/preipo/image45.png",
+
+  "overview": `Gynofem Healthcare Limited is a pharmaceutical company specializing in women's healthcare products. The company manufactures and markets a range of gynecological, maternal nutrition, and fertility products. It focuses on providing high-quality, affordable healthcare solutions for women, particularly in maternal care, hormonal health, and nutritional supplements.`,
+
+  "products": [
+    "Gynecological Medicines",
+    "Maternal Nutrition Supplements",
+    "Fertility Support Products",
+    "Hormonal Health Formulations",
+    "Women's Wellness Products"
+  ],
+
+  "manufacturingUnits": [
+    "Manufacturing Facility in India"
+  ],
+
+  "clients": [
+    "Pharmacies & Distributors",
+    "Hospitals & Clinics",
+    "Gynecologists & Physicians"
+  ],
+
+  "shareDetails": {
+    "companyName": "Gynofem Healthcare Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹60",
+    "marketCapitalization": "₹0 (Newly Incorporated)",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹75",
+    "52WeekLow": "₹48",
+    "faceValue": "₹10",
+    "bookValue": "N/A",
+    "peRatio": "N/A",
+    "pbRatio": "N/A",
+    "debtToEquity": "N/A",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "0",
+    "isin": "INE0NLL01017",
+    "depository": "NSDL & CDSL",
+    "pan": "AAGCG141F",
+    "cin": "N/A",
+    "rta": "N/A"
+  },
+
+  "financials": {
+    "annualReportSummary": "Gynofem Healthcare is a newly incorporated company. Detailed financial performance data is currently not available as the company is in the early stages of operations.",
+
+    "incomeStatement": [],
+
+    "keyRatios": [],
+
+    "investorInsight": [
+      "Specialized focus on women's healthcare segment.",
+      "Growing demand for maternal and gynecological products.",
+      "Early-stage company with expansion potential.",
+      "Strong management team with relevant industry experience."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [],
+    "liabilities": [],
+    "insights": "Financial details are not yet available as the company is newly incorporated."
+  },
+
+  "liabilitiesBreakdown": "Financial data not disclosed.",
+
+  "balanceSheetInsights": "Company is in the initial setup phase.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flow information not available at present."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with experienced directors in the pharmaceutical sector.",
+
+  "management": [
+    { "name": "Nishi Kant Joshi", "role": "Director", "experience": "10+ Years" },
+    { "name": "Anurag Mendhe", "role": "Director", "experience": "10+ Years" },
+    { "name": "Kartikay Joshi", "role": "Director", "experience": "10+ Years" }
+  ],
+
+  "rta": {
+    "registrar": "N/A",
+    "website": ""
+  },
+
+  "managementInsight": "Focus on providing affordable and high-quality women's healthcare products with strong distribution reach across India.",
+
+  "faq": [
+    {
+      "question": "What is the main business of Gynofem Healthcare?",
+      "answer": "Manufacturing and marketing of gynecological, maternal nutrition, and women's wellness pharmaceutical products."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹60 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "1000 shares."
+    },
+    {
+      "question": "Is the company newly incorporated?",
+      "answer": "Yes, detailed financials are not yet available."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Positive due to rising focus on women's health and maternal care in India."
+    }
+  ]
+},
+ {
+  "id": 48,
+  "name": "HCIN Networks Private Limited",
+  "price": 175,
+  "logo": "/images/preipo/image46.jpg",
+
+  "overview": `HCIN Networks Private Limited is a technology and networking solutions company providing IT infrastructure, networking services, cloud solutions, and digital transformation services. The company caters to enterprises, SMEs, and government organizations with comprehensive networking and communication solutions.`,
+
+  "products": [
+    "IT Networking Solutions",
+    "Cloud Infrastructure Services",
+    "Cyber Security Solutions",
+    "Data Center Services",
+    "Digital Transformation Consulting",
+    "Enterprise Communication Systems"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Corporate Enterprises",
+    "Government Organizations",
+    "SMEs",
+    "Educational Institutions"
+  ],
+
+  "shareDetails": {
+    "companyName": "HCIN Networks Private Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹175",
+    "marketCapitalization": "₹225 Crore",
+    "lotSize": "600 Shares",
+    "52WeekHigh": "₹275",
+    "52WeekLow": "₹165",
+    "faceValue": "₹10",
+    "bookValue": "63.75",
+    "peRatio": "31.88",
+    "pbRatio": "9.46",
+    "debtToEquity": "0.87",
+    "returnOnEquity": "34.17",
+    "totalOutstandingShares": "12878000",
+    "isin": "INE0GAI01013",
+    "depository": "NSDL & CDSL",
+    "pan": "AAECH999J",
+    "cin": "U64200MH2019PTC320805",
+    "rta": "Maashita Securities"
+  },
+
+  "financials": {
+    "annualReportSummary": "HCIN Networks has shown strong revenue growth over the years with consistent profitability. The company is scaling its operations in the IT and networking sector with healthy margins.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 8.67, "fy23": 15.98, "fy24": 25.61 },
+      { "label": "EBITDA", "fy22": 0.33, "fy23": 0.5, "fy24": 8.42 },
+      { "label": "PBT", "fy22": 0.15, "fy23": 0.2, "fy24": 8.04 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 0.102, "fy23": 0.0204, "fy24": 7.07 },
+      { "label": "EPS", "fy22": 202.6, "fy23": 0.25, "fy24": 578.32 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 4.8, "fy23": 5.15, "fy24": 33.16 },
+      { "label": "Net Profit Margin (%)", "fy22": 1.47, "fy23": 0.22, "fy24": 27.82 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth in IT networking sector.",
+      "Improving profitability and margins.",
+      "Healthy return on equity.",
+      "Well-positioned in India's digital transformation wave."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 0.77, "fy23": 1.17, "fy24": 1.7 },
+      { "label": "Trade Receivables", "fy22": 0.92, "fy23": 2.99, "fy24": 8.92 },
+      { "label": "Inventory", "fy22": 0.57, "fy23": 0.88, "fy24": 5.7 },
+      { "label": "Other Assets", "fy22": 1.31, "fy23": 3.47, "fy24": 7.5 },
+      { "label": "Total Assets", "fy22": 3.57, "fy23": 8.51, "fy24": 37.5 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 0.05, "fy23": 1.05, "fy24": 12.225 },
+      { "label": "Reserves", "fy22": 0.08, "fy23": 0.08, "fy24": 19.47 },
+      { "label": "Borrowings", "fy22": 1.2, "fy23": 3.81, "fy24": 13.95 },
+      { "label": "Trade Payables", "fy22": 1.5, "fy23": 2.4, "fy24": 2.99 },
+      { "label": "Other Liabilities", "fy22": 0.74, "fy23": 1.15, "fy24": 0.07 },
+      { "label": "Total Liabilities", "fy22": 3.57, "fy23": 8.51, "fy24": 37.5 }
+    ],
+    "insights": "Rapid balance sheet expansion with increasing borrowings for growth."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.87. Moderate leverage for business expansion.",
+
+  "balanceSheetInsights": "Strong asset growth supported by revenue increase and capital infusion.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -0.99, "fy23": -1.54, "fy24": -1.36 },
+      { "label": "Cash from Investing Activities", "fy22": -0.31, "fy23": -0.7, "fy24": -0.42 },
+      { "label": "Cash from Financing Activities", "fy22": 1.09, "fy23": 3.51, "fy24": 21.72 }
+    ],
+    "insights": [
+      "Negative operating cash flow due to working capital requirements.",
+      "Financing activities supporting business expansion."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with expertise in IT networking and digital solutions.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "IT & Networking Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Maashita Securities",
+    "website": "https://www.maashitasecurities.com/"
+  },
+
+  "managementInsight": "Focus on delivering advanced networking solutions, expanding client base, and capitalizing on India's digital growth story.",
+
+  "faq": [
+    {
+      "question": "What is the main business of HCIN Networks?",
+      "answer": "IT infrastructure, networking solutions, cloud services, and digital transformation."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹175 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "600 shares."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Positive due to increasing demand for digital infrastructure in India."
+    }
+  ]
+},
+  {
+  "id": 49,
+  "name": "HDFC Securities Limited",
+  "price": 11250,
+  "logo": "/images/preipo/image47.png",
+
+  "overview": `HDFC Securities Limited is one of India's leading broking houses and a wholly owned subsidiary of HDFC Bank. It offers comprehensive capital market services including equity trading, derivatives, currency, mutual funds, IPOs, and research-based advisory. The company is known for its robust technology platform and strong research capabilities.`,
+
+  "products": [
+    "Equity & Derivatives Trading",
+    "Currency Trading",
+    "Mutual Fund Distribution",
+    "IPO Applications",
+    "Fixed Income Products",
+    "Research & Advisory"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Retail Investors",
+    "High Net Worth Individuals",
+    "Institutional Investors",
+    "Corporate Clients"
+  ],
+
+  "shareDetails": {
+    "companyName": "HDFC Securities Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹11250",
+    "marketCapitalization": "₹160830 Crore",
+    "lotSize": "10 Shares",
+    "52WeekHigh": "₹14000",
+    "52WeekLow": "₹9000",
+    "faceValue": "₹10",
+    "bookValue": "251.6",
+    "peRatio": "44.64",
+    "pbRatio": "4.21",
+    "debtToEquity": "0.87",
+    "returnOnEquity": "25.79",
+    "totalOutstandingShares": "17870000",
+    "isin": "INE070D01013",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACH8215R",
+    "cin": "U67120MH2000PLC124113",
+    "rta": "Datamatic Business Solutions"
+  },
+
+  "financials": {
+    "annualReportSummary": "HDFC Securities has delivered strong revenue growth and robust profitability. The company continues to benefit from increased retail participation in capital markets and its strong parentage.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 1676, "fy24": 2660, "fy25": 3206, "fy26": 3107 },
+      { "label": "EBITDA", "fy23": 1377, "fy24": 1298, "fy25": 2351, "fy26": 2199 },
+      { "label": "PBT", "fy23": 1280, "fy24": 1072, "fy25": 2281, "fy26": 2075 },
+      { "label": "Net Profit / Loss (PAT)", "fy23": 1017, "fy24": 777, "fy25": 1724, "fy26": 1608 },
+      { "label": "EPS", "fy23": 491.77, "fy24": 505.69, "fy25": 835.03, "fy26": 515.82 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 73.48, "fy24": 72.78, "fy25": 72.05, "fy26": 68.82 },
+      { "label": "Net Profit Margin (%)", "fy23": 61.48, "fy24": 35.75, "fy25": 31.14, "fy26": 29.32 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth driven by higher trading volumes.",
+      "Consistently high operating margins.",
+      "Strong parentage of HDFC Bank.",
+      "Well-positioned to benefit from rising retail investor participation."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 80, "fy24": 62, "fy25": 181, "fy26": 151.3 },
+      { "label": "CWIP", "fy23": 28, "fy24": 5.5, "fy25": 7, "fy26": 8.8 },
+      { "label": "Investments", "fy23": 1227, "fy24": 1098, "fy25": 1084, "fy26": 1780 },
+      { "label": "Trade Receivables", "fy23": 407, "fy24": 1296, "fy25": 1077, "fy26": 1126 },
+      { "label": "Other Assets", "fy23": 6526, "fy24": 11731.5, "fy25": 11922, "fy26": 17379 },
+      { "label": "Total Assets", "fy23": 8268, "fy24": 14103, "fy25": 14031, "fy26": 21786 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 15.8, "fy24": 15.07, "fy25": 17.7, "fy26": 17.7 },
+      { "label": "Reserves", "fy23": 1781, "fy24": 3380, "fy25": 3550, "fy26": 3763.7 },
+      { "label": "Borrowings", "fy23": 4619, "fy24": 9532, "fy25": 7944, "fy26": 15174 },
+      { "label": "Trade Payables", "fy23": 982, "fy24": 115, "fy25": 2399, "fy26": 2673 },
+      { "label": "Other Liabilities", "fy23": 870.2, "fy24": 386.8, "fy25": 343.3, "fy26": 404.3 },
+      { "label": "Total Liabilities", "fy23": 8268, "fy24": 14103, "fy25": 14031, "fy26": 21786 }
+    ],
+    "insights": "Significant growth in balance sheet size reflecting business expansion."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.87. Moderate leverage for operational requirements.",
+
+  "balanceSheetInsights": "Strong financial position with healthy reserves and scalable business model.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy23": 577, "fy24": 1075, "fy25": 538, "fy26": -724 },
+      { "label": "Cash from Investing Activities", "fy23": -13, "fy24": -280, "fy25": -38.8, "fy26": -19 },
+      { "label": "Cash from Financing Activities", "fy23": -91, "fy24": -58, "fy25": -77, "fy26": -101 }
+    ],
+    "insights": [
+      "Strong operating cash flows in most years.",
+      "Low investing outflow relative to operations.",
+      "Consistent debt-free or low-leverage approach."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (HDFC Bank)", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Wholly owned subsidiary of HDFC Bank with strong governance standards.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Capital Markets & Broking" }
+  ],
+
+  "rta": {
+    "registrar": "Datamatic Business Solutions",
+    "website": ""
+  },
+
+  "managementInsight": "Focus on technology innovation, client service excellence, and maintaining leadership position in the Indian broking industry.",
+
+  "faq": [
+    {
+      "question": "What is the main business of HDFC Securities?",
+      "answer": "Stock broking, derivatives trading, mutual funds, IPOs, and investment advisory services."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹11250 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "10 shares."
+    },
+    {
+      "question": "Is it a subsidiary of HDFC Bank?",
+      "answer": "Yes, it is a wholly owned subsidiary."
+    }
+  ]
+},
+ {
+  "id": 50,
+  "name": "Hella Infra Market Private Limited",
+  "price": 112500,
+  "logo": "/images/preipo/image48.jpg",
+
+  "overview": `Hella Infra Market Private Limited is a leading digital construction material marketplace in India. The company operates a B2B platform that connects buyers and sellers of construction materials, enabling transparent pricing, efficient procurement, and supply chain optimization. It aims to revolutionize the highly fragmented construction materials industry through technology.`,
+
+  "products": [
+    "Construction Materials Marketplace",
+    "B2B Procurement Platform",
+    "Supply Chain Solutions",
+    "Digital Aggregator Services",
+    "Logistics & Delivery Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Real Estate Developers",
+    "Construction Companies",
+    "Contractors & Builders",
+    "Infrastructure Projects"
+  ],
+
+  "shareDetails": {
+    "companyName": "Hella Infra Market Private Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹112500",
+    "marketCapitalization": "₹12840 Crore",
+    "lotSize": "1 Share",
+    "52WeekHigh": "₹235000",
+    "52WeekLow": "₹112500",
+    "faceValue": "₹10",
+    "bookValue": "N/A",
+    "peRatio": "58.36",
+    "pbRatio": "2.04",
+    "debtToEquity": "0.36",
+    "returnOnEquity": "3.49",
+    "totalOutstandingShares": "1141358",
+    "isin": "INE6E501010",
+    "depository": "NSDL & CDSL",
+    "pan": "AAGCH8087R",
+    "cin": "U66329MH2018PTC312837",
+    "rta": "KFin Technologies"
+  },
+
+  "financials": {
+    "annualReportSummary": "Hella Infra Market has shown exceptional revenue growth from ₹6236 Cr in FY22 to ₹18712 Cr in FY25. The company has scaled rapidly while maintaining healthy profitability, reflecting strong execution in the digital construction materials space.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 6236, "fy23": 11847, "fy24": 16530, "fy25": 18712 },
+      { "label": "EBITDA", "fy22": 348, "fy23": 756, "fy24": 1029, "fy25": 1672 },
+      { "label": "PBT", "fy22": 226, "fy23": 273, "fy24": 448, "fy25": 306 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 166, "fy23": 198, "fy24": 370, "fy25": 880 },
+      { "label": "EPS", "fy22": 539.31, "fy23": 1755.81, "fy24": 1037.97, "fy25": 6214.59 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 5.58, "fy23": 6.38, "fy24": 7.08, "fy25": 7.97 },
+      { "label": "Net Profit Margin (%)", "fy22": 2.98, "fy23": 1.31, "fy24": 2.78, "fy25": 1.19 }
+    ],
+
+    "investorInsight": [
+      "Explosive revenue growth in construction materials marketplace.",
+      "Improving profitability with scale.",
+      "Strong technology-driven business model.",
+      "High growth potential in India's massive construction sector."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 276, "fy23": 677, "fy24": 1638, "fy25": 376.6 },
+      { "label": "CWIP", "fy22": 12, "fy23": 81, "fy24": 278, "fy25": 23.6 },
+      { "label": "Investments", "fy22": 283, "fy23": 535, "fy24": 135, "fy25": 698 },
+      { "label": "Trade Receivables", "fy22": 2864, "fy23": 3986, "fy24": 5239, "fy25": 6245 },
+      { "label": "Inventory", "fy22": 181, "fy23": 493, "fy24": 400, "fy25": 599 },
+      { "label": "Other Assets", "fy22": 1640, "fy23": 1914, "fy24": 3022, "fy25": 6930 },
+      { "label": "Total Assets", "fy22": 5156, "fy23": 7285, "fy24": 10702, "fy25": 18540 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 0.345, "fy23": 0.862, "fy24": 0.854, "fy25": 0.854 },
+      { "label": "Reserves", "fy22": 2218, "fy23": 2522, "fy24": 3398, "fy25": 6207 },
+      { "label": "Borrowings", "fy22": 1501, "fy23": 2864, "fy24": 3863, "fy25": 10565 },
+      { "label": "Trade Payables", "fy22": 727, "fy23": 1102, "fy24": 2724, "fy25": 2770 },
+      { "label": "Other Liabilities", "fy22": 201.65, "fy23": 216.45, "fy24": 343.5, "fy25": 404.5 },
+      { "label": "Total Liabilities", "fy22": 5156, "fy23": 7285, "fy24": 10702, "fy25": 18540 }
+    ],
+    "insights": "Rapid balance sheet expansion with significant increase in receivables and borrowings."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 3.49. Leverage used for business growth.",
+
+  "balanceSheetInsights": "Strong growth in assets and scale of operations with healthy equity base.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -1943, "fy23": -405, "fy24": -1281, "fy25": 301.1 },
+      { "label": "Cash from Investing Activities", "fy22": -80, "fy23": -178, "fy24": -182, "fy25": -120.4 },
+      { "label": "Cash from Financing Activities", "fy22": 1647, "fy23": 725, "fy24": 1044, "fy25": 1655 }
+    ],
+    "insights": [
+      "Improving operating cash flows with business scale.",
+      "Significant financing activities to support growth."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with strong vision in digital construction materials.",
+
+  "management": [
+    { "name": "Aditya Sharda", "role": "Director", "experience": "10+ Years" },
+    { "name": "Souvik Sengupta", "role": "Director", "experience": "10+ Years" }
+  ],
+
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "managementInsight": "Focus on building India's largest digital marketplace for construction materials using technology and data-driven solutions.",
+
+  "faq": [
+    {
+      "question": "What does Hella Infra Market do?",
+      "answer": "Operates a B2B digital platform for buying and selling construction materials."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹112500 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "1 share."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Very strong due to massive infrastructure and real estate growth in India."
+    }
+  ]
+},
+ {
+  "id": 51,
+  "name": "Hero Fincorp Limited",
+  "price": 1050,
+  "logo": "/images/preipo/image49.png",
+
+  "overview": `Hero Fincorp Limited is a leading Non-Banking Financial Company (NBFC) and a wholly owned subsidiary of Hero MotoCorp. The company provides a wide range of financing solutions including two-wheeler loans, three-wheeler loans, personal loans, SME loans, and commercial vehicle financing. It has a strong presence across India with a focus on rural and semi-urban markets.`,
+
+  "products": [
+    "Two-Wheeler Financing",
+    "Three-Wheeler Financing",
+    "Personal Loans",
+    "SME Loans",
+    "Commercial Vehicle Loans",
+    "Used Vehicle Financing"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Individual Customers",
+    "Two-Wheeler & Three-Wheeler Buyers",
+    "Small & Medium Enterprises",
+    "Fleet Operators"
+  ],
+
+  "shareDetails": {
+    "companyName": "Hero Fincorp Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹1050",
+    "marketCapitalization": "₹13377 Crore",
+    "lotSize": "25 Shares",
+    "52WeekHigh": "₹1175",
+    "52WeekLow": "₹1050",
+    "faceValue": "₹10",
+    "bookValue": "452.86",
+    "peRatio": "22.57",
+    "pbRatio": "2.32",
+    "debtToEquity": "8.35",
+    "returnOnEquity": "1.91",
+    "totalOutstandingShares": "12100000",
+    "isin": "INE0N0T01015",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACN1572",
+    "cin": "U67190MH1991PLC066877",
+    "rta": "Link Intime India Private Limited"
+  },
+
+  "financials": {
+    "annualReportSummary": "Hero Fincorp has shown consistent growth in its loan portfolio and revenue. As a subsidiary of Hero MotoCorp, it benefits from strong brand synergy and extensive distribution network.",
+
+    "incomeStatement": [
+      { "label": "Interest Earned", "fy22": 4241, "fy23": 5779, "fy24": 7679, "fy25": 8588 },
+      { "label": "Other Income", "fy22": 407, "fy23": 728, "fy24": 880, "fy25": 1316 },
+      { "label": "Operating Expenses", "fy22": 1678, "fy23": 2178, "fy24": 2615, "fy25": 2935 },
+      { "label": "PAT", "fy22": 181, "fy23": 479, "fy24": 857, "fy25": 1010 },
+      { "label": "EPS", "fy22": -50.04, "fy23": 37.62, "fy24": 50.16, "fy25": 58.05 }
+    ],
+
+    "keyRatios": [
+      { "label": "Net NPA (%)", "fy22": 7.3, "fy23": 5.37, "fy24": 4.02, "fy25": 5.05 }
+    ],
+
+    "investorInsight": [
+      "Strong growth in interest income and loan book.",
+      "Improving asset quality with controlled GNPA.",
+      "Backed by Hero MotoCorp brand and distribution.",
+      "Well-positioned in two-wheeler and three-wheeler financing segment."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 92, "fy23": 111, "fy24": 181, "fy25": 172 },
+      { "label": "Cash and Balances", "fy22": 1038, "fy23": 730, "fy24": 158, "fy25": 2032 },
+      { "label": "Investments", "fy22": 1172, "fy23": 1317, "fy24": 1898, "fy25": 2586 },
+      { "label": "Advances", "fy22": 3141, "fy23": 3981, "fy24": 4988, "fy25": 5381 },
+      { "label": "Other Assets", "fy22": 156, "fy23": 932.31, "fy24": 1349, "fy25": 1647 },
+      { "label": "Total Assets", "fy22": 51399, "fy23": 43451.31, "fy24": 53201, "fy25": 60042 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 127, "fy23": 127.31, "fy24": 127, "fy25": 127.1 },
+      { "label": "Reserves", "fy22": 4640, "fy23": 5116, "fy24": 5638, "fy25": 5632 },
+      { "label": "Borrowings", "fy22": 27875, "fy23": 33559, "fy24": 42544, "fy25": 47968 },
+      { "label": "Other Liabilities", "fy22": 1747, "fy23": 4649.31, "fy25": 8324.8 },
+      { "label": "Total Liabilities", "fy22": 51399, "fy23": 43451.31, "fy24": 53201, "fy25": 60042 }
+    ],
+    "insights": "Strong growth in advances (loan book) with corresponding increase in borrowings."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 8.35. Typical for NBFC with high leverage on loan book.",
+
+  "balanceSheetInsights": "Healthy growth in loan book with strong parent support from Hero MotoCorp.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Significant cash flow from borrowing to support loan book growth.",
+      "Typical cash flow pattern for an NBFC."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "100% (Hero MotoCorp Group)", "institutional": "Low", "public": "0%" }
+  ],
+
+  "promotersManagement": "Wholly owned subsidiary of Hero MotoCorp with strong promoter backing.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "NBFC & Financial Services" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Private Limited",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focus on expanding two-wheeler and three-wheeler financing, improving asset quality, and leveraging Hero MotoCorp's vast dealer network.",
+
+  "faq": [
+    {
+      "question": "What is the main business of Hero Fincorp?",
+      "answer": "Vehicle financing, especially two-wheelers, three-wheelers, and other retail loans."
+    },
+    {
+      "question": "Who owns Hero Fincorp?",
+      "answer": "It is a wholly owned subsidiary of Hero MotoCorp."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "25 shares."
+    },
+    {
+      "question": "What is the current indicative price?",
+      "answer": "₹1050 per share."
+    }
+  ]
+},
+  {
+  "id": 52,
+  "name": "Hero Motors Limited",
+  "price": 325,
+  "logo": "/images/preipo/image50.jpg",
+
+  "overview": `Hero Motors Limited is part of the Hero Group and is engaged in the manufacturing and sale of electric vehicles, e-bikes, e-scooters, and related components. The company is focusing on the growing electric mobility segment in India with a strong emphasis on innovation, quality, and expanding its presence in the EV two-wheeler market.`,
+
+  "products": [
+    "Electric Scooters",
+    "Electric Bikes",
+    "EV Components",
+    "E-Mobility Solutions",
+    "Battery Systems"
+  ],
+
+  "manufacturingUnits": [
+    "Manufacturing facilities in India"
+  ],
+
+  "clients": [
+    "Individual Customers",
+    "Fleet Operators",
+    "Dealers & Distributors"
+  ],
+
+  "shareDetails": {
+    "companyName": "Hero Motors Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹325",
+    "marketCapitalization": "₹12328 Crore",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹360",
+    "52WeekLow": "₹278",
+    "faceValue": "₹10",
+    "bookValue": "11.5",
+    "peRatio": "373.56",
+    "pbRatio": "28.26",
+    "debtToEquity": "0.96",
+    "returnOnEquity": "7.74",
+    "totalOutstandingShares": "379307960",
+    "isin": "INE010G01022",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACH845F",
+    "cin": "U29299MH2019PLC396802",
+    "rta": "KFin Technologies"
+  },
+
+  "financials": {
+    "annualReportSummary": "Hero Motors has shown steady revenue growth in the electric vehicle segment. The company is in the investment phase for expanding EV manufacturing and distribution network.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 914, "fy23": 1055, "fy24": 1084, "fy25": 1090 },
+      { "label": "EBITDA", "fy22": 96, "fy23": 85, "fy24": 83, "fy25": 88 },
+      { "label": "PBT", "fy22": 80, "fy23": 67, "fy24": 36, "fy25": 50.6 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 99, "fy23": 40, "fy24": 17, "fy25": 33 },
+      { "label": "EPS", "fy22": 26.7, "fy23": 1.15, "fy24": 0.48, "fy25": 0.92 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 10.53, "fy23": 8.06, "fy24": 5.92, "fy25": 8.13 },
+      { "label": "Net Profit Margin (%)", "fy22": 10.83, "fy23": 3.79, "fy24": 1.6, "fy25": 3.03 }
+    ],
+
+    "investorInsight": [
+      "Part of the reputed Hero Group.",
+      "Focus on electric mobility segment.",
+      "Steady revenue growth observed.",
+      "Expanding presence in EV two-wheeler market."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 165, "fy23": 261, "fy24": 366, "fy25": 510 },
+      { "label": "CWIP", "fy22": 30, "fy23": 89, "fy24": 78, "fy25": 67 },
+      { "label": "Investments", "fy22": 24, "fy23": 16, "fy24": 8, "fy25": 5 },
+      { "label": "Trade Receivables", "fy22": 189, "fy23": 251, "fy24": 195, "fy25": 202 },
+      { "label": "Inventory", "fy22": 164, "fy23": 198, "fy24": 180, "fy25": 191 },
+      { "label": "Other Assets", "fy22": 151, "fy23": 199, "fy24": 233, "fy25": 190 },
+      { "label": "Total Assets", "fy22": 703, "fy23": 902, "fy24": 1060, "fy25": 1165 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 34.5, "fy23": 353.5, "fy24": 353.5, "fy25": 357.38 },
+      { "label": "Reserves", "fy22": 187, "fy23": -18, "fy24": 21, "fy25": 69 },
+      { "label": "Borrowings", "fy22": 285, "fy23": 270, "fy24": 304, "fy25": 408 },
+      { "label": "Trade Payables", "fy22": 138, "fy23": 148, "fy24": 136, "fy25": 137 },
+      { "label": "Other Liabilities", "fy22": 78.5, "fy23": 236.5, "fy24": 245.5, "fy25": 193.62 },
+      { "label": "Total Liabilities", "fy22": 703, "fy23": 902, "fy24": 1060, "fy25": 1165 }
+    ],
+    "insights": "Balance sheet expanding with growth in fixed assets and working capital."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.96. Moderate leverage.",
+
+  "balanceSheetInsights": "Healthy growth in assets with increasing scale of operations.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 65, "fy23": 42, "fy24": 129, "fy25": 43.6 },
+      { "label": "Cash from Investing Activities", "fy22": -57, "fy23": -138, "fy24": -133, "fy25": -152.4 },
+      { "label": "Cash from Financing Activities", "fy22": 1, "fy23": 103.3, "fy24": 3.1, "fy25": 103.3 }
+    ],
+    "insights": [
+      "Positive operating cash flows.",
+      "Investing outflow for capacity expansion."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Hero Group)", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Part of the reputed Hero Group with strong promoter backing.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Automotive & EV Sector" }
+  ],
+
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "managementInsight": "Focus on expanding electric vehicle portfolio, strengthening distribution network, and capturing market share in India's growing EV two-wheeler segment.",
+
+  "faq": [
+    {
+      "question": "What is the main business of Hero Motors?",
+      "answer": "Manufacturing and sale of electric vehicles, e-bikes, and e-scooters."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹325 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "500 shares."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Positive due to rising adoption of electric vehicles in India."
+    }
+  ]
+},
+ {
+  "id": 53,
+  "name": "Hicks Thermometers India Limited",
+  "price": 1600,
+  "logo": "/images/preipo/image51.jpg",
+
+  "overview": `Hicks Thermometers India Limited is a leading manufacturer of clinical and industrial thermometers in India. The company produces a wide range of high-quality thermometers including digital, mercury, and infrared variants for medical, laboratory, and industrial use. It has a long-standing reputation for precision, reliability, and adherence to quality standards.`,
+
+  "products": [
+    "Clinical Thermometers",
+    "Digital Thermometers",
+    "Infrared Thermometers",
+    "Mercury Thermometers",
+    "Industrial Thermometers",
+    "Laboratory Thermometers"
+  ],
+
+  "manufacturingUnits": [
+    "Uttar Pradesh, India"
+  ],
+
+  "clients": [
+    "Hospitals & Clinics",
+    "Pharmacies & Distributors",
+    "Laboratories",
+    "Industrial Clients"
+  ],
+
+  "shareDetails": {
+    "companyName": "Hicks Thermometers India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹1600",
+    "marketCapitalization": "₹154 Crore",
+    "lotSize": "25 Shares",
+    "52WeekHigh": "₹1800",
+    "52WeekLow": "₹1600",
+    "faceValue": "₹10",
+    "bookValue": "166.05",
+    "peRatio": "31.88",
+    "pbRatio": "1.13",
+    "debtToEquity": "0.16",
+    "returnOnEquity": "9.28",
+    "totalOutstandingShares": "325500",
+    "isin": "INE0QEY01017",
+    "depository": "CDSL ONLY",
+    "pan": "AAACH203R",
+    "cin": "U33121UP1989PLC002846",
+    "rta": "Skyline Financial Services"
+  },
+
+  "financials": {
+    "annualReportSummary": "Hicks Thermometers has shown steady revenue growth with consistent profitability. The company maintains healthy margins and a strong balance sheet in the medical devices segment.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 91, "fy23": 45, "fy24": 60.6, "fy25": 72.5 },
+      { "label": "EBITDA", "fy22": 10.9, "fy23": 8.67, "fy24": 4.52, "fy25": 5.79 },
+      { "label": "PBT", "fy22": 10.0, "fy23": 6, "fy24": 3.31, "fy25": 4.6 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 8.9, "fy23": 4.0, "fy24": 2.3, "fy25": 3.5 },
+      { "label": "EPS", "fy22": 276.7, "fy23": 71.88, "fy24": 70.25, "fy25": 109.38 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 10.99, "fy23": 8.67, "fy24": 4.52, "fy25": 5.79 },
+      { "label": "Net Profit Margin (%)", "fy22": 8.79, "fy23": 5.11, "fy24": 4.05, "fy25": 4.83 }
+    ],
+
+    "investorInsight": [
+      "Established player in medical thermometers segment.",
+      "Steady demand for clinical and industrial thermometers.",
+      "Healthy profitability and margins.",
+      "Strong brand recall in healthcare sector."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 2, "fy23": 2.6, "fy24": 2, "fy25": 1.8 },
+      { "label": "Investments", "fy22": 1, "fy23": 2.4, "fy24": 3.5, "fy25": 7.8 },
+      { "label": "Trade Receivables", "fy22": 7, "fy23": 7, "fy24": 8.5, "fy25": 7.2 },
+      { "label": "Inventory", "fy22": 12, "fy23": 9, "fy24": 7, "fy25": 8.6 },
+      { "label": "Other Assets", "fy22": 19, "fy23": 19, "fy24": 20.5, "fy25": 25 },
+      { "label": "Total Assets", "fy22": 41, "fy23": 40, "fy24": 41, "fy25": 50 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 0.3, "fy23": 0.32, "fy24": 0.32, "fy25": 0.32 },
+      { "label": "Reserves", "fy22": 20, "fy23": 32, "fy24": 36, "fy25": 37.4 },
+      { "label": "Borrowings", "fy22": 6, "fy23": 4.5, "fy24": 4, "fy25": 6.2 },
+      { "label": "Trade Payables", "fy22": 8, "fy23": 2.5, "fy24": 0, "fy25": 0 },
+      { "label": "Other Liabilities", "fy22": 6.7, "fy23": 0.68, "fy24": 0.68, "fy25": 6.08 },
+      { "label": "Total Liabilities", "fy22": 41, "fy23": 40, "fy24": 41, "fy25": 50 }
+    ],
+    "insights": "Stable and healthy balance sheet with low debt."
+  },
+
+  "liabilitiesBreakdown": "Low debt levels with strong equity base.",
+
+  "balanceSheetInsights": "Conservative balance sheet with minimal leverage.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 11, "fy23": 3.5, "fy24": 2.94, "fy25": 8.6 },
+      { "label": "Cash from Investing Activities", "fy22": -0.9, "fy23": -0.88, "fy24": -0.38, "fy25": -0.8 },
+      { "label": "Cash from Financing Activities", "fy22": -3.6, "fy23": -1.59, "fy24": -1.86, "fy25": -0.8 }
+    ],
+    "insights": [
+      "Positive operating cash flows.",
+      "Stable cash flow generation."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with long experience in medical devices.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Healthcare & Medical Devices" }
+  ],
+
+  "rta": {
+    "registrar": "Skyline Financial Services",
+    "website": ""
+  },
+
+  "managementInsight": "Focus on maintaining quality standards, expanding product range, and strengthening distribution network in the medical thermometer segment.",
+
+  "faq": [
+    {
+      "question": "What does Hicks Thermometers manufacture?",
+      "answer": "Clinical thermometers, digital thermometers, infrared thermometers, and industrial thermometers."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹1600 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "25 shares."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Stable demand in healthcare sector with potential for growth in medical devices."
+    }
+  ]
+}, 
+{
+  "id": 54,
+  "name": "Himalayan Heli Services Limited",
+  "price": 198,
+  "logo": "/images/preipo/HimalayanHeli.png",
+
+  "overview": `Himalayan Heli Services Limited is a leading helicopter charter and aviation services company operating primarily in the Himalayan region. The company provides aerial tourism, emergency medical evacuation, pilgrimage services, and corporate charter flights using a modern fleet of helicopters.`,
+
+  "products": [
+    "Helicopter Charter Services",
+    "Aerial Tourism & Sightseeing",
+    "Emergency Medical Evacuation (HEMS)",
+    "Pilgrimage Heli Services",
+    "Underslung Cargo Operations",
+    "Corporate & VIP Charters"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Tour Operators",
+    "Government & Defence",
+    "Hospitals & Medical Services",
+    "Corporate Clients"
+  ],
+
+  "shareDetails": {
+    "companyName": "Himalayan Heli Services Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹198",
+    "marketCapitalization": "₹220 Crore",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹218",
+    "52WeekLow": "₹175",
+    "faceValue": "₹10",
+    "bookValue": "35.22",
+    "peRatio": "58.75",
+    "pbRatio": "5.62",
+    "debtToEquity": "0.84",
+    "returnOnEquity": "9.59",
+    "totalOutstandingShares": "11104000",
+    "isin": "INE124G01012",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACH945D",
+    "cin": "U63040DL1998PTC094636",
+    "rta": "Beetal Financial and Computer Services"
+  },
+
+  "financials": {
+    "annualReportSummary": "Himalayan Heli Services has shown significant revenue growth driven by tourism recovery and increased charter demand. The company maintains healthy operating margins with consistent profitability.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 80.4, "fy23": 962.7, "fy24": 1148.5, "fy25": 1215 },
+      { "label": "EBITDA", "fy22": 10.9, "fy23": 8.67, "fy24": 4.52, "fy25": 5.79 },
+      { "label": "PBT", "fy22": 10.0, "fy23": 6.0, "fy24": 3.31, "fy25": 4.6 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 8.9, "fy23": 4.0, "fy24": 2.3, "fy25": 3.5 },
+      { "label": "EPS", "fy22": 276.7, "fy23": 71.88, "fy24": 70.25, "fy25": 109.38 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 10.99, "fy23": 8.67, "fy24": 4.52, "fy25": 5.79 },
+      { "label": "Net Profit Margin (%)", "fy22": 8.79, "fy23": 5.11, "fy24": 4.05, "fy25": 4.83 }
+    ],
+
+    "investorInsight": [
+      "Strong growth in aerial tourism and charter services.",
+      "Healthy margins in aviation operations.",
+      "Limited competition in Himalayan region.",
+      "Beneficiary of rising adventure and religious tourism."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 205, "fy23": 2659, "fy24": 3391, "fy25": 5439 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 980 },
+      { "label": "Investments", "fy22": 0, "fy23": 235, "fy24": 256, "fy25": 1270 },
+      { "label": "Trade Receivables", "fy22": 660, "fy23": 880, "fy24": 1599, "fy25": 2120 },
+      { "label": "Inventory", "fy22": 600, "fy23": 235, "fy24": 201, "fy25": 447 },
+      { "label": "Other Assets", "fy22": 1408, "fy23": 1921, "fy24": 1875, "fy25": 5313 },
+      { "label": "Total Assets", "fy22": 4573, "fy23": 5204, "fy24": 5813, "fy25": 11429 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 100, "fy23": 100, "fy24": 110, "fy25": 110.49 },
+      { "label": "Reserves", "fy22": 2054, "fy23": 5356, "fy24": 2121, "fy25": 2791 },
+      { "label": "Borrowings", "fy22": 1723, "fy23": 1810, "fy24": 2099, "fy25": 3266 },
+      { "label": "Trade Payables", "fy22": 920, "fy23": 452, "fy24": 652, "fy25": 1889 },
+      { "label": "Other Liabilities", "fy22": 727, "fy23": 1246, "fy24": 1451, "fy25": 2572.31 },
+      { "label": "Total Liabilities", "fy22": 4573, "fy23": 5204, "fy24": 5813, "fy25": 11429 }
+    ],
+    "insights": "Significant asset growth with expansion in fleet and infrastructure."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.84. Moderate leverage for fleet expansion.",
+
+  "balanceSheetInsights": "Healthy balance sheet expansion driven by business growth and fleet investment.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 65, "fy23": 42, "fy24": 129, "fy25": 43.6 },
+      { "label": "Cash from Investing Activities", "fy22": -57, "fy23": -138, "fy24": -133, "fy25": -152.4 },
+      { "label": "Cash from Financing Activities", "fy22": 1, "fy23": 103.3, "fy24": 3.1, "fy25": 103.3 }
+    ],
+    "insights": [
+      "Positive operating cash flows supporting operations.",
+      "Investing activities for fleet and infrastructure development."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with strong expertise in aviation services.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Aviation & Tourism Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Beetal Financial and Computer Services",
+    "website": ""
+  },
+
+  "managementInsight": "Focus on safety compliance, fleet modernization, and expanding heli-tourism and emergency services in the Himalayan region.",
+
+  "faq": [
+    {
+      "question": "What does Himalayan Heli Services do?",
+      "answer": "Provides helicopter charter, aerial tourism, and emergency medical evacuation services."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹198 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "500 shares."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Positive due to rising tourism and infrastructure development in North India."
+    }
+  ]
+},
+ {
+  "id": 55,
+  "name": "Hindon Mercantile Limited",
+  "price": 753,
+  "logo": "/images/preipo/hindonmercantile.png",
+
+  "overview": `Hindon Mercantile Limited is a diversified company engaged in trading, investment activities, and financial services. The company operates in the mercantile and financial sector with a focus on lending, investments, and related operations.`,
+
+  "products": [
+    "Financial Services",
+    "Investment Activities",
+    "Trading Operations",
+    "Lending Solutions"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Corporate Entities",
+    "Individual Investors",
+    "Business Clients"
+  ],
+
+  "shareDetails": {
+    "companyName": "Hindon Mercantile Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹753",
+    "marketCapitalization": "₹1712 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹945",
+    "52WeekLow": "₹625",
+    "faceValue": "₹10",
+    "bookValue": "122.93",
+    "peRatio": "92.52",
+    "pbRatio": "6.14",
+    "debtToEquity": "2.84",
+    "returnOnEquity": "5.86",
+    "totalOutstandingShares": "22619873",
+    "isin": "INE0GDL01012",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACH187J",
+    "cin": "U51101DL1983PLC034578",
+    "rta": "Skyline Financial Services"
+  },
+
+  "financials": {
+    "annualReportSummary": "Hindon Mercantile Limited has shown moderate revenue growth with improving profitability. The company maintains a stable financial position with focus on financial services and investment activities.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 108, "fy24": 122 },
+      { "label": "Other Income", "fy23": 7.5, "fy24": 19 },
+      { "label": "Operating Expenses", "fy23": 52, "fy24": 42 },
+      { "label": "PAT", "fy23": 8.2, "fy24": 18.5 },
+      { "label": "EPS", "fy23": 8.11, "fy24": 12.53 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 8.82, "fy24": 10.82 },
+      { "label": "Net Profit Margin (%)", "fy23": 7.59, "fy24": 15.16 }
+    ],
+
+    "investorInsight": [
+      "Stable operations in financial services sector.",
+      "Improving profitability in recent years.",
+      "Moderate leverage with controlled risk."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 0.88, "fy24": 1.7 },
+      { "label": "Cash and Balances", "fy23": 164, "fy24": 270 },
+      { "label": "Investments", "fy23": 4, "fy24": 5.8 },
+      { "label": "Advances", "fy23": 291, "fy24": 657 },
+      { "label": "Other Assets", "fy23": 27.12, "fy24": 66.7 },
+      { "label": "Total Assets", "fy23": 487, "fy24": 1001 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 14.79, "fy24": 16.76 },
+      { "label": "Reserves", "fy23": 192, "fy24": 254 },
+      { "label": "Borrowings", "fy23": 267, "fy24": 683 },
+      { "label": "Other Liabilities", "fy23": 23.21, "fy24": 69.26 },
+      { "label": "Total Liabilities", "fy23": 487, "fy24": 1001 }
+    ],
+    "insights": "Balance sheet shows steady growth with increase in advances and borrowings."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 2.84. Moderate leverage for business operations.",
+
+  "balanceSheetInsights": "Healthy financial position with growing assets and controlled liabilities.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy23": 89, "fy24": -402 },
+      { "label": "Cash from Investing Activities", "fy23": -0.9, "fy24": -0.88 },
+      { "label": "Cash from Financing Activities", "fy23": -3.6, "fy24": -1.59 }
+    ],
+    "insights": [
+      "Cash flows reflect typical operations of a financial services / trading company.",
+      "Financing activities support business requirements."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with experience in financial and mercantile activities.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Financial Services Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Skyline Financial Services",
+    "website": ""
+  },
+
+  "managementInsight": "Focus on prudent financial management, risk control, and steady growth in investment and trading activities.",
+
+  "faq": [
+    {
+      "question": "What is the main business of Hindon Mercantile?",
+      "answer": "Financial services, investments, trading, and related mercantile activities."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹753 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "100 shares."
+    }
+  ]
+},
+  {
+  "id": 56,
+  "name": "Hindustan Power Exchange Limited",
+  "price": 28,
+  "logo": "/images/preipo/image54.jpg",
+
+  "overview": `Hindustan Power Exchange Limited (HPX) is India's leading power exchange platform. It provides a transparent, efficient, and reliable marketplace for trading electricity, enabling buyers and sellers to trade power on a real-time basis. HPX plays a crucial role in India's power sector by facilitating competitive price discovery and efficient allocation of electricity.`,
+
+  "products": [
+    "Day Ahead Market (DAM)",
+    "Real Time Market (RTM)",
+    "Term Ahead Market",
+    "Green Energy Trading",
+    "Renewable Energy Certificates",
+    "Electricity Derivatives"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Power Generators",
+    "Distribution Companies (DISCOMs)",
+    "Open Access Consumers",
+    "Trading Companies",
+    "Industrial Consumers"
+  ],
+
+  "shareDetails": {
+    "companyName": "Hindustan Power Exchange Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹28",
+    "marketCapitalization": "₹1547 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹39",
+    "52WeekLow": "₹28",
+    "faceValue": "₹10",
+    "bookValue": "1.26",
+    "peRatio": "147.37",
+    "pbRatio": "22.58",
+    "debtToEquity": "0.00",
+    "returnOnEquity": "15.91",
+    "totalOutstandingShares": "55250000",
+    "isin": "INE0GDL01012",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACG833P",
+    "cin": "U74999DL2010PLC208468",
+    "rta": "KFin Technologies"
+  },
+
+  "financials": {
+    "annualReportSummary": "Hindustan Power Exchange has shown strong revenue growth as India's power trading volumes increase. The company is in a high growth phase with improving profitability and operational efficiency in the power exchange business.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 10.0, "fy24": 36.6, "fy25": 31.6 },
+      { "label": "EBITDA", "fy23": -5.5, "fy24": 14.6, "fy25": 7.9 },
+      { "label": "PBT", "fy23": -10.5, "fy24": 17, "fy25": 15.4 },
+      { "label": "Net Profit / Loss (PAT)", "fy23": 0, "fy24": 2, "fy25": 3.7 },
+      { "label": "EPS", "fy23": -0.18, "fy24": 0.27, "fy25": 0.19 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": -55.48, "fy24": 40.01, "fy25": 25.18 },
+      { "label": "Net Profit Margin (%)", "fy23": "-", "fy24": 6.11, "fy25": 11.71 }
+    ],
+
+    "investorInsight": [
+      "India's leading power exchange platform.",
+      "Strong revenue growth with increasing power trading volumes.",
+      "Improving profitability as scale increases.",
+      "Key beneficiary of power sector reforms and market liberalization."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 15.3, "fy24": 11, "fy25": 10.5 },
+      { "label": "Investments", "fy23": 2.4, "fy24": 3.5, "fy25": 7.8 },
+      { "label": "Trade Receivables", "fy23": 7, "fy24": 8.5, "fy25": 7.2 },
+      { "label": "Other Assets", "fy23": 127.3, "fy24": 302.5, "fy25": 353.7 },
+      { "label": "Total Assets", "fy23": 145, "fy24": 315, "fy25": 368 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 55.25, "fy24": 55.25, "fy25": 55.25 },
+      { "label": "Reserves", "fy23": -1.6, "fy24": 1.5, "fy25": 12 },
+      { "label": "Borrowings", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy23": 18, "fy24": 5, "fy25": 1.8 },
+      { "label": "Other Liabilities", "fy23": 90.75, "fy24": 253.45, "fy25": 297.15 },
+      { "label": "Total Liabilities", "fy23": 145, "fy24": 315, "fy25": 368 }
+    ],
+    "insights": "Strong equity base with minimal debt. Rapid growth in other assets."
+  },
+
+  "liabilitiesBreakdown": "Debt-free balance sheet. Strong equity position.",
+
+  "balanceSheetInsights": "Healthy and debt-free balance sheet with strong growth in scale.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy23": 76.5, "fy24": -181.5, "fy25": 18.5 },
+      { "label": "Cash from Investing Activities", "fy23": -0.9, "fy24": -0.88, "fy25": -0.8 },
+      { "label": "Cash from Financing Activities", "fy23": -3.6, "fy24": -1.59, "fy25": -0.8 }
+    ],
+    "insights": [
+      "Variable operating cash flows typical for power exchange business.",
+      "Low capital expenditure requirements."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Strong promoter backing with focus on power market infrastructure.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Power Sector & Energy Trading" }
+  ],
+
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "managementInsight": "Focus on increasing trading volumes, enhancing platform efficiency, and contributing to India's power market reforms and price discovery mechanism.",
+
+  "faq": [
+    {
+      "question": "What does Hindustan Power Exchange do?",
+      "answer": "Operates a national power exchange platform for trading electricity in India."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹28 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "1000 shares."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Very positive due to increasing power market liberalization and trading volumes in India."
+    }
+  ]
+},
+ {
+  "id": 57,
+  "name": "Hindustan Times Limited",
+  "price": 950,
+  "logo": "/images/preipo/image55.png",
+
+  "overview": `Hindustan Times Limited is one of India's most prominent media companies and publishers of the leading English daily newspaper 'Hindustan Times'. The company is part of the KK Birla Group and has a strong presence in print, digital, and event businesses. It is known for high-quality journalism, extensive national reach, and digital innovation in the media sector.`,
+
+  "products": [
+    "Hindustan Times Newspaper",
+    "HT Digital Platforms",
+    "HT Events & Exhibitions",
+    "Mint Business Newspaper",
+    "Hindustan Hindi Newspaper",
+    "Media & Advertising Services"
+  ],
+
+  "manufacturingUnits": [
+    "Printing Facilities across India"
+  ],
+
+  "clients": [
+    "Readers & Subscribers",
+    "Corporate Advertisers",
+    "Government & Institutional Clients",
+    "Digital Audience"
+  ],
+
+  "shareDetails": {
+    "companyName": "Hindustan Times Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹950",
+    "marketCapitalization": "₹0 (Limited Public Data)",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹950",
+    "52WeekLow": "₹950",
+    "faceValue": "₹2",
+    "bookValue": "N/A",
+    "peRatio": "N/A",
+    "pbRatio": "N/A",
+    "debtToEquity": "N/A",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "N/A",
+    "isin": "INE949D01012",
+    "depository": "NSDL ONLY",
+    "pan": "AAACT6982F",
+    "cin": "U65990DL1972PLC006555",
+    "rta": "KFin Technologies"
+  },
+
+  "financials": {
+    "annualReportSummary": "Detailed financial data is currently not available publicly as the company is unlisted and limited information is disclosed. Hindustan Times continues to be a strong brand in Indian media with significant digital growth.",
+
+    "incomeStatement": [],
+
+    "keyRatios": [],
+
+    "investorInsight": [
+      "Iconic media brand with strong legacy and national presence.",
+      "Significant digital transformation and audience growth.",
+      "Part of the prestigious KK Birla Group.",
+      "Stable business with diversified revenue streams."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [],
+    "liabilities": [],
+    "insights": "Financial details not publicly available at present."
+  },
+
+  "liabilitiesBreakdown": "Financial data not disclosed.",
+
+  "balanceSheetInsights": "Company maintains a strong brand asset value with stable operations.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flow information not available publicly."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (KK Birla Group)", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Part of the reputed KK Birla Group with strong promoter backing.",
+
+  "management": [
+    { "name": "Shobhana Bhartia", "role": "MD", "experience": "35+ Years" },
+    { "name": "Priyavrat Bhartia", "role": "Director", "experience": "25+ Years" },
+    { "name": "Vivek Kumar Charoria", "role": "Whole-time Director", "experience": "17+ Years" }
+  ],
+
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "managementInsight": "Focus on digital transformation, maintaining journalistic excellence, and expanding reach in both print and digital media platforms.",
+
+  "faq": [
+    {
+      "question": "What is the main business of Hindustan Times?",
+      "answer": "Publishing of English daily newspaper 'Hindustan Times', digital media, and events."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹950 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "100 shares."
+    },
+    {
+      "question": "Who owns Hindustan Times?",
+      "answer": "Part of the KK Birla Group."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Stable with strong potential in digital media expansion."
+    }
+  ]
+},
+  {
+  "id": 58,
+  "name": "Hindusthan Engineering & Industries Limited",
+  "price": 1050,
+  "logo": "/images/preipo/image56.jpg",
+
+  "overview": `Hindusthan Engineering & Industries Limited is a diversified engineering and manufacturing company with a legacy since 1931. The company is engaged in engineering, construction, power transmission, and industrial products. It has a strong presence in manufacturing and project execution across multiple sectors including railways, power, and infrastructure.`,
+
+  "products": [
+    "Engineering & Construction Services",
+    "Power Transmission Equipment",
+    "Industrial Machinery",
+    "Railway Electrification",
+    "Switch Expansion Joints",
+    "Heavy Engineering Products"
+  ],
+
+  "manufacturingUnits": [
+    "Multiple manufacturing facilities across India"
+  ],
+
+  "clients": [
+    "Indian Railways",
+    "Power Utilities",
+    "Government Infrastructure Projects",
+    "Industrial Corporations"
+  ],
+
+  "shareDetails": {
+    "companyName": "Hindusthan Engineering & Industries Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹1050",
+    "marketCapitalization": "₹1544 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹1050",
+    "52WeekLow": "₹1050",
+    "faceValue": "₹10",
+    "bookValue": "1101.34",
+    "peRatio": "7.45",
+    "pbRatio": "0.95",
+    "debtToEquity": "0.33",
+    "returnOnEquity": "13.54",
+    "totalOutstandingShares": "14706776",
+    "isin": "INE000D01012",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACB850G",
+    "cin": "U36900WB1931PLC007103",
+    "rta": "C.B. Management Services"
+  },
+
+  "financials": {
+    "annualReportSummary": "The company has shown strong revenue growth over the last 4 years with significant improvement in profitability. Operations have scaled up substantially with healthy margins in recent years.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 943, "fy23": 1758, "fy24": 2754, "fy25": 2950 },
+      { "label": "EBITDA", "fy22": 71, "fy23": 120, "fy24": 300, "fy25": 333 },
+      { "label": "PBT", "fy22": 50, "fy23": 94, "fy24": 278, "fy25": 300 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 11, "fy23": 26, "fy24": 752, "fy25": 820 },
+      { "label": "EPS", "fy22": 26, "fy23": 47.62, "fy24": 140.82, "fy25": 168.2 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 7.31, "fy23": 6.85, "fy24": 10.89, "fy25": 11.29 },
+      { "label": "Net Profit Margin (%)", "fy22": 1.14, "fy23": 1.48, "fy24": 7.39, "fy25": 7.39 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth trajectory.",
+      "Significant improvement in profitability and margins.",
+      "Low debt levels with healthy ROE.",
+      "Legacy engineering company with strong order book potential."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 301, "fy23": 309, "fy24": 331, "fy25": 336 },
+      { "label": "CWIP", "fy22": 32, "fy23": 49, "fy24": 18, "fy25": 37 },
+      { "label": "Investments", "fy22": 112, "fy23": 112, "fy24": 107, "fy25": 101 },
+      { "label": "Trade Receivables", "fy22": 175, "fy23": 221, "fy24": 251, "fy25": 288 },
+      { "label": "Inventory", "fy22": 246, "fy23": 370, "fy24": 697, "fy25": 896 },
+      { "label": "Other Assets", "fy22": 844, "fy23": 745, "fy24": 820, "fy25": 981 },
+      { "label": "Total Assets", "fy22": 1510, "fy23": 1806, "fy24": 2222, "fy25": 2436 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 15, "fy23": 14.7, "fy24": 14.7, "fy25": 14.71 },
+      { "label": "Reserves", "fy22": 1121, "fy23": 1192, "fy24": 1384, "fy25": 1505 },
+      { "label": "Borrowings", "fy22": 147, "fy23": 284, "fy24": 410, "fy25": 486 },
+      { "label": "Trade Payables", "fy22": 98, "fy23": 181, "fy24": 280, "fy25": 232 },
+      { "label": "Other Liabilities", "fy22": 131, "fy23": 134.3, "fy24": 133.3, "fy25": 198.29 },
+      { "label": "Total Liabilities", "fy22": 1510, "fy23": 1806, "fy24": 2222, "fy25": 2436 }
+    ],
+    "insights": "Consistent growth in assets with moderate increase in borrowings."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.33. Comfortable leverage.",
+
+  "balanceSheetInsights": "Strong net worth growth with healthy working capital management.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 85, "fy23": -15, "fy24": -46, "fy25": 184.5 },
+      { "label": "Cash from Investing Activities", "fy22": -135, "fy23": -197, "fy24": -125.5, "fy25": 7.6 },
+      { "label": "Cash from Financing Activities", "fy22": -36, "fy23": 179, "fy24": 97, "fy25": 32.2 }
+    ],
+    "insights": [
+      "Improving operating cash flows in FY25.",
+      "Investing activities reflect capacity expansion."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Strong promoter group with deep experience in engineering and infrastructure.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Engineering & Infrastructure Sector" }
+  ],
+
+  "rta": {
+    "registrar": "C.B. Management Services",
+    "website": ""
+  },
+
+  "managementInsight": "Focus on order book execution, capacity expansion, and diversification in engineering and infrastructure projects.",
+
+  "faq": [
+    {
+      "question": "What is the main business of Hindusthan Engineering?",
+      "answer": "Engineering, construction, power transmission, and heavy industrial manufacturing."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹1050 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "100 shares."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Positive due to strong order inflows in railways and infrastructure sectors."
+    }
+  ]
+},
+  {
+  "id": 59,
+  "name": "Hive Hostels Limited",
+  "price": 2400,
+  "logo": "/images/preipo/image57.jpg",
+
+  "overview": `Hive Hostels Limited is a premium student accommodation and co-living company founded in 2018. The company operates modern, tech-enabled hostels and student housing across major educational hubs in India including Delhi-NCR, Chandigarh, Bengaluru, and other cities. It focuses on providing high-quality living spaces with amenities for students and young professionals.`,
+
+  "products": [
+    "Premium Student Hostels",
+    "Co-Living Spaces",
+    "Managed Student Accommodation",
+    "PG & Hostel Management Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "College Students",
+    "Young Professionals",
+    "Educational Institutions"
+  ],
+
+  "shareDetails": {
+    "companyName": "Hive Hostels Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹2400",
+    "marketCapitalization": "₹270 Crore",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹2400",
+    "52WeekLow": "₹2400",
+    "faceValue": "₹10",
+    "bookValue": "158.58",
+    "peRatio": "73.58",
+    "pbRatio": "15.1",
+    "debtToEquity": "0.77",
+    "returnOnEquity": "20.72",
+    "totalOutstandingShares": "1125939",
+    "isin": "INE0STD01014",
+    "depository": "NSDL & CDSL",
+    "pan": "AAICH1989K",
+    "cin": "U55209DL2019PTC357971",
+    "rta": "Bigshare Services"
+  },
+
+  "financials": {
+    "annualReportSummary": "Hive Hostels has shown exceptional revenue growth over the last 4 years with strong scaling of operations. The company has moved from early-stage losses to healthy profitability with expanding margins.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 726, "fy23": 2055, "fy24": 4032, "fy25": 5707 },
+      { "label": "EBITDA", "fy22": 62, "fy23": 2298, "fy24": 3011, "fy25": 4781 },
+      { "label": "PBT", "fy22": 50, "fy23": 550, "fy24": 2317, "fy25": 4532 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 26, "fy23": 65, "fy24": 276, "fy25": 368.7 },
+      { "label": "EPS", "fy22": 2.10, "fy23": 5.64, "fy24": 8.88, "fy25": 32.75 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 5.72, "fy23": 7.82, "fy24": 7.04, "fy25": 13.7 },
+      { "label": "Net Profit Margin (%)", "fy22": 3.31, "fy23": 2.2, "fy24": 2.17, "fy25": 6.46 }
+    ],
+
+    "investorInsight": [
+      "Explosive revenue growth in student housing sector.",
+      "Improving operating margins with scale.",
+      "Strong demand for premium student accommodation.",
+      "High growth potential in co-living segment."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 84, "fy23": 249, "fy24": 556, "fy25": 950 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 223, "fy25": 235 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy22": 21, "fy23": 188, "fy24": 643, "fy25": 713 },
+      { "label": "Other Assets", "fy22": 564, "fy23": 1304, "fy24": 1028, "fy25": 2682 },
+      { "label": "Total Assets", "fy22": 849, "fy23": 1721, "fy24": 2248, "fy25": 4580 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 1, "fy23": 103.9, "fy24": 104.94, "fy25": 112.59 },
+      { "label": "Reserves", "fy22": 8.5, "fy23": 72, "fy24": 159.5, "fy25": 1886.8 },
+      { "label": "Borrowings", "fy22": 395, "fy23": 960, "fy24": 1128, "fy25": 1373 },
+      { "label": "Trade Payables", "fy22": 31, "fy23": 58, "fy24": 16.8, "fy25": 123 },
+      { "label": "Other Liabilities", "fy22": 215.5, "fy23": 532.1, "fy24": 713.56, "fy25": 1101.84 },
+      { "label": "Total Liabilities", "fy22": 849, "fy23": 1721, "fy24": 2248, "fy25": 4580 }
+    ],
+    "insights": "Rapid asset expansion with significant increase in fixed assets and borrowings for growth."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.77. Moderate leverage used for aggressive expansion.",
+
+  "balanceSheetInsights": "Strong balance sheet growth backed by equity infusion and operational scaling.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 0, "fy23": 0, "fy24": -467, "fy25": 873.5 },
+      { "label": "Cash from Investing Activities", "fy22": 0, "fy23": 0, "fy24": -605, "fy25": -658 },
+      { "label": "Cash from Financing Activities", "fy22": 0, "fy23": 0, "fy24": 115, "fy25": 142.2 }
+    ],
+    "insights": [
+      "Positive operating cash flow in FY25 after expansion phase.",
+      "Heavy investing outflow for new hostel properties."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+
+  "promotersManagement": "Promoter-driven company with expertise in real estate and hospitality.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Student Housing & Hospitality Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Bigshare Services",
+    "website": "https://www.bigshareonline.com/"
+  },
+
+  "managementInsight": "Focus on expanding premium student housing portfolio, maintaining high occupancy, and delivering superior living experience across key education cities in India.",
+
+  "faq": [
+    {
+      "question": "What does Hive Hostels do?",
+      "answer": "Operates premium student hostels and co-living spaces across India."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹2400 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "500 shares."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Very strong due to rising demand for quality student accommodation."
+    }
+  ]
+},
+ {
+  "id": 60,
+  "name": "Honeywell Electrical Devices and Systems India Limited",
+  "price": 10625,
+  "logo": "/images/preipo/image58.png",
+
+  "overview": `Honeywell Electrical Devices and Systems India Limited is a wholly owned subsidiary of Honeywell International. The company manufactures and supplies premium electrical wiring devices, switches, cable management systems, lighting controls, and building management solutions in India. It operates a manufacturing facility in Chennai and serves the residential, commercial, and industrial segments.`,
+
+  "products": [
+    "Wiring Devices & Switches",
+    "Cable Management Systems",
+    "Lighting Control Solutions",
+    "Electrical Protection Devices",
+    "Building Automation Products",
+    "Industrial Control Systems"
+  ],
+
+  "manufacturingUnits": [
+    "Manufacturing Plant in Chennai, Tamil Nadu"
+  ],
+
+  "clients": [
+    "Real Estate Developers",
+    "Electrical Contractors",
+    "Corporate & Industrial Clients",
+    "Infrastructure Projects"
+  ],
+
+  "shareDetails": {
+    "companyName": "Honeywell Electrical Devices and Systems India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹10625",
+    "marketCapitalization": "₹809 Crore",
+    "lotSize": "10 Shares",
+    "52WeekHigh": "₹8500",
+    "52WeekLow": "₹8500",
+    "faceValue": "₹10",
+    "bookValue": "1454.85",
+    "peRatio": "89.88",
+    "pbRatio": "5.84",
+    "debtToEquity": "0.00",
+    "returnOnEquity": "7.01",
+    "totalOutstandingShares": "951600",
+    "isin": "INE904T01014",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACA873E",
+    "cin": "U31901TN1988PLC011107",
+    "rta": "Link Intime India Pvt Ltd"
+  },
+
+  "financials": {
+    "annualReportSummary": "The company maintains stable revenue with healthy profitability and a debt-free balance sheet. It benefits from strong brand equity of Honeywell and consistent demand in the electrical segment.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 181, "fy24": 187.3, "fy25": 157.3 },
+      { "label": "EBITDA", "fy23": 21.8, "fy24": 19.12, "fy25": 21.2 },
+      { "label": "PBT", "fy23": 19.6, "fy24": 19.5, "fy25": 12 },
+      { "label": "Net Profit / Loss (PAT)", "fy23": 15.9, "fy24": 11.5, "fy25": 9 },
+      { "label": "EPS", "fy23": 187.37, "fy24": 121.05, "fy25": 96.76 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 14.97, "fy24": 12.11, "fy25": 7.11 },
+      { "label": "Net Profit Margin (%)", "fy23": 10.53, "fy24": 7.29, "fy25": 5.71 }
+    ],
+
+    "investorInsight": [
+      "Debt-free company with strong reserves.",
+      "Stable revenue from premium electrical products.",
+      "Backed by global Honeywell technology.",
+      "Consistent performer in electrical devices segment."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 9.6, "fy24": 8.3, "fy25": 9.85 },
+      { "label": "CWIP", "fy23": 0.4, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy23": 37.8, "fy24": 45, "fy25": 49.8 },
+      { "label": "Inventory", "fy23": 19.7, "fy24": 19.2, "fy25": 20.8 },
+      { "label": "Other Assets", "fy23": 105.5, "fy24": 115, "fy25": 100.15 },
+      { "label": "Total Assets", "fy23": 173, "fy24": 187.5, "fy25": 180 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 0.95, "fy24": 0.95, "fy25": 0.95 },
+      { "label": "Reserves", "fy23": 107.8, "fy24": 118.8, "fy25": 127.15 },
+      { "label": "Borrowings", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy23": 30.4, "fy24": 33.3, "fy25": 26.5 },
+      { "label": "Other Liabilities", "fy23": 34.05, "fy24": 33.45, "fy25": 25.05 },
+      { "label": "Total Liabilities", "fy23": 173, "fy24": 187.5, "fy25": 180 }
+    ],
+    "insights": "Completely debt-free with strong equity base."
+  },
+
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.00. Zero debt.",
+
+  "balanceSheetInsights": "Clean and healthy balance sheet with comfortable liquidity position.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy23": 29.2, "fy24": 19.8, "fy25": -13.2 },
+      { "label": "Cash from Investing Activities", "fy23": -5.2, "fy24": -2.8, "fy25": -1.9 },
+      { "label": "Cash from Financing Activities", "fy23": -0.9, "fy24": -0.89, "fy25": -0.9 }
+    ],
+    "insights": [
+      "Steady cash generation from operations in most years.",
+      "Low capex requirement as a mature manufacturing company."
+    ]
+  },
+
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Honeywell Group)", "institutional": "Low", "public": "Low" }
+  ],
+
+  "promotersManagement": "100% subsidiary of global Honeywell with strong technical expertise.",
+
+  "management": [
+    { "name": "Professional Management Team", "role": "Leadership", "experience": "Electrical & Automation Sector" }
+  ],
+
+  "rta": {
+    "registrar": "Link Intime India Pvt Ltd",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Focus on product innovation, quality manufacturing, market expansion, and leveraging Honeywell’s global technology for the Indian electrical devices market.",
+
+  "faq": [
+    {
+      "question": "What is the business of Honeywell Electrical Devices?",
+      "answer": "Manufacturing of premium wiring devices, switches, cable management, and lighting solutions."
+    },
+    {
+      "question": "What is the current unlisted share price?",
+      "answer": "₹10625 per share (indicative)."
+    },
+    {
+      "question": "What is the minimum lot size?",
+      "answer": "10 shares."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Stable with steady demand from real estate and infrastructure sectors."
+    }
+  ]
+},
+  {
+    "id": 61,
+    "name": "House of Kieraya Limited (Furlenco)",
+    "price": 235,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image59.jpg"
+  },
+  {
+    "id": 62,
+    "name": "ICEX (Indian Commodity Exchange) Limited Unlisted Shares",
+    "price": 5,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 5000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image60.png"
+  },
+  {
+    "id": 63,
+    "name": "ICL Fincorp Limited Unlisted Shares",
+    "price": 32,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image61.png"
+  },
+  {
+    "id": 64,
+    "name": "Imperative Business Ventures Limited",
+    "price": 175,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image62.jpg"
+  },
+  {
+    "id": 65,
+    "name": "Incred Holdings Limited Unlisted Shares",
+    "price": 207,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 250,
+    "status": "upcoming",
+    "logo": "/images/preipo/image63.png"
+  },
+  {
+    "id": 66,
+    "name": "India Carbon Limited Unlisted Shares",
+    "price": 1119,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image64.jpg"
+  },
+  {
+    "id": 67,
+    "name": "India Exposition Mart Ltd Unlisted Share",
+    "price": 157,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image65.jpg"
+  },
+  {
+    "id": 68,
+    "name": "Indian Potash Limited Unlisted Share",
+    "price": 4063,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 25,
+    "status": "upcoming",
+    "logo": "/images/preipo/image66.png"
+  },
+  {
+    "id": 69,
+    "name": "Indofil Industries Limited Unlisted Shares",
+    "price": 2119,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 25,
+    "status": "upcoming",
+    "logo": "/images/preipo/image67.png"
+  },
+  {
+    "id": 70,
+    "name": "Inkel Limited Unlisted Shares",
+    "price": 24,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image68.png"
+  },
+  {
+    "id": 71,
+    "name": "Innov8 Workspaces India Limited",
+    "price": 73,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image69.jpg"
+  },
+  {
+    "id": 72,
+    "name": "Inox Clean Energy Limited",
+    "price": 994,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image70.jpg"
+  },
+  {
+    "id": 73,
+    "name": "Inox Leasing and Finance Limited Unlisted Shares",
+    "price": 20625,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 25,
+    "status": "upcoming",
+    "logo": "/images/preipo/image71.jpg"
+  },
+  {
+    "id": 74,
+    "name": "Inox Renewable Solutions Limited",
+    "price": 719,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image72.jpg"
+  },
+  {
+    "id": 75,
+    "name": "Insolare Energy Unlisted Shares",
+    "price": 248,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image73.jpg"
+  },
+  {
+    "id": 76,
+    "name": "Jupiter International Limited",
+    "price": 444,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image74.png"
+  },
+  {
+    "id": 77,
+    "name": "KLM Axiva Finvest Unlisted Shares Price",
+    "price": 23,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 2000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image75.png"
+  },
+  {
+    "id": 78,
+    "name": "KURLON Enterprise Limited Unlisted Shares",
+    "price": 563,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image76.jpg"
+  },
+  {
+    "id": 79,
+    "name": "Kanara Consumer Products (Formerly Kurl-on Limited) Unlisted Shares",
+    "price": 1282,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 50,
+    "status": "upcoming",
+    "logo": "/images/preipo/image77.png"
+  },
+  {
+    "id": 80,
+    "name": "Kannur International Airport Limited Unlisted Shares",
+    "price": 163,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 250,
+    "status": "upcoming",
+    "logo": "/images/preipo/image78.png"
+  },
+  {
+    "id": 81,
+    "name": "Kineco Limited Unlisted Share",
+    "price": 4375,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image79.png"
+  },
+  {
+    "id": 82,
+    "name": "LAVA International Limited Unlisted Shares",
+    "price": 48,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image80.png"
+  },
+  {
+    "id": 83,
+    "name": "Lakeshore Hospital Unlisted Share Price",
+    "price": 144,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image81.png"
+  },
+  {
+    "id": 84,
+    "name": "Lords Mark Industries Limited",
+    "price": 100,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image82.jpg"
+  },
+  {
+    "id": 85,
+    "name": "Machint Solutions Limited",
+    "price": 335,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image83.jpg"
+  },
+  {
+    "id": 86,
+    "name": "Madbow Ventures Unlisted Shares",
+    "price": 44,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image84.png"
+  },
+  {
+    "id": 87,
+    "name": "Madhur Iron and Steel (India)",
+    "price": 173,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 5000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image85.jpg"
+  },
+  {
+    "id": 88,
+    "name": "Maharaja Shree Umaid Mills Unlisted Shares",
+    "price": 169,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 250,
+    "status": "upcoming",
+    "logo": "/images/preipo/image86.png"
+  },
+  {
+    "id": 89,
+    "name": "Maharashtra Knowledge Corporation (MKCL) Limited Unlisted Shares",
+    "price": 544,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image87.png"
+  },
+  {
+    "id": 90,
+    "name": "Manipal Payment & Identity Solutions Ltd (Manipal Cards)",
+    "price": 544,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image88.png"
+  },
+  {
+    "id": 91,
+    "name": "Manjushree Technopack India Limited Unlisted Shares",
+    "price": 1282,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/Manjushree.png"
+  },
+  {
+    "id": 92,
+    "name": "Market Simplified Unlisted Shares Price",
+    "price": 43,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image90.jpg"
+  },
+  {
+    "id": 93,
+    "name": "Martin and Harris Laboratories Limited Unlisted Shares",
+    "price": 1188,
+    "depository": "NSDL Only",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image91.jpg"
+  },
+  {
+    "id": 94,
+    "name": "Matrix Gas And Renewables Unlisted Shares",
+    "price": 38,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image92.png"
+  },
+  {
+    "id": 95,
+    "name": "Maverick Simulation Solutions Limited",
+    "price": 2750,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image93.png"
+  },
+  {
+    "id": 96,
+    "name": "Maxvalue Credits and Investments Unlisted Shares",
+    "price": 6,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 5000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image94.jpg"
+  },
+  {
+    "id": 97,
+    "name": "Merino Industries Limited Unlisted Shares",
+    "price": 3969,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 10,
+    "status": "upcoming",
+    "logo": "/images/preipo/image95.jpg"
+  },
+  {
+    "id": 98,
+    "name": "Metropolitan Stock Exchange (MSEI) Unlisted Shares",
+    "price": 4,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 10000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image96.png"
+  },
+  {
+    "id": 99,
+    "name": "Midland Micro Finance Limited Unlisted Shares",
+    "price": 244,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image97.jpg"
+  },
+  {
+    "id": 100,
+    "name": "Milton Cycle Industries Limited Unlisted Shares",
+    "price": 244,
+    "depository": "NSDL ONLY",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image98.jpg"
+  },
+  {
+    "id": 101,
+    "name": "Mohan Meakin Limited Unlisted Shares",
+    "price": 2657,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 50,
+    "status": "upcoming",
+    "logo": "/images/preipo/image99.jpg"
+  },
+  {
+    "id": 102,
+    "name": "Motilal Oswal Home Finance Limited Unlisted Shares",
+    "price": 17,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 2000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image100.jpg"
+  },
+  {
+    "id": 103,
+    "name": "NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares",
+    "price": 285,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image101.png"
+  },
+  {
+    "id": 104,
+    "name": "NCL Holdings Unlisted Shares",
+    "price": 160,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 250,
+    "status": "upcoming",
+    "logo": "/images/preipo/image102.jpg"
+  },
+  {
+    "id": 105,
+    "name": "NSE India Limited Unlisted Shares",
+    "price": 2438,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 250,
+    "status": "upcoming",
+    "logo": "/images/preipo/NSE.png"
+  },
+  {
+    "id": 106,
+    "name": "National Commodity & Derivatives Exchange (NCDEX) Limited Unlisted Shares",
+    "price": 600,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image104.jpg"
+  },
+  {
+    "id": 107,
+    "name": "National E-Repository Limited (NeRL)",
+    "price": 78,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 2000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image105.png"
+  },
+  {
+    "id": 108,
+    "name": "Nilliampathy Tea & Produce Company Limites Unlisted Shares",
+    "price": 687,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 50,
+    "status": "upcoming",
+    "logo": "/images/preipo/image107.jpg"
+  },
 
    {
   "id": 109,
@@ -20470,7 +22755,403 @@ The Indian hospitality sector is witnessing strong tailwinds from rising domesti
   },
 
   "managementInsight": "Under Ritesh Agarwal’s leadership, OYO has evolved from a high-growth, loss-making startup to a profitability-focused organization with strong operational discipline. The professional executive team brings deep expertise in hospitality, finance, and technology. Corporate governance has improved with better cost controls and transparency, boosting investor confidence ahead of the anticipated IPO. The vision centers on leveraging technology for scalable, asset-light growth while expanding into premium segments globally."
-}
+},
+{
+    "id": 110,
+    "name": "ORBIS FINANCIAL CORPORATION Unlisted Shares",
+    "price": 582,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image107.jpg"
+  },
+  {
+    "id": 111,
+    "name": "Onix Renewable Limited",
+    "price": 95,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image108.jpg"
+  },
+  {
+    "id": 112,
+    "name": "Otis Elevator (India) Limited Unlisted Shares",
+    "price": 4688,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 10,
+    "status": "upcoming",
+    "logo": "/images/preipo/image109.png"
+  },
+  {
+    "id": 113,
+    "name": "PNB Finance & Industries Limited Unlisted Shares",
+    "price": 14375,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 10,
+    "status": "upcoming",
+    "logo": "/images/preipo/image110.jpg"
+  },
+  {
+    "id": 114,
+    "name": "Parag Parikh Financial Advisory Services Ltd. (PPFAS)",
+    "price": 20313,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 50,
+    "status": "upcoming",
+    "logo": "/images/preipo/image111.jpg"
+  },
+  {
+    "id": 115,
+    "name": "Parry Agro Industries Limited Unlisted Shares",
+    "price": 1500,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 25,
+    "status": "upcoming",
+    "logo": "/images/preipo/image112.png"
+  },
+  {
+    "id": 116,
+    "name": "Paymate India Limited",
+    "price": 619,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/Paymate.png"
+  },
+  {
+    "id": 117,
+    "name": "PharmEasy Unlisted Shares",
+    "price": 9,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 5000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image114.png"
+  },
+  {
+    "id": 118,
+    "name": "Polymatech Unlisted Shares",
+    "price": 88,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image115.png"
+  },
+  {
+    "id": 119,
+    "name": "Power Exchange India Limited (PXIL)",
+    "price": 732,
+    "depository": "Only NSDL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image116.jpg"
+  },
+  {
+    "id": 120,
+    "name": "RKB Global Limited",
+    "price": 150,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image117.jpg"
+  },
+  {
+    "id": 121,
+    "name": "RRP S4E innovation Unlisted Shares Price",
+    "price": 388,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 400,
+    "status": "upcoming",
+    "logo": "/images/preipo/image118.png"
+  },
+  {
+    "id": 122,
+    "name": "Ramaraju Surgical Cotton Mills Limited Unlisted Shares",
+    "price": 357,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 250,
+    "status": "upcoming",
+    "logo": "/images/preipo/RamarajuSurgical.png"
+  },
+  {
+    "id": 123,
+    "name": "Raviraj Process Control Ltd",
+    "price": 107,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 2000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image120.jpg"
+  },
+  {
+    "id": 124,
+    "name": "Resin & Plastic Limited Unlisted Shares",
+    "price": 619,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image121.png"
+  },
+  {
+    "id": 125,
+    "name": "Roop Telsonic Ultrasonix Limited Unlisted Shares",
+    "price": 235,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 250,
+    "status": "upcoming",
+    "logo": "/images/preipo/image122.png"
+  },
+  {
+    "id": 126,
+    "name": "Roots Multiclean Limited Unlisted Share",
+    "price": 5000,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 10,
+    "status": "upcoming",
+    "logo": "/images/preipo/Roots.png"
+  },
+  {
+    "id": 127,
+    "name": "Royalcare Super Speciality Hospitals",
+    "price": 178,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image124.png"
+  },
+  {
+    "id": 128,
+    "name": "S3V Vascular Technologies Limited",
+    "price": 438,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image125.png"
+  },
+  {
+    "id": 129,
+    "name": "SBI Mutual Fund Unlisted Shares",
+    "price": 3369,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 50,
+    "status": "upcoming",
+    "logo": "/images/preipo/image126.png"
+  },
+  {
+    "id": 130,
+    "name": "SMILE Microfinance Unlisted Shares",
+    "price": 103,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image127.jpg"
+  },
+  {
+    "id": 131,
+    "name": "San Engineering and Locomotive Company Limited Unlisted Shares",
+    "price": 1063,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 50,
+    "status": "upcoming",
+    "logo": "/images/preipo/image128.jpg"
+  },
+  {
+    "id": 132,
+    "name": "Schneider Electric President Systems Unlisted Shares",
+    "price": 1563,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image129.png"
+  },
+  {
+    "id": 133,
+    "name": "Shivchem Agro Limited",
+    "price": 90,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1600,
+    "status": "upcoming",
+    "logo": "/images/preipo/image130.png"
+  },
+  {
+    "id": 134,
+    "name": "Sigachi Laboratories Limited Unlisted Shares",
+    "price": 65,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image131.jpg"
+  },
+  {
+    "id": 135,
+    "name": "Signify Innovations (Previously Phillips Lighting) India Limited Unlisted Shares",
+    "price": 1438,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 50,
+    "status": "upcoming",
+    "logo": "/images/preipo/image132.jpg"
+  },
+  {
+    "id": 136,
+    "name": "Skyways Air Services Limited",
+    "price": 194,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image133.png"
+  },
+  {
+    "id": 137,
+    "name": "Spencer and Company Limited Unlisted Shares",
+    "price": 1349,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 25,
+    "status": "upcoming",
+    "logo": "/images/preipo/Spencer.png"
+  },
+  {
+    "id": 138,
+    "name": "Spray Engineering Devices Unlisted Shares",
+    "price": 335,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image134.png"
+  },
+  {
+    "id": 139,
+    "name": "Sri Vishnu Shankar Mill Limited Unlisted Shares",
+    "price": 532,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 50,
+    "status": "upcoming",
+    "logo": "/images/preipo/image135.jpg"
+  },
+  {
+    "id": 140,
+    "name": "Srichakra Cement Limited Unlisted Shares",
+    "price": 87,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 250,
+    "status": "upcoming",
+    "logo": "/images/preipo/Srichakra.png"
+  },
+  {
+    "id": 141,
+    "name": "Sterlite Electric Limited (formerly Sterlite Power) Unlisted Shares",
+    "price": 619,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image136.png"
+  },
+  {
+    "id": 142,
+    "name": "Sterlite Grid 5 Unlisted Shares",
+    "price": 407,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/sterlitegrid.png"
+  },
+  {
+    "id": 143,
+    "name": "TRL Krosaki Refractories Limited Unlisted Shares",
+    "price": 2313,
+    "depository": "NSDL",
+    "minLotSize": 25,
+    "status": "upcoming",
+    "logo": "/images/preipo/Krosaki.png"
+  },
+  {
+    "id": 144,
+    "name": "Tea Time Unlisted Shares",
+    "price": 45,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image139.jpg"
+  },
+  {
+    "id": 145,
+    "name": "Ticker Limited",
+    "price": 43,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image140.png"
+  },
+  {
+    "id": 146,
+    "name": "Transline Technologies Limited",
+    "price": 175,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image141.jpg"
+  },
+  {
+    "id": 147,
+    "name": "Urban Tots Unlisted Shares",
+    "price": 78,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image142.png"
+  },
+  {
+    "id": 148,
+    "name": "Usha Shriram Unlisted Share",
+    "price": 244,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image143.png"
+  },
+  {
+    "id": 149,
+    "name": "Utkarsh Micro Finance(Core Invest) Unlisted Shares",
+    "price": 244,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image144.jpg"
+  },
+  {
+    "id": 150,
+    "name": "VCI Chemicals Industries",
+    "price": 79,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 5000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image145.jpg"
+  },
+  {
+    "id": 151,
+    "name": "Veeda Clinical Research Limited",
+    "price": 575,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 100,
+    "status": "upcoming",
+    "logo": "/images/preipo/image146.png"
+  },
+  {
+    "id": 152,
+    "name": "XtraNet Technologies Pvt. Ltd.",
+    "price": 219,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 2500,
+    "status": "upcoming",
+    "logo": "/images/preipo/image147.png"
+  },
+  {
+    "id": 153,
+    "name": "Zak Venture Ltd",
+    "price": 207,
+    "depository": "NSDL & CDSL",
+    "minLotSize": 1000,
+    "status": "upcoming",
+    "logo": "/images/preipo/image148.png"
+  } 
 
   ];
 };
