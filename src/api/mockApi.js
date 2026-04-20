@@ -13972,6 +13972,170 @@ export const fetchIPOs = async () => {
     "prospectus_pdf": "N/A",
     "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/anchor_allocation-om-power-transmission.pdf"
   }
+},
+{
+  "id": 71,
+  "name": "Mehul Telecom",
+  "logo": "/images/ipo/mehul.png",
+  "minInvestment": "₹2,35,200",
+  "open": "17 Apr 2026",
+  "close": "21 Apr 2026",
+  "listing": "24 Apr 2026",
+  "price": "₹96 – ₹98",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Mehul Telecom Limited",
+    "industry_sector": "Telecom Equipment & Mobile Accessories Trading / Distribution",
+    "founded_year": "Not specified",
+    "promoters": [
+      "Mehul Patel"
+    ],
+    "description": "Mehul Telecom Limited is engaged in the trading and distribution of mobile phones, telecom equipment, accessories, and related products. The company operates in the fast-growing telecom and mobile ecosystem, supplying products to retailers and distributors across India."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Mehul Telecom Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹96",
+    "price_band_max": "₹98",
+    "lot_size": 1200,
+    "total_issue_size": "₹27.73 Cr (28,29,600 shares)",
+    "fresh_issue_size": "₹27.73 Cr (28,29,600 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "28,29,600 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹98",
+    "minimum_investment": "₹2,35,200 (2 lots / 2,400 shares)",
+    "market_cap_post_issue": "Pre-IPO ≈ ₹102.43 Cr; Post-issue higher",
+    "pre_issue_shareholding": "Promoters high stake",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Trading and distribution of mobile phones, telecom equipment, and accessories.",
+    "products_services": [
+      "Mobile Phones",
+      "Telecom Equipment",
+      "Mobile Accessories"
+    ],
+    "competitive_strengths": [
+      "Established distribution network",
+      "Strong supplier relationships",
+      "Growing demand in telecom sector"
+    ],
+    "risks": [
+      "Intense competition in mobile trading",
+      "Price volatility of electronic goods",
+      "Working capital intensive"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "17 Apr 2026",
+    "ipo_close_date": "21 Apr 2026",
+    "basis_of_allotment_date": "22 Apr 2026",
+    "refund_initiation_date": "23 Apr 2026",
+    "demat_credit_date": "23 Apr 2026",
+    "listing_date": "24 Apr 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹22.95 Cr",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "retail_quota": "35%",
+    "hni_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,35,200"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,35,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,52,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "9600",
+      "amount": "₹9,40,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "N/A",
+    "roce": "N/A",
+    "pat_margin": "N/A",
+    "ebitda_margin": "N/A",
+    "debt_to_equity": "N/A",
+    "eps": "N/A",
+    "pe_ratio": "N/A"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY25",
+      "assets": "N/A",
+      "total_income": "₹152 Cr (approx)",
+      "pat": "₹7.07 Cr (approx)",
+      "ebitda": "N/A",
+      "net_worth": "N/A",
+      "total_borrowing": "N/A"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Apr 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "7.76x (as of Day 2, 20 Apr 2026)",
+    "qib_ex_anchor": "1.34x",
+    "hni_subscription": "17.92x",
+    "retail_subscription": "7.16x",
+    "total_applications": "3,780"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "KFin Technologies Ltd.",
+    "registrar_website": "https://www.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Cumulative Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "West Gate Shop 223, 150 Ft Ring Road, Rajkot Raiya Road, Rajkot, Gujarat, 360007",
+    "company_website": "https://ipostatus.kfintech.com/",
+    "company_email": "info@mehultelecom.com",
+    "company_phone": "0281 2991223"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP%20&%20GID_150420261848.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/mehul-telecom-ipo-anchor-allocation-letter.pdf"
+  }
 }
 
 
