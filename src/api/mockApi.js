@@ -22468,7 +22468,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
  {
   "id": 62,
-  "name": "Fusion Techstack Limited (Formerly Indian Commodity Exchange Limited - ICEX)",
+  "name": "ICEX (Indian Commodity Exchange) Limited Unlisted Shares",
   "price": 2.33,
   "logo": "/images/preipo/image60.png",
   "overview": "Fusion Techstack Limited (formerly known as Indian Commodity Exchange Limited - ICEX) is a SEBI-recognized commodity exchange in India with a demutualized corporate structure. It offers online trading, clearing, and settlement services for various agricultural and non-agricultural commodities. The company is undergoing a strategic shift towards technology and IT-enabled solutions including software, cloud, data management, AI, and blockchain.",
@@ -22598,7 +22598,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 63,
-  "name": "ICL Fincorp Limited",
+  "name": "ICL Fincorp Limited Unlisted Shares",
   "price": 25,
   "logo": "/images/preipo/image61.png",
   "overview": "ICL Fincorp Limited is a Non-Banking Financial Company (NBFC) registered with RBI, primarily engaged in providing loans and advances, investment in securities, and other financial services. The company focuses on retail and SME lending with strong asset quality (NPA below 2%).",
@@ -22872,7 +22872,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 65,
-  "name": "Incred Holdings Limited",
+  "name": "Incred Holdings Limited Unlisted Shares",
   "price": 148,
   "logo": "/images/preipo/image63.png",
   "overview": "Incred Holdings Limited is a diversified financial services holding company. It operates through its subsidiaries in lending, insurance, asset management, and other financial services. The company focuses on providing credit solutions, insurance distribution, and wealth management services.",
@@ -23004,7 +23004,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
  "id": 66,
- "name": "India Carbon Limited",
+ "name": "India Carbon Limited Unlisted Shares",
  "price": 895,
  "logo": "/images/preipo/image64.jpg",
  "overview": "India Carbon Limited is one of the leading manufacturers of Calcined Petroleum Coke (CPC) and Coal Tar Pitch in India. The company caters to the aluminum, steel, and graphite industries with high-quality carbon products. It operates manufacturing facilities in Assam and has a strong presence in the domestic and international markets.",
@@ -23143,7 +23143,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
  {
   "id": 67,
-  "name": "India Exposition Mart Ltd",
+  "name": "India Exposition Mart Ltd Unlisted Share",
   "price": 122,
   "logo": "/images/preipo/image67.png",
 
@@ -23272,7 +23272,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 68,
-  "name": "Indian Potash Limited",
+  "name": "Indian Potash Limited Unlisted Share",
   "price": 2750,
   "logo": "/images/preipo/image66.png",
 
@@ -23423,7 +23423,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 69,
-  "name": "Indofil Industries Limited",
+  "name": "Indofil Industries Limited Unlisted Shares",
   "price": 1460,
   "logo": "/images/preipo/image67.png",
 
@@ -23574,7 +23574,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 70,
-  "name": "Inkel Limited",
+  "name": "Inkel Limited Unlisted Shares",
   "price": 20,
   "logo": "/images/preipo/image68.png",
 
@@ -23721,222 +23721,3553 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
   "status": "upcoming"
 },
-  {
-    "id": 71,
-    "name": "Innov8 Workspaces India Limited",
-    "price": 73,
+ {
+  "id": 71,
+  "name": "Innov8 Workspaces India Limited",
+  "price": 58,
+  "logo": "/images/preipo/image69.jpg",
+
+  "overview": "Innov8 Workspaces India Limited is a prominent flexible workspace provider in India, offering managed co-working spaces and enterprise office solutions. Founded in 2015 and acquired by OYO in 2019, the company focuses on premium, design-driven office environments catering to startups, SMEs, and large enterprises. Innov8 operates across major metropolitan cities, providing fully serviced offices, shared workspaces, and customized enterprise solutions. With increasing demand for flexible work arrangements and hybrid work models, the company is positioned to benefit from the structural shift in office space utilization.",
+
+  "products": [
+    "Co-working Spaces",
+    "Managed Office Solutions",
+    "Enterprise Workspaces",
+    "Flexible Office Leasing",
+    "Custom Workspace Solutions"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Startups",
+    "SMEs",
+    "Large Enterprises",
+    "Freelancers",
+    "Corporate Teams"
+  ],
+
+  "shareDetails": {
+    "companyName": "Innov8 Workspaces India Limited",
+    "indicativeUnlistedSharePrice": "₹58",
+    "marketCapitalization": "₹1475 Cr",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹58",
+    "52WeekLow": "₹52",
+    "faceValue": "₹1",
+    "bookValue": "₹2.42",
+    "peRatio": "1160",
+    "pbRatio": "23.97",
+    "debtToEquity": "0.61",
+    "returnOnEquity": "1.89%",
+    "totalOutstandingShares": "25,43,43,610",
+    "isin": "INE1BW01022",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image69.jpg"
+    "pan": "AACCO9563F",
+    "cin": "U70100DL2019PLC351211",
+    "rta": "Skyline Finserv"
   },
+
+  "financials": {
+    "annualReportSummary": "Innov8 has demonstrated strong revenue growth driven by expansion in workspace capacity and rising demand for flexible offices. Revenue increased from ₹2157 Cr in FY22 to ₹11,445 Cr in FY25. However, profitability remains volatile due to high operating costs, expansion expenses, and depreciation. EBITDA has improved significantly, but net profit remains inconsistent with losses in FY25.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 2157, "fy23": 3687, "fy24": 5288, "fy25": 11445 },
+      { "label": "EBITDA", "fy22": 648, "fy23": 1523, "fy24": 2622, "fy25": 6806 },
+      { "label": "Operating Profit", "fy22": 648, "fy23": 1523, "fy24": 2622, "fy25": 6806 },
+      { "label": "EBIT", "fy22": -114, "fy23": 439, "fy24": 583, "fy25": 2365 },
+      { "label": "Profit Before Tax", "fy22": -19, "fy23": 119, "fy24": 1081, "fy25": -316 },
+      { "label": "Net Profit / Loss", "fy22": -19, "fy23": 119, "fy24": 370, "fy25": -432 },
+      { "label": "EPS", "fy22": -0.19, "fy23": 1.19, "fy24": 3.77, "fy25": 0.05 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 30.04, "fy23": 41.31, "fy24": 49.77, "fy25": 57.72 },
+      { "label": "Net Profit Margin (%)", "fy22": -0.88, "fy23": 3.23, "fy24": 7.56, "fy25": 1.01 },
+      { "label": "EPS", "fy22": -0.19, "fy23": 1.19, "fy24": 3.77, "fy25": 0.05 }
+    ],
+
+    "investorInsight": [
+      "Revenue growth is strong, driven by expansion and increasing demand for flexible workspaces.",
+      "EBITDA margins are improving significantly, indicating operational efficiency.",
+      "Net profitability remains inconsistent due to high expansion costs.",
+      "High valuation multiples suggest premium pricing with execution risks."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 1609, "fy23": 5075, "fy24": 3371, "fy25": 4771 },
+      { "label": "Trade Receivables", "fy22": 179, "fy23": 383, "fy24": 488, "fy25": 2418 },
+      { "label": "Other Assets", "fy22": 4719, "fy23": 5270, "fy24": 9283, "fy25": 51419 },
+      { "label": "Total Assets", "fy22": 6507, "fy23": 10728, "fy24": 12551, "fy25": 64132 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 100, "fy23": 100, "fy24": 100, "fy25": 2543.4 },
+      { "label": "Reserves", "fy22": -12887, "fy23": -12712, "fy24": -8946, "fy25": 3609 },
+      { "label": "Borrowings", "fy22": 202, "fy23": 0, "fy24": 0, "fy25": 3729 },
+      { "label": "Trade Payables", "fy22": 6813, "fy23": 6855, "fy24": 10627, "fy25": 6867 },
+      { "label": "Other Liabilities", "fy22": 2279, "fy23": 16485, "fy24": 14740, "fy25": 47563.6 },
+      { "label": "Total Liabilities", "fy22": 6507, "fy23": 10728, "fy24": 12551, "fy25": 64132 }
+    ],
+    "insights": "The balance sheet has expanded significantly due to aggressive scaling. Large increase in liabilities and assets reflects capital infusion and expansion strategy. Negative reserves in earlier years indicate past losses, though improving in FY25."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are heavily driven by operational payables, lease obligations, and expansion financing. Borrowings increased in FY25 indicating reliance on external funding.",
+
+  "balanceSheetInsights": "Innov8 is in a high-growth expansion phase with significant capital deployment. While scale is increasing rapidly, financial leverage and liability growth should be monitored closely.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 592, "fy23": 1638, "fy24": 2050, "fy25": -6502 },
+      { "label": "Investing Cash Flow", "fy22": 0.6, "fy23": 0, "fy24": -172, "fy25": -6196 },
+      { "label": "Financing Cash Flow", "fy22": 706, "fy23": 1044, "fy24": -2034, "fy25": 12716 }
+    ],
+    "insights": [
+      "Operating cash flow was strong until FY24 but turned negative in FY25 due to expansion.",
+      "Heavy investing outflows reflect aggressive growth and capital expenditure.",
+      "Financing inflows increased significantly, indicating reliance on funding.",
+      "Cash flow volatility reflects growth-stage business dynamics."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "Innov8 is backed by OYO (Oravel Stays Limited), providing strong institutional backing and access to capital and operational expertise.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Skyline Finserv",
+    "website": "https://www.skylinerta.com/"
+  },
+
+  "managementInsight": "With backing from OYO, Innov8 has strong strategic support for expansion. The management focuses on scaling workspace capacity and improving utilization rates. However, achieving consistent profitability will be key to long-term sustainability.",
+
+  "faq": [
+    {
+      "question": "What does Innov8 Workspaces do?",
+      "answer": "Innov8 provides co-working spaces, managed offices, and enterprise workspace solutions across India."
+    },
+    {
+      "question": "Who owns Innov8 Workspaces?",
+      "answer": "Innov8 is backed by OYO (Oravel Stays Limited)."
+    },
+    {
+      "question": "What is the lot size of Innov8 shares?",
+      "answer": "The minimum lot size is 1000 shares."
+    },
+    {
+      "question": "Is Innov8 profitable?",
+      "answer": "The company has shown strong EBITDA growth but net profitability remains inconsistent due to expansion costs."
+    },
+    {
+      "question": "Is investing in Innov8 risky?",
+      "answer": "Yes, risks include high valuation, expansion costs, and dependency on occupancy levels in co-working spaces."
+    }
+  ],
+
+  "status": "upcoming"
+},
   {
-    "id": 72,
-    "name": "Inox Clean Energy Limited",
-    "price": 994,
+  "id": 72,
+  "name": "Inox Clean Energy Limited",
+  "price": 750,
+  "logo": "/images/preipo/image70.jpg",
+
+  "overview": "Inox Clean Energy Limited is part of the INOXGFL Group and operates in the renewable energy sector, focusing on wind and solar power generation. The company develops, owns, and operates renewable energy assets and is also involved in project development and infrastructure support for clean energy solutions. With India’s strong push toward renewable energy and sustainability, Inox Clean Energy is positioned to benefit from increasing demand for green power and long-term energy transition trends.",
+
+  "products": [
+    "Wind Power Generation",
+    "Solar Power Generation",
+    "Renewable Energy Infrastructure",
+    "Clean Energy Project Development"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Power Distribution Companies",
+    "Industrial Consumers",
+    "Government Utilities",
+    "Corporate Renewable Buyers"
+  ],
+
+  "shareDetails": {
+    "companyName": "Inox Clean Energy Limited",
+    "indicativeUnlistedSharePrice": "₹750",
+    "marketCapitalization": "₹69953 Cr",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹795",
+    "52WeekLow": "₹495",
+    "faceValue": "₹1",
+    "bookValue": "₹5.17",
+    "peRatio": "2586.21",
+    "pbRatio": "145.07",
+    "debtToEquity": "0.72",
+    "returnOnEquity": "5.82%",
+    "totalOutstandingShares": "93,27,10,646",
+    "isin": "INE0KHY01025",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image70.jpg"
+    "pan": "AACFN8456B",
+    "cin": "U40300GJ2017PLC098988",
+    "rta": "MUFG Intime India Pvt. Ltd. (Link Intime)"
   },
+
+  "financials": {
+    "annualReportSummary": "Inox Clean Energy is in a high-growth phase with increasing revenue from renewable energy operations. Revenue increased from ₹4 Cr in FY23 to ₹82 Cr in FY25. EBITDA has improved significantly, reflecting operational scaling. However, profitability remains volatile due to high finance costs and early-stage investments in infrastructure.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 4, "fy24": 26, "fy25": 82 },
+      { "label": "EBITDA", "fy23": 21.75, "fy24": 83.33, "fy25": 85.37 },
+      { "label": "Operating Profit", "fy23": 21.75, "fy24": 83.33, "fy25": 85.37 },
+      { "label": "EBIT", "fy23": -7.13, "fy24": 8, "fy25": 56 },
+      { "label": "Profit Before Tax", "fy23": -21, "fy24": -10, "fy25": 36 },
+      { "label": "Net Profit / Loss", "fy23": -16, "fy24": -8, "fy25": 27 },
+      { "label": "EPS", "fy23": -7.48, "fy24": -3.74, "fy25": 0.3 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 21.75, "fy24": 83.33, "fy25": 85.37 },
+      { "label": "Net Profit Margin (%)", "fy23": -400, "fy24": -33.33, "fy25": 32.93 },
+      { "label": "EPS", "fy23": -7.48, "fy24": -3.74, "fy25": 0.3 }
+    ],
+
+    "investorInsight": [
+      "Revenue growth is strong but from a low base, indicating early-stage scaling.",
+      "EBITDA margins are high due to operating leverage in renewable assets.",
+      "Profitability turned positive in FY25 after earlier losses.",
+      "Valuation multiples are extremely high, indicating premium pricing and risk."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 288, "fy24": 276, "fy25": 469 },
+      { "label": "CWIP", "fy23": 0, "fy24": 0, "fy25": 342 },
+      { "label": "Trade Receivables", "fy23": 0.76, "fy24": 0.27, "fy25": 5.26 },
+      { "label": "Other Assets", "fy23": 2.24, "fy24": 3.73, "fy25": 438.74 },
+      { "label": "Total Assets", "fy23": 291, "fy24": 280, "fy25": 1255 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 21.39, "fy24": 21.39, "fy25": 90.81 },
+      { "label": "Reserves", "fy23": 15, "fy24": 6.81, "fy25": 390 },
+      { "label": "Borrowings", "fy23": 198, "fy24": 232, "fy25": 346 },
+      { "label": "Trade Payables", "fy23": 45, "fy24": 9, "fy25": 6 },
+      { "label": "Other Liabilities", "fy23": 11.61, "fy24": 11, "fy25": 422.19 },
+      { "label": "Total Liabilities", "fy23": 291, "fy24": 280, "fy25": 1255 }
+    ],
+    "insights": "The balance sheet expanded significantly in FY25 driven by asset additions and capital infusion. Borrowings increased to support project development, while reserves improved reflecting better profitability."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are largely driven by borrowings and project financing for renewable energy assets. Increase in other liabilities indicates expansion-related obligations.",
+
+  "balanceSheetInsights": "The company is in a capital-intensive growth phase with rising assets and leverage. Successful execution of projects will be key to sustaining returns.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy23": 28, "fy24": -114.4, "fy25": 28.5 },
+      { "label": "Investing Cash Flow", "fy23": -27, "fy24": 0, "fy25": -215.5 },
+      { "label": "Financing Cash Flow", "fy23": -1.29, "fy24": 15, "fy25": 394 }
+    ],
+    "insights": [
+      "Operating cash flow turned volatile due to working capital changes.",
+      "Heavy investing outflows reflect capital expenditure on renewable projects.",
+      "Financing inflows increased significantly to support expansion.",
+      "Cash flow profile reflects early-stage infrastructure investment cycle."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "Inox Clean Energy Limited is part of the INOXGFL Group, a well-established industrial group with interests in chemicals, renewable energy, and infrastructure.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "MUFG Intime India Pvt. Ltd. (Link Intime)",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Backed by the INOXGFL Group, the company benefits from strong industry experience and capital support. The focus remains on scaling renewable energy assets and improving operational efficiency.",
+
+  "faq": [
+    {
+      "question": "What does Inox Clean Energy Limited do?",
+      "answer": "The company develops and operates renewable energy projects, including wind and solar power generation."
+    },
+    {
+      "question": "What is the lot size of Inox Clean Energy shares?",
+      "answer": "The minimum lot size is 100 shares."
+    },
+    {
+      "question": "Is Inox Clean Energy profitable?",
+      "answer": "The company turned profitable in FY25 after losses in earlier years."
+    },
+    {
+      "question": "Is Inox Clean Energy a good investment?",
+      "answer": "It has strong growth potential due to renewable energy demand but carries high valuation and execution risks."
+    },
+    {
+      "question": "Is buying unlisted shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares is legal under SEBI regulations."
+    }
+  ],
+
+  "status": "upcoming"
+},
   {
-    "id": 73,
-    "name": "Inox Leasing and Finance Limited Unlisted Shares",
-    "price": 20625,
+  "id": 73,
+  "name": "Inox Leasing and Finance Limited",
+  "price": 14250,
+  "logo": "/images/preipo/image71.jpg",
+
+  "overview": "Inox Leasing and Finance Limited is a financial services company engaged in investment activities, leasing, and financing operations. It is part of the INOXGFL Group, which has diversified interests across chemicals, renewable energy, and financial services. The company primarily focuses on treasury operations, strategic investments, and capital allocation across group entities. With strong backing from the INOX group, it benefits from a stable financial base and diversified investment exposure.",
+
+  "products": [
+    "Leasing Services",
+    "Financial Investments",
+    "Treasury Operations",
+    "Corporate Financing"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Group Companies",
+    "Corporate Borrowers",
+    "Investment Entities"
+  ],
+
+  "shareDetails": {
+    "companyName": "Inox Leasing and Finance Limited",
+    "indicativeUnlistedSharePrice": "₹14,250",
+    "marketCapitalization": "₹14,108 Cr",
+    "lotSize": "25 Shares",
+    "52WeekHigh": "₹16,500",
+    "52WeekLow": "₹14,250",
+    "faceValue": "₹10",
+    "bookValue": "₹13,679.63",
+    "peRatio": "14.82",
+    "pbRatio": "1.04",
+    "debtToEquity": "0",
+    "returnOnEquity": "7.03%",
+    "totalOutstandingShares": "9,90,00,550",
+    "isin": "INE080E01014",
     "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image71.jpg"
+    "pan": "AAACI1954L",
+    "cin": "U65910DL1995PLC039747",
+    "rta": "Dynamic Superways and Exports"
   },
-  {
-    "id": 74,
-    "name": "Inox Renewable Solutions Limited",
-    "price": 719,
+
+  "financials": {
+    "annualReportSummary": "Inox Leasing and Finance Limited has demonstrated consistent financial performance with steady growth in revenue and profitability. Revenue increased from ₹4606 Cr in FY22 to ₹8031 Cr in FY25. EBITDA and net profit have also grown steadily, reflecting strong treasury income and investment performance. Margins remain healthy due to the nature of financial and investment operations.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 4606, "fy23": 6335, "fy24": 5579, "fy25": 8031 },
+      { "label": "EBITDA", "fy22": 726, "fy23": 1588, "fy24": 1016, "fy25": 1699 },
+      { "label": "Operating Profit", "fy22": 726, "fy23": 1588, "fy24": 1016, "fy25": 1699 },
+      { "label": "EBIT", "fy22": 281, "fy23": 1246, "fy24": 616, "fy25": 1161 },
+      { "label": "Profit Before Tax", "fy22": 940, "fy23": 1087, "fy24": 559, "fy25": 1228 },
+      { "label": "Net Profit / Loss", "fy22": 901, "fy23": 608, "fy24": 395, "fy25": 952 },
+      { "label": "EPS", "fy22": 910.1, "fy23": 612.12, "fy24": 398.99, "fy25": 961.62 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 15.76, "fy23": 25.07, "fy24": 18.21, "fy25": 21.16 },
+      { "label": "Net Profit Margin (%)", "fy22": 19.56, "fy23": 9.57, "fy24": 7.08, "fy25": 11.85 },
+      { "label": "EPS", "fy22": 910.1, "fy23": 612.12, "fy24": 398.99, "fy25": 961.62 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth driven by treasury and investment income.",
+      "Profitability remains stable with healthy margins.",
+      "Low debt enhances financial stability.",
+      "Performance depends on market conditions and investment returns."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 3657, "fy23": 4588, "fy24": 5869, "fy25": 6286 },
+      { "label": "CWIP", "fy22": 868, "fy23": 1305, "fy24": 1432, "fy25": 1864 },
+      { "label": "Investments", "fy22": 76, "fy23": 33, "fy24": 9, "fy25": 832 },
+      { "label": "Trade Receivables", "fy22": 1853, "fy23": 1864, "fy24": 1882, "fy25": 3797 },
+      { "label": "Inventory", "fy22": 1951, "fy23": 2615, "fy24": 2816, "fy25": 3172 },
+      { "label": "Other Assets", "fy22": 4441, "fy23": 3774, "fy24": 3988, "fy25": 3369 },
+      { "label": "Total Assets", "fy22": 13046, "fy23": 14179, "fy24": 15996, "fy25": 19320 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 9.9, "fy23": 9.9, "fy24": 9.9, "fy25": 9.9 },
+      { "label": "Reserves", "fy22": 6276.41, "fy23": 6812.6, "fy24": 9499, "fy25": 13528 },
+      { "label": "Borrowings", "fy22": 2762, "fy23": 2860, "fy24": 3434, "fy25": 2680 },
+      { "label": "Trade Payables", "fy22": 1220, "fy23": 1223, "fy24": 1022, "fy25": 1581 },
+      { "label": "Other Liabilities", "fy22": 2777.69, "fy23": 1533.5, "fy24": 2031, "fy25": 1546.1 },
+      { "label": "Total Liabilities", "fy22": 13046, "fy23": 14179, "fy24": 15996, "fy25": 19320 }
+    ],
+    "insights": "The balance sheet reflects strong asset growth driven by investments and receivables. Increasing reserves indicate retained earnings, while borrowings remain controlled relative to asset size."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are composed of moderate borrowings and operational payables. The company maintains a healthy capital structure with strong reserves and relatively low leverage.",
+
+  "balanceSheetInsights": "Inox Leasing demonstrates financial strength with increasing reserves and asset base. The balance sheet supports long-term growth, though performance is tied to investment income cycles.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 2626, "fy23": -345, "fy24": 960, "fy25": 757 },
+      { "label": "Investing Cash Flow", "fy22": 2394, "fy23": -816, "fy24": -1637, "fy25": -2580 },
+      { "label": "Financing Cash Flow", "fy22": 175, "fy23": 914.3, "fy24": 674, "fy25": 2155 }
+    ],
+    "insights": [
+      "Operating cash flow is strong but volatile due to working capital changes.",
+      "Investing cash flow reflects capital deployment and investment activities.",
+      "Financing inflows indicate capital management and funding activities.",
+      "Overall liquidity remains stable with positive net cash generation."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is part of the INOXGFL Group, providing strong institutional backing and diversified investment exposure.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Dynamic Superways and Exports",
+    "website": "https://dynamicsuperwaysexportsltd.com/"
+  },
+
+  "managementInsight": "With strong backing from the INOX group, the company benefits from experienced leadership and strategic investment decisions. The focus remains on maximizing returns from treasury and investment operations.",
+
+  "faq": [
+    {
+      "question": "What does Inox Leasing and Finance Limited do?",
+      "answer": "The company is involved in leasing, financing, and investment activities, primarily focusing on treasury operations."
+    },
+    {
+      "question": "What is the lot size of Inox Leasing shares?",
+      "answer": "The minimum lot size is 25 shares."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, the company has shown consistent profitability with strong margins."
+    },
+    {
+      "question": "Is it a low-risk investment?",
+      "answer": "It is relatively stable due to low debt, but performance depends on financial market conditions."
+    },
+    {
+      "question": "Is buying unlisted shares legal?",
+      "answer": "Yes, buying and selling unlisted shares is legal under SEBI regulations."
+    }
+  ],
+
+  "status": "upcoming"
+},
+ {
+  "id": 74,
+  "name": "Inox Renewable Solutions Limited",
+  "price": 719,
+  "logo": "/images/preipo/image72.jpg",
+
+  "overview": "Inox Renewable Solutions Limited is part of the INOXGFL Group and operates in the renewable energy infrastructure and services space. The company focuses on engineering, procurement, commissioning, and operations & maintenance (O&M) services for wind energy projects. With strong backing from the INOX group, it plays a key role in supporting wind turbine operations, infrastructure management, and renewable energy ecosystem development in India. As renewable energy adoption accelerates, the company is positioned to benefit from increasing demand for wind power services and long-term maintenance contracts.",
+
+  "products": [
+    "Wind Energy Operations & Maintenance (O&M)",
+    "Engineering & EPC Services",
+    "Renewable Energy Infrastructure Services",
+    "Project Commissioning Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Wind Energy Project Developers",
+    "Renewable Energy Companies",
+    "Infrastructure & EPC Firms"
+  ],
+
+  "shareDetails": {
+    "companyName": "Inox Renewable Solutions Limited",
+    "indicativeUnlistedSharePrice": "₹575",
+    "marketCapitalization": "₹9312 Cr",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹575",
+    "52WeekLow": "₹575",
+    "faceValue": "₹10",
+    "bookValue": "₹58.35",
+    "peRatio": "518.02",
+    "pbRatio": "9.85",
+    "debtToEquity": "0.79",
+    "returnOnEquity": "1.93%",
+    "totalOutstandingShares": "16,91,42,156",
+    "isin": "INE0JVI01408",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image72.jpg"
+    "pan": "AABCR0349E",
+    "cin": "U40106GJ2000PLC121187",
+    "rta": "MUFG Intime India"
   },
+
+  "financials": {
+    "annualReportSummary": "The company has shown strong revenue growth from ₹55 Cr in FY23 to ₹218 Cr in FY25. Profitability improved significantly, turning from losses in FY23 to ₹18 Cr PAT in FY25. Margins have expanded sharply, indicating operating leverage benefits as scale improves. However, valuation multiples remain elevated, reflecting growth expectations.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 55, "fy24": 109, "fy25": 218 },
+      { "label": "EBITDA", "fy23": -25.6, "fy24": 38.2, "fy25": 96 },
+      { "label": "Operating Profit", "fy23": -25.6, "fy24": 38.2, "fy25": 96 },
+      { "label": "EBIT", "fy23": -26, "fy24": 52.6, "fy25": 20 },
+      { "label": "Profit Before Tax", "fy23": -89, "fy24": 91, "fy25": 18 },
+      { "label": "Net Profit / Loss", "fy23": -89, "fy24": 91, "fy25": 18 },
+      { "label": "EPS", "fy23": -6.63, "fy24": 6.78, "fy25": 1.1 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": -46.55, "fy24": 34.22, "fy25": 44.04 },
+      { "label": "Net Profit Margin (%)", "fy23": -161.82, "fy24": 45.73, "fy25": 8.26 },
+      { "label": "EPS", "fy23": -6.63, "fy24": 6.78, "fy25": 1.1 }
+    ],
+
+    "investorInsight": [
+      "Strong turnaround from losses to profitability within two years.",
+      "Revenue growth is robust, driven by renewable energy demand.",
+      "Margins improved significantly due to operating leverage.",
+      "High valuation indicates strong market expectations but also adds risk."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 138, "fy24": 645, "fy25": 1082 },
+      { "label": "CWIP", "fy23": 109, "fy24": 252, "fy25": 231 },
+      { "label": "Trade Receivables", "fy23": 251, "fy24": 155, "fy25": 183 },
+      { "label": "Inventory", "fy23": 405, "fy24": 346, "fy25": 369 },
+      { "label": "Other Assets", "fy23": 313, "fy24": 135, "fy25": 241 },
+      { "label": "Total Assets", "fy23": 1216, "fy24": 1533, "fy25": 2108 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 136.26, "fy24": 136.26, "fy25": 161.94 },
+      { "label": "Reserves", "fy23": -40, "fy24": 52, "fy25": 773 },
+      { "label": "Borrowings", "fy23": 716, "fy24": 946, "fy25": 739 },
+      { "label": "Trade Payables", "fy23": 288, "fy24": 243, "fy25": 223 },
+      { "label": "Other Liabilities", "fy23": 167.74, "fy24": 157.74, "fy25": 209.06 },
+      { "label": "Total Liabilities", "fy23": 1216, "fy24": 1533, "fy25": 2108 }
+    ],
+
+    "insights": "The balance sheet shows rapid asset expansion, particularly in fixed assets, indicating heavy investment in infrastructure. Borrowings increased but remain manageable relative to growth. Improvement in reserves suggests strengthening financial position."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are driven by borrowings and operational payables. The company has taken on debt to fund expansion but is gradually strengthening reserves through profitability.",
+
+  "balanceSheetInsights": "The company is in a growth phase with increasing capital deployment. Asset-heavy expansion aligns with infrastructure-driven business, but maintaining debt discipline will be important going forward.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy23": -115.7, "fy24": 156.3, "fy25": 88.5 },
+      { "label": "Investing Cash Flow", "fy23": -394.8, "fy24": -283.6, "fy25": -549.7 },
+      { "label": "Financing Cash Flow", "fy23": 493.7, "fy24": 128, "fy25": 465.7 }
+    ],
+    "insights": [
+      "Operating cash flow turned positive after initial losses.",
+      "Heavy negative investing cash flow indicates strong capital expenditure.",
+      "Financing cash flow reflects reliance on debt and capital infusion.",
+      "Cash generation is improving but still volatile due to expansion."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is part of the INOXGFL Group, a major player in renewable energy and industrial gases, providing strong strategic backing and industry expertise.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "MUFG Intime India",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Backed by a strong industrial group, the company benefits from established expertise in renewable energy. Execution capability and scaling operations efficiently will be key to sustaining growth and profitability.",
+
+  "faq": [
+    {
+      "question": "What does Inox Renewable Solutions Limited do?",
+      "answer": "The company provides operations & maintenance, EPC, and infrastructure services for wind energy projects."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "It has recently turned profitable, moving from losses in FY23 to positive PAT in FY24 and FY25."
+    },
+    {
+      "question": "What are the key growth drivers?",
+      "answer": "Growth is driven by increasing renewable energy adoption, especially wind energy projects in India."
+    },
+    {
+      "question": "Is the company highly leveraged?",
+      "answer": "The company has moderate debt levels due to expansion but maintains manageable leverage."
+    },
+    {
+      "question": "Who are the major promoters?",
+      "answer": "It is part of the INOXGFL Group, a well-known industrial and renewable energy conglomerate."
+    }
+  ]
+},
   {
-    "id": 75,
-    "name": "Insolare Energy Unlisted Shares",
-    "price": 248,
+  "id": 75,
+  "name": "Insolare Energy Limited",
+  "price": 248,
+  "logo": "/images/preipo/image73.jpg",
+
+  "overview": "Insolare Energy Limited is a renewable energy EPC (Engineering, Procurement, and Construction) solutions provider in India. Founded in 2009, the company focuses on delivering end-to-end solar power solutions including project development, system integration, and installation of solar plants. Insolare serves commercial, industrial, and utility-scale clients, positioning itself as a key player in India’s rapidly growing solar energy sector. With increasing emphasis on clean energy and sustainability, the company benefits from strong industry tailwinds and expanding demand for solar infrastructure.",
+
+  "products": [
+    "Solar EPC Solutions",
+    "Solar Power Plant Installation",
+    "Renewable Energy Project Development",
+    "Engineering & Procurement Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Commercial & Industrial Enterprises",
+    "Renewable Energy Developers",
+    "Government & Utility Projects"
+  ],
+
+  "shareDetails": {
+    "companyName": "Insolare Energy Limited",
+    "indicativeUnlistedSharePrice": "₹185",
+    "marketCapitalization": "₹1089 Cr",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹180",
+    "52WeekLow": "₹185",
+    "faceValue": "₹2",
+    "bookValue": "₹34.91",
+    "peRatio": "64.01",
+    "pbRatio": "5.3",
+    "debtToEquity": "0.49",
+    "returnOnEquity": "8.7%",
+    "totalOutstandingShares": "5,88,52,920",
+    "isin": "INE0TSJ01013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image73.jpg"
+    "pan": "AABCI9750P",
+    "cin": "U45206GJ2008PLC055375",
+    "rta": "Bigshare Services"
   },
-  {
-    "id": 76,
-    "name": "Jupiter International Limited",
-    "price": 444,
+
+  "financials": {
+    "annualReportSummary": "The company has shown fluctuating performance over the years. Revenue declined in FY24 but recovered strongly in FY25 to ₹438 Cr. Profitability remained volatile with margins improving significantly in FY25. The business reflects typical EPC cyclicality with dependence on project execution and order inflow.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 239, "fy23": 250, "fy24": 163, "fy25": 438 },
+      { "label": "EBITDA", "fy22": 20, "fy23": 10, "fy24": 9.5, "fy25": 33.5 },
+      { "label": "Operating Profit", "fy22": 20, "fy23": 10, "fy24": 9.5, "fy25": 33.5 },
+      { "label": "EBIT", "fy22": 19.7, "fy23": 9.5, "fy24": 8.5, "fy25": 30.7 },
+      { "label": "Profit Before Tax", "fy22": 19, "fy23": 8, "fy24": 4, "fy25": 23 },
+      { "label": "Net Profit / Loss", "fy22": 15, "fy23": 6, "fy24": 3, "fy25": 17 },
+      { "label": "EPS", "fy22": 18.75, "fy23": 7.5, "fy24": 23.62, "fy25": 115.65 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 8.37, "fy23": 4, "fy24": 5.83, "fy25": 7.65 },
+      { "label": "Net Profit Margin (%)", "fy22": 6.28, "fy23": 2.4, "fy24": 1.84, "fy25": 3.88 },
+      { "label": "EPS", "fy22": 18.75, "fy23": 7.5, "fy24": 23.62, "fy25": 115.65 }
+    ],
+
+    "investorInsight": [
+      "Revenue recovery in FY25 indicates strong project execution pipeline.",
+      "Margins remain volatile due to EPC nature of business.",
+      "Profitability improved but still below peak levels.",
+      "Growth depends heavily on order inflow and solar sector demand."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 33.3, "fy23": 3, "fy24": 11.5, "fy25": 38 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0.3, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy22": 63, "fy23": 22, "fy24": 27, "fy25": 59 },
+      { "label": "Inventory", "fy22": 1.8, "fy23": 15, "fy24": 4, "fy25": 40 },
+      { "label": "Other Assets", "fy22": 21.9, "fy23": 29.7, "fy24": 150.45, "fy25": 277.95 },
+      { "label": "Total Assets", "fy22": 93, "fy23": 70, "fy24": 193, "fy25": 415 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 0.8, "fy23": 0.8, "fy24": 1.27, "fy25": 14.7 },
+      { "label": "Reserves", "fy22": 14, "fy23": 20, "fy24": 88.7, "fy25": 194 },
+      { "label": "Borrowings", "fy22": 17, "fy23": 19, "fy24": 53, "fy25": 96 },
+      { "label": "Trade Payables", "fy22": 55, "fy23": 21, "fy24": 22, "fy25": 79 },
+      { "label": "Other Liabilities", "fy22": 6.2, "fy23": 9.2, "fy24": 28.03, "fy25": 44.53 },
+      { "label": "Total Liabilities", "fy22": 93, "fy23": 70, "fy24": 193, "fy25": 415 }
+    ],
+
+    "insights": "The balance sheet shows strong expansion in FY24–FY25 driven by increased assets and reserves. Borrowings have also increased, indicating growth funding through debt. Working capital components like receivables and inventory have risen, typical for EPC companies."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are driven by increasing borrowings and working capital requirements. Trade payables and other liabilities have grown in line with business expansion.",
+
+  "balanceSheetInsights": "Insolare Energy is in a growth phase with rising assets and capital deployment. However, increasing debt and working capital intensity require careful monitoring.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 13, "fy23": -3, "fy24": -71.6, "fy25": -99 },
+      { "label": "Investing Cash Flow", "fy22": -3.3, "fy23": -0.6, "fy24": -5.5, "fy25": -29 },
+      { "label": "Financing Cash Flow", "fy22": 0.05, "fy23": -0.8, "fy24": 5.9, "fy25": 116 }
+    ],
+    "insights": [
+      "Operating cash flow is negative in recent years, indicating working capital pressure.",
+      "Investing cash flow remains negative due to capital expenditure.",
+      "Financing cash flow increased significantly, showing reliance on external funding.",
+      "Cash flow volatility is typical for EPC businesses."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is promoter-driven with a focus on expanding solar EPC operations and renewable infrastructure development in India.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Bigshare Services",
+    "website": "https://www.bigshareonline.com/"
+  },
+
+  "managementInsight": "Management is focused on scaling operations in the solar EPC sector. Execution capability, order pipeline, and working capital management will be critical for sustained growth.",
+
+  "faq": [
+    {
+      "question": "What does Insolare Energy Limited do?",
+      "answer": "It provides EPC solutions for solar energy projects, including installation and development of solar power plants."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, but profitability has been volatile. It improved in FY25 after weaker performance in FY23–FY24."
+    },
+    {
+      "question": "What are the key growth drivers?",
+      "answer": "Growth is driven by rising demand for solar energy and renewable infrastructure in India."
+    },
+    {
+      "question": "Is the company debt-heavy?",
+      "answer": "Debt levels are increasing but remain moderate relative to expansion needs."
+    },
+    {
+      "question": "What is the biggest risk?",
+      "answer": "High working capital requirements and project-based revenue volatility."
+    }
+  ]
+},
+ {
+  "id": 76,
+  "name": "Jupiter International Limited",
+  "price": 444,
+  "logo": "/images/preipo/image74.png",
+
+  "overview": "Jupiter International Limited is one of India’s earliest and established solar cell manufacturing companies, operating since 2005. The company focuses on producing high-efficiency photovoltaic solar cells and is expanding its integrated manufacturing capabilities in the solar value chain. With India’s increasing push toward renewable energy and domestic manufacturing under government initiatives, Jupiter International is well positioned to benefit from the growing demand for solar components and infrastructure.",
+
+  "products": [
+    "Solar Cells Manufacturing",
+    "Photovoltaic Modules",
+    "Renewable Energy Components",
+    "Solar Manufacturing Solutions"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Solar EPC Companies",
+    "Renewable Energy Developers",
+    "Power Generation Companies"
+  ],
+
+  "shareDetails": {
+    "companyName": "Jupiter International Limited",
+    "indicativeUnlistedSharePrice": "₹255",
+    "marketCapitalization": "₹19006 Cr",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹355",
+    "52WeekLow": "₹255",
+    "faceValue": "₹2",
+    "bookValue": "₹7.09",
+    "peRatio": "154.55",
+    "pbRatio": "35.97",
+    "debtToEquity": "0.1",
+    "returnOnEquity": "23.71%",
+    "totalOutstandingShares": "74,53,37,385",
+    "isin": "INE46YC01027",
     "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image74.png"
+    "pan": "AAACJ6956B",
+    "cin": "U51109WB1978PLC031668",
+    "rta": "MUFG Intime India"
   },
+
+  "financials": {
+    "annualReportSummary": "The company has demonstrated strong revenue growth from ₹301 Cr in FY22 to ₹556 Cr in FY25. Profitability improved significantly after losses in FY23, with PAT reaching ₹123 Cr in FY25. Margins expanded sharply due to operating leverage and improved cost efficiency, indicating strong recovery and scaling in operations.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 301, "fy23": 430, "fy24": 578, "fy25": 556 },
+      { "label": "EBITDA", "fy22": 49, "fy23": 21, "fy24": 116, "fy25": 226 },
+      { "label": "Operating Profit", "fy22": 49, "fy23": 21, "fy24": 116, "fy25": 226 },
+      { "label": "EBIT", "fy22": 34, "fy23": 4, "fy24": 93, "fy25": 171 },
+      { "label": "Profit Before Tax", "fy22": 9, "fy23": -44, "fy24": 55.7, "fy25": 167 },
+      { "label": "Net Profit / Loss", "fy22": 4.7, "fy23": -36, "fy24": 41.4, "fy25": 123 },
+      { "label": "EPS", "fy22": 3.32, "fy23": -25.81, "fy24": 20.68, "fy25": 77.95 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 16.28, "fy23": 4.88, "fy24": 20.07, "fy25": 40.65 },
+      { "label": "Net Profit Margin (%)", "fy22": 1.56, "fy23": -8.37, "fy24": 7.16, "fy25": 22.12 },
+      { "label": "EPS", "fy22": 3.32, "fy23": -25.81, "fy24": 20.68, "fy25": 77.95 }
+    ],
+
+    "investorInsight": [
+      "Strong turnaround from losses in FY23 to high profitability in FY25.",
+      "Margins expanded significantly due to operating leverage.",
+      "Revenue growth supported by rising solar demand in India.",
+      "High valuation multiples indicate strong growth expectations."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 201, "fy23": 240, "fy24": 216, "fy25": 239 },
+      { "label": "CWIP", "fy22": 3, "fy23": 0, "fy24": 0.5, "fy25": 0.3 },
+      { "label": "Investments", "fy22": 0, "fy23": 26, "fy24": 1.7, "fy25": 144 },
+      { "label": "Trade Receivables", "fy22": 33, "fy23": 12, "fy24": 14, "fy25": 14 },
+      { "label": "Inventory", "fy22": 59, "fy23": 57.6, "fy24": 60, "fy25": 51 },
+      { "label": "Other Assets", "fy22": 199, "fy23": 56.4, "fy24": 56.8, "fy25": 215.7 },
+      { "label": "Total Assets", "fy22": 495, "fy23": 392, "fy24": 349, "fy25": 664 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 14.14, "fy23": 13.95, "fy24": 13.95, "fy25": 15.78 },
+      { "label": "Reserves", "fy22": 148, "fy23": 503, "fy24": 78, "fy25": 503 },
+      { "label": "Borrowings", "fy22": 228, "fy23": 216, "fy24": 200, "fy25": 52 },
+      { "label": "Trade Payables", "fy22": 35, "fy23": 4.5, "fy24": 38, "fy25": 26 },
+      { "label": "Other Liabilities", "fy22": 69.86, "fy23": 80.05, "fy24": 19.05, "fy25": 67.22 },
+      { "label": "Total Liabilities", "fy22": 495, "fy23": 392, "fy24": 349, "fy25": 664 }
+    ],
+
+    "insights": "The balance sheet reflects strengthening financial health with reduced borrowings and increased reserves. Asset growth in FY25 indicates expansion and improved operational scale. Lower leverage improves stability and reduces financial risk."
+  },
+
+  "liabilitiesBreakdown": "Borrowings have significantly reduced over time, indicating deleveraging. Liabilities are now more balanced with stronger reserves and lower financial risk.",
+
+  "balanceSheetInsights": "Jupiter International has transitioned into a financially stronger position with improved reserves and lower debt. The company is well positioned to support future growth with a healthier balance sheet.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 9.4, "fy23": 108.6, "fy24": 106, "fy25": 216 },
+      { "label": "Investing Cash Flow", "fy22": -2, "fy23": -189, "fy24": -16, "fy25": -346 },
+      { "label": "Financing Cash Flow", "fy22": 116, "fy23": -6, "fy24": -83, "fy25": 152 }
+    ],
+    "insights": [
+      "Strong operating cash flow generation in recent years.",
+      "Investing cash flow indicates heavy capital expenditure.",
+      "Financing cash flow reflects capital restructuring and funding.",
+      "Overall liquidity position has improved significantly."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is led by experienced promoters in the solar manufacturing space with a focus on scaling domestic production and leveraging India’s renewable energy push.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "MUFG Intime India",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Management is focused on expanding solar manufacturing capacity and improving operational efficiency. With strong industry tailwinds, execution and scale will be key to sustaining growth momentum.",
+
+  "faq": [
+    {
+      "question": "What does Jupiter International Limited do?",
+      "answer": "It manufactures solar cells and renewable energy components."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, it has shown strong profitability growth after losses in FY23."
+    },
+    {
+      "question": "What are the key growth drivers?",
+      "answer": "Growth is driven by increasing solar energy demand and domestic manufacturing push."
+    },
+    {
+      "question": "Is the company financially stable?",
+      "answer": "Yes, with reduced debt and improved reserves, financial stability has improved."
+    },
+    {
+      "question": "What is the biggest risk?",
+      "answer": "High valuation and dependence on solar industry cycles."
+    }
+  ]
+},
   {
-    "id": 77,
-    "name": "KLM Axiva Finvest Unlisted Shares Price",
-    "price": 23,
+  "id": 77,
+  "name": "KLM Axiva Finvest Limited",
+  "price": 23,
+  "logo": "/images/preipo/image75.png",
+
+  "overview": "KLM Axiva Finvest Limited is a non-deposit-taking, systemically important NBFC focused on providing financial services across underserved segments. The company operates through multiple verticals including gold loans, microfinance, MSME lending, and personal loans. With a strong presence in Kerala and expanding footprint across India, KLM Axiva aims to support financial inclusion and credit access for small businesses and individuals. Its diversified lending portfolio positions it to benefit from rising credit demand in semi-urban and rural markets.",
+
+  "products": [
+    "Gold Loans",
+    "Microfinance Loans",
+    "MSME Loans",
+    "Personal Loans"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Retail Borrowers",
+    "Small Businesses",
+    "MSMEs",
+    "Microfinance Customers"
+  ],
+
+  "shareDetails": {
+    "companyName": "KLM Axiva Finvest Limited",
+    "indicativeUnlistedSharePrice": "₹18",
+    "marketCapitalization": "₹474 Cr",
+    "lotSize": "2000 Shares",
+    "52WeekHigh": "₹18",
+    "52WeekLow": "₹18",
+    "faceValue": "₹10",
+    "bookValue": "₹10.81",
+    "peRatio": "23.68",
+    "pbRatio": "1.67",
+    "debtToEquity": "2.72",
+    "returnOnEquity": "7.28%",
+    "totalOutstandingShares": "26,36,36,000",
+    "isin": "INE01S101011",
     "depository": "NSDL & CDSL",
-    "minLotSize": 2000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image75.png"
+    "pan": "AAACK7976P",
+    "cin": "U65910TG1997PLC026983",
+    "rta": "KFin Technologies"
   },
-  {
-    "id": 78,
-    "name": "KURLON Enterprise Limited Unlisted Shares",
-    "price": 563,
+
+  "financials": {
+    "annualReportSummary": "The company has shown steady growth in interest income, increasing from ₹179 Cr in FY22 to ₹332 Cr in FY25. Profitability has improved with PAT rising from ₹11 Cr to ₹20 Cr over the same period. Asset quality remains stable with controlled NPAs. However, high leverage is typical for NBFCs and requires monitoring.",
+
+    "incomeStatement": [
+      { "label": "Interest Earned", "fy22": 179, "fy23": 275, "fy24": 306, "fy25": 332 },
+      { "label": "Other Income", "fy22": 6, "fy23": 3, "fy24": 10, "fy25": 8 },
+      { "label": "Interest Expended", "fy22": 104, "fy23": 143, "fy24": 155, "fy25": 175 },
+      { "label": "Operating Expenses", "fy22": 63, "fy23": 110, "fy24": 130, "fy25": 141 },
+      { "label": "Provisions", "fy22": 0.6, "fy23": 1, "fy24": 0.4, "fy25": 5 },
+      { "label": "Net Profit", "fy22": 11, "fy23": 18, "fy24": 23, "fy25": 20 },
+      { "label": "EPS", "fy22": 0.96, "fy23": 0.96, "fy24": 1.12, "fy25": 0.78 }
+    ],
+
+    "keyRatios": [
+      { "label": "Advances", "fy22": 1058, "fy23": 1445, "fy24": 1705, "fy25": 1656 },
+      { "label": "Book Value", "fy22": 13.68, "fy23": 13.64, "fy24": 13.26, "fy25": 10.86 },
+      { "label": "P/B", "fy22": 1.32, "fy23": 1.32, "fy24": 1.36, "fy25": 1.89 },
+      { "label": "ROE (%)", "fy22": 7.02, "fy23": 7.07, "fy24": 8.46, "fy25": 7.28 }
+    ],
+
+    "investorInsight": [
+      "Steady growth in lending book and interest income.",
+      "Profitability improving gradually but remains moderate.",
+      "High leverage is typical for NBFC business model.",
+      "Stable asset quality with controlled NPAs."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 53, "fy23": 115, "fy24": 124, "fy25": 141 },
+      { "label": "Cash & Bank Balance", "fy22": 324, "fy23": 112, "fy24": 68, "fy25": 78 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Advances", "fy22": 1058, "fy23": 1445, "fy24": 1705, "fy25": 1656 },
+      { "label": "Other Assets", "fy22": 37, "fy23": 47, "fy24": 63, "fy25": 60 },
+      { "label": "Total Assets", "fy22": 1472, "fy23": 1719, "fy24": 1960, "fy25": 1933 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 114.8, "fy23": 168.72, "fy24": 205.6, "fy25": 257.3 },
+      { "label": "Reserves", "fy22": 42, "fy23": 68, "fy24": 67, "fy25": 17 },
+      { "label": "Borrowings", "fy22": 728, "fy23": 886, "fy24": 834, "fy25": 746 },
+      { "label": "Deposits", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Liabilities", "fy22": 587.2, "fy23": 578.28, "fy24": 853.6, "fy25": 910.1 },
+      { "label": "Total Liabilities", "fy22": 1472, "fy23": 1719, "fy24": 1960, "fy25": 1933 }
+    ],
+
+    "insights": "The balance sheet reflects steady growth in advances, which is the core revenue driver. Borrowings remain high, consistent with NBFC operations. Increasing share capital indicates capital infusion to support expansion."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are primarily driven by borrowings and other financial obligations. The company relies heavily on debt funding, which is standard for NBFCs.",
+
+  "balanceSheetInsights": "KLM Axiva Finvest shows stable growth with increasing loan book size. However, maintaining asset quality and managing leverage will be critical for long-term sustainability.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": -198, "fy23": -201, "fy24": -71, "fy25": 200.7 },
+      { "label": "Investing Cash Flow", "fy22": -37, "fy23": -86, "fy24": -42, "fy25": -17.4 },
+      { "label": "Financing Cash Flow", "fy22": 521, "fy23": 81, "fy24": 56, "fy25": -184 }
+    ],
+    "insights": [
+      "Operating cash flow improved significantly in FY25.",
+      "Investing cash flow remains negative due to business expansion.",
+      "Financing cash flow reflects borrowings and capital raising.",
+      "Cash flow volatility is typical for lending businesses."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is promoted by experienced professionals in the financial services sector, focusing on inclusive lending and expanding access to credit.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "managementInsight": "Management is focused on expanding lending operations while maintaining asset quality. Efficient capital allocation and risk management will be key to sustaining growth.",
+
+  "faq": [
+    {
+      "question": "What does KLM Axiva Finvest Limited do?",
+      "answer": "It is an NBFC providing gold loans, MSME loans, microfinance, and personal loans."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, it has shown consistent profitability growth over the years."
+    },
+    {
+      "question": "What are the key risks?",
+      "answer": "High leverage and asset quality risks typical of NBFC businesses."
+    },
+    {
+      "question": "What drives growth?",
+      "answer": "Expansion of lending book and increasing credit demand in underserved markets."
+    },
+    {
+      "question": "Is asset quality stable?",
+      "answer": "Yes, NPAs remain controlled, indicating stable asset quality."
+    }
+  ]
+},
+{
+  "id": 78,
+  "name": "KURLON Enterprise Limited",
+  "price": 563,
+  "logo": "/images/preipo/image76.jpg",
+
+  "overview": "KURLON Enterprise Limited is a well-established player in the mattress and home comfort products industry in India. The company manufactures a wide range of mattresses, cushions, and furniture products under the Kurlon brand. It has a strong distribution network across the country and caters to both retail and institutional customers. Following restructuring and ownership transition, the company is focused on improving operational efficiency, expanding product offerings, and strengthening its market presence in the organized bedding industry.",
+
+  "products": [
+    "Mattresses",
+    "Coir Products",
+    "Foam Products",
+    "Furniture & Cushions",
+    "Home Comfort Products"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Retail Customers",
+    "Furniture Dealers",
+    "Institutional Buyers",
+    "Hospitality Sector"
+  ],
+
+  "shareDetails": {
+    "companyName": "KURLON Enterprise Limited",
+    "indicativeUnlistedSharePrice": "₹450",
+    "marketCapitalization": "₹1464.3 Cr",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹525",
+    "52WeekLow": "₹450",
+    "faceValue": "₹10",
+    "bookValue": "₹78.89",
+    "peRatio": "N/A",
+    "pbRatio": "5.7",
+    "debtToEquity": "0.05",
+    "returnOnEquity": "-18%",
+    "totalOutstandingShares": "36,54,000",
+    "isin": "INE887W01025",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image76.jpg"
+    "pan": "AAECK0545N",
+    "cin": "U36101MH2011PLC222657",
+    "rta": "Purva Sharegistry (India)"
   },
+
+  "financials": {
+    "annualReportSummary": "Kurlon Enterprise has experienced fluctuating financial performance in recent years. Revenue has remained relatively stable, but profitability has been volatile with losses reported in FY22 and FY24. Margins have declined due to rising costs and operational restructuring. The company is currently in a transition phase aiming to stabilize operations and improve profitability.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy21": 783.67, "fy22": 795, "fy23": 859, "fy24": 820 },
+      { "label": "EBITDA", "fy21": 102.04, "fy22": 19, "fy23": 43, "fy24": -12 },
+      { "label": "Operating Profit", "fy21": 102.04, "fy22": 19, "fy23": 43, "fy24": -12 },
+      { "label": "EBIT", "fy21": 70.28, "fy22": -17, "fy23": 7, "fy24": -37 },
+      { "label": "Profit Before Tax", "fy21": 53.73, "fy22": -9, "fy23": 8, "fy24": -55 },
+      { "label": "Net Profit / Loss", "fy21": 29.89, "fy22": -6, "fy23": 10, "fy24": -51 },
+      { "label": "EPS", "fy21": 8.18, "fy22": -1.64, "fy23": 2.74, "fy24": -13.96 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy21": 13.02, "fy22": 2.39, "fy23": 5.01, "fy24": -1.46 },
+      { "label": "Net Profit Margin (%)", "fy21": 3.81, "fy22": -0.75, "fy23": 1.16, "fy24": -6.22 },
+      { "label": "EPS", "fy21": 8.18, "fy22": -1.64, "fy23": 2.74, "fy24": -13.96 }
+    ],
+
+    "investorInsight": [
+      "Revenue remains stable but profitability is inconsistent.",
+      "Negative margins in FY24 indicate operational challenges.",
+      "Turnaround depends on cost control and efficiency improvements.",
+      "Strong brand recall supports long-term recovery potential."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy21": 213.12, "fy22": 211, "fy23": 189, "fy24": 252 },
+      { "label": "CWIP", "fy21": 7.19, "fy22": 4, "fy23": 1, "fy24": 0.55 },
+      { "label": "Investments", "fy21": 111.31, "fy22": 107, "fy23": 16, "fy24": 0 },
+      { "label": "Trade Receivables", "fy21": 40.29, "fy22": 56, "fy23": 55, "fy24": 69 },
+      { "label": "Inventory", "fy21": 115.84, "fy22": 120, "fy23": 80, "fy24": 90 },
+      { "label": "Other Assets", "fy21": 220.88, "fy22": 225, "fy23": 416, "fy24": 109.45 },
+      { "label": "Total Assets", "fy21": 718.43, "fy22": 723, "fy23": 757, "fy24": 531 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy21": 18.27, "fy22": 18.27, "fy23": 18.27, "fy24": 18.27 },
+      { "label": "Reserves", "fy21": 465.49, "fy22": 443, "fy23": 451, "fy24": 265 },
+      { "label": "Borrowings", "fy21": 12.39, "fy22": 7.5, "fy23": 17, "fy24": 0.3 },
+      { "label": "Trade Payables", "fy21": 93.14, "fy22": 120, "fy23": 113, "fy24": 119 },
+      { "label": "Other Liabilities", "fy21": 129.14, "fy22": 134.23, "fy23": 157.73, "fy24": 128.6 },
+      { "label": "Total Liabilities", "fy21": 718.43, "fy22": 723, "fy23": 757, "fy24": 531 }
+    ],
+
+    "insights": "The company has reduced borrowings significantly, indicating deleveraging. However, reserves have declined, reflecting weak profitability. Asset base contraction in FY24 signals restructuring or asset optimization."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are largely composed of operational payables and reserves. Debt levels have reduced significantly, improving financial stability.",
+
+  "balanceSheetInsights": "Kurlon is transitioning towards a leaner balance sheet with reduced leverage. However, declining reserves and profitability remain key concerns.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy21": 118.52, "fy22": 63, "fy23": -137, "fy24": 52 },
+      { "label": "Investing Cash Flow", "fy21": -37.7, "fy22": -13, "fy23": 141, "fy24": -35 },
+      { "label": "Financing Cash Flow", "fy21": -29.53, "fy22": -36, "fy23": 13, "fy24": -39 }
+    ],
+    "insights": [
+      "Operating cash flow turned negative in FY23 but recovered in FY24.",
+      "Investing activity fluctuates due to asset restructuring.",
+      "Financing cash flow indicates reduced dependence on borrowings.",
+      "Overall liquidity remains moderate."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company has undergone ownership transition and restructuring, with a renewed focus on operational efficiency and market expansion.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Purva Sharegistry (India)",
+    "website": "https://www.purvashare.com/"
+  },
+
+  "managementInsight": "Management is focused on stabilizing operations and improving profitability after restructuring. Execution and cost management will be key drivers of turnaround.",
+
+  "faq": [
+    {
+      "question": "What does KURLON Enterprise Limited do?",
+      "answer": "It manufactures mattresses, foam products, and home comfort products."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Profitability has been inconsistent with losses in recent years."
+    },
+    {
+      "question": "What are the key risks?",
+      "answer": "Operational inefficiencies, margin pressure, and restructuring challenges."
+    },
+    {
+      "question": "What are the strengths?",
+      "answer": "Strong brand presence and wide distribution network."
+    },
+    {
+      "question": "Is the company improving?",
+      "answer": "Yes, it is undergoing restructuring aimed at improving efficiency and profitability."
+    }
+  ]
+},
   {
-    "id": 79,
-    "name": "Kanara Consumer Products (Formerly Kurl-on Limited) Unlisted Shares",
-    "price": 1282,
+  "id": 79,
+  "name": "Kanara Consumer Products Limited",
+  "price": 1282,
+  "logo": "/images/preipo/image77.png",
+
+  "overview": "Kanara Consumer Products Limited (formerly Kurl-on Limited) is engaged in the manufacturing and distribution of mattresses and home comfort products. The company operates in the consumer durables segment with a focus on bedding solutions, leveraging legacy brand recognition from Kurl-on. It caters to retail and institutional markets across India and is undergoing strategic transformation post restructuring to improve operational efficiency and scale its consumer product offerings.",
+
+  "products": [
+    "Mattresses",
+    "Foam Products",
+    "Coir Products",
+    "Home Comfort Solutions",
+    "Furniture Accessories"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Retail Customers",
+    "Dealers & Distributors",
+    "Institutional Buyers",
+    "Hospitality Sector"
+  ],
+
+  "shareDetails": {
+    "companyName": "Kanara Consumer Products Limited",
+    "indicativeUnlistedSharePrice": "₹875",
+    "marketCapitalization": "₹1302 Cr",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹1025",
+    "52WeekLow": "₹875",
+    "faceValue": "₹10",
+    "bookValue": "₹86.21",
+    "peRatio": "14.96",
+    "pbRatio": "1.02",
+    "debtToEquity": "Low",
+    "returnOnEquity": "6.85%",
+    "totalOutstandingShares": "1,48,78,750",
+    "isin": "INE871F01032",
     "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image77.png"
+    "pan": "AABCK150K",
+    "cin": "U85100KA1992PLC01443",
+    "rta": "Purva Sharegistry (India)"
   },
+
+  "financials": {
+    "annualReportSummary": "Kanara Consumer Products has undergone significant financial volatility post restructuring. Revenues declined sharply in FY23–FY25, while profitability remains inconsistent with large fluctuations in margins. The company is in a transition phase, and reported numbers indicate restructuring impact rather than stable operating performance.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 88, "fy23": 0.63, "fy24": 0.5, "fy25": 0.7 },
+      { "label": "EBITDA", "fy22": -4.55, "fy23": -9.67, "fy24": -23.36, "fy25": -15.4 },
+      { "label": "Operating Profit", "fy22": -4.55, "fy23": -9.67, "fy24": -23.36, "fy25": -15.4 },
+      { "label": "EBIT", "fy22": -10.55, "fy23": -15.37, "fy24": -15.36, "fy25": -17.81 },
+      { "label": "Profit Before Tax", "fy22": -9, "fy23": -142, "fy24": 1624, "fy25": 107 },
+      { "label": "Net Profit / Loss", "fy22": -10, "fy23": -146, "fy24": 1258, "fy25": 87 },
+      { "label": "EPS", "fy22": 6.72, "fy23": -98.12, "fy24": 845.43, "fy25": 58.47 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": -5.17, "fy23": -1534.92, "fy24": -2472, "fy25": -2200 },
+      { "label": "Net Profit Margin (%)", "fy22": -11.36, "fy23": -2317.6, "fy24": 251600, "fy25": 12428.57 },
+      { "label": "EPS", "fy22": 6.72, "fy23": -98.12, "fy24": 845.43, "fy25": 58.47 }
+    ],
+
+    "investorInsight": [
+      "Revenue collapse indicates restructuring or business transfer impact.",
+      "Extremely volatile margins suggest non-operational or exceptional items.",
+      "FY24 spike in profits may not be sustainable as it appears non-core driven.",
+      "High uncertainty makes financials difficult to evaluate on a normalized basis."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 154, "fy23": 152, "fy24": 89, "fy25": 63 },
+      { "label": "CWIP", "fy22": 1, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 47, "fy23": 177, "fy24": 164, "fy25": 800 },
+      { "label": "Trade Receivables", "fy22": 0, "fy23": 2, "fy24": 0, "fy25": 0 },
+      { "label": "Inventory", "fy22": 17, "fy23": 13, "fy24": 0.01, "fy25": 0.02 },
+      { "label": "Other Assets", "fy22": 89, "fy23": 39, "fy24": 1086.89, "fy25": 515.98 },
+      { "label": "Total Assets", "fy22": 308, "fy23": 383, "fy24": 1340, "fy25": 1379 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 14.88, "fy23": 14.88, "fy24": 14.88, "fy25": 14.88 },
+      { "label": "Reserves", "fy22": 191, "fy23": 41, "fy24": 1302, "fy25": 1255 },
+      { "label": "Borrowings", "fy22": 30, "fy23": 22, "fy24": 0, "fy25": 3.7 },
+      { "label": "Trade Payables", "fy22": 11, "fy23": 8, "fy24": 12, "fy25": 3.4 },
+      { "label": "Other Liabilities", "fy22": 61.12, "fy23": 297.12, "fy24": 11.12, "fy25": 102.02 },
+      { "label": "Total Liabilities", "fy22": 308, "fy23": 383, "fy24": 1340, "fy25": 1379 }
+    ],
+
+    "insights": "The balance sheet shows a sharp increase in assets in FY24 driven by investments and other assets. Reserves increased significantly due to exceptional gains, while borrowings remain low. The structure indicates major restructuring or asset reclassification."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are largely composed of reserves and operational liabilities, with minimal debt. The spike in reserves reflects non-operational gains.",
+
+  "balanceSheetInsights": "Kanara Consumer is undergoing a major transformation phase. The balance sheet expansion is not driven by core business growth but likely restructuring and accounting adjustments.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": -5.6, "fy23": 156, "fy24": -541, "fy25": 106 },
+      { "label": "Investing Cash Flow", "fy22": 1.8, "fy23": -13.9, "fy24": 104.5, "fy25": -40.5 },
+      { "label": "Financing Cash Flow", "fy22": 5.8, "fy23": -6, "fy24": -24, "fy25": -12.9 }
+    ],
+    "insights": [
+      "Cash flows are highly volatile, reflecting restructuring activity.",
+      "Negative operating cash flow in FY24 indicates weak core operations.",
+      "Investing cash flow spikes suggest asset transfers or restructuring.",
+      "Financing activity remains limited with low leverage."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is part of the Kurl-on legacy group and has undergone restructuring, with management focused on repositioning the business.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Purva Sharegistry (India)",
+    "website": "https://www.purvashare.com/"
+  },
+
+  "managementInsight": "Management is currently focused on restructuring and stabilizing operations. Future performance will depend on how effectively the company rebuilds its core consumer business.",
+
+  "faq": [
+    {
+      "question": "What does Kanara Consumer Products Limited do?",
+      "answer": "It manufactures and sells mattresses and home comfort products."
+    },
+    {
+      "question": "Why are financials highly volatile?",
+      "answer": "Due to restructuring, business transition, and possible exceptional income items."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Profitability is inconsistent and influenced by non-operational factors."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "Unstable financial performance, restructuring uncertainty, and weak operating revenues."
+    },
+    {
+      "question": "What is the outlook?",
+      "answer": "Dependent on successful business stabilization and revival of core operations."
+    }
+  ]
+},
   {
-    "id": 80,
-    "name": "Kannur International Airport Limited Unlisted Shares",
-    "price": 163,
+  "id": 80,
+  "name": "Kannur International Airport Limited",
+  "price": 163,
+  "logo": "/images/preipo/image78.png",
+
+  "overview": "Kannur International Airport Limited (KIAL) is an unlisted public company promoted by the Government of Kerala to develop and operate the Kannur International Airport. The airport serves as a key infrastructure asset in North Kerala, supporting tourism, international travel, and regional economic growth. Strategically located, it enhances connectivity for the Malabar region and caters to both domestic and international passengers, particularly Gulf traffic. The company operates in the infrastructure and aviation sector with long-term growth linked to passenger traffic expansion and regional development.",
+
+  "products": [
+    "Airport Operations",
+    "Passenger Handling Services",
+    "Cargo Services",
+    "Aviation Infrastructure",
+    "Commercial Leasing"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Airlines",
+    "Passengers",
+    "Cargo Operators",
+    "Travel Agencies",
+    "Retail & Duty-Free Operators"
+  ],
+
+  "shareDetails": {
+    "companyName": "Kannur International Airport Limited",
+    "indicativeUnlistedSharePrice": "₹130",
+    "marketCapitalization": "₹1740 Cr",
+    "lotSize": "250 Shares",
+    "52WeekHigh": "₹132",
+    "52WeekLow": "₹122",
+    "faceValue": "₹100",
+    "bookValue": "₹44.88",
+    "peRatio": "N/A",
+    "pbRatio": "2.9",
+    "debtToEquity": "2.43",
+    "returnOnEquity": "-18.75%",
+    "totalOutstandingShares": "1,38,38,900",
+    "isin": "INE02YV01013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image78.png"
+    "pan": "AABCK8484N",
+    "cin": "U63033KL2009PLC025103",
+    "rta": "SKDC Consultants"
   },
+
+  "financials": {
+    "annualReportSummary": "Kannur International Airport has shown gradual revenue growth but continues to operate under losses due to high infrastructure costs and interest burden. EBITDA has improved over time, but profitability remains negative due to significant finance costs. The business is capital intensive and long-term in nature, with profitability expected to improve as passenger traffic increases.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 78, "fy23": 113, "fy24": 99, "fy25": 191 },
+      { "label": "EBITDA", "fy22": 14, "fy23": 26, "fy24": 10, "fy25": 91 },
+      { "label": "Operating Profit", "fy22": 14, "fy23": 26, "fy24": 10, "fy25": 91 },
+      { "label": "EBIT", "fy22": -55, "fy23": -43, "fy24": -80, "fy25": 20 },
+      { "label": "Profit Before Tax", "fy22": -58, "fy23": -145, "fy24": -94, "fy25": -101 },
+      { "label": "Net Profit / Loss", "fy22": -125, "fy23": -126, "fy24": -169, "fy25": -94 },
+      { "label": "EPS", "fy22": -9.34, "fy23": -9.42, "fy24": -12.63, "fy25": -7.02 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 17.95, "fy23": 23.01, "fy24": 10.1, "fy25": 47.64 },
+      { "label": "Net Profit Margin (%)", "fy22": -160.26, "fy23": -111.5, "fy24": -170.71, "fy25": -49.21 },
+      { "label": "EPS", "fy22": -9.34, "fy23": -9.42, "fy24": -12.63, "fy25": -7.02 }
+    ],
+
+    "investorInsight": [
+      "Revenue is improving gradually, indicating recovery in passenger traffic.",
+      "High debt and finance costs are major reasons for sustained losses.",
+      "EBIT turning positive in FY25 is an important milestone.",
+      "Long gestation infrastructure business requires patience from investors."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 1684, "fy23": 1763, "fy24": 1695, "fy25": 1684 },
+      { "label": "CWIP", "fy22": 24, "fy23": 40, "fy24": 55, "fy25": 3.5 },
+      { "label": "Trade Receivables", "fy22": 19, "fy23": 19, "fy24": 16, "fy25": 11.3 },
+      { "label": "Inventory", "fy22": 1, "fy23": 1, "fy24": 0.6, "fy25": 0.69 },
+      { "label": "Other Assets", "fy22": 145, "fy23": 163, "fy24": 137.4, "fy25": 200.88 },
+      { "label": "Total Assets", "fy22": 2021, "fy23": 1986, "fy24": 1904, "fy25": 1901 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 1338, "fy23": 1338, "fy24": 1338.3, "fy25": 1338.3 },
+      { "label": "Reserves", "fy22": -449, "fy23": -575, "fy24": -744, "fy25": -838 },
+      { "label": "Borrowings", "fy22": 1036, "fy23": 1096, "fy24": 1166, "fy25": 1216 },
+      { "label": "Trade Payables", "fy22": 41, "fy23": 56, "fy24": 81, "fy25": 105 },
+      { "label": "Other Liabilities", "fy22": 55, "fy23": 71, "fy24": 62.7, "fy25": 79.62 },
+      { "label": "Total Liabilities", "fy22": 2021, "fy23": 1986, "fy24": 1904, "fy25": 1901 }
+    ],
+
+    "insights": "The company has a highly capital-intensive balance sheet dominated by fixed assets. Negative reserves indicate accumulated losses, while borrowings continue to rise, reflecting funding needs for infrastructure and operations."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are heavily skewed towards long-term borrowings used for airport development. Negative reserves highlight accumulated losses over time.",
+
+  "balanceSheetInsights": "Kannur Airport is a classic infrastructure play with high leverage and long payback cycles. Financial stability depends on increasing passenger traffic and operational efficiency.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 51, "fy23": 54, "fy24": 19, "fy25": 63 },
+      { "label": "Investing Cash Flow", "fy22": -66, "fy23": -26, "fy24": 6, "fy25": -1 },
+      { "label": "Financing Cash Flow", "fy22": -7, "fy23": -39, "fy24": -38, "fy25": -68 }
+    ],
+    "insights": [
+      "Operating cash flow remains positive despite accounting losses.",
+      "Investments have reduced, indicating completion of major capex.",
+      "Financing outflows reflect debt servicing pressure.",
+      "Cash flow stability is improving gradually."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is promoted by the Government of Kerala along with public and institutional investors, focusing on infrastructure development and regional connectivity.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "SKDC Consultants",
+    "website": "https://www.skdc-consultants.com/"
+  },
+
+  "managementInsight": "Management is focused on improving operational efficiency, increasing passenger traffic, and optimizing revenue streams. Long-term success depends on achieving scale and reducing debt burden.",
+
+  "faq": [
+    {
+      "question": "What does Kannur International Airport Limited do?",
+      "answer": "It operates and manages Kannur International Airport, providing aviation and infrastructure services."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "No, it is currently loss-making due to high finance costs and infrastructure investments."
+    },
+    {
+      "question": "Why are losses high?",
+      "answer": "Because of heavy debt and interest expenses typical in infrastructure projects."
+    },
+    {
+      "question": "What is the long-term outlook?",
+      "answer": "Positive, driven by increasing passenger traffic and regional economic growth."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "High debt, slow traffic growth, and long gestation period."
+    }
+  ]
+},
   {
-    "id": 81,
-    "name": "Kineco Limited Unlisted Share",
-    "price": 4375,
+  "id": 81,
+  "name": "Kineco Limited",
+  "price": 4375,
+  "logo": "/images/preipo/image79.png",
+
+  "overview": "Kineco Limited is a Goa-based composite manufacturing company specializing in advanced fiber-reinforced polymer (FRP) products. Founded in 1995, the company operates across sectors such as aerospace, defense, railways, and industrial applications. It is known for producing high-performance composite components, including lightweight structures for Indian Railways and defense systems. Kineco has positioned itself as a niche engineering player with strong technical capabilities and export potential.",
+
+  "products": [
+    "Composite Structures (FRP)",
+    "Railway Components",
+    "Defense Components",
+    "Aerospace Parts",
+    "Industrial Composite Solutions"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Indian Railways",
+    "Defense Organizations",
+    "Aerospace Companies",
+    "Industrial OEMs"
+  ],
+
+  "shareDetails": {
+    "companyName": "Kineco Limited",
+    "indicativeUnlistedSharePrice": "₹3285",
+    "marketCapitalization": "₹2366 Cr",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹3500",
+    "52WeekLow": "₹2300",
+    "faceValue": "₹10",
+    "bookValue": "₹231.84",
+    "peRatio": "181.99",
+    "pbRatio": "14.17",
+    "debtToEquity": "0.52",
+    "returnOnEquity": "8.28%",
+    "totalOutstandingShares": "7,20,351",
+    "isin": "INE13YJ01018",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image79.png"
+    "pan": "AABCM8661P",
+    "cin": "U24134GA1995PLC016172",
+    "rta": "Link Intime"
   },
+
+  "financials": {
+    "annualReportSummary": "Kineco Limited has demonstrated steady growth with improving profitability over the years. Revenue increased from ₹202 Cr in FY22 to ₹245 Cr in FY25, while PAT improved from ₹6 Cr to ₹13 Cr. Margins have shown gradual expansion, reflecting better operational efficiency and scale benefits. However, high valuation multiples indicate premium pricing in the unlisted market.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 202, "fy23": 167, "fy24": 175, "fy25": 245 },
+      { "label": "EBITDA", "fy22": 22, "fy23": 6, "fy24": 27, "fy25": 41 },
+      { "label": "Operating Profit", "fy22": 22, "fy23": 6, "fy24": 27, "fy25": 41 },
+      { "label": "EBIT", "fy22": 15, "fy23": -1, "fy24": 18, "fy25": 27 },
+      { "label": "Profit Before Tax", "fy22": 11, "fy23": -9, "fy24": 11, "fy25": 18 },
+      { "label": "Net Profit / Loss", "fy22": 6, "fy23": -8.5, "fy24": 8, "fy25": 13 },
+      { "label": "EPS", "fy22": 9.58, "fy23": -13.58, "fy24": 12.78, "fy25": 18.06 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 10.89, "fy23": 3.59, "fy24": 15.43, "fy25": 16.73 },
+      { "label": "Net Profit Margin (%)", "fy22": 2.97, "fy23": -5.09, "fy24": 4.57, "fy25": 5.31 },
+      { "label": "EPS", "fy22": 9.58, "fy23": -13.58, "fy24": 12.78, "fy25": 18.06 }
+    ],
+
+    "investorInsight": [
+      "Revenue growth is steady with a recovery in FY25.",
+      "Profitability improved significantly after a weak FY23.",
+      "Margins are expanding, indicating better operational efficiency.",
+      "High PE ratio suggests expensive valuation relative to earnings."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 54, "fy23": 59, "fy24": 71, "fy25": 82 },
+      { "label": "CWIP", "fy22": 2, "fy23": 3.5, "fy24": 0, "fy25": 7.3 },
+      { "label": "Investments", "fy22": 0.27, "fy23": 0, "fy24": 0, "fy25": 4 },
+      { "label": "Trade Receivables", "fy22": 62, "fy23": 91, "fy24": 89, "fy25": 115 },
+      { "label": "Inventory", "fy22": 25, "fy23": 28, "fy24": 39, "fy25": 77 },
+      { "label": "Other Assets", "fy22": 59.73, "fy23": 50.5, "fy24": 67, "fy25": 72.7 },
+      { "label": "Total Assets", "fy22": 203, "fy23": 232, "fy24": 266, "fy25": 358 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 6.26, "fy23": 6.26, "fy24": 6.26, "fy25": 7.2 },
+      { "label": "Reserves", "fy22": 49, "fy23": 38, "fy24": 46, "fy25": 149.8 },
+      { "label": "Borrowings", "fy22": 105, "fy23": 136, "fy24": 120, "fy25": 81 },
+      { "label": "Trade Payables", "fy22": 32, "fy23": 42, "fy24": 46, "fy25": 67 },
+      { "label": "Other Liabilities", "fy22": 10.74, "fy23": 9.74, "fy24": 47.74, "fy25": 53 },
+      { "label": "Total Liabilities", "fy22": 203, "fy23": 232, "fy24": 266, "fy25": 358 }
+    ],
+
+    "insights": "The balance sheet shows steady asset growth supported by increasing working capital and fixed assets. Borrowings have reduced in FY25, improving leverage. The sharp increase in reserves indicates improved profitability and internal accruals."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are mainly composed of borrowings and working capital payables. Debt levels are moderate and declining, indicating improving financial stability.",
+
+  "balanceSheetInsights": "Kineco is strengthening its balance sheet with improving reserves and controlled leverage. Growth in receivables and inventory reflects scaling operations.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 29.59, "fy23": -13.92, "fy24": 54, "fy25": 23 },
+      { "label": "Investing Cash Flow", "fy22": 1.41, "fy23": -12, "fy24": -17, "fy25": -29 },
+      { "label": "Financing Cash Flow", "fy22": -22, "fy23": 18, "fy24": -29, "fy25": 38 }
+    ],
+    "insights": [
+      "Operating cash flow recovered strongly after FY23 dip.",
+      "Investments indicate ongoing capacity expansion.",
+      "Financing inflows in FY25 suggest funding for growth.",
+      "Overall cash flow trend supports expansion phase."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company was founded by Shekhar Sardessai and is led by experienced professionals in composite engineering and manufacturing.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Management has demonstrated strong execution capabilities in niche composite manufacturing. Focus on high-growth sectors like defense and railways positions the company well for long-term growth.",
+
+  "faq": [
+    {
+      "question": "What does Kineco Limited do?",
+      "answer": "It manufactures advanced composite products for aerospace, defense, railways, and industrial sectors."
+    },
+    {
+      "question": "Is Kineco profitable?",
+      "answer": "Yes, profitability has improved with PAT increasing to ₹13 Cr in FY25."
+    },
+    {
+      "question": "Why is the PE ratio high?",
+      "answer": "Due to strong growth expectations and niche positioning in high-tech sectors."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "High valuation, dependence on specialized sectors, and working capital intensity."
+    },
+    {
+      "question": "What is the growth outlook?",
+      "answer": "Positive, driven by demand in defense, railways, and aerospace sectors."
+    }
+  ]
+},
   {
-    "id": 82,
-    "name": "LAVA International Limited Unlisted Shares",
-    "price": 48,
+  "id": 82,
+  "name": "LAVA International Limited",
+  "price": 48,
+  "logo": "/images/preipo/image80.png",
+
+  "overview": "LAVA International Limited is an Indian mobile handset and consumer electronics company founded in 2009. It operates across smartphones, feature phones, and tablets, with a strong presence in domestic and emerging markets. The company focuses on in-house design and manufacturing under the 'Make in India' initiative and has been expanding its product portfolio with innovation-driven devices. Lava is also exploring growth in exports and enterprise solutions, positioning itself as a competitive domestic alternative to global smartphone brands.",
+
+  "products": [
+    "Smartphones",
+    "Feature Phones",
+    "Tablets",
+    "Accessories",
+    "Enterprise Mobility Solutions"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Retail Consumers",
+    "Telecom Distributors",
+    "E-commerce Platforms",
+    "Enterprise Clients"
+  ],
+
+  "shareDetails": {
+    "companyName": "LAVA International Limited",
+    "indicativeUnlistedSharePrice": "₹48",
+    "marketCapitalization": "₹2597 Cr",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹52",
+    "52WeekLow": "₹38",
+    "faceValue": "₹5",
+    "bookValue": "₹17.7",
+    "peRatio": "76.19",
+    "pbRatio": "2.71",
+    "debtToEquity": "0.12",
+    "returnOnEquity": "3.57%",
+    "totalOutstandingShares": "54,11,62,516",
+    "isin": "INE745X01022",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image80.png"
+    "pan": "AABCL5878H",
+    "cin": "U32201DL2009PLC188920",
+    "rta": "Link Intime"
   },
-  {
-    "id": 83,
-    "name": "Lakeshore Hospital Unlisted Share Price",
-    "price": 144,
+
+  "financials": {
+    "annualReportSummary": "LAVA International has shown volatile financial performance with declining revenues from ₹5518.7 Cr in FY21 to ₹3646 Cr in FY24. Profitability has also weakened significantly, with PAT falling from ₹172.6 Cr in FY21 to ₹34 Cr in FY24. Margins have compressed due to competitive pressure in the smartphone market and rising costs. While the company remains profitable, earnings visibility is moderate and dependent on successful product positioning and market share gains.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy21": 5518.7, "fy22": 5877.64, "fy23": 5443, "fy24": 3646 },
+      { "label": "EBITDA", "fy21": 420.46, "fy22": 323.67, "fy23": 265, "fy24": 82 },
+      { "label": "Operating Profit", "fy21": 420.46, "fy22": 323.67, "fy23": 265, "fy24": 82 },
+      { "label": "EBIT", "fy21": 201.33, "fy22": 226.96, "fy23": 125, "fy24": 59 },
+      { "label": "Profit Before Tax", "fy21": 183.42, "fy22": 203.11, "fy23": 99, "fy24": 45 },
+      { "label": "Net Profit / Loss", "fy21": 172.6, "fy22": 186.87, "fy23": 88, "fy24": 34 },
+      { "label": "EPS", "fy21": 6.91, "fy22": 3.45, "fy23": 1.61, "fy24": 0.62 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy21": 4.36, "fy22": 5.51, "fy23": 4.87, "fy24": 2.25 },
+      { "label": "Net Profit Margin (%)", "fy21": 3.18, "fy22": 3.18, "fy23": 1.62, "fy24": 0.93 },
+      { "label": "EPS", "fy21": 6.91, "fy22": 3.45, "fy23": 1.61, "fy24": 0.62 }
+    ],
+
+    "investorInsight": [
+      "Revenue decline indicates increasing competition in the smartphone segment.",
+      "Margins have compressed significantly over the years.",
+      "Company remains profitable but earnings quality has weakened.",
+      "Turnaround depends on product innovation and market share recovery."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy21": 119.14, "fy22": 161.96, "fy23": 269, "fy24": 48.5 },
+      { "label": "CWIP", "fy21": 3.27, "fy22": 56.86, "fy23": 19, "fy24": 20 },
+      { "label": "Trade Receivables", "fy21": 1162.41, "fy22": 1292.11, "fy23": 738, "fy24": 303 },
+      { "label": "Inventory", "fy21": 403.86, "fy22": 862.87, "fy23": 736, "fy24": 384 },
+      { "label": "Other Assets", "fy21": 868.02, "fy22": 1123.92, "fy23": 657, "fy24": 501.5 },
+      { "label": "Total Assets", "fy21": 2497.75, "fy22": 3393.34, "fy23": 2526, "fy24": 1731 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy21": 124.86, "fy22": 270.56, "fy23": 273.8, "fy24": 273.8 },
+      { "label": "Reserves", "fy21": 1461.34, "fy22": 2016.75, "fy23": 1130, "fy24": 679 },
+      { "label": "Borrowings", "fy21": 1031.2, "fy22": 322.41, "fy23": 306, "fy24": 112 },
+      { "label": "Trade Payables", "fy21": 508.18, "fy22": 515.76, "fy23": 586, "fy24": 404 },
+      { "label": "Other Liabilities", "fy21": 232.26, "fy22": 267.86, "fy23": 230.2, "fy24": 262.2 },
+      { "label": "Total Liabilities", "fy21": 2497.75, "fy22": 3393.34, "fy23": 2526, "fy24": 1731 }
+    ],
+
+    "insights": "The balance sheet shows a contraction in total assets over time, reflecting reduced scale of operations. Borrowings have significantly declined, improving leverage. However, reserves have also declined, indicating pressure on retained earnings."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are mainly composed of trade payables and reduced borrowings. The company has deleveraged significantly, improving financial risk profile.",
+
+  "balanceSheetInsights": "Lava has improved its debt position but shrinking reserves and assets indicate operational challenges. Sustained profitability recovery is required to strengthen financial position.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy21": 157.78, "fy22": 55.34, "fy23": 37, "fy24": 113 },
+      { "label": "Investing Cash Flow", "fy21": -951.45, "fy22": -210.98, "fy23": 8.6, "fy24": 19 },
+      { "label": "Financing Cash Flow", "fy21": -40.09, "fy22": 16.43, "fy23": 61, "fy24": -118 }
+    ],
+    "insights": [
+      "Operating cash flow remains positive but inconsistent.",
+      "Heavy investments in earlier years reduced cash reserves.",
+      "Financing activities show mixed trends with deleveraging.",
+      "Liquidity position remains manageable but dependent on recovery."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is promoted by Hari Om Rai and Sunil Raina, who have been instrumental in building Lava as a domestic mobile brand competing with global players.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Management is focused on strengthening domestic manufacturing and competing with global smartphone brands. Future growth depends on innovation, pricing strategy, and brand positioning.",
+
+  "faq": [
+    {
+      "question": "What does LAVA International do?",
+      "answer": "It manufactures smartphones, feature phones, and consumer electronics products."
+    },
+    {
+      "question": "Is LAVA profitable?",
+      "answer": "Yes, but profitability has declined significantly in recent years."
+    },
+    {
+      "question": "Why are margins declining?",
+      "answer": "Due to intense competition in the smartphone market and pricing pressure."
+    },
+    {
+      "question": "Is the company debt-heavy?",
+      "answer": "No, debt has reduced significantly, improving financial stability."
+    },
+    {
+      "question": "What is the future outlook?",
+      "answer": "Growth depends on successful product launches and market share recovery."
+    }
+  ]
+},
+{
+  "id": 83,
+  "name": "Lakeshore Hospital",
+  "price": 105,
+  "logo": "/images/preipo/image81.png",
+
+  "overview": "Lakeshore Hospital & Research Centre is a multi-specialty healthcare provider based in Kochi, Kerala. Established as a leading tertiary care hospital, it offers a wide range of medical services including cardiology, oncology, orthopedics, nephrology, and critical care. The hospital is known for its advanced infrastructure, experienced medical professionals, and focus on patient-centric care. With increasing healthcare demand in India, Lakeshore Hospital is positioned to benefit from rising medical needs, especially in South India.",
+
+  "products": [
+    "Multi-specialty Hospital Services",
+    "Cardiology & Cardiac Surgery",
+    "Oncology Treatment",
+    "Orthopedics & Joint Replacement",
+    "Nephrology & Dialysis",
+    "Critical Care Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Retail Patients",
+    "Corporate Healthcare Programs",
+    "Insurance & TPA Providers",
+    "International Medical Tourists"
+  ],
+
+  "shareDetails": {
+    "companyName": "Lakeshore Hospital & Research Centre Limited",
+    "indicativeUnlistedSharePrice": "₹105",
+    "marketCapitalization": "₹1050 Cr",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹115",
+    "52WeekLow": "₹105",
+    "faceValue": "₹10",
+    "bookValue": "₹43.2",
+    "peRatio": "26.92",
+    "pbRatio": "2.43",
+    "debtToEquity": "0",
+    "returnOnEquity": "9.24%",
+    "totalOutstandingShares": "10,00,00,000",
+    "isin": "INE0TI01016",
     "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image81.png"
+    "pan": "AAACL4923A",
+    "cin": "U85110KL1996PLC010260",
+    "rta": "Integrated Registry Management Services"
   },
+
+  "financials": {
+    "annualReportSummary": "Lakeshore Hospital has demonstrated stable revenue growth from ₹359 Cr in FY22 to ₹408 Cr in FY25. Profitability remains consistent with PAT ranging between ₹39–₹57 Cr. Margins are relatively stable, reflecting a mature healthcare business with predictable earnings. The company benefits from steady patient inflows and growing healthcare demand.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 359, "fy23": 419, "fy24": 396, "fy25": 408 },
+      { "label": "EBITDA", "fy22": 83, "fy23": 102, "fy24": 73, "fy25": 71.2 },
+      { "label": "Operating Profit", "fy22": 83, "fy23": 102, "fy24": 73, "fy25": 71.2 },
+      { "label": "EBIT", "fy22": 61, "fy23": 79, "fy24": 49, "fy25": 45.2 },
+      { "label": "Profit Before Tax", "fy22": 62, "fy23": 82, "fy24": 55, "fy25": 53 },
+      { "label": "Net Profit / Loss", "fy22": 44, "fy23": 57, "fy24": 44, "fy25": 39 },
+      { "label": "EPS", "fy22": 4.4, "fy23": 5.7, "fy24": 4.4, "fy25": 3.9 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 23.12, "fy23": 24.34, "fy24": 18.43, "fy25": 17.45 },
+      { "label": "Net Profit Margin (%)", "fy22": 12.26, "fy23": 13.6, "fy24": 11.11, "fy25": 9.56 },
+      { "label": "EPS", "fy22": 4.4, "fy23": 5.7, "fy24": 4.4, "fy25": 3.9 }
+    ],
+
+    "investorInsight": [
+      "Stable revenue growth indicates consistent patient demand.",
+      "Margins are gradually declining but remain healthy.",
+      "Debt-free balance sheet improves financial safety.",
+      "Healthcare sector tailwinds support long-term growth."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 340, "fy23": 382, "fy24": 367, "fy25": 362 },
+      { "label": "CWIP", "fy22": 0, "fy23": 5, "fy24": 2, "fy25": 4.6 },
+      { "label": "Trade Receivables", "fy22": 20, "fy23": 20, "fy24": 27, "fy25": 34 },
+      { "label": "Inventory", "fy22": 11, "fy23": 13, "fy24": 11, "fy25": 11 },
+      { "label": "Other Assets", "fy22": 93, "fy23": 134, "fy24": 121, "fy25": 140.4 },
+      { "label": "Total Assets", "fy22": 464, "fy23": 500, "fy24": 508, "fy25": 533 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 100, "fy23": 100, "fy24": 100, "fy25": 100 },
+      { "label": "Reserves", "fy22": 231, "fy23": 273, "fy24": 300, "fy25": 322 },
+      { "label": "Borrowings", "fy22": 19, "fy23": 13, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 33, "fy23": 34, "fy24": 33, "fy25": 39 },
+      { "label": "Other Liabilities", "fy22": 81, "fy23": 80, "fy24": 75, "fy25": 72 },
+      { "label": "Total Liabilities", "fy22": 464, "fy23": 500, "fy24": 508, "fy25": 533 }
+    ],
+
+    "insights": "The balance sheet is strong with zero debt in recent years. Increasing reserves indicate consistent profitability. Asset base is stable with moderate expansion in healthcare infrastructure."
+  },
+
+  "liabilitiesBreakdown": "The company has minimal financial liabilities with zero borrowings in recent years. Most liabilities are operational, such as payables.",
+
+  "balanceSheetInsights": "Lakeshore Hospital maintains a strong financial position with low leverage and steady asset growth. This reflects a mature and stable healthcare business.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 31, "fy23": 55, "fy24": 44, "fy25": 68.3 },
+      { "label": "Investing Cash Flow", "fy22": -24, "fy23": -6.9, "fy24": -39, "fy25": -15.8 },
+      { "label": "Financing Cash Flow", "fy22": -26, "fy23": -23, "fy24": -32, "fy25": -18 }
+    ],
+    "insights": [
+      "Strong and improving operating cash flows.",
+      "Investments indicate ongoing infrastructure upgrades.",
+      "Negative financing cash flow reflects dividend payouts and debt reduction.",
+      "Overall liquidity position is strong."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The hospital is promoted by healthcare professionals and institutional stakeholders with a focus on delivering high-quality medical services.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Integrated Registry Management Services",
+    "website": ""
+  },
+
+  "managementInsight": "Management focuses on expanding healthcare services and maintaining quality care standards. Growth is driven by rising healthcare demand and specialization services.",
+
+  "faq": [
+    {
+      "question": "What does Lakeshore Hospital do?",
+      "answer": "It is a multi-specialty hospital providing advanced medical treatments and healthcare services."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, it has consistent profitability with stable margins."
+    },
+    {
+      "question": "Does the company have debt?",
+      "answer": "No, it is effectively debt-free in recent years."
+    },
+    {
+      "question": "Is this a stable business?",
+      "answer": "Yes, healthcare businesses typically have predictable demand and stable revenues."
+    },
+    {
+      "question": "What is the key growth driver?",
+      "answer": "Increasing healthcare demand and expansion of specialized services."
+    }
+  ]
+},
   {
-    "id": 84,
-    "name": "Lords Mark Industries Limited",
-    "price": 100,
+  "id": 84,
+  "name": "Lords Mark Industries Limited",
+  "price": 80,
+  "logo": "/images/preipo/image82.jpg",
+
+  "overview": "Lords Mark Industries Limited is a diversified business group operating across healthcare, diagnostics, medical equipment manufacturing, and infrastructure services. The company gained visibility during the COVID-19 period through its healthcare and testing solutions and has since expanded into multiple verticals including IVD (In-Vitro Diagnostics), medical devices, and EPC services. With a focus on innovation and expansion into healthcare infrastructure, the company is positioning itself as a multi-sector player with growth opportunities in India’s evolving healthcare ecosystem.",
+
+  "products": [
+    "Medical Devices & Equipment",
+    "IVD (Diagnostic Solutions)",
+    "Healthcare Services",
+    "EPC & Infrastructure Services",
+    "Testing & Diagnostic Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Hospitals & Healthcare Institutions",
+    "Diagnostic Labs",
+    "Government Healthcare Projects",
+    "Corporate Clients"
+  ],
+
+  "shareDetails": {
+    "companyName": "Lords Mark Industries Limited",
+    "indicativeUnlistedSharePrice": "₹80",
+    "marketCapitalization": "₹1443 Cr",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹128",
+    "52WeekLow": "₹80",
+    "faceValue": "₹5",
+    "bookValue": "₹5.2",
+    "peRatio": "126.98",
+    "pbRatio": "15.38",
+    "debtToEquity": "2.43",
+    "returnOnEquity": "12.73%",
+    "totalOutstandingShares": "18,04,32,513",
+    "isin": "INE0PL01010",
     "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image82.jpg"
+    "pan": "AAACL9328F",
+    "cin": "U21000MH1997PTC115601",
+    "rta": "Link Intime"
   },
-  {
-    "id": 85,
-    "name": "Machint Solutions Limited",
-    "price": 335,
+
+  "financials": {
+    "annualReportSummary": "Lords Mark Industries has demonstrated strong revenue growth from ₹213 Cr in FY22 to ₹555 Cr in FY24. Profitability has improved with PAT rising from ₹4.2 Cr to ₹11.3 Cr over the same period. However, margins remain thin and volatile, reflecting the competitive and diversified nature of the business. The company is in a growth phase but faces execution and profitability challenges.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 213, "fy23": 305, "fy24": 555 },
+      { "label": "EBITDA", "fy22": 13.1, "fy23": 22.3, "fy24": 38 },
+      { "label": "Operating Profit", "fy22": 13.1, "fy23": 22.3, "fy24": 38 },
+      { "label": "EBIT", "fy22": 11, "fy23": 17.6, "fy24": 33 },
+      { "label": "Profit Before Tax", "fy22": 5.5, "fy23": 6.4, "fy24": 15.5 },
+      { "label": "Net Profit / Loss", "fy22": 4.2, "fy23": 4.5, "fy24": 11.3 },
+      { "label": "EPS", "fy22": 4.2, "fy23": 0.82, "fy24": 1.01 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 6.15, "fy23": 7.28, "fy24": 6.85 },
+      { "label": "Net Profit Margin (%)", "fy22": 1.97, "fy23": 1.51, "fy24": 2.04 },
+      { "label": "EPS", "fy22": 4.2, "fy23": 0.82, "fy24": 1.01 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth indicates business expansion.",
+      "Profit margins remain very thin, limiting earnings quality.",
+      "High debt levels increase financial risk.",
+      "Valuation is expensive relative to earnings performance."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 18.8, "fy23": 35, "fy24": 47 },
+      { "label": "Trade Receivables", "fy22": 112, "fy23": 84.7, "fy24": 159 },
+      { "label": "Inventory", "fy22": 67.8, "fy23": 91.4, "fy24": 99 },
+      { "label": "Other Assets", "fy22": 21.6, "fy23": 29.4, "fy24": 52 },
+      { "label": "Total Assets", "fy22": 220.2, "fy23": 240.5, "fy24": 357 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 5, "fy23": 28.2, "fy24": 56.2 },
+      { "label": "Reserves", "fy22": 27.6, "fy23": 18, "fy24": 32.6 },
+      { "label": "Borrowings", "fy22": 123, "fy23": 175, "fy24": 216 },
+      { "label": "Trade Payables", "fy22": 56.8, "fy23": 11.5, "fy24": 17.2 },
+      { "label": "Other Liabilities", "fy22": 6, "fy23": 8, "fy24": 35 },
+      { "label": "Total Liabilities", "fy22": 220.2, "fy23": 240.5, "fy24": 357 }
+    ],
+
+    "insights": "The balance sheet shows rapid expansion with increasing borrowings. High receivables and inventory levels indicate working capital intensity. Rising debt is a key risk factor."
+  },
+
+  "liabilitiesBreakdown": "Borrowings form a major portion of liabilities, indicating dependence on external funding. Working capital requirements are also high.",
+
+  "balanceSheetInsights": "The company is growing aggressively but at the cost of higher leverage. Sustaining growth while managing debt will be critical.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 5.36, "fy23": 8.4, "fy24": -4.2 },
+      { "label": "Investing Cash Flow", "fy22": -8.91, "fy23": -21, "fy24": -17.2 },
+      { "label": "Financing Cash Flow", "fy22": 3.15, "fy23": 18, "fy24": 47.2 }
+    ],
+    "insights": [
+      "Operating cash flow turned negative in FY24.",
+      "Heavy investment indicates expansion phase.",
+      "Financing cash flow driven by increased borrowings.",
+      "Cash flow sustainability is a concern."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is promoter-driven with focus on healthcare and infrastructure expansion strategies.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Management is aggressively expanding across multiple sectors. Execution capability and capital allocation efficiency will determine long-term success.",
+
+  "faq": [
+    {
+      "question": "What does Lords Mark Industries do?",
+      "answer": "It operates in healthcare, diagnostics, medical equipment, and infrastructure services."
+    },
+    {
+      "question": "Is the company growing?",
+      "answer": "Yes, revenue has grown rapidly in recent years."
+    },
+    {
+      "question": "Is it profitable?",
+      "answer": "Yes, but profit margins are very thin."
+    },
+    {
+      "question": "What are the key risks?",
+      "answer": "High debt, weak cash flow, and expensive valuation."
+    },
+    {
+      "question": "Is it a good investment?",
+      "answer": "It is a high-risk, high-growth company but currently overvalued."
+    }
+  ]
+},
+{
+  "id": 85,
+  "name": "Machint Solutions Limited",
+  "price": 74,
+  "logo": "/images/preipo/image83.jpg",
+
+  "overview": "Machint Solutions Limited is a technology-driven company specializing in business process management (BPM), robotic process automation (RPA), low-code application development, and digital engineering services. The company focuses on automation-led solutions to improve enterprise efficiency and reduce operational costs. With increasing demand for digital transformation across industries, Machint Solutions is positioned as a niche player in the automation and BPM segment.",
+
+  "products": [
+    "Business Process Management (BPM)",
+    "Robotic Process Automation (RPA)",
+    "Low-code Development Platforms",
+    "Digital Engineering Services",
+    "Automation Solutions"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Enterprises undergoing digital transformation",
+    "IT & Technology Companies",
+    "Financial Services Firms",
+    "Operational Process-driven Businesses"
+  ],
+
+  "shareDetails": {
+    "companyName": "Machint Solutions Limited",
+    "indicativeUnlistedSharePrice": "₹74",
+    "marketCapitalization": "₹101 Cr",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹335",
+    "52WeekLow": "₹74",
+    "faceValue": "₹10",
+    "bookValue": "₹87.7",
+    "peRatio": "5.94",
+    "pbRatio": "0.84",
+    "debtToEquity": "0.16",
+    "returnOnEquity": "15.51%",
+    "totalOutstandingShares": "1,36,42,409",
+    "isin": "INE0DOI01015",
     "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image83.jpg"
+    "pan": "AAMCM3553R",
+    "cin": "U74999TG2018PLC127147",
+    "rta": "Bigshare Services Pvt Ltd"
   },
-  {
-    "id": 86,
-    "name": "Madbow Ventures Unlisted Shares",
-    "price": 44,
+
+  "financials": {
+    "annualReportSummary": "Machint Solutions is in an early growth phase with revenue increasing from ₹86 Cr in FY24 to ₹92 Cr in FY25. Profitability has improved modestly with PAT rising from ₹13 Cr to ₹17 Cr. Margins remain strong due to the asset-light nature of the business. However, scale remains limited and the company is still establishing its market presence.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy24": 86, "fy25": 92 },
+      { "label": "EBITDA", "fy24": 41, "fy25": 30 },
+      { "label": "Operating Profit", "fy24": 41, "fy25": 30 },
+      { "label": "EBIT", "fy24": 20, "fy25": 26 },
+      { "label": "Profit Before Tax", "fy24": 17, "fy25": 24 },
+      { "label": "Net Profit / Loss", "fy24": 13, "fy25": 17 },
+      { "label": "EPS", "fy24": 61.61, "fy25": 12.46 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy24": 24.42, "fy25": 32.61 },
+      { "label": "Net Profit Margin (%)", "fy24": 15.12, "fy25": 18.48 },
+      { "label": "EPS", "fy24": 61.61, "fy25": 12.46 }
+    ],
+
+    "investorInsight": [
+      "High margins indicate strong business model (automation/BPM).",
+      "Revenue growth is modest, indicating limited scale.",
+      "Low valuation (low PE & PB) suggests potential undervaluation.",
+      "Early-stage company with execution risk."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy24": 9, "fy25": 32 },
+      { "label": "CWIP", "fy24": 0, "fy25": 7 },
+      { "label": "Trade Receivables", "fy24": 41, "fy25": 73 },
+      { "label": "Inventory", "fy24": 0, "fy25": 16 },
+      { "label": "Other Assets", "fy24": 33, "fy25": 20 },
+      { "label": "Total Assets", "fy24": 83, "fy25": 148 }
+    ],
+
+    "liabilities": [
+      { "label": "Share Capital", "fy24": 21.1, "fy25": 13.64 },
+      { "label": "Reserves", "fy24": 52, "fy25": 96 },
+      { "label": "Borrowings", "fy24": 14, "fy25": 18 },
+      { "label": "Trade Payables", "fy24": 2, "fy25": 3 },
+      { "label": "Other Liabilities", "fy24": 12.89, "fy25": 17.36 },
+      { "label": "Total Liabilities", "fy24": 83, "fy25": 148 }
+    ],
+
+    "insights": "The balance sheet shows rapid expansion in FY25 with rising assets and receivables. Borrowings remain low, indicating controlled leverage. Increasing reserves reflect improving profitability."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are largely composed of reserves and minimal borrowings, indicating a relatively low-risk financial structure.",
+
+  "balanceSheetInsights": "Machint Solutions is scaling rapidly with a strong balance sheet. However, rising receivables indicate potential working capital management challenges.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy24": -19, "fy25": -21 },
+      { "label": "Investing Cash Flow", "fy24": 2, "fy25": -30 },
+      { "label": "Financing Cash Flow", "fy24": 32, "fy25": 40 }
+    ],
+    "insights": [
+      "Operating cash flow is negative, indicating working capital pressure.",
+      "Investments increased in FY25 for growth.",
+      "Financing cash flow positive due to funding support.",
+      "Cash flow sustainability needs improvement."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is promoter-driven with a focus on automation, BPM, and digital transformation services.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Bigshare Services Pvt Ltd",
+    "website": "https://www.bigshareonline.com/"
+  },
+
+  "managementInsight": "Management is focused on scaling automation-driven solutions and expanding client base. Execution and scaling ability will be key to future growth.",
+
+  "faq": [
+    {
+      "question": "What does Machint Solutions do?",
+      "answer": "It provides BPM, RPA, and digital transformation services."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, with strong margins due to its asset-light model."
+    },
+    {
+      "question": "Is the valuation attractive?",
+      "answer": "Yes, it trades at relatively low PE and PB ratios."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "Small scale, negative cash flow, and execution risks."
+    },
+    {
+      "question": "Is it a growth company?",
+      "answer": "Yes, it is an early-stage growth company in automation and tech services."
+    }
+  ]
+},
+ {
+  "id": 86,
+  "name": "Madbow Ventures Limited",
+  "price": 35,
+  "logo": "/images/preipo/image84.png",
+
+  "overview": "Madbow Ventures Limited is a lifestyle and fashion brand founded in 2016. The company focuses on creating contemporary apparel for urban consumers with a strong emphasis on youth-oriented designs and digital-first branding. It markets and sells products such as garments, footwear, and lingerie under the MADBOW brand. The company primarily operates through online channels and aims to capitalize on India’s growing e-commerce and fashion consumption trends.",
+
+  "products": [
+    "Apparel (Casual Wear)",
+    "Footwear",
+    "Lingerie",
+    "Fashion Accessories"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Urban Consumers",
+    "Online Retail Customers",
+    "E-commerce Platforms"
+  ],
+
+  "shareDetails": {
+    "companyName": "Madbow Ventures Limited",
+    "indicativeUnlistedSharePrice": "₹35",
+    "marketCapitalization": "₹0",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹35",
+    "52WeekLow": "₹35",
+    "faceValue": "₹10",
+    "bookValue": "N/A",
+    "peRatio": "N/A",
+    "pbRatio": "N/A",
+    "debtToEquity": "N/A",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "0",
+    "isin": "INE0KMJ01012",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image84.png"
+    "pan": "AAICM1334R",
+    "cin": "U51909HR2017PLC069490",
+    "rta": "N/A"
   },
+
+  "financials": {
+    "annualReportSummary": "Financial data for Madbow Ventures Limited is not publicly available. The company appears to be in an early-stage or limited disclosure phase, making it difficult to assess financial performance, profitability, and growth trends.",
+
+    "incomeStatement": [],
+
+    "keyRatios": [],
+
+    "investorInsight": [
+      "No financial data available, making evaluation difficult.",
+      "Early-stage fashion brand with unproven scalability.",
+      "Operates in a highly competitive apparel market.",
+      "Investment carries high uncertainty due to lack of transparency."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [],
+    "liabilities": [],
+    "insights": "Balance sheet data is not disclosed publicly."
+  },
+
+  "liabilitiesBreakdown": "No data available.",
+
+  "balanceSheetInsights": "Due to lack of financial disclosure, financial health cannot be assessed.",
+
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "No cash flow data available.",
+      "Liquidity and sustainability cannot be evaluated."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is promoted by Mr. Naveen Mahlawat, who serves as Founder & Director.",
+
+  "management": [
+    {
+      "name": "Naveen Mahlawat",
+      "role": "Founder & Director",
+      "experience": ""
+    }
+  ],
+
+  "rta": {
+    "registrar": "N/A",
+    "website": ""
+  },
+
+  "managementInsight": "The company is founder-driven with a focus on building a fashion brand. However, lack of financial transparency increases investment risk.",
+
+  "faq": [
+    {
+      "question": "What does Madbow Ventures do?",
+      "answer": "It is a fashion and lifestyle brand selling apparel, footwear, and accessories."
+    },
+    {
+      "question": "Is financial data available?",
+      "answer": "No, financial data is not publicly disclosed."
+    },
+    {
+      "question": "Is this a safe investment?",
+      "answer": "No, due to lack of financial transparency and early-stage nature."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "No financial visibility, high competition, and unproven business model."
+    },
+    {
+      "question": "Is it a growth opportunity?",
+      "answer": "Potential exists in fashion e-commerce, but execution risk is very high."
+    }
+  ]
+},
   {
-    "id": 87,
-    "name": "Madhur Iron and Steel (India)",
-    "price": 173,
+  "id": 87,
+  "name": "Madhur Iron and Steel (India)",
+  "price": 173,
+  "logo": "/images/preipo/image85.jpg",
+
+  "overview": "Madhur Iron and Steel (India) is a Gujarat-based iron and steel manufacturing company engaged in the production of mild steel (MS) products. The company focuses on long steel products used in construction and infrastructure development. With operations strategically located near Bhavnagar, it benefits from efficient raw material sourcing and distribution access. The company caters to regional demand for steel products and aims to grow alongside India’s infrastructure and real estate expansion.",
+
+  "products": [
+    "Mild Steel (MS) Products",
+    "Construction Steel",
+    "Structural Steel Products"
+  ],
+
+  "manufacturingUnits": [
+    "Bhavnagar, Gujarat"
+  ],
+
+  "clients": [
+    "Construction Companies",
+    "Infrastructure Developers",
+    "Local Steel Distributors"
+  ],
+
+  "shareDetails": {
+    "companyName": "Madhur Iron and Steel (India)",
+    "indicativeUnlistedSharePrice": "₹118",
+    "marketCapitalization": "₹351 Cr",
+    "lotSize": "5000 Shares",
+    "52WeekHigh": "₹150",
+    "52WeekLow": "₹118",
+    "faceValue": "₹10",
+    "bookValue": "₹35.22",
+    "peRatio": "19",
+    "pbRatio": "3.35",
+    "debtToEquity": "0.89",
+    "returnOnEquity": "19.5%",
+    "totalOutstandingShares": "2,97,86,466",
+    "isin": "INE0T301014",
     "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image85.jpg"
+    "pan": "AAHCM7572R",
+    "cin": "U51101GJ2012PTC008699",
+    "rta": "KFin Technologies"
   },
+
+  "financials": {
+    "annualReportSummary": "Madhur Iron and Steel has demonstrated consistent revenue growth from ₹193 Cr in FY23 to ₹340 Cr in FY25. Profitability has improved steadily with PAT increasing from ₹6 Cr to ₹18.5 Cr over the same period. Margins are stable, indicating operational efficiency in a commodity-driven steel business. However, the business remains sensitive to raw material prices and cyclical demand.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 193, "fy24": 239, "fy25": 340 },
+      { "label": "EBITDA", "fy23": 13, "fy24": 24, "fy25": 35 },
+      { "label": "Operating Profit", "fy23": 13, "fy24": 24, "fy25": 35 },
+      { "label": "EBIT", "fy23": 12, "fy24": 23.01, "fy25": 33.32 },
+      { "label": "Profit Before Tax", "fy23": 9, "fy24": 17, "fy25": 25 },
+      { "label": "Net Profit / Loss", "fy23": 6, "fy24": 12, "fy25": 18.5 },
+      { "label": "EPS", "fy23": 10.29, "fy24": 18.15, "fy25": 12.42 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 6.74, "fy24": 10.04, "fy25": 10.29 },
+      { "label": "Net Profit Margin (%)", "fy23": 3.11, "fy24": 5.02, "fy25": 5.44 },
+      { "label": "EPS", "fy23": 10.29, "fy24": 18.15, "fy25": 12.42 }
+    ],
+
+    "investorInsight": [
+      "Steady revenue growth indicates improving scale and demand.",
+      "Margins are moderate, typical of commodity steel businesses.",
+      "ROE of ~19.5% is strong for the sector.",
+      "Business is cyclical and dependent on steel price movements.",
+      "Growth tied closely to infrastructure and construction activity."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 8, "fy24": 14, "fy25": 17.6 },
+      { "label": "CWIP", "fy23": 2, "fy24": 0.1, "fy25": 0.14 },
+      { "label": "Trade Receivables", "fy23": 3, "fy24": 2, "fy25": 4.2 },
+      { "label": "Inventory", "fy23": 56, "fy24": 91, "fy25": 150 },
+      { "label": "Other Assets", "fy23": 11, "fy24": 19.9, "fy25": 31.26 },
+      { "label": "Total Assets", "fy23": 80, "fy24": 130, "fy25": 201 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 5.83, "fy24": 6.61, "fy25": 14.89 },
+      { "label": "Reserves", "fy23": 14, "fy24": 26, "fy25": 80 },
+      { "label": "Borrowings", "fy23": 30, "fy24": 58, "fy25": 84 },
+      { "label": "Trade Payables", "fy23": 26, "fy24": 21, "fy25": 53 },
+      { "label": "Other Liabilities", "fy23": 4.17, "fy24": 18.39, "fy25": 31 },
+      { "label": "Total Liabilities", "fy23": 80, "fy24": 130, "fy25": 201 }
+    ],
+    "insights": "The balance sheet shows rapid expansion with assets growing significantly over three years. Inventory levels are high, indicating working capital intensity. Borrowings have increased to support growth, which needs monitoring."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are primarily composed of borrowings and trade payables, reflecting working capital requirements of the steel business.",
+
+  "balanceSheetInsights": "The company is expanding aggressively, but rising debt and inventory levels suggest increased financial risk. Efficient working capital management will be crucial.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy23": -15.5, "fy24": -28.98, "fy25": -44 },
+      { "label": "Investing Cash Flow", "fy23": -1.42, "fy24": -5.06, "fy25": -8 },
+      { "label": "Financing Cash Flow", "fy23": 2.92, "fy24": 34.05, "fy25": 52.71 }
+    ],
+    "insights": [
+      "Operating cash flow is negative, indicating working capital stress.",
+      "High inventory and receivables are consuming cash.",
+      "Growth is funded through external financing.",
+      "Sustainability depends on converting profits into cash."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is promoter-driven with leadership focused on expanding production capacity and strengthening its presence in the regional steel market.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+
+  "managementInsight": "Management is focused on scaling operations in a cyclical steel industry. Execution capability and cost control will be key to sustaining profitability.",
+
+  "faq": [
+    {
+      "question": "What does Madhur Iron and Steel do?",
+      "answer": "It manufactures mild steel products used in construction and infrastructure."
+    },
+    {
+      "question": "Is the company growing?",
+      "answer": "Yes, revenue and profits have grown consistently over recent years."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "Steel price volatility, high working capital requirements, and rising debt."
+    },
+    {
+      "question": "Is it profitable?",
+      "answer": "Yes, with improving margins and steady PAT growth."
+    },
+    {
+      "question": "Is it a good investment?",
+      "answer": "It has growth potential but carries cyclicality and cash flow risks typical of steel businesses."
+    }
+  ]
+},
   {
-    "id": 88,
-    "name": "Maharaja Shree Umaid Mills Unlisted Shares",
-    "price": 169,
+  "id": 88,
+  "name": "Maharaja Shree Umaid Mills Limited",
+  "price": 169,
+  "logo": "/images/preipo/image86.png",
+
+  "overview": "Maharaja Shree Umaid Mills Limited is a textile manufacturing company engaged in the production of yarn, denim fabrics, and textile products. The company is part of the LNJ Bhilwara Group, a well-established industrial group in India. It operates in the spinning and weaving segment, supplying products to domestic and export markets. With a focus on quality textiles and operational efficiency, the company benefits from group synergies and industry experience. However, like most textile businesses, performance is influenced by raw material costs, global demand cycles, and export conditions.",
+
+  "products": [
+    "Cotton Yarn",
+    "Denim Fabric",
+    "Textile Products"
+  ],
+
+  "manufacturingUnits": [
+    "Rajasthan, India"
+  ],
+
+  "clients": [
+    "Garment Manufacturers",
+    "Textile Exporters",
+    "Domestic Fabric Buyers"
+  ],
+
+  "shareDetails": {
+    "companyName": "Maharaja Shree Umaid Mills Limited",
+    "indicativeUnlistedSharePrice": "₹135",
+    "marketCapitalization": "₹2708 Cr",
+    "lotSize": "250 Shares",
+    "52WeekHigh": "₹135",
+    "52WeekLow": "₹135",
+    "faceValue": "₹10",
+    "bookValue": "₹44.35",
+    "peRatio": "46.71",
+    "pbRatio": "3.04",
+    "debtToEquity": "0.64",
+    "returnOnEquity": "6.59%",
+    "totalOutstandingShares": "20,05,80,650",
+    "isin": "INE087D01013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image86.png"
+    "pan": "AABCM1849B",
+    "cin": "U17124WB1939PLC012650",
+    "rta": "Maheshwari Datamatics"
   },
-  {
-    "id": 89,
-    "name": "Maharashtra Knowledge Corporation (MKCL) Limited Unlisted Shares",
-    "price": 544,
+
+  "financials": {
+    "annualReportSummary": "The company has shown steady revenue growth from ₹457 Cr in FY23 to ₹600 Cr in FY25. Profitability has improved significantly with PAT rising sharply to ₹58 Cr in FY25 from near breakeven levels earlier. Margins have expanded due to better operational efficiency and cost control. However, the textile business remains cyclical and sensitive to cotton prices and export demand.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 457, "fy24": 542, "fy25": 600 },
+      { "label": "EBITDA", "fy23": 31, "fy24": 90, "fy25": 151.9 },
+      { "label": "Operating Profit", "fy23": 31, "fy24": 90, "fy25": 151.9 },
+      { "label": "EBIT", "fy23": 10, "fy24": 45, "fy25": 105.9 },
+      { "label": "Profit Before Tax", "fy23": 1.31, "fy24": 4, "fy25": 65 },
+      { "label": "Net Profit / Loss", "fy23": 0.07, "fy24": 4, "fy25": 58 },
+      { "label": "EPS", "fy23": 0.01, "fy24": 0.51, "fy25": 2.89 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 6.78, "fy24": 16.61, "fy25": 25.32 },
+      { "label": "Net Profit Margin (%)", "fy23": 0.02, "fy24": 0.74, "fy25": 9.67 },
+      { "label": "EPS", "fy23": 0.01, "fy24": 0.51, "fy25": 2.89 }
+    ],
+
+    "investorInsight": [
+      "Significant margin expansion in FY25 indicates operational turnaround.",
+      "Revenue growth is steady but not aggressive.",
+      "Profitability improved sharply from near-zero base.",
+      "Textile industry cyclicality remains a key risk.",
+      "High P/E suggests valuations may be expensive relative to earnings."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 688, "fy24": 1048, "fy25": 1014 },
+      { "label": "CWIP", "fy23": 2, "fy24": 3.3, "fy25": 4 },
+      { "label": "Trade Receivables", "fy23": 50, "fy24": 50, "fy25": 46 },
+      { "label": "Inventory", "fy23": 104, "fy24": 124, "fy25": 127 },
+      { "label": "Other Assets", "fy23": 50, "fy24": 296.7, "fy25": 268 },
+      { "label": "Total Assets", "fy23": 893, "fy24": 1722, "fy25": 1658 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 88, "fy24": 78.6, "fy25": 200.58 },
+      { "label": "Reserves", "fy23": 446, "fy24": 700, "fy25": 679 },
+      { "label": "Borrowings", "fy23": 230, "fy24": 732, "fy25": 568 },
+      { "label": "Trade Payables", "fy23": 30, "fy24": 17, "fy25": 17 },
+      { "label": "Other Liabilities", "fy23": 99, "fy24": 194.4, "fy25": 195.42 },
+      { "label": "Total Liabilities", "fy23": 893, "fy24": 1722, "fy25": 1658 }
+    ],
+    "insights": "The balance sheet expanded significantly in FY24 due to higher fixed assets and borrowings. Debt levels remain moderate but increased during expansion. Asset-heavy nature reflects textile manufacturing requirements."
+  },
+
+  "liabilitiesBreakdown": "Borrowings form a significant portion of liabilities, indicating capital-intensive operations. Trade payables are relatively stable, while other liabilities have increased with expansion.",
+
+  "balanceSheetInsights": "The company has undergone expansion with increased asset base and borrowings. While profitability has improved, managing debt and maintaining asset efficiency will be important going forward.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy23": 76.5, "fy24": 84, "fy25": 59 },
+      { "label": "Investing Cash Flow", "fy23": 8.6, "fy24": -8.7, "fy25": 137 },
+      { "label": "Financing Cash Flow", "fy23": -85.3, "fy24": 3, "fy25": -223 }
+    ],
+    "insights": [
+      "Strong operating cash flow indicates healthy core operations.",
+      "Investing cash flow fluctuates due to asset sales and investments.",
+      "Negative financing cash flow suggests repayment or reduced borrowing.",
+      "Overall liquidity position appears stable."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is part of the LNJ Bhilwara Group, which has decades of experience in textiles and industrial businesses, providing strategic and operational stability.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Maheshwari Datamatics",
+    "website": ""
+  },
+
+  "managementInsight": "Backed by an established industrial group, the company benefits from strong governance and industry expertise. Execution and cost efficiency will remain key drivers of performance.",
+
+  "faq": [
+    {
+      "question": "What does Maharaja Shree Umaid Mills do?",
+      "answer": "It manufactures yarn, denim, and textile products for domestic and export markets."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, profitability has improved significantly in FY25 after low earnings in earlier years."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "Textile industry cyclicality, raw material price fluctuations, and export demand variability."
+    },
+    {
+      "question": "Is the company growing?",
+      "answer": "Yes, revenue is growing steadily and margins have expanded sharply."
+    },
+    {
+      "question": "Is valuation high?",
+      "answer": "Yes, with a high P/E ratio (~46), the stock appears expensive relative to earnings."
+    }
+  ]
+},
+ {
+  "id": 89,
+  "name": "Maharashtra Knowledge Corporation Limited (MKCL)",
+  "price": 544,
+  "logo": "/images/preipo/image87.png",
+
+  "overview": "Maharashtra Knowledge Corporation Limited (MKCL) is a government-promoted public-private partnership focused on digital education, e-learning, and skill development. Established in 2001 by the Government of Maharashtra, MKCL operates through a vast network of authorized learning centers across India. The company provides IT literacy programs, digital learning solutions, online examination systems, and e-governance services. With a strong presence in education technology and government-backed initiatives, MKCL plays a key role in bridging the digital skills gap in India.",
+
+  "products": [
+    "IT Literacy Programs (MS-CIT)",
+    "E-Learning Solutions",
+    "Online Examination Systems",
+    "Skill Development Programs",
+    "Digital Education Platforms"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Government Institutions",
+    "Students & Learners",
+    "Educational Institutes",
+    "Corporate Training Programs"
+  ],
+
+  "shareDetails": {
+    "companyName": "Maharashtra Knowledge Corporation Limited",
+    "indicativeUnlistedSharePrice": "₹435",
+    "marketCapitalization": "₹351 Cr",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹485",
+    "52WeekLow": "₹435",
+    "faceValue": "₹10",
+    "bookValue": "₹772.36",
+    "peRatio": "10.98",
+    "pbRatio": "0.56",
+    "debtToEquity": "0",
+    "returnOnEquity": "5.21%",
+    "totalOutstandingShares": "80,08,795",
+    "isin": "INE0SRK01016",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image87.png"
+    "pan": "AACCM8297L",
+    "cin": "U80302PN2001PLC153648",
+    "rta": "Alankit Assignments"
   },
-  {
-    "id": 90,
-    "name": "Manipal Payment & Identity Solutions Ltd (Manipal Cards)",
-    "price": 544,
+
+  "financials": {
+    "annualReportSummary": "MKCL has demonstrated steady revenue growth from ₹120 Cr in FY22 to ₹276 Cr in FY25. Profitability remains strong with PAT consistently high, though margins have moderated in recent years. The company maintains a debt-free balance sheet with strong reserves, making it financially stable. However, return ratios remain moderate, indicating scope for better capital efficiency.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 120, "fy23": 177, "fy24": 235, "fy25": 276 },
+      { "label": "EBITDA", "fy22": 19.2, "fy23": 41, "fy24": 42, "fy25": 46 },
+      { "label": "Operating Profit", "fy22": 19.2, "fy23": 41, "fy24": 42, "fy25": 46 },
+      { "label": "EBIT", "fy22": 16.6, "fy23": 36, "fy24": 35.7, "fy25": 40.22 },
+      { "label": "Profit Before Tax", "fy22": 47, "fy23": 65, "fy24": 86, "fy25": 84 },
+      { "label": "Net Profit / Loss", "fy22": 37.8, "fy23": 51, "fy24": 63, "fy25": 32 },
+      { "label": "EPS", "fy22": 47.25, "fy23": 63.75, "fy24": 77.97, "fy25": 39.6 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 16, "fy23": 23.16, "fy24": 17.87, "fy25": 16.67 },
+      { "label": "Net Profit Margin (%)", "fy22": 31.5, "fy23": 28.81, "fy24": 26.81, "fy25": 11.59 },
+      { "label": "EPS", "fy22": 47.25, "fy23": 63.75, "fy24": 77.97, "fy25": 39.6 }
+    ],
+
+    "investorInsight": [
+      "Consistent revenue growth backed by government-linked business model.",
+      "High margins historically, though declining in recent year.",
+      "Debt-free company with strong financial stability.",
+      "Low P/B ratio suggests potential undervaluation.",
+      "ROE is moderate, indicating capital efficiency can improve."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 13.7, "fy23": 16, "fy24": 16, "fy25": 15 },
+      { "label": "CWIP", "fy22": 0.3, "fy23": 0, "fy24": 0.18, "fy25": 0 },
+      { "label": "Investments", "fy22": 178.6, "fy23": 220, "fy24": 269, "fy25": 479 },
+      { "label": "Trade Receivables", "fy22": 5.2, "fy23": 37, "fy24": 41, "fy25": 57 },
+      { "label": "Inventory", "fy22": 0, "fy23": 4, "fy24": 4.6, "fy25": 4 },
+      { "label": "Other Assets", "fy22": 272.8, "fy23": 306, "fy24": 376.22, "fy25": 180 },
+      { "label": "Total Assets", "fy22": 517.8, "fy23": 583, "fy24": 687, "fy25": 735 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 8, "fy23": 8, "fy24": 8.08, "fy25": 8.08 },
+      { "label": "Reserves", "fy22": 462, "fy23": 512, "fy24": 574, "fy25": 606 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 9, "fy23": 16, "fy24": 19.5, "fy25": 67.5 },
+      { "label": "Other Liabilities", "fy22": 38.9, "fy23": 47, "fy24": 83.92, "fy25": 53.42 },
+      { "label": "Total Liabilities", "fy22": 517.9, "fy23": 583, "fy24": 687, "fy25": 735 }
+    ],
+    "insights": "MKCL has a strong balance sheet with zero debt and large reserves. Investments form a major portion of assets, indicating surplus capital deployment. Financial stability is a key strength."
+  },
+
+  "liabilitiesBreakdown": "The company has negligible debt and liabilities are mainly operational, making it financially low-risk.",
+
+  "balanceSheetInsights": "MKCL stands out as a debt-free company with strong reserves and high asset base. However, capital efficiency remains moderate given the large investment base.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": -5.8, "fy23": 51, "fy24": 83, "fy25": -36 },
+      { "label": "Investing Cash Flow", "fy22": -6.9, "fy23": -43, "fy24": -67, "fy25": 47 },
+      { "label": "Financing Cash Flow", "fy22": -1, "fy23": -3, "fy24": -3, "fy25": -4 }
+    ],
+    "insights": [
+      "Operating cash flow is volatile across years.",
+      "Significant investments indicate capital deployment strategy.",
+      "No reliance on debt financing.",
+      "Cash flow inconsistency is a key concern."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "Promoted by the Government of Maharashtra along with private stakeholders, MKCL benefits from strong institutional backing and credibility.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Alankit Assignments",
+    "website": "https://www.alankit.com/"
+  },
+
+  "managementInsight": "The company benefits from a government-backed model and strong execution in digital education. Future growth depends on scaling digital platforms and improving capital efficiency.",
+
+  "faq": [
+    {
+      "question": "What does MKCL do?",
+      "answer": "MKCL provides digital education, IT literacy, and e-learning solutions across India."
+    },
+    {
+      "question": "Is MKCL profitable?",
+      "answer": "Yes, it has consistently generated profits with strong margins historically."
+    },
+    {
+      "question": "Is MKCL debt-free?",
+      "answer": "Yes, the company has zero debt, making it financially strong."
+    },
+    {
+      "question": "Why is P/B ratio low?",
+      "answer": "Despite strong reserves, market valuation is relatively low, indicating possible undervaluation."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "Declining margins, moderate ROE, and inconsistent cash flow are key risks."
+    }
+  ]
+},
+ {
+  "id": 90,
+  "name": "Manipal Payment & Identity Solutions Ltd (Manipal Cards)",
+  "price": 544,
+  "logo": "/images/preipo/image88.png",
+
+  "overview": "Manipal Payment & Identity Solutions Ltd (MPISL), part of the Manipal Group, is one of India’s leading providers of secure payment and identity solutions. The company specializes in manufacturing smart cards, banking cards, SIM cards, RFID solutions, and secure identity documents. It serves banks, telecom operators, government institutions, and enterprises, enabling secure digital transactions and identity verification. With India’s increasing push towards digital payments, fintech adoption, and identity security, MPISL is well-positioned in a high-growth segment.",
+
+  "products": [
+    "Debit & Credit Cards",
+    "Smart Cards",
+    "SIM Cards",
+    "RFID Solutions",
+    "Secure Identity Documents"
+  ],
+
+  "manufacturingUnits": [
+    "India (multiple secure manufacturing facilities)"
+  ],
+
+  "clients": [
+    "Banks & Financial Institutions",
+    "Telecom Companies",
+    "Government Agencies",
+    "Enterprise Clients"
+  ],
+
+  "shareDetails": {
+    "companyName": "Manipal Payment & Identity Solutions Ltd",
+    "indicativeUnlistedSharePrice": "₹398",
+    "marketCapitalization": "₹8850 Cr",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹475",
+    "52WeekLow": "₹398",
+    "faceValue": "₹2",
+    "bookValue": "₹13.77",
+    "peRatio": "31.39",
+    "pbRatio": "28.9",
+    "debtToEquity": "1.55",
+    "returnOnEquity": "92.67%",
+    "totalOutstandingShares": "22,23,65,000",
+    "isin": "INE414U01020",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image88.png"
+    "pan": "AAACM4068E",
+    "cin": "U72900KA2008PLC045316",
+    "rta": "MUFG Intime India"
   },
+
+  "financials": {
+    "annualReportSummary": "MPISL has demonstrated strong growth with revenue increasing from ₹902 Cr in FY23 to ₹1256 Cr in FY25. Profitability has also improved significantly with PAT rising from ₹118 Cr to ₹282 Cr. Margins are healthy and expanding, supported by strong demand in digital payments and secure identity solutions. The company exhibits high return ratios, although leverage remains elevated.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 902, "fy24": 1248, "fy25": 1256 },
+      { "label": "EBITDA", "fy23": 160, "fy24": 336, "fy25": 387 },
+      { "label": "Operating Profit", "fy23": 160, "fy24": 336, "fy25": 387 },
+      { "label": "EBIT", "fy23": 125, "fy24": 301, "fy25": 332 },
+      { "label": "Profit Before Tax", "fy23": 132, "fy24": 300, "fy25": 354 },
+      { "label": "Net Profit / Loss", "fy23": 118, "fy24": 249, "fy25": 282 },
+      { "label": "EPS", "fy23": 28.53, "fy24": 12.04, "fy25": 13.66 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 17.34, "fy24": 26.92, "fy25": 30.81 },
+      { "label": "Net Profit Margin (%)", "fy23": 13.08, "fy24": 19.95, "fy25": 22.45 },
+      { "label": "EPS", "fy23": 28.53, "fy24": 12.04, "fy25": 13.66 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue and profit growth driven by digital payments expansion.",
+      "High ROE (~92%) indicates excellent capital efficiency.",
+      "Margins are improving significantly, reflecting scale benefits.",
+      "High P/B ratio suggests premium valuation.",
+      "Debt levels are elevated and should be monitored."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 111, "fy24": 94, "fy25": 116 },
+      { "label": "CWIP", "fy23": 0.1, "fy24": 4, "fy25": 12 },
+      { "label": "Investments", "fy23": 0, "fy24": 0, "fy25": 7.2 },
+      { "label": "Trade Receivables", "fy23": 153, "fy24": 119, "fy25": 139 },
+      { "label": "Inventory", "fy23": 142, "fy24": 112, "fy25": 109 },
+      { "label": "Other Assets", "fy23": 206.9, "fy24": 774, "fy25": 882 },
+      { "label": "Total Assets", "fy23": 613, "fy24": 1103, "fy25": 1410 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 413.6, "fy24": 413.6, "fy25": 413 },
+      { "label": "Reserves", "fy23": -134, "fy24": 48, "fy25": 263 },
+      { "label": "Borrowings", "fy23": 97, "fy24": 449, "fy25": 473 },
+      { "label": "Trade Payables", "fy23": 131, "fy24": 89, "fy25": 92 },
+      { "label": "Other Liabilities", "fy23": 477.64, "fy24": 475.64, "fy25": 540.7 },
+      { "label": "Total Liabilities", "fy23": 613, "fy24": 1103, "fy25": 1410 }
+    ],
+    "insights": "The balance sheet shows rapid expansion with significant increase in assets and borrowings. While reserves have turned positive, leverage has increased, indicating aggressive growth strategy."
+  },
+
+  "liabilitiesBreakdown": "Borrowings and other liabilities form a significant portion of total liabilities, reflecting leveraged growth.",
+
+  "balanceSheetInsights": "MPISL is scaling rapidly but with increased leverage. Strong profitability supports growth, but debt levels need monitoring to maintain financial stability.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy23": 43, "fy24": 309, "fy25": 284 },
+      { "label": "Investing Cash Flow", "fy23": 7, "fy24": -76, "fy25": -588 },
+      { "label": "Financing Cash Flow", "fy23": -46, "fy24": 267, "fy25": -173 }
+    ],
+    "insights": [
+      "Strong operating cash flow reflects solid core business performance.",
+      "Heavy investing cash outflows indicate expansion and capex.",
+      "Financing cash flow fluctuates due to borrowings and repayments.",
+      "Overall growth is capital-intensive but supported by cash generation."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is part of the Manipal Group, a well-established conglomerate with strong presence in financial services, healthcare, and education.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "MUFG Intime India",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+  "managementInsight": "Backed by a reputed group, the company is strategically positioned in digital payments and identity solutions. Continued investment in technology and capacity expansion will drive long-term growth.",
+
+  "faq": [
+    {
+      "question": "What does Manipal Payment & Identity Solutions do?",
+      "answer": "It provides smart cards, payment cards, SIM cards, and secure identity solutions."
+    },
+    {
+      "question": "Is the company growing?",
+      "answer": "Yes, revenue and profits have grown strongly over recent years."
+    },
+    {
+      "question": "What makes it attractive?",
+      "answer": "High ROE, strong margins, and exposure to digital payments growth."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "High valuation (P/B ~29) and increasing debt levels."
+    },
+    {
+      "question": "Is it a good investment?",
+      "answer": "It is a high-growth company but comes with premium valuation and leverage risk."
+    }
+  ]
+},
   {
-    "id": 91,
-    "name": "Manjushree Technopack India Limited Unlisted Shares",
-    "price": 1282,
+  "id": 91,
+  "name": "Manjushree Technopack India Limited",
+  "price": 1282,
+  "logo": "/images/preipo/Manjushree.png",
+
+  "overview": "Manjushree Technopack India Limited is a leading rigid plastic packaging company in India, catering to industries such as FMCG, food & beverages, pharmaceuticals, and personal care. With over four decades of experience, the company specializes in injection molding, blow molding, and PET preforms manufacturing. It operates multiple manufacturing facilities across India and serves large multinational clients. The company has positioned itself as a key packaging solutions provider, benefiting from increasing demand for packaged goods and consumption growth.",
+
+  "products": [
+    "PET Preforms",
+    "Rigid Plastic Packaging",
+    "Injection Molded Containers",
+    "Blow Molded Bottles",
+    "Specialty Packaging Solutions"
+  ],
+
+  "manufacturingUnits": [
+    "Multiple plants across India"
+  ],
+
+  "clients": [
+    "FMCG Companies",
+    "Food & Beverage Brands",
+    "Pharmaceutical Companies",
+    "Personal Care Brands"
+  ],
+
+  "shareDetails": {
+    "companyName": "Manjushree Technopack India Limited",
+    "indicativeUnlistedSharePrice": "₹975",
+    "marketCapitalization": "₹8365 Cr",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹1050",
+    "52WeekLow": "₹895",
+    "faceValue": "₹2",
+    "bookValue": "₹166.63",
+    "peRatio": "31.58",
+    "pbRatio": "5.85",
+    "debtToEquity": "0.68",
+    "returnOnEquity": "18.55%",
+    "totalOutstandingShares": "85,83,980",
+    "isin": "INE635H01023",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/Manjushree.png"
+    "pan": "AAACM9418K",
+    "cin": "U67120KA1997PLC023636",
+    "rta": "Integrated Registry Management Services"
   },
-  {
-    "id": 92,
-    "name": "Market Simplified Unlisted Shares Price",
-    "price": 43,
+
+  "financials": {
+    "annualReportSummary": "Manjushree Technopack has shown steady revenue growth from ₹1467.5 Cr in FY22 to ₹2570 Cr in FY25. EBITDA and profitability have also improved, although margins remain relatively stable. PAT increased significantly to ₹261 Cr in FY25. The company demonstrates strong scalability and benefits from growing demand in the packaging sector, although margin expansion is moderate due to raw material costs.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1467.5, "fy23": 2097, "fy24": 2117, "fy25": 2570 },
+      { "label": "EBITDA", "fy22": 268.8, "fy23": 293, "fy24": 374, "fy25": 397 },
+      { "label": "Operating Profit", "fy22": 268.8, "fy23": 293, "fy24": 374, "fy25": 397 },
+      { "label": "EBIT", "fy22": 150.8, "fy23": 160, "fy24": 219, "fy25": 198 },
+      { "label": "Profit Before Tax", "fy22": 101.4, "fy23": 91, "fy24": 161, "fy25": 284 },
+      { "label": "Net Profit / Loss", "fy22": 70.8, "fy23": 59, "fy24": 141, "fy25": 261 },
+      { "label": "EPS", "fy22": 51.68, "fy23": 43.07, "fy24": 102.84, "fy25": 30.58 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 18.34, "fy23": 13.97, "fy24": 17.67, "fy25": 15.45 },
+      { "label": "Net Profit Margin (%)", "fy22": 4.82, "fy23": 2.81, "fy24": 6.66, "fy25": 10.31 },
+      { "label": "EPS", "fy22": 51.68, "fy23": 43.07, "fy24": 102.84, "fy25": 30.58 }
+    ],
+
+    "investorInsight": [
+      "Strong revenue growth driven by packaging demand across FMCG and consumer sectors.",
+      "Margins are stable but not expanding significantly due to raw material cost pressures.",
+      "Improvement in PAT indicates better operational efficiency.",
+      "ROE of ~18.5% reflects good capital efficiency.",
+      "Business benefits from long-term consumption growth trends."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 699, "fy23": 975, "fy24": 937, "fy25": 1363 },
+      { "label": "CWIP", "fy22": 38, "fy23": 20, "fy24": 55, "fy25": 41 },
+      { "label": "Investments", "fy22": 35, "fy23": 16, "fy24": 20, "fy25": 22 },
+      { "label": "Trade Receivables", "fy22": 249.8, "fy23": 310, "fy24": 301, "fy25": 422 },
+      { "label": "Inventory", "fy22": 350.8, "fy23": 352, "fy24": 354, "fy25": 533 },
+      { "label": "Other Assets", "fy22": 622.8, "fy23": 925, "fy24": 627, "fy25": 802 },
+      { "label": "Total Assets", "fy22": 1995.4, "fy23": 2298, "fy24": 2294, "fy25": 3205 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 13.7, "fy23": 13.7, "fy24": 13.71, "fy25": 17.33 },
+      { "label": "Reserves", "fy22": 887, "fy23": 937, "fy24": 994, "fy25": 1411 },
+      { "label": "Borrowings", "fy22": 674, "fy23": 805, "fy24": 756, "fy25": 973 },
+      { "label": "Trade Payables", "fy22": 235, "fy23": 268, "fy24": 276, "fy25": 408 },
+      { "label": "Other Liabilities", "fy22": 185.7, "fy23": 274.3, "fy24": 256.29, "fy25": 395.67 },
+      { "label": "Total Liabilities", "fy22": 1995.4, "fy23": 2298, "fy24": 2294, "fy25": 3205 }
+    ],
+    "insights": "The balance sheet shows consistent expansion with rising assets and borrowings. Working capital requirements are high due to inventory and receivables. Leverage is moderate and manageable."
+  },
+
+  "liabilitiesBreakdown": "Borrowings and trade payables contribute significantly to liabilities, reflecting working capital-intensive operations.",
+
+  "balanceSheetInsights": "The company is scaling operations with increasing asset base. While leverage is manageable, working capital efficiency will be key for sustained growth.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 244.4, "fy23": 345.3, "fy24": 352, "fy25": 344 },
+      { "label": "Investing Cash Flow", "fy22": -611.6, "fy23": -380, "fy24": -149, "fy25": -738 },
+      { "label": "Financing Cash Flow", "fy22": 368.3, "fy23": 35, "fy24": -257, "fy25": 483 }
+    ],
+    "insights": [
+      "Strong and consistent operating cash flow generation.",
+      "High investing outflows indicate aggressive expansion.",
+      "Financing cash flow fluctuates with borrowing needs.",
+      "Overall business generates healthy cash despite capital intensity."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is backed by private equity investors and experienced management with deep expertise in packaging and manufacturing sectors.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Integrated Registry Management Services",
+    "website": "https://www.integratedregistry.in/"
+  },
+
+  "managementInsight": "Management focuses on scaling operations, improving efficiencies, and expanding client base. Long-term growth is aligned with consumption trends in India.",
+
+  "faq": [
+    {
+      "question": "What does Manjushree Technopack do?",
+      "answer": "It manufactures rigid plastic packaging products for FMCG, pharma, and food industries."
+    },
+    {
+      "question": "Is the company growing?",
+      "answer": "Yes, revenue and profits have grown steadily over the years."
+    },
+    {
+      "question": "What are the strengths?",
+      "answer": "Strong client base, scalable business model, and consistent cash flow."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "Raw material price volatility and working capital intensity."
+    },
+    {
+      "question": "Is it a good investment?",
+      "answer": "It is a stable growth company benefiting from consumption trends, but valuation should be considered."
+    }
+  ]
+},
+ {
+  "id": 92,
+  "name": "Market Simplified",
+  "price": 28,
+  "logo": "/images/preipo/image90.jpg",
+
+  "overview": "Market Simplified is a digital engineering and fintech solutions company that provides trading, analytics, and investment platforms to financial institutions. The company focuses on delivering scalable digital transformation solutions, including wealth management platforms, trading applications, and API-driven financial infrastructure. It serves banks, brokers, and fintech firms, positioning itself in the growing financial digitization and capital markets technology space.",
+
+  "products": [
+    "Trading Platforms",
+    "Wealth Management Solutions",
+    "Digital Transformation Services",
+    "API & Fintech Infrastructure",
+    "Data Analytics & Visualization"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Banks",
+    "Brokerage Firms",
+    "Fintech Companies",
+    "Wealth Management Firms"
+  ],
+
+  "shareDetails": {
+    "companyName": "Market Simplified",
+    "indicativeUnlistedSharePrice": "₹28",
+    "marketCapitalization": "₹59.88 Cr",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹36",
+    "52WeekLow": "₹28",
+    "faceValue": "₹10",
+    "bookValue": "₹21.02",
+    "peRatio": "37.84",
+    "pbRatio": "1.33",
+    "debtToEquity": "0.2",
+    "returnOnEquity": "3.54%",
+    "totalOutstandingShares": "2,13,89,000",
+    "isin": "INE673L01019",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image90.jpg"
+    "pan": "AAACM7411L",
+    "cin": "U72900TN2000PLC045869",
+    "rta": "BTS Consultancy Services"
   },
-  {
-    "id": 93,
-    "name": "Martin and Harris Laboratories Limited Unlisted Shares",
-    "price": 1188,
+
+  "financials": {
+    "annualReportSummary": "Market Simplified has shown revenue growth from ₹3412 lakh in FY21 to ₹4832 lakh in FY23. However, profitability has been volatile, with PAT declining from ₹327 lakh in FY22 to ₹159 lakh in FY23. Margins have compressed significantly, indicating cost pressures and scalability challenges. The business is in a competitive fintech space with moderate growth but inconsistent profitability.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy21": 3412, "fy22": 4308, "fy23": 4832 },
+      { "label": "EBITDA", "fy21": 545, "fy22": 608, "fy23": 268 },
+      { "label": "Operating Profit", "fy21": 545, "fy22": 608, "fy23": 268 },
+      { "label": "EBIT", "fy21": 299, "fy22": 336, "fy23": 128 },
+      { "label": "Profit Before Tax", "fy21": 298, "fy22": 382, "fy23": 146 },
+      { "label": "Net Profit / Loss", "fy21": 215, "fy22": 327, "fy23": 159 },
+      { "label": "EPS", "fy21": 1.43, "fy22": 1.97, "fy23": 0.74 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy21": 15.97, "fy22": 14.12, "fy23": 5.5 },
+      { "label": "Net Profit Margin (%)", "fy21": 6.3, "fy22": 7.59, "fy23": 3.29 },
+      { "label": "EPS", "fy21": 1.43, "fy22": 1.97, "fy23": 0.74 }
+    ],
+
+    "investorInsight": [
+      "Revenue growth is steady but not high-growth.",
+      "Margins have declined sharply, indicating cost pressure.",
+      "ROE is low (~3.5%), suggesting weak capital efficiency.",
+      "Operates in a competitive fintech and digital services market.",
+      "Scalability depends on client acquisition and product differentiation."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy21": 311, "fy22": 220, "fy23": 261 },
+      { "label": "CWIP", "fy21": 381, "fy22": 481, "fy23": 726 },
+      { "label": "Investments", "fy21": 1, "fy22": 0, "fy23": 0 },
+      { "label": "Trade Receivables", "fy21": 628, "fy22": 449, "fy23": 278 },
+      { "label": "Inventory", "fy21": 0, "fy22": 0, "fy23": 0 },
+      { "label": "Other Assets", "fy21": 1382, "fy22": 2112, "fy23": 3768 },
+      { "label": "Total Assets", "fy21": 2703, "fy22": 3262, "fy23": 5033 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy21": 1501.7, "fy22": 1657.9, "fy23": 2138.9 },
+      { "label": "Reserves", "fy21": 429, "fy22": 1136, "fy23": 2348 },
+      { "label": "Borrowings", "fy21": 146, "fy22": 41.8, "fy23": 18.5 },
+      { "label": "Trade Payables", "fy21": 128, "fy22": 95, "fy23": 85 },
+      { "label": "Other Liabilities", "fy21": 498.3, "fy22": 331.5, "fy23": 442.6 },
+      { "label": "Total Liabilities", "fy21": 2703, "fy22": 3262, "fy23": 5033 }
+    ],
+    "insights": "The balance sheet has expanded significantly due to equity infusion and asset growth. Borrowings are low, but rising equity base with low returns indicates inefficiency."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are largely equity-driven with minimal debt, reflecting low financial risk but also low return efficiency.",
+
+  "balanceSheetInsights": "The company has strong capital backing but struggles to generate proportional returns, leading to low ROE.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy21": 123, "fy22": -55, "fy23": 403 },
+      { "label": "Investing Cash Flow", "fy21": -149, "fy22": -269, "fy23": -401 },
+      { "label": "Financing Cash Flow", "fy21": 65, "fy22": 367, "fy23": 150 }
+    ],
+    "insights": [
+      "Operating cash flow is volatile but improved in FY23.",
+      "Continuous investment outflows indicate expansion.",
+      "Equity funding supports growth but dilutes returns.",
+      "Cash flow stability is still developing."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is led by professionals with expertise in fintech, digital engineering, and capital markets technology.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "BTS Consultancy Services",
+    "website": "https://www.btsindia.co.in/"
+  },
+
+  "managementInsight": "Management focuses on fintech platform development and digital transformation. Future growth depends on scaling client base and improving margins.",
+
+  "faq": [
+    {
+      "question": "What does Market Simplified do?",
+      "answer": "It provides fintech platforms, trading systems, and digital transformation solutions for financial institutions."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, but profitability is inconsistent and margins have declined recently."
+    },
+    {
+      "question": "What are the key strengths?",
+      "answer": "Strong presence in fintech solutions and growing revenue base."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "Low ROE, declining margins, and high competition in fintech space."
+    },
+    {
+      "question": "Is it a good investment?",
+      "answer": "It is a moderate-risk company with growth potential but currently weak profitability metrics."
+    }
+  ]
+},
+ {
+  "id": 93,
+  "name": "Martin and Harris Laboratories Limited",
+  "price": 1188,
+  "logo": "/images/preipo/image91.jpg",
+
+  "overview": "Martin and Harris Laboratories Limited is a well-established pharmaceutical company and part of the Apeejay Group, one of India’s oldest business conglomerates. Incorporated in 1993 and headquartered in Gurgaon, the company specializes in the manufacturing of pharmaceutical formulations, medicinal chemicals, and botanical products. It operates as a vertically integrated biopharmaceutical company with capabilities in drug development, manufacturing, and distribution. The company also generates income through investment activities, including mutual funds and equity investments, providing diversification to its revenue streams. :contentReference[oaicite:0]{index=0}",
+
+  "products": [
+    "Pharmaceutical Formulations",
+    "Anti-bacterial Drugs",
+    "Cardiovascular Medicines",
+    "Hormonal & Fertility Products",
+    "Gastrointestinal & Pain Management Drugs",
+    "Botanical & Medicinal Chemicals"
+  ],
+
+  "manufacturingUnits": [
+    "Roorkee, Uttarakhand",
+    "Una, Himachal Pradesh"
+  ],
+
+  "clients": [
+    "Hospitals",
+    "Pharmaceutical Distributors",
+    "Healthcare Institutions",
+    "Domestic & International Pharma Companies"
+  ],
+
+  "shareDetails": {
+    "companyName": "Martin and Harris Laboratories Limited",
+    "indicativeUnlistedSharePrice": "₹1188",
+    "marketCapitalization": "₹340 Cr",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹1300",
+    "52WeekLow": "₹675",
+    "faceValue": "₹10",
+    "bookValue": "₹1794.25",
+    "peRatio": "5.12",
+    "pbRatio": "0.47",
+    "debtToEquity": "0.02",
+    "returnOnEquity": "9.39%",
+    "totalOutstandingShares": "39,96,040",
+    "isin": "INE03VV01015",
     "depository": "NSDL Only",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image91.jpg"
+    "pan": "AABCM0832A",
+    "cin": "U24239HR1993PLC033630",
+    "rta": "RCMC Share Registry Pvt. Ltd."
   },
+
+  "financials": {
+    "annualReportSummary": "Martin & Harris has shown fluctuating financial performance. Revenue declined from ₹205 Cr in FY23 to ₹146 Cr in FY24 before further dropping to ₹107 Cr in FY25. However, profitability rebounded sharply with PAT increasing to ₹66.4 Cr in FY25, driven by higher margins and other income. The company maintains strong margins but inconsistent revenue growth.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 186, "fy23": 205, "fy24": 146, "fy25": 107.4 },
+      { "label": "EBITDA", "fy22": 70, "fy23": 72, "fy24": 26, "fy25": 8.4 },
+      { "label": "Operating Profit", "fy22": 70, "fy23": 72, "fy24": 26, "fy25": 8.4 },
+      { "label": "EBIT", "fy22": 67, "fy23": 68, "fy24": 21, "fy25": 3.6 },
+      { "label": "Profit Before Tax", "fy22": 93, "fy23": 92, "fy24": 55, "fy25": 83 },
+      { "label": "Net Profit / Loss", "fy22": 70, "fy23": 68, "fy24": 40, "fy25": 66.4 },
+      { "label": "EPS", "fy22": 175.44, "fy23": 170.43, "fy24": 100.25, "fy25": 166.42 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 37.63, "fy23": 35.12, "fy24": 17.81, "fy25": 7.82 },
+      { "label": "Net Profit Margin (%)", "fy22": 37.63, "fy23": 33.17, "fy24": 27.4, "fy25": 61.82 },
+      { "label": "EPS", "fy22": 175.44, "fy23": 170.43, "fy24": 100.25, "fy25": 166.42 }
+    ],
+
+    "investorInsight": [
+      "Revenue trend is declining, which is a concern.",
+      "Profitability is supported by other income and investments.",
+      "Extremely high margins in FY25 indicate non-operating gains.",
+      "Low debt makes the company financially stable.",
+      "Valuation appears attractive with low P/E and P/B."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 13, "fy23": 15, "fy24": 18, "fy25": 50.7 },
+      { "label": "Investments", "fy22": 373, "fy23": 62, "fy24": 70, "fy25": 19 },
+      { "label": "Trade Receivables", "fy22": 0, "fy23": 1, "fy24": 3, "fy25": 34.5 },
+      { "label": "Inventory", "fy22": 24, "fy23": 19, "fy24": 0, "fy25": 44.3 },
+      { "label": "Other Assets", "fy22": 132.6, "fy23": 515, "fy24": 542, "fy25": 599 },
+      { "label": "Total Assets", "fy22": 543, "fy23": 615, "fy24": 662, "fy25": 749 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 3.99, "fy23": 3.99, "fy24": 3.99, "fy25": 3.99 },
+      { "label": "Reserves", "fy22": 523, "fy23": 589, "fy24": 628, "fy25": 703 },
+      { "label": "Borrowings", "fy22": 5, "fy23": 4, "fy24": 8, "fy25": 13 },
+      { "label": "Trade Payables", "fy22": 4, "fy23": 10, "fy24": 17, "fy25": 20.7 },
+      { "label": "Other Liabilities", "fy22": 7.01, "fy23": 8.01, "fy24": 5.01, "fy25": 8.31 },
+      { "label": "Total Liabilities", "fy22": 543, "fy23": 615, "fy24": 662, "fy25": 749 }
+    ],
+    "insights": "The company has a strong balance sheet with high reserves and minimal debt. Investments form a significant portion of assets, indicating reliance on non-core income streams."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are minimal and primarily consist of operational payables and small borrowings, reflecting low financial risk.",
+
+  "balanceSheetInsights": "Martin & Harris is capital-rich with strong reserves and low leverage, but asset allocation towards investments rather than core operations raises concerns on business focus.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": 152, "fy23": -344, "fy24": 19, "fy25": 273.8 },
+      { "label": "Investing Cash Flow", "fy22": -132, "fy23": 325.6, "fy24": -21, "fy25": -274 },
+      { "label": "Financing Cash Flow", "fy22": -0.7, "fy23": -21.51, "fy24": 1, "fy25": 3.1 }
+    ],
+    "insights": [
+      "Cash flow is volatile due to investment activity.",
+      "Strong operating cash flow recovery in FY25.",
+      "Investment-driven fluctuations dominate cash flow.",
+      "Low financing dependency indicates stability."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is part of the Apeejay Group and promoted by Sushma Paul Berlia along with experienced pharmaceutical industry professionals. :contentReference[oaicite:1]{index=1}",
+
+  "management": [
+    { "name": "Nasim Uddin", "role": "Director", "experience": "" },
+    { "name": "Ashok Chandra Sen", "role": "Director", "experience": "" },
+    { "name": "Shanker Laad Laxman", "role": "Director", "experience": "" }
+  ],
+
+  "rta": {
+    "registrar": "RCMC Share Registry Pvt. Ltd.",
+    "website": ""
+  },
+
+  "managementInsight": "The management benefits from strong legacy backing of the Apeejay Group. However, strategic focus appears split between pharma operations and investment income, which may impact long-term operational growth.",
+
+  "faq": [
+    {
+      "question": "What does Martin and Harris Laboratories do?",
+      "answer": "It manufactures pharmaceutical products and also earns income from investments like mutual funds and equities."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, but profits are partly driven by non-operating income rather than core pharma growth."
+    },
+    {
+      "question": "What are the key strengths?",
+      "answer": "Strong balance sheet, low debt, and backing of the Apeejay Group."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "Declining revenue trend and dependence on investment income."
+    },
+    {
+      "question": "Is it a good investment?",
+      "answer": "It appears undervalued but carries risk due to inconsistent core business performance."
+    }
+  ]
+},
   {
-    "id": 94,
-    "name": "Matrix Gas And Renewables Unlisted Shares",
-    "price": 38,
+  "id": 94,
+  "name": "Matrix Gas And Renewables Limited",
+  "price": 16,
+  "logo": "/images/preipo/image92.png",
+
+  "overview": "Matrix Gas and Renewables Limited is an emerging energy company focused on industrial gas supply and renewable energy solutions. The company operates in the growing clean energy and gas distribution space, supplying gases for industrial applications while also exploring renewable energy projects. With increasing demand for cleaner fuels and sustainable energy solutions in India, the company is positioning itself as a niche player in gas infrastructure and renewable energy integration.",
+
+  "products": [
+    "Industrial Gas Supply",
+    "Gas Distribution Solutions",
+    "Renewable Energy Projects",
+    "Energy Infrastructure Services"
+  ],
+
+  "manufacturingUnits": [],
+
+  "clients": [
+    "Manufacturing Companies",
+    "Industrial Units",
+    "Energy Sector Businesses"
+  ],
+
+  "shareDetails": {
+    "companyName": "Matrix Gas And Renewables Limited",
+    "indicativeUnlistedSharePrice": "₹16",
+    "marketCapitalization": "₹42 Cr",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹175",
+    "52WeekLow": "₹16",
+    "faceValue": "₹10",
+    "bookValue": "₹163.5",
+    "peRatio": "1.14",
+    "pbRatio": "0.1",
+    "debtToEquity": "0.06",
+    "returnOnEquity": "8.76%",
+    "totalOutstandingShares": "2,64,84,969",
+    "isin": "INE0O2I01010",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image92.png"
+    "pan": "AAHCC2058R",
+    "cin": "U74999GJ2018PLC101075",
+    "rta": "Link Intime"
   },
+
+  "financials": {
+    "annualReportSummary": "Matrix Gas has shown rapid revenue growth from near-zero operations in FY22 to ₹609 lakh in FY24, indicating early-stage scaling. Profitability has improved with PAT increasing to ₹37 lakh in FY24. However, the company remains small in scale with volatile margins and limited operating history.",
+
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 0.45, "fy23": 489, "fy24": 609 },
+      { "label": "EBITDA", "fy22": 0.41, "fy23": 44.5, "fy24": 48 },
+      { "label": "Operating Profit", "fy22": 0.41, "fy23": 44.5, "fy24": 48 },
+      { "label": "EBIT", "fy22": 0.41, "fy23": 44.5, "fy24": 48 },
+      { "label": "Profit Before Tax", "fy22": 0.12, "fy23": 43, "fy24": 50 },
+      { "label": "Net Profit / Loss", "fy22": 0.09, "fy23": 32, "fy24": 37 },
+      { "label": "EPS", "fy22": 9, "fy23": 11.85, "fy24": 13.99 }
+    ],
+
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 91.11, "fy23": 9.1, "fy24": 7.88 },
+      { "label": "Net Profit Margin (%)", "fy22": 20, "fy23": 6.54, "fy24": 6.08 },
+      { "label": "EPS", "fy22": 9, "fy23": 11.85, "fy24": 13.99 }
+    ],
+
+    "investorInsight": [
+      "Early-stage company with sharp revenue ramp-up.",
+      "Margins are stabilizing but remain relatively low.",
+      "Small scale business with limited track record.",
+      "Valuation appears extremely cheap (low P/E, P/B).",
+      "Growth potential exists but execution risk is high."
+    ]
+  },
+
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 0, "fy23": 0.07, "fy24": 0.49 },
+      { "label": "CWIP", "fy22": 4.5, "fy23": 4.5, "fy24": 4.5 },
+      { "label": "Investments", "fy22": 0, "fy23": 37, "fy24": 0 },
+      { "label": "Trade Receivables", "fy22": 0.02, "fy23": 2, "fy24": 20.3 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0, "fy24": 23 },
+      { "label": "Other Assets", "fy22": 17.58, "fy23": 41.63, "fy24": 330.71 },
+      { "label": "Total Assets", "fy22": 22.1, "fy23": 85, "fy24": 51 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 0.01, "fy23": 27, "fy24": 26.44 },
+      { "label": "Reserves", "fy22": 0.09, "fy23": 17, "fy24": 396 },
+      { "label": "Borrowings", "fy22": 22, "fy23": 29, "fy24": 20 },
+      { "label": "Trade Payables", "fy22": 0, "fy23": 0, "fy24": 70 },
+      { "label": "Other Liabilities", "fy22": 0, "fy23": 1, "fy24": 24.56 },
+      { "label": "Total Liabilities", "fy22": 22.1, "fy23": 85, "fy24": 51 }
+    ],
+    "insights": "The balance sheet reflects rapid changes due to scaling operations and capital infusion. High reserves growth suggests equity funding, while liabilities remain manageable."
+  },
+
+  "liabilitiesBreakdown": "Liabilities are moderate and include borrowings and trade payables, indicating growing operational scale.",
+
+  "balanceSheetInsights": "The company is transitioning from a small base to a scaling phase, with significant changes in reserves and working capital structure.",
+
+  "cashFlow": {
+    "data": [
+      { "label": "Operating Cash Flow", "fy22": -21.73, "fy23": -41, "fy24": -128 },
+      { "label": "Investing Cash Flow", "fy22": 0.15, "fy23": -36.41, "fy24": -9 },
+      { "label": "Financing Cash Flow", "fy22": 21.58, "fy23": 3.75, "fy24": 346 }
+    ],
+    "insights": [
+      "Operating cash flow is negative, indicating working capital pressure.",
+      "Financing cash flow is high due to capital infusion.",
+      "Business is still in early expansion stage.",
+      "Cash flow sustainability remains a key risk."
+    ]
+  },
+
+  "shareholding": [],
+
+  "promotersManagement": "The company is led by promoters with experience in industrial gas and energy sectors, focusing on scaling operations in clean energy and gas distribution.",
+
+  "management": [],
+
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://www.linkintime.co.in/"
+  },
+
+
+  "managementInsight": "Management is focused on growth and expansion in the clean energy sector, but execution capability and scalability will determine long-term success.",
+
+  "faq": [
+    {
+      "question": "What does Matrix Gas and Renewables do?",
+      "answer": "It provides industrial gas solutions and is expanding into renewable energy projects."
+    },
+    {
+      "question": "Is the company profitable?",
+      "answer": "Yes, but it is still small and in early growth stages."
+    },
+    {
+      "question": "Why is valuation so low?",
+      "answer": "Due to small size, limited history, and high risk despite growth potential."
+    },
+    {
+      "question": "What are the risks?",
+      "answer": "Negative cash flow, early-stage execution risk, and small scale operations."
+    },
+    {
+      "question": "Is it a good investment?",
+      "answer": "It is a high-risk, high-reward microcap suitable only for aggressive investors."
+    }
+  ]
+},
   {
     "id": 95,
     "name": "Maverick Simulation Solutions Limited",
