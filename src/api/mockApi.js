@@ -29467,122 +29467,1676 @@ The Indian hospitality sector is witnessing strong tailwinds from rising domesti
   "status": "upcoming"
 },
   {
-    "id": 112,
-    "name": "Otis Elevator (India) Limited Unlisted Shares",
-    "price": 4688,
+  "id": 112,
+  "name": "Otis Elevator (India) Limited",
+  "price": 3850,
+  "logo": "/images/preipo/image109.png",
+  "overview": "Otis Elevator Company (India) Limited, established in 1952, is a wholly-owned subsidiary of Otis Worldwide Corporation. It is a pioneer in the elevator and escalator industry in India. The company is engaged in the manufacture, installation, maintenance, and modernization of elevators, escalators, and moving walkways.",
+  "products": [
+    "Elevators",
+    "Escalators",
+    "Moving Walkways",
+    "Modernization & Maintenance Services"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in India"
+  ],
+  "clients": [
+    "Real Estate Developers",
+    "Commercial & Residential Buildings",
+    "Infrastructure Projects",
+    "Hospitals, Airports & Malls"
+  ],
+  "shareDetails": {
+    "companyName": "Otis Elevator (India) Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹3850",
+    "marketCapitalization": "₹4546 Crore",
+    "lotSize": "10 Shares",
+    "52WeekHigh": "₹4250",
+    "52WeekLow": "₹3875",
+    "faceValue": "₹10",
+    "bookValue": "316.75",
+    "peRatio": "23.8",
+    "pbRatio": "9.86",
+    "debtToEquity": "0",
+    "returnOnEquity": "41.8",
+    "totalOutstandingShares": "1180822",
+    "isin": "INE050D01013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image109.png"
+    "pan": "AAACO0481E",
+    "cin": "U29150MH1952PLC008918",
+    "rta": "Link Intime"
   },
+  "financials": {
+    "annualReportSummary": "Otis Elevator (India) has shown steady revenue growth with strong profitability. The company maintains a debt-free balance sheet and benefits from its leadership position in the Indian elevator and escalator market.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1947, "fy23": 2435, "fy24": 2771, "fy25": 3362.2 },
+      { "label": "EBITDA", "fy22": 919.71, "fy23": 202, "fy24": 255, "fy25": 192.0 },
+      { "label": "PBT", "fy22": 180, "fy23": 175, "fy24": 228, "fy25": 293.3 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 116.8, "fy23": 154, "fy24": 216, "fy25": 191 },
+      { "label": "EPS", "fy22": 123.82, "fy23": 130.4, "fy24": 177.82, "fy25": 161.73 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 9.71, "fy23": 8.3, "fy24": 9.2, "fy25": 8.1 },
+      { "label": "Net Profit Margin (%)", "fy22": 7.5, "fy23": 6.32, "fy24": 7.58, "fy25": 6.04 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 123.82, "fy23": 130.4, "fy24": 177.82, "fy25": 161.73 }
+    ],
+    "investorInsight": [
+      "Market leader in elevators and escalators in India.",
+      "Debt-free balance sheet.",
+      "Consistent revenue growth and strong margins.",
+      "Part of global Otis Worldwide Corporation."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 73, "fy23": 80, "fy24": 75, "fy25": 75 },
+      { "label": "CWIP", "fy22": 2.8, "fy23": 8.6, "fy24": 10, "fy25": 15.5 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy22": 420, "fy23": 455, "fy24": 475, "fy25": 587.6 },
+      { "label": "Inventory", "fy22": 267, "fy23": 284, "fy24": 228, "fy25": 280 },
+      { "label": "Other Assets", "fy22": 915.27, "fy23": 931, "fy24": 1112, "fy25": 1691.9 },
+      { "label": "Total Assets", "fy22": 1657.81, "fy23": 1758.8, "fy24": 1898, "fy25": 2410 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 11.81, "fy23": 11.81, "fy24": 11.81, "fy25": 11.81 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 225, "fy23": 207, "fy24": 257, "fy25": 449 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 400, "fy23": 530, "fy24": 535, "fy25": 597 },
+      { "label": "Other Liabilities", "fy22": 931, "fy23": 1008, "fy24": 1096.19, "fy25": 1352.19 },
+      { "label": "Total Liabilities", "fy22": 1657.81, "fy23": 1758.8, "fy24": 1898, "fy25": 2410 }
+    ],
+    "insights": "Debt-free company with strong reserves."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Healthy balance sheet with no borrowings and steady growth in assets.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 193.44, "fy23": 202, "fy24": 264, "fy25": 296.7 },
+      { "label": "Cash from Investing Activities", "fy22": -47.79, "fy23": -23, "fy24": -30, "fy25": -30 },
+      { "label": "Cash from Financing Activities", "fy22": -175, "fy23": -195, "fy24": -159, "fy25": -1.3 }
+    ],
+    "insights": [
+      "Strong and consistent operating cash flow.",
+      "Debt-free with regular dividend payouts."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "100% (Otis Worldwide Corporation)", "institutional": "N/A", "public": "N/A" }
+  ],
+  "promotersManagement": "Wholly owned subsidiary of Otis Worldwide Corporation (USA).",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on innovation in vertical transportation, modernization projects, and maintaining leadership in the Indian elevator and escalator market.",
+  "faq": [
+    {
+      "question": "How to buy Otis Elevator (India) Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Otis Elevator (India) Limited Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell Otis Elevator (India) Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Otis Elevator (India) Limited Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Otis Elevator (India) Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Otis Elevator (India) Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Otis Elevator (India) Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 113,
-    "name": "PNB Finance & Industries Limited Unlisted Shares",
-    "price": 14375,
+  "id": 113,
+  "name": "PNB Finance & Industries Limited",
+  "price": 8800,
+  "logo": "/images/preipo/image110.jpg",
+  "overview": "PNB Finance & Industries Limited is a renowned financial services company incorporated in 1930 under the name 'The Punjab National Bank Limited'. Over the years, the company has evolved and diversified its business operations, shifting from banking to a broader range of financial activities. Today it plays a prominent role in the Indian financial landscape.",
+  "products": [
+    "Investment Services",
+    "Financial Services",
+    "Other Financial Activities"
+  ],
+  "manufacturingUnits": [],
+  "clients": [],
+  "shareDetails": {
+    "companyName": "PNB Finance & Industries Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹8800",
+    "marketCapitalization": "₹2816 Crore",
+    "lotSize": "10 Shares",
+    "52WeekHigh": "₹8800",
+    "52WeekLow": "₹8800",
+    "faceValue": "₹10",
+    "bookValue": "10328.75",
+    "peRatio": "391.11",
+    "pbRatio": "0.85",
+    "debtToEquity": "0",
+    "returnOnEquity": "0.22",
+    "totalOutstandingShares": "320000",
+    "isin": "INE559F01013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image110.jpg"
+    "pan": "AAACN9266C",
+    "cin": "L65990DL1930PLC000137",
+    "rta": "Skyline Financial Services"
   },
+  "financials": {
+    "annualReportSummary": "PNB Finance & Industries Limited has shown strong growth in revenue and profitability in recent years. The company maintains a debt-free balance sheet with an exceptionally high book value per share.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 0, "fy24": 11, "fy25": 0 },
+      { "label": "EBITDA", "fy23": -2.7, "fy24": -1.6, "fy25": 1.86 },
+      { "label": "PBT", "fy23": -165.46, "fy24": 8.9, "fy25": 6.9 },
+      { "label": "Net Profit / Loss (PAT)", "fy23": -165.46, "fy24": 8.9, "fy25": 6.9 },
+      { "label": "EPS", "fy23": 18.94, "fy24": 22.5, "fy25": 22.5 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": "N/A", "fy24": "-165.45", "fy25": "N/A" },
+      { "label": "Net Profit Margin (%)", "fy23": "N/A", "fy24": "85.55", "fy25": "N/A" },
+      { "label": "Earning Per Share (Diluted)", "fy23": 18.94, "fy24": 22.5, "fy25": 22.5 }
+    ],
+    "investorInsight": [
+      "Extremely high book value per share (₹10,328).",
+      "Debt-free balance sheet.",
+      "Part of the Punjab National Bank legacy group.",
+      "High valuation due to asset-heavy balance sheet."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy23": 1920, "fy24": 2387, "fy25": 3797 },
+      { "label": "Trade Receivables", "fy23": 0, "fy24": 1, "fy25": 0 },
+      { "label": "Other Assets", "fy23": 17, "fy24": 16, "fy25": 18 },
+      { "label": "Total Assets", "fy23": 1937, "fy24": 3332, "fy25": 3815 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 3.2, "fy24": 3.2, "fy25": 3.2 },
+      { "label": "FV", "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy23": 1530, "fy24": 2626, "fy25": 3202 },
+      { "label": "Borrowings", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy23": 0.25, "fy24": 0.02, "fy25": 0.15 },
+      { "label": "Other Liabilities", "fy23": 403.55, "fy24": 702.78, "fy25": 509.65 },
+      { "label": "Total Liabilities", "fy23": 1937, "fy24": 3332, "fy25": 3815 }
+    ],
+    "insights": "Debt-free with massive reserves and investments."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Extremely strong equity base with very high book value. No borrowings.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy23": -4.36, "fy24": -4.18, "fy25": -1.66 },
+      { "label": "Cash from Investing Activities", "fy23": 6.47, "fy24": 5.06, "fy25": 1.62 },
+      { "label": "Cash from Financing Activities", "fy23": 0, "fy24": 0, "fy25": 0 }
+    ],
+    "insights": [
+      "Stable cash position.",
+      "Investment-driven cash flows."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Legacy financial services company with strong historical background.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Skyline Financial Services",
+    "website": "https://www.skylinerta.com/"
+  },
+  "managementInsight": "Focus on prudent financial management and investment activities.",
+  "faq": [
+    {
+      "question": "How to buy PNB Finance & Industries Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying PNB Finance & Industries Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell PNB Finance & Industries Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling PNB Finance & Industries Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of PNB Finance & Industries Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in PNB Finance & Industries Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying PNB Finance & Industries Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 114,
-    "name": "Parag Parikh Financial Advisory Services Ltd. (PPFAS)",
-    "price": 20313,
+  "id": 114,
+  "name": "Parag Parikh Financial Advisory Services Ltd. (PPFAS)",
+  "price": 1250,
+  "logo": "/images/preipo/image111.jpg",
+  "overview": "Parag Parikh Financial Advisory Services Ltd. (PPFAS) is a SEBI-registered Asset Management Company managing the Parag Parikh Mutual Fund. It is one of the most respected and consistent performing fund houses in India, known for its value-oriented, long-term investment philosophy and global diversification approach.",
+  "products": [
+    "Mutual Fund Schemes (Parag Parikh Flexi Cap, Parag Parikh Long Term Equity, etc.)",
+    "Investment Advisory Services",
+    "Portfolio Management"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Retail Investors",
+    "High Net Worth Individuals (HNIs)",
+    "Institutional Investors"
+  ],
+  "shareDetails": {
+    "companyName": "Parag Parikh Financial Advisory Services Ltd. (PPFAS) (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹1250",
+    "marketCapitalization": "₹10405 Crore",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹19000",
+    "52WeekLow": "₹8200",
+    "faceValue": "₹10",
+    "bookValue": "855.9",
+    "peRatio": "56.82",
+    "pbRatio": "1.46",
+    "debtToEquity": "0",
+    "returnOnEquity": "38.08",
+    "totalOutstandingShares": "7695876",
+    "isin": "INE630D01012",
     "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image111.jpg"
+    "pan": "AABCP9177F",
+    "cin": "U67190MH1992PLC069287",
+    "rta": "Link Intime"
   },
+  "financials": {
+    "annualReportSummary": "PPFAS has delivered exceptional growth in revenue and profitability driven by strong AUM growth and performance of its flagship schemes. The company maintains a debt-free balance sheet with very high profitability.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 89, "fy23": 166.8, "fy24": 212, "fy25": 429 },
+      { "label": "EBITDA", "fy22": 62.92, "fy23": 102.85, "fy24": 143.14, "fy25": 316.2 },
+      { "label": "PBT", "fy22": 55, "fy23": 103, "fy24": 136.2, "fy25": 316.6 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 39.42, "fy23": 78.47, "fy24": 101.17, "fy25": 267 },
+      { "label": "EPS", "fy22": 50.98, "fy23": 99.72, "fy24": 142.29, "fy25": 321.4 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 62.92, "fy23": 71.35, "fy24": 79.32, "fy25": 79.32 },
+      { "label": "Net Profit Margin (%)", "fy22": 45.82, "fy23": 92.91, "fy24": 51.67, "fy25": 57.58 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 50.98, "fy23": 99.72, "fy24": 142.29, "fy25": 321.4 }
+    ],
+    "investorInsight": [
+      "One of the most respected mutual fund houses in India.",
+      "Exceptional profitability and high ROE.",
+      "Debt-free balance sheet.",
+      "Strong brand and consistent performance."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 19, "fy23": 19.72, "fy24": 25, "fy25": 35 },
+      { "label": "Investments", "fy22": 96, "fy23": 168, "fy24": 263, "fy25": 605 },
+      { "label": "Trade Receivables", "fy22": 12, "fy23": 15.5, "fy24": 26, "fy25": 44 },
+      { "label": "Other Assets", "fy22": 4, "fy23": 5.33, "fy24": 7, "fy25": 17.8 },
+      { "label": "Total Assets", "fy22": 131, "fy23": 209, "fy24": 317, "fy25": 702 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 7.65, "fy23": 7.65, "fy24": 7.65, "fy25": 7.65 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 117, "fy23": 193, "fy24": 298, "fy25": 641 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Liabilities", "fy22": 6.35, "fy23": 7.35, "fy24": 10.35, "fy25": 51.81 },
+      { "label": "Total Liabilities", "fy22": 131, "fy23": 209, "fy24": 317, "fy25": 702 }
+    ],
+    "insights": "Debt-free with strong reserves and investment portfolio."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Extremely healthy and debt-free balance sheet with growing reserves.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 38.16, "fy23": 101.05, "fy24": 146.32, "fy25": 336 },
+      { "label": "Cash from Investing Activities", "fy22": -40.88, "fy23": -76.63, "fy24": -96.88, "fy25": -109.8 },
+      { "label": "Cash from Financing Activities", "fy22": -2.58, "fy23": 0.29, "fy24": -4.21, "fy25": -3.9 }
+    ],
+    "insights": [
+      "Strong operating cash generation.",
+      "Investments in growth and technology."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Parikh Family & Associates)", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Led by Rajeev Thakkar and the Parikh family with a strong value investing philosophy.",
+  "management": [
+    { "name": "Rajeev Thakkar", "role": "Chief Investment Officer", "experience": "25+ Years" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on long-term value investing, ethical practices, and delivering superior risk-adjusted returns to investors.",
+  "faq": [
+    {
+      "question": "How to buy Parag Parikh Financial Advisory Services Ltd. (PPFAS) Unlisted Shares?",
+      "answer": "Please find below the procedure for buying PPFAS Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell Parag Parikh Financial Advisory Services Ltd. (PPFAS) Unlisted Shares?",
+      "answer": "Please find below the procedure for selling PPFAS Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of PPFAS Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in PPFAS?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying PPFAS Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 115,
-    "name": "Parry Agro Industries Limited Unlisted Shares",
-    "price": 1500,
+  "id": 115,
+  "name": "Parry Agro Industries Limited",
+  "price": 1200,
+  "logo": "/images/preipo/image112.png",
+  "overview": "Parry Agro Industries Limited is one of the leading producers of CTC, Orthodox, Organic, and Green tea in India. It is a part of the Murugappa Group, which is among the most respected business conglomerates in India. The company operates multiple tea estates and processing facilities.",
+  "products": [
+    "CTC Tea",
+    "Orthodox Tea",
+    "Organic Tea",
+    "Green Tea"
+  ],
+  "manufacturingUnits": [
+    "Multiple Tea Estates and Factories in South India"
+  ],
+  "clients": [
+    "Tea Traders & Exporters",
+    "Domestic Buyers",
+    "International Markets"
+  ],
+  "shareDetails": {
+    "companyName": "Parry Agro Industries Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹1200",
+    "marketCapitalization": "₹451 Crore",
+    "lotSize": "25 Shares",
+    "52WeekHigh": "₹1200",
+    "52WeekLow": "₹1200",
+    "faceValue": "₹10",
+    "bookValue": "209.34",
+    "peRatio": "5.72",
+    "pbRatio": "5.73",
+    "debtToEquity": "0",
+    "returnOnEquity": "0.22",
+    "totalOutstandingShares": "3750816",
+    "isin": "INE592F01011",
     "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/image112.png"
+    "pan": "AABCP5414M",
+    "cin": "U01132TN2007PLC065800",
+    "rta": "KFin Technologies"
   },
-  {
-    "id": 116,
-    "name": "Paymate India Limited",
-    "price": 619,
+  "financials": {
+    "annualReportSummary": "Parry Agro Industries has shown stable revenue with improving profitability. The company benefits from its strong brand and the Murugappa Group's expertise in the agri-business sector.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 267, "fy23": 272, "fy24": 225, "fy25": 216 },
+      { "label": "EBITDA", "fy22": -4.85, "fy23": -4.17, "fy24": -6.87, "fy25": -0.83 },
+      { "label": "PBT", "fy22": -14, "fy23": -4.7, "fy24": -7, "fy25": 0.89 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -14, "fy23": -4, "fy24": -7.32, "fy25": -0.07 },
+      { "label": "EPS", "fy22": -37.33, "fy23": -10.67, "fy24": -20, "fy25": -0.45 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": "-1.82", "fy23": "-1.53", "fy24": "-3.05", "fy25": "-0.38" },
+      { "label": "Net Profit Margin (%)", "fy22": "-5.24", "fy23": "-1.47", "fy24": "-3.25", "fy25": "-0.03" },
+      { "label": "Earning Per Share (Diluted)", "fy22": -37.33, "fy23": -10.67, "fy24": -20, "fy25": -0.45 }
+    ],
+    "investorInsight": [
+      "Part of the reputed Murugappa Group.",
+      "Stable tea production business.",
+      "Debt-free balance sheet.",
+      "High book value per share."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 47, "fy23": 45, "fy24": 46, "fy25": 48 },
+      { "label": "CWIP", "fy22": 7.5, "fy23": 7, "fy24": 7, "fy25": 6 },
+      { "label": "Investments", "fy22": 19, "fy23": 21, "fy24": 16, "fy25": 16.5 },
+      { "label": "Trade Receivables", "fy22": 8, "fy23": 5, "fy24": 8, "fy25": 6.5 },
+      { "label": "Inventory", "fy22": 27, "fy23": 28, "fy24": 31, "fy25": 33 },
+      { "label": "Other Assets", "fy22": 21.5, "fy23": 19, "fy24": 12, "fy25": 11.5 },
+      { "label": "Total Assets", "fy22": 130, "fy23": 125, "fy24": 116, "fy25": 117 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 3.75, "fy23": 3.75, "fy24": 3.75, "fy25": 3.75 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 79, "fy23": 73, "fy24": 82, "fy25": 85 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 24, "fy23": 26, "fy24": 7, "fy25": 11.5 },
+      { "label": "Other Liabilities", "fy22": 23.25, "fy23": 22.25, "fy24": 23.25, "fy25": 16.75 },
+      { "label": "Total Liabilities", "fy22": 130, "fy23": 125, "fy24": 116, "fy25": 117 }
+    ],
+    "insights": "Debt-free with stable asset base."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Conservative and debt-free balance sheet.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -6, "fy23": 0.05, "fy24": 8.5, "fy25": -2.99 },
+      { "label": "Cash from Investing Activities", "fy22": 1, "fy23": 0.29, "fy24": 0.18, "fy25": -1.05 },
+      { "label": "Cash from Financing Activities", "fy22": -4.69, "fy23": -0.51, "fy24": -0.49, "fy25": -0.49 }
+    ],
+    "insights": [
+      "Stable cash position.",
+      "Low capex requirements."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Murugappa Group)", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Part of the prestigious Murugappa Group.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+  "managementInsight": "Focus on quality tea production, sustainable practices, and operational efficiency in the tea plantation business.",
+  "faq": [
+    {
+      "question": "How to buy Parry Agro Industries Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Parry Agro Industries Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Parry Agro Industries Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Parry Agro Industries Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Parry Agro Industries Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Parry Agro Industries Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Parry Agro Industries Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 116,
+  "name": "Paymate India Limited",
+  "price": 475,
+  "logo": "/images/preipo/Paymate.png",
+  "overview": "Paymate India Limited is a leading fintech company in the digital payments space. It is one of the foremost innovators in the Indian payment ecosystem, specializing in B2B payments, mass payouts, and digital payment solutions. The company provides comprehensive payment infrastructure and value-added services to businesses across India.",
+  "products": [
+    "Digital Payment Solutions",
+    "B2B Payments & Mass Payouts",
+    "Payment Gateway & API Integration",
+    "Vendor & Supplier Payments"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Businesses & Enterprises",
+    "E-commerce Platforms",
+    "SMEs & Startups"
+  ],
+  "shareDetails": {
+    "companyName": "Paymate India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹475",
+    "marketCapitalization": "₹2739.33 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹550",
+    "52WeekLow": "₹475",
+    "faceValue": "₹10",
+    "bookValue": "N/A",
+    "peRatio": "N/A",
+    "pbRatio": "154.32",
+    "debtToEquity": "0.21",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "57600000",
+    "isin": "Not Available",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/Paymate.png"
+    "pan": "AAACP9082Q",
+    "cin": "U72200MH2006PLC205023",
+    "rta": "Link Intime"
   },
-  {
-    "id": 117,
-    "name": "PharmEasy Unlisted Shares",
-    "price": 9,
+  "financials": {
+    "annualReportSummary": "Paymate India has shown strong revenue growth over the years. The company is focused on scaling its digital payment infrastructure and expanding its market presence in the fintech space.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy21": 348, "fy22": 1209, "fy23": 1350 },
+      { "label": "EBITDA", "fy21": -15, "fy22": -55, "fy23": -54 },
+      { "label": "PBT", "fy21": -16, "fy22": -58, "fy23": -56 },
+      { "label": "Net Profit / Loss (PAT)", "fy21": -16, "fy22": -58, "fy23": -58 },
+      { "label": "EPS", "fy21": -0.01, "fy22": -0.01, "fy23": -0.01 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy21": -4.31, "fy22": -4.55, "fy23": -4 },
+      { "label": "Net Profit Margin (%)", "fy21": -4.6, "fy22": -4.8, "fy23": -4.3 },
+      { "label": "Earning Per Share (Diluted)", "fy21": -0.01, "fy22": -0.01, "fy23": -0.01 }
+    ],
+    "investorInsight": [
+      "Strong revenue growth in digital payments sector.",
+      "Focus on B2B payments and mass payouts.",
+      "Key player in India's fintech ecosystem."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy21": 5, "fy22": 3, "fy23": 2 },
+      { "label": "Investments", "fy21": 0, "fy22": 0, "fy23": 0 },
+      { "label": "Trade Receivables", "fy21": 28, "fy22": 6, "fy23": 0.5 },
+      { "label": "Other Assets", "fy21": 24, "fy22": 52, "fy23": 57.5 },
+      { "label": "Total Assets", "fy21": 57, "fy22": 81, "fy23": 60 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy21": 161.4, "fy22": 5.76, "fy23": 7.767 },
+      { "label": "FV", "fy21": 1, "fy22": 1, "fy23": 1 },
+      { "label": "Reserves", "fy21": -122, "fy22": 40, "fy23": 11 },
+      { "label": "Borrowings", "fy21": 0, "fy22": 0, "fy23": 3.5 },
+      { "label": "Other Liabilities", "fy21": 6.6, "fy22": 12.4, "fy23": 18.9 },
+      { "label": "Total Liabilities", "fy21": 57, "fy22": 81, "fy23": 60 }
+    ],
+    "insights": "Debt to Equity ratio of 0.21."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.21.",
+  "balanceSheetInsights": "Lean balance sheet with focus on receivables and other current assets.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy21": 4.98, "fy22": -0.62, "fy23": -13.5 },
+      { "label": "Cash from Investing Activities", "fy21": 0.38, "fy22": 0.8, "fy23": 0.2 },
+      { "label": "Cash from Financing Activities", "fy21": -6.58, "fy22": 0.82, "fy23": 12.1 }
+    ],
+    "insights": [
+      "Fluctuating cash flows typical for fintech/growth stage company.",
+      "Funded through equity and operational adjustments."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Professionally managed fintech company with strong focus on digital payments innovation.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on revolutionizing B2B payments, mass payouts, and building robust digital payment infrastructure in India.",
+  "faq": [
+    {
+      "question": "How to buy Paymate India Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Paymate India Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Paymate India Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Paymate India Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Paymate India Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Paymate India Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Paymate India Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 117,
+  "name": "PharmEasy",
+  "price": 6.25,
+  "logo": "/images/preipo/image114.png",
+  "overview": "PharmEasy is India's leading digital healthcare platform. It provides information, consultations, diagnostic tests, medicines, healthcare packages, and more from registered and trusted pharmacies, leading diagnostic laboratories, and trusted doctors across India. The company started in 2015 with the mission to make healthcare accessible, affordable, and transparent.",
+  "products": [
+    "Online Medicine Delivery",
+    "Diagnostic Tests & Lab Services",
+    "Doctor Consultations",
+    "Healthcare Packages",
+    "Digital Health Records"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Retail Customers",
+    "Patients across India"
+  ],
+  "shareDetails": {
+    "companyName": "PharmEasy (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹6.25",
+    "marketCapitalization": "₹10445 Crore",
+    "lotSize": "5000 Shares",
+    "52WeekHigh": "₹5008",
+    "52WeekLow": "₹6.25",
+    "faceValue": "₹10",
+    "bookValue": "1.52",
+    "peRatio": "N/A",
+    "pbRatio": "3.26",
+    "debtToEquity": "0.62",
+    "returnOnEquity": "-48.05",
+    "totalOutstandingShares": "167032304",
+    "isin": "Not Available",
     "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image114.png"
+    "pan": "AADCP201E",
+    "cin": "U85100MH2015PLC266025",
+    "rta": "Link Intime"
   },
-  {
-    "id": 118,
-    "name": "Polymatech Unlisted Shares",
-    "price": 88,
+  "financials": {
+    "annualReportSummary": "PharmEasy has shown massive revenue growth but continues to incur losses due to heavy investments in expansion, technology, and market share acquisition in the highly competitive digital pharmacy sector.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 5729, "fy23": 5864, "fy24": 5684, "fy25": 5872 },
+      { "label": "EBITDA", "fy22": -2607, "fy23": -121, "fy24": -646, "fy25": -981 },
+      { "label": "PBT", "fy22": -3911, "fy23": -5106, "fy24": -2522, "fy25": -1387 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -3999, "fy23": -5211, "fy24": -2533, "fy25": -1387 },
+      { "label": "EPS", "fy22": -8.51, "fy23": -8.48, "fy24": -3.9, "fy25": -2.26 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": -45.5, "fy23": -2.06, "fy24": -11.36, "fy25": -16.71 },
+      { "label": "Net Profit Margin (%)", "fy22": -69.8, "fy23": -88.86, "fy24": -44.56, "fy25": -23.62 },
+      { "label": "Earning Per Share (Diluted)", "fy22": -8.51, "fy23": -8.48, "fy24": -3.9, "fy25": -2.26 }
+    ],
+    "investorInsight": [
+      "Market leader in digital pharmacy space.",
+      "Significant revenue scale but ongoing losses due to growth investments.",
+      "High cash burn typical for fintech/healthtech unicorns."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 1025, "fy23": 912, "fy24": 736, "fy25": 682 },
+      { "label": "CWIP", "fy22": 7.8, "fy23": 4, "fy24": 3.8, "fy25": 11 },
+      { "label": "Investments", "fy22": 438, "fy23": 352, "fy24": 329, "fy25": 179 },
+      { "label": "Trade Receivables", "fy22": 881, "fy23": 905, "fy24": 708, "fy25": 870 },
+      { "label": "Inventory", "fy22": 761, "fy23": 688, "fy24": 558, "fy25": 554 },
+      { "label": "Other Assets", "fy22": 6305.2, "fy23": 5405, "fy24": 8081.4, "fy25": 4698 },
+      { "label": "Total Assets", "fy22": 11398, "fy23": 6255, "fy24": 8390, "fy25": 6977 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 476.2, "fy23": 614.2, "fy24": 649.8, "fy25": 694.3 },
+      { "label": "FV", "fy22": 1, "fy23": 1, "fy24": 1, "fy25": 1 },
+      { "label": "Reserves", "fy22": 6408.3, "fy23": 1622, "fy24": 1158, "fy25": 2577 },
+      { "label": "Borrowings", "fy22": 2665, "fy23": 1932, "fy24": 2378, "fy25": 1026 },
+      { "label": "Trade Payables", "fy22": 459, "fy23": 413, "fy24": 415, "fy25": 426.5 },
+      { "label": "Other Liabilities", "fy22": 1381.5, "fy23": 1265, "fy24": 2081, "fy25": 1241.5 },
+      { "label": "Total Liabilities", "fy22": 11398, "fy23": 6255, "fy24": 8390, "fy25": 6977 }
+    ],
+    "insights": "Debt to Equity ratio of 0.62. Significant cash burn funded by equity raises."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.62.",
+  "balanceSheetInsights": "Heavy investment in technology, inventory, and expansion leading to high asset base.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -2569, "fy23": -706, "fy24": -61, "fy25": -823 },
+      { "label": "Cash from Investing Activities", "fy22": -1413, "fy23": -72, "fy24": 72, "fy25": 225 },
+      { "label": "Cash from Financing Activities", "fy22": 2018, "fy23": 652, "fy24": -231, "fy25": -287 }
+    ],
+    "insights": [
+      "High cash burn from operations typical for growth-stage healthtech.",
+      "Funded through equity and debt financing."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Founded by Dharmil Sheth, Dhaval Shah, and others with strong healthcare and tech background.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on building India's largest digital healthcare ecosystem with omnichannel presence.",
+  "faq": [
+    {
+      "question": "How to buy PharmEasy Unlisted Shares?",
+      "answer": "Please find below the procedure for buying PharmEasy Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell PharmEasy Unlisted Shares?",
+      "answer": "Please find below the procedure for selling PharmEasy Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of PharmEasy Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in PharmEasy?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying PharmEasy Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 118,
+  "name": "Polymatech",
+  "price": 62,
+  "logo": "/images/preipo/image115.png",
+  "overview": "Polymatech is an Indian company that has incorporated in 2007 as a subsidiary of Polymatech Company Ltd, Japan. In 2018, it was completely acquired by BITS Ltd. (Japan-based). It is a key player in the company's PE L (specializes in manufacturing LED semiconductor chips and Electronic Materials). The company is engaged in manufacturing of Elastomer parts.",
+  "products": [
+    "LED Semiconductor Chips",
+    "Electronic Materials",
+    "Elastomer Parts"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in India"
+  ],
+  "clients": [
+    "Electronics Manufacturers",
+    "Automotive Industry",
+    "Semiconductor Buyers"
+  ],
+  "shareDetails": {
+    "companyName": "Polymatech (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹62",
+    "marketCapitalization": "₹2470 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹118",
+    "52WeekLow": "₹54",
+    "faceValue": "₹10",
+    "bookValue": "31.97",
+    "peRatio": "6.58",
+    "pbRatio": "1.04",
+    "debtToEquity": "0",
+    "returnOnEquity": "29.53",
+    "totalOutstandingShares": "39863875",
+    "isin": "Not Available",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image115.png"
+    "pan": "Not Available",
+    "cin": "U27200TN2007PLC065706",
+    "rta": "Link Intime"
   },
-  {
-    "id": 119,
-    "name": "Power Exchange India Limited (PXIL)",
-    "price": 732,
+  "financials": {
+    "annualReportSummary": "Polymatech has shown consistent revenue growth with improving profitability. The company maintains a debt-free balance sheet and benefits from its technical expertise in LED and elastomer manufacturing.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 126, "fy23": 869, "fy24": 1220, "fy25": 1903 },
+      { "label": "EBITDA", "fy22": 39.8, "fy23": 181, "fy24": 204, "fy25": 487 },
+      { "label": "PBT", "fy22": 35, "fy23": 187, "fy24": 270, "fy25": 445 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 27.78, "fy23": 167, "fy24": 240, "fy25": 375.5 },
+      { "label": "EPS", "fy22": 5.52, "fy23": 25.26, "fy24": 30.15, "fy25": 9.43 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 31.59, "fy23": 28.35, "fy24": 21.9, "fy25": 25.59 },
+      { "label": "Net Profit Margin (%)", "fy22": 27.78, "fy23": 25.73, "fy24": 19.88, "fy25": 19.73 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 5.52, "fy23": 25.26, "fy24": 30.15, "fy25": 9.43 }
+    ],
+    "investorInsight": [
+      "Strong revenue growth.",
+      "Debt-free balance sheet.",
+      "Technical collaboration with Japanese parent.",
+      "Improving profitability in LED and elastomer segment."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 90, "fy23": 155, "fy24": 446, "fy25": 407.5 },
+      { "label": "CWIP", "fy22": 7.5, "fy23": 7, "fy24": 6, "fy25": 202 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 139, "fy25": 9 },
+      { "label": "Trade Receivables", "fy22": 26, "fy23": 133, "fy24": 520, "fy25": 1252 },
+      { "label": "Inventory", "fy22": 20, "fy23": 36, "fy24": 287, "fy25": 738.9 },
+      { "label": "Other Assets", "fy22": 1, "fy23": 84, "fy24": 264, "fy25": 673.9 },
+      { "label": "Total Assets", "fy22": 137, "fy23": 388, "fy24": 1616, "fy25": 3081 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 83.4, "fy23": 71.8, "fy24": 79.6, "fy25": 79.68 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 13, "fy23": 252, "fy24": 713, "fy25": 1192 },
+      { "label": "Borrowings", "fy22": 4.5, "fy23": 4.3, "fy24": 21, "fy25": 54 },
+      { "label": "Trade Payables", "fy22": 15, "fy23": 20, "fy24": 276, "fy25": 422 },
+      { "label": "Other Liabilities", "fy22": 0.8, "fy23": 1.2, "fy24": 52, "fy25": 55 },
+      { "label": "Total Liabilities", "fy22": 137, "fy23": 388, "fy24": 1616, "fy25": 3081 }
+    ],
+    "insights": "Debt to Equity ratio of 0 (Almost debt-free). Rapid asset expansion due to growth."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.",
+  "balanceSheetInsights": "Strong growth in fixed assets and receivables reflecting business expansion.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 0.48, "fy23": 64, "fy24": 270, "fy25": 452 },
+      { "label": "Cash from Investing Activities", "fy22": -9.9, "fy23": -40, "fy24": -477, "fy25": -102 },
+      { "label": "Cash from Financing Activities", "fy22": 9.6, "fy23": 77, "fy24": 219.54, "fy25": 33 }
+    ],
+    "insights": [
+      "Strong operating cash flow in recent years.",
+      "Heavy capex for capacity expansion."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Japanese Parent)", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Subsidiary of Polymatech Company Ltd, Japan with strong technical expertise.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on manufacturing high-quality LED semiconductor chips, electronic materials, and elastomer parts with Japanese technology.",
+  "faq": [
+    {
+      "question": "How to buy Polymatech Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Polymatech Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell Polymatech Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Polymatech Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Polymatech Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Polymatech?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Polymatech Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 119,
+  "name": "Power Exchange India Limited (PXIL)",
+  "price": 365,
+  "logo": "/images/preipo/image116.jpg",
+  "overview": "Power Exchange India Limited (PXIL) is one of India's premier power exchanges, providing an electronic platform for trading electricity. Established in 2008, it is a public-private initiative under the aegis of the Power Market Regulations. The exchange connects power generators, distribution companies, and other market participants, enabling efficient and competitive power procurement.",
+  "products": [
+    "Day-Ahead Market (DAM)",
+    "Real-Time Market (RTM)",
+    "Term-Ahead Market",
+    "Renewable Energy Certificates (REC)",
+    "Green Term-Ahead Market"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Power Generators",
+    "Distribution Companies (DISCOMs)",
+    "Open Access Consumers",
+    "Trading Members"
+  ],
+  "shareDetails": {
+    "companyName": "Power Exchange India Limited (PXIL) (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹365",
+    "marketCapitalization": "₹3304 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹685",
+    "52WeekLow": "₹385",
+    "faceValue": "₹10",
+    "bookValue": "21.8",
+    "peRatio": "97.35",
+    "pbRatio": "25.92",
+    "debtToEquity": "0.13",
+    "returnOnEquity": "28.54",
+    "totalOutstandingShares": "55407050",
+    "isin": "Not Available",
     "depository": "Only NSDL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image116.jpg"
+    "pan": "AAACN6432C",
+    "cin": "U74999MH2008PLC182160",
+    "rta": "MUFG Intime India"
   },
+  "financials": {
+    "annualReportSummary": "PXIL has shown steady revenue growth with improving profitability. As a key power exchange, it benefits from increasing electricity market volumes and regulatory support for power trading in India.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 35.22, "fy23": 48, "fy24": 56, "fy25": 77 },
+      { "label": "EBITDA", "fy22": 18.86, "fy23": 25.2, "fy24": 26.6, "fy25": 36 },
+      { "label": "PBT", "fy22": 15.78, "fy23": 23.1, "fy24": 29, "fy25": 48 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 15.78, "fy23": 20, "fy24": 29, "fy25": 46.12 },
+      { "label": "EPS", "fy22": 2.7, "fy23": 3.89, "fy24": 3.76, "fy25": 5.81 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 67.81, "fy23": 52.5, "fy24": 44.64, "fy25": 44.16 },
+      { "label": "Net Profit Margin (%)", "fy22": 44.81, "fy23": 45, "fy24": 40.76, "fy25": 46.16 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 2.7, "fy23": 3.89, "fy24": 3.76, "fy25": 5.81 }
+    ],
+    "investorInsight": [
+      "Key player in India's power trading market.",
+      "Strong profitability and high margins.",
+      "Debt to Equity of 0.13.",
+      "Regulatory tailwinds for power exchanges."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 5.67, "fy23": 5.1, "fy24": 6, "fy25": 2.5 },
+      { "label": "Investments", "fy22": 0.81, "fy23": 0.4, "fy24": 1.8, "fy25": 56.5 },
+      { "label": "Trade Receivables", "fy22": 0.61, "fy23": 0.05, "fy24": 0.05, "fy25": 0.09 },
+      { "label": "Other Assets", "fy22": 197.78, "fy23": 167.08, "fy24": 347.57, "fy25": 263.91 },
+      { "label": "Total Assets", "fy22": 205, "fy23": 173, "fy24": 355, "fy25": 326 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 58.47, "fy23": 58.47, "fy24": 58.47, "fy25": 58.47 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": -10, "fy23": 10, "fy24": 33, "fy25": 59 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 15.4 },
+      { "label": "Trade Payables", "fy22": 1.39, "fy23": 2.7, "fy24": 9, "fy25": 8 },
+      { "label": "Other Liabilities", "fy22": 155.34, "fy23": 85.93, "fy24": 237.53, "fy25": 187.13 },
+      { "label": "Total Liabilities", "fy22": 205, "fy23": 173, "fy24": 355, "fy25": 326 }
+    ],
+    "insights": "Debt to Equity ratio of 0.13. Strong liquidity."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.13.",
+  "balanceSheetInsights": "Healthy balance sheet with low debt and stable operations.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 88.31, "fy23": -37.1, "fy24": 165, "fy25": -19 },
+      { "label": "Cash from Investing Activities", "fy22": -121, "fy23": -19.5, "fy24": -7, "fy25": -15 },
+      { "label": "Cash from Financing Activities", "fy22": 0.75, "fy23": -0.95, "fy24": 0.9, "fy25": -1.2 }
+    ],
+    "insights": [
+      "Fluctuating but generally positive cash flows.",
+      "Low capex requirements."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Institutional)", "institutional": "High", "public": "Low" }
+  ],
+  "promotersManagement": "Jointly promoted by NSE and PFC with strong institutional backing.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "MUFG Intime India",
+    "website": "https://in.mu-fg.com/"
+  },
+  "managementInsight": "Focus on increasing electricity trading volumes, introducing new products, and enhancing market efficiency in India's power sector.",
+  "faq": [
+    {
+      "question": "How to buy Power Exchange India Limited (PXIL) Unlisted Shares?",
+      "answer": "Please find below the procedure for buying PXIL Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell Power Exchange India Limited (PXIL) Unlisted Shares?",
+      "answer": "Please find below the procedure for selling PXIL Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of PXIL Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in PXIL?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying PXIL Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 120,
-    "name": "RKB Global Limited",
-    "price": 150,
+  "id": 120,
+  "name": "RKB Global Limited",
+  "price": 115,
+  "logo": "/images/preipo/image117.jpg",
+  "overview": "RKB Global Limited is an Indian company focused on steel commodity trading before evolving into manufacturing and branding. The company is engaged in manufacturing of Pre-painted Galvalume Sheets (PPGL), Galvalume Sheets, and other related products. It is part of the RKB Group with a strong presence in the steel and infrastructure sector.",
+  "products": [
+    "Pre-painted Galvalume Sheets (PPGL)",
+    "Galvalume Sheets",
+    "Color Coated Sheets",
+    "Steel Products"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in Maharashtra and Gujarat"
+  ],
+  "clients": [
+    "Construction & Infrastructure Companies",
+    "Roofing & Cladding Industry",
+    "Industrial & Commercial Projects"
+  ],
+  "shareDetails": {
+    "companyName": "RKB Global Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹115",
+    "marketCapitalization": "₹503 Crore",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹128",
+    "52WeekLow": "₹115",
+    "faceValue": "₹10",
+    "bookValue": "68.81",
+    "peRatio": "45.82",
+    "pbRatio": "2.37",
+    "debtToEquity": "0.29",
+    "returnOnEquity": "5.42",
+    "totalOutstandingShares": "43772327",
+    "isin": "INE629D01019",
     "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image117.jpg"
+    "pan": "AADCR7618J",
+    "cin": "U28100MH2003PLC139800",
+    "rta": "MUFG Intime India"
   },
+  "financials": {
+    "annualReportSummary": "RKB Global has shown steady revenue with improving profitability. The company is expanding its manufacturing capacity in the pre-painted steel sheets segment.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 368, "fy23": 360, "fy24": 457, "fy25": 411 },
+      { "label": "EBITDA", "fy22": 16, "fy23": 17, "fy24": 30.66, "fy25": 30 },
+      { "label": "PBT", "fy22": 3.8, "fy23": 8.9, "fy24": 27.38, "fy25": 25 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 3.8, "fy23": 8.9, "fy24": 27.38, "fy25": 25 },
+      { "label": "EPS", "fy22": 1.04, "fy23": 2.07, "fy24": 2.05, "fy25": 2.31 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 4.35, "fy23": 4.72, "fy24": 6.65, "fy25": 7.3 },
+      { "label": "Net Profit Margin (%)", "fy22": 0.82, "fy23": 1.47, "fy24": 1.76, "fy25": 2.68 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 1.04, "fy23": 2.07, "fy24": 2.05, "fy25": 2.31 }
+    ],
+    "investorInsight": [
+      "Steady growth in steel sheets manufacturing.",
+      "Improving margins and profitability.",
+      "Part of growing infrastructure and construction demand."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 21, "fy23": 20, "fy24": 44.6, "fy25": 49 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 20 },
+      { "label": "Investments", "fy22": 0, "fy23": 2, "fy24": 2, "fy25": 0 },
+      { "label": "Trade Receivables", "fy22": 23, "fy23": 39, "fy24": 121, "fy25": 16.6 },
+      { "label": "Inventory", "fy22": 110, "fy23": 97, "fy24": 127, "fy25": 88 },
+      { "label": "Other Assets", "fy22": 78, "fy23": 72, "fy24": 85, "fy25": 178.4 },
+      { "label": "Total Assets", "fy22": 232, "fy23": 230, "fy24": 279, "fy25": 352 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 28.8, "fy23": 28.95, "fy24": 30.27, "fy25": 43.77 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 13, "fy23": 17, "fy24": 110, "fy25": 150 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 17, "fy24": 38, "fy25": 56 },
+      { "label": "Trade Payables", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 8.9 },
+      { "label": "Other Liabilities", "fy22": 193.2, "fy23": 186.05, "fy24": 100, "fy25": 94.23 },
+      { "label": "Total Liabilities", "fy22": 232, "fy23": 230, "fy24": 279.27, "fy25": 352 }
+    ],
+    "insights": "Debt to Equity ratio of 0.29. Growing fixed assets due to capacity expansion."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.29.",
+  "balanceSheetInsights": "Healthy growth in assets with moderate debt.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 0, "fy23": 32.5, "fy24": 31.5, "fy25": 31.5 },
+      { "label": "Cash from Investing Activities", "fy22": 0, "fy23": -5.5, "fy24": -28, "fy25": -28 },
+      { "label": "Cash from Financing Activities", "fy22": 0, "fy23": -12.5, "fy24": 5.63, "fy25": -6.3 }
+    ],
+    "insights": [
+      "Positive operating cash flow in recent years.",
+      "Capex for manufacturing expansion."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Professionally managed company with focus on steel and infrastructure products.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "MUFG Intime India",
+    "website": "https://in.mu-fg.com/"
+  },
+  "managementInsight": "Focus on manufacturing high-quality pre-painted galvanized sheets and expanding presence in the construction and infrastructure sector.",
+  "faq": [
+    {
+      "question": "How to buy RKB Global Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying RKB Global Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell RKB Global Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling RKB Global Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of RKB Global Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in RKB Global Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying RKB Global Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 121,
-    "name": "RRP S4E innovation Unlisted Shares Price",
-    "price": 388,
+  "id": 121,
+  "name": "RRP S4E Innovation",
+  "price": 168,
+  "logo": "/images/preipo/image118.png",
+  "overview": "RRP S4E Innovation is a leading Indian company specializing in electronic-optic systems, focusing on repair and upgrading services. They have innovation in the defence sector, notably with the Indian Army, offering diagnostic, maintenance, and upgradation for electro-optic devices. The company is a pioneer in nano-spectrometry, vacuum systems, and elemental analysis. They offer products and services for spectroscopy, cleaning to 0.1% cleaner than ion optics.",
+  "products": [
+    "Electronic-Optic Systems",
+    "Repair & Upgradation Services for Defence",
+    "Nano-Spectrometry Systems",
+    "Vacuum Systems",
+    "Elemental Analysis Solutions"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Indian Army & Defence Sector",
+    "Research Institutions",
+    "Industrial Clients"
+  ],
+  "shareDetails": {
+    "companyName": "RRP S4E Innovation (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹168",
+    "marketCapitalization": "₹1165 Crore",
+    "lotSize": "400 Shares",
+    "52WeekHigh": "₹395",
+    "52WeekLow": "₹168",
+    "faceValue": "₹10",
+    "bookValue": "157.09",
+    "peRatio": "45.82",
+    "pbRatio": "1.07",
+    "debtToEquity": "0.1",
+    "returnOnEquity": "48.05",
+    "totalOutstandingShares": "69329356",
+    "isin": "Not Available",
     "depository": "NSDL & CDSL",
-    "minLotSize": 400,
-    "status": "upcoming",
-    "logo": "/images/preipo/image118.png"
+    "pan": "AADCR373J",
+    "cin": "U74999MH2019PLC320145",
+    "rta": "Sri Shachi Limited"
   },
+  "financials": {
+    "annualReportSummary": "RRP S4E Innovation has shown strong revenue growth with improving profitability. The company benefits from its expertise in defence and electro-optic systems.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 3811, "fy23": 8120, "fy24": 4067 },
+      { "label": "EBITDA", "fy22": 1227, "fy23": 1589, "fy24": 2083 },
+      { "label": "PBT", "fy22": 882, "fy23": 1131, "fy24": 1627 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 862, "fy23": 1131, "fy24": 1627 },
+      { "label": "EPS", "fy22": 13.07, "fy23": 11.89, "fy24": 15.08 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 32.05, "fy23": 50.93, "fy24": 50.85 },
+      { "label": "Net Profit Margin (%)", "fy22": 19.24, "fy23": 27.54, "fy24": 31.87 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 13.07, "fy23": 11.89, "fy24": 15.08 }
+    ],
+    "investorInsight": [
+      "Strong growth in defence and electro-optic sector.",
+      "High profitability and margins.",
+      "Debt to Equity of 0.1."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 2257, "fy23": 3342, "fy24": 3462 },
+      { "label": "CWIP", "fy22": 0, "fy23": 366, "fy24": 884 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0 },
+      { "label": "Trade Receivables", "fy22": 2830, "fy23": 2981, "fy24": 3438 },
+      { "label": "Inventory", "fy22": 1287, "fy23": 2285, "fy24": 2565 },
+      { "label": "Other Assets", "fy22": 864, "fy23": 784, "fy24": 3244 },
+      { "label": "Total Assets", "fy22": 7218, "fy23": 9714, "fy24": 13333 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 476.2, "fy23": 717.7, "fy24": 854.14 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10 },
+      { "label": "Reserves", "fy22": 3768.3, "fy23": 5569, "fy24": 9985 },
+      { "label": "Borrowings", "fy22": 535, "fy23": 1706, "fy24": 1107 },
+      { "label": "Trade Payables", "fy22": 720, "fy23": 731, "fy24": 563 },
+      { "label": "Other Liabilities", "fy22": 1702, "fy23": 1017.3, "fy24": 825.86 },
+      { "label": "Total Liabilities", "fy22": 7218, "fy23": 9714, "fy24": 13333 }
+    ],
+    "insights": "Debt to Equity ratio of 0.1. Rapid balance sheet expansion."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.1.",
+  "balanceSheetInsights": "Strong growth in fixed assets and receivables reflecting business expansion.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -15, "fy23": -804, "fy24": -373 },
+      { "label": "Cash from Investing Activities", "fy22": 0, "fy23": -370, "fy24": -1023 },
+      { "label": "Cash from Financing Activities", "fy22": 434, "fy23": 1817, "fy24": 1987 }
+    ],
+    "insights": [
+      "Heavy financing for expansion.",
+      "Negative operating cash flow in growth phase."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Led by professionals with expertise in defence and electro-optic systems.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Sri Shachi Limited",
+    "website": ""
+  },
+  "managementInsight": "Focus on innovation in defence electro-optic systems, spectroscopy, and advanced manufacturing.",
+  "faq": [
+    {
+      "question": "How to buy RRP S4E Innovation Unlisted Shares?",
+      "answer": "Please find below the procedure for buying RRP S4E Innovation Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell RRP S4E Innovation Unlisted Shares?",
+      "answer": "Please find below the procedure for selling RRP S4E Innovation Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of RRP S4E Innovation Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in RRP S4E Innovation?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying RRP S4E Innovation Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 122,
+  "name": "Ramaraju Surgical Cotton Mills Limited",
+  "price": 275,
+  "logo": "/images/preipo/RamarajuSurgical.png",
+  "overview": "Ramaraju Surgical Cotton Mills Limited is a part of the Ramco Group of Companies. The group has an annual revenue of around USD 1.0 billion. The company is engaged in manufacturing cotton and specialized yarn, cement, roofing, and building products. It also offers enterprise software solutions in the cloud.",
+  "products": [
+    "Surgical Cotton",
+    "Cotton Yarn",
+    "Specialized Yarn"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in Tamil Nadu"
+  ],
+  "clients": [
+    "Textile Industry",
+    "Medical & Healthcare Sector"
+  ],
+  "shareDetails": {
+    "companyName": "Ramaraju Surgical Cotton Mills Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹275",
+    "marketCapitalization": "₹160 Crore",
+    "lotSize": "250 Shares",
+    "52WeekHigh": "₹285",
+    "52WeekLow": "₹275",
+    "faceValue": "₹10",
+    "bookValue": "422.72",
+    "peRatio": "N/A",
+    "pbRatio": "1.84",
+    "debtToEquity": "1.23",
+    "returnOnEquity": "0.22",
+    "totalOutstandingShares": "5815000",
+    "isin": "Not Available",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACT6308D",
+    "cin": "L17111TN1939PLC002027",
+    "rta": "Cameo Corporate Services"
+  },
+  "financials": {
+    "annualReportSummary": "Ramaraju Surgical Cotton Mills has shown stable revenue with fluctuating profitability. The company maintains a strong book value and operates in the textile and surgical cotton segment.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 376.03, "fy23": 407, "fy24": 365, "fy25": 401 },
+      { "label": "EBITDA", "fy22": 65.04, "fy23": 55.94, "fy24": 46.92, "fy25": 83.6 },
+      { "label": "PBT", "fy22": 7.8, "fy23": 39, "fy24": -50, "fy25": -19 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 3.01, "fy23": 35, "fy24": -43, "fy25": -19.3 },
+      { "label": "EPS", "fy22": 7.84, "fy23": 87.72, "fy24": -30.01, "fy25": -49.01 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 17.54, "fy23": 7.86, "fy24": 4.88, "fy25": 0.75 },
+      { "label": "Net Profit Margin (%)", "fy22": 0.8, "fy23": 8.6, "fy24": -11.78, "fy25": -4.81 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 7.84, "fy23": 87.72, "fy24": -30.01, "fy25": -49.01 }
+    ],
+    "investorInsight": [
+      "Part of the Ramco Group.",
+      "Strong book value per share.",
+      "Debt to Equity of 1.23."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 221.42, "fy23": 207, "fy24": 278, "fy25": 252 },
+      { "label": "CWIP", "fy22": 26.07, "fy23": 9, "fy24": 2.3, "fy25": 0.5 },
+      { "label": "Investments", "fy22": 182.64, "fy23": 188, "fy24": 199, "fy25": 179 },
+      { "label": "Trade Receivables", "fy22": 58.39, "fy23": 86, "fy24": 68.6, "fy25": 85 },
+      { "label": "Inventory", "fy22": 98.65, "fy23": 150, "fy24": 116, "fy25": 152 },
+      { "label": "Other Assets", "fy22": 50.65, "fy23": 65, "fy24": 111.7, "fy25": 75.5 },
+      { "label": "Total Assets", "fy22": 613.52, "fy23": 727, "fy24": 753, "fy25": 725 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 3.94, "fy23": 3.99, "fy24": 5.81, "fy25": 5.81 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 275.71, "fy23": 264, "fy24": 260, "fy25": 230 },
+      { "label": "Borrowings", "fy22": 307.74, "fy23": 423, "fy24": 450, "fy25": 432 },
+      { "label": "Trade Payables", "fy22": 13.12, "fy23": 15, "fy24": 7, "fy25": 8.2 },
+      { "label": "Other Liabilities", "fy22": 6.31, "fy23": 21.01, "fy24": 26.19, "fy25": 25.19 },
+      { "label": "Total Liabilities", "fy22": 613.52, "fy23": 727, "fy24": 753, "fy25": 725 }
+    ],
+    "insights": "Debt to Equity ratio of 1.84."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 1.84.",
+  "balanceSheetInsights": "Moderate leverage with focus on fixed assets and inventory.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 38.75, "fy23": -5.44, "fy24": 27, "fy25": -29 },
+      { "label": "Cash from Investing Activities", "fy22": -40.98, "fy23": -68, "fy24": -17, "fy25": -15 },
+      { "label": "Cash from Financing Activities", "fy22": 28.7, "fy23": 30.8, "fy24": -39.31, "fy25": -31 }
+    ],
+    "insights": [
+      "Fluctuating cash flows typical for manufacturing company.",
+      "Capex for capacity expansion."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Ramco Group)", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Part of the Ramco Group of Companies.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Cameo Corporate Services",
+    "website": "https://cameoindia.com/"
+  },
+  "managementInsight": "Focus on manufacturing high-quality surgical cotton and yarn while expanding into value-added textile products.",
+  "faq": [
+    {
+      "question": "How to buy Ramaraju Surgical Cotton Mills Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Ramaraju Surgical Cotton Mills Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Ramaraju Surgical Cotton Mills Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Ramaraju Surgical Cotton Mills Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Ramaraju Surgical Cotton Mills Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Ramaraju Surgical Cotton Mills Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Ramaraju Surgical Cotton Mills Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 122,
-    "name": "Ramaraju Surgical Cotton Mills Limited Unlisted Shares",
-    "price": 357,
+  "id": 123,
+  "name": "Raviraj Process Control Ltd",
+  "price": 85,
+  "logo": "/images/preipo/image120.jpg",
+  "overview": "Raviraj Process Control Ltd is engaged in the manufacturing and supply of industrial process control equipment and automation systems. The company provides solutions for various industries such as oil & gas, petrochemicals, water treatment, power, and pharmaceutical sectors.",
+  "products": [
+    "Industrial Process Control Equipment",
+    "Automation Systems",
+    "Instrumentation Solutions"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Oil & Gas Industry",
+    "Petrochemical Companies",
+    "Power Plants",
+    "Pharmaceutical Industry"
+  ],
+  "shareDetails": {
+    "companyName": "Raviraj Process Control Ltd (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹85",
+    "marketCapitalization": "₹98 Crore",
+    "lotSize": "2000 Shares",
+    "52WeekHigh": "₹85",
+    "52WeekLow": "₹85",
+    "faceValue": "₹10",
+    "bookValue": "35.95",
+    "peRatio": "24.57",
+    "pbRatio": "2.36",
+    "debtToEquity": "0.49",
+    "returnOnEquity": "0.40",
+    "totalOutstandingShares": "11556800",
+    "isin": "Not Available",
     "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/RamarajuSurgical.png"
+    "pan": "AAACR2010",
+    "cin": "U31904MH2019PLC325851",
+    "rta": "Masshika Securities"
   },
-  {
-    "id": 123,
-    "name": "Raviraj Process Control Ltd",
-    "price": 107,
+  "financials": {
+    "annualReportSummary": "Raviraj Process Control has shown steady revenue growth with improving profitability. The company is focused on expanding its presence in the industrial automation and process control sector.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy23": 29, "fy24": 42, "fy25": 39 },
+      { "label": "EBITDA", "fy23": 7, "fy24": 13, "fy25": 8.4 },
+      { "label": "PBT", "fy23": 8.6, "fy24": 9, "fy25": 5.6 },
+      { "label": "Net Profit / Loss (PAT)", "fy23": 6.9, "fy24": 9, "fy25": 5.4 },
+      { "label": "EPS", "fy23": 4.000, "fy24": 6.06, "fy25": 3.48 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy23": 24.14, "fy24": 30.95, "fy25": 21.54 },
+      { "label": "Net Profit Margin (%)", "fy23": 18.79, "fy24": 16.67, "fy25": 10.26 },
+      { "label": "Earning Per Share (Diluted)", "fy23": 4.000, "fy24": 6.06, "fy25": 3.48 }
+    ],
+    "investorInsight": [
+      "Steady growth in industrial automation sector.",
+      "Improving profitability.",
+      "Debt to Equity of 0.49."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy23": 19, "fy24": 28, "fy25": 27 },
+      { "label": "CWIP", "fy23": 8, "fy24": 0, "fy25": 2.4 },
+      { "label": "Investments", "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy23": 3, "fy24": 9, "fy25": 8 },
+      { "label": "Inventory", "fy23": 7.5, "fy24": 9, "fy25": 9.5 },
+      { "label": "Other Assets", "fy23": 5.5, "fy24": 9, "fy25": 9.1 },
+      { "label": "Total Assets", "fy23": 43, "fy24": 55, "fy25": 58 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy23": 0.01, "fy24": 11.55, "fy25": 11.55 },
+      { "label": "FV", "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy23": 2.89, "fy24": 15, "fy25": 20 },
+      { "label": "Borrowings", "fy23": 19, "fy24": 19, "fy25": 15.4 },
+      { "label": "Trade Payables", "fy23": 5, "fy24": 4, "fy25": 8 },
+      { "label": "Other Liabilities", "fy23": 16.1, "fy24": 5.65, "fy25": 3.05 },
+      { "label": "Total Liabilities", "fy23": 43, "fy24": 55, "fy25": 58 }
+    ],
+    "insights": "Debt to Equity ratio of 0.49."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.49.",
+  "balanceSheetInsights": "Small but growing balance sheet with moderate debt.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy23": -3.95, "fy24": -4.27, "fy25": 8.3 },
+      { "label": "Cash from Investing Activities", "fy23": 0, "fy24": -9.88, "fy25": -8.1 },
+      { "label": "Cash from Financing Activities", "fy23": -4.18, "fy24": 5.97, "fy25": -5.3 }
+    ],
+    "insights": [
+      "Improving operating cash flow.",
+      "Investment in fixed assets."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Professionally managed company with expertise in industrial process control.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Masshika Securities",
+    "website": ""
+  },
+  "managementInsight": "Focus on providing advanced process control and automation solutions for various industries.",
+  "faq": [
+    {
+      "question": "How to buy Raviraj Process Control Ltd Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Raviraj Process Control Ltd at UnlistedZone."
+    },
+    {
+      "question": "How to sell Raviraj Process Control Ltd Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Raviraj Process Control Ltd at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Raviraj Process Control Ltd Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Raviraj Process Control Ltd?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Raviraj Process Control Ltd Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 124,
+  "name": "Resin & Plastic Limited",
+  "price": 495,
+  "logo": "/images/preipo/image121.png",
+  "overview": "Resin & Plastic Limited (RPL) is one of the leading Indian Resin Manufacturers catering to a wide range of industries such as Laminates, Coatings, Printing Inks, Insulating Varnishes, Epoxy Resins, Foundry Resins, Ketonic Resins, and Phenolic Resins. The company also manufactures BMC (Bulk Molding Compound) and SMC (Sheet Molding Compound). It has a strong presence in Maharashtra and Gujarat with facilities in close proximity to major shipping ports.",
+  "products": [
+    "Synthetic Resins",
+    "Ketonic Resins",
+    "Epoxy Resins",
+    "Phenolic Resins",
+    "Foundry Resins",
+    "Bulk Molding Compound (BMC)",
+    "Sheet Molding Compound (SMC)"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in Maharashtra and Gujarat"
+  ],
+  "clients": [
+    "Laminates Industry",
+    "Coatings & Paints",
+    "Printing Inks Manufacturers",
+    "Foundry Industry"
+  ],
+  "shareDetails": {
+    "companyName": "Resin & Plastic Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹495",
+    "marketCapitalization": "₹207 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹650",
+    "52WeekLow": "₹495",
+    "faceValue": "₹10",
+    "bookValue": "304.8",
+    "peRatio": "17.21",
+    "pbRatio": "1.62",
+    "debtToEquity": "0",
+    "returnOnEquity": "5.42",
+    "totalOutstandingShares": "4172300",
+    "isin": "INE422F01017",
     "depository": "NSDL & CDSL",
-    "minLotSize": 2000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image120.jpg"
+    "pan": "AAACR8888C",
+    "cin": "U25209MH1991PLC062323",
+    "rta": "Link Intime"
   },
-  {
-    "id": 124,
-    "name": "Resin & Plastic Limited Unlisted Shares",
-    "price": 619,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image121.png"
+  "financials": {
+    "annualReportSummary": "Resin & Plastic Limited has shown stable revenue with healthy profitability. The company benefits from strong demand in the resins and plastics segment and maintains a debt-free balance sheet.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 311, "fy23": 252, "fy24": 258, "fy25": 295 },
+      { "label": "EBITDA", "fy22": 115.8, "fy23": 55.6, "fy24": 52.7, "fy25": 63.2 },
+      { "label": "PBT", "fy22": 98.0, "fy23": 50, "fy24": 38.5, "fy25": 49.2 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 75.2, "fy23": 38.5, "fy24": 28.78, "fy25": 37.5 },
+      { "label": "EPS", "fy22": 28.82, "fy23": 25.08, "fy24": 28.78, "fy25": 28.78 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 36.82, "fy23": 6.03, "fy24": 5.86, "fy25": 5.42 },
+      { "label": "Net Profit Margin (%)", "fy22": 3.82, "fy23": 3.07, "fy24": 4.65, "fy25": 4.07 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 28.82, "fy23": 25.08, "fy24": 28.78, "fy25": 28.78 }
+    ],
+    "investorInsight": [
+      "Debt-free company with strong book value.",
+      "Stable player in specialty resins and plastics.",
+      "Consistent demand from laminates, coatings, and foundry sectors."
+    ]
   },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 11, "fy23": 15, "fy24": 15, "fy25": 15 },
+      { "label": "CWIP", "fy22": 0.9, "fy23": 0.23, "fy24": 0.35, "fy25": 0.35 },
+      { "label": "Investments", "fy22": 20, "fy23": 21, "fy24": 27, "fy25": 17 },
+      { "label": "Trade Receivables", "fy22": 51, "fy23": 58, "fy24": 73, "fy25": 75 },
+      { "label": "Inventory", "fy22": 22, "fy23": 25, "fy24": 19, "fy25": 28 },
+      { "label": "Other Assets", "fy22": 6.1, "fy23": 5, "fy24": 8.77, "fy25": 5.65 },
+      { "label": "Total Assets", "fy22": 109, "fy23": 120, "fy24": 126, "fy25": 139 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 4.17, "fy23": 4.17, "fy24": 4.17, "fy25": 4.17 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 87, "fy23": 95, "fy24": 104, "fy25": 113 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 13, "fy23": 17, "fy24": 16, "fy25": 18 },
+      { "label": "Other Liabilities", "fy22": 6.83, "fy23": 3.83, "fy24": 3.83, "fy25": 3.83 },
+      { "label": "Total Liabilities", "fy22": 109, "fy23": 120, "fy24": 126, "fy25": 139 }
+    ],
+    "insights": "Debt-free company with healthy reserves."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Clean and strong balance sheet with no borrowings.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 2.48, "fy23": 10.5, "fy24": 10.5, "fy25": 19.8 },
+      { "label": "Cash from Investing Activities", "fy22": -16.05, "fy23": -5, "fy24": -8.8, "fy25": 10 },
+      { "label": "Cash from Financing Activities", "fy22": -2.3, "fy23": -2.5, "fy24": -3, "fy25": -3 }
+    ],
+    "insights": [
+      "Positive operating cash flow.",
+      "Low debt and stable operations."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Promoter-driven company with expertise in resins and plastics manufacturing.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on manufacturing high-quality synthetic resins and expanding presence in laminates, coatings, and foundry sectors.",
+  "faq": [
+    {
+      "question": "How to buy Resin & Plastic Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Resin & Plastic Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Resin & Plastic Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Resin & Plastic Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Resin & Plastic Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Resin & Plastic Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Resin & Plastic Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
     "id": 125,
     "name": "Roop Telsonic Ultrasonix Limited Unlisted Shares",
