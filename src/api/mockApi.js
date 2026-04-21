@@ -27269,131 +27269,1798 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
   ]
 },
   {
-    "id": 95,
-    "name": "Maverick Simulation Solutions Limited",
-    "price": 2750,
+  "id": 95,
+  "name": "Maverick Simulation Solutions Limited",
+  "price": 1995,
+  "logo": "/images/preipo/image93.png",
+  "overview": "Maverick Simulation Solutions Limited is a Delhi-based medtech company that creates simulation tools for medical and nursing training. It provides realistic simulation mannequins and virtual reality solutions to train surgeons, doctors, and nurses. The company replaces traditional classroom learning with hands-on, risk-free practice using real patient scenarios.",
+  "products": [
+    "Medical Simulation Mannequins",
+    "Virtual Reality Training Systems",
+    "Surgical Simulation Tools",
+    "Nursing Training Simulators",
+    "Clinical Skills Training Platforms"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Medical Colleges",
+    "Nursing Institutions",
+    "Hospitals & Training Centers",
+    "Defense & Healthcare Organizations"
+  ],
+  "shareDetails": {
+    "companyName": "Maverick Simulation Solutions Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹1995",
+    "marketCapitalization": "₹980 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹2800",
+    "52WeekLow": "₹1995",
+    "faceValue": "₹10",
+    "bookValue": "217.57",
+    "peRatio": "20.51",
+    "pbRatio": "9.17",
+    "debtToEquity": "0.24",
+    "returnOnEquity": "49.32",
+    "totalOutstandingShares": "491381",
+    "isin": "U26990DL2012PLC239501",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image93.png"
+    "pan": "AAICM2519C",
+    "cin": "U26990DL2012PLC239501",
+    "rta": "MUFG Intime India"
   },
+  "financials": {
+    "annualReportSummary": "Maverick Simulation has shown explosive revenue growth in FY25 (from ₹14.2 Cr to ₹136.3 Cr) with massive improvement in profitability. Strong scalability in medtech simulation products.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy24": 14.2, "fy25": 136.3 },
+      { "label": "EBITDA", "fy24": 1.12, "fy25": 61.34 },
+      { "label": "PBT", "fy24": 1.26, "fy25": 61.3 },
+      { "label": "Net Profit / Loss (PAT)", "fy24": 0.94, "fy25": 47.8 },
+      { "label": "EPS", "fy24": 1.98, "fy25": 97.35 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy24": 7.89, "fy25": 45 },
+      { "label": "Net Profit Margin (%)", "fy24": 6.62, "fy25": 35.07 },
+      { "label": "Earning Per Share (Diluted)", "fy24": 1.98, "fy25": 97.35 }
+    ],
+    "investorInsight": [
+      "Explosive revenue growth in FY25.",
+      "High ROE of 49.32% and healthy margins.",
+      "Strong medtech innovation with scalable business model."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy24": 0.47, "fy25": 5.5 },
+      { "label": "CWIP", "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy24": 5, "fy25": 105.4 },
+      { "label": "Inventory", "fy24": 38, "fy25": 14.4 },
+      { "label": "Other Assets", "fy24": 43.53, "fy25": 37.7 },
+      { "label": "Total Assets", "fy24": 87, "fy25": 163 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy24": 4.75, "fy25": 4.91 },
+      { "label": "FV", "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy24": 21, "fy25": 92 },
+      { "label": "Borrowings", "fy24": 7.8, "fy25": 23 },
+      { "label": "Trade Payables", "fy24": 27, "fy25": 17.7 },
+      { "label": "Other Liabilities", "fy24": 26.45, "fy25": 25.39 },
+      { "label": "Total Liabilities", "fy24": 87, "fy25": 163 }
+    ],
+    "insights": "Debt to Equity ratio of 0.24. Significant increase in receivables due to revenue growth."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.24.",
+  "balanceSheetInsights": "Strong equity growth with moderate debt. High growth in trade receivables reflecting business expansion.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy24": -20.4, "fy25": -21 },
+      { "label": "Cash from Investing Activities", "fy24": -8.35, "fy25": -11.3 },
+      { "label": "Cash from Financing Activities", "fy24": 32.3, "fy25": 35.9 }
+    ],
+    "insights": [
+      "Negative operating cash flow due to working capital increase (high receivables).",
+      "Funded through equity and borrowings."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Founders)", "institutional": "Not Available", "public": "Not Available" }
+  ],
+  "promotersManagement": "Led by Anuj Chahal (Founder & CEO with 20+ years experience).",
+  "management": [
+    { "name": "Anuj Chahal", "role": "Founder & CEO", "experience": "20+ Years" },
+    { "name": "Dr. Sunil Tomar", "role": "Director", "experience": "20+ Years" }
+  ],
+  "rta": {
+    "registrar": "MUFG Intime India",
+    "website": "https://in.mu-fg.com/"
+  },
+  "managementInsight": "Focus on innovation in medical simulation technology to revolutionize healthcare training with realistic, risk-free practice solutions.",
+  "faq": [
+    {
+      "question": "How to buy Maverick Simulation Solutions Limited?",
+      "answer": "Please find below the procedure for buying Maverick Simulation Solutions Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Maverick Simulation Solutions Limited?",
+      "answer": "Please find below the procedure for selling Maverick Simulation Solutions Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Maverick Simulation Solutions Limited?",
+      "answer": "The lock-in period varies depending on the category of investors. For SME IPOs, the lock-in period is of One year."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Maverick Simulation Solutions Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Maverick Simulation Solutions Limited legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 96,
-    "name": "Maxvalue Credits and Investments Unlisted Shares",
-    "price": 6,
+  "id": 96,
+  "name": "Maxvalue Credits and Investments Limited",
+  "price": 8,
+  "logo": "/images/preipo/image94.jpg",
+  "overview": "Maxvalue Credits and Investments Limited is a Non-Banking Financial Company (NBFC) focused on retail and small-ticket lending, primarily across southern India (Kerala, Karnataka). The company offers diversified loan products including Gold Loans, Auto/Vehicle Loans, Trader & MSME Loans, and Microfinance Loans. It also provides investment products in the form of secured Non-Convertible Redeemable Debentures (NCDs) and Subordinated Debt.",
+  "products": [
+    "Gold Loans",
+    "Vehicle/Auto Loans",
+    "Trader & MSME Loans",
+    "Microfinance Loans",
+    "Secured NCDs & Subordinated Debt"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Retail Customers",
+    "Small & Medium Enterprises (MSME)",
+    "Traders",
+    "Microfinance Borrowers"
+  ],
+  "shareDetails": {
+    "companyName": "Maxvalue Credits and Investments Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹8",
+    "marketCapitalization": "₹198 Crore",
+    "lotSize": "5000 Shares",
+    "52WeekHigh": "₹8",
+    "52WeekLow": "₹8",
+    "faceValue": "₹10",
+    "bookValue": "3.6",
+    "peRatio": "54.55",
+    "pbRatio": "1.82",
+    "debtToEquity": "2.57",
+    "returnOnEquity": "3.6",
+    "totalOutstandingShares": "Not Available",
+    "isin": "INE040401023",
     "depository": "NSDL & CDSL",
-    "minLotSize": 5000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image94.jpg"
+    "pan": "AAACT8550D",
+    "cin": "U65921KL1995PLC009581",
+    "rta": "Link Intime"
   },
-  {
-    "id": 97,
-    "name": "Merino Industries Limited Unlisted Shares",
-    "price": 3969,
+  "financials": {
+    "annualReportSummary": "The company has shifted focus from aggressive growth to risk containment. Revenue has declined in recent years while maintaining profitability. Strong emphasis on secured lending (Gold Loans now ~50% of portfolio) with controlled costs.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 153, "fy23": 150, "fy24": 125, "fy25": 98 },
+      { "label": "EBITDA", "fy22": 59, "fy23": 54, "fy24": 58, "fy25": 39.8 },
+      { "label": "PBT", "fy22": -37, "fy23": -15.3, "fy24": 10, "fy25": 3.7 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -37, "fy23": -21, "fy24": 10, "fy25": 3.7 },
+      { "label": "EPS", "fy22": -2.38, "fy23": -0.84, "fy24": 0.28, "fy25": 0.1 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 38.56, "fy23": 36, "fy24": 46.4, "fy25": 39.8 },
+      { "label": "Net Profit Margin (%)", "fy22": -24.18, "fy23": -14, "fy24": 8, "fy25": 3.81 },
+      { "label": "Earning Per Share (Diluted)", "fy22": -2.38, "fy23": -0.84, "fy24": 0.28, "fy25": 0.1 }
+    ],
+    "investorInsight": [
+      "Shift to safer gold loan portfolio (~50% of AUM).",
+      "Turned profitable in FY24 after previous losses.",
+      "High Debt to Equity typical for NBFC.",
+      "Focus on risk containment over aggressive growth."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 30, "fy23": 28.6, "fy24": 28, "fy25": 26 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Assets", "fy22": 815, "fy23": 834.4, "fy24": 489, "fy25": 436 },
+      { "label": "Total Assets", "fy22": 845, "fy23": 863, "fy24": 517, "fy25": 462 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 155.77, "fy23": 184.75, "fy24": 176.75, "fy25": 178.75 },
+      { "label": "Reserves", "fy22": -67, "fy23": -89, "fy24": -78, "fy25": -75 },
+      { "label": "Borrowings", "fy22": 448, "fy23": 185, "fy24": 225, "fy25": 267 },
+      { "label": "Other Liabilities", "fy22": 309.23, "fy23": 582.25, "fy24": 193.25, "fy25": 92.25 },
+      { "label": "Total Liabilities", "fy22": 845, "fy23": 863, "fy24": 517, "fy25": 462 }
+    ],
+    "insights": "Debt to Equity ratio of 2.57. Shrinking loan book with focus on asset quality."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 2.57 (typical for NBFC).",
+  "balanceSheetInsights": "Conservative approach with focus on secured lending and capital adequacy.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 25, "fy23": 25, "fy24": 83, "fy25": -45 },
+      { "label": "Cash from Investing Activities", "fy22": -5, "fy23": -5, "fy24": -0.07, "fy25": -1 },
+      { "label": "Cash from Financing Activities", "fy22": 62, "fy23": -107, "fy24": -12.54, "fy25": 7 }
+    ],
+    "insights": [
+      "Fluctuating cash flows due to changes in lending book.",
+      "Cost control measures visible in operations."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Not Available", "institutional": "Not Available", "public": "Not Available" }
+  ],
+  "promotersManagement": "Professional management with focus on southern India retail lending.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Strategic shift towards secured lending (Gold Loans) and risk containment while maintaining strong capital buffers.",
+  "faq": [
+    {
+      "question": "How to buy Maxvalue Credits and Investments Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Maxvalue Credits and Investments Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell Maxvalue Credits and Investments Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Maxvalue Credits and Investments Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Maxvalue Credits and Investments Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors. For SME IPOs, the lock-in period is of One year."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Maxvalue Credits and Investments Unlisted Shares?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Maxvalue Credits and Investments Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+{
+  "id": 97,
+  "name": "Merino Industries Limited",
+  "price": 2500,
+  "logo": "/images/preipo/image95.jpg",
+  "overview": "Merino Industries Limited, established in 1965 (formerly Merino Laminates), is one of the largest manufacturers and exporters of decorative laminates in India. The company has evolved into a diversified group with interests in laminates, interior solutions, agro foods, and information technology. It is managed by a professional team with decades of industry experience.",
+  "products": [
+    "Decorative Laminates",
+    "High Pressure Laminates (HPL)",
+    "Compact Laminates",
+    "Postforming Laminates",
+    "Interior Solutions & Surfaces",
+    "Veneers & Allied Products"
+  ],
+  "manufacturingUnits": [
+    "Multiple state-of-the-art manufacturing facilities across India"
+  ],
+  "clients": [
+    "Furniture Manufacturers",
+    "Interior Designers & Architects",
+    "Real Estate & Infrastructure Developers",
+    "Retail & Institutional Buyers (Domestic & International)"
+  ],
+  "shareDetails": {
+    "companyName": "Merino Industries Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹2500",
+    "marketCapitalization": "₹2185 Crore",
+    "lotSize": "10 Shares",
+    "52WeekHigh": "₹3300",
+    "52WeekLow": "₹2500",
+    "faceValue": "₹10",
+    "bookValue": "1223.11",
+    "peRatio": "N/A",
+    "pbRatio": "2.53",
+    "debtToEquity": "0.52",
+    "returnOnEquity": "-0.52",
+    "totalOutstandingShares": "11778079",
+    "isin": "INE662B01017",
     "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/image95.jpg"
+    "pan": "AAACC9186C",
+    "cin": "U51909WB1985PLC026556",
+    "rta": "C B Management Services"
   },
+  "financials": {
+    "annualReportSummary": "Merino Industries has delivered consistent revenue growth with healthy operating margins. The company maintains a robust balance sheet with moderate debt and a very high book value per share.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1747.89, "fy23": 2175, "fy24": 2262, "fy25": 2301 },
+      { "label": "EBITDA", "fy22": 202.01, "fy23": 259, "fy24": 207, "fy25": 630 },
+      { "label": "PBT", "fy22": 175.07, "fy23": 171, "fy24": 184, "fy25": -27 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 132.23, "fy23": 58, "fy24": 102, "fy25": -3 },
+      { "label": "EPS", "fy22": 117.32, "fy23": 104.7, "fy24": 108.25, "fy25": -0.21 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 11.6, "fy23": 10.99, "fy24": 9.19, "fy25": 6.52 },
+      { "label": "Net Profit Margin (%)", "fy22": 7.56, "fy23": 5.43, "fy24": 5.42, "fy25": -0.3 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 117.32, "fy23": 104.7, "fy24": 108.25, "fy25": -0.21 }
+    ],
+    "investorInsight": [
+      "Strong revenue growth and brand leadership in premium laminates.",
+      "High book value per share (₹1223).",
+      "Moderate debt levels with solid asset base."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 476.18, "fy23": 442, "fy24": 1275, "fy25": 1219 },
+      { "label": "CWIP", "fy22": 140.92, "fy23": 504, "fy24": 37, "fy25": 42.5 },
+      { "label": "Investments", "fy22": 358.76, "fy23": 144, "fy24": 138, "fy25": 208 },
+      { "label": "Trade Receivables", "fy22": 165.38, "fy23": 175, "fy24": 215, "fy25": 202 },
+      { "label": "Inventory", "fy22": 427.3, "fy23": 581, "fy24": 589, "fy25": 654.5 },
+      { "label": "Other Assets", "fy22": 289.95, "fy23": 384, "fy24": 305, "fy25": 271 },
+      { "label": "Total Assets", "fy22": 1868.98, "fy23": 2310, "fy24": 2599, "fy25": 2527 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 11.27, "fy23": 11.27, "fy24": 11.27, "fy25": 11.27 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 1149.04, "fy23": 1237, "fy24": 1549, "fy25": 1536 },
+      { "label": "Borrowings", "fy22": 295.1, "fy23": 595, "fy24": 722, "fy25": 702 },
+      { "label": "Trade Payables", "fy22": 239.58, "fy23": 204, "fy24": 268, "fy25": 316 },
+      { "label": "Other Liabilities", "fy22": 173.07, "fy23": 252.73, "fy24": 250.73, "fy25": 221.73 },
+      { "label": "Total Liabilities", "fy22": 1868.98, "fy23": 2310, "fy24": 2599, "fy25": 2527 }
+    ],
+    "insights": "Debt to Equity ratio of 0.52. Strong reserves and asset base."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.52.",
+  "balanceSheetInsights": "Healthy balance sheet with significant fixed assets, inventory, and reserves. Moderate leverage.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -74.55, "fy23": 184, "fy24": 270, "fy25": 93 },
+      { "label": "Cash from Investing Activities", "fy22": -126.39, "fy23": -459, "fy24": -84, "fy25": -19 },
+      { "label": "Cash from Financing Activities", "fy22": 248.18, "fy23": 246, "fy24": -15, "fy25": -102 }
+    ],
+    "insights": [
+      "Positive operating cash flow in recent years.",
+      "Capex for capacity expansion."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Promoter Family)", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Family-promoted and professionally managed company with strong promoter involvement.",
+  "management": [
+    { "name": "Prakash Lohia", "role": "Chairman & Managing Director", "experience": "Decades in Laminates Industry" },
+    { "name": "Prasan Lohia", "role": "Whole Time Director", "experience": "" },
+    { "name": "Bikash Lohia", "role": "Whole Time Director", "experience": "" },
+    { "name": "Ruchira Lohia", "role": "Whole Time Director", "experience": "" },
+    { "name": "Madhusudan Lohia", "role": "Whole Time Director", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "C B Management Services",
+    "website": "https://www.cbmsl.com/"
+  },
+  "managementInsight": "Focus on innovation in premium laminates, capacity expansion, sustainability, and maintaining market leadership in decorative surfaces.",
+  "faq": [
+    {
+      "question": "How to buy Merino Industries Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Merino Industries Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Merino Industries Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Merino Industries Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Merino Industries Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors. For SME IPOs, it is One year."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Merino Industries Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Merino Industries Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 98,
-    "name": "Metropolitan Stock Exchange (MSEI) Unlisted Shares",
-    "price": 4,
+  "id": 98,
+  "name": "Metropolitan Stock Exchange (MSEI)",
+  "price": 6.5,
+  "logo": "/images/preipo/image96.png",
+  "overview": "Metropolitan Stock Exchange of India Limited (MSEI), formerly known as MCX-SX, is a SEBI-recognized national-level stock exchange in India. It operates trading platforms in Equity, Equity Derivatives, Currency Derivatives, Debt, and SME segments. The exchange is focused on enhancing liquidity through market maker programs and strategic capital raises.",
+  "products": [
+    "Equity Trading Platform",
+    "Equity Derivatives",
+    "Currency Derivatives",
+    "Debt Securities",
+    "SME Platform"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Retail Investors",
+    "Institutional Investors",
+    "Brokers & Market Makers",
+    "Listed Companies"
+  ],
+  "shareDetails": {
+    "companyName": "Metropolitan Stock Exchange of India Limited (MSEI) (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹6.5",
+    "marketCapitalization": "₹7150 Crore",
+    "lotSize": "10000 Shares",
+    "52WeekHigh": "₹8",
+    "52WeekLow": "₹2.75",
+    "faceValue": "₹1",
+    "bookValue": "0.36",
+    "peRatio": "N/A",
+    "pbRatio": "18",
+    "debtToEquity": "0",
+    "returnOnEquity": "Negative",
+    "totalOutstandingShares": "11000217033",
+    "isin": "INE312K01010",
     "depository": "NSDL & CDSL",
-    "minLotSize": 10000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image96.png"
+    "pan": "AAFCM6942F",
+    "cin": "U65999MH2008PLC181801",
+    "rta": "KFin Technologies"
   },
-  {
-    "id": 99,
-    "name": "Midland Micro Finance Limited Unlisted Shares",
-    "price": 244,
+  "financials": {
+    "annualReportSummary": "MSEI continues to incur losses due to limited trading volumes. The company is focusing on liquidity enhancement schemes, market maker programs, and capital infusion to revive operations.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 10, "fy23": 9, "fy24": 7, "fy25": 4.3 },
+      { "label": "EBITDA", "fy22": -35, "fy23": -49, "fy24": -54, "fy25": -41.7 },
+      { "label": "PBT", "fy22": -31, "fy23": -18, "fy24": -49, "fy25": -35 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -30, "fy23": -18.7, "fy24": -49, "fy25": -34 },
+      { "label": "EPS", "fy22": -0.06, "fy23": -0.04, "fy24": -0.1, "fy25": -0.06 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": -350, "fy23": -544.44, "fy24": -771.43, "fy25": -969.77 },
+      { "label": "Net Profit Margin (%)", "fy22": -300, "fy23": -207.78, "fy24": -700, "fy25": -790.7 },
+      { "label": "Earning Per Share (Diluted)", "fy22": -0.06, "fy23": -0.04, "fy24": -0.1, "fy25": -0.06 }
+    ],
+    "investorInsight": [
+      "Debt-free balance sheet.",
+      "Significant capital infusion through private placements.",
+      "Liquidity enhancement scheme launched for equity segment.",
+      "Long-term potential as India's third national stock exchange."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 24, "fy23": 14, "fy24": 11.5, "fy25": 8.7 },
+      { "label": "CWIP", "fy22": 2, "fy23": 0.4, "fy24": 0, "fy25": 30 },
+      { "label": "Investments", "fy22": 81, "fy23": 73, "fy24": 49, "fy25": 172 },
+      { "label": "Trade Receivables", "fy22": 4, "fy23": 1, "fy24": 3, "fy25": 0.8 },
+      { "label": "Other Assets", "fy22": 340, "fy23": 210.6, "fy24": 185.5, "fy25": 232.5 },
+      { "label": "Total Assets", "fy22": 451, "fy23": 299, "fy24": 249, "fy25": 444 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 480.5, "fy23": 480.5, "fy24": 480.5, "fy25": 599.5 },
+      { "label": "FV", "fy22": 1, "fy23": 1, "fy24": 1, "fy25": 1 },
+      { "label": "Reserves", "fy22": -220, "fy23": -239, "fy24": -288, "fy25": -203 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 0.58, "fy23": 1, "fy24": 3, "fy25": 0.8 },
+      { "label": "Other Liabilities", "fy22": 189.92, "fy23": 56.5, "fy24": 53.5, "fy25": 46.7 },
+      { "label": "Total Liabilities", "fy22": 451, "fy23": 299, "fy24": 249, "fy25": 444 }
+    ],
+    "insights": "Debt-free with negative reserves due to accumulated losses. Recent equity infusion increasing share capital."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Strong equity base with no borrowings. Cash and investments form major part of assets.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -44.7, "fy23": -172.3, "fy24": -57, "fy25": -68 },
+      { "label": "Cash from Investing Activities", "fy22": 60.5, "fy23": 168, "fy24": 9, "fy25": -133 },
+      { "label": "Cash from Financing Activities", "fy22": -3, "fy23": -3.3, "fy24": -2, "fy25": 235 }
+    ],
+    "insights": [
+      "Persistent negative operating cash flow.",
+      "Funded through equity raises and investment income."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Strategic Investors incl. Zerodha & Groww founders)", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Professionally managed with strong strategic backing from key market participants.",
+  "management": [
+    { "name": "Dinesh C Patwar", "role": "Chairman", "experience": "36 Years" },
+    { "name": "Ms. Latika S. Kundu", "role": "MD & CEO", "experience": "25 Years" },
+    { "name": "Ms. Trishna Guha", "role": "Public Interest Director", "experience": "20+ Years" },
+    { "name": "Mr. Rakesh Kumar Srivastava", "role": "Public Interest Director", "experience": "20+ Years" }
+  ],
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+  "managementInsight": "Focus on liquidity enhancement, market maker programs, and revival of equity trading segment to establish MSEI as a competitive national exchange.",
+  "faq": [
+    {
+      "question": "How to buy Metropolitan Stock Exchange (MSEI) Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Metropolitan Stock Exchange (MSEI) Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell Metropolitan Stock Exchange (MSEI) Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Metropolitan Stock Exchange (MSEI) Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Metropolitan Stock Exchange (MSEI) Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors. For SME IPOs, the lock-in period is of One year."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Metropolitan Stock Exchange (MSEI) Unlisted Shares?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Metropolitan Stock Exchange (MSEI) Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 99,
+  "name": "Midland Micro Finance Limited",
+  "price": 195,
+  "logo": "/images/preipo/image97.jpg",
+  "overview": "Midland Microfinance Limited (MMFL), founded in 2011, is a Kerala-based microfinance institution (MFI) registered with RBI as an NBFC-MFI. The company focuses on providing financial and socially empowering services to women in rural and semi-urban areas through JLG (Joint Liability Group) and individual lending models.",
+  "products": [
+    "Micro Loans (JLG & Individual)",
+    "Income Generating Loans",
+    "Emergency Loans",
+    "Housing & Asset Loans"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Rural & Semi-Urban Women",
+    "Low-Income Households",
+    "Micro Entrepreneurs"
+  ],
+  "shareDetails": {
+    "companyName": "Midland Micro Finance Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹195",
+    "marketCapitalization": "₹1027 Crore",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹195",
+    "52WeekLow": "₹195",
+    "faceValue": "₹10",
+    "bookValue": "120.16",
+    "peRatio": "30.55",
+    "pbRatio": "1.62",
+    "debtToEquity": "3.16",
+    "returnOnEquity": "5.35",
+    "totalOutstandingShares": "52373407",
+    "isin": "INE884Q01015",
     "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image97.jpg"
+    "pan": "AAACS5185A",
+    "cin": "U65923KL2011PLC027893",
+    "rta": "Skyline Financial Services"
   },
-  {
-    "id": 100,
-    "name": "Milton Cycle Industries Limited Unlisted Shares",
-    "price": 244,
+  "financials": {
+    "annualReportSummary": "Midland Microfinance has shown strong growth in its loan portfolio (Advances) and interest income. The company maintains healthy asset quality with low Gross NPA and consistent profitability.",
+    "incomeStatement": [
+      { "label": "Interest Earned", "fy22": 207, "fy23": 355, "fy24": 449, "fy25": 805 },
+      { "label": "Other Income", "fy22": 12, "fy23": 40, "fy24": 84, "fy25": 31 },
+      { "label": "Interest Expended", "fy22": 104, "fy23": 188, "fy24": 204, "fy25": 272 },
+      { "label": "Operating Expenses", "fy22": 9, "fy23": 110, "fy24": 183, "fy25": 294 },
+      { "label": "Provisions and Contingencies", "fy22": 9, "fy23": 51, "fy24": 51, "fy25": 118 },
+      { "label": "PBT", "fy22": 22, "fy23": 47, "fy24": 72, "fy25": 38 },
+      { "label": "PAT", "fy22": 22, "fy23": 47, "fy24": 72, "fy25": 38 },
+      { "label": "EPS", "fy22": 0.98, "fy23": 0.03, "fy24": 0.82, "fy25": 0.4 }
+    ],
+    "keyRatios": [
+      { "label": "Gross NPA (%)", "fy22": 3.67, "fy23": 0.08, "fy24": 2.97, "fy25": 1.47 },
+      { "label": "Net NPA (%)", "fy22": 0.98, "fy23": 0.03, "fy24": 0.82, "fy25": 0.4 },
+      { "label": "Advances", "fy22": 1034, "fy23": 1528, "fy24": 2027, "fy25": 2136 },
+      { "label": "Book Value", "fy22": 59.45, "fy23": 78.37, "fy24": 102.49, "fy25": 119.81 },
+      { "label": "P/B", "fy22": 3.28, "fy23": 2.55, "fy24": 1.9, "fy25": 1.65 },
+      { "label": "ROE (%)", "fy22": 8.13, "fy23": 13.53, "fy24": 14.77, "fy25": 5.35 }
+    ],
+    "investorInsight": [
+      "Strong growth in loan book (Advances).",
+      "Excellent asset quality with very low NPAs.",
+      "Consistent profitability and improving ROE.",
+      "Typical NBFC-MFI debt-to-equity structure."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 11, "fy23": 12, "fy24": 16.5, "fy25": 18 },
+      { "label": "Cash and Balances", "fy22": 482, "fy23": 328, "fy24": 0.5, "fy25": 378 },
+      { "label": "Investments", "fy22": 15, "fy23": 80, "fy24": 52, "fy25": 187 },
+      { "label": "Advances", "fy22": 1034, "fy23": 1528, "fy24": 2027, "fy25": 2136 },
+      { "label": "Other Assets", "fy22": 27, "fy23": 44, "fy24": 52, "fy25": 62 },
+      { "label": "Total Assets", "fy22": 1569, "fy23": 1990, "fy24": 2521, "fy25": 2763 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 65.5, "fy23": 65.5, "fy24": 67.8, "fy25": 52.3 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 225, "fy23": 302, "fy24": 440, "fy25": 587 },
+      { "label": "Borrowings", "fy22": 1129, "fy23": 1138, "fy24": 1864, "fy25": 1980 },
+      { "label": "Deposits", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Liabilities", "fy22": 169.5, "fy23": 204.5, "fy24": 287.4, "fy25": 169.7 },
+      { "label": "Total Liabilities", "fy22": 1569, "fy23": 1990, "fy24": 2521, "fy25": 2763 }
+    ],
+    "insights": "Debt to Equity ratio of 3.16. Strong growth in borrowings to support loan book expansion."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 3.16 (typical for NBFC-MFI).",
+  "balanceSheetInsights": "Healthy growth in Advances with good asset quality. Reserves growing steadily.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -321, "fy23": -388, "fy24": -402, "fy25": -125 },
+      { "label": "Cash from Investing Activities", "fy22": -18, "fy23": -70, "fy24": 0.5, "fy25": -38 },
+      { "label": "Cash from Financing Activities", "fy22": 425.1, "fy23": 567.4, "fy24": 486, "fy25": 198 }
+    ],
+    "insights": [
+      "Negative operating cash flow due to rapid loan book expansion (typical for MFIs).",
+      "Funded through borrowings and equity."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Professionally managed NBFC-MFI with strong focus on women empowerment and financial inclusion.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Skyline Financial Services",
+    "website": "https://www.skylinerta.com/"
+  },
+  "managementInsight": "Focus on responsible lending, low NPA maintenance, and expanding outreach to underserved women in rural India.",
+  "faq": [
+    {
+      "question": "How to buy Midland Micro Finance Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Midland Micro Finance Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Midland Micro Finance Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Midland Micro Finance Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Midland Micro Finance Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Midland Micro Finance Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Midland Micro Finance Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 100,
+  "name": "Milton Cycle Industries Limited",
+  "price": 195,
+  "logo": "/images/preipo/image98.jpg",
+  "overview": "Milton Cycle Industries Limited is engaged in the manufacturing and trading of bicycles, bicycle parts, and related components. The company operates in the cycling industry with a focus on domestic and international markets.",
+  "products": [
+    "Bicycles",
+    "Bicycle Parts & Accessories",
+    "Cycle Components"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Domestic Distributors",
+    "International Buyers",
+    "Retail Customers"
+  ],
+  "shareDetails": {
+    "companyName": "Milton Cycle Industries Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹195",
+    "marketCapitalization": "₹8 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹195",
+    "52WeekLow": "₹195",
+    "faceValue": "₹10",
+    "bookValue": "10",
+    "peRatio": "812.5",
+    "pbRatio": "19.5",
+    "debtToEquity": "0.75",
+    "returnOnEquity": "0.09",
+    "totalOutstandingShares": "420000",
+    "isin": "INE5923H19190",
     "depository": "NSDL ONLY",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image98.jpg"
+    "pan": "AABCM269R",
+    "cin": "U35923HR1990PLC002317",
+    "rta": "MAS Services Limited"
   },
+  "financials": {
+    "annualReportSummary": "Milton Cycle Industries has shown revenue growth in FY24 with improving profitability. The company maintains a lean balance sheet with minimal debt.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy21": 1625, "fy22": 52, "fy23": 118, "fy24": 475 },
+      { "label": "EBITDA", "fy21": -350, "fy22": -198, "fy23": -232, "fy24": 8 },
+      { "label": "PBT", "fy21": -148, "fy22": -454, "fy23": 173, "fy24": 6 },
+      { "label": "Net Profit / Loss (PAT)", "fy21": -102, "fy22": -371, "fy23": 183, "fy24": 1 },
+      { "label": "EPS", "fy21": -24.29, "fy22": -88.33, "fy23": 38.81, "fy24": 0.21 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy21": -19.18, "fy22": -557.69, "fy23": -386.41, "fy24": 1.68 },
+      { "label": "Net Profit Margin (%)", "fy21": -6.59, "fy22": -713.46, "fy23": 381.14, "fy24": 0.21 },
+      { "label": "Earning Per Share (Diluted)", "fy21": -24.29, "fy22": -88.33, "fy23": 38.81, "fy24": 0.21 }
+    ],
+    "investorInsight": [
+      "Significant revenue growth in FY24.",
+      "Turned profitable in FY23-FY24 after previous losses.",
+      "Extremely high P/E due to low base.",
+      "Minimal debt profile."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy21": 406, "fy22": 436, "fy23": 360, "fy24": 125 },
+      { "label": "Investments", "fy21": 205, "fy22": 205, "fy23": 205, "fy24": 205 },
+      { "label": "Trade Receivables", "fy21": 1549, "fy22": 1532, "fy23": 1434, "fy24": 1073 },
+      { "label": "Inventory", "fy21": 368, "fy22": 327, "fy23": 172, "fy24": 101 },
+      { "label": "Other Assets", "fy21": 1353, "fy22": 1599, "fy23": 1450, "fy24": 2127 },
+      { "label": "Total Assets", "fy21": 3991, "fy22": 4099, "fy23": 3631, "fy24": 3631 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy21": 4.2, "fy22": 4.2, "fy23": 4.2, "fy24": 4.2 },
+      { "label": "FV", "fy21": 10, "fy22": 10, "fy23": 10, "fy24": 10 },
+      { "label": "Reserves", "fy21": 1812, "fy22": 931, "fy23": 1075, "fy24": 1016 },
+      { "label": "Borrowings", "fy21": 0, "fy22": 0, "fy23": 0, "fy24": 0 },
+      { "label": "Trade Payables", "fy21": 2238, "fy22": 2233, "fy23": 2235, "fy24": 1272 },
+      { "label": "Other Liabilities", "fy21": 401, "fy22": 890, "fy23": 281, "fy24": 1273 },
+      { "label": "Total Liabilities", "fy21": 3991, "fy22": 4099, "fy23": 3631, "fy24": 3631 }
+    ],
+    "insights": "Debt-free company. Significant reduction in trade payables in FY24."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.75.",
+  "balanceSheetInsights": "Debt-free balance sheet with stable asset base.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy21": 247, "fy22": 50, "fy23": -830, "fy24": 603 },
+      { "label": "Cash from Investing Activities", "fy21": 301, "fy22": 102, "fy23": -691, "fy24": 209 },
+      { "label": "Cash from Financing Activities", "fy21": -468, "fy22": -142, "fy23": -8, "fy24": 212.5 }
+    ],
+    "insights": [
+      "Fluctuating cash flows due to changes in working capital.",
+      "Debt-free with no major borrowing activity."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Not Available", "institutional": "Not Available", "public": "Not Available" }
+  ],
+  "promotersManagement": "Professional management team with experience in cycle manufacturing industry.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "MAS Services Limited",
+    "website": "https://www.masserv.com/"
+  },
+  "managementInsight": "Focus on improving operational efficiency and revenue growth in the bicycle manufacturing segment.",
+  "faq": [
+    {
+      "question": "How to buy Milton Cycle Industries Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Milton Cycle Industries Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Milton Cycle Industries Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Milton Cycle Industries Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Milton Cycle Industries Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Milton Cycle Industries Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Milton Cycle Industries Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 101,
-    "name": "Mohan Meakin Limited Unlisted Shares",
-    "price": 2657,
+  "id": 101,
+  "name": "Mohan Meakin Limited",
+  "price": 2195,
+  "logo": "/images/preipo/image99.jpg",
+  "overview": "Mohan Meakin Limited, established in 1855 by Edward Abraham Dyer, is one of India's oldest and most iconic breweries and distilleries. The company is a pioneer in brewing with brands like Old Monk Rum and Golden Eagle Beer. It has a rich heritage and strong brand equity in the alcoholic beverages industry.",
+  "products": [
+    "Old Monk Rum",
+    "Golden Eagle Beer",
+    "Mohan Meakin Beer",
+    "Other Spirits & Alcoholic Beverages"
+  ],
+  "manufacturingUnits": [
+    "Solan Brewery (Himachal Pradesh)",
+    "Mohan Nagar (Ghaziabad, Uttar Pradesh)",
+    "Other facilities across India"
+  ],
+  "clients": [
+    "Wholesale Distributors",
+    "Retail Outlets",
+    "Hospitality Sector"
+  ],
+  "shareDetails": {
+    "companyName": "Mohan Meakin Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹2195",
+    "marketCapitalization": "₹1883 Crore",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹2325",
+    "52WeekLow": "₹2195",
+    "faceValue": "₹5",
+    "bookValue": "556.16",
+    "peRatio": "18.83",
+    "pbRatio": "3.95",
+    "debtToEquity": "0.01",
+    "returnOnEquity": "21.9",
+    "totalOutstandingShares": "8508479",
+    "isin": "INE136D01018",
     "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image99.jpg"
+    "pan": "AAACM6485E",
+    "cin": "L15520HP1934PLC000135",
+    "rta": "Beetal Financial & Computer Services"
   },
+  "financials": {
+    "annualReportSummary": "Mohan Meakin has delivered consistent revenue growth with healthy profitability. The company benefits from strong brand equity and operates with minimal debt.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1370.41, "fy23": 1771, "fy24": 1930, "fy25": 2151 },
+      { "label": "EBITDA", "fy22": 67.63, "fy23": 88, "fy24": 111, "fy25": 133 },
+      { "label": "PBT", "fy22": 58.97, "fy23": 91, "fy24": 116, "fy25": 138 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 51.45, "fy23": 68, "fy24": 100, "fy25": 103 },
+      { "label": "EPS", "fy22": 60.53, "fy23": 80, "fy24": 100, "fy25": 121.18 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 4.94, "fy23": 4.97, "fy24": 5.75, "fy25": 6.18 },
+      { "label": "Net Profit Margin (%)", "fy22": 3.76, "fy23": 3.84, "fy24": 5.18, "fy25": 4.79 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 60.53, "fy23": 80, "fy24": 100, "fy25": 121.18 }
+    ],
+    "investorInsight": [
+      "Strong revenue growth and improving margins.",
+      "Iconic brands like Old Monk with high consumer loyalty.",
+      "Almost debt-free balance sheet.",
+      "Consistent profitability and high ROE."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 81.21, "fy23": 72, "fy24": 84, "fy25": 91 },
+      { "label": "CWIP", "fy22": 8.02, "fy23": 10, "fy24": 12, "fy25": 12 },
+      { "label": "Investments", "fy22": 3.73, "fy23": 4, "fy24": 7, "fy25": 10 },
+      { "label": "Trade Receivables", "fy22": 76.34, "fy23": 98, "fy24": 116, "fy25": 112 },
+      { "label": "Inventory", "fy22": 89.87, "fy23": 117, "fy24": 132, "fy25": 151 },
+      { "label": "Other Assets", "fy22": 109.69, "fy23": 135, "fy24": 186, "fy25": 276 },
+      { "label": "Total Assets", "fy22": 348.86, "fy23": 436, "fy24": 535, "fy25": 652 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 4.25, "fy23": 4.25, "fy24": 4.25, "fy25": 4.25 },
+      { "label": "FV", "fy22": 5, "fy23": 5, "fy24": 5, "fy25": 5 },
+      { "label": "Reserves", "fy22": 208.86, "fy23": 276, "fy24": 362, "fy25": 468 },
+      { "label": "Borrowings", "fy22": 1.62, "fy23": 4, "fy24": 4.2, "fy25": 4.2 },
+      { "label": "Trade Payables", "fy22": 77.62, "fy23": 91, "fy24": 98, "fy25": 105 },
+      { "label": "Other Liabilities", "fy22": 55.33, "fy23": 56.75, "fy24": 68.75, "fy25": 72.55 },
+      { "label": "Total Liabilities", "fy22": 348.86, "fy23": 436, "fy24": 535, "fy25": 652 }
+    ],
+    "insights": "Almost debt-free with strong reserves growth."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.01 (Almost debt-free).",
+  "balanceSheetInsights": "Healthy balance sheet with growing reserves and minimal leverage.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 88.09, "fy23": 82, "fy24": 97, "fy25": 181 },
+      { "label": "Cash from Investing Activities", "fy22": -40.01, "fy23": -52, "fy24": -71, "fy25": -89 },
+      { "label": "Cash from Financing Activities", "fy22": -1, "fy23": -0.5, "fy24": -1, "fy25": -0.2 }
+    ],
+    "insights": [
+      "Strong operating cash flow generation.",
+      "Capex for capacity expansion."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Mohan Family)", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Family-promoted and professionally managed company with strong promoter involvement.",
+  "management": [
+    { "name": "Mr. Hemant Mohan", "role": "Managing Director", "experience": "Vast expertise in brewing and distillation" },
+    { "name": "Mr. Vinay Mohan", "role": "Non-Executive Director", "experience": "Marketing & Administration" },
+    { "name": "Mrs. Shalini Mohan", "role": "Non-Executive Director", "experience": "Company Management" },
+    { "name": "Mr. Yash Kumar Sehgal", "role": "Chairman (Independent)", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Beetal Financial & Computer Services",
+    "website": "https://www.beetalfinancial.com/"
+  },
+  "managementInsight": "Focus on brand strengthening, capacity expansion, and maintaining leadership in the Indian alcoholic beverages market.",
+  "faq": [
+    {
+      "question": "How to buy Mohan Meakin Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Mohan Meakin Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Mohan Meakin Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Mohan Meakin Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Mohan Meakin Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Mohan Meakin Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Mohan Meakin Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 102,
+  "name": "Motilal Oswal Home Finance Limited",
+  "price": 11.5,
+  "logo": "/images/preipo/image100.jpg",
+  "overview": "Motilal Oswal Home Finance Limited is a housing finance company focused on providing home loans, loan against property, and other mortgage-backed financing solutions. It is part of the renowned Motilal Oswal Group and caters primarily to self-employed and salaried customers in Tier II and Tier III cities.",
+  "products": [
+    "Home Loans",
+    "Loan Against Property (LAP)",
+    "Construction Finance",
+    "Mortgage Loans"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Salaried Individuals",
+    "Self-Employed Professionals",
+    "Small Business Owners"
+  ],
+  "shareDetails": {
+    "companyName": "Motilal Oswal Home Finance Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹11.5",
+    "marketCapitalization": "₹9962 Crore",
+    "lotSize": "2000 Shares",
+    "52WeekHigh": "₹18",
+    "52WeekLow": "₹11",
+    "faceValue": "₹1",
+    "bookValue": "2.36",
+    "peRatio": "54.76",
+    "pbRatio": "4.87",
+    "debtToEquity": "2.59",
+    "returnOnEquity": "9.1",
+    "totalOutstandingShares": "605392579",
+    "isin": "Not Available",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACO2234F",
+    "cin": "U65922MH2016PLC281071",
+    "rta": "Link Intime"
+  },
+  "financials": {
+    "annualReportSummary": "Motilal Oswal Home Finance has shown steady growth in its loan book (Advances) and interest income. The company is focusing on asset quality and controlled expansion in the housing finance segment.",
+    "incomeStatement": [
+      { "label": "Interest Earned", "fy22": 500, "fy23": 513, "fy24": 558, "fy25": 608 },
+      { "label": "Other Income", "fy22": 17, "fy23": 18.5, "fy24": 31, "fy25": 44 },
+      { "label": "Interest Expended", "fy22": 229, "fy23": 218.5, "fy24": 250, "fy25": 267 },
+      { "label": "Operating Expenses", "fy22": 108, "fy23": 119, "fy24": 155, "fy25": 216 },
+      { "label": "Provisions and Contingencies", "fy22": 73, "fy23": 19, "fy24": 12, "fy25": 18 },
+      { "label": "PBT", "fy22": 95, "fy23": 158, "fy24": 132, "fy25": 130 },
+      { "label": "PAT", "fy22": 95, "fy23": 158, "fy24": 132, "fy25": 130 },
+      { "label": "EPS", "fy22": 1.64, "fy23": 0.23, "fy24": 0.22, "fy25": 0.21 }
+    ],
+    "keyRatios": [
+      { "label": "Gross NPA (%)", "fy22": 0.9, "fy23": 0.55, "fy24": 0.42, "fy25": 0.87 },
+      { "label": "Advances", "fy22": 3634, "fy23": 5772, "fy24": 4032, "fy25": 4858 },
+      { "label": "Book Value", "fy22": 1.67, "fy23": 1.9, "fy24": 2.15, "fy25": 2.36 },
+      { "label": "P/B", "fy22": 6.38, "fy23": 7.36, "fy24": 7.04, "fy25": 8.78 },
+      { "label": "ROE (%)", "fy22": 9.64, "fy23": 11.85, "fy24": 10.26, "fy25": 9.1 }
+    ],
+    "investorInsight": [
+      "Steady growth in interest income.",
+      "Healthy asset quality with low NPAs.",
+      "Part of reputed Motilal Oswal Group.",
+      "Debt to Equity of 2.59 (typical for Housing Finance Company)."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 8, "fy23": 13, "fy24": 13, "fy25": 18 },
+      { "label": "Cash and Balances", "fy22": 273, "fy23": 319, "fy24": 472, "fy25": 829 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Advances", "fy22": 3634, "fy23": 5772, "fy24": 4032, "fy25": 4858 },
+      { "label": "Other Assets", "fy22": 48, "fy23": 64, "fy24": 35, "fy25": 49 },
+      { "label": "Total Assets", "fy22": 3765, "fy23": 6148, "fy24": 4552, "fy25": 5530 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 602.7, "fy23": 603.3, "fy24": 603.79, "fy25": 605.3 },
+      { "label": "FV", "fy22": 1, "fy23": 1, "fy24": 1, "fy25": 1 },
+      { "label": "Reserves", "fy22": 404, "fy23": 544, "fy24": 685, "fy25": 823 },
+      { "label": "Borrowings", "fy22": 2608, "fy23": 2880, "fy24": 2994, "fy25": 3703 },
+      { "label": "Deposits", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Liabilities", "fy22": 150.3, "fy23": 111.7, "fy24": 271.21, "fy25": 398.7 },
+      { "label": "Total Liabilities", "fy22": 3765, "fy23": 6148, "fy24": 4552, "fy25": 5530 }
+    ],
+    "insights": "Debt to Equity ratio of 2.59. Strong growth in borrowings to support loan book."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 2.59.",
+  "balanceSheetInsights": "Healthy loan book growth supported by borrowings. Strong capital position.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 175, "fy23": -229, "fy24": 30, "fy25": -569 },
+      { "label": "Cash from Investing Activities", "fy22": -19, "fy23": -5, "fy24": -21, "fy25": 18 },
+      { "label": "Cash from Financing Activities", "fy22": -264, "fy23": 289, "fy24": 108, "fy25": 719 }
+    ],
+    "insights": [
+      "Negative operating cash flow in some years due to loan book expansion (typical for HFCs).",
+      "Funded through borrowings and equity."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Motilal Oswal Group)", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Part of Motilal Oswal Financial Services Group with strong promoter backing.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on expanding housing finance portfolio while maintaining strong asset quality and risk management.",
+  "faq": [
+    {
+      "question": "How to buy Motilal Oswal Home Finance Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Motilal Oswal Home Finance Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Motilal Oswal Home Finance Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Motilal Oswal Home Finance Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Motilal Oswal Home Finance Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Motilal Oswal Home Finance Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Motilal Oswal Home Finance Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 103,
+  "name": "NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited)",
+  "price": 162,
+  "logo": "/images/preipo/image101.png",
+  "overview": "NCL Buildtek Limited (previously NCL Alltek & Seccolor Limited) is a leading manufacturer of technical construction and insulating coating products in India. The company has strong technical collaboration with Atlas Plasters (Sweden) and has been widely used under varied climatic conditions in Europe, the Middle East, Africa, and India.",
+  "products": [
+    "Technical Construction Chemicals",
+    "Insulating Coating Products",
+    "Atlas Plasters Range",
+    "Waterproofing & Protective Coatings"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in India"
+  ],
+  "clients": [
+    "Construction Companies",
+    "Real Estate Developers",
+    "Infrastructure Projects"
+  ],
+  "shareDetails": {
+    "companyName": "NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹162",
+    "marketCapitalization": "₹211 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹245",
+    "52WeekLow": "₹158",
+    "faceValue": "₹10",
+    "bookValue": "208.75",
+    "peRatio": "4.79",
+    "pbRatio": "0.87",
+    "debtToEquity": "0.37",
+    "returnOnEquity": "19.01",
+    "totalOutstandingShares": "11569700",
+    "isin": "INE262D01018",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACN8390G",
+    "cin": "U72200TG1986PLC008601",
+    "rta": "Venture Capital and Corporate Investments"
+  },
+  "financials": {
+    "annualReportSummary": "NCL Buildtek has shown consistent revenue growth with improving profitability. The company benefits from strong technical expertise and demand for specialized construction chemicals.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 407.48, "fy23": 450, "fy24": 435, "fy25": 406 },
+      { "label": "EBITDA", "fy22": 11.87, "fy23": 32, "fy24": 38, "fy25": 52 },
+      { "label": "PBT", "fy22": 8.97, "fy23": 19, "fy24": 27, "fy25": 44.89 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 8.04, "fy23": 19, "fy24": 27, "fy25": 44.89 },
+      { "label": "EPS", "fy22": 6.96, "fy23": 18.52, "fy24": 23.36, "fy25": 38.28 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 2.92, "fy23": 7.11, "fy24": 8.74, "fy25": 12.81 },
+      { "label": "Net Profit Margin (%)", "fy22": 1.97, "fy23": 4.22, "fy24": 6.21, "fy25": 11.08 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 6.96, "fy23": 18.52, "fy24": 23.36, "fy25": 38.28 }
+    ],
+    "investorInsight": [
+      "Steady revenue with improving margins.",
+      "Strong technical collaboration with Swedish partner.",
+      "Low debt profile.",
+      "Healthy growth in construction chemicals segment."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 60.59, "fy23": 54, "fy24": 82, "fy25": 85 },
+      { "label": "CWIP", "fy22": 7.5, "fy23": 7, "fy24": 12, "fy25": 3 },
+      { "label": "Investments", "fy22": 29.29, "fy23": 30, "fy24": 38, "fy25": 11 },
+      { "label": "Trade Receivables", "fy22": 89.79, "fy23": 84, "fy24": 94, "fy25": 98 },
+      { "label": "Inventory", "fy22": 57.79, "fy23": 59, "fy24": 81, "fy25": 76 },
+      { "label": "Other Assets", "fy22": 46.54, "fy23": 65, "fy24": 81, "fy25": 92 },
+      { "label": "Total Assets", "fy22": 308.3, "fy23": 339, "fy24": 438, "fy25": 463 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 11.56, "fy23": 11.5, "fy24": 11.56, "fy25": 11.56 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 140.83, "fy23": 158, "fy24": 181, "fy25": 220 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 4, "fy24": 4.2, "fy25": 4.2 },
+      { "label": "Trade Payables", "fy22": 103.97, "fy23": 95, "fy24": 105.6, "fy25": 85 },
+      { "label": "Other Liabilities", "fy22": 51.94, "fy23": 70.5, "fy24": 88.64, "fy25": 142.24 },
+      { "label": "Total Liabilities", "fy22": 308.3, "fy23": 339, "fy24": 438, "fy25": 463 }
+    ],
+    "insights": "Debt to Equity ratio of 0.37. Strong reserves growth."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.37.",
+  "balanceSheetInsights": "Healthy balance sheet with low debt and growing reserves.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 9.86, "fy23": 42, "fy24": 51, "fy25": 51 },
+      { "label": "Cash from Investing Activities", "fy22": -5.87, "fy23": -5, "fy24": -71, "fy25": 0.42 },
+      { "label": "Cash from Financing Activities", "fy22": -4.87, "fy23": -0.26, "fy24": -0.28, "fy25": -0.29 }
+    ],
+    "insights": [
+      "Positive operating cash flow.",
+      "Controlled capex."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Professionally managed company with strong promoter backing.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Venture Capital and Corporate Investments",
+    "website": ""
+  },
+  "managementInsight": "Focus on innovation in construction chemicals, technical collaboration with international partners, and expanding presence in domestic and export markets.",
+  "faq": [
+    {
+      "question": "How to buy NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares?",
+      "answer": "Please find below the procedure for buying NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares?",
+      "answer": "Please find below the procedure for selling NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors. For SME IPOs, the lock-in period is of One year."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 104,
+  "name": "NCL Holdings Limited",
+  "price": 108,
+  "logo": "/images/preipo/image102.jpg",
+  "overview": "NCL Holdings Limited is a holding company engaged in the acquisition of companies in the building material segment. It holds stakes in NCL Buildtek and other group companies. The company is involved in manufacturing, trading, and services in the construction and building materials sector.",
+  "products": [],
+  "manufacturingUnits": [],
+  "clients": [],
+  "shareDetails": {
+    "companyName": "NCL Holdings Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹108",
+    "marketCapitalization": "₹52 Crore",
+    "lotSize": "250 Shares",
+    "52WeekHigh": "₹150",
+    "52WeekLow": "₹95",
+    "faceValue": "₹10",
+    "bookValue": "172.48",
+    "peRatio": "3.87",
+    "pbRatio": "0.83",
+    "debtToEquity": "1.72",
+    "returnOnEquity": "18.94",
+    "totalOutstandingShares": "5748638",
+    "isin": "Not Available",
+    "depository": "NSDL & CDSL",
+    "pan": "AAACN8971M",
+    "cin": "U65922TG2018PLC126684",
+    "rta": "Venture Capital and Corporate Investments"
+  },
+  "financials": {
+    "annualReportSummary": "NCL Holdings has shown significant revenue growth with improving profitability. The company maintains a strong book value and is focused on holding and growing its stakes in building material companies.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 21.08, "fy23": 98, "fy24": 41, "fy25": 62 },
+      { "label": "EBITDA", "fy22": 11.8, "fy23": 30.81, "fy24": 16.9, "fy25": 28.28 },
+      { "label": "PBT", "fy22": 3.67, "fy23": 15, "fy24": 7, "fy25": 21 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 1.8, "fy23": 10, "fy24": 8, "fy25": 17 },
+      { "label": "EPS", "fy22": 3.11, "fy23": 17.3, "fy24": 10.53, "fy25": 29.41 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 5.51, "fy23": 30.81, "fy24": 43.9, "fy25": 43.23 },
+      { "label": "Net Profit Margin (%)", "fy22": 8.55, "fy23": 10.2, "fy24": 16.83, "fy25": 27.42 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 3.11, "fy23": 17.3, "fy24": 10.53, "fy25": 29.41 }
+    ],
+    "investorInsight": [
+      "Strong growth in profitability and margins.",
+      "High ROE of 18.94%.",
+      "Part of the reputed NCL Group.",
+      "Healthy book value per share."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 11.61, "fy23": 95, "fy24": 94, "fy25": 94 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 82.5, "fy23": 0, "fy24": 54, "fy25": 36 },
+      { "label": "Trade Receivables", "fy22": 2.15, "fy23": 3, "fy24": 20, "fy25": 36 },
+      { "label": "Inventory", "fy22": 104.71, "fy23": 56, "fy24": 52, "fy25": 54 },
+      { "label": "Other Assets", "fy22": 27.8, "fy23": 65, "fy24": 50, "fy25": 78 },
+      { "label": "Total Assets", "fy22": 229.68, "fy23": 223, "fy24": 270, "fy25": 298 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 5.78, "fy23": 5.78, "fy24": 5.7, "fy25": 5.78 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 90.52, "fy23": 83, "fy24": 88, "fy25": 84 },
+      { "label": "Borrowings", "fy22": 98.68, "fy23": 116, "fy24": 176, "fy25": 184 },
+      { "label": "Trade Payables", "fy22": 3.67, "fy23": 1, "fy24": 1, "fy25": 2 },
+      { "label": "Other Liabilities", "fy22": 63.43, "fy23": 82.22, "fy24": 19.3, "fy25": 27.22 },
+      { "label": "Total Liabilities", "fy22": 229.68, "fy23": 223, "fy24": 270, "fy25": 298 }
+    ],
+    "insights": "Debt to Equity ratio of 1.72. Moderate leverage with strong equity base."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 1.72.",
+  "balanceSheetInsights": "Stable asset base with focus on investments and inventory. Borrowings used for business operations.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 26.79, "fy23": 35, "fy24": 26, "fy25": 51 },
+      { "label": "Cash from Investing Activities", "fy22": -19.58, "fy23": 3, "fy24": -69, "fy25": 221.4 },
+      { "label": "Cash from Financing Activities", "fy22": -4.82, "fy23": 9, "fy24": 27, "fy25": -43.68 }
+    ],
+    "insights": [
+      "Positive operating cash flow.",
+      "Significant investing activities in recent years."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (NCL Group)", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Part of the NCL Group with strong promoter backing.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Venture Capital and Corporate Investments",
+    "website": ""
+  },
+  "managementInsight": "Focus on holding and growing stakes in building material companies and expanding presence in manufacturing, trading, and services.",
+  "faq": [
+    {
+      "question": "How to buy NCL Holdings Unlisted Shares?",
+      "answer": "Please find below the procedure for buying NCL Holdings Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell NCL Holdings Unlisted Shares?",
+      "answer": "Please find below the procedure for selling NCL Holdings Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of NCL Holdings Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in NCL Holdings?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying NCL Holdings Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 102,
-    "name": "Motilal Oswal Home Finance Limited Unlisted Shares",
-    "price": 17,
+  "id": 105,
+  "name": "NSE India Limited",
+  "price": 1925,
+  "logo": "/images/preipo/NSE.png",
+  "overview": "National Stock Exchange of India Limited (NSE) is the leading stock exchange in India and the second largest in the world by number of trades. It offers a modern, fully automated electronic screen-based trading platform in various segments including equity, equity derivatives, currency derivatives, debt, and SME. NSE launched electronic screen-based trading in 1994 and internet trading in 2000.",
+  "products": [
+    "Equity Trading",
+    "Equity Derivatives (Futures & Options)",
+    "Currency Derivatives",
+    "Debt Market",
+    "SME Platform",
+    "Mutual Fund Distribution",
+    "Index Services"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Retail Investors",
+    "Institutional Investors",
+    "Brokers & Trading Members",
+    "Listed Companies"
+  ],
+  "shareDetails": {
+    "companyName": "NSE India Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹1925",
+    "marketCapitalization": "₹47436 Crore",
+    "lotSize": "250 Shares",
+    "52WeekHigh": "₹2400",
+    "52WeekLow": "₹1625",
+    "faceValue": "₹1",
+    "bookValue": "122.48",
+    "peRatio": "39.09",
+    "pbRatio": "15.7",
+    "debtToEquity": "0",
+    "returnOnEquity": "40.15",
+    "totalOutstandingShares": "2475000000",
+    "isin": "INE721D01013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 2000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image100.jpg"
+    "pan": "AAECN7192A",
+    "cin": "U67120MH1992PLC069769",
+    "rta": "Link Intime"
   },
+  "financials": {
+    "annualReportSummary": "NSE India has shown robust revenue growth driven by higher trading volumes across segments. The company maintains a debt-free balance sheet with exceptional profitability and return ratios.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 8929, "fy23": 11858, "fy24": 14780, "fy25": 17161 },
+      { "label": "EBITDA", "fy22": 6530, "fy23": 8583, "fy24": 10781, "fy25": 12861 },
+      { "label": "PBT", "fy22": 6192, "fy23": 9913, "fy24": 11004, "fy25": 16208 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 5198, "fy23": 7601, "fy24": 8468, "fy25": 12188 },
+      { "label": "EPS", "fy22": 105.01, "fy23": 151.54, "fy24": 169.82, "fy25": 493.26 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 72.8, "fy23": 81.23, "fy24": 78.35, "fy25": 75.15 },
+      { "label": "Net Profit Margin (%)", "fy22": 58.21, "fy23": 63.27, "fy24": 56.67, "fy25": 71.3 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 105.01, "fy23": 151.54, "fy24": 169.82, "fy25": 493.26 }
+    ],
+    "investorInsight": [
+      "Dominant market position with highest trading volumes in India.",
+      "Extremely high profitability and ROE.",
+      "Completely debt-free balance sheet.",
+      "Strong cash generation and consistent dividend payouts."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 1129, "fy23": 1007, "fy24": 1004, "fy25": 1188 },
+      { "label": "CWIP", "fy22": 90, "fy23": 98, "fy24": 32, "fy25": 31 },
+      { "label": "Investments", "fy22": 12356, "fy23": 17305, "fy24": 30292, "fy25": 30924 },
+      { "label": "Trade Receivables", "fy22": 1814, "fy23": 1849, "fy24": 1865, "fy25": 1912 },
+      { "label": "Other Assets", "fy22": 19987.5, "fy23": 18565, "fy24": 62094, "fy25": 85764 },
+      { "label": "Total Assets", "fy22": 38607.5, "fy23": 38864, "fy24": 65464, "fy25": 89847 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 49.5, "fy23": 49.5, "fy24": 49.5, "fy25": 217.5 },
+      { "label": "FV", "fy22": 1, "fy23": 1, "fy24": 1, "fy25": 1 },
+      { "label": "Reserves", "fy22": 11835, "fy23": 20209, "fy24": 23925, "fy25": 30105 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 23902, "fy23": 262, "fy24": 332, "fy25": 452 },
+      { "label": "Other Liabilities", "fy22": 2821, "fy23": 18343.5, "fy24": 41157.5, "fy25": 59072.5 },
+      { "label": "Total Liabilities", "fy22": 38607.5, "fy23": 38864, "fy24": 65464, "fy25": 89847 }
+    ],
+    "insights": "Completely debt-free with massive reserves and investments."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Extremely strong and liquid balance sheet. Large cash and investment corpus.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 5822, "fy23": 1785, "fy24": 2974, "fy25": 4091 },
+      { "label": "Cash from Investing Activities", "fy22": -4185, "fy23": -3217, "fy24": -8356, "fy25": -5558 },
+      { "label": "Cash from Financing Activities", "fy22": -1258, "fy23": -2920, "fy24": -3994, "fy25": -6160 }
+    ],
+    "insights": [
+      "Strong operating cash flow.",
+      "Significant investments in growth and technology infrastructure."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Institutional & Strategic)", "institutional": "High", "public": "Low" }
+  ],
+  "promotersManagement": "Governed by a high-caliber board with representatives from leading financial institutions.",
+  "management": [
+    { "name": "Mr. Girish Chandra Chaturvedi", "role": "Chairman", "experience": "Distinguished Public Servant" },
+    { "name": "Mr. Vikram Limaye", "role": "Managing Director & CEO", "experience": "Veteran in Financial Markets" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on technology leadership, market integrity, innovation in new products, and maintaining NSE's position as India's premier stock exchange.",
+  "faq": [
+    {
+      "question": "How to buy NSE India Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying NSE India Limited Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell NSE India Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling NSE India Limited Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of NSE India Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in NSE India Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying NSE India Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 106,
+  "name": "National Commodity & Derivatives Exchange (NCDEX) Limited",
+  "price": 405,
+  "logo": "/images/preipo/image104.jpg",
+  "overview": "National Commodity & Derivatives Exchange Limited (NCDEX) is a premier on-line commodity exchange in India, specializing in a diverse range of agricultural and non-agricultural derivative products. It is a public limited company and a SEBI-recognized commodity exchange. NCDEX began operations on December 15, 2003.",
+  "products": [
+    "Agricultural Commodity Derivatives",
+    "Non-Agricultural Commodity Derivatives",
+    "Futures & Options Trading"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Farmers & Agri Businesses",
+    "Commodity Traders",
+    "Institutional Investors",
+    "Processors & Exporters"
+  ],
+  "shareDetails": {
+    "companyName": "National Commodity & Derivatives Exchange (NCDEX) Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹405",
+    "marketCapitalization": "₹3633 Crore",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹210",
+    "52WeekLow": "₹158",
+    "faceValue": "₹10",
+    "bookValue": "172.48",
+    "peRatio": "15.39",
+    "pbRatio": "4.78",
+    "debtToEquity": "0",
+    "returnOnEquity": "31.48",
+    "totalOutstandingShares": "8956473",
+    "isin": "INE270I01010",
+    "depository": "NSDL & CDSL",
+    "pan": "AABCN479D",
+    "cin": "U51909MH2002PLC135893",
+    "rta": "Link Intime"
+  },
+  "financials": {
+    "annualReportSummary": "NCDEX has shown stable revenue with improving profitability. The company maintains a debt-free balance sheet and benefits from its position as a leading commodity exchange in India.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 115, "fy23": 104, "fy24": 96, "fy25": 88 },
+      { "label": "EBITDA", "fy22": -35, "fy23": -88, "fy24": -65, "fy25": -83 },
+      { "label": "PBT", "fy22": -17, "fy23": -58, "fy24": -35, "fy25": -279 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -12, "fy23": -42, "fy24": -35, "fy25": 46.15 },
+      { "label": "EPS", "fy22": -2.37, "fy23": -8.29, "fy24": -5.52, "fy25": 46.57 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": -30.43, "fy23": -63.68, "fy24": -67.71, "fy25": -94.32 },
+      { "label": "Net Profit Margin (%)", "fy22": -10.43, "fy23": -40.38, "fy24": -36.46, "fy25": 52.44 },
+      { "label": "Earning Per Share (Diluted)", "fy22": -2.37, "fy23": -8.29, "fy24": -5.52, "fy25": 46.57 }
+    ],
+    "investorInsight": [
+      "Debt-free balance sheet.",
+      "Focus on expanding commodity derivatives market.",
+      "Strategic importance as a key player in India's agri-commodity ecosystem."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 10, "fy23": 8, "fy24": 4.3, "fy25": 3.8 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 1.6, "fy25": 1.8 },
+      { "label": "Investments", "fy22": 36, "fy23": 88, "fy24": 115, "fy25": 328 },
+      { "label": "Trade Receivables", "fy22": 29, "fy23": 32, "fy24": 25, "fy25": 23 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Assets", "fy22": 856, "fy23": 748, "fy24": 658, "fy25": 855.2 },
+      { "label": "Total Assets", "fy22": 931, "fy23": 876, "fy24": 861, "fy25": 1216 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 50.68, "fy23": 50.68, "fy24": 50.68, "fy25": 50.68 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 455, "fy23": 424, "fy24": 625, "fy25": 899 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 11, "fy23": 9, "fy24": 9, "fy25": 10 },
+      { "label": "Other Liabilities", "fy22": 414.32, "fy23": 392.32, "fy24": 358.32, "fy25": 488.32 },
+      { "label": "Total Liabilities", "fy22": 931, "fy23": 876, "fy24": 861, "fy25": 1216 }
+    ],
+    "insights": "Debt-free company with strong reserves."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Strong liquidity and investment portfolio. Debt-free balance sheet.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -181, "fy23": -97, "fy24": -55, "fy25": 12 },
+      { "label": "Cash from Investing Activities", "fy22": 52, "fy23": 97, "fy24": 98, "fy25": 80 },
+      { "label": "Cash from Financing Activities", "fy22": -8, "fy23": -28, "fy24": -1, "fy25": -1 }
+    ],
+    "insights": [
+      "Negative operating cash flow in earlier years improving.",
+      "Investment income supporting cash flows."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Institutional & Strategic)", "institutional": "High", "public": "Low" }
+  ],
+  "promotersManagement": "Professionally managed with strong institutional backing.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on increasing trading volumes, product innovation, and strengthening position as a leading commodity derivatives exchange in India.",
+  "faq": [
+    {
+      "question": "How to buy National Commodity & Derivatives Exchange (NCDEX) Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying NCDEX Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell National Commodity & Derivatives Exchange (NCDEX) Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling NCDEX Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of NCDEX Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in NCDEX?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying NCDEX Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 103,
-    "name": "NCL Buildtek Limited (Previously NCL Alltek & Seccolor Limited) Unlisted Shares",
-    "price": 285,
+  "id": 107,
+  "name": "National E-Repository Limited (NeRL)",
+  "price": 58,
+  "logo": "/images/preipo/image105.png",
+  "overview": "National E-Repository Limited (NeRL) is a critical institution in India's commodities market. It serves as an electronic registry for warehouse receipts, enabling transparent and efficient trading, financing, and settlement of commodities. It is promoted by leading institutions including NCDEX, NABARD, and ICICI Bank.",
+  "products": [
+    "Electronic Warehouse Receipt (e-WR) Management",
+    "Commodity Repository Services",
+    "Digital Pledge Financing",
+    "Commodity Trade Settlement Support"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Warehouses & Depositories",
+    "Commodity Traders",
+    "Banks & Financiers",
+    "Farmers & Agri Businesses"
+  ],
+  "shareDetails": {
+    "companyName": "National E-Repository Limited (NeRL) (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹58",
+    "marketCapitalization": "₹470 Crore",
+    "lotSize": "2000 Shares",
+    "52WeekHigh": "₹69",
+    "52WeekLow": "₹47",
+    "faceValue": "₹10",
+    "bookValue": "6.91",
+    "peRatio": "N/A",
+    "pbRatio": "8.39",
+    "debtToEquity": "0",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "81004165",
+    "isin": "INE762K01013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image101.png"
+    "pan": "AAFCP493R",
+    "cin": "U93090MH2017PLC291035",
+    "rta": "Link Intime"
   },
+  "financials": {
+    "annualReportSummary": "NeRL is in the early growth stage with low revenue but stable operations. The company is focused on expanding the adoption of electronic warehouse receipts in the Indian commodity ecosystem.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 10, "fy23": 7, "fy24": 9, "fy25": 9.5 },
+      { "label": "EBITDA", "fy22": -4, "fy23": -4, "fy24": -5, "fy25": -5.8 },
+      { "label": "PBT", "fy22": -4, "fy23": -7, "fy24": -7, "fy25": -7.8 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": -3, "fy23": -5, "fy24": -5, "fy25": -4.16 },
+      { "label": "EPS", "fy22": -0.37, "fy23": -0.62, "fy24": -0.62, "fy25": -0.49 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": -40, "fy23": -57.14, "fy24": -55.56, "fy25": -61.05 },
+      { "label": "Net Profit Margin (%)", "fy22": -30, "fy23": -71.43, "fy24": -55.56, "fy25": -43.79 },
+      { "label": "Earning Per Share (Diluted)", "fy22": -0.37, "fy23": -0.62, "fy24": -0.62, "fy25": -0.49 }
+    ],
+    "investorInsight": [
+      "Debt-free company.",
+      "Strategic importance in India's commodity ecosystem.",
+      "Backed by major institutions (NCDEX, NABARD, ICICI Bank).",
+      "Growth potential with increasing digitalization of warehouse receipts."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 11, "fy23": 6, "fy24": 2.5, "fy25": 0.98 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0.3, "fy24": 0.4, "fy25": 0.8 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy22": 2, "fy23": 1.5, "fy24": 1.8, "fy25": 1.97 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Assets", "fy22": 59, "fy23": 59.2, "fy24": 57.3, "fy25": 54.25 },
+      { "label": "Total Assets", "fy22": 72, "fy23": 67, "fy24": 62, "fy25": 58 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 81, "fy23": 81, "fy24": 81, "fy25": 81 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": -20, "fy23": -26, "fy24": -31, "fy25": -35 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 0.8, "fy23": 0.8, "fy24": 0.54, "fy25": 1 },
+      { "label": "Other Liabilities", "fy22": 10.2, "fy23": 11.2, "fy24": 11.46, "fy25": 11 },
+      { "label": "Total Liabilities", "fy22": 72, "fy23": 67, "fy24": 62, "fy25": 58 }
+    ],
+    "insights": "Debt-free with negative reserves due to accumulated losses. Small but stable balance sheet."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Lean and debt-free balance sheet. Focus on technology and infrastructure.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 11, "fy23": -3.95, "fy24": -4.87, "fy25": -0.12 },
+      { "label": "Cash from Investing Activities", "fy22": -0.75, "fy23": 3.76, "fy24": 6.4, "fy25": 4.35 },
+      { "label": "Cash from Financing Activities", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 }
+    ],
+    "insights": [
+      "Stable cash position with minimal capex.",
+      "Debt-free operations."
+    ]
+  },
+  "shareholding": [
+    { "year": "2025", "promoters": "NCDEX (51%)", "institutional": "NABARD (13%) + ICICI Bank", "public": "Others" }
+  ],
+  "promotersManagement": "Promoted by NCDEX with participation from NABARD and ICICI Bank.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focus on increasing electronic warehouse receipt adoption, enhancing transparency, and supporting commodity financing ecosystem in India.",
+  "faq": [
+    {
+      "question": "How to buy National E-Repository Limited (NeRL) Unlisted Shares?",
+      "answer": "Please find below the procedure for buying NeRL Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell National E-Repository Limited (NeRL) Unlisted Shares?",
+      "answer": "Please find below the procedure for selling NeRL Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of NeRL Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in NeRL?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying NeRL Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 104,
-    "name": "NCL Holdings Unlisted Shares",
-    "price": 160,
+  "id": 108,
+  "name": "Nilliampathy Tea & Produce Company Limited",
+  "price": 549,
+  "logo": "/images/preipo/image107.jpg",
+  "overview": "Nilliampathy Tea & Produce Company Limited is engaged in the cultivation, manufacture, and sale of tea. The company operates tea estates and is involved in the production of high-quality tea in South India.",
+  "products": [
+    "Tea (Green Leaf & Processed)",
+    "Tea Produce"
+  ],
+  "manufacturingUnits": [
+    "Tea Estates in Nilliampathy Region, Kerala"
+  ],
+  "clients": [
+    "Tea Traders",
+    "Exporters",
+    "Domestic Buyers"
+  ],
+  "shareDetails": {
+    "companyName": "Nilliampathy Tea & Produce Company Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹549",
+    "marketCapitalization": "₹0 Crore",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹549",
+    "52WeekLow": "₹549",
+    "faceValue": "N/A",
+    "bookValue": "N/A",
+    "peRatio": "N/A",
+    "pbRatio": "N/A",
+    "debtToEquity": "N/A",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "0",
+    "isin": "N/A",
     "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image102.jpg"
+    "pan": "N/A",
+    "cin": "N/A",
+    "rta": "N/A"
   },
-  {
-    "id": 105,
-    "name": "NSE India Limited Unlisted Shares",
-    "price": 2438,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/NSE.png"
+  "financials": {
+    "annualReportSummary": "No financial data available on the page.",
+    "incomeStatement": [],
+    "keyRatios": [],
+    "investorInsight": [
+      "Limited information available.",
+      "Tea plantation company based in South India."
+    ]
   },
-  {
-    "id": 106,
-    "name": "National Commodity & Derivatives Exchange (NCDEX) Limited Unlisted Shares",
-    "price": 600,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image104.jpg"
+  "balanceSheet": {
+    "assets": [],
+    "liabilities": [],
+    "insights": "No data available."
   },
-  {
-    "id": 107,
-    "name": "National E-Repository Limited (NeRL)",
-    "price": 78,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 2000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image105.png"
+  "liabilitiesBreakdown": "N/A",
+  "balanceSheetInsights": "No data available.",
+  "cashFlow": {
+    "data": [],
+    "insights": []
   },
-  {
-    "id": 108,
-    "name": "Nilliampathy Tea & Produce Company Limites Unlisted Shares",
-    "price": 687,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image107.jpg"
+  "shareholding": [
+    { "year": "Recent", "promoters": "N/A", "institutional": "N/A", "public": "N/A" }
+  ],
+  "promotersManagement": "N/A",
+  "management": [
+    { "name": "N/A", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "N/A",
+    "website": ""
   },
+  "managementInsight": "N/A",
+  "faq": [
+    {
+      "question": "How to buy Nilliampathy Tea & Produce Company Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Nilliampathy Tea & Produce Company Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Nilliampathy Tea & Produce Company Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Nilliampathy Tea & Produce Company Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Nilliampathy Tea & Produce Company Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Nilliampathy Tea & Produce Company Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Nilliampathy Tea & Produce Company Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
 
    {
   "id": 109,
@@ -27539,23 +29206,266 @@ The Indian hospitality sector is witnessing strong tailwinds from rising domesti
   "managementInsight": "Under Ritesh Agarwal’s leadership, OYO has evolved from a high-growth, loss-making startup to a profitability-focused organization with strong operational discipline. The professional executive team brings deep expertise in hospitality, finance, and technology. Corporate governance has improved with better cost controls and transparency, boosting investor confidence ahead of the anticipated IPO. The vision centers on leveraging technology for scalable, asset-light growth while expanding into premium segments globally."
 },
 {
-    "id": 110,
-    "name": "ORBIS FINANCIAL CORPORATION Unlisted Shares",
-    "price": 582,
+  "id": 110,
+  "name": "ORBIS FINANCIAL CORPORATION",
+  "price": 405,
+  "logo": "/images/preipo/image107.jpg",
+  "overview": "Orbis Financial Corporation Limited is a SEBI-registered Custodian of Securities and a Clearing member at the market segments in Gurgaon, Haryana. It is a leading financial services company dedicated towards investor servicing in securities, commodities, currency & fund accounting services, commodity clearing, equity derivatives clearing, and currency derivatives clearing.",
+  "products": [
+    "Custody Services",
+    "Clearing & Settlement Services",
+    "Fund Accounting Services",
+    "Commodity Clearing",
+    "Equity & Currency Derivatives Clearing"
+  ],
+  "manufacturingUnits": [],
+  "clients": [
+    "Institutional Investors",
+    "Mutual Funds",
+    "Foreign Portfolio Investors (FPIs)",
+    "Brokers & Trading Members"
+  ],
+  "shareDetails": {
+    "companyName": "ORBIS FINANCIAL CORPORATION (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹405",
+    "marketCapitalization": "₹5031 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹565",
+    "52WeekLow": "₹405",
+    "faceValue": "₹10",
+    "bookValue": "73.19",
+    "peRatio": "24.55",
+    "pbRatio": "5.33",
+    "debtToEquity": "0",
+    "returnOnEquity": "22.8",
+    "totalOutstandingShares": "12422602",
+    "isin": "INE559D01013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image107.jpg"
+    "pan": "AAACP9388P",
+    "cin": "U67120DL2005PLC139892",
+    "rta": "Skyline Financial Services"
   },
-  {
-    "id": 111,
-    "name": "Onix Renewable Limited",
-    "price": 95,
+  "financials": {
+    "annualReportSummary": "Orbis Financial has shown strong revenue growth with healthy profitability. The company maintains a debt-free balance sheet and benefits from its position as a leading custodian and clearing member.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 154, "fy23": 297, "fy24": 424, "fy25": 566 },
+      { "label": "EBITDA", "fy22": 38, "fy23": 161, "fy24": 240, "fy25": 376 },
+      { "label": "PBT", "fy22": 50, "fy23": 162, "fy24": 265, "fy25": 386.4 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 40.92, "fy23": 90, "fy24": 131.25, "fy25": 205 },
+      { "label": "EPS", "fy22": 5.2, "fy23": 7.92, "fy24": 11.59, "fy25": 16.5 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 38.96, "fy23": 55.22, "fy24": 58.75, "fy25": 67.45 },
+      { "label": "Net Profit Margin (%)", "fy22": 31.62, "fy23": 30.3, "fy24": 33.25, "fy25": 36.87 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 5.2, "fy23": 7.92, "fy24": 11.59, "fy25": 16.5 }
+    ],
+    "investorInsight": [
+      "Strong revenue and profitability growth.",
+      "Debt-free balance sheet.",
+      "Key player in custody and clearing services.",
+      "High ROE and improving margins."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 10, "fy23": 9.3, "fy24": 16, "fy25": 26 },
+      { "label": "CWIP", "fy22": 0.2, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 92, "fy23": 162, "fy24": 97, "fy25": 80 },
+      { "label": "Trade Receivables", "fy22": 8.8, "fy23": 30, "fy24": 35, "fy25": 96 },
+      { "label": "Other Assets", "fy22": 3813, "fy23": 4838.28, "fy24": 4839, "fy25": 4098 },
+      { "label": "Total Assets", "fy22": 3924, "fy23": 5040, "fy24": 4985, "fy25": 4296 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 91.3, "fy23": 113.6, "fy24": 121.7, "fy25": 131.22 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 128.7, "fy23": 381.4, "fy24": 566, "fy25": 775 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 31, "fy23": 77, "fy24": 84.3, "fy25": 78 },
+      { "label": "Other Liabilities", "fy22": 3670, "fy23": 4634, "fy24": 4213.3, "fy25": 3318.78 },
+      { "label": "Total Liabilities", "fy22": 3924, "fy23": 5040, "fy24": 4985, "fy25": 4296 }
+    ],
+    "insights": "Debt-free company with strong reserves growth."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 (Debt-free).",
+  "balanceSheetInsights": "Strong balance sheet with no borrowings and healthy liquidity.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -441, "fy23": -182, "fy24": 25, "fy25": -109 },
+      { "label": "Cash from Investing Activities", "fy22": 768, "fy23": -77, "fy24": 88, "fy25": 2 },
+      { "label": "Cash from Financing Activities", "fy22": -10.9, "fy23": 92, "fy24": 28, "fy25": -107 }
+    ],
+    "insights": [
+      "Fluctuating operating cash flow due to business nature.",
+      "Debt-free with strong investment activities."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Professionally managed financial services company.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Skyline Financial Services",
+    "website": "https://www.skylinerta.com/"
+  },
+  "managementInsight": "Focus on providing high-quality custody, clearing, and fund accounting services to institutional clients.",
+  "faq": [
+    {
+      "question": "How to buy ORBIS FINANCIAL CORPORATION Unlisted Shares?",
+      "answer": "Please find below the procedure for buying ORBIS FINANCIAL CORPORATION Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "How to sell ORBIS FINANCIAL CORPORATION Unlisted Shares?",
+      "answer": "Please find below the procedure for selling ORBIS FINANCIAL CORPORATION Unlisted Shares at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of ORBIS FINANCIAL CORPORATION Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in ORBIS FINANCIAL CORPORATION?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying ORBIS FINANCIAL CORPORATION Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 111,
+  "name": "Onix Renewable Limited",
+  "price": 68,
+  "logo": "/images/preipo/image108.jpg",
+  "overview": "Onix Renewable Limited is a pioneering company in India, focused on delivering innovative solutions across various sectors, including renewable energy (Independent Power Producer), EPC (Engineering, Procurement, and Construction), energy management, wind, solar, storage, utility, hybrid, green hydrogen, R&D, and power generation. The company also operates in manufacturing of solar panels.",
+  "products": [
+    "Solar Power Projects",
+    "Wind Energy Solutions",
+    "Green Hydrogen Projects",
+    "Energy Storage Systems",
+    "EPC Services for Renewables"
+  ],
+  "manufacturingUnits": [
+    "Solar Panel Manufacturing Facility"
+  ],
+  "clients": [
+    "Power Utilities",
+    "Industrial Clients",
+    "Government & Infrastructure Projects"
+  ],
+  "shareDetails": {
+    "companyName": "Onix Renewable Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹68",
+    "marketCapitalization": "₹743 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹13600",
+    "52WeekLow": "₹57",
+    "faceValue": "₹10",
+    "bookValue": "85.47",
+    "peRatio": "8.46",
+    "pbRatio": "1.04",
+    "debtToEquity": "0.25",
+    "returnOnEquity": "18.3",
+    "totalOutstandingShares": "109231784",
+    "isin": "INE0TG701015",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image108.jpg"
+    "pan": "AADCC8197L",
+    "cin": "U31901GJ2014PLC080979",
+    "rta": "MUFG Intime India"
   },
+  "financials": {
+    "annualReportSummary": "Onix Renewable has shown explosive revenue growth from ₹100 Cr in FY22 to ₹1001 Cr in FY25 with significant improvement in profitability. The company is rapidly scaling its renewable energy projects and manufacturing capabilities.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 100, "fy23": 148, "fy24": 391, "fy25": 1001 },
+      { "label": "EBITDA", "fy22": 3, "fy23": 12, "fy24": 56.52, "fy25": 156.8 },
+      { "label": "PBT", "fy22": 2, "fy23": 11, "fy24": 52.7, "fy25": 136 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 2, "fy23": 9, "fy24": 33.4, "fy25": 115 },
+      { "label": "EPS", "fy22": 12.9, "fy23": 58.06, "fy24": 235.05, "fy25": 463.17 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 3, "fy23": 8.22, "fy24": 18.22, "fy25": 15.68 },
+      { "label": "Net Profit Margin (%)", "fy22": 2, "fy23": 6.18, "fy24": 11.25, "fy25": 11.49 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 12.9, "fy23": 58.06, "fy24": 235.05, "fy25": 463.17 }
+    ],
+    "investorInsight": [
+      "Explosive revenue growth in renewable energy sector.",
+      "Strong profitability improvement in FY24-FY25.",
+      "High growth potential in solar, wind, and green hydrogen."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 7.5, "fy23": 7.35, "fy24": 10.8, "fy25": 12.4 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 0, "fy23": 1, "fy24": 0, "fy25": 0.12 },
+      { "label": "Trade Receivables", "fy22": 7, "fy23": 18, "fy24": 134, "fy25": 263 },
+      { "label": "Inventory", "fy22": 9.5, "fy23": 21, "fy24": 106, "fy25": 91.4 },
+      { "label": "Other Assets", "fy22": 18, "fy23": 80, "fy24": 495.6, "fy25": 1073 },
+      { "label": "Total Assets", "fy22": 36, "fy23": 90, "fy24": 495.17, "fy25": 1073 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 1.55, "fy23": 1.55, "fy24": 1.67, "fy25": 2.38 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 8.8, "fy23": 17, "fy24": 95.8, "fy25": 703 },
+      { "label": "Borrowings", "fy22": 1.0, "fy23": 15, "fy24": 149.3, "fy25": 107 },
+      { "label": "Trade Payables", "fy22": 7, "fy23": 4.3, "fy24": 34.8, "fy25": 50 },
+      { "label": "Other Liabilities", "fy22": 6.85, "fy23": 14.65, "fy24": 185, "fy25": 87.62 },
+      { "label": "Total Liabilities", "fy22": 36, "fy23": 90, "fy24": 495.17, "fy25": 1073 }
+    ],
+    "insights": "Rapid balance sheet expansion due to project execution. Debt to Equity of 0.25."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.25.",
+  "balanceSheetInsights": "Strong growth in assets and reserves reflecting successful project execution.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 11, "fy23": -3.95, "fy24": -4.87, "fy25": -0.12 },
+      { "label": "Cash from Investing Activities", "fy22": -0.75, "fy23": 3.76, "fy24": 6.4, "fy25": 4.35 },
+      { "label": "Cash from Financing Activities", "fy22": 5, "fy23": 26, "fy24": 1075, "fy25": 565 }
+    ],
+    "insights": [
+      "Heavy financing activities in FY24-FY25 for project expansion.",
+      "Working capital intensive business."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Led by professionals with expertise in renewable energy sector.",
+  "management": [
+    { "name": "Not Available on page", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "MUFG Intime India",
+    "website": "https://in.mu-fg.com/"
+  },
+  "managementInsight": "Focus on expanding renewable energy portfolio including solar, wind, green hydrogen, and EPC services.",
+  "faq": [
+    {
+      "question": "How to buy Onix Renewable Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for buying Onix Renewable Limited at UnlistedZone."
+    },
+    {
+      "question": "How to sell Onix Renewable Limited Unlisted Shares?",
+      "answer": "Please find below the procedure for selling Onix Renewable Limited at UnlistedZone."
+    },
+    {
+      "question": "What is the lock-in period of Onix Renewable Limited Unlisted Shares?",
+      "answer": "The lock-in period varies depending on the category of investors."
+    },
+    {
+      "question": "Minimum Ticket Size for investment in Onix Renewable Limited?",
+      "answer": "Through our UnlistedZone platform, the minimum investment required would now be in the range of 35-50k."
+    },
+    {
+      "question": "Is buying Onix Renewable Limited Unlisted Shares legal in India?",
+      "answer": "Yes, buying and selling unlisted shares in India is 100% legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
     "id": 112,
     "name": "Otis Elevator (India) Limited Unlisted Shares",
