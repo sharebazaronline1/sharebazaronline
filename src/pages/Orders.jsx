@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import { IndianRupee, Search, Plus, Minus } from "lucide-react";
-import { fetchPreIPOs } from "../api/mockApi"; // Only Pre-IPOs
+import { fetchPreIPODetails } from "../api/mockApi"; // Only Pre-IPOs
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
 
@@ -29,7 +29,7 @@ const Orders = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const preIpoData = await fetchPreIPOs();
+        const preIpoData = await fetchPreIPODetails();
         setPreIpos(Array.isArray(preIpoData) ? preIpoData : []);
       } catch (err) {
         console.error("Failed to load Pre-IPOs:", err);
