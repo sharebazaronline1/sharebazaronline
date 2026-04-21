@@ -31138,149 +31138,1919 @@ The Indian hospitality sector is witnessing strong tailwinds from rising domesti
   "status": "upcoming"
 },
   {
-    "id": 125,
-    "name": "Roop Telsonic Ultrasonix Limited Unlisted Shares",
-    "price": 235,
+  "id": 125,
+  "name": "Roop Telsonic Ultrasonix Limited",
+  "price": 235,
+  "logo": "/images/preipo/image122.png",
+  "overview": "Roop Telsonic Ultrasonix Limited is engaged in precision manufacturing and ultrasonic welding solutions catering primarily to the automotive and industrial sectors. The company specializes in plastic welding technologies and components used in automobiles, offering high-quality engineered solutions.",
+  "products": [
+    "Ultrasonic Welding Machines",
+    "Plastic Welding Components",
+    "Automotive Plastic Parts",
+    "Precision Engineered Components"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in India (exact locations not disclosed)"
+  ],
+  "clients": [
+    "Automotive OEMs",
+    "Auto Component Manufacturers",
+    "Industrial Manufacturers"
+  ],
+  "shareDetails": {
+    "companyName": "Roop Telsonic Ultrasonix Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹235",
+    "marketCapitalization": "₹131 Crore",
+    "lotSize": "250 Shares",
+    "52WeekHigh": "₹188",
+    "52WeekLow": "₹188",
+    "faceValue": "₹10",
+    "bookValue": "70.48",
+    "peRatio": "2.67",
+    "pbRatio": "3.33",
+    "debtToEquity": "0.28",
+    "returnOnEquity": "5.12",
+    "totalOutstandingShares": "6966500",
+    "isin": "INE010U01011",
     "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/image122.png"
+    "pan": "AAACR2101G",
+    "cin": "U33120MH1982PLC028800",
+    "rta": "N/A"
   },
+  "financials": {
+    "annualReportSummary": "The company has shown moderate revenue growth with fluctuating margins. While EBITDA improved in FY24, profitability declined in FY25 due to margin pressure and higher costs.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 5703, "fy23": 5555, "fy24": 6784, "fy25": 6153 },
+      { "label": "EBITDA", "fy22": 486, "fy23": 538, "fy24": 988, "fy25": 459 },
+      { "label": "PBT", "fy22": 358, "fy23": 518, "fy24": 874, "fy25": 367 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 250, "fy23": 381, "fy24": 594, "fy25": 251 },
+      { "label": "EPS", "fy22": 7.18, "fy23": 3.84, "fy24": 8.53, "fy25": 3.6 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 8.52, "fy23": 9.68, "fy24": 14.56, "fy25": 7.46 },
+      { "label": "Net Profit Margin (%)", "fy22": 4.38, "fy23": 6.86, "fy24": 8.76, "fy25": 4.08 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 7.18, "fy23": 3.84, "fy24": 8.53, "fy25": 3.6 }
+    ],
+    "investorInsight": [
+      "Strong presence in automotive ultrasonic welding segment.",
+      "Improved margins in FY24 but volatility seen in FY25.",
+      "Moderate debt levels with scope for operational improvement."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 1324, "fy23": 1258, "fy24": 1362, "fy25": 2390 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 3, "fy23": 3, "fy24": 3, "fy25": 3 },
+      { "label": "Trade Receivables", "fy22": 726, "fy23": 820, "fy24": 855, "fy25": 800 },
+      { "label": "Inventory", "fy22": 1217, "fy23": 1108, "fy24": 1606, "fy25": 1674 },
+      { "label": "Other Assets", "fy22": 2822, "fy23": 4013, "fy24": 3486, "fy25": 3485 },
+      { "label": "Total Assets", "fy22": 6282, "fy23": 7212, "fy24": 7310, "fy25": 8152 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 348.3, "fy23": 992.7, "fy24": 696.65, "fy25": 696.65 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 3162, "fy23": 3489, "fy24": 4058, "fy25": 4203 },
+      { "label": "Borrowings", "fy22": 1073, "fy23": 791, "fy24": 691, "fy25": 1351 },
+      { "label": "Trade Payables", "fy22": 763, "fy23": 912, "fy24": 1069, "fy25": 1078 },
+      { "label": "Other Liabilities", "fy22": 935.7, "fy23": 1047.3, "fy24": 795.35, "fy25": 823.35 },
+      { "label": "Total Liabilities", "fy22": 6282, "fy23": 7212, "fy24": 7310, "fy25": 8152 }
+    ],
+    "insights": "Increase in assets and borrowings in FY25 indicates expansion but also rising leverage."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.28 indicates moderate leverage.",
+  "balanceSheetInsights": "Growing asset base with increased borrowings; needs monitoring of debt levels.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 810, "fy23": 789, "fy24": 126, "fy25": 543 },
+      { "label": "Cash from Investing Activities", "fy22": -117, "fy23": -45, "fy24": -180, "fy25": -1116 },
+      { "label": "Cash from Financing Activities", "fy22": 19, "fy23": 221, "fy24": -482, "fy25": 526 }
+    ],
+    "insights": [
+      "Operating cash flow declined sharply in FY24 but recovered in FY25.",
+      "Heavy investment outflows in FY25 indicate expansion.",
+      "Financing inflows increased due to higher borrowings."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+  "promotersManagement": "Promoter-driven company with expertise in ultrasonic welding and automotive component manufacturing.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "N/A",
+    "website": ""
+  },
+  "managementInsight": "Focused on expanding ultrasonic welding solutions and strengthening presence in the automotive sector.",
+  "faq": [
+    {
+      "question": "How to buy Roop Telsonic Ultrasonix Limited Unlisted Shares?",
+      "answer": "You can purchase through registered unlisted share platforms or brokers dealing in pre-IPO shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (250 shares) and market price."
+    },
+    {
+      "question": "Is it legal to invest in unlisted shares?",
+      "answer": "Yes, buying unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 126,
-    "name": "Roots Multiclean Limited Unlisted Share",
-    "price": 5000,
+  "id": 126,
+  "name": "Roots Multiclean Limited",
+  "price": 5000,
+  "logo": "/images/preipo/Roots.png",
+  "overview": "Roots Multiclean Limited is India's first mechanized cleaning equipment manufacturer, established in 1992. The company offers a wide range of advanced cleaning solutions including floor scrubbers, sweepers, vacuum cleaners, and industrial cleaning systems. It has a strong presence across industries such as manufacturing, healthcare, hospitality, and municipal services.",
+  "products": [
+    "Floor Scrubbers",
+    "Industrial Sweepers",
+    "Vacuum Cleaners",
+    "High Pressure Washers",
+    "Carpet Cleaners",
+    "Municipal Cleaning Equipment"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facility in India (exact location not specified)"
+  ],
+  "clients": [
+    "Manufacturing Companies",
+    "Hospitals",
+    "Airports",
+    "Railways",
+    "Municipal Corporations",
+    "Facility Management Companies"
+  ],
+  "shareDetails": {
+    "companyName": "Roots Multiclean Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹5000",
+    "marketCapitalization": "₹800 Crore",
+    "lotSize": "10 Shares",
+    "52WeekHigh": "₹4000",
+    "52WeekLow": "₹4000",
+    "faceValue": "₹10",
+    "bookValue": "1475",
+    "peRatio": "16.67",
+    "pbRatio": "2.71",
+    "debtToEquity": "0.23",
+    "returnOnEquity": "16.84",
+    "totalOutstandingShares": "2000000",
+    "isin": "INE09I101013",
     "depository": "NSDL & CDSL",
-    "minLotSize": 10,
-    "status": "upcoming",
-    "logo": "/images/preipo/Roots.png"
+    "pan": "AABCR0315P",
+    "cin": "U36991TZ1992PLC003662",
+    "rta": "Link Intime"
   },
+  "financials": {
+    "annualReportSummary": "The company has demonstrated consistent revenue growth and improving profitability. Margins have expanded steadily, supported by strong demand for mechanized cleaning solutions and efficient cost management.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy21": 269.36, "fy22": 320, "fy23": 392, "fy24": 451 },
+      { "label": "EBITDA", "fy21": 39.97, "fy22": 48, "fy23": 64, "fy24": 78 },
+      { "label": "PBT", "fy21": 28.16, "fy22": 36, "fy23": 50, "fy24": 65 },
+      { "label": "Net Profit / Loss (PAT)", "fy21": 21.09, "fy22": 26, "fy23": 36, "fy24": 48 },
+      { "label": "EPS", "fy21": 105.46, "fy22": 130, "fy23": 180, "fy24": 240 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy21": 14.84, "fy22": 15, "fy23": 16.33, "fy24": 17.29 },
+      { "label": "Net Profit Margin (%)", "fy21": 7.83, "fy22": 8.13, "fy23": 9.18, "fy24": 10.64 },
+      { "label": "Earning Per Share (Diluted)", "fy21": 105.46, "fy22": 130, "fy23": 180, "fy24": 240 }
+    ],
+    "investorInsight": [
+      "Consistent revenue and profit growth over the years.",
+      "Strong return ratios with improving margins.",
+      "Low debt levels indicating financial stability.",
+      "Leader in mechanized cleaning equipment in India."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy21": 96.51, "fy22": 100, "fy23": 106, "fy24": 111 },
+      { "label": "CWIP", "fy21": 5.79, "fy22": 6, "fy23": 4, "fy24": 11 },
+      { "label": "Investments", "fy21": 0.77, "fy22": 1, "fy23": 31, "fy24": 31 },
+      { "label": "Trade Receivables", "fy21": 85.54, "fy22": 71, "fy23": 77, "fy24": 98.5 },
+      { "label": "Inventory", "fy21": 75.19, "fy22": 103, "fy23": 126, "fy24": 126.5 },
+      { "label": "Other Assets", "fy21": 37.61, "fy22": 52, "fy23": 39, "fy24": 55 },
+      { "label": "Total Assets", "fy21": 301.41, "fy22": 333, "fy23": 381, "fy24": 431 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy21": 2, "fy22": 2, "fy23": 2, "fy24": 2 },
+      { "label": "FV", "fy21": 10, "fy22": 10, "fy23": 10, "fy24": 10 },
+      { "label": "Reserves", "fy21": 172.49, "fy22": 198, "fy23": 235, "fy24": 283 },
+      { "label": "Borrowings", "fy21": 54.08, "fy22": 53, "fy23": 63, "fy24": 65 },
+      { "label": "Trade Payables", "fy21": 28.26, "fy22": 10, "fy23": 23, "fy24": 26 },
+      { "label": "Other Liabilities", "fy21": 44.58, "fy22": 70, "fy23": 58, "fy24": 55 },
+      { "label": "Total Liabilities", "fy21": 301.41, "fy22": 333, "fy23": 381, "fy24": 431 }
+    ],
+    "insights": "Healthy balance sheet with growing reserves and controlled debt levels."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.23 indicates low leverage.",
+  "balanceSheetInsights": "Strong reserves growth and stable asset expansion reflect financial strength.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy21": 30.84, "fy22": 29, "fy23": 47, "fy24": 39 },
+      { "label": "Cash from Investing Activities", "fy21": -14.86, "fy22": -11, "fy23": -41, "fy24": -19 },
+      { "label": "Cash from Financing Activities", "fy21": -1.51, "fy22": -12, "fy23": 2, "fy24": -3 }
+    ],
+    "insights": [
+      "Consistent positive operating cash flow.",
+      "Investment outflows indicate expansion.",
+      "Stable financing activities with controlled borrowing."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Moderate", "public": "Low" }
+  ],
+  "promotersManagement": "Promoter-led company with decades of experience in industrial cleaning solutions.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focused on innovation and expanding mechanized cleaning solutions across domestic and international markets.",
+  "faq": [
+    {
+      "question": "How to buy Roots Multiclean Limited Unlisted Shares?",
+      "answer": "You can buy through registered brokers or platforms dealing in unlisted/pre-IPO shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment is based on lot size (10 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, trading in unlisted shares is legal and regulated by SEBI in India."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 127,
-    "name": "Royalcare Super Speciality Hospitals",
-    "price": 178,
+  "id": 127,
+  "name": "Royalcare Super Speciality Hospitals Limited",
+  "price": 178,
+  "logo": "/images/preipo/image124.png",
+  "overview": "Royalcare Super Speciality Hospitals Limited is a multi-specialty hospital based in Coimbatore, Tamil Nadu, established in 2015. The hospital provides comprehensive tertiary healthcare services with advanced infrastructure and a focus on delivering high-quality patient care across various specialties.",
+  "products": [
+    "Multi-specialty Healthcare Services",
+    "Cardiology",
+    "Neurology",
+    "Orthopedics",
+    "Critical Care",
+    "Diagnostic Services"
+  ],
+  "manufacturingUnits": [
+    "Hospital facility located in Coimbatore, Tamil Nadu, India"
+  ],
+  "clients": [
+    "Individual Patients",
+    "Corporate Clients",
+    "Insurance Providers",
+    "Government Health Schemes"
+  ],
+  "shareDetails": {
+    "companyName": "Royalcare Super Speciality Hospitals Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹178",
+    "marketCapitalization": "₹3019 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹160",
+    "52WeekLow": "₹125",
+    "faceValue": "₹10",
+    "bookValue": "17.37",
+    "peRatio": "200",
+    "pbRatio": "9.21",
+    "debtToEquity": "1.34",
+    "returnOnEquity": "7.52",
+    "totalOutstandingShares": "18658678",
+    "isin": "INE02CB01010",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image124.png"
+    "pan": "AAQCR1968R",
+    "cin": "U85100TZ2012PLC018984",
+    "rta": "Link Intime India"
   },
+  "financials": {
+    "annualReportSummary": "The company has shown stable revenue growth, but profitability remains moderate with fluctuating margins. High valuation multiples and rising debt levels are key concerns despite steady operational performance.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 301, "fy23": 305, "fy24": 333, "fy25": 352 },
+      { "label": "EBITDA", "fy22": 68, "fy23": 61, "fy24": 67, "fy25": 52 },
+      { "label": "PBT", "fy22": 21, "fy23": 16, "fy24": 24, "fy25": 16 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 21, "fy23": 16, "fy24": 24, "fy25": 15 },
+      { "label": "EPS", "fy22": 1.28, "fy23": 0.97, "fy24": 1.4, "fy25": 0.8 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 22.59, "fy23": 20, "fy24": 20.12, "fy25": 14.77 },
+      { "label": "Net Profit Margin (%)", "fy22": 6.98, "fy23": 5.25, "fy24": 7.21, "fy25": 4.26 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 1.28, "fy23": 0.97, "fy24": 1.4, "fy25": 0.8 }
+    ],
+    "investorInsight": [
+      "Stable revenue growth in healthcare sector.",
+      "Declining margins in FY25 raise concerns.",
+      "High valuation (P/E ~200) compared to earnings.",
+      "Increasing debt levels impact financial risk."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 331, "fy23": 332, "fy24": 330, "fy25": 325 },
+      { "label": "CWIP", "fy22": 10, "fy23": 12, "fy24": 82, "fy25": 285 },
+      { "label": "Investments", "fy22": 1, "fy23": 1, "fy24": 1, "fy25": 1 },
+      { "label": "Trade Receivables", "fy22": 9, "fy23": 17, "fy24": 23, "fy25": 23 },
+      { "label": "Inventory", "fy22": 6.5, "fy23": 9, "fy24": 13, "fy25": 16.5 },
+      { "label": "Other Assets", "fy22": 47.5, "fy23": 50, "fy24": 96, "fy25": 160.5 },
+      { "label": "Total Assets", "fy22": 405, "fy23": 421, "fy24": 545, "fy25": 811 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 164.37, "fy23": 164.37, "fy24": 171, "fy25": 188.65 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": -16, "fy23": -31, "fy24": 24, "fy25": 129 },
+      { "label": "Borrowings", "fy22": 256, "fy23": 243, "fy24": 291, "fy25": 425 },
+      { "label": "Trade Payables", "fy22": 6, "fy23": 12, "fy24": 30, "fy25": 51 },
+      { "label": "Other Liabilities", "fy22": 24.63, "fy23": 32.63, "fy24": 29, "fy25": 34.35 },
+      { "label": "Total Liabilities", "fy22": 405, "fy23": 421, "fy24": 545, "fy25": 811 }
+    ],
+    "insights": "Significant increase in CWIP and borrowings indicates aggressive expansion with rising financial risk."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 1.34 indicates relatively high leverage.",
+  "balanceSheetInsights": "Rapid asset growth driven by expansion, but accompanied by rising debt and improving reserves.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 83, "fy23": 59, "fy24": 87, "fy25": 53 },
+      { "label": "Cash from Investing Activities", "fy22": -43, "fy23": -26, "fy24": -90, "fy25": -218 },
+      { "label": "Cash from Financing Activities", "fy22": -35, "fy23": -36, "fy24": 25, "fy25": 192 }
+    ],
+    "insights": [
+      "Consistent operating cash flow but declining in FY25.",
+      "Heavy investment outflows due to expansion.",
+      "Financing inflows increased significantly due to higher borrowings."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+  "promotersManagement": "Promoter-driven healthcare company focused on expanding multi-specialty hospital services.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime India",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focused on hospital expansion and improving healthcare infrastructure to cater to growing demand.",
+  "faq": [
+    {
+      "question": "How to buy Royalcare Super Speciality Hospitals Unlisted Shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted/pre-IPO shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (1000 shares) and current market price."
+    },
+    {
+      "question": "Is it legal to invest in unlisted shares?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 128,
+  "name": "S3V Vascular Technologies Limited",
+  "price": 438,
+  "logo": "/images/preipo/image125.png",
+  "overview": "S3V Vascular Technologies Limited is a medical devices company focused on the manufacturing of vascular products used in cardiology and interventional procedures. The company develops specialized products catering to hospitals and healthcare providers, with a focus on innovation in minimally invasive treatments.",
+  "products": [
+    "Vascular Medical Devices",
+    "Cardiology Intervention Products",
+    "Catheters",
+    "Guidewires",
+    "Angioplasty Products"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facility in India (exact location not specified)"
+  ],
+  "clients": [
+    "Hospitals",
+    "Cardiology Centers",
+    "Healthcare Providers",
+    "Medical Distributors"
+  ],
+  "shareDetails": {
+    "companyName": "S3V Vascular Technologies Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹438",
+    "marketCapitalization": "₹632 Crore",
+    "lotSize": "500 Shares",
+    "52WeekHigh": "₹465",
+    "52WeekLow": "₹350",
+    "faceValue": "₹10",
+    "bookValue": "111.24",
+    "peRatio": "116.25",
+    "pbRatio": "4.18",
+    "debtToEquity": "0.13",
+    "returnOnEquity": "0.04",
+    "totalOutstandingShares": "13589284",
+    "isin": "INE0HCT01012",
+    "depository": "NSDL & CDSL",
+    "pan": "AAQCS2303F",
+    "cin": "U33112KA2011PLC059515",
+    "rta": "Aarthi Consultants"
+  },
+  "financials": {
+    "annualReportSummary": "The company has experienced declining revenues and profitability over recent years. Margins have deteriorated significantly, with losses reported at operating and net levels in FY24 and weak recovery in FY25.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 21, "fy23": 19, "fy24": 15, "fy25": 13.5 },
+      { "label": "EBITDA", "fy22": 5.8, "fy23": 3.7, "fy24": 2.5, "fy25": -0.57 },
+      { "label": "PBT", "fy22": 2.8, "fy23": 0.65, "fy24": -3.06, "fy25": 0.15 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 2.7, "fy23": 0.56, "fy24": -3.19, "fy25": 0.06 },
+      { "label": "EPS", "fy22": 2.08, "fy23": 0.42, "fy24": -1.66, "fy25": 0.03 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 27.62, "fy23": 19.47, "fy24": 16.67, "fy25": -4.22 },
+      { "label": "Net Profit Margin (%)", "fy22": 12.86, "fy23": 2.95, "fy24": -21.27, "fy25": 0.44 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 2.08, "fy23": 0.42, "fy24": -1.66, "fy25": 0.03 }
+    ],
+    "investorInsight": [
+      "Declining revenue trend over the last 3 years.",
+      "Negative profitability in FY24 with weak recovery in FY25.",
+      "Very low ROE indicates poor capital efficiency.",
+      "High valuation despite weak financial performance."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 18.7, "fy23": 20, "fy24": 26, "fy25": 53.5 },
+      { "label": "CWIP", "fy22": 2.4, "fy23": 2.8, "fy24": 6.6, "fy25": 15.6 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy22": 31.6, "fy23": 34, "fy24": 37, "fy25": 42 },
+      { "label": "Inventory", "fy22": 5.8, "fy23": 7, "fy24": 13, "fy25": 19 },
+      { "label": "Other Assets", "fy22": 5.7, "fy23": 16.2, "fy24": 95.4, "fy25": 39.9 },
+      { "label": "Total Assets", "fy22": 64, "fy23": 80, "fy24": 178, "fy25": 170 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 13.01, "fy23": 13.21, "fy24": 191.7, "fy25": 191.7 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 22, "fy23": 26, "fy24": 122, "fy25": 122 },
+      { "label": "Borrowings", "fy22": 20, "fy23": 30, "fy24": 25, "fy25": 18 },
+      { "label": "Trade Payables", "fy22": 3, "fy23": 4, "fy24": 4.3, "fy25": 5.7 },
+      { "label": "Other Liabilities", "fy22": 5.99, "fy23": 6.79, "fy24": 7.53, "fy25": 5.13 },
+      { "label": "Total Liabilities", "fy22": 64, "fy23": 80, "fy24": 178, "fy25": 170 }
+    ],
+    "insights": "Sharp increase in equity capital and assets in FY24 suggests capital infusion, but operational performance remains weak."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.13 indicates low leverage.",
+  "balanceSheetInsights": "Despite strong equity infusion, profitability and efficiency remain concerns.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -3.82, "fy23": -1.33, "fy24": -4.84, "fy25": -6.42 },
+      { "label": "Cash from Investing Activities", "fy22": -17, "fy23": -14.4, "fy24": -10.3, "fy25": -31.14 },
+      { "label": "Cash from Financing Activities", "fy22": -0.33, "fy23": 16.5, "fy24": 90.36, "fy25": -9.8 }
+    ],
+    "insights": [
+      "Negative operating cash flow indicates weak core operations.",
+      "Heavy investment outflows continue.",
+      "FY24 saw strong financing inflow due to capital raise."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Promoter-driven medical device company focusing on vascular technologies.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Aarthi Consultants",
+    "website": ""
+  },
+  "managementInsight": "Focused on scaling vascular product portfolio, but currently facing operational and financial challenges.",
+  "faq": [
+    {
+      "question": "How to buy S3V Vascular Technologies Limited Unlisted Shares?",
+      "answer": "Shares can be bought through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (500 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, it is legal and regulated by SEBI in India."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 128,
-    "name": "S3V Vascular Technologies Limited",
-    "price": 438,
+  "id": 129,
+  "name": "SBI Mutual Fund (SBI Funds Management Limited)",
+  "price": 3369,
+  "logo": "/images/preipo/image126.png",
+  "overview": "SBI Funds Management Limited (SBIFML) is one of India's largest asset management companies and a joint venture between State Bank of India and Amundi. The company offers a wide range of mutual fund products and portfolio management services, catering to retail and institutional investors. It is known for its strong brand presence, consistent performance, and robust governance standards.",
+  "products": [
+    "Equity Mutual Funds",
+    "Debt Mutual Funds",
+    "Hybrid Funds",
+    "Exchange Traded Funds (ETFs)",
+    "Portfolio Management Services",
+    "Retirement and Wealth Solutions"
+  ],
+  "manufacturingUnits": [
+    "Asset management operations across India"
+  ],
+  "clients": [
+    "Retail Investors",
+    "Institutional Investors",
+    "Corporates",
+    "High Net Worth Individuals (HNIs)"
+  ],
+  "shareDetails": {
+    "companyName": "SBI Funds Management Limited (Unlisted)",
+    "indicativeUnlistedSharePrice": "₹3369",
+    "marketCapitalization": "₹157437 Crore",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹2775",
+    "52WeekLow": "₹675",
+    "faceValue": "₹1",
+    "bookValue": "20314.35768",
+    "peRatio": "62",
+    "pbRatio": "18.97",
+    "debtToEquity": "0",
+    "returnOnEquity": "30.61",
+    "totalOutstandingShares": "203143768",
+    "isin": "INE640C01020",
     "depository": "NSDL & CDSL",
-    "minLotSize": 500,
-    "status": "upcoming",
-    "logo": "/images/preipo/image125.png"
+    "pan": "AAACB3733D",
+    "cin": "U65999MH1992PLC065828",
+    "rta": "Computer Age Management Services (CAMS)"
   },
+  "financials": {
+    "annualReportSummary": "The company has demonstrated strong and consistent growth in revenue and profitability. With high operating margins, strong return ratios, and zero debt, SBI Mutual Fund remains one of the most financially robust asset management companies in India.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1958, "fy23": 2803, "fy24": 3273, "fy25": 4063 },
+      { "label": "EBITDA", "fy22": 1532, "fy23": 1701, "fy24": 2566, "fy25": 3239 },
+      { "label": "PBT", "fy22": 1439, "fy23": 1782, "fy24": 2686, "fy25": 3379 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 1082, "fy23": 1340, "fy24": 2073, "fy25": 2540 },
+      { "label": "EPS", "fy22": 21.64, "fy23": 26.64, "fy24": 40.98, "fy25": 50.02 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 78.24, "fy23": 73.86, "fy24": 78.4, "fy25": 79.72 },
+      { "label": "Net Profit Margin (%)", "fy22": 55.28, "fy23": 58.18, "fy24": 63.34, "fy25": 62.52 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 21.64, "fy23": 26.64, "fy24": 40.98, "fy25": 50.02 }
+    ],
+    "investorInsight": [
+      "Market leader in Indian asset management industry.",
+      "Consistent revenue and profit growth with strong margins.",
+      "High ROE (~30%) indicating excellent capital efficiency.",
+      "Debt-free company with strong cash generation.",
+      "Premium valuation due to strong fundamentals and brand."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 220, "fy23": 227, "fy24": 257, "fy25": 267 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 3395, "fy23": 4609, "fy24": 5845, "fy25": 8111 },
+      { "label": "Trade Receivables", "fy22": 48, "fy23": 56, "fy24": 108, "fy25": 122.5 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Assets", "fy22": 135, "fy23": 90, "fy24": 97, "fy25": 160.5 },
+      { "label": "Total Assets", "fy22": 3798, "fy23": 4984, "fy24": 7107, "fy25": 8771 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 50, "fy23": 50.3, "fy24": 50.68, "fy25": 50.78 },
+      { "label": "FV", "fy22": 1, "fy23": 1, "fy24": 1, "fy25": 1 },
+      { "label": "Reserves", "fy22": 3536, "fy23": 4701, "fy24": 6897, "fy25": 8247 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 16, "fy23": 15, "fy24": 20, "fy25": 20 },
+      { "label": "Other Liabilities", "fy22": 196, "fy23": 217.7, "fy24": 339.42, "fy25": 453.22 },
+      { "label": "Total Liabilities", "fy22": 3798, "fy23": 4984, "fy24": 7107, "fy25": 8771 }
+    ],
+    "insights": "Strong balance sheet with zero debt and rapidly growing reserves driven by high profitability."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 indicates a completely debt-free structure.",
+  "balanceSheetInsights": "Massive reserve growth and increasing investments highlight strong cash generation and capital allocation.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 1007.92, "fy23": 1199.2, "fy24": 1438, "fy25": 1992 },
+      { "label": "Cash from Investing Activities", "fy22": -8411, "fy23": -9733.3, "fy24": -1304, "fy25": -937 },
+      { "label": "Cash from Financing Activities", "fy22": -171.6, "fy23": -227.7, "fy24": -132, "fy25": -1043 }
+    ],
+    "insights": [
+      "Strong and consistent operating cash flows.",
+      "Heavy investment activity reflects growth and expansion.",
+      "No reliance on debt financing."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Very High (SBI + Amundi)", "institutional": "Moderate", "public": "Low" }
+  ],
+  "promotersManagement": "Backed by State Bank of India and Amundi, bringing strong institutional credibility and global asset management expertise.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Computer Age Management Services (CAMS)",
+    "website": "https://www.camsonline.com/"
+  },
+  "managementInsight": "Focused on expanding AUM, improving digital distribution, and maintaining leadership in India's mutual fund industry.",
+  "faq": [
+    {
+      "question": "How to buy SBI Mutual Fund Unlisted Shares?",
+      "answer": "You can purchase through brokers or platforms dealing in unlisted/pre-IPO shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (50 shares) and prevailing market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 129,
-    "name": "SBI Mutual Fund Unlisted Shares",
-    "price": 3369,
+  "id": 130,
+  "name": "SMILE Microfinance Unlisted Shares",
+  "price": 103,
+  "logo": "/images/preipo/image127.jpg",
+  "overview": "SMILE Microfinance Limited (SML) is a Chennai-based microfinance institution focused on providing financial services to underserved rural and semi-urban populations, especially women entrepreneurs. Established in 2004, the company offers income-generating loans and aims to promote financial inclusion through micro-lending.",
+  "products": [
+    "Micro Loans",
+    "Group Lending (JLG Loans)",
+    "Women Entrepreneurship Financing",
+    "Income Generation Loans"
+  ],
+  "manufacturingUnits": [
+    "Operations across Tamil Nadu and other rural regions in India"
+  ],
+  "clients": [
+    "Women Entrepreneurs",
+    "Rural Borrowers",
+    "Low-Income Households",
+    "Self Help Groups (SHGs)"
+  ],
+  "shareDetails": {
+    "companyName": "SMILE Microfinance Unlisted Shares",
+    "indicativeUnlistedSharePrice": "₹103",
+    "marketCapitalization": "₹142 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹82",
+    "52WeekLow": "₹82",
+    "faceValue": "₹10",
+    "bookValue": "N/A",
+    "peRatio": "N/A",
+    "pbRatio": "N/A",
+    "debtToEquity": "N/A",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "17339639",
+    "isin": "INE786V01012",
     "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image126.png"
+    "pan": "AAACS6614J",
+    "cin": "U67190TN1995PLC030604",
+    "rta": "Cameo Corporate Services"
   },
+  "financials": {
+    "annualReportSummary": "Limited financial data is available publicly. As a microfinance institution, performance depends on loan book growth, asset quality, and collection efficiency.",
+    "incomeStatement": [],
+    "keyRatios": [],
+    "investorInsight": [
+      "Operates in high-growth microfinance sector.",
+      "Focused on financial inclusion and rural lending.",
+      "Lack of financial transparency is a key risk.",
+      "Microfinance businesses are sensitive to credit cycles and regulations."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [],
+    "liabilities": [],
+    "insights": "Detailed balance sheet data not available."
+  },
+  "liabilitiesBreakdown": "Not available due to limited disclosures.",
+  "balanceSheetInsights": "Insufficient data to assess financial strength.",
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flow data not disclosed publicly.",
+      "Microfinance companies typically rely heavily on borrowing for lending operations."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Led by experienced professionals with strong background in microfinance and rural lending.",
+  "management": [
+    { "name": "Alemu Bentiua", "role": "Director", "experience": "20+" },
+    { "name": "V T Prabhakaran", "role": "CEO", "experience": "30+" },
+    { "name": "J Bradley Swinson", "role": "Director", "experience": "20+" }
+  ],
+  "rta": {
+    "registrar": "Cameo Corporate Services",
+    "website": "https://cameoindia.com/"
+  },
+  "managementInsight": "Focused on expanding rural credit access and strengthening micro-lending operations while maintaining asset quality.",
+  "faq": [
+    {
+      "question": "How to buy SMILE Microfinance Unlisted Shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (1000 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 130,
-    "name": "SMILE Microfinance Unlisted Shares",
-    "price": 103,
+  "id": 131,
+  "name": "San Engineering and Locomotive Company Limited Unlisted Shares",
+  "price": 1063,
+  "logo": "/images/preipo/image128.jpg",
+  "overview": "San Engineering and Locomotive Company Limited (SANMAR Group company) is engaged in manufacturing railway components, industrial products, and engineering solutions. Established in 1910, the company has evolved into a multi-product, multi-market enterprise serving both domestic and international markets.",
+  "products": [
+    "Railway Components",
+    "Locomotive Parts",
+    "Industrial Engineering Products",
+    "Custom Fabricated Solutions"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in India (exact locations not specified)"
+  ],
+  "clients": [
+    "Indian Railways",
+    "Industrial Companies",
+    "Export Customers",
+    "Engineering Firms"
+  ],
+  "shareDetails": {
+    "companyName": "San Engineering and Locomotive Company Limited Unlisted Shares",
+    "indicativeUnlistedSharePrice": "₹1063",
+    "marketCapitalization": "₹578 Crore",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹850",
+    "52WeekLow": "₹850",
+    "faceValue": "₹10",
+    "bookValue": "679.68",
+    "peRatio": "7.43",
+    "pbRatio": "1.25",
+    "debtToEquity": "0",
+    "returnOnEquity": "17.44",
+    "totalOutstandingShares": "4450000",
+    "isin": "INEP3H01012",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image127.jpg"
+    "pan": "AAECS3377H",
+    "cin": "U74210KA1973PLC002424",
+    "rta": "Canbank Computer Services"
   },
+  "financials": {
+    "annualReportSummary": "The company has shown strong revenue growth and improving profitability over recent years. Margins have expanded significantly, and the company maintains a debt-free balance sheet, indicating strong financial health.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 137, "fy23": 200, "fy24": 226, "fy25": 286 },
+      { "label": "EBITDA", "fy22": 17, "fy23": 30, "fy24": 40, "fy25": 44 },
+      { "label": "PBT", "fy22": 12, "fy23": 26, "fy24": 37, "fy25": 64 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 8, "fy23": 19, "fy24": 28, "fy25": 51 },
+      { "label": "EPS", "fy22": 17.98, "fy23": 42.7, "fy24": 62.92, "fy25": 114.61 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 12.41, "fy23": 15, "fy24": 17.7, "fy25": 16.54 },
+      { "label": "Net Profit Margin (%)", "fy22": 5.84, "fy23": 9.5, "fy24": 12.39, "fy25": 17.87 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 17.98, "fy23": 42.7, "fy24": 62.92, "fy25": 114.61 }
+    ],
+    "investorInsight": [
+      "Strong revenue and profit growth over 4 years.",
+      "Improving margins indicate operational efficiency.",
+      "Debt-free company with healthy return ratios.",
+      "Attractive valuation (low P/E ~7.4)."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 45, "fy23": 42, "fy24": 50, "fy25": 45 },
+      { "label": "CWIP", "fy22": 0.02, "fy23": 1.6, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 40, "fy23": 45, "fy24": 40, "fy25": 33 },
+      { "label": "Trade Receivables", "fy22": 64, "fy23": 82, "fy24": 107, "fy25": 104 },
+      { "label": "Inventory", "fy22": 52, "fy23": 72, "fy24": 79, "fy25": 94 },
+      { "label": "Other Assets", "fy22": 48.98, "fy23": 52.4, "fy24": 57, "fy25": 98 },
+      { "label": "Total Assets", "fy22": 250, "fy23": 293, "fy24": 333, "fy25": 374 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 4.45, "fy23": 4.45, "fy24": 4.45, "fy25": 4.45 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 197, "fy23": 215, "fy24": 242, "fy25": 288 },
+      { "label": "Borrowings", "fy22": 0.07, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 19, "fy23": 29, "fy24": 47, "fy25": 42 },
+      { "label": "Other Liabilities", "fy22": 29.48, "fy23": 44.55, "fy24": 39.55, "fy25": 39.55 },
+      { "label": "Total Liabilities", "fy22": 250, "fy23": 293, "fy24": 333, "fy25": 374 }
+    ],
+    "insights": "Strong balance sheet with increasing reserves and negligible debt."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 indicates virtually debt-free operations.",
+  "balanceSheetInsights": "Consistent growth in reserves reflects strong profitability and retained earnings.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 24, "fy23": 16, "fy24": 6.8, "fy25": -27 },
+      { "label": "Cash from Investing Activities", "fy22": -21, "fy23": -5, "fy24": -4.3, "fy25": 35 },
+      { "label": "Cash from Financing Activities", "fy22": -1.5, "fy23": 2, "fy24": -0.4, "fy25": -7 }
+    ],
+    "insights": [
+      "Operating cash flow turned negative in FY25, needs monitoring.",
+      "Positive investing inflow in FY25 indicates asset adjustments.",
+      "Minimal reliance on financing activities."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Part of the reputed SANMAR Group with long-standing experience in engineering and manufacturing.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Canbank Computer Services",
+    "website": ""
+  },
+  "managementInsight": "Focused on expanding engineering capabilities and strengthening presence in railway and industrial sectors.",
+  "faq": [
+    {
+      "question": "How to buy San Engineering and Locomotive Company Limited Unlisted Shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (50 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 131,
-    "name": "San Engineering and Locomotive Company Limited Unlisted Shares",
-    "price": 1063,
+  "id": 132,
+  "name": "Schneider Electric President Systems Unlisted Shares",
+  "price": 1563,
+  "logo": "/images/preipo/image129.png",
+  "overview": "Schneider Electric President Systems Limited is a Bangalore-based company engaged in designing, manufacturing, and assembling electrical panels and enclosure systems. Established in 1981, the company operates in the electrical infrastructure and industrial solutions space, catering to various industries with customized panel solutions.",
+  "products": [
+    "Electrical Control Panels",
+    "Power Distribution Panels",
+    "Enclosure Systems",
+    "Industrial Automation Panels"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facility in Bangalore, India"
+  ],
+  "clients": [
+    "Industrial Companies",
+    "Infrastructure Projects",
+    "OEMs",
+    "Electrical Contractors"
+  ],
+  "shareDetails": {
+    "companyName": "Schneider Electric President Systems Unlisted Shares",
+    "indicativeUnlistedSharePrice": "₹1563",
+    "marketCapitalization": "₹2087 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹2100",
+    "52WeekLow": "₹945",
+    "faceValue": "₹10",
+    "bookValue": "173.61",
+    "peRatio": "43.47",
+    "pbRatio": "9.94",
+    "debtToEquity": "0",
+    "returnOnEquity": "24",
+    "totalOutstandingShares": "12096800",
+    "isin": "INE15D01018",
     "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image128.jpg"
+    "pan": "AAACD4163G",
+    "cin": "L32109KA1984PLC007903",
+    "rta": "Link Intime"
   },
+  "financials": {
+    "annualReportSummary": "The company has demonstrated steady revenue growth and strong improvement in profitability over recent years. Margins have expanded significantly, and the company operates with zero debt, reflecting strong financial discipline.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 367, "fy23": 333, "fy24": 393, "fy25": 457 },
+      { "label": "EBITDA", "fy22": 29.5, "fy23": 28, "fy24": 47, "fy25": 60 },
+      { "label": "PBT", "fy22": 21, "fy23": 23, "fy24": 40, "fy25": 65 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 16, "fy23": 17, "fy24": 30, "fy25": 48 },
+      { "label": "EPS", "fy22": 26.67, "fy23": 28.33, "fy24": 50, "fy25": 80 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 8.04, "fy23": 8.41, "fy24": 11.96, "fy25": 13.13 },
+      { "label": "Net Profit Margin (%)", "fy22": 4.36, "fy23": 5.11, "fy24": 7.63, "fy25": 10.5 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 26.67, "fy23": 28.33, "fy24": 50, "fy25": 80 }
+    ],
+    "investorInsight": [
+      "Consistent revenue growth with strong margin expansion.",
+      "Debt-free company with improving return ratios.",
+      "High ROE (~24%) reflects strong operational efficiency.",
+      "Premium valuation (P/E ~43) compared to peers."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 34, "fy23": 31.6, "fy24": 28, "fy25": 28 },
+      { "label": "CWIP", "fy22": 0.8, "fy23": 0.6, "fy24": 0.7, "fy25": 2.2 },
+      { "label": "Investments", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy22": 109, "fy23": 66, "fy24": 119, "fy25": 114 },
+      { "label": "Inventory", "fy22": 33, "fy23": 30, "fy24": 30, "fy25": 38 },
+      { "label": "Other Assets", "fy22": 32.2, "fy23": 67.8, "fy24": 72.3, "fy25": 105.8 },
+      { "label": "Total Assets", "fy22": 209, "fy23": 196, "fy24": 250, "fy25": 288 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 6, "fy23": 6, "fy24": 6, "fy25": 6 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 101, "fy23": 117, "fy24": 146, "fy25": 194 },
+      { "label": "Borrowings", "fy22": 15, "fy23": 0, "fy24": 13, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 66, "fy23": 52, "fy24": 58.5, "fy25": 65 },
+      { "label": "Other Liabilities", "fy22": 21, "fy23": 21, "fy24": 26.5, "fy25": 23 },
+      { "label": "Total Liabilities", "fy22": 209, "fy23": 196, "fy24": 250, "fy25": 288 }
+    ],
+    "insights": "Strong balance sheet with zero net debt and consistent reserve growth."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 indicates debt-free operations.",
+  "balanceSheetInsights": "Increasing reserves and stable assets reflect strong financial health.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 6.8, "fy23": 68.8, "fy24": -0.6, "fy25": 38 },
+      { "label": "Cash from Investing Activities", "fy22": -10.3, "fy23": -3.8, "fy24": -5.1, "fy25": -3 },
+      { "label": "Cash from Financing Activities", "fy22": 0.2, "fy23": -17.5, "fy24": -21, "fy25": -1 }
+    ],
+    "insights": [
+      "Operating cash flow volatile but improved in FY25.",
+      "Consistent investment outflows indicate growth.",
+      "Minimal dependence on external financing."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High (Schneider Group)", "institutional": "Moderate", "public": "Low" }
+  ],
+  "promotersManagement": "Backed by Schneider Electric group, providing strong technological expertise and global presence.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focused on expanding electrical infrastructure solutions and leveraging Schneider Electric’s global expertise.",
+  "faq": [
+    {
+      "question": "How to buy Schneider Electric President Systems Unlisted Shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (1000 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 133,
+  "name": "Shivchem Agro Limited",
+  "price": 90,
+  "logo": "/images/preipo/image130.png",
+  "overview": "Shivchem Agro Limited is an emerging agri-input company focused on manufacturing and distributing innovative crop protection, nutrition, and growth solutions. The company aims to deliver sustainable agricultural inputs to improve farmer productivity and crop yield, with a presence across multiple states in India.",
+  "products": [
+    "Crop Protection Chemicals",
+    "Plant Nutrients",
+    "Growth Enhancers",
+    "Agrochemical Formulations"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in India (exact locations not specified)"
+  ],
+  "clients": [
+    "Farmers",
+    "Agro Dealers",
+    "Distributors",
+    "Agriculture Input Retailers"
+  ],
+  "shareDetails": {
+    "companyName": "Shivchem Agro Limited",
+    "indicativeUnlistedSharePrice": "₹90",
+    "marketCapitalization": "₹40 Crore",
+    "lotSize": "1600 Shares",
+    "52WeekHigh": "₹82",
+    "52WeekLow": "₹72",
+    "faceValue": "₹5",
+    "bookValue": "18.33",
+    "peRatio": "15.35",
+    "pbRatio": "4.15",
+    "debtToEquity": "0.86",
+    "returnOnEquity": "27.14",
+    "totalOutstandingShares": "52728735",
+    "isin": "INECU01023",
+    "depository": "NSDL & CDSL",
+    "pan": "ABDCS5535P",
+    "cin": "U24290DL2019PTC364444",
+    "rta": "Mashitla Securities"
+  },
+  "financials": {
+    "annualReportSummary": "The company has shown strong revenue growth but faces pressure on margins due to rising costs. Profitability remains positive, though margins declined slightly in FY25. High ROE indicates efficient capital utilization.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy24": 1918, "fy25": 2147 },
+      { "label": "EBITDA", "fy24": 196, "fy25": 423 },
+      { "label": "PBT", "fy24": 166, "fy25": 348 },
+      { "label": "Net Profit / Loss (PAT)", "fy24": 124, "fy25": 281 },
+      { "label": "EPS", "fy24": 2.18, "fy25": 4.95 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy24": 17.85, "fy25": 15.4 },
+      { "label": "Net Profit Margin (%)", "fy24": 11.29, "fy25": 9.5 },
+      { "label": "Earning Per Share (Diluted)", "fy24": 2.18, "fy25": 4.95 }
+    ],
+    "investorInsight": [
+      "Strong revenue and profit growth in FY25.",
+      "High ROE (~27%) indicates efficient capital use.",
+      "Margins slightly declining due to cost pressures.",
+      "Moderate leverage (D/E ~0.86) adds some risk."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy24": 68, "fy25": 437 },
+      { "label": "CWIP", "fy24": 75, "fy25": 0 },
+      { "label": "Investments", "fy24": 0, "fy25": 0 },
+      { "label": "Trade Receivables", "fy24": 427, "fy25": 1112 },
+      { "label": "Inventory", "fy24": 939, "fy25": 1864 },
+      { "label": "Other Assets", "fy24": 123, "fy25": 203 },
+      { "label": "Total Assets", "fy24": 1632, "fy25": 3616 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy24": 5, "fy25": 263.64 },
+      { "label": "FV", "fy24": 10, "fy25": 5 },
+      { "label": "Reserves", "fy24": 139, "fy25": 698 },
+      { "label": "Borrowings", "fy24": 713, "fy25": 826 },
+      { "label": "Trade Payables", "fy24": 539, "fy25": 1583 },
+      { "label": "Other Liabilities", "fy24": 176, "fy25": 245.36 },
+      { "label": "Total Liabilities", "fy24": 1632, "fy25": 3616 }
+    ],
+    "insights": "Rapid balance sheet expansion indicates aggressive growth, but rising borrowings and working capital needs increase risk."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.86 indicates moderate leverage.",
+  "balanceSheetInsights": "Significant increase in inventory and receivables suggests working capital-heavy business.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy24": -457.6, "fy25": -2097 },
+      { "label": "Cash from Investing Activities", "fy24": -1321, "fy25": -294.7 },
+      { "label": "Cash from Financing Activities", "fy24": 594.7, "fy25": 6092.8 }
+    ],
+    "insights": [
+      "Highly negative operating cash flow is a major concern.",
+      "Heavy reliance on financing to support growth.",
+      "Working capital expansion consuming large cash."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Promoter-led company focused on agrochemical innovation and expansion.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Mashitla Securities",
+    "website": ""
+  },
+  "managementInsight": "Focused on scaling agrochemical distribution and expanding product portfolio across India.",
+  "faq": [
+    {
+      "question": "How to buy Shivchem Agro Limited shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (1600 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 132,
-    "name": "Schneider Electric President Systems Unlisted Shares",
-    "price": 1563,
+  "id": 134,
+  "name": "Sigachi Laboratories Limited Unlisted Shares",
+  "price": 65,
+  "logo": "/images/preipo/image131.jpg",
+  "overview": "Sigachi Laboratories Limited is engaged in manufacturing Active Pharmaceutical Ingredients (APIs) and intermediates. The company operates in the pharmaceutical sector and also has investments in subsidiaries involved in logistics (ICDs, freight depots) and other related activities, making it a diversified business with exposure to pharma and infrastructure segments.",
+  "products": [
+    "Active Pharmaceutical Ingredients (APIs)",
+    "Drug Intermediates",
+    "Pharmaceutical Raw Materials",
+    "Logistics & Infrastructure (via subsidiaries)"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in India (exact locations not specified)"
+  ],
+  "clients": [
+    "Pharmaceutical Companies",
+    "Drug Manufacturers",
+    "Export Markets",
+    "Industrial Buyers"
+  ],
+  "shareDetails": {
+    "companyName": "Sigachi Laboratories Limited Unlisted Shares",
+    "indicativeUnlistedSharePrice": "₹65",
+    "marketCapitalization": "₹35 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹52",
+    "52WeekLow": "₹52",
+    "faceValue": "₹10",
+    "bookValue": "58.39",
+    "peRatio": "29.55",
+    "pbRatio": "0.89",
+    "debtToEquity": "0",
+    "returnOnEquity": "3.03",
+    "totalOutstandingShares": "6753100",
+    "isin": "INEA8H01018",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image129.png"
+    "pan": "AACCS8220M",
+    "cin": "L24230TG1994PLC017876",
+    "rta": "Venture Capital and Corporate Investments"
   },
+  "financials": {
+    "annualReportSummary": "The company has shown fluctuating revenue and declining profitability margins over recent years. While it maintains a debt-free balance sheet, declining margins and low return ratios indicate operational inefficiencies.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 260, "fy23": 195, "fy24": 374, "fy25": 312 },
+      { "label": "EBITDA", "fy22": 211, "fy23": 142, "fy24": 242, "fy25": 109 },
+      { "label": "PBT", "fy22": 238, "fy23": 173, "fy24": 281, "fy25": 152 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 200, "fy23": 131, "fy24": 197, "fy25": 119 },
+      { "label": "EPS", "fy22": 2.74, "fy23": 1.79, "fy24": 2.69, "fy25": 1.63 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 81.15, "fy23": 72.82, "fy24": 64.71, "fy25": 34.94 },
+      { "label": "Net Profit Margin (%)", "fy22": 76.92, "fy23": 67.18, "fy24": 52.67, "fy25": 38.14 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 2.74, "fy23": 1.79, "fy24": 2.69, "fy25": 1.63 }
+    ],
+    "investorInsight": [
+      "Revenue is volatile with no consistent growth trend.",
+      "Margins declining sharply over the years.",
+      "Debt-free balance sheet is a positive.",
+      "Low ROE (~3%) indicates weak capital efficiency."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 229, "fy23": 237, "fy24": 321, "fy25": 310 },
+      { "label": "CWIP", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Investments", "fy22": 2151, "fy23": 1966, "fy24": 2663, "fy25": 2978 },
+      { "label": "Trade Receivables", "fy22": 16, "fy23": 1, "fy24": 20, "fy25": 3 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Assets", "fy22": 832, "fy23": 922, "fy24": 730, "fy25": 800 },
+      { "label": "Total Assets", "fy22": 3028, "fy23": 3126, "fy24": 3734, "fy25": 4091 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 731, "fy23": 731, "fy24": 731, "fy25": 731 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 2244, "fy23": 2343, "fy24": 2870, "fy25": 3202 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Other Liabilities", "fy22": 53, "fy23": 52, "fy24": 133, "fy25": 158 },
+      { "label": "Total Liabilities", "fy22": 3028, "fy23": 3126, "fy24": 3734, "fy25": 4091 }
+    ],
+    "insights": "Large portion of assets tied in investments rather than core operations."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 indicates debt-free structure.",
+  "balanceSheetInsights": "High investment allocation raises questions about core business focus.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -216, "fy23": 48, "fy24": -190, "fy25": 52 },
+      { "label": "Cash from Investing Activities", "fy22": 54, "fy23": 243, "fy24": -136, "fy25": 90 },
+      { "label": "Cash from Financing Activities", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 }
+    ],
+    "insights": [
+      "Operating cash flow is inconsistent and volatile.",
+      "Investment-heavy balance sheet.",
+      "No reliance on debt financing."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Promoter-led pharmaceutical business with diversification into investments and logistics.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Venture Capital and Corporate Investments",
+    "website": ""
+  },
+  "managementInsight": "Focus appears divided between pharma operations and investment activities.",
+  "faq": [
+    {
+      "question": "How to buy Sigachi Laboratories Limited Unlisted Shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (1000 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 133,
-    "name": "Shivchem Agro Limited",
-    "price": 90,
+  "id": 135,
+  "name": "Signify Innovations (Previously Phillips Lighting) India Limited Unlisted Shares",
+  "price": 1438,
+  "logo": "/images/preipo/image132.jpg",
+  "overview": "Signify Innovations India Limited (formerly Philips Lighting India) is a leading player in lighting solutions, offering innovative and energy-efficient lighting products across residential, commercial, and industrial segments. The company focuses on LED lighting, smart lighting systems, and connected solutions, backed by global expertise from Signify (Philips Lighting).",
+  "products": [
+    "LED Lighting Solutions",
+    "Smart Lighting Systems",
+    "Industrial Lighting",
+    "Consumer Lighting Products",
+    "Connected Lighting (IoT-based)"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing and assembly facilities across India"
+  ],
+  "clients": [
+    "Residential Consumers",
+    "Commercial Buildings",
+    "Industrial Clients",
+    "Government Projects",
+    "Infrastructure Developers"
+  ],
+  "shareDetails": {
+    "companyName": "Signify Innovations (Previously Phillips Lighting) India Limited Unlisted Shares",
+    "indicativeUnlistedSharePrice": "₹1438",
+    "marketCapitalization": "₹6183 Crore",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹1350",
+    "52WeekLow": "₹1075",
+    "faceValue": "₹10",
+    "bookValue": "76.41",
+    "peRatio": "22.9",
+    "pbRatio": "14.07",
+    "debtToEquity": "0",
+    "returnOnEquity": "62.86",
+    "totalOutstandingShares": "5571242",
+    "isin": "INE045U01015",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1600,
-    "status": "upcoming",
-    "logo": "/images/preipo/image130.png"
+    "pan": "AAJCP0967C",
+    "cin": "U74900WB2015PLC206100",
+    "rta": "KFin Technologies"
   },
+  "financials": {
+    "annualReportSummary": "The company has demonstrated stable revenue with consistent profitability and strong return ratios. Margins have remained steady, supported by a strong brand and efficient operations. High ROE reflects excellent capital efficiency.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 2795, "fy23": 3106, "fy24": 3069, "fy25": 3114 },
+      { "label": "EBITDA", "fy22": 374, "fy23": 431, "fy24": 448, "fy25": 448 },
+      { "label": "PBT", "fy22": 315, "fy23": 352, "fy24": 365, "fy25": 366 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 232, "fy23": 266, "fy24": 269, "fy25": 270 },
+      { "label": "EPS", "fy22": 40.35, "fy23": 46.26, "fy24": 46.78, "fy25": 46.96 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 13.38, "fy23": 13.88, "fy24": 14.6, "fy25": 14.39 },
+      { "label": "Net Profit Margin (%)", "fy22": 8.3, "fy23": 8.56, "fy24": 8.77, "fy25": 8.67 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 40.35, "fy23": 46.26, "fy24": 46.78, "fy25": 46.96 }
+    ],
+    "investorInsight": [
+      "Strong brand backed by Philips/Signify global presence.",
+      "Consistent revenue and stable margins.",
+      "Very high ROE (~63%) indicates excellent capital efficiency.",
+      "Debt-free company with strong fundamentals.",
+      "Premium valuation due to brand strength and profitability."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 183, "fy23": 206, "fy24": 181.5, "fy25": 151 },
+      { "label": "CWIP", "fy22": 9, "fy23": 5, "fy24": 2, "fy25": 0.8 },
+      { "label": "Investments", "fy22": 0, "fy23": 1, "fy24": 1, "fy25": 1 },
+      { "label": "Trade Receivables", "fy22": 233, "fy23": 269, "fy24": 242.2, "fy25": 268 },
+      { "label": "Inventory", "fy22": 256, "fy23": 297, "fy24": 292, "fy25": 220 },
+      { "label": "Other Assets", "fy22": 910, "fy23": 932, "fy24": 884.5, "fy25": 378.2 },
+      { "label": "Total Assets", "fy22": 1591, "fy23": 1710, "fy24": 1603, "fy25": 1091 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 57.5, "fy23": 57.5, "fy24": 57.5, "fy25": 57.5 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 535, "fy23": 585, "fy24": 491.5, "fy25": 372 },
+      { "label": "Borrowings", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0 },
+      { "label": "Trade Payables", "fy22": 615, "fy23": 656, "fy24": 621, "fy25": 618 },
+      { "label": "Other Liabilities", "fy22": 383.5, "fy23": 411.5, "fy24": 433, "fy25": 43.5 },
+      { "label": "Total Liabilities", "fy22": 1591, "fy23": 1710, "fy24": 1603, "fy25": 1091 }
+    ],
+    "insights": "Strong balance sheet with no debt, though reserves have declined due to dividend payouts or restructuring."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0 indicates debt-free operations.",
+  "balanceSheetInsights": "High capital efficiency but declining reserves need monitoring.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 101, "fy23": 37, "fy24": 325, "fy25": 386 },
+      { "label": "Cash from Investing Activities", "fy22": -8, "fy23": -35, "fy24": 8.6, "fy25": -15 },
+      { "label": "Cash from Financing Activities", "fy22": -404, "fy23": -287, "fy24": -417, "fy25": -447 }
+    ],
+    "insights": [
+      "Strong and improving operating cash flow.",
+      "Consistent dividend payouts reflected in negative financing cash flow.",
+      "Low capital expenditure requirements."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Very High (Signify Group)", "institutional": "Moderate", "public": "Low" }
+  ],
+  "promotersManagement": "Backed by Signify (formerly Philips Lighting), a global leader in lighting solutions.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "KFin Technologies",
+    "website": "https://www.kfintech.com/"
+  },
+  "managementInsight": "Focused on expanding smart lighting and energy-efficient solutions leveraging global technology.",
+  "faq": [
+    {
+      "question": "How to buy Signify Innovations (Previously Phillips Lighting) India Limited Unlisted Shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (50 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 134,
-    "name": "Sigachi Laboratories Limited Unlisted Shares",
-    "price": 65,
+  "id": 136,
+  "name": "Skyways Air Services Limited",
+  "price": 194,
+  "logo": "/images/preipo/image133.png",
+  "overview": "Skyways Air Services Limited is a logistics and cargo handling company specializing in air freight forwarding, cargo management, and integrated logistics solutions. Founded in 1984 and headquartered in New Delhi, the company serves domestic and international markets with a focus on efficiency and technology-driven logistics services.",
+  "products": [
+    "Air Freight Forwarding",
+    "Cargo Handling Services",
+    "Logistics Solutions",
+    "Supply Chain Management",
+    "International Freight Services"
+  ],
+  "manufacturingUnits": [
+    "Operations across major airports and logistics hubs in India"
+  ],
+  "clients": [
+    "Exporters and Importers",
+    "E-commerce Companies",
+    "Industrial Clients",
+    "Global Logistics Partners"
+  ],
+  "shareDetails": {
+    "companyName": "Skyways Air Services Limited",
+    "indicativeUnlistedSharePrice": "₹194",
+    "marketCapitalization": "₹1792 Crore",
+    "lotSize": "1000 Shares",
+    "52WeekHigh": "₹160",
+    "52WeekLow": "₹140",
+    "faceValue": "₹10",
+    "bookValue": "34.14",
+    "peRatio": "37.35",
+    "pbRatio": "4.45",
+    "debtToEquity": "1.42",
+    "returnOnEquity": "12.23",
+    "totalOutstandingShares": "11788757",
+    "isin": "INE09X301025",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image131.jpg"
+    "pan": "AABCS3895B",
+    "cin": "U74899DL1984PLC019656",
+    "rta": "Bigshare Services"
   },
+  "financials": {
+    "annualReportSummary": "The company has shown steady revenue growth but operates with thin margins typical of logistics businesses. Profitability remains modest, and rising debt levels increase financial risk.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 1659, "fy23": 1481, "fy24": 1249, "fy25": 2218 },
+      { "label": "EBITDA", "fy22": 69, "fy23": 58, "fy24": 48, "fy25": 85 },
+      { "label": "PBT", "fy22": 63, "fy23": 53, "fy24": 48, "fy25": 67 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 46, "fy23": 38, "fy24": 34, "fy25": 48 },
+      { "label": "EPS", "fy22": 211.01, "fy23": 36.43, "fy24": 32.6, "fy25": 4.27 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 4.16, "fy23": 3.91, "fy24": 3.72, "fy25": 3.84 },
+      { "label": "Net Profit Margin (%)", "fy22": 2.77, "fy23": 2.56, "fy24": 2.64, "fy25": 2.14 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 211.01, "fy23": 36.43, "fy24": 32.6, "fy25": 4.27 }
+    ],
+    "investorInsight": [
+      "Thin margins typical of logistics industry.",
+      "Revenue volatility across years.",
+      "High debt (D/E ~1.42) increases financial risk.",
+      "Moderate ROE (~12%) but not exceptional.",
+      "Valuation relatively expensive for low-margin business."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 40, "fy23": 54.5, "fy24": 82, "fy25": 123 },
+      { "label": "CWIP", "fy22": 2.45, "fy23": 16.5, "fy24": 40.5, "fy25": 60 },
+      { "label": "Investments", "fy22": 0.28, "fy23": 0.36, "fy24": 29, "fy25": 28 },
+      { "label": "Trade Receivables", "fy22": 252, "fy23": 146, "fy24": 318, "fy25": 456 },
+      { "label": "Inventory", "fy22": 0, "fy23": 0, "fy24": 0, "fy25": 0.7 },
+      { "label": "Other Assets", "fy22": 170.27, "fy23": 230.64, "fy24": 329.1, "fy25": 654.3 },
+      { "label": "Total Assets", "fy22": 465, "fy23": 448, "fy24": 790, "fy25": 1322 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 2.18, "fy23": 10.43, "fy24": 10.43, "fy25": 112.42 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 93, "fy23": 120, "fy24": 176, "fy25": 280 },
+      { "label": "Borrowings", "fy22": 163, "fy23": 175, "fy24": 357, "fy25": 558 },
+      { "label": "Trade Payables", "fy22": 163, "fy23": 115, "fy24": 207, "fy25": 215 },
+      { "label": "Other Liabilities", "fy22": 17.82, "fy23": 27.57, "fy24": 37.57, "fy25": 156.58 },
+      { "label": "Total Liabilities", "fy22": 465, "fy23": 448, "fy24": 790, "fy25": 1322 }
+    ],
+    "insights": "Rapid increase in borrowings and working capital indicates aggressive expansion with rising financial risk."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 1.42 indicates high leverage.",
+  "balanceSheetInsights": "Heavy dependence on debt and rising receivables increase financial risk.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 21, "fy23": 71.5, "fy24": -90.3, "fy25": 29 },
+      { "label": "Cash from Investing Activities", "fy22": -17, "fy23": -76, "fy24": -31, "fy25": -152 },
+      { "label": "Cash from Financing Activities", "fy22": 26, "fy23": -10.6, "fy24": 155.3, "fy25": 221 }
+    ],
+    "insights": [
+      "Operating cash flow turned negative in FY24.",
+      "Heavy reliance on financing for growth.",
+      "Increasing debt-driven expansion."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Moderate" }
+  ],
+  "promotersManagement": "Promoter-led logistics company with decades of experience in freight and cargo services.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Bigshare Services",
+    "website": "https://www.bigshareonline.com/"
+  },
+  "managementInsight": "Focused on expanding logistics network and leveraging growing demand in air cargo and e-commerce logistics.",
+  "faq": [
+    {
+      "question": "How to buy Skyways Air Services Limited shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (1000 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
+ {
+  "id": 137,
+  "name": "Spencer and Company Limited Unlisted Shares",
+  "price": 1349,
+  "logo": "/images/preipo/Spencer.png",
+  "overview": "Spencer and Company Limited is an unlisted entity with limited publicly available information. The company appears to operate under a private structure with minimal disclosures, making it difficult to assess its business operations, financial performance, and growth prospects.",
+  "products": [
+    "Not Available"
+  ],
+  "manufacturingUnits": [
+    "Not Available"
+  ],
+  "clients": [
+    "Not Available"
+  ],
+  "shareDetails": {
+    "companyName": "Spencer and Company Limited Unlisted Shares",
+    "indicativeUnlistedSharePrice": "₹1349",
+    "marketCapitalization": "₹0",
+    "lotSize": "25 Shares",
+    "52WeekHigh": "₹1079",
+    "52WeekLow": "₹1079",
+    "faceValue": "N/A",
+    "bookValue": "N/A",
+    "peRatio": "N/A",
+    "pbRatio": "0",
+    "debtToEquity": "N/A",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "0",
+    "isin": "N/A",
+    "depository": "NSDL & CDSL",
+    "pan": "N/A",
+    "cin": "N/A",
+    "rta": "N/A"
+  },
+  "financials": {
+    "annualReportSummary": "No financial data is available publicly, making it difficult to evaluate the company's performance or valuation.",
+    "incomeStatement": [],
+    "keyRatios": [],
+    "investorInsight": [
+      "No financial disclosures available.",
+      "No clarity on business operations.",
+      "Valuation cannot be justified due to lack of data.",
+      "Extremely high risk investment due to opacity."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [],
+    "liabilities": [],
+    "insights": "No balance sheet data available."
+  },
+  "liabilitiesBreakdown": "Not available.",
+  "balanceSheetInsights": "Insufficient data to assess financial strength.",
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flow data not available.",
+      "Financial transparency is extremely low."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Unknown", "institutional": "Unknown", "public": "Unknown" }
+  ],
+  "promotersManagement": "Not disclosed publicly.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "N/A",
+    "website": ""
+  },
+  "managementInsight": "No publicly available information on management or strategic direction.",
+  "faq": [
+    {
+      "question": "How to buy Spencer and Company Limited Unlisted Shares?",
+      "answer": "Shares may be available through brokers dealing in unlisted shares, but due diligence is strongly recommended."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (25 shares) and prevailing market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 135,
-    "name": "Signify Innovations (Previously Phillips Lighting) India Limited Unlisted Shares",
-    "price": 1438,
+  "id": 138,
+  "name": "Spray Engineering Devices Unlisted Shares",
+  "price": 335,
+  "logo": "/images/preipo/image134.png",
+  "overview": "Spray Engineering Devices Limited is engaged in providing engineering solutions in spray drying, evaporation, and heat transfer technologies. The company caters to industries such as food processing, dairy, chemicals, and pharmaceuticals, offering customized process solutions and turnkey projects.",
+  "products": [
+    "Spray Drying Systems",
+    "Evaporation Systems",
+    "Heat Exchangers",
+    "Turnkey Engineering Solutions",
+    "Process Equipment for Food & Pharma"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in India (exact locations not specified)"
+  ],
+  "clients": [
+    "Food Processing Companies",
+    "Dairy Industry",
+    "Chemical Companies",
+    "Pharmaceutical Companies"
+  ],
+  "shareDetails": {
+    "companyName": "Spray Engineering Devices Unlisted Shares",
+    "indicativeUnlistedSharePrice": "₹335",
+    "marketCapitalization": "₹472 Crore",
+    "lotSize": "100 Shares",
+    "52WeekHigh": "₹425",
+    "52WeekLow": "₹188",
+    "faceValue": "₹10",
+    "bookValue": "85.71",
+    "peRatio": "31.46",
+    "pbRatio": "2.19",
+    "debtToEquity": "0.39",
+    "returnOnEquity": "7.31",
+    "totalOutstandingShares": "25096423",
+    "isin": "INE52B01015",
     "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image132.jpg"
+    "pan": "AAICS6520M",
+    "cin": "U30000CH2004PLC027625",
+    "rta": "Link Intime"
   },
+  "financials": {
+    "annualReportSummary": "The company has shown growth in revenue and profitability until FY24, followed by a sharp decline in FY25. Margins have compressed significantly, indicating cyclical or project-based business volatility.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 214, "fy23": 392, "fy24": 547, "fy25": 461 },
+      { "label": "EBITDA", "fy22": 21, "fy23": 54, "fy24": 87, "fy25": 39 },
+      { "label": "PBT", "fy22": 15, "fy23": 45, "fy24": 74, "fy25": 20 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 15, "fy23": 33, "fy24": 53, "fy25": 15 },
+      { "label": "EPS", "fy22": 6.69, "fy23": 14.71, "fy24": 23.56, "fy25": 5.98 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 9.81, "fy23": 13.78, "fy24": 15.9, "fy25": 8.46 },
+      { "label": "Net Profit Margin (%)", "fy22": 7.01, "fy23": 8.42, "fy24": 9.69, "fy25": 3.25 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 6.69, "fy23": 14.71, "fy24": 23.56, "fy25": 5.98 }
+    ],
+    "investorInsight": [
+      "Strong growth till FY24 followed by sharp decline in FY25.",
+      "Cyclical/project-based revenue pattern.",
+      "Moderate leverage (D/E ~0.39).",
+      "Low ROE (~7%) indicates limited capital efficiency.",
+      "Valuation (P/E ~31) seems high for volatile earnings."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 26, "fy23": 54, "fy24": 76, "fy25": 99 },
+      { "label": "CWIP", "fy22": 1, "fy23": 13, "fy24": 13, "fy25": 13 },
+      { "label": "Investments", "fy22": 0, "fy23": 0.26, "fy24": 0.4, "fy25": 0.5 },
+      { "label": "Trade Receivables", "fy22": 43, "fy23": 60, "fy24": 87, "fy25": 114 },
+      { "label": "Inventory", "fy22": 66, "fy23": 78, "fy24": 76, "fy25": 114 },
+      { "label": "Other Assets", "fy22": 48, "fy23": 58.74, "fy24": 49.6, "fy25": 79.5 },
+      { "label": "Total Assets", "fy22": 184, "fy23": 264, "fy24": 302, "fy25": 420 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 22.43, "fy23": 22.43, "fy24": 22.5, "fy25": 25.09 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 16, "fy23": 49, "fy24": 101, "fy25": 180 },
+      { "label": "Borrowings", "fy22": 19, "fy23": 58, "fy24": 75, "fy25": 80 },
+      { "label": "Trade Payables", "fy22": 32, "fy23": 39, "fy24": 56, "fy25": 42 },
+      { "label": "Other Liabilities", "fy22": 94.57, "fy23": 95.57, "fy24": 47.5, "fy25": 92.91 },
+      { "label": "Total Liabilities", "fy22": 184, "fy23": 264, "fy24": 302, "fy25": 420 }
+    ],
+    "insights": "Growing assets with increasing working capital and moderate debt levels."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 0.39 indicates moderate leverage.",
+  "balanceSheetInsights": "Rising receivables and inventory suggest working capital-heavy operations.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": 19, "fy23": 14, "fy24": -17, "fy25": -14 },
+      { "label": "Cash from Investing Activities", "fy22": -4, "fy23": -42, "fy24": -28, "fy25": -40 },
+      { "label": "Cash from Financing Activities", "fy22": -9, "fy23": 31, "fy24": 8, "fy25": 71 }
+    ],
+    "insights": [
+      "Negative operating cash flow in recent years.",
+      "Heavy investment outflows.",
+      "Reliance on financing increasing."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Promoter-led engineering company with expertise in process technologies.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "Link Intime",
+    "website": "https://linkintime.co.in/"
+  },
+  "managementInsight": "Focused on expanding engineering solutions across food, pharma, and chemical industries.",
+  "faq": [
+    {
+      "question": "How to buy Spray Engineering Devices Unlisted Shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (100 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 136,
-    "name": "Skyways Air Services Limited",
-    "price": 194,
+  "id": 139,
+  "name": "Sri Vishnu Shankar Mill Limited Unlisted Shares",
+  "price": 532,
+  "logo": "/images/preipo/image135.jpg",
+  "overview": "Sri Vishnu Shankar Mill Limited is engaged in textile manufacturing, specializing in yarn production including synthetic, dyed, and blended yarns. The company caters to both domestic and export markets and operates in a cyclical textile industry influenced by raw material prices and global demand.",
+  "products": [
+    "Synthetic Yarn",
+    "Dyed Yarn",
+    "Blended Yarn",
+    "Textile Products"
+  ],
+  "manufacturingUnits": [
+    "Manufacturing facilities in India (exact locations not specified)"
+  ],
+  "clients": [
+    "Textile Manufacturers",
+    "Export Markets",
+    "Garment Manufacturers",
+    "Fabric Producers"
+  ],
+  "shareDetails": {
+    "companyName": "Sri Vishnu Shankar Mill Limited Unlisted Shares",
+    "indicativeUnlistedSharePrice": "₹532",
+    "marketCapitalization": "₹64 Crore",
+    "lotSize": "50 Shares",
+    "52WeekHigh": "₹425",
+    "52WeekLow": "₹425",
+    "faceValue": "₹10",
+    "bookValue": "1249.33",
+    "peRatio": "N/A",
+    "pbRatio": "0.34",
+    "debtToEquity": "1.52",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "1500000",
+    "isin": "INE855Z01016",
     "depository": "NSDL & CDSL",
-    "minLotSize": 1000,
-    "status": "upcoming",
-    "logo": "/images/preipo/image133.png"
+    "pan": "AAJCS5036G",
+    "cin": "U17301TN1981PLC008677",
+    "rta": "M/s Cameo Corporate Services"
   },
+  "financials": {
+    "annualReportSummary": "The company has experienced declining performance with negative profitability in recent years. Margins have deteriorated significantly, reflecting the cyclical nature of the textile industry and operational challenges.",
+    "incomeStatement": [
+      { "label": "Revenue", "fy22": 291.96, "fy23": 304.68, "fy24": 251.5, "fy25": 288 },
+      { "label": "EBITDA", "fy22": 52.07, "fy23": 19.43, "fy24": -17, "fy25": 9 },
+      { "label": "PBT", "fy22": 27.99, "fy23": -10.23, "fy24": -30.8, "fy25": -20 },
+      { "label": "Net Profit / Loss (PAT)", "fy22": 21.51, "fy23": -7.43, "fy24": -21.6, "fy25": -15 },
+      { "label": "EPS", "fy22": 14.36, "fy23": -49.87, "fy24": -144.97, "fy25": -100.67 }
+    ],
+    "keyRatios": [
+      { "label": "Operating Profit Margin (%)", "fy22": 17.83, "fy23": 6.38, "fy24": -0.68, "fy25": 3.13 },
+      { "label": "Net Profit Margin (%)", "fy22": 7.37, "fy23": -2.44, "fy24": -8.59, "fy25": -5.21 },
+      { "label": "Earning Per Share (Diluted)", "fy22": 14.36, "fy23": -49.87, "fy24": -144.97, "fy25": -100.67 }
+    ],
+    "investorInsight": [
+      "Loss-making in recent years.",
+      "Margins declining sharply.",
+      "Highly cyclical textile business.",
+      "High leverage (D/E ~1.52) increases risk.",
+      "Low PB (~0.34) reflects distressed valuation."
+    ]
+  },
+  "balanceSheet": {
+    "assets": [
+      { "label": "Fixed Assets", "fy22": 145.99, "fy23": 155.26, "fy24": 171, "fy25": 159 },
+      { "label": "CWIP", "fy22": 4.53, "fy23": 3.84, "fy24": 13, "fy25": 0 },
+      { "label": "Investments", "fy22": 182.58, "fy23": 158.06, "fy24": 1.8, "fy25": 172 },
+      { "label": "Trade Receivables", "fy22": 54.3, "fy23": 26.4, "fy24": 40, "fy25": 44 },
+      { "label": "Inventory", "fy22": 99.22, "fy23": 125.46, "fy24": 64, "fy25": 51 },
+      { "label": "Other Assets", "fy22": 53.97, "fy23": 34.46, "fy24": 204.9, "fy25": 51 },
+      { "label": "Total Assets", "fy22": 520.59, "fy23": 503.52, "fy24": 483, "fy25": 477 }
+    ],
+    "liabilities": [
+      { "label": "Share Capital", "fy22": 1.49, "fy23": 1.49, "fy24": 1.49, "fy25": 1.49 },
+      { "label": "FV", "fy22": 10, "fy23": 10, "fy24": 10, "fy25": 10 },
+      { "label": "Reserves", "fy22": 215.17, "fy23": 217.7, "fy24": 191, "fy25": 176 },
+      { "label": "Borrowings", "fy22": 286.52, "fy23": 272.78, "fy24": 267, "fy25": 270 },
+      { "label": "Trade Payables", "fy22": 87, "fy23": 5.2, "fy24": 11, "fy25": 5 },
+      { "label": "Other Liabilities", "fy22": 15.54, "fy23": 12.35, "fy24": 12.51, "fy25": 24.51 },
+      { "label": "Total Liabilities", "fy22": 520.59, "fy23": 503.52, "fy24": 483, "fy25": 477 }
+    ],
+    "insights": "High borrowings with declining reserves indicate financial stress."
+  },
+  "liabilitiesBreakdown": "Debt to Equity ratio of 1.52 indicates high leverage.",
+  "balanceSheetInsights": "Shrinking reserves and high debt raise solvency concerns.",
+  "cashFlow": {
+    "data": [
+      { "label": "Cash from Operating Activities", "fy22": -29.6, "fy23": 47.68, "fy24": 58, "fy25": 17.36 },
+      { "label": "Cash from Investing Activities", "fy22": -60.44, "fy23": -13.58, "fy24": -29, "fy25": 21.91 },
+      { "label": "Cash from Financing Activities", "fy22": 88.31, "fy23": -33.89, "fy24": -29, "fy25": -19.02 }
+    ],
+    "insights": [
+      "Operating cash flow inconsistent.",
+      "Dependence on financing in earlier years.",
+      "Volatile financial performance."
+    ]
+  },
+  "shareholding": [
+    { "year": "Recent", "promoters": "High", "institutional": "Low", "public": "Low" }
+  ],
+  "promotersManagement": "Promoter-driven textile company with long-standing industry presence.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "M/s Cameo Corporate Services",
+    "website": "https://cameoindia.com/"
+  },
+  "managementInsight": "Focused on sustaining operations in a challenging textile environment.",
+  "faq": [
+    {
+      "question": "How to buy Sri Vishnu Shankar Mill Limited Unlisted Shares?",
+      "answer": "Shares can be purchased through brokers or platforms dealing in unlisted shares."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (50 shares) and current market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
-    "id": 137,
-    "name": "Spencer and Company Limited Unlisted Shares",
-    "price": 1349,
+  "id": 140,
+  "name": "Srichakra Cement Limited Unlisted Shares",
+  "price": 87,
+  "logo": "/images/preipo/Srichakra.png",
+  "overview": "Srichakra Cement Limited is an unlisted entity with limited publicly available information. The company is presumed to operate in the cement and construction materials sector, but detailed disclosures regarding operations, production capacity, and market presence are not available.",
+  "products": [
+    "Cement (Assumed)",
+    "Construction Materials (Assumed)"
+  ],
+  "manufacturingUnits": [
+    "Not Available"
+  ],
+  "clients": [
+    "Not Available"
+  ],
+  "shareDetails": {
+    "companyName": "Srichakra Cement Limited Unlisted Shares",
+    "indicativeUnlistedSharePrice": "₹87",
+    "marketCapitalization": "₹0",
+    "lotSize": "250 Shares",
+    "52WeekHigh": "₹69",
+    "52WeekLow": "₹69",
+    "faceValue": "N/A",
+    "bookValue": "N/A",
+    "peRatio": "N/A",
+    "pbRatio": "0",
+    "debtToEquity": "N/A",
+    "returnOnEquity": "N/A",
+    "totalOutstandingShares": "0",
+    "isin": "N/A",
     "depository": "NSDL & CDSL",
-    "minLotSize": 25,
-    "status": "upcoming",
-    "logo": "/images/preipo/Spencer.png"
+    "pan": "N/A",
+    "cin": "N/A",
+    "rta": "N/A"
   },
-  {
-    "id": 138,
-    "name": "Spray Engineering Devices Unlisted Shares",
-    "price": 335,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 100,
-    "status": "upcoming",
-    "logo": "/images/preipo/image134.png"
+  "financials": {
+    "annualReportSummary": "No financial data is available publicly, making it impossible to evaluate the company’s performance, profitability, or valuation.",
+    "incomeStatement": [],
+    "keyRatios": [],
+    "investorInsight": [
+      "No financial disclosures available.",
+      "No clarity on business operations or scale.",
+      "Sector assumed but not confirmed.",
+      "Extremely high risk due to lack of transparency."
+    ]
   },
-  {
-    "id": 139,
-    "name": "Sri Vishnu Shankar Mill Limited Unlisted Shares",
-    "price": 532,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 50,
-    "status": "upcoming",
-    "logo": "/images/preipo/image135.jpg"
+  "balanceSheet": {
+    "assets": [],
+    "liabilities": [],
+    "insights": "No balance sheet data available."
   },
-  {
-    "id": 140,
-    "name": "Srichakra Cement Limited Unlisted Shares",
-    "price": 87,
-    "depository": "NSDL & CDSL",
-    "minLotSize": 250,
-    "status": "upcoming",
-    "logo": "/images/preipo/Srichakra.png"
+  "liabilitiesBreakdown": "Not available.",
+  "balanceSheetInsights": "Insufficient data to assess financial strength.",
+  "cashFlow": {
+    "data": [],
+    "insights": [
+      "Cash flow data not available.",
+      "Transparency risk is extremely high."
+    ]
   },
+  "shareholding": [
+    { "year": "Recent", "promoters": "Unknown", "institutional": "Unknown", "public": "Unknown" }
+  ],
+  "promotersManagement": "Not disclosed publicly.",
+  "management": [
+    { "name": "Not Available", "role": "", "experience": "" }
+  ],
+  "rta": {
+    "registrar": "N/A",
+    "website": ""
+  },
+  "managementInsight": "No publicly available information on management or strategy.",
+  "faq": [
+    {
+      "question": "How to buy Srichakra Cement Limited Unlisted Shares?",
+      "answer": "Shares may be available through brokers dealing in unlisted shares, but due diligence is strongly recommended."
+    },
+    {
+      "question": "What is the minimum investment?",
+      "answer": "Minimum investment depends on lot size (250 shares) and prevailing market price."
+    },
+    {
+      "question": "Is investing in unlisted shares legal?",
+      "answer": "Yes, investing in unlisted shares in India is legal and regulated by SEBI."
+    }
+  ],
+  "status": "upcoming"
+},
   {
     "id": 141,
     "name": "Sterlite Electric Limited (formerly Sterlite Power) Unlisted Shares",
