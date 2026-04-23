@@ -12,33 +12,56 @@ const LetterAvatar = ({ name }) => (
 
 const formatDateRange = (open, close) => {
   if (!open || !close) return "—";
-  const o = new Date(open);
-  const c = new Date(close);
-  if (isNaN(o) || isNaN(c)) return "—";
 
-  const month = c.toLocaleString("en-GB", { month: "short" });
-  return `${o.getDate()}–${c.getDate()} ${month}`;
+  const [oDay, oMonth] = open.split(" ");
+  const [cDay, cMonth] = close.split(" ");
+
+  return `${oDay}–${cDay} ${cMonth}`;
 };
 
 const isIPOActiveByDate = (open, close) => {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const o = new Date(open);
-  const c = new Date(close);
-  if (isNaN(o) || isNaN(c)) return false;
+  const o = parseDate(open);
+  const c = parseDate(close);
+
+  if (!o || !c) return false;
+
+  c.setHours(23, 59, 59, 999);
 
   return o <= today && today <= c;
 };
+ const parseDate = (dateStr) => {
+  if (!dateStr) return null;
 
+  const [day, monthStr, year] = dateStr.split(" ");
+  const months = {
+    Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+    Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+  };
+
+  return new Date(year, months[monthStr], Number(day));
+};
 export const IPOCard = ({ ipo }) => {
   const navigate = useNavigate();
+const getIPOType = (ipo) => {
+  if (ipo?.ipo_basic_details?.ipo_type) {
+    return ipo.ipo_basic_details.ipo_type
+      .replace(/ipo/i, "")
+      .trim()
+      .toUpperCase();
+  }
 
-  const type = ipo.type 
-    ? ipo.type.toUpperCase() 
-    : (ipo.fullName || ipo.name || "").toLowerCase().includes("sme")
-      ? "SME"
-      : "MAINBOARD";
+  if (ipo?.type) {
+    return ipo.type.toUpperCase();
+  }
+
+  const name = (ipo?.fullName || ipo?.name || "").toLowerCase();
+  return name.includes("sme") ? "SME" : "MAINBOARD";
+};
+const rawType = getIPOType(ipo);
+const type = rawType === "SME" ? "SME" : "Mainboard";
 
   const typeColor =
     type === "SME"
@@ -91,7 +114,7 @@ export const IPOCard = ({ ipo }) => {
           <span className="text-gray-600">Dates</span>
           <span className="font-medium">{formatDateRange(ipo.open, ipo.close)}</span>
           <span className="text-gray-600">Price</span>
-          <span>₹{ipo.price}</span>
+          <span>{ipo.price}</span>
           <span className="text-gray-600">Lot</span>
           <span>{ipo.lot} shares</span>
           <span className="text-gray-600">Listing</span>
@@ -120,32 +143,36 @@ export const IPOCard = ({ ipo }) => {
 const IPODashboard = ({ ipos = [] }) => {
   const navigate = useNavigate();
 
-  const parseDate = (dateStr) => {
-    if (!dateStr) return null;
-    const d = new Date(dateStr);
-    return isNaN(d.getTime()) ? null : d;
-  };
+
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const top8IPOs = useMemo(() => {
-    return ipos
-      .map((ipo) => ({
+ const top8IPOs = useMemo(() => {
+  return ipos
+    .map((ipo) => {
+      const openDate = parseDate(ipo.open);
+      const closeDate = parseDate(ipo.close);
+
+      if (!openDate || !closeDate) return null;
+
+      closeDate.setHours(23, 59, 59, 999);
+
+      return {
         ...ipo,
-        _openDate: parseDate(ipo.open),
-        _closeDate: parseDate(ipo.close),
-      }))
-      .filter(
-        (ipo) =>
-          ipo._openDate &&
-          ipo._closeDate &&
-          ipo._openDate <= today &&
-          today <= ipo._closeDate
-      )
-      .sort((a, b) => a._closeDate - b._closeDate)
-      .slice(0, 8);
-  }, [ipos]);
+        _openDate: openDate,
+        _closeDate: closeDate,
+      };
+    })
+    .filter(
+      (ipo) =>
+        ipo &&
+        ipo._openDate <= today &&
+        today <= ipo._closeDate
+    )
+    .sort((a, b) => a._closeDate - b._closeDate)
+    .slice(0, 8);
+}, [ipos]);
 
   return (
     <div className="py-4 px-4 lg:py-8">

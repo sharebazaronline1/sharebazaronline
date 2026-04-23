@@ -24,7 +24,21 @@ const IPOSidebar = () => {
   pathname.startsWith("/insight-hub")||
   pathname.startsWith("/preipo") ||
   pathname.startsWith("/how-to-apply-ipo");;
+const getIPOType = (ipo) => {
+  if (ipo?.ipo_basic_details?.ipo_type) {
+    return ipo.ipo_basic_details.ipo_type
+      .replace(/ipo/i, "")
+      .trim()
+      .toUpperCase();
+  }
 
+  if (ipo?.type) {
+    return ipo.type.toUpperCase();
+  }
+
+  const name = (ipo?.fullName || ipo?.name || "").toLowerCase();
+  return name.includes("sme") ? "SME" : "MAINBOARD";
+};
   useEffect(() => {
     const today = new Date();
     setFormattedDate(
@@ -44,11 +58,17 @@ const IPOSidebar = () => {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
 
-        const parseDate = (dateStr) => {
-          if (!dateStr) return null;
-          const [day, month, year] = dateStr.split(" ");
-          return new Date(`${day} ${month} ${year}`);
-        };
+       const parseDate = (dateStr) => {
+  if (!dateStr) return null;
+
+  const [day, monthStr, year] = dateStr.split(" ");
+  const months = {
+    Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5,
+    Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11,
+  };
+
+  return new Date(year, months[monthStr], Number(day));
+};
 
         const liveIPOs = data
           .map((ipo) => {
@@ -73,11 +93,19 @@ const IPOSidebar = () => {
           .sort((a, b) => b.openDate - a.openDate)
           .slice(0, 10);
 
-        const list = liveIPOs.map((ipo) => ({
-          name: ipo.name,
-          type: ipo.type?.toUpperCase() === "SME" ? "SME" : "Mainboard",
-          shortDates: `${ipo.open.split(" ")[0]}-${ipo.close.split(" ")[0]} ${ipo.open.split(" ")[1]}`,
-        }));
+     const list = liveIPOs.map((ipo) => {
+  const ipoType = getIPOType(ipo);
+
+  return {
+    name: ipo?.name || "",
+    type: ipoType === "SME" ? "SME" : "Mainboard",
+
+    shortDates:
+      ipo?.open && ipo?.close
+        ? `${ipo.open.split(" ")[0]}-${ipo.close.split(" ")[0]} ${ipo.open.split(" ")[1]}`
+        : "",
+  };
+});
 
         setSidebarIPOs(list);
       } catch (error) {

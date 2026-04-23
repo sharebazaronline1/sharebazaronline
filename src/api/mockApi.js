@@ -14136,8 +14136,372 @@ export const fetchIPOs = async () => {
     "prospectus_pdf": "N/A",
     "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/mehul-telecom-ipo-anchor-allocation-letter.pdf"
   }
-}
+},
+{
+  "id": 72,
+  "name": "Adisoft Technologies",
+  "logo": "/images/ipo/adisoft.png",
+  "minInvestment": "₹2,75,200",
+  "open": "23 Apr 2026",
+  "close": "27 Apr 2026",
+  "listing": "30 Apr 2026",
+  "price": "₹163 – ₹172",
+  "lot": 800,
 
+  "about_company": {
+    "company_name": "Adisoft Technologies Limited",
+    "industry_sector": "Industrial Automation / Engineering Solutions",
+    "founded_year": "2013",
+    "promoters": [
+      "Ajay Chandrashekhar Prabhu",
+      "Preeti Ajay Prabhu"
+    ],
+    "description": "Adisoft Technologies Limited is engaged in designing, developing, assembling, and installing industrial automation systems such as automated assembly lines, robotic work cells, material handling systems, and special purpose machinery. The company primarily serves automotive OEMs and component manufacturers with customized automation solutions."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Adisoft Technologies Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹163",
+    "price_band_max": "₹172",
+    "lot_size": 800,
+    "total_issue_size": "₹74.10 Cr (43,08,000 shares)",
+    "fresh_issue_size": "₹74.10 Cr (43,08,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "43,08,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹172",
+    "minimum_investment": "₹2,75,200 (2 lots / 1,600 shares)",
+    "market_cap_post_issue": "Approx ₹280.67 Cr",
+    "pre_issue_shareholding": "Promoters high stake",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Provides industrial automation solutions and also trades automation products.",
+    "products_services": [
+      "Automated Assembly Lines",
+      "Robotic Work Cells",
+      "Material Handling Systems",
+      "Special Purpose Machines",
+      "Automation Products Trading"
+    ],
+    "competitive_strengths": [
+      "Strong presence in industrial automation",
+      "Custom engineering solutions for OEMs",
+      "In-house manufacturing and assembly facility",
+      "Growing demand from manufacturing sector"
+    ],
+    "risks": [
+      "Dependence on manufacturing sector demand",
+      "Project-based revenue variability",
+      "High competition in automation industry",
+      "Working capital intensive operations"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Apr 2026",
+    "ipo_close_date": "27 Apr 2026",
+    "basis_of_allotment_date": "28 Apr 2026",
+    "refund_initiation_date": "29 Apr 2026",
+    "demat_credit_date": "29 Apr 2026",
+    "listing_date": "30 Apr 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_borrowings": "Partial or full repayment of existing debt",
+    "capital_expenditure": "Setting up a new factory unit",
+    "working_capital_requirements": "Funding working capital",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "19%",
+    "retail_quota": "33%",
+    "hni_quota": "14%",
+    "anchor_investors": "28%",
+    "market_maker": "5%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "1600",
+      "amount": "₹2,75,200"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "1600",
+      "amount": "₹2,75,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "2400",
+      "amount": "₹4,12,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "6400",
+      "amount": "₹11,00,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "N/A",
+    "roce": "N/A",
+    "pat_margin": "Approx 11-12%",
+    "ebitda_margin": "N/A",
+    "debt_to_equity": "N/A",
+    "eps": "₹13.41 (FY25 approx)",
+    "pe_ratio": "Approx 12-13x (at upper band)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY25",
+      "assets": "N/A",
+      "total_income": "₹133.69 Cr",
+      "pat": "₹15.99 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹48.71 Cr",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "FY24",
+      "assets": "N/A",
+      "total_income": "₹104.15 Cr",
+      "pat": "₹11.32 Cr",
+      "ebitda": "N/A",
+      "net_worth": "₹32.73 Cr",
+      "total_borrowing": "N/A"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹10 (approx)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Apr 2026",
+    "estimated_listing_price": "₹180 – ₹182 (approx)"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "N/A (IPO just opened)",
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "N/A",
+    "retail_subscription": "N/A",
+    "total_applications": "N/A"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "KFin Technologies Ltd.",
+    "registrar_website": "https://www.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Hem Securities Ltd."
+  },
+
+  "company_information": {
+    "company_address": "MIDC Bhosari Industrial Area, Pune, Maharashtra, India",
+    "company_website": "https://ipostatus.kfintech.com/",
+    "company_email": "adisoft.ipo@kfintech.com",
+    "company_phone": "+91 8208781102"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_ADISOFT.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/adisoft-technologies-ipo-anchor-allocation-letter.pdf"
+  }
+},
+{
+  "id": 73,
+  "name": "Amba Auto Sales and Services",
+  "logo": "/images/ipo/amba-auto.png",
+  "minInvestment": "₹2,70,000",
+  "open": "27 Apr 2026",
+  "close": "29 Apr 2026",
+  "listing": "05 May 2026",
+  "price": "₹130 – ₹135",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Amba Auto Sales and Services Limited",
+    "industry_sector": "Retail / Automobile Dealership",
+    "founded_year": "Not specified",
+    "promoters": [
+      "Pradeep Kumar Lohia",
+      "Rakesh Kumar Lohia",
+      "Vikash Kumar Lohia"
+    ],
+    "description": "Amba Auto Sales and Services Limited is an authorized dealer of Bajaj Auto and LG Electronics. The company operates in the automobile retail value chain, including sale of two-wheelers and three-wheelers, after-sales service, spare parts distribution, and sale of consumer durable products through its showroom network."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Amba Auto Sales and Services Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹130",
+    "price_band_max": "₹135",
+    "lot_size": 2000,
+    "total_issue_size": "₹65.12 Cr (48,24,000 shares)",
+    "fresh_issue_size": "₹65.12 Cr (48,24,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "48,24,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹135",
+    "minimum_investment": "₹2,70,000 (1 lot / 2,000 shares)",
+    "market_cap_post_issue": "N/A",
+    "pre_issue_shareholding": "≈96.67%",
+    "post_issue_shareholding": "≈71.22%"
+  },
+
+  "company_overview": {
+    "business_model": "Authorized dealership and retail chain for automobiles and consumer electronics, including sales, servicing, and financing facilitation.",
+    "products_services": [
+      "Two-Wheeler Sales (Bajaj Auto)",
+      "Three-Wheeler Sales",
+      "Vehicle Servicing & Repairs",
+      "Spare Parts",
+      "Consumer Durable Products (LG Electronics)",
+      "Insurance & Finance Facilitation"
+    ],
+    "competitive_strengths": [
+      "Authorized dealer of Bajaj Auto and LG Electronics",
+      "Strong showroom and service network (28 locations)",
+      "Diversified revenue streams (vehicles + electronics + services)",
+      "Growing demand in auto retail sector"
+    ],
+    "risks": [
+      "High dependence on OEM brands",
+      "Low-margin dealership business",
+      "High debt levels",
+      "Working capital intensive operations"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "27 Apr 2026",
+    "ipo_close_date": "29 Apr 2026",
+    "basis_of_allotment_date": "30 Apr 2026",
+    "refund_initiation_date": "04 May 2026",
+    "demat_credit_date": "04 May 2026",
+    "listing_date": "05 May 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "Setting up new showrooms and renovation (~₹6.3 Cr)",
+    "working_capital_requirements": "₹43 Cr",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "9.62%",
+    "retail_quota": "37.98%",
+    "hni_quota": "47.39%",
+    "anchor_investors": "0%",
+    "market_maker": "Balance portion"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "2000",
+      "amount": "₹2,70,000"
+    },
+    "retail_maximum": {
+      "lot_size": "1 lot",
+      "shares": "2000",
+      "amount": "₹2,70,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3000",
+      "amount": "₹4,05,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "8000",
+      "amount": "₹10,80,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "51.32%",
+    "roce": "24.31%",
+    "pat_margin": "3.21%",
+    "ebitda_margin": "7.21%",
+    "debt_to_equity": "3.65",
+    "eps": "₹5.76",
+    "pe_ratio": "N/A"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY25",
+      "assets": "₹91.11 Cr",
+      "total_income": "₹242.36 Cr",
+      "pat": "₹7.77 Cr",
+      "ebitda": "₹17.47 Cr",
+      "net_worth": "₹15.14 Cr",
+      "total_borrowing": "₹55.21 Cr"
+    },
+    {
+      "period": "FY24",
+      "assets": "₹54.45 Cr",
+      "total_income": "₹211.28 Cr",
+      "pat": "₹2.88 Cr",
+      "ebitda": "₹8.40 Cr",
+      "net_worth": "₹7.36 Cr",
+      "total_borrowing": "₹37.20 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (not stable yet)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Apr 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "N/A (IPO recently opened)",
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "N/A",
+    "retail_subscription": "N/A",
+    "total_applications": "N/A"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://www.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "CapitalSquare Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Sy.No.442/2A, 443/2B, Hongasandra, Bengaluru, Karnataka, 560068",
+    "company_website": "https://www.ambaauto.com",
+    "company_email": "cs@ambabajaj.com",
+    "company_phone": "+91 99003 67421"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_AMBAAUTO.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  }
+}
 
 
 
