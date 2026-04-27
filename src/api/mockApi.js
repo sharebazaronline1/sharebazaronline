@@ -14843,7 +14843,7 @@ export const fetchPreIPODetails = async () => {
   return [
    {
   "id": 1,
-  "name": "APL Metals Limited",
+  "name": "APL Metals Unlisted Shares",
   "price": 1,
   "logo": "/images/preipo/image1.png",
 
@@ -15634,7 +15634,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
 {
   "id": 7,
-  "name": "Apollo Green Energy Limited",
+  "name": "Apollo Green Energy Limited Unlisted Shares",
   "price": 64,
   "logo": "/images/preipo/image7.jpg",
 
@@ -15890,7 +15890,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
 {
   "id": 9,
-  "name": "Assam Carbon Products Limited",
+  "name": "Assam Carbon Products Limited Unlisted Shares",
   "price": 475,
   "logo": "/images/preipo/image9.png",
 
@@ -16013,7 +16013,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
 {
   "id": 10,
-  "name": "Axles India Limited",
+  "name": "Axles India Limited Unlisted Shares",
   "price": 145,
   "logo": "/images/preipo/image10.jpg",
 
@@ -16298,7 +16298,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
 {
   "id": 12,
-  "name": "BVG India Limited",
+  "name": "BVG India Limited Unlisted Share",
   "price": 395,
   "logo": "/images/preipo/image12.jpg",
 
@@ -16688,7 +16688,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
 {
   "id": 15,
-  "name": "Bharat Nidhi (Bharat Bank)",
+  "name": "Bharat Nidhi (Bharat Bank) Unlisted Shares",
   "price": 11300,
   "logo": "/images/preipo/image15.jpg",
 
@@ -18286,7 +18286,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
 {
   "id": 27,
-  "name": "Dantech Digital Dental Solutions Private Limited",
+  "name": "DANTECH DIGITAL DENTAL SOLUTIONS PRIVATE LIMITED",
   "price": 450,
   "logo": "/images/preipo/dantech.png",
 
@@ -19472,7 +19472,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
  {
   "id": 38,
-  "name": "Frick India Limited",
+  "name": "Frick India Limited Unlisted Shares",
   "price": 1825,
   "logo": "/images/preipo/frick.png",
 
@@ -19748,7 +19748,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
  {
   "id": 40,
-  "name": "GKN Driveline India Limited",
+  "name": "GKN Driveline India Limited Unlisted Shares",
   "price": 1725,
   "logo": "/images/preipo/image39.jpg",
 
@@ -20043,7 +20043,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
   
  {
   "id": 42,
-  "name": "Goa Shipyard Limited",
+  "name": "Goa Shipyard Limited Unlisted Shares",
   "price": 2825,
   "logo": "/images/preipo/goashipyard.png",
 
@@ -20197,7 +20197,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
  {
   "id": 43,
-  "name": "Goodluck Defence And Aerospace Limited",
+  "name": "Goodluck Defence And Aerospace Unlisted Shares",
   "price": 312,
   "logo": "/images/preipo/image42.jpg",
 
@@ -20488,7 +20488,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
 {
   "id": 45,
-  "name": "Graand Prix Luxury Elevators Limited",
+  "name": "Graand Prix Luxury Elevators Limited Unlisted Shares",
   "price": 46,
   "logo": "/images/preipo/image43.jpg",
 
@@ -20609,7 +20609,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 46,
-  "name": "Greenzo Energy India Limited",
+  "name": "Greenzo Energy India Limited Unlisted Shares",
   "price": 595,
   "logo": "/images/preipo/image44.png",
 
@@ -20757,7 +20757,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 47,
-  "name": "Gynofem Healthcare Limited",
+  "name": "Gynofem Healthcare Unlisted Shares",
   "price": 60,
   "logo": "/images/preipo/image45.png",
 
@@ -21020,7 +21020,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 49,
-  "name": "HDFC Securities Limited",
+  "name": "HDFC Securities Limited Unlisted Shares",
   "price": 11250,
   "logo": "/images/preipo/image47.png",
 
@@ -21308,7 +21308,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
  {
   "id": 51,
-  "name": "Hero Fincorp Limited",
+  "name": "Hero Fincorp Limited Unlisted Shares",
   "price": 1050,
   "logo": "/images/preipo/image49.png",
 
@@ -21589,7 +21589,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
  {
   "id": 53,
-  "name": "Hicks Thermometers India Limited",
+  "name": "Hicks Thermometers India Limited Unlisted Shares",
   "price": 1600,
   "logo": "/images/preipo/image51.jpg",
 
@@ -22155,7 +22155,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
  {
   "id": 57,
-  "name": "Hindustan Times Limited",
+  "name": "Hindustan Times Unlisted Shares",
   "price": 950,
   "logo": "/images/preipo/image55.png",
 
@@ -22278,7 +22278,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 58,
-  "name": "Hindusthan Engineering & Industries Limited",
+  "name": "Hindusthan Engineering & Industries Limited Unlisted Shares",
   "price": 1050,
   "logo": "/images/preipo/image56.jpg",
 
@@ -22564,7 +22564,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
  {
   "id": 60,
-  "name": "Honeywell Electrical Devices and Systems India Limited",
+  "name": "Honeywell Electrical Devices and Systems India Unlisted Shares",
   "price": 10625,
   "logo": "/images/preipo/image58.png",
 
@@ -24382,7 +24382,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 },
   {
   "id": 73,
-  "name": "Inox Leasing and Finance Limited",
+  "name": "Inox Leasing and Finance Limited Unlisted Shares",
   "price": 14250,
   "logo": "/images/preipo/image71.jpg",
 
