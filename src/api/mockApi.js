@@ -14501,6 +14501,176 @@ export const fetchIPOs = async () => {
     "prospectus_pdf": "N/A",
     "investor_presentation": "N/A"
   }
+},
+{
+  "id": 74,
+  "name": "OnEMI Technology Solutions",
+  "logo": "/images/ipo/onemi.png",
+  "minInvestment": "₹14,400",
+  "open": "30 Apr 2026",
+  "close": "06 May 2026",
+  "listing": "09 May 2026",
+  "price": "₹135 – ₹144",
+  "lot": 100,
+
+  "about_company": {
+    "company_name": "OnEMI Technology Solutions Limited",
+    "industry_sector": "Fintech / Digital Lending Platform",
+    "founded_year": "2017",
+    "promoters": [
+      "Ashish Tulsian",
+      "Harshvardhan Lunia"
+    ],
+    "description": "OnEMI Technology Solutions Limited, parent company of Kissht and Ring, operates a fintech platform offering digital consumer lending, BNPL (Buy Now Pay Later), and credit solutions. The company leverages data analytics, AI-based underwriting, and partnerships with NBFCs to provide instant loans to salaried and self-employed individuals across India."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "OnEMI Technology Solutions Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹135",
+    "price_band_max": "₹144",
+    "lot_size": 100,
+    "total_issue_size": "₹84.96 Cr (59,00,000 shares)",
+    "fresh_issue_size": "₹84.96 Cr (59,00,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "59,00,000 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹144",
+    "minimum_investment": "₹14,400 (1 lot / 100 shares)",
+    "market_cap_post_issue": "N/A",
+    "pre_issue_shareholding": "N/A",
+    "post_issue_shareholding": "N/A"
+  },
+
+  "company_overview": {
+    "business_model": "Digital lending platform offering instant personal loans and BNPL services through partnerships with financial institutions.",
+    "products_services": [
+      "Personal Loans",
+      "Buy Now Pay Later (BNPL)",
+      "Kissht Lending Platform",
+      "Ring Credit Line",
+      "Credit Risk Analytics"
+    ],
+    "competitive_strengths": [
+      "Strong fintech ecosystem (Kissht + Ring)",
+      "AI-driven credit underwriting",
+      "Large digital customer base",
+      "Scalable asset-light business model"
+    ],
+    "risks": [
+      "Loss-making business",
+      "High credit risk exposure",
+      "Dependence on lending partners",
+      "Regulatory risks in fintech sector"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Apr 2026",
+    "ipo_close_date": "06 May 2026",
+    "basis_of_allotment_date": "07 May 2026",
+    "refund_initiation_date": "08 May 2026",
+    "demat_credit_date": "08 May 2026",
+    "listing_date": "09 May 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "Primary objective",
+    "technology_investment": "Enhancement of digital platform",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "retail_quota": "35%",
+    "hni_quota": "15%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "100",
+      "amount": "₹14,400"
+    },
+    "retail_maximum": {
+      "lot_size": "13 lots",
+      "shares": "1300",
+      "amount": "₹1,87,200"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "1400",
+      "amount": "₹2,01,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "70 lots",
+      "shares": "7000",
+      "amount": "₹10,08,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "Negative",
+    "roce": "Negative",
+    "pat_margin": "Negative",
+    "ebitda_margin": "Negative",
+    "debt_to_equity": "N/A",
+    "eps": "Negative",
+    "pe_ratio": "N/A"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "Latest Available",
+      "assets": "N/A",
+      "total_income": "N/A",
+      "pat": "Loss making",
+      "ebitda": "Negative",
+      "net_worth": "N/A",
+      "total_borrowing": "N/A"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Apr 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "N/A",
+    "qib_ex_anchor": "N/A",
+    "hni_subscription": "N/A",
+    "retail_subscription": "N/A",
+    "total_applications": "N/A"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "KFin Technologies Ltd.",
+    "registrar_website": "https://www.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Hem Securities Ltd."
+  },
+
+  "company_information": {
+    "company_address": "10 th Floor,Tower 4, Equinox Park, LBS Marg, Kurla (West),Mumbai, Maharashtra, 400070",
+    "company_website": "https://www.kissht.com",
+    "company_email": "compliance@kissht.com",
+    "company_phone": "+91 22 6947 5600"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE/NSE",
+    "rhp_link": "https://www.bseindia.com/corporates/download/378749/IPO%20Open/6RedHerringProspectussigned_20260427195413.pdf",
+    "prospectus_pdf": "Same as RHP",
+    "investor_presentation": "N/A"
+  }
 }
 
 
