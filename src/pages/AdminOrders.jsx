@@ -241,7 +241,7 @@ const AdminOrders = () => {
                   }}
                   className="bg-white rounded-2xl shadow-2xl border border-gray-100 py-2 w-44"
                 >
-                  {["PENDING", "PROCESSING", "CONFIRMED"].map((status) => (
+                  {["PENDING", "PROCESSING", "SETTLED"].map((status) => (
                     <button
                       key={status}
                       onClick={() => updateOrderStatus(openStatusId, status)}
