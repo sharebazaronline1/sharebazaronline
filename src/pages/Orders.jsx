@@ -13,9 +13,8 @@ const Orders = () => {
   const [activeTab, setActiveTab] = useState("buy");
 
   const [pricePerUnit, setPricePerUnit] = useState(0);
-  const [quantity, setQuantity] = useState(10);
-  const total = quantity * pricePerUnit;
-
+  const [quantity, setQuantity] = useState(null);
+const total = (quantity || 0) * (pricePerUnit || 0);
   const [preIpos, setPreIpos] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCompany, setSelectedCompany] = useState("");
@@ -83,23 +82,51 @@ const Orders = () => {
     (item?.isin ?? "").toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const handleCompanySelect = (company) => {
-    setSelectedCompany(company.name || "Unknown");
-    setPricePerUnit(Number(company.price) || 0);
-    console.log(company);
-    // Set initial quantity to minLotSize if available, else 10
-    const lotSize = Number(company.minLotSize) || 10;
-    setQuantity(lotSize - (lotSize % 5) || 5); // ensure multiple of 5
+const handleCompanySelect = (company) => {
+  setSelectedCompany(company.name || "Unknown");
 
-    setSearchQuery("");
-    setShowDropdown(false);
-  };
+  const rawPrice = company.price;
+  let parsedPrice = 0;
 
-  const adjustQuantity = (delta) => {
-    const step = 5;
-    const newQty = Math.max(5, quantity + delta * step);
-    setQuantity(newQty - (newQty % step));
-  };
+  if (typeof rawPrice === "string") {
+    const match = rawPrice.match(/\d+/g);
+    parsedPrice = match ? Number(match[match.length - 1]) : 0;
+  } else {
+    parsedPrice = Number(rawPrice) || 0;
+  }
+
+  setPricePerUnit(parsedPrice);
+
+  // 🔥 LOT SIZE FIX (ALL CASES COVERED)
+  let lotSize =
+    company.lot ||
+    company.ipo_basic_details?.lot_size ||
+    company.market_lot_details?.retail_minimum?.shares;
+
+  // ✅ NEW: handle "50 Shares"
+  if (!lotSize && company.shareDetails?.lotSize) {
+    const match = company.shareDetails.lotSize.match(/\d+/);
+    lotSize = match ? Number(match[0]) : null;
+  }
+
+  if (!lotSize || isNaN(lotSize)) {
+    console.warn("Lot size missing for:", company.name);
+    setQuantity(null);
+  } else {
+    setQuantity(lotSize);
+  }
+
+  setSearchQuery("");
+  setShowDropdown(false);
+};
+
+const adjustQuantity = (delta) => {
+  if (!quantity || isNaN(quantity)) return; // ✅ add this
+
+  const step = 5;
+  const newQty = Math.max(5, quantity + delta * step);
+  setQuantity(newQty - (newQty % step));
+};
 
   const handleSubmit = async () => {
     if (!selectedCompany) {
@@ -267,7 +294,7 @@ const Orders = () => {
                     </button>
                     <input
                       type="text"
-                      value={quantity}
+                      value={Number.isFinite(quantity) ? quantity : ""}
                       readOnly
                       className="w-full text-center py-3 font-semibold text-base focus:outline-none"
                     />
@@ -397,11 +424,11 @@ const Orders = () => {
                         <td className="py-3 px-4">
                           <span
                             className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${
-                              order.status === "CONFIRMED"
-                                ? "bg-green-100 text-green-700"
-                                : order.status === "REJECTED"
-                                ? "bg-red-100 text-red-700"
-                                : "bg-yellow-100 text-yellow-700"
+                             order.status === "SETTLED"
+  ? "bg-green-100 text-green-700"
+  : order.status === "PROCESSING"
+  ? "bg-blue-100 text-blue-700"
+  : "bg-yellow-100 text-yellow-700"
                             }`}
                           >
                             {order.status || "PENDING"}
