@@ -41,6 +41,7 @@ import AdminRoute from "./components/AdminRoute";
 import AdminUsers from "./pages/AdminUsers"
 import AdminPreIPO from "./pages/AdminPreIPO"
 import AdminOrders from "./pages/AdminOrders"
+import AdminBlog from "./pages/AdminBlog";
 // Optional: If you want admin to have its own layout without user sidebar/header
 function AdminLayout() {
   const location = useLocation();
@@ -129,6 +130,7 @@ function AppLayout() {
                 <Route path="/admin-users" element={<AdminUsers />} />
                 <Route path="/admin-preipo" element={<AdminPreIPO />} />
                 <Route path="/admin-orders" element={<AdminOrders />} />
+                <Route path="/admin-blogs" element={<AdminBlog />} />
               </Route>
 
               {/* Catch-all redirect (optional) */}

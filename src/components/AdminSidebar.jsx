@@ -8,6 +8,7 @@ import {
   TrendingUp,
   ShieldCheck,
   IndianRupee,
+  Newspaper,
   ScrollText,
 } from "lucide-react";
 
@@ -50,6 +51,7 @@ const AdminSidebar = ({ mobileOpen, setMobileOpen }) => {
           <SidebarLink to="/admin-referrals" icon={<Share2 size={18} />} label="Referrals" />
           <SidebarLink to="/admin-preipo" icon={<TrendingUp size={18} />} label="Pre IPO" />
           <SidebarLink to="/admin-orders" icon={<IndianRupee size={18} />} label="Orders" />
+          <SidebarLink to="/admin-blogs" icon={<Newspaper  size={18} />} label="Blogs" />
           <SidebarLink to="/admin-settings" icon={<Settings size={18} />} label="Settings" />
         </nav>
 
