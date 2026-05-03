@@ -193,8 +193,38 @@ setReferredOrdersMap(ordersMap);
   };
 
   // ================= DOWNLOAD FUNCTIONS =================
-  const downloadUserReport = () => {
-    const userSummary = users.map((user) => ({
+  const downloadUserReport = async () => {
+  const userSummary = [];
+
+  for (const user of users) {
+    // 🔹 Get referred users
+    const { data: referrals } = await supabase
+      .from("referrals")
+      .select("referred_sb_user_id")
+      .eq("referrer_sb_user_id", user.id);
+
+    let referralOrders = 0;
+    let referralAmount = 0;
+
+    for (const ref of referrals || []) {
+      const { data: orders } = await supabase
+        .from("orders")
+        .select("total")
+        .eq("user_id", ref.referred_sb_user_id);
+
+      if (orders) {
+        referralOrders += orders.length;
+        referralAmount += orders.reduce(
+          (sum, o) =>
+            sum +
+            ((Number(o.total) || 0) *
+              ((user.commission_rate || 0) / 100)),
+          0
+        );
+      }
+    }
+
+    userSummary.push({
       "Full Name": user.full_name || "",
       "SB ID": user.sb_user_id || "",
       "Email": user.email || "",
@@ -205,50 +235,81 @@ setReferredOrdersMap(ordersMap);
       "Commission Rate (%)": user.commission_rate || 0.25,
       "Total Orders": user.orderCount || 0,
       "Portfolio Value (₹)": user.totalPortfolioValue || 0,
-      "Total Referrals": user.referralCount || 0,
-      "Referred Users": user.referredUsers.map(r => r.referred_name || r.referred_email).join(", ") || "None",
+
+      // ✅ NEW FIELDS
+      "Total Referrals": referrals?.length || 0,
+      "Referral Orders Count": referralOrders,
+      "Referral Commission Earned (₹)": referralAmount.toFixed(2),
+
       "KYC Status": user.kycStatus || "Not Uploaded",
       "Bank Name": user.bankAccount?.bank_name || "",
       "Account Number": user.bankAccount?.account_number || "",
       "IFSC": user.bankAccount?.ifsc_code || "",
-    }));
+    });
+  }
 
-    const ws = XLSX.utils.json_to_sheet(userSummary);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "Users Summary");
-    XLSX.writeFile(wb, `ShareBazaar_Users_Summary_${new Date().toISOString().slice(0,10)}.xlsx`);
-  };
+  const ws = XLSX.utils.json_to_sheet(userSummary);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "Users Summary");
+  XLSX.writeFile(
+    wb,
+    `ShareBazaar_Users_Summary_${new Date().toISOString().slice(0, 10)}.xlsx`
+  );
+};
 
-  const downloadOrderReport = async () => {
-    let allOrders = [];
-    for (const user of users) {
-      const { data: orders } = await supabase
-        .from("orders")
-        .select("asset_name, price, quantity, total, order_type, status, commission_amount, created_at")
-        .eq("user_id", user.id);
+ const downloadOrderReport = async () => {
+  let allOrders = [];
 
-      orders?.forEach((order) => {
-        allOrders.push({
-          "User Name": user.full_name,
-          "SB ID": user.sb_user_id,
-          "Email": user.email,
-          "Asset Name": order.asset_name,
-          "Order Type": order.order_type,
-          "Price (₹)": order.price,
-          "Quantity": order.quantity,
-          "Total Amount (₹)": order.total,
-          "Commission (₹)": order.commission_amount || 0,
-          "Status": order.status,
-          "Order Date": new Date(order.created_at).toLocaleDateString("en-IN"),
-        });
+  // 🔹 Fetch referrals mapping first
+  const { data: referrals } = await supabase
+    .from("referrals")
+    .select(`
+      referrer_sb_user_id,
+      referred_sb_user_id,
+      profiles_referrer:referrer_sb_user_id (full_name, sb_user_id),
+      profiles_referred:referred_sb_user_id (full_name, sb_user_id)
+    `);
+
+  for (const user of users) {
+    const { data: orders } = await supabase
+      .from("orders")
+      .select("asset_name, price, quantity, total, order_type, status, commission_amount, created_at, user_id")
+      .eq("user_id", user.id);
+
+    orders?.forEach((order) => {
+      const referral = referrals?.find(
+        (r) => r.referred_sb_user_id === order.user_id
+      );
+
+      allOrders.push({
+        "Referrer Name": referral?.profiles_referrer?.full_name || "Direct User",
+        "Referrer SB ID": referral?.profiles_referrer?.sb_user_id || "-",
+
+        "Referred User Name":
+          referral?.profiles_referred?.full_name || user.full_name,
+        "Referred User SB ID":
+          referral?.profiles_referred?.sb_user_id || user.sb_user_id,
+
+        "Asset Name": order.asset_name,
+        "Order Type": order.order_type,
+        "Price (₹)": order.price,
+        "Quantity": order.quantity,
+        "Total Amount (₹)": order.total,
+        "Commission (₹)": order.commission_amount || 0,
+        "Status": order.status,
+        "Order Date": new Date(order.created_at).toLocaleDateString("en-IN"),
       });
-    }
+    });
+  }
 
-    const ws = XLSX.utils.json_to_sheet(allOrders);
-    const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "All Orders");
-    XLSX.writeFile(wb, `ShareBazaar_All_Orders_Report_${new Date().toISOString().slice(0,10)}.xlsx`);
-  };
+  const ws = XLSX.utils.json_to_sheet(allOrders);
+  const wb = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(wb, ws, "Orders With Referrals");
+  XLSX.writeFile(
+    wb,
+    `ShareBazaar_Orders_With_Referrals_${new Date().toISOString().slice(0, 10)}.xlsx`
+  );
+};
 
   const toggleExpand = (userId) => {
     setExpandedUserId(expandedUserId === userId ? null : userId);

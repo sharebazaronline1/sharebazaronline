@@ -21,58 +21,91 @@ const Login = () => {
     return `SB-${hash}`;
   };
 
-  // 🔹 Step 1: Pure referral capture (runs on every URL change)
-  useEffect(() => {
-    const params = new URLSearchParams(location.search);
-    const refCode = params.get("ref");
+ // ✅ FIRST — save referral
+useEffect(() => {
+  const ref = new URLSearchParams(window.location.search).get("ref");
 
-    if (refCode) {
-      localStorage.setItem("referral_code", refCode);
+  if (ref) {
+    console.log("Saving referral:", ref);
+    localStorage.setItem("referral_code", ref);
+  }
+}, []);
+
+// ✅ SECOND — handle OAuth
+useEffect(() => {
+  const handleOAuth = async () => {
+   const {
+  data: { user },
+} = await supabase.auth.getUser();
+
+    if (user) {
+      await applyReferral(user);
+      navigate("/dashboard", { replace: true });
     }
-  }, [location.search]);
+  };
 
-  // 🔹 Minimal auth listener - only for session & verification
-  useEffect(() => {
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event) => {
-        if (event !== "SIGNED_IN") return;
+  handleOAuth();
+}, []);
 
-        const {
-          data: { session: currentSession },
-        } = await supabase.auth.getSession();
+const applyReferral = async (user) => {
+  const referralCode = localStorage.getItem("referral_code");
+  if (!referralCode) return;
 
-        if (!currentSession?.user) return;
+  console.log("Applying referral:", referralCode);
 
-        const user = currentSession.user;
+const waitForProfile = async (userId) => {
+  for (let i = 0; i < 20; i++) {
+    const { data } = await supabase
+      .from("profiles")
+      .select("*")
+      .eq("id", userId)
+      .maybeSingle();
 
-        if (!user.email_confirmed_at) {
-          alert("Please verify your email before logging in.");
-          await supabase.auth.signOut();
-          return;
-        }
+    if (data) return data;
 
-        // Light profile update only
-        await supabase
-          .from("profiles")
-          .update({
-            mobile: user.user_metadata?.mobile || null,
-            email_verified: true,
-          })
-          .eq("id", user.id);
-      }
-    );
+    await new Promise((r) => setTimeout(r, 500));
+  }
 
-    return () => subscription.unsubscribe();
-  }, []);
+  return null;
+};
+const profile = await waitForProfile(user.id);
+
+if (!profile) {
+  console.log("Profile not ready after wait");
+  return;
+}
+  if (profile.referred_by_code) {
+    console.log("Already referred");
+    localStorage.removeItem("referral_code");
+    return;
+  }
+
+  // validate referrer
+// ✅ just apply referral, DB will validate
+await supabase
+  .from("profiles")
+  .update({ referred_by_code: referralCode })
+  .eq("id", user.id);
+
+console.log("✅ Referral applied (DB will validate)");
+localStorage.removeItem("referral_code");
+
+  // ✅ update profile (this will trigger DB function)
+  await supabase
+    .from("profiles")
+    .update({ referred_by_code: referralCode })
+    .eq("id", user.id);
+
+  console.log("✅ Referral applied");
+
+  localStorage.removeItem("referral_code");
+};
 
   const handleEmailAuth = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      // =========================
-      // SIGNUP
-      // =========================
       if (isSignUp) {
         if (!fullName.trim()) {
           alert("Please enter your full name");
@@ -86,33 +119,26 @@ const Login = () => {
           return;
         }
 
-        const referralCode = localStorage.getItem("referral_code");
+       const referralCode = localStorage.getItem("referral_code");
 
-        const { error } = await supabase.auth.signUp({
-          email,
-          password,
-          options: {
-            data: {
-              full_name: fullName.trim(),
-              mobile: mobile.trim(),
-              referral_code: referralCode || null, // Best practice: pass on signup
-            },
-            emailRedirectTo: `${window.location.origin}/login`,
-          },
-        });
-
+const { data, error } = await supabase.auth.signUp({
+  email,
+  password,
+  options: {
+    data: {
+      full_name: fullName,
+      mobile: mobile,
+      referral_code: referralCode   // 🔥 THIS IS THE KEY
+    }
+  }
+});
         if (error) throw error;
 
         alert("Check your email to verify your account 📩");
-
         setIsSignUp(false);
-        setLoading(false);
         return;
       }
 
-      // =========================
-      // LOGIN
-      // =========================
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
@@ -125,11 +151,9 @@ const Login = () => {
       if (!user.email_confirmed_at) {
         alert("Please verify your email before logging in 📩");
         await supabase.auth.signOut();
-        setLoading(false);
         return;
       }
 
-      // Light profile update
       await supabase
         .from("profiles")
         .update({
@@ -138,26 +162,9 @@ const Login = () => {
         })
         .eq("id", user.id);
 
-      // ✅ Referral logic AFTER login (Step 2)
-      const referralCode = localStorage.getItem("referral_code");
+     await applyReferral(user);
+navigate("/dashboard", { replace: true });
 
-      // Redirect FIRST for instant UX
-      navigate("/dashboard", { replace: true });
-
-      // Background referral update (Step 3)
-      if (referralCode) {
-        setTimeout(async () => {
-          await supabase
-            .from("profiles")
-            .update({ referred_by_code: referralCode })
-            .eq("id", user.id);
-
-          localStorage.removeItem("referral_code");
-        }, 0);
-      }
-
-      setLoading(false);
-      return;
     } catch (error) {
       alert(
         error.message.includes("Invalid login credentials")
@@ -169,16 +176,24 @@ const Login = () => {
     }
   };
 
-  const handleGoogleLogin = async () => {
-    const { error } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: `${window.location.origin}/login`,
-      },
-    });
+const handleGoogleLogin = async () => {
+  const params = new URLSearchParams(location.search);
+  const ref = params.get("ref");
 
-    if (error) alert(error.message);
-  };
+  if (ref) {
+    console.log("Saving ref before redirect:", ref);
+    localStorage.setItem("referral_code", ref);
+  }
+
+  const { error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: `${window.location.origin}/login`,
+    },
+  });
+
+  if (error) alert(error.message);
+};
 
   return (
     <div

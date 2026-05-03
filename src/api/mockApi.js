@@ -14510,7 +14510,7 @@ export const fetchIPOs = async () => {
   "open": "30 Apr 2026",
   "close": "06 May 2026",
   "listing": "09 May 2026",
-  "price": "₹135 – ₹144",
+  "price": "135 – 144",
   "lot": 100,
 
   "about_company": {
@@ -14669,6 +14669,395 @@ export const fetchIPOs = async () => {
     "drhp_link": "Available on BSE/NSE",
     "rhp_link": "https://www.bseindia.com/corporates/download/378749/IPO%20Open/6RedHerringProspectussigned_20260427195413.pdf",
     "prospectus_pdf": "Same as RHP",
+    "investor_presentation": "N/A"
+  }
+},
+{
+  "id": 75,
+  "name": "Recode Studios",
+  "logo": "/images/ipo/recodestudios.png",
+  "minInvestment": "₹2,52,800",
+  "open": "05 May 2026",
+  "close": "07 May 2026",
+  "listing": "12 May 2026",
+  "price": "150 – 158",
+  "lot": 800,
+
+  "about_company": {
+    "company_name": "Recode Studios Limited",
+    "industry_sector": "Beauty & Personal Care Products (Makeup, Skincare, Body Care)",
+    "founded_year": "2021",
+    "promoters": [
+      "Dheeraj Bansal",
+      "Rahul Sachdeva",
+      "Shelly Bansal",
+      "Shalini Trehan",
+      "Preeti Trehan",
+      "Karan Bansal"
+    ],
+    "description": "Recode Studios Limited operates under the brand 'Recode' in the beauty and personal care segment. The company is engaged in branding, sourcing, and selling makeup, skincare, body care, and beauty accessories. It follows an omnichannel model with Company-Owned Company-Operated (COCO) stores, Franchisee-Owned Franchisee-Operated (FOFO) stores, its own website & app, and major e-commerce platforms like Amazon, Nykaa, Myntra, and Flipkart. As of September 30, 2025, the company had 24 stores (3 COCO + 21 FOFO) across 14 states and offers over 350 SKUs."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Recode Studios Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹150",
+    "price_band_max": "₹158",
+    "lot_size": 800,
+    "total_issue_size": "₹44.59 Cr (28,22,400 shares)",
+    "fresh_issue_size": "₹39.55 Cr (25,03,200 shares approx)",
+    "offer_for_sale": "₹5.04 Cr (3,19,200 shares)",
+    "shares_offered": "28,22,400 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹158",
+    "minimum_investment": "₹2,52,800 (2 lots / 1,600 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹168.18 Cr",
+    "pre_issue_shareholding": "Promoters 88.93%",
+    "post_issue_shareholding": "Promoters 65.01%"
+  },
+
+  "company_overview": {
+    "business_model": "Omnichannel beauty and personal care brand with own stores, franchise model, and strong online presence.",
+    "products_services": [
+      "Makeup (Face, Eye, Lip)",
+      "Skincare",
+      "Body Care",
+      "Beauty Accessories"
+    ],
+    "competitive_strengths": [
+      "Omnichannel presence (Offline + Online)",
+      "Diverse product range (350+ SKUs)",
+      "Strong digital marketing and customer engagement",
+      "Experienced management team"
+    ],
+    "risks": [
+      "Dependence on third-party manufacturers",
+      "Intense competition in beauty segment",
+      "High marketing and inventory costs",
+      "Changing consumer trends"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "05 May 2026",
+    "ipo_close_date": "07 May 2026",
+    "basis_of_allotment_date": "08 May 2026",
+    "refund_initiation_date": "11 May 2026",
+    "demat_credit_date": "11 May 2026",
+    "listing_date": "12 May 2026"
+  },
+
+  "ipo_objectives": {
+    "setup_new_warehouse_ludhiana": "₹5.74 Cr",
+    "marketing_and_advertisement": "₹5.41 Cr",
+    "working_capital_requirements": "₹19.50 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.93%",
+    "hni_nii_quota": "15.06%",
+    "retail_quota": "35.02%",
+    "market_maker": "5.13%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "1600",
+      "amount": "₹2,52,800"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "2400",
+      "amount": "₹3,79,200"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "6400",
+      "amount": "₹10,11,200"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "68.11% (Dec 31, 2025) / 46.37% (Mar 31, 2025)",
+    "roce": "59.85% (Dec 31, 2025) / 34.47% (Mar 31, 2025)",
+    "pat_margin": "15.79% (Dec 31, 2025) / 6.91% (Mar 31, 2025)",
+    "ebitda_margin": "23.24% (Dec 31, 2025) / 12.82% (Mar 31, 2025)",
+    "debt_to_equity": "0.19 (Dec 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "12.53 Cr",
+      "total_income": "22.44 Cr",
+      "pat": "0.69 Cr",
+      "ebitda": "1.44 Cr",
+      "net_worth": "5.20 Cr",
+      "total_borrowing": "3.79 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "16.73 Cr",
+      "total_income": "36.93 Cr",
+      "pat": "0.27 Cr",
+      "ebitda": "1.67 Cr",
+      "net_worth": "5.47 Cr",
+      "total_borrowing": "7.85 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "23.18 Cr",
+      "total_income": "47.94 Cr",
+      "pat": "3.30 Cr",
+      "ebitda": "6.13 Cr",
+      "net_worth": "8.77 Cr",
+      "total_borrowing": "7.56 Cr"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "28.33 Cr",
+      "total_income": "57.45 Cr",
+      "pat": "9.06 Cr",
+      "ebitda": "13.34 Cr",
+      "net_worth": "17.84 Cr",
+      "total_borrowing": "N/A"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Apr 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 05 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Mudra RTA Ventures Private Limited",
+    "registrar_website": "https://mudrarta.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Seren Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "R-89, Phase V, Focal Point, Ludhiana, Punjab 141010",
+    "company_website": "https://www.shop.recodestudios.com/",
+    "company_email": "info@recodestudios.com",
+    "company_phone": "0161- 4752672"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://cdn.shopify.com/s/files/1/0477/3327/6826/files/RECODE_STUDIOS_LIMITED_RHP.pdf?v=1777437948",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  }
+},
+{
+  "id": 76,
+  "name": "Value 360 Communications",
+  "logo": "/images/ipo/value360communications.png",
+  "minInvestment": "₹2,35,200",
+  "open": "04 May 2026",
+  "close": "06 May 2026",
+  "listing": "11 May 2026",
+  "price": "95 – 98",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Value 360 Communications Limited",
+    "industry_sector": "Public Relations, Marketing & Communication Services",
+    "founded_year": "2009",
+    "promoters": [
+      "Kunal Kishore",
+      "Gaurav Patra",
+      "Manisha Chaudhary"
+    ],
+    "description": "Value 360 Communications Limited is a full-service integrated marketing and PR agency offering strategic communication services including Investor Relations, Crisis Communication, Reputation Management, Digital PR, Brand Strategy, Social Media & Influencer Marketing, Performance Marketing, Website/App Development, Experiential Marketing, and Media Planning & Buying. The company operates on a scalable, asset-light model with a mix of retainer and project-based contracts. It has 180+ professionals across three offices in India and serves clients like Kia, AB InBev, Experion, and others."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Value 360 Communications Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹95",
+    "price_band_max": "₹98",
+    "lot_size": 1200,
+    "total_issue_size": "₹41.69 Cr (42,54,000 shares)",
+    "fresh_issue_size": "₹37.53 Cr (38,29,200 shares)",
+    "offer_for_sale": "₹4.16 Cr (4,24,800 shares)",
+    "shares_offered": "42,54,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹98",
+    "minimum_investment": "₹2,35,200 (2 lots / 2,400 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹157.68 Cr",
+    "pre_issue_shareholding": "Promoters 81.56%",
+    "post_issue_shareholding": "Promoters 59.51%"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated PR, marketing, and communication services with retainer and project-based revenue model.",
+    "products_services": [
+      "Investor Relations & Crisis Communication",
+      "Reputation Management & Digital PR",
+      "Social Media & Influencer Marketing",
+      "Performance Marketing & Media Buying",
+      "Website/App Development & Experiential Marketing"
+    ],
+    "competitive_strengths": [
+      "Strong brand reputation in strategic communications",
+      "Diverse client portfolio across sectors",
+      "Scalable asset-light business model",
+      "High women representation (53% workforce)",
+      "Technology-led growth strategies"
+    ],
+    "risks": [
+      "Client concentration risk",
+      "Intense competition in PR & marketing sector",
+      "Dependence on key personnel"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "04 May 2026",
+    "ipo_close_date": "06 May 2026",
+    "basis_of_allotment_date": "07 May 2026",
+    "refund_initiation_date": "07 May 2026",
+    "demat_credit_date": "08 May 2026",
+    "listing_date": "11 May 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹12.71 Cr",
+    "capital_expenditure_for_technology_infrastructure": "₹4.65 Cr",
+    "repayment_of_borrowings": "₹4.50 Cr",
+    "investment_in_influencer_marketing_platform": "₹7.00 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "1.99%",
+    "hni_nii_quota": "29.38%",
+    "retail_quota": "68.63%",
+    "market_maker": "5.02%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,35,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,52,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 lots",
+      "shares": "10800",
+      "amount": "₹10,58,400"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "21.25% (31 Jan 2026) / 22.77% (31 Mar 2025)",
+    "roce": "31.40% (31 Jan 2026) / 34.21% (31 Mar 2025)",
+    "pat_margin": "13.83% (31 Jan 2026) / 10.58% (31 Mar 2025)",
+    "ebitda_margin": "26.41% (31 Jan 2026) / 21.59% (31 Mar 2025)",
+    "debt_to_equity": "0.47 (31 Jan 2026)",
+    "eps": "4.72 (pre-IPO)",
+    "pe_ratio": "20.74x (pre-IPO)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "30.09 Cr",
+      "total_income": "51.34 Cr",
+      "pat": "1.21 Cr",
+      "ebitda": "5.68 Cr",
+      "net_worth": "7.32 Cr",
+      "total_borrowing": "10.49 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "39.97 Cr",
+      "total_income": "50.80 Cr",
+      "pat": "4.12 Cr",
+      "ebitda": "8.62 Cr",
+      "net_worth": "11.36 Cr",
+      "total_borrowing": "14.32 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "52.96 Cr",
+      "total_income": "54.74 Cr",
+      "pat": "5.79 Cr",
+      "ebitda": "11.82 Cr",
+      "net_worth": "25.17 Cr",
+      "total_borrowing": "10.68 Cr"
+    },
+    {
+      "period": "31 Jan 2026",
+      "assets": "71.48 Cr",
+      "total_income": "55.08 Cr",
+      "pat": "7.62 Cr",
+      "ebitda": "14.55 Cr",
+      "net_worth": "35.32 Cr",
+      "total_borrowing": "16.67 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 04 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "KFin Technologies Ltd.",
+    "registrar_website": "https://www.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Horizon Management Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "43A, Okhla Industrial Estate Phase III,South Delhi, New Delhi, 110020",
+    "company_website": "https://value360india.com/",
+    "company_email": "Compliance@value360india.com",
+    "company_phone": "011-46658888"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://investor.value360india.com/value360pdf/RHP.pdf",
+    "prospectus_pdf": "N/A",
     "investor_presentation": "N/A"
   }
 }
