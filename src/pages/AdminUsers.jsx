@@ -257,57 +257,92 @@ setReferredOrdersMap(ordersMap);
   );
 };
 
- const downloadOrderReport = async () => {
-  let allOrders = [];
-
-  // 🔹 Fetch referrals mapping first
-  const { data: referrals } = await supabase
-    .from("referrals")
+const downloadOrderReport = async () => {
+  // ✅ Step 1: Get all orders with user
+  const { data: orders, error } = await supabase
+    .from("orders")
     .select(`
-      referrer_sb_user_id,
-      referred_sb_user_id,
-      profiles_referrer:referrer_sb_user_id (full_name, sb_user_id),
-      profiles_referred:referred_sb_user_id (full_name, sb_user_id)
+      id,
+      asset_name,
+      price,
+      quantity,
+      total,
+      order_type,
+      status,
+      created_at,
+      user_id,
+      profiles (
+        id,
+        full_name,
+        sb_user_id
+      )
     `);
 
-  for (const user of users) {
-    const { data: orders } = await supabase
-      .from("orders")
-      .select("asset_name, price, quantity, total, order_type, status, commission_amount, created_at, user_id")
-      .eq("user_id", user.id);
-
-    orders?.forEach((order) => {
-      const referral = referrals?.find(
-        (r) => r.referred_sb_user_id === order.user_id
-      );
-
-      allOrders.push({
-        "Referrer Name": referral?.profiles_referrer?.full_name || "Direct User",
-        "Referrer SB ID": referral?.profiles_referrer?.sb_user_id || "-",
-
-        "Referred User Name":
-          referral?.profiles_referred?.full_name || user.full_name,
-        "Referred User SB ID":
-          referral?.profiles_referred?.sb_user_id || user.sb_user_id,
-
-        "Asset Name": order.asset_name,
-        "Order Type": order.order_type,
-        "Price (₹)": order.price,
-        "Quantity": order.quantity,
-        "Total Amount (₹)": order.total,
-        "Commission (₹)": order.commission_amount || 0,
-        "Status": order.status,
-        "Order Date": new Date(order.created_at).toLocaleDateString("en-IN"),
-      });
-    });
+  if (error) {
+    console.error(error);
+    return;
   }
+
+  // ✅ Step 2: Get referrals (NO join here)
+  const { data: referrals } = await supabase
+    .from("referrals")
+    .select("referrer_sb_user_id, referred_sb_user_id");
+
+  // ✅ Step 3: Get ALL profiles (for mapping)
+  const { data: profiles } = await supabase
+    .from("profiles")
+    .select("id, full_name, sb_user_id");
+
+  // 🔥 Create fast lookup maps
+  const profileMap = {};
+  profiles.forEach((p) => {
+    profileMap[p.id] = p;
+  });
+
+  const referralMap = {};
+  referrals.forEach((r) => {
+    referralMap[r.referred_sb_user_id] = r;
+  });
+
+  let allOrders = [];
+
+  orders?.forEach((order) => {
+    const user = profileMap[order.user_id];
+    const referral = referralMap[order.user_id];
+    const referrer = referral
+      ? profileMap[referral.referrer_sb_user_id]
+      : null;
+
+    allOrders.push({
+      // ✅ ORDER FIRST (as you want)
+      "Company Name": order.asset_name,
+
+      // ✅ USER
+      "User Name": user?.full_name || "-",
+      "User SB ID": user?.sb_user_id || "-",
+
+      // ✅ REFERRER (FIXED)
+      "Referrer Name": referrer?.full_name || "-",
+      "Referrer SB ID": referrer?.sb_user_id || "-",
+
+      // ✅ ORDER DETAILS
+      "Quantity": order.quantity || 0,
+      "Price (₹)": order.price || 0,
+      "Total (₹)": order.total || 0,
+
+      "Status": order.status,
+      "Order Type": order.order_type,
+      "Order Date": new Date(order.created_at).toLocaleDateString("en-IN"),
+    });
+  });
 
   const ws = XLSX.utils.json_to_sheet(allOrders);
   const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, "Orders With Referrals");
+  XLSX.utils.book_append_sheet(wb, ws, "All Orders");
+
   XLSX.writeFile(
     wb,
-    `ShareBazaar_Orders_With_Referrals_${new Date().toISOString().slice(0, 10)}.xlsx`
+    `All_Orders_Report_${new Date().toISOString().slice(0, 10)}.xlsx`
   );
 };
 
