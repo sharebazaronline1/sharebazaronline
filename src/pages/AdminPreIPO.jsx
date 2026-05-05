@@ -10,6 +10,8 @@ const AdminPreIPO = () => {
   const [search, setSearch] = useState("");
   const [editingId, setEditingId] = useState(null);
   const [editPrice, setEditPrice] = useState("");
+  const [editingLotId, setEditingLotId] = useState(null);
+  const [editLot, setEditLot] = useState("");
   const [saving, setSaving] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -23,6 +25,7 @@ const AdminPreIPO = () => {
 
     if (error) console.error(error);
     else {
+    data.forEach(item => console.log(item.name));
       setCompanies(data || []);
       setFiltered(data || []);
     }
@@ -48,7 +51,10 @@ const AdminPreIPO = () => {
     setEditingId(company.id);
     setEditPrice(company.price.toString());
   };
-
+const handleLotDoubleClick = (company) => {
+  setEditingLotId(company.id);
+  setEditLot(company.lot_size?.toString() || "");
+};
   // Save Price
   const savePrice = async (id) => {
     if (!editPrice || isNaN(editPrice)) {
@@ -72,7 +78,31 @@ const AdminPreIPO = () => {
     }
     setSaving(false);
   };
+const saveLot = async (id) => {
+  if (!editLot || isNaN(editLot)) {
+    setEditingLotId(null);
+    return;
+  }
 
+  setSaving(true);
+
+  const { error } = await supabase
+    .from("pre_ipo_companies")
+    .update({
+      lot_size: parseInt(editLot),
+      updated_at: new Date().toISOString(),
+    })
+    .eq("id", id);
+
+  if (error) {
+    alert("Failed to update lot size");
+  } else {
+    setEditingLotId(null);
+    fetchCompanies();
+  }
+
+  setSaving(false);
+};
   return (
     <div className="min-h-screen bg-gray-50">
       <AdminSidebar mobileOpen={false} setMobileOpen={() => {}} />
@@ -102,7 +132,13 @@ const AdminPreIPO = () => {
               <thead className="bg-gray-50">
                 <tr>
                   <th className="text-left px-6 py-4 font-medium text-gray-600">Company Name</th>
-                  <th className="text-right px-6 py-4 font-medium text-gray-600">Current Price (₹)</th>
+                  <th className="text-right px-6 py-4 font-medium text-gray-600">
+  Current Price (₹)
+</th>
+
+<th className="text-right px-6 py-4 font-medium text-gray-600">
+  Lot Size
+</th>
                   <th className="w-24"></th>
                 </tr>
               </thead>
@@ -149,7 +185,29 @@ const AdminPreIPO = () => {
                           </span>
                         )}
                       </td>
-
+<td className="px-6 py-5 text-right">
+  {editingLotId === company.id ? (
+    <input
+      type="number"
+      value={editLot}
+      onChange={(e) => setEditLot(e.target.value)}
+      onBlur={() => saveLot(company.id)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter") saveLot(company.id);
+        if (e.key === "Escape") setEditingLotId(null);
+      }}
+      className="w-28 text-right text-lg font-semibold border border-blue-500 rounded-xl px-4 py-2 focus:outline-none"
+      autoFocus
+    />
+  ) : (
+    <span
+      onDoubleClick={() => handleLotDoubleClick(company)}
+      className="text-lg font-semibold cursor-pointer hover:text-blue-600 transition-colors"
+    >
+      {company.lot_size || "-"}
+    </span>
+  )}
+</td>
                      
                     </tr>
                   ))

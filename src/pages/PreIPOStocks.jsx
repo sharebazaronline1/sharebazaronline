@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import { supabase } from "../lib/supabase";
-import { fetchPreIPODetails } from "../api/mockApi";   // ← Updated API
+import { fetchPreIPODetails } from "../api/mockApi";   
 
 const ITEMS_PER_PAGE = 10;
 
@@ -15,42 +15,68 @@ const PreIPOStocks = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  useEffect(() => {
-    const load = async () => {
-      setLoading(true);
+useEffect(() => {
+  const load = async () => {
+    setLoading(true);
 
-      // Get detailed data
-      const detailedData = await fetchPreIPODetails();
+    const detailedData = await fetchPreIPODetails();
+    const { data: dbData, error } = await supabase
+      .from("pre_ipo_companies")
+      .select("name, price, lot_size");
 
-      // Get latest prices from Supabase
-      const { data: dbData, error } = await supabase
-        .from("pre_ipo_companies")
-        .select("name, price");
+    if (error) console.error("Supabase error:", error);
 
-      if (error) {
-        console.error("Error fetching prices from DB:", error);
-      }
-
-      // Merge data and map required fields
-      const merged = detailedData.map((item) => {
-        const dbItem = dbData?.find((db) => db.name === item.name);
-
-        return {
-          ...item,
-          price: dbItem ? Number(dbItem.price) : item.price || 0,
-          // Extract from shareDetails for table display
-          minLotSize: item.shareDetails?.lotSize || item.lotSize || "-",
-          depository: item.shareDetails?.depository || item.depository || "-",
-        };
-      });
-
-      setIPOs(merged);
-      setVisibleCount(merged.length);
-      setLoading(false);
+    // Strong normalization
+    const normalizeName = (str = "") => {
+      return str
+        .toLowerCase()
+        .replace(/limited|ltd|llp|private|unlisted|shares?|share/gi, "")
+        .replace(/[^\w\s]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
     };
 
-    load();
-  }, []);
+    const dbMap = {};
+    dbData?.forEach((db) => {
+      const key = normalizeName(db.name);
+      dbMap[key] = db;
+    });
+
+    // Merge with fuzzy fallback
+    const merged = detailedData.map((item) => {
+      const key = normalizeName(item.name);
+      let dbItem = dbMap[key];
+
+      // Fuzzy fallback if exact normalized match fails
+      if (!dbItem) {
+        const bestMatch = Object.keys(dbMap).find(dbKey => 
+          dbKey.includes(key) || key.includes(dbKey) || 
+          (dbKey.length > 5 && key.length > 5 && 
+           (dbKey.split(' ').some(word => key.includes(word)) ||
+            key.split(' ').some(word => dbKey.includes(word))))
+        );
+        if (bestMatch) dbItem = dbMap[bestMatch];
+      }
+
+      const lotSize = dbItem?.lot_size != null 
+        ? String(dbItem.lot_size) 
+        : (item.minLotSize ?? item.lotSize ?? item.min_lot ?? "-");
+
+      return {
+        ...item,
+        price: dbItem?.price ? Number(dbItem.price) : (item.price || 0),
+        minLotSize: lotSize,
+        depository: item.shareDetails?.depository || item.depository || "NSDL & CDSL",
+      };
+    });
+
+    setIPOs(merged);
+    setVisibleCount(merged.length);
+    setLoading(false);
+  };
+
+  load();
+}, []);
 
   // Scroll handling (unchanged)
   useEffect(() => {
@@ -180,10 +206,11 @@ const PreIPOStocks = () => {
                         ₹{ipo.price?.toLocaleString("en-IN") || "-"}
                       </td>
 
-                      <td className="px-6 py-4 text-center">
-                        {ipo.minLotSize || "-"} 
-                      </td>
-
+               <td className="px-6 py-4 text-center font-semibold text-gray-700">
+  {ipo.minLotSize && ipo.minLotSize !== "-" 
+    ? ipo.minLotSize 
+    : "-"}
+</td>
                       <td className="px-6 py-4 text-center">
                         {ipo.depository || "-"}
                       </td>

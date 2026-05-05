@@ -63,9 +63,9 @@ const PreIPODetails = () => {
 
       if (!selected) return;
 
-      const { data: dbData, error } = await supabase
-        .from("pre_ipo_companies")
-        .select("name, price");
+     const { data: dbData, error } = await supabase
+  .from("pre_ipo_companies")
+  .select("name, price, lot_size");
 
       if (error) console.error(error);
 
@@ -79,15 +79,21 @@ const PreIPODetails = () => {
 
       const updatedPrice = dbItem ? Number(dbItem.price) : selected.price;
 
-      const merged = {
-        ...selected,
-        price: updatedPrice,
-        shareDetails: {
-          ...selected.shareDetails,
-          indicativeUnlistedSharePrice: `₹${updatedPrice}`,
-        },
-      };
+    const updatedLotSize = dbItem?.lot_size || selected.shareDetails?.lotSize || "-";
 
+const merged = {
+  ...selected,
+
+  price: updatedPrice,
+
+  shareDetails: {
+    ...selected.shareDetails,
+
+    indicativeUnlistedSharePrice: `₹${updatedPrice}`,
+
+    lotSize: updatedLotSize,
+  },
+};
       setData(merged);
     };
 
