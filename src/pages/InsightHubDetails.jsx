@@ -143,53 +143,50 @@ const BlogDetail = () => {
 
         {/* ARTICLE */}
         <article
-          className="
-            prose prose-base max-w-none mx-auto
+  className="
+    ql-editor blog-content
+    max-w-none mx-auto
+    text-gray-700
+    leading-relaxed
 
-            prose-headings:font-extrabold
-            prose-headings:text-gray-900
-            prose-h2:text-center
-            prose-h2:text-xl sm:prose-h2:text-2xl md:prose-h2:text-3xl
-            prose-h2:mt-14 prose-h2:mb-6
+    prose-headings:font-bold
+    prose-headings:text-gray-900
 
-            prose-p:text-gray-700
-            prose-p:leading-relaxed
-            prose-p:text-sm md:prose-p:text-base
-            prose-p:my-6
+    prose-h1:text-4xl
+    prose-h2:text-3xl
+    prose-h3:text-2xl
 
-            prose-ul:my-6 prose-ul:pl-6 prose-ul:list-disc
-            prose-li:text-gray-700 prose-li:my-2
-            prose-li:marker:text-green-600
+    prose-h2:mt-10
+    prose-h2:mb-4
 
-            prose-table:w-full
-            prose-table:border
-            prose-table:border-gray-300
-            prose-table:rounded-xl
-            prose-table:overflow-hidden
-            prose-table:my-10
-            prose-table:block
-            prose-table:overflow-x-auto
-            prose-table:whitespace-nowrap
+    prose-p:text-base
+    prose-p:leading-8
 
-            prose-thead:bg-gray-100
-            prose-th:px-4 prose-th:py-3 prose-th:text-sm prose-th:font-semibold prose-th:text-gray-800
+    prose-ul:pl-6
+    prose-li:my-1
 
-            prose-th:first-child:!text-center 
-            prose-td:first-child:!text-center
+    prose-table:w-full
+    prose-table:border
+    prose-table:border-gray-300
+    prose-table:rounded-xl
+    prose-table:overflow-hidden
 
-            prose-td:px-4 prose-td:py-3 prose-td:text-sm prose-td:text-gray-700
-            prose-tr:border-t
-            prose-tr:hover:bg-gray-50
-          "
-          dangerouslySetInnerHTML={{
-            __html: (blog.content || "")
-              .replace(
-                /<table/g,
-                '<div class="overflow-x-auto my-8"><table class="min-w-full border-collapse"'
-              )
-              .replace(/<\/table>/g, "</table></div>"),
-          }}
-        />
+    prose-th:bg-gray-100
+    prose-th:px-4
+    prose-th:py-3
+
+    prose-td:px-4
+    prose-td:py-3
+  "
+  dangerouslySetInnerHTML={{
+    __html: (blog.content || "")
+      .replace(
+        /<table/g,
+        '<div class="overflow-x-auto my-8"><table class="min-w-full border-collapse"'
+      )
+      .replace(/<\/table>/g, "</table></div>"),
+  }}
+/>
 
         {/* FOOTER */}
         <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6">

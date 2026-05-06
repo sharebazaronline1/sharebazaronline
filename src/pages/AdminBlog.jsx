@@ -79,44 +79,64 @@ const AdminBlog = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (!title || !content) return alert("Required fields missing");
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    setLoading(true);
+  if (!title || !content) {
+    alert("Required fields missing");
+    return;
+  }
 
-    try {
-      const slug = generateSlug(title);
+  setLoading(true);
 
-      const cleanExcerpt =
-        excerpt || stripHtml(content).substring(0, 160) + "...";
+  try {
+   const slug = `${generateSlug(title)}-${Date.now()}`;
 
-      await supabase.from("blogs").insert({
-        title,
-        excerpt: cleanExcerpt,
-        content,
-        image_url: imageUrl || null,
-        category,
-        reading_time: readingTime,
-        status: "published",
-        slug,
-        author: "Admin",
-        published_at: new Date().toISOString(),
-      });
+    const cleanExcerpt =
+      excerpt || stripHtml(content).substring(0, 160) + "...";
 
-      setSuccess(true);
-      setTitle("");
-      setExcerpt("");
-      setContent("");
-      setImageUrl("");
+    const { data, error } = await supabase
+      .from("blogs")
+      .insert([
+        {
+          title,
+          excerpt: cleanExcerpt,
+          content,
+          image_url: imageUrl || null,
+          category,
+          reading_time: Number(readingTime),
+          status: "published",
+          slug,
+          author: "Admin",
+          published_at: new Date().toISOString(),
+        },
+      ])
+      .select();
 
-      setTimeout(() => setSuccess(false), 3000);
-    } catch (err) {
-      alert(err.message);
-    } finally {
-      setLoading(false);
+    if (error) {
+      console.error("Supabase Insert Error:", error);
+      alert(error.message);
+      return;
     }
-  };
+
+    console.log("Inserted:", data);
+
+    setSuccess(true);
+
+    setTitle("");
+    setExcerpt("");
+    setContent("");
+    setImageUrl("");
+
+    setTimeout(() => setSuccess(false), 3000);
+
+  } catch (err) {
+    console.error(err);
+    alert(err.message);
+  } finally {
+    setLoading(false);
+  }
+};
 
   const modules = {
     toolbar: [

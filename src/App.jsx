@@ -28,6 +28,7 @@ import PreIPOWatchlist from "./pages/PreIPOWatchlist";
 import Orders from "./pages/Orders";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
+import Holdings from "./pages/Holdings"
 import Referrals from "./pages/Referrals";
 import AdminLogin from "./pages/AdminLogin";         
 import AdminDashboard from "./pages/AdminDashboard";  
@@ -69,6 +70,7 @@ function AppLayout() {
     location.pathname.startsWith("/notifications") ||
     location.pathname.startsWith("/settings") ||
     location.pathname.startsWith("/referrals") ||
+    location.pathname.startsWith("/holdings") ||
     location.pathname.startsWith("/admin"); // ← hide layout for admin too
 
   return (
@@ -116,6 +118,7 @@ function AppLayout() {
                 <Route path="/pre-ipo-watchlist" element={<PreIPOWatchlist />} />
                 <Route path="/kyc" element={<Documents />} />
                 <Route path="/orders" element={<Orders />} />
+                  <Route path="/holdings" element={<Holdings />} />
                 <Route path="/notifications" element={<Notifications />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/referrals" element={<Referrals />} />

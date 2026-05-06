@@ -14145,7 +14145,7 @@ export const fetchIPOs = async () => {
   "open": "23 Apr 2026",
   "close": "27 Apr 2026",
   "listing": "30 Apr 2026",
-  "price": "₹163 – ₹172",
+  "price": "163 – 172",
   "lot": 800,
 
   "about_company": {
@@ -15057,6 +15057,201 @@ export const fetchIPOs = async () => {
   "ipo_documents": {
     "drhp_link": "Available on NSE SME",
     "rhp_link": "https://investor.value360india.com/value360pdf/RHP.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  }
+},
+{
+  "id": 77,
+  "name": "Simca Advertising",
+  "logo": "/images/ipo/simcaadvertising.png",
+  "minInvestment": "₹2,19,600",
+  "open": "08 May 2026",
+  "close": "12 May 2026",
+  "listing": "15 May 2026",
+  "price": "174 – 183",
+  "lot": 600,
+
+  "about_company": {
+    "company_name": "Simca Advertising Limited",
+    "industry_sector": "Out-of-Home (OOH) Advertising",
+    "founded_year": "2022",
+    "promoters": [
+      "Fahim Batliwala",
+      "Ashma Fahim Batliwala"
+    ],
+    "description": "Simca Advertising Limited is engaged in providing Out-of-Home (OOH) advertising services, primarily in Mumbai and Maharashtra. The company offers a range of OOH media options including hoardings, gantries, bus panels, shelters, kiosks, utilities, and vinyl signage. It manages over 100 OOH media assets and serves clients across advertising agencies, entertainment, real estate, fashion & lifestyle, insurance, and government organisations. The company is ISO 9001:2015 certified and focuses on high-visibility locations with customised campaigns."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Simca Advertising Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹174",
+    "price_band_max": "₹183",
+    "lot_size": 600,
+    "total_issue_size": "₹58.04 Cr (31,71,600 shares)",
+    "fresh_issue_size": "₹58.04 Cr (31,71,600 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "31,71,600 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹183",
+    "minimum_investment": "₹2,19,600 (2 lots / 1,200 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹219.08 Cr",
+    "pre_issue_shareholding": "Promoters 99.99%",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Out-of-Home (OOH) advertising services with focus on high-visibility locations and customized media plans.",
+    "products_services": [
+      "Hoardings & Gantries",
+      "Bus Panels & Shelters",
+      "Kiosks & Utilities",
+      "Vinyl Signage & Digital OOH"
+    ],
+    "competitive_strengths": [
+      "Strong presence in Mumbai & Maharashtra OOH market",
+      "Diverse client base across multiple sectors",
+      "ISO 9001:2015 certified operations",
+      "Experienced management team"
+    ],
+    "risks": [
+      "High competition in OOH advertising sector",
+      "Dependence on location approvals and contracts",
+      "Economic slowdown affecting advertising spends"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "08 May 2026",
+    "ipo_close_date": "12 May 2026",
+    "basis_of_allotment_date": "13 May 2026",
+    "refund_initiation_date": "14 May 2026",
+    "demat_credit_date": "14 May 2026",
+    "listing_date": "15 May 2026"
+  },
+
+  "ipo_objectives": {
+    "purchase_and_installation_of_led_screens": "₹12.72 Cr",
+    "strategic_collaboration_with_capital_world_media": "₹5.00 Cr",
+    "incremental_working_capital_requirements": "₹23.50 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "retail_quota": "35%",
+    "hni_quota": "15%",
+    "market_maker": "1,59,000 shares"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "1200",
+      "amount": "₹2,19,600"
+    },
+    "retail_maximum": {
+      "lot_size": "2 lots",
+      "shares": "1200",
+      "amount": "₹2,19,600"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "1800",
+      "amount": "₹3,29,400"
+    },
+    "bhni_minimum": {
+      "lot_size": "10 lots",
+      "shares": "6000",
+      "amount": "₹10,98,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "57.44% (Mar 31, 2025) / 38.08% (Dec 31, 2025)",
+    "roce": "76.57% (Mar 31, 2025) / 50.89% (Dec 31, 2025)",
+    "pat_margin": "13.31% (Mar 31, 2025) / 13.73% (Dec 31, 2025)",
+    "ebitda_margin": "18.00% (Mar 31, 2025) / 18.48% (Dec 31, 2025)",
+    "debt_to_equity": "0.02 (Mar 31, 2025)",
+    "eps": "11.34 (pre-IPO)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "6.07 Cr",
+      "total_income": "11.96 Cr",
+      "pat": "1.57 Cr",
+      "ebitda": "2.11 Cr",
+      "net_worth": "1.62 Cr",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "19.80 Cr",
+      "total_income": "49.31 Cr",
+      "pat": "5.78 Cr",
+      "ebitda": "7.72 Cr",
+      "net_worth": "7.39 Cr",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "36.67 Cr",
+      "total_income": "75.09 Cr",
+      "pat": "9.98 Cr",
+      "ebitda": "13.49 Cr",
+      "net_worth": "17.37 Cr",
+      "total_borrowing": "0.28 Cr"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "57.96 Cr",
+      "total_income": "78.16 Cr",
+      "pat": "10.68 Cr",
+      "ebitda": "14.37 Cr",
+      "net_worth": "28.05 Cr",
+      "total_borrowing": "N/A"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 08 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Socradamus Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Bungalow No C-6, Swami Samarth Nagar, Roshanlal Nagar, Rajkot, Gujarat",
+    "company_website": "https://www.simcaadvertising.com/",
+    "company_email": "simca.smeipo@in.mpms.mufg.com",
+    "company_phone": "022 - 2633 5055"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/red-herring-prospectus-simca.pdf",
     "prospectus_pdf": "N/A",
     "investor_presentation": "N/A"
   }

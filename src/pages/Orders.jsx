@@ -15,7 +15,8 @@ const Orders = () => {
   const [pricePerUnit, setPricePerUnit] = useState(0);
   const [quantity, setQuantity] = useState(null);
 const total = (quantity || 0) * (pricePerUnit || 0);
-  const [preIpos, setPreIpos] = useState([]);
+const [preIpos, setPreIpos] = useState([]);
+const [dbCompanies, setDbCompanies] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCompany, setSelectedCompany] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -25,19 +26,76 @@ const total = (quantity || 0) * (pricePerUnit || 0);
   const [ordersLoading, setOrdersLoading] = useState(true);
 
   // Load Pre-IPO list
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const preIpoData = await fetchPreIPODetails();
-        setPreIpos(Array.isArray(preIpoData) ? preIpoData : []);
-      } catch (err) {
-        console.error("Failed to load Pre-IPOs:", err);
-        setPreIpos([]);
-      }
-    };
-    fetchData();
-  }, []);
+  // Load Pre-IPO list + Supabase prices/lots
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const preIpoData = await fetchPreIPODetails();
 
+      const { data: dbData, error } = await supabase
+        .from("pre_ipo_companies")
+        .select("name, price, lot_size");
+
+      if (error) {
+        console.error("Supabase fetch error:", error);
+      }
+
+      const normalize = (str = "") =>
+        str
+          .toLowerCase()
+          .replace(/limited|ltd|llp|private|unlisted|shares?|share/gi, "")
+          .replace(/[^\w\s]/g, " ")
+          .replace(/\s+/g, " ")
+          .trim();
+
+      const dbMap = {};
+
+      dbData?.forEach((item) => {
+        dbMap[normalize(item.name)] = item;
+      });
+
+      const merged = preIpoData.map((item) => {
+        const key = normalize(item.name);
+
+        let dbItem = dbMap[key];
+
+        // fuzzy fallback
+        if (!dbItem) {
+          const bestMatch = Object.keys(dbMap).find(
+            (dbKey) =>
+              dbKey.includes(key) ||
+              key.includes(dbKey)
+          );
+
+          if (bestMatch) {
+            dbItem = dbMap[bestMatch];
+          }
+        }
+
+        return {
+          ...item,
+          price:
+            dbItem?.price != null
+              ? Number(dbItem.price)
+              : Number(item.price || 0),
+
+          lot_size:
+            dbItem?.lot_size != null
+              ? Number(dbItem.lot_size)
+              : null,
+        };
+      });
+
+      setPreIpos(Array.isArray(merged) ? merged : []);
+      setDbCompanies(dbData || []);
+    } catch (err) {
+      console.error("Failed to load Pre-IPOs:", err);
+      setPreIpos([]);
+    }
+  };
+
+  fetchData();
+}, []);
   // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -85,47 +143,49 @@ const total = (quantity || 0) * (pricePerUnit || 0);
 const handleCompanySelect = (company) => {
   setSelectedCompany(company.name || "Unknown");
 
-  const rawPrice = company.price;
-  let parsedPrice = 0;
-
-  if (typeof rawPrice === "string") {
-    const match = rawPrice.match(/\d+/g);
-    parsedPrice = match ? Number(match[match.length - 1]) : 0;
-  } else {
-    parsedPrice = Number(rawPrice) || 0;
-  }
+  // PRICE FROM SUPABASE
+  const parsedPrice = Number(company.price) || 0;
 
   setPricePerUnit(parsedPrice);
 
-  // 🔥 LOT SIZE FIX (ALL CASES COVERED)
+  // LOT SIZE FROM SUPABASE
   let lotSize =
-    company.lot ||
-    company.ipo_basic_details?.lot_size ||
-    company.market_lot_details?.retail_minimum?.shares;
+    Number(company.lot_size) ||
+    Number(company.lot) ||
+    Number(company.ipo_basic_details?.lot_size) ||
+    Number(company.market_lot_details?.retail_minimum?.shares);
 
-  // ✅ NEW: handle "50 Shares"
+  // fallback for text like "50 Shares"
   if (!lotSize && company.shareDetails?.lotSize) {
     const match = company.shareDetails.lotSize.match(/\d+/);
     lotSize = match ? Number(match[0]) : null;
   }
 
-  if (!lotSize || isNaN(lotSize)) {
-    console.warn("Lot size missing for:", company.name);
-    setQuantity(null);
-  } else {
-    setQuantity(lotSize);
-  }
+  setQuantity(lotSize || 5);
 
   setSearchQuery("");
   setShowDropdown(false);
 };
 
 const adjustQuantity = (delta) => {
-  if (!quantity || isNaN(quantity)) return; // ✅ add this
+  const selected = preIpos.find(
+    (item) => item.name === selectedCompany
+  );
+
+  const minLot =
+    Number(selected?.lot_size) ||
+    5;
+
+  const currentQty = Number(quantity) || minLot;
 
   const step = 5;
-  const newQty = Math.max(5, quantity + delta * step);
-  setQuantity(newQty - (newQty % step));
+
+  const newQty = Math.max(
+    minLot,
+    currentQty + delta * step
+  );
+
+  setQuantity(newQty);
 };
 
   const handleSubmit = async () => {
@@ -172,7 +232,7 @@ const adjustQuantity = (delta) => {
     setOrders(refreshed || []);
 
     // Reset form
-    setQuantity(10);
+    setQuantity(0);
     setSelectedCompany("");
     setPricePerUnit(0);
     setSearchQuery("");
@@ -292,12 +352,45 @@ const adjustQuantity = (delta) => {
                     >
                       <Minus size={16} />
                     </button>
-                    <input
-                      type="text"
-                      value={Number.isFinite(quantity) ? quantity : ""}
-                      readOnly
-                      className="w-full text-center py-3 font-semibold text-base focus:outline-none"
-                    />
+                   <input
+  type="text"
+  inputMode="numeric"
+  value={quantity ?? ""}
+  onChange={(e) => {
+    // remove non-numeric chars
+    let value = e.target.value.replace(/\D/g, "");
+
+    // remove leading zeros
+    value = value.replace(/^0+/, "");
+
+    if (value === "") {
+      setQuantity("");
+      return;
+    }
+
+    const numericValue = Number(value);
+
+    // prevent below original lot size
+    const selected = preIpos.find(
+      (item) => item.name === selectedCompany
+    );
+
+    const minLot =
+      Number(selected?.lot_size) ||
+      5;
+
+    if (numericValue < minLot) {
+      setQuantity(minLot);
+      return;
+    }
+
+    setQuantity(numericValue);
+  }}
+  className="w-full text-center py-3 font-semibold text-base focus:outline-none appearance-none"
+  style={{
+    MozAppearance: "textfield",
+  }}
+/>
                     <button
                       onClick={() => adjustQuantity(1)}
                       className="px-3 py-3 bg-gray-100 hover:bg-gray-200 transition"
@@ -326,16 +419,37 @@ const adjustQuantity = (delta) => {
                   </span>
                 </div>
 
-                <button
-                  onClick={handleSubmit}
-                  className={`w-full py-3.5 rounded-xl font-semibold text-white transition-all shadow-md ${
-                    activeTab === "buy"
-                      ? "bg-green-600 hover:bg-green-700"
-                      : "bg-green-600 hover:bg-green-700"
-                  } hover:shadow-lg active:scale-[0.98]`}
-                >
-                  {activeTab === "buy" ? "Submit Buy Request" : "Submit Sell Request"}
-                </button>
+              {(() => {
+  const selected = preIpos.find(
+    (item) => item.name === selectedCompany
+  );
+
+  const minLot =
+    Number(selected?.lot_size) || 5;
+
+  const isBelowLot =
+    Number(quantity || 0) < minLot;
+
+  return (
+    <>
+    
+
+      <button
+        onClick={handleSubmit}
+        disabled={isBelowLot}
+        className={`w-full py-3.5 rounded-xl font-semibold text-white transition-all shadow-md ${
+          isBelowLot
+            ? "bg-gray-400 cursor-not-allowed"
+            : "bg-green-600 hover:bg-green-700 hover:shadow-lg active:scale-[0.98]"
+        }`}
+      >
+        {activeTab === "buy"
+          ? "Submit Buy Request"
+          : "Submit Sell Request"}
+      </button>
+    </>
+  );
+})()}
 
                 <p className="text-xs text-gray-500 text-center">
                   Indicative prices • Final confirmation required

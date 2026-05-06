@@ -11,6 +11,7 @@ import {
   FileText,
   BarChart2,
   AlertCircle,
+  BriefcaseBusiness,
   X,
   User,
 } from "lucide-react";
@@ -56,6 +57,7 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
           <SidebarLink to="/pre-ipo-watchlist" icon={<AlertCircle size={18} />} label="Pre-IPO Watchlist" />
           <SidebarLink to="/kyc" icon={<BarChart2 size={18} />} label="Documents" />
           <SidebarLink to="/orders" icon={<IndianRupee size={18} />} label="Orders" />
+          <SidebarLink to="/holdings" icon={<BriefcaseBusiness  size={18} />} label="Holdings" />
         </nav>
 
        

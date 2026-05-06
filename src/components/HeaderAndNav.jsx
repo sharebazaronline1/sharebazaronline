@@ -332,13 +332,22 @@ const { data: { subscription } } =
             </Link>
 
             <div>
-              <button
-                onClick={() => setMobileIPO(!mobileIPO)}
-                className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
-              >
-                IPO Tracker
-                <span className="text-xl">{mobileIPO ? "−" : "+"}</span>
-              </button>
+             <div className="flex justify-between items-center py-2">
+  <Link
+    to="/ipoguide"
+    onClick={() => setMobileMenuOpen(false)}
+    className="font-semibold text-gray-800"
+  >
+    IPO Tracker
+  </Link>
+
+  <button
+    onClick={() => setMobileIPO(!mobileIPO)}
+    className="text-xl font-semibold text-gray-700"
+  >
+    {mobileIPO ? "−" : "+"}
+  </button>
+</div>
               {mobileIPO && (
                 <div className="pl-6 space-y-2 mt-1">
                   <Link
@@ -353,13 +362,22 @@ const { data: { subscription } } =
             </div>
 
             <div>
-              <button
-                onClick={() => setMobilePreIPO(!mobilePreIPO)}
-                className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
-              >
-                Pre-IPO Stocks
-                <span className="text-xl">{mobilePreIPO ? "−" : "+"}</span>
-              </button>
+             <div className="flex justify-between items-center py-2">
+  <Link
+    to="/preipoguide"
+    onClick={() => setMobileMenuOpen(false)}
+    className="font-semibold text-gray-800"
+  >
+    Pre-IPO Stocks
+  </Link>
+
+  <button
+    onClick={() => setMobilePreIPO(!mobilePreIPO)}
+    className="text-xl font-semibold text-gray-700"
+  >
+    {mobilePreIPO ? "−" : "+"}
+  </button>
+</div>
               {mobilePreIPO && (
                 <div className="pl-6 space-y-2 mt-1">
                   <Link
@@ -374,13 +392,22 @@ const { data: { subscription } } =
             </div>
 
             <div>
-              <button
-                onClick={() => setMobileBroker(!mobileBroker)}
-                className="w-full flex justify-between items-center font-semibold text-gray-800 py-2"
-              >
-                Broker Analyzer
-                <span className="text-xl">{mobileBroker ? "−" : "+"}</span>
-              </button>
+             <div className="flex justify-between items-center py-2">
+  <Link
+    to="/broker-analyzer"
+    onClick={() => setMobileMenuOpen(false)}
+    className="font-semibold text-gray-800"
+  >
+    Broker Analyzer
+  </Link>
+
+  <button
+    onClick={() => setMobileBroker(!mobileBroker)}
+    className="text-xl font-semibold text-gray-700"
+  >
+    {mobileBroker ? "−" : "+"}
+  </button>
+</div>
               {mobileBroker && (
                 <div className="pl-6 space-y-2 mt-1">
                   <Link
