@@ -207,18 +207,15 @@ const PreIPOWatchlist = () => {
             />
           </div>
           {/* View More Button */}
-          <div className="mt-10 text-center">
-            <button
-              onClick={() => {
-                // Navigate to a full list page or load more
-                alert("Loading more pre-IPO companies...");
-              }}
-              className="inline-flex items-center gap-3 px-10 py-4 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 transition shadow-md hover:shadow-lg"
-            >
-              <TrendingUp size={20} />
-              View More
-            </button>
-          </div>
+         <div className="mt-10 text-center">
+  <button
+    onClick={() => navigate("/pre-ipo-stocks")}
+    className="inline-flex items-center gap-3 px-10 py-4 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 transition shadow-md hover:shadow-lg"
+  >
+    <TrendingUp size={20} />
+    View More
+  </button>
+</div>
         </section>
       </main>
     </div>
