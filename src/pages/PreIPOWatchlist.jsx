@@ -143,7 +143,7 @@ const PreIPOWatchlist = () => {
                 >
                   {item.demand}
                 </span>
-                <button className="text-sm font-semibold text-green-600 hover:underline">
+                <button  onClick={() => navigate("/orders")} className="text-sm font-semibold text-green-600 hover:underline">
                   Buy Now
                 </button>
               </div>
@@ -192,18 +192,21 @@ const PreIPOWatchlist = () => {
               price="≈ ₹390 – ₹410"
               demand="High Demand"
               sector="Food Delivery"
+              navigate={navigate}
             />
             <SuggestionCard
               name="Tata Capital"
               price="≈ ₹950 – ₹1,100"
               demand="Strong Interest"
               sector="NBFC"
+              navigate={navigate}
             />
             <SuggestionCard
               name="Bharat FIH (Foxconn India)"
               price="TBA"
               demand="Growing"
               sector="Manufacturing"
+              navigate={navigate}
             />
           </div>
           {/* View More Button */}
@@ -259,7 +262,8 @@ const DRHPCard = ({ name, sector, filedDate, expectedListing, status }) => (
   </div>
 );
 
-const SuggestionCard = ({ name, price, demand, sector }) => (
+const SuggestionCard = ({ name, price, demand, sector,navigate  }) => (
+ 
   <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border shadow-sm hover:shadow-md transition">
     <h4 className="font-bold text-gray-900 text-lg">{name}</h4>
     <p className="text-sm text-gray-600 mt-1">Sector: {sector}</p>
@@ -273,7 +277,7 @@ const SuggestionCard = ({ name, price, demand, sector }) => (
       >
         {demand}
       </span>
-      <button className="flex items-center gap-2 text-sm font-semibold text-green-600 hover:underline">
+      <button  onClick={() => navigate("/orders")} className="flex items-center gap-2 text-sm font-semibold text-green-600 hover:underline">
         Buy Now
       </button>
     </div>
