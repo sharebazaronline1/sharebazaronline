@@ -46,6 +46,7 @@ const AdminBlog = () => {
   const categories = [
     "IPO News",
     "Market Analysis",
+    "Financial Market Updates",
     "Pre-IPO",
     "Investment Tips",
     "Company Updates",
