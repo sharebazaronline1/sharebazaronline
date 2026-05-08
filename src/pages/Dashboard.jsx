@@ -22,6 +22,8 @@ const Dashboard = () => {
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
+  const [trendingShares, setTrendingShares] = useState([]);
+const [upcomingShares, setUpcomingShares] = useState([]);
 
   useEffect(() => {
     const checkUser = async () => {
@@ -56,7 +58,18 @@ const Dashboard = () => {
       } else {
         setOrders(userOrders || []);
       }
+// FETCH PRE IPO PRICES
+const { data: preIPOData, error: preIPOError } = await supabase
+  .from("pre_ipo_companies")
+  .select("id, name, price")
+  .order("updated_at", { ascending: false });
 
+if (preIPOError) {
+  console.error(preIPOError);
+} else {
+  setTrendingShares(preIPOData || []);
+  setUpcomingShares(preIPOData || []);
+}
       setLoading(false);
     };
 
@@ -171,26 +184,22 @@ const Dashboard = () => {
             <h2 className="text-xl font-bold mb-4">Top Trending</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 flex-1">
-              <SmallPreIPOItem
-                name="Tata Capital Ltd"
-                price="₹1,050"
-                demand="Very High Demand"
-                navigate={navigate}
-              />
-
-              <SmallPreIPOItem
-                name="Studds Accessories Ltd"
-                price="₹1,380"
-                demand="High Investor Interest"
-                navigate={navigate}
-              />
-
-              <SmallPreIPOItem
-                name="OYO Hotels & Homes Pvt Ltd"
-                price="₹62"
-                demand="IPO Watchlist"
-                navigate={navigate}
-              />
+            {trendingShares.slice(0, 3).map((item, idx) => (
+  <SmallPreIPOItem
+    key={item.id || idx}
+    id={item.id}
+    name={item.name}
+    price={`₹${Number(item.price || 0).toLocaleString("en-IN")}`}
+    demand={
+      idx === 0
+        ? "Very High Demand"
+        : idx === 1
+        ? "High Investor Interest"
+        : "IPO Watchlist"
+    }
+    navigate={navigate}
+  />
+))}
             </div>
           </section>
 
@@ -213,29 +222,23 @@ const Dashboard = () => {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <UnlistedCard
-                name="Tata Capital Ltd"
-                sector="NBFC"
-                price="₹1,040"
-                status="Active Unlisted"
-                navigate={navigate}
-              />
-
-              <UnlistedCard
-                name="HDB Financial Services Ltd"
-                sector="NBFC"
-                price="₹755"
-                status="IPO Expected"
-                navigate={navigate}
-              />
-
-              <UnlistedCard
-                name="Studds Accessories Ltd"
-                sector="Consumer Manufacturing"
-                price="₹1,420"
-                status="Pre-IPO"
-                navigate={navigate}
-              />
+            {upcomingShares.slice(0, 3).map((item, idx) => (
+  <UnlistedCard
+    key={item.id || idx}
+    id={item.id}
+    name={item.name}
+    sector="Pre-IPO"
+    price={`₹${Number(item.price || 0).toLocaleString("en-IN")}`}
+    status={
+      idx === 0
+        ? "Active Unlisted"
+        : idx === 1
+        ? "IPO Expected"
+        : "Pre-IPO"
+    }
+    navigate={navigate}
+  />
+))}
             </div>
           </section>
         </div>
@@ -267,7 +270,13 @@ const StatCard = ({ icon, title, value, change, onClick }) => (
   </div>
 );
 
-const SmallPreIPOItem = ({ name, price, demand, navigate }) => (
+const SmallPreIPOItem = ({
+  id,
+  name,
+  price,
+  demand,
+  navigate,
+}) => (
   <div className="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col gap-3 hover:shadow-md transition">
     <h4 className="font-semibold text-gray-900 text-sm leading-snug">
       {name}

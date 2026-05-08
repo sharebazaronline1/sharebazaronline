@@ -53,19 +53,38 @@ const UnlistedCard = ({ stock }) => {
       </div>
 
       {/* STATS */}
-      <div className="px-5 mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
-        <div className="text-gray-600">Share Price</div>
-        <div>₹{stock.price || "—"}</div>
+   <div className="px-5 mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+  <div className="text-gray-600">Share Price</div>
 
-        <div className="text-gray-600">Lot Size</div>
-        <div>{stock.lot || "—"}</div>
+  <div>
+    ₹
+    {stock.price
+      ? Number(stock.price).toLocaleString("en-IN")
+      : "—"}
+  </div>
 
-        <div className="text-gray-600">Min Invest</div>
-        <div>₹{stock.minInvestment || "—"}</div>
+  <div className="text-gray-600">Lot Size</div>
 
-        <div className="text-gray-600">Market</div>
-        <div>{stock.market || "Unlisted"}</div>
-      </div>
+  <div>
+    {stock.lotSize ||
+      stock.minLotSize ||
+      stock.lot ||
+      "—"}
+  </div>
+
+  <div className="text-gray-600">Min Invest</div>
+
+  <div>
+    ₹
+    {stock.minInvestment
+      ? Number(stock.minInvestment).toLocaleString("en-IN")
+      : "—"}
+  </div>
+
+  <div className="text-gray-600">Market</div>
+
+  <div>{stock.market || "Unlisted"}</div>
+</div>
 
       {/* ACTIONS */}
       <div className="px-5 mt-auto pt-4 pb-5 flex gap-2">

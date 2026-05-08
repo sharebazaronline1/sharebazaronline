@@ -2,13 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { fetchUnlistedShares } from "../api/mockApi"; 
+import { supabase } from "../lib/supabase";
+import {useNavigate } from "react-router-dom";
+import { fetchPreIPODetails } from "../api/mockApi";
 
 const UnlistedSharesSidebar = () => {
   const { pathname } = useLocation();
   const [formattedDate, setFormattedDate] = useState("");
   const [sidebarUnlisted, setSidebarUnlisted] = useState([]);
   const [loading, setLoading] = useState(true);
+const navigate = useNavigate();
 
   const shouldShow =
     [
@@ -40,27 +43,61 @@ const UnlistedSharesSidebar = () => {
   }, []);
 
   useEffect(() => {
-    const loadUnlistedData = async () => {
-      try {
-        const data = await fetchUnlistedShares(); // Fetch from mockApi
+ const loadUnlistedData = async () => {
+  try {
+    // DB prices
+    const { data: dbData, error } = await supabase
+      .from("pre_ipo_companies")
+      .select("name, price")
+      .order("updated_at", { ascending: false })
+      .limit(10);
 
-        // Take the latest 10 entries (assuming data is ordered by relevance or date)
-        const latestTen = data.slice(0, 10);
+    if (error) throw error;
 
-        const list = latestTen.map((stock) => ({
-          name: stock.name,
-          price: stock.price || "Ask", // Fallback if price_display is missing
-        }));
+    // Full details with IDs
+    const preIPOData = await fetchPreIPODetails();
 
-        setSidebarUnlisted(list);
-      } catch (error) {
-        console.error("Failed to load unlisted shares sidebar:", error);
-        setSidebarUnlisted([]);
-      } finally {
-        setLoading(false);
-      }
-    };
+    const normalize = (str = "") =>
+      str
+        .toLowerCase()
+        .replace(/limited|ltd|unlisted|shares?/gi, "")
+        .replace(/[^\w\s]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
 
+    const list = dbData.map((stock) => {
+      const matched = preIPOData.find((item) => {
+        const dbName = normalize(stock.name);
+        const itemName = normalize(item.name);
+
+        return (
+          dbName.includes(itemName) ||
+          itemName.includes(dbName)
+        );
+      });
+
+      return {
+        id: matched?.id,
+        name: stock.name,
+        price:
+          stock.price != null
+            ? `₹${Number(stock.price).toLocaleString("en-IN")}`
+            : "Ask",
+      };
+    });
+
+    setSidebarUnlisted(list);
+  } catch (error) {
+    console.error(
+      "Failed to load unlisted shares sidebar:",
+      error
+    );
+
+    setSidebarUnlisted([]);
+  } finally {
+    setLoading(false);
+  }
+};
     loadUnlistedData();
   }, []);
 
@@ -86,10 +123,15 @@ const UnlistedSharesSidebar = () => {
             </div>
           ) : (
             sidebarUnlisted.map((stock, i) => (
-              <div
-                key={i}
-                className="px-3 py-2 hover:bg-gray-50 transition cursor-pointer flex items-center justify-between gap-2"
-              >
+             <div
+  key={i}
+ onClick={() => {
+  if (stock.id) {
+    navigate(`/preipo/${stock.id}`);
+  }
+}}
+  className="px-3 py-2 hover:bg-gray-50 transition cursor-pointer flex items-center justify-between gap-2"
+>
                 <p className="font-medium text-[11px] text-gray-900 truncate">
                   {stock.name}
                 </p>

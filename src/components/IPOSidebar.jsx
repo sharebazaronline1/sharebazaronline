@@ -1,6 +1,6 @@
 // src/components/UpcomingIPOSidebar.jsx
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation,useNavigate } from "react-router-dom";
 import { fetchIPOs } from "../api/mockApi";
 
 const IPOSidebar = () => {
@@ -8,7 +8,7 @@ const IPOSidebar = () => {
   const [formattedDate, setFormattedDate] = useState("");
   const [sidebarIPOs, setSidebarIPOs] = useState([]);
   const [loading, setLoading] = useState(true);
-
+const navigate = useNavigate();
  const shouldShow = [
   "/",
   "/ipo-tracker",
@@ -96,15 +96,20 @@ const getIPOType = (ipo) => {
      const list = liveIPOs.map((ipo) => {
   const ipoType = getIPOType(ipo);
 
-  return {
-    name: ipo?.name || "",
-    type: ipoType === "SME" ? "SME" : "Mainboard",
+ return {
+  id: ipo.id,
 
-    shortDates:
-      ipo?.open && ipo?.close
-        ? `${ipo.open.split(" ")[0]}-${ipo.close.split(" ")[0]} ${ipo.open.split(" ")[1]}`
-        : "",
-  };
+  name: ipo?.name || "",
+
+  type: ipoType === "SME"
+    ? "SME"
+    : "Mainboard",
+
+  shortDates:
+    ipo?.open && ipo?.close
+      ? `${ipo.open.split(" ")[0]}-${ipo.close.split(" ")[0]} ${ipo.open.split(" ")[1]}`
+      : "",
+};
 });
 
         setSidebarIPOs(list);
@@ -140,7 +145,13 @@ const getIPOType = (ipo) => {
             ) : (
               sidebarIPOs.map((ipo, i) => (
                 <div
+ 
   key={i}
+  onClick={() => {
+    if (ipo.id) {
+      navigate(`/ipo/${ipo.id}`);
+    }
+  }}
   className="px-3 py-2 hover:bg-gray-50 transition cursor-pointer"
 >
   {/* NAME — full width, always visible */}

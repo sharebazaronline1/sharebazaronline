@@ -33,70 +33,81 @@ useEffect(() => {
 
 // ✅ SECOND — handle OAuth
 useEffect(() => {
-  const handleOAuth = async () => {
-   const {
-  data: { user },
-} = await supabase.auth.getUser();
+  const {
+    data: { subscription },
+  } = supabase.auth.onAuthStateChange(
+    async (event, session) => {
+      const user = session?.user;
 
-    if (user) {
+      if (!user) return;
+
+      console.log("Auth event:", event);
+
+      // apply referral after signup/login/oauth/email verify
       await applyReferral(user);
-      navigate("/dashboard", { replace: true });
-    }
-  };
 
-  handleOAuth();
+      navigate("/dashboard", {
+        replace: true,
+      });
+    }
+  );
+
+  return () => subscription.unsubscribe();
 }, []);
 
 const applyReferral = async (user) => {
   const referralCode = localStorage.getItem("referral_code");
-  if (!referralCode) return;
+
+  if (!referralCode || !user?.id) return;
 
   console.log("Applying referral:", referralCode);
 
-const waitForProfile = async (userId) => {
+  // WAIT UNTIL PROFILE EXISTS
+  let profile = null;
+
   for (let i = 0; i < 20; i++) {
     const { data } = await supabase
       .from("profiles")
       .select("*")
-      .eq("id", userId)
+      .eq("id", user.id)
       .maybeSingle();
 
-    if (data) return data;
+    if (data) {
+      profile = data;
+      break;
+    }
 
-    await new Promise((r) => setTimeout(r, 500));
+    await new Promise((resolve) =>
+      setTimeout(resolve, 500)
+    );
   }
 
-  return null;
-};
-const profile = await waitForProfile(user.id);
+  if (!profile) {
+    console.log("Profile not found");
+    return;
+  }
 
-if (!profile) {
-  console.log("Profile not ready after wait");
-  return;
-}
+  // already referred
   if (profile.referred_by_code) {
-    console.log("Already referred");
+    console.log("Referral already applied");
     localStorage.removeItem("referral_code");
     return;
   }
 
-  // validate referrer
-// ✅ just apply referral, DB will validate
-await supabase
-  .from("profiles")
-  .update({ referred_by_code: referralCode })
-  .eq("id", user.id);
-
-console.log("✅ Referral applied (DB will validate)");
-localStorage.removeItem("referral_code");
-
-  // ✅ update profile (this will trigger DB function)
-  await supabase
+  // APPLY REFERRAL ONLY ONCE
+  const { error } = await supabase
     .from("profiles")
-    .update({ referred_by_code: referralCode })
+    .update({
+      referred_by_code: referralCode,
+    })
     .eq("id", user.id);
 
-  console.log("✅ Referral applied");
+  if (error) {
+    console.error("Referral update failed:", error);
+    return;
+  }
+
+  console.log("✅ Referral applied successfully");
 
   localStorage.removeItem("referral_code");
 };
@@ -188,7 +199,7 @@ const handleGoogleLogin = async () => {
   const { error } = await supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: `${window.location.origin}/login`,
+    redirectTo: window.location.href,
     },
   });
 

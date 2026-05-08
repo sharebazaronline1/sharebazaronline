@@ -30182,7 +30182,7 @@ The Indian lead industry is driven by strong demand from the battery sector (aut
 
    {
   "id": 109,
-  "name": "OYO (Oravel Stays Limited)",
+  "name": "ORAVEL STAYS LIMITED (Oyo Unlisted Shares)",
   "price": 37,
   "logo": "/images/oyo.png",
 
@@ -30218,7 +30218,7 @@ The Indian hospitality sector is witnessing strong tailwinds from rising domesti
   ],
 
   "shareDetails": {
-    "companyName": "Oravel Stays Limited (OYO – Unlisted)",
+    "companyName": "ORAVEL STAYS LIMITED (Oyo Unlisted Shares)",
     "indicativeUnlistedSharePrice": "₹22 - ₹37",
     "marketCapitalization": "₹29,000 – ₹36,000 Crore (Approx.)",
     "lotSize": "500 - 1,000 Shares",

@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
-import { fetchIPOs, fetchUnlisted } from '../api/mockApi';
+import { fetchIPOs, fetchPreIPODetails } from '../api/mockApi';
+import { supabase } from "../lib/supabase";
 import IPODashboard, { IPOCard } from "../components/IPODashboard";
 import UnlistedCard from '../components/UnlistedCard';
 import Blogs from './Blogs';
@@ -40,10 +41,249 @@ export default function Home() {
     queryFn: fetchIPOs,
   });
 
-  const { data: unlistedStocks = [], isLoading: isUnlistedLoading } = useQuery({
-    queryKey: ['unlisted'],
-    queryFn: fetchUnlisted,
+ const [unlistedStocks, setUnlistedStocks] = useState([]);
+const [isUnlistedLoading, setIsUnlistedLoading] = useState(true);
+
+useEffect(() => {
+  const loadUnlisted = async () => {
+    setIsUnlistedLoading(true);
+
+    try {
+      const detailedData = await fetchPreIPODetails();
+
+      const { data: dbData, error } = await supabase
+        .from("pre_ipo_companies")
+        .select("name, price, lot_size");
+
+      if (error) {
+        console.error("Supabase error:", error);
+      }
+
+      // ONLY THESE COMPANIES
+   const allowedCompanies = [
+  "oyo",
+  "oravel",
+
+  "nse",
+
+  "care health",
+ 
+
+  "metropolitan",
+  "mse",
+
+  "pharmeasy",
+  "api holdings",
+
+  "ola electric",
+
+  "mobikwik",
+];
+
+      const normalizeName = (str = "") => {
+        return str
+          .toLowerCase()
+          .replace(/limited|ltd|llp|private|unlisted|shares?|share/gi, "")
+          .replace(/[^\w\s]/g, " ")
+          .replace(/\s+/g, " ")
+          .trim();
+      };
+
+    const dbMap = {};
+
+// Strong alias mapping
+const aliases = {
+  oyo: [
+    "oravel stays",
+    "oyo",
+  ],
+
+  nse: [
+    "nse india",
+    "national stock exchange",
+  ],
+
+  mse: [
+    "metropolitan stock exchange",
+    "mse",
+  ],
+
+  pharmeasy: [
+    "pharmeasy",
+    "api holdings",
+  ],
+
+  care: [
+    "care health insurance",
+    "care health",
+  ],
+
+  ola: [
+    "ola electric",
+    "ola electric mobility",
+  ],
+
+  mobikwik: [
+    "mobikwik",
+    "one mobikwik",
+  ],
+};
+
+dbData?.forEach((db) => {
+  const normalizedDb = normalizeName(db.name);
+
+  Object.entries(aliases).forEach(([aliasKey, values]) => {
+    if (
+      values.some((v) => normalizedDb.includes(v))
+    ) {
+      dbMap[aliasKey] = db;
+    }
   });
+});
+
+      const merged = detailedData
+        .filter((item) => {
+          const normalized = normalizeName(item.name);
+
+         return allowedCompanies.some((company) =>
+  normalized.includes(company)
+);
+        })
+        .map((item) => {
+       const normalizedName = normalizeName(item.name);
+
+// DIRECT DB MATCH
+const dbItem = dbData?.find((db) => {
+  const dbName = normalizeName(db.name);
+
+  return (
+    normalizedName.includes(dbName) ||
+    dbName.includes(normalizedName) ||
+
+    (normalizedName.includes("oyo") &&
+      dbName.includes("oravel")) ||
+
+    (normalizedName.includes("nse") &&
+      dbName.includes("nse")) ||
+
+    (normalizedName.includes("metropolitan") &&
+      dbName.includes("metropolitan")) ||
+
+    (normalizedName.includes("pharmeasy") &&
+      dbName.includes("pharmeasy")) ||
+
+    (normalizedName.includes("care health") &&
+      dbName.includes("care")) ||
+
+    (normalizedName.includes("ola") &&
+      dbName.includes("ola")) ||
+
+    (normalizedName.includes("mobikwik") &&
+      dbName.includes("mobikwik"))
+  );
+});
+         
+
+        const rawLotSize =
+  dbItem?.lot_size ||
+  item.shareDetails?.lot_size ||
+  item.shareDetails?.lotSize ||
+  item.lot_size ||
+  item.lotSize ||
+  item.minLotSize ||
+  item.min_lot ||
+  0;
+
+// Extract only numbers from values like:
+// "5,000 Shares"
+// "200"
+// "1000 shares"
+
+const lotSize = Number(
+  String(rawLotSize).replace(/[^\d]/g, "")
+);
+
+const finalLotSize =
+  !isNaN(lotSize) && lotSize > 0
+    ? lotSize
+    : null;
+          return {
+  ...item,
+
+  // PRICE
+  price: dbItem?.price
+    ? Number(dbItem.price)
+    : Number(
+        String(
+          item.shareDetails?.indicativeUnlistedSharePrice ||
+          item.price ||
+          0
+        )
+          .replace(/[^\d.-]/g, "")
+          .split("-")[0]
+      ),
+
+  // LOT SIZE
+  lotSize: finalLotSize,
+minLotSize: finalLotSize,
+
+  // MIN INVEST
+  minInvestment:
+    finalLotSize
+      ? finalLotSize *
+        (
+          dbItem?.price
+            ? Number(dbItem.price)
+            : Number(
+                String(
+                  item.shareDetails?.indicativeUnlistedSharePrice ||
+                  item.price ||
+                  0
+                )
+                  .replace(/[^\d.-]/g, "")
+                  .split("-")[0]
+              )
+        )
+      : null,
+
+  depository:
+    item.shareDetails?.depository ||
+    item.depository ||
+    "NSDL & CDSL",
+};
+        });
+
+      // SORT SAME AS SCREENSHOT
+      const ordered = [
+        "oyo",
+        "nse india",
+        "care health insurance",
+        "metropolitan stock exchange",
+        "pharmeasy",
+        "ola electric",
+        "mobikwik",
+      ];
+
+      merged.sort((a, b) => {
+        const aName = normalizeName(a.name);
+        const bName = normalizeName(b.name);
+
+        return (
+          ordered.findIndex((x) => aName.includes(x)) -
+          ordered.findIndex((x) => bName.includes(x))
+        );
+      });
+
+      setUnlistedStocks(merged);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsUnlistedLoading(false);
+    }
+  };
+
+  loadUnlisted();
+}, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
