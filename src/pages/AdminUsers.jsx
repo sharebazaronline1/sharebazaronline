@@ -283,17 +283,17 @@ const downloadOrderReport = async () => {
     return;
   }
 
-  // ✅ Step 2: Get referrals (NO join here)
+
   const { data: referrals } = await supabase
     .from("referrals")
     .select("referrer_sb_user_id, referred_sb_user_id");
 
-  // ✅ Step 3: Get ALL profiles (for mapping)
+  
   const { data: profiles } = await supabase
     .from("profiles")
     .select("id, full_name, sb_user_id");
 
-  // 🔥 Create fast lookup maps
+  
   const profileMap = {};
   profiles.forEach((p) => {
     profileMap[p.id] = p;
@@ -314,18 +314,16 @@ const downloadOrderReport = async () => {
       : null;
 
     allOrders.push({
-      // ✅ ORDER FIRST (as you want)
+      
       "Company Name": order.asset_name,
 
-      // ✅ USER
+   
       "User Name": user?.full_name || "-",
       "User SB ID": user?.sb_user_id || "-",
 
-      // ✅ REFERRER (FIXED)
       "Referrer Name": referrer?.full_name || "-",
       "Referrer SB ID": referrer?.sb_user_id || "-",
 
-      // ✅ ORDER DETAILS
       "Quantity": order.quantity || 0,
       "Price (₹)": order.price || 0,
       "Total (₹)": order.total || 0,
@@ -377,25 +375,52 @@ const downloadOrderReport = async () => {
   };
 
   const verifyOrder = async (orderId) => {
-    const { error } = await supabase
-      .from("orders")
-      .update({ status: "CONFIRMED" })
-      .eq("id", orderId);
+  const { error } = await supabase
+    .from("orders")
+    .update({ status: "CONFIRMED" })
+    .eq("id", orderId);
 
-    if (error) {
-      console.error("Failed to verify order:", error);
-      alert(`Failed to update order: ${error.message}`);
-      return;
-    }
+  if (error) {
+    console.error("Failed to verify order:", error);
+    alert(`Failed to update order: ${error.message}`);
+    return;
+  }
 
-    setMainUserOrders((prev) =>
-      prev.map((order) =>
-        order.id === orderId ? { ...order, status: "CONFIRMED" } : order
-      )
-    );
+  // ✅ Update main modal orders
+  setMainUserOrders((prev) =>
+    prev.map((order) =>
+      order.id === orderId
+        ? { ...order, status: "CONFIRMED" }
+        : order
+    )
+  );
 
-    alert("Order verified successfully as CONFIRMED!");
-  };
+  // ✅ Update referred orders modal
+  setReferredOrders((prev) =>
+    prev.map((order) =>
+      order.id === orderId
+        ? { ...order, status: "CONFIRMED" }
+        : order
+    )
+  );
+
+  // ✅ Update referred cards cache
+  setReferredOrdersMap((prev) => {
+    const updated = { ...prev };
+
+    Object.keys(updated).forEach((userId) => {
+      updated[userId] = updated[userId].map((order) =>
+        order.id === orderId
+          ? { ...order, status: "CONFIRMED" }
+          : order
+      );
+    });
+
+    return updated;
+  });
+
+  alert("Order verified successfully as CONFIRMED!");
+};
 
   const openReferredModal = async (referred, referrer) => {
     setSelectedReferred({ ...referred, referrer });
@@ -758,46 +783,72 @@ const downloadOrderReport = async () => {
                                   </div>
                                 ) : (
                                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                    {user.referredUsers.map((ref, index) => {
-                                      const orders = referredOrdersMap[ref.referred_sb_user_id] || [];
+                                   {user.referredUsers.map((ref, index) => {
+  const orders =
+    referredOrdersMap[ref.referred_sb_user_id] || [];
 
-const commission = orders.reduce(
-  (sum, o) =>
-    sum +
-    ((Number(o.total) || 0) *
-      ((user.commission_rate || 0) / 100)),
-  0
+  
+  const eligibleOrders = orders.filter(
+  (o) =>
+    o.status === "CONFIRMED" ||
+    o.status === "SETTLED"
 );
 
-                                      return (
-                                        <div
-                                          key={`${user.id}-ref-${index}`}
-                                          onClick={() => openReferredModal(ref, user)}
-                                          className="bg-white border border-gray-100 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group"
-                                        >
-                                          <div className="font-medium text-gray-900 group-hover:text-emerald-700 transition-colors">
-                                            {ref.referred_name || "Unnamed User"}
-                                          </div>
-                                          
-                                          <div className="text-sm text-gray-600 mt-3">
-                                            SB ID: {ref.profiles?.sb_user_id || ref.referred_sb_user_id || "Not Registered"}
-                                          </div>
+  const commission = eligibleOrders.reduce(
+    (sum, o) =>
+      sum +
+      ((Number(o.total) || 0) *
+        ((user.commission_rate || 0) / 100)),
+    0
+  );
 
-                                          {ref.referred_email && (
-                                            <div className="text-xs text-gray-500 mt-2 truncate">{ref.referred_email}</div>
-                                          )}
+  const latestStatus =
+    orders.length > 0
+      ? orders[0].status
+      : "PENDING";
 
-                                          <div className="mt-6 flex items-center justify-between text-xs">
-                                            <span className="text-emerald-600 font-medium">
-                                              ₹{commission.toFixed(2)}
-                                            </span>
-                                            <span className="px-3 py-1 bg-emerald-100 text-emerald-700 rounded-2xl font-medium">
-                                              {ref.status || "Pending"}
-                                            </span>
-                                          </div>
-                                        </div>
-                                      );
-                                    })}
+  return (
+    <div
+      key={`${user.id}-ref-${index}`}
+      onClick={() => openReferredModal(ref, user)}
+      className="bg-white border border-gray-100 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group"
+    >
+      <div className="font-medium text-gray-900 group-hover:text-emerald-700 transition-colors">
+        {ref.referred_name || "Unnamed User"}
+      </div>
+
+      <div className="text-sm text-gray-600 mt-3">
+        SB ID: {ref.profiles?.sb_user_id ||
+          ref.referred_sb_user_id ||
+          "Not Registered"}
+      </div>
+
+      {ref.referred_email && (
+        <div className="text-xs text-gray-500 mt-2 truncate">
+          {ref.referred_email}
+        </div>
+      )}
+
+      <div className="mt-6 flex items-center justify-between text-xs">
+        <span className="text-emerald-600 font-medium">
+          ₹{commission.toFixed(2)}
+        </span>
+
+        <span
+          className={`px-3 py-1 rounded-2xl font-medium ${
+            latestStatus === "CONFIRMED"
+              ? "bg-emerald-100 text-emerald-700"
+              : latestStatus === "PENDING"
+              ? "bg-amber-100 text-amber-700"
+              : "bg-gray-100 text-gray-700"
+          }`}
+        >
+          {latestStatus}
+        </span>
+      </div>
+    </div>
+  );
+})}
                                   </div>
                                 )}
                               </div>
