@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
-import { IndianRupee, Search, Plus, Minus } from "lucide-react";
+import { IndianRupee, Search, Plus, Minus,Menu } from "lucide-react";
 import { fetchPreIPODetails } from "../api/mockApi"; // Only Pre-IPOs
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
@@ -11,7 +11,7 @@ import UserProfileDropdown from "../components/UserProfileDropdown";
 const Orders = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("buy");
-
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [pricePerUnit, setPricePerUnit] = useState(0);
   const [quantity, setQuantity] = useState(null);
 const total = (quantity || 0) * (pricePerUnit || 0);
@@ -74,15 +74,31 @@ useEffect(() => {
 
         return {
           ...item,
-          price:
-            dbItem?.price != null
-              ? Number(dbItem.price)
-              : Number(item.price || 0),
-
-          lot_size:
-            dbItem?.lot_size != null
-              ? Number(dbItem.lot_size)
-              : null,
+         price:
+  dbItem?.price != null
+    ? Number(dbItem.price)
+    : Number(
+        String(
+          item.shareDetails?.indicativeUnlistedSharePrice ||
+          item.price ||
+          0
+        )
+          .replace(/[^\d.-]/g, "")
+          .split("-")[0]
+      ),
+        lot_size:
+  dbItem?.lot_size != null
+    ? Number(
+        String(dbItem.lot_size).replace(/[^\d]/g, "")
+      )
+    : Number(
+        String(
+          item.shareDetails?.lotSize ||
+          item.lot_size ||
+          item.lotSize ||
+          0
+        ).replace(/[^\d]/g, "")
+      ),
         };
       });
 
@@ -143,46 +159,40 @@ useEffect(() => {
 const handleCompanySelect = (company) => {
   setSelectedCompany(company.name || "Unknown");
 
-  // PRICE FROM SUPABASE
-  const parsedPrice = Number(company.price) || 0;
+  // PRICE
+  const parsedPrice = Number(company.price || 0);
 
   setPricePerUnit(parsedPrice);
 
-  // LOT SIZE FROM SUPABASE
-  let lotSize =
-    Number(company.lot_size) ||
-    Number(company.lot) ||
-    Number(company.ipo_basic_details?.lot_size) ||
-    Number(company.market_lot_details?.retail_minimum?.shares);
+  // LOT SIZE
+  const parsedLot = Number(
+    String(
+      company.lot_size ||
+      company.shareDetails?.lotSize ||
+      company.lotSize ||
+      5
+    ).replace(/[^\d]/g, "")
+  );
 
-  // fallback for text like "50 Shares"
-  if (!lotSize && company.shareDetails?.lotSize) {
-    const match = company.shareDetails.lotSize.match(/\d+/);
-    lotSize = match ? Number(match[0]) : null;
-  }
-
-  setQuantity(lotSize || 5);
+  setQuantity(parsedLot || 5);
 
   setSearchQuery("");
   setShowDropdown(false);
 };
-
 const adjustQuantity = (delta) => {
   const selected = preIpos.find(
     (item) => item.name === selectedCompany
   );
 
   const minLot =
-    Number(selected?.lot_size) ||
-    5;
+    Number(selected?.lot_size) || 5;
 
-  const currentQty = Number(quantity) || minLot;
-
-  const step = 5;
+  const currentQty =
+    Number(quantity) || minLot;
 
   const newQty = Math.max(
     minLot,
-    currentQty + delta * step
+    currentQty + delta * 5
   );
 
   setQuantity(newQty);
@@ -193,10 +203,17 @@ const adjustQuantity = (delta) => {
       alert("Please select a company");
       return;
     }
+const selected = preIpos.find(
+  (item) => item.name === selectedCompany
+);
 
-    if (quantity < 5 || quantity % 5 !== 0) {
-      alert("Quantity must be a multiple of 5 and at least 5");
-      return;
+const minLot = Number(selected?.lot_size) || 5;
+
+if (quantity < minLot)
+     {
+   alert(
+  `Minimum quantity required is ${minLot}`
+);    return;
     }
 
     const { data: { user } } = await supabase.auth.getUser();
@@ -240,16 +257,16 @@ const adjustQuantity = (delta) => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Sidebar />
+      <Sidebar mobileOpen={mobileSidebarOpen} setMobileSidebarOpen={setMobileSidebarOpen}  />
 
       <main className="md:ml-64 transition-all">
         {/* Header with title and profile */}
         <header className="flex items-center justify-between p-4 md:p-6 lg:p-8 border-b bg-white sticky top-0 z-10">
-          <div>
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Orders & Buy/Sell Requests</h1>
-            <p className="text-gray-600 mt-1">Manage your Pre-IPO buy and sell interests</p>
-          </div>
-          <UserProfileDropdown />
+            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Orders & Buy/Sell </h1>
+           <button onClick={() => setMobileSidebarOpen(true)}>
+                      <Menu size={24} />
+                    </button>
+          
         </header>
 
         {/* Content */}
@@ -339,76 +356,100 @@ const adjustQuantity = (delta) => {
               </div>
 
               {/* Quantity + Price */}
-              <div className="grid grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-xs font-medium text-gray-600 mb-2">
-                    Quantity (multiples of 5)
-                  </label>
-                  <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
-                    <button
-                      onClick={() => adjustQuantity(-1)}
-                      className="px-3 py-3 bg-gray-100 hover:bg-gray-200 transition"
-                      disabled={quantity <= 5}
-                    >
-                      <Minus size={16} />
-                    </button>
-                   <input
-  type="text"
-  inputMode="numeric"
-  value={quantity ?? ""}
-  onChange={(e) => {
-    // remove non-numeric chars
-    let value = e.target.value.replace(/\D/g, "");
+             {/* Quantity + Price */}
+<div className="grid grid-cols-2 gap-6">
+  <div>
+    {(() => {
+      const selected = preIpos.find(
+        (item) => item.name === selectedCompany
+      );
 
-    // remove leading zeros
-    value = value.replace(/^0+/, "");
+      const minLot =
+        Number(selected?.lot_size) || 5;
 
-    if (value === "") {
-      setQuantity("");
-      return;
-    }
+      return (
+        <>
+          <label className="block text-xs font-medium text-gray-600 mb-2">
+            Minimum Lot Size is{" "}
+            <span className="font-bold text-green-700">
+              {minLot.toLocaleString("en-IN")}
+            </span>
+          </label>
 
-    const numericValue = Number(value);
+          <div
+            className="flex items-center border border-gray-300 rounded-lg overflow-hidden"
+            title={`Minimum quantity allowed is ${minLot}`}
+          >
+            {/* MINUS */}
+            <button
+              onClick={() => adjustQuantity(-1)}
+              className="px-3 py-3 bg-gray-100 hover:bg-gray-200 transition"
+              disabled={(quantity || 0) <= minLot}
+            >
+              <Minus size={16} />
+            </button>
 
-    // prevent below original lot size
-    const selected = preIpos.find(
-      (item) => item.name === selectedCompany
-    );
+            {/* INPUT */}
+            <input
+              type="text"
+              inputMode="numeric"
+              value={quantity ?? ""}
+              onChange={(e) => {
+                let value = e.target.value.replace(/\D/g, "");
 
-    const minLot =
-      Number(selected?.lot_size) ||
-      5;
+                value = value.replace(/^0+/, "");
 
-    if (numericValue < minLot) {
-      setQuantity(minLot);
-      return;
-    }
+                if (value === "") {
+                  setQuantity("");
+                  return;
+                }
 
-    setQuantity(numericValue);
-  }}
-  className="w-full text-center py-3 font-semibold text-base focus:outline-none appearance-none"
-  style={{
-    MozAppearance: "textfield",
-  }}
-/>
-                    <button
-                      onClick={() => adjustQuantity(1)}
-                      className="px-3 py-3 bg-gray-100 hover:bg-gray-200 transition"
-                    >
-                      <Plus size={16} />
-                    </button>
-                  </div>
-                </div>
+                const numericValue = Number(value);
 
-                <div>
-                  <label className="block text-xs font-medium text-gray-600 mb-2">
-                    Price/Unit
-                  </label>
-                  <div className="text-xl font-bold text-gray-900 flex items-center h-[46px]">
-                    ₹{pricePerUnit.toLocaleString("en-IN")}
-                  </div>
-                </div>
-              </div>
+                setQuantity(numericValue);
+              }}
+              className={`w-full text-center py-3 font-semibold text-base focus:outline-none appearance-none ${
+                Number(quantity || 0) < minLot
+                  ? "text-red-600"
+                  : "text-gray-900"
+              }`}
+              style={{
+                MozAppearance: "textfield",
+              }}
+            />
+
+            {/* PLUS */}
+            <button
+              onClick={() => adjustQuantity(1)}
+              className="px-3 py-3 bg-gray-100 hover:bg-gray-200 transition"
+            >
+              <Plus size={16} />
+            </button>
+          </div>
+
+          {/* VALIDATION TEXT */}
+          {Number(quantity || 0) < minLot && (
+            <p className="text-xs text-red-600 mt-2">
+              Quantity must be at least{" "}
+              {minLot.toLocaleString("en-IN")}
+            </p>
+          )}
+        </>
+      );
+    })()}
+  </div>
+
+  {/* PRICE */}
+  <div>
+    <label className="block text-xs font-medium text-gray-600 mb-2">
+      Price/Unit
+    </label>
+
+    <div className="text-xl font-bold text-gray-900 flex items-center h-[46px]">
+      ₹{pricePerUnit.toLocaleString("en-IN")}
+    </div>
+  </div>
+</div>
 
               {/* Total + Submit */}
               <div className="pt-6 border-t space-y-5 sticky bottom-0 bg-white pb-2">
@@ -427,8 +468,10 @@ const adjustQuantity = (delta) => {
   const minLot =
     Number(selected?.lot_size) || 5;
 
-  const isBelowLot =
-    Number(quantity || 0) < minLot;
+ const qty = Number(quantity || 0);
+
+const isBelowLot =
+  qty < minLot;
 
   return (
     <>
@@ -437,6 +480,11 @@ const adjustQuantity = (delta) => {
       <button
         onClick={handleSubmit}
         disabled={isBelowLot}
+        title={
+  isBelowLot
+    ? `Minimum quantity must be in multiples of ${minLot}`
+    : ""
+}
         className={`w-full py-3.5 rounded-xl font-semibold text-white transition-all shadow-md ${
           isBelowLot
             ? "bg-gray-400 cursor-not-allowed"
