@@ -43,15 +43,26 @@ const AdminBlog = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const categories = [
-    "IPO News",
-    "Market Analysis",
-    "Financial Market Updates",
-    "Pre-IPO",
-    "Investment Tips",
-    "Company Updates",
-    "Dividend News",
-  ];
+ const categories = [
+  "IPO News",
+  "Market Analysis",
+  "Financial Market Updates",
+  "Pre-IPO",
+  "Investment Tips",
+  "Company Updates",
+  "Dividend News",
+
+  // NEW
+  "Broker Comparison",
+  "Options Trading",
+  "Futures Trading",
+  "Commodity Market",
+  "ETF News",
+  "Mutual Funds",
+  "NFO Updates",
+  "Corporate Actions",
+  "Unlisted Shares",
+];
 
   const generateSlug = (text) =>
     text.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
@@ -139,15 +150,43 @@ const AdminBlog = () => {
   }
 };
 
-  const modules = {
-    toolbar: [
-      [{ header: [1, 2, 3, false] }],
-      ["bold", "italic", "underline"],
-      [{ list: "ordered" }, { list: "bullet" }],
-      ["link", "image"],
-      ["clean"],
+const modules = {
+  toolbar: [
+    [{ font: [] }],
+    [{ size: ["small", false, "large", "huge"] }],
+
+    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+
+    ["bold", "italic", "underline", "strike"],
+
+    [
+      { color: [] },
+      { background: [] },
     ],
-  };
+
+    [
+      { script: "sub" },
+      { script: "super" },
+    ],
+
+    [
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+    ],
+
+    [
+      { align: [] },
+    ],
+
+    ["blockquote", "code-block"],
+
+    ["link", "image"],
+
+    ["clean"],
+  ],
+};
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -276,7 +315,7 @@ const AdminBlog = () => {
                 value={content}
                 onChange={setContent}
                 modules={modules}
-                className="min-h-[420px]"
+                className="h-[600px] text-lg"
               />
             </div>
 
