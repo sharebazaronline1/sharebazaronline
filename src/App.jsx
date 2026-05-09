@@ -35,6 +35,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdminReferrals from "./pages/AdminReferrals";  
 import ReferralRedirect from "./pages/ReferralRedirect";
 import AdminKycDocuments from "./pages/AdminKycDocuments"
+import AdminSignals from "./pages/AdminSignals";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";      
@@ -134,6 +135,8 @@ function AppLayout() {
                 <Route path="/admin-preipo" element={<AdminPreIPO />} />
                 <Route path="/admin-orders" element={<AdminOrders />} />
                 <Route path="/admin-blogs" element={<AdminBlog />} />
+                <Route path="/admin-signals" element={<AdminSignals />} />
+                
               </Route>
 
               {/* Catch-all redirect (optional) */}
