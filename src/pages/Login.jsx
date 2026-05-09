@@ -110,6 +110,7 @@ const applyReferral = async (user) => {
   console.log("✅ Referral applied successfully");
 
   localStorage.removeItem("referral_code");
+localStorage.removeItem("pending_referral");
 };
 
   const handleEmailAuth = async (e) => {
@@ -117,39 +118,53 @@ const applyReferral = async (user) => {
     setLoading(true);
 
     try {
-      if (isSignUp) {
-        if (!fullName.trim()) {
-          alert("Please enter your full name");
-          setLoading(false);
-          return;
-        }
-
-        if (!mobile.trim()) {
-          alert("Please enter mobile number");
-          setLoading(false);
-          return;
-        }
-
-       const referralCode = localStorage.getItem("referral_code");
-
-const { data, error } = await supabase.auth.signUp({
-  email,
-  password,
-  options: {
-    data: {
-      full_name: fullName,
-      mobile: mobile,
-      referral_code: referralCode   // 🔥 THIS IS THE KEY
-    }
+     if (isSignUp) {
+  if (!fullName.trim()) {
+    alert("Please enter your full name");
+    setLoading(false);
+    return;
   }
-});
-        if (error) throw error;
 
-        alert("Check your email to verify your account 📩");
-        setIsSignUp(false);
-        return;
-      }
+  if (!mobile.trim()) {
+    alert("Please enter mobile number");
+    setLoading(false);
+    return;
+  }
 
+  const referralCode =
+     localStorage.getItem("pending_referral") ||
+  localStorage.getItem("referral_code");
+
+  const { data, error } =
+    await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          full_name: fullName,
+          mobile,
+        },
+      },
+    });
+
+  if (error) throw error;
+
+  
+  if (referralCode) {
+    localStorage.setItem(
+      "pending_referral",
+      referralCode
+    );
+  }
+
+  alert(
+    "Check your email to verify your account"
+  );
+
+  setIsSignUp(false);
+
+  return;
+}
       const { data, error } = await supabase.auth.signInWithPassword({
         email,
         password,
