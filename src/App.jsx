@@ -41,6 +41,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";      
 // import AdminReferrals from "./pages/AdminReferrals";
 import AdminUsers from "./pages/AdminUsers"
+import ScrollToTop from "./components/ScrollToTop";
 import AdminPreIPO from "./pages/AdminPreIPO"
 import AdminOrders from "./pages/AdminOrders"
 import AdminBlog from "./pages/AdminBlog";
@@ -170,6 +171,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
+         <ScrollToTop />
         <AppLayout />
       </Router>
     </AuthProvider>
