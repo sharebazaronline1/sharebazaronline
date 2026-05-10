@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useNavigate, useLocation } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import { fetchPreIPODetails } from "../api/mockApi";   
+import slugify from "../utils/slugify";
 
 const ITEMS_PER_PAGE = 10;
 
@@ -191,7 +192,9 @@ useEffect(() => {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.02 }}
                       className="hover:bg-gray-50 cursor-pointer scroll-mt-32"
-                      onClick={() => navigate(`/preipo/${ipo.id}`)}
+                      onClick={() => navigate(
+  `/preipo/${ipo.id}/${slugify(ipo.name)}`
+)}
                     >
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-3">
@@ -227,7 +230,9 @@ useEffect(() => {
                             Buy Now
                           </button>
                           <button
-                            onClick={() => navigate(`/preipo/${ipo.id}`)}
+                            onClick={() => navigate(
+  `/preipo/${ipo.id}/${slugify(ipo.name)}`
+)}
                             className="px-3 py-1.5 border text-xs rounded-lg hover:bg-gray-50"
                           >
                             View Details

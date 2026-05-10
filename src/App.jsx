@@ -101,10 +101,10 @@ function AppLayout() {
               <Route path="/pre-ipo-stocks" element={<PreIPOStocks />} />
               <Route path="/broker-analyzer" element={<BrokerAnalyzerGuide />} />
               <Route path="/how-to-apply-ipo" element={<HowToApplyIPO />} />
-              <Route path="/preipo/:id" element={<PreIPODetails />} />
+              <Route path="/preipo/:id/:slug" element={<PreIPODetails />} />
               <Route path="/insight-hub" element={<InsightHub />} />
               <Route path="/insight-hub/:id" element={<InsightHubDetails />} />
-              <Route path="/ipo/:id" element={<IPODetails />} />
+              <Route path="/ipo/:id/:slug"element={<IPODetails />} />
               <Route path="/skill-up" element={<SkillUp />} />
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />

@@ -56,7 +56,9 @@ useEffect(() => {
 }, []);
 
 const applyReferral = async (user) => {
-  const referralCode = localStorage.getItem("referral_code");
+  const referralCode =
+  localStorage.getItem("pending_referral") ||
+  localStorage.getItem("referral_code");
 
   if (!referralCode || !user?.id) return;
 
@@ -203,22 +205,42 @@ navigate("/dashboard", { replace: true });
   };
 
 const handleGoogleLogin = async () => {
-  const params = new URLSearchParams(location.search);
+  const params = new URLSearchParams(
+    location.search
+  );
+
   const ref = params.get("ref");
 
+  // SAVE BOTH
   if (ref) {
-    console.log("Saving ref before redirect:", ref);
-    localStorage.setItem("referral_code", ref);
+    console.log(
+      "Saving ref before Google redirect:",
+      ref
+    );
+
+    localStorage.setItem(
+      "referral_code",
+      ref
+    );
+
+    localStorage.setItem(
+      "pending_referral",
+      ref
+    );
   }
 
-  const { error } = await supabase.auth.signInWithOAuth({
-    provider: "google",
-    options: {
-    redirectTo: window.location.href,
-    },
-  });
+  const { error } =
+    await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/login`,
+      },
+    });
 
-  if (error) alert(error.message);
+  if (error) {
+    console.error(error);
+    alert(error.message);
+  }
 };
 
   return (

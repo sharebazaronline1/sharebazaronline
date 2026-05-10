@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { fetchIPOs } from "../api/mockApi";
 import IPOFAQ from '../components/IPOFaq'
+import slugify from "../utils/slugify";
 
 
 const tabs = ["Open", "Closed", "Upcoming"];
@@ -46,9 +47,9 @@ const IPODashboard = () => {
 };
 
 
-  const getIPOStatusByDate = (ipo) => {
+ const getIPOStatusByDate = (ipo) => {
   const today = new Date();
-  today.setHours(0, 0, 0, 0); 
+  today.setHours(0, 0, 0, 0);
 
   let openDate = ipo.openDate || ipo.open || null;
   let closeDate = ipo.closeDate || ipo.close || null;
@@ -64,7 +65,7 @@ const IPODashboard = () => {
     if (today >= openDate) return "Open";
     if (today < openDate) return "Upcoming";
   }
-  return "Upcoming";
+    return "Upcoming";
 };
 
   const filteredIPOs = ipos.filter((ipo) => {
@@ -200,7 +201,13 @@ const IPODashboard = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: i * 0.04 }}
                         className="hover:bg-gray-50 transition cursor-pointer"
-                        onClick={() => navigate(`/ipo/${ipo.id}`)}
+                        onClick={() =>
+  navigate(
+    `/ipo/${ipo.id}/${slugify(
+      ipo.name || ipo.fullName
+    )}`
+  )
+}
                       >
                         <td className="px-6 py-5">
                           <div className="flex items-center gap-4">
@@ -270,7 +277,11 @@ const IPODashboard = () => {
     <button
       onClick={(e) => {
         e.stopPropagation();
-        navigate(`/ipo/${ipo.id}`);
+        navigate(
+  `/ipo/${ipo.id}/${slugify(
+    ipo.name || ipo.fullName
+  )}`
+);
       }}
       className="px-5 py-2 rounded-lg border border-gray-400 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition"
     >
