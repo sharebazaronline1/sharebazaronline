@@ -18,6 +18,8 @@ import {
   ChevronUp,
 } from "lucide-react";
 import { fetchIPOs } from "../api/mockApi";
+import { Helmet } from "react-helmet-async";
+import slugify from "../utils/slugify";
 
 const IPODetails = () => {
   const { id } = useParams();
@@ -105,13 +107,14 @@ const getMinInvestment = (ipo) => {
   };
 
   if (!ipo) {
+    
     return (
       <div className="flex justify-center items-center h-screen text-gray-600">
         Loading IPO details...
       </div>
     );
   }
-
+const slug = slugify(ipo.name || ipo.fullName || "");
 const minInvestment = getMinInvestment(ipo);
 
 
@@ -135,7 +138,54 @@ const minInvestment = getMinInvestment(ipo);
     { id: "faq", label: "FAQ", icon: HelpCircle },
   ];
 
-  return (
+return (
+  <>
+    <Helmet>
+      <title>
+        {ipo.name} IPO Details, GMP, Price, Review | ShareBazaarOnline
+      </title>
+
+      <meta
+        name="description"
+        content={`Apply for ${ipo.name} IPO. Check GMP, lot size, price band, allotment date, review and subscription status.`}
+      />
+
+      <meta
+        name="keywords"
+        content={`${ipo.name} IPO, ${ipo.name} GMP, ${ipo.name} review`}
+      />
+
+      <link
+        rel="canonical"
+        href={`https://www.sharebazaaronline.com/ipo/${ipo.id}/${slug}`}
+      />
+
+      <meta
+        property="og:title"
+        content={`${ipo.name} IPO Details`}
+      />
+
+      <meta
+        property="og:description"
+        content={`Check ${ipo.name} IPO GMP, price band, lot size and review.`}
+      />
+
+      <meta
+        property="og:url"
+        content={`https://www.sharebazaaronline.com/ipo/${ipo.id}/${slug}`}
+      />
+
+      <meta
+        property="og:type"
+        content="website"
+      />
+
+      <meta
+        property="og:image"
+        content={ipo.logo}
+      />
+    </Helmet>
+
     <div className="min-h-screen bg-gray-50">
 
       {/* HEADER */}
@@ -726,6 +776,7 @@ const minInvestment = getMinInvestment(ipo);
       </div>
 
     </div>
+    </>
   );
 };
 

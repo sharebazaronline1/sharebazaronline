@@ -10,12 +10,12 @@ import {
   Users,
   IndianRupee,
   Wallet,
-  Factory,
   ChevronDown,
   ChevronUp,
 } from "lucide-react";
 import { fetchPreIPODetails } from "../api/mockApi";
-
+import { Helmet } from "react-helmet-async";
+import slugify from "../utils/slugify";
 /* ================= REUSABLE ================= */
 const Card = ({ children }) => (
   <section className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
@@ -40,10 +40,12 @@ const TableWrapper = ({ children }) => (
 const PreIPODetails = () => {
   const { id } = useParams();
   const [data, setData] = useState(null);
+  const [openFaqs, setOpenFaqs] = useState({});
   const navigate = useNavigate();
   const [showFullOverview, setShowFullOverview] = useState(false);
-  const [openFaqs, setOpenFaqs] = useState({});
-
+const slug = data?.name
+  ? slugify(data.name)
+  : "";
   const formatKey = (key) =>
     key
       .replace(/([A-Z])/g, " $1")
@@ -100,13 +102,59 @@ const merged = {
     load();
   }, [id]);
 
-  if (!data) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50 text-slate-500">
-        Coming Soon
+if (!data) {
+  return (
+    <div className="min-h-screen bg-slate-50">
+
+      {/* Center Loader */}
+      <div className="flex flex-col items-center justify-center py-32">
+
+        {/* Spinner */}
+        <div className="relative">
+          <div className="w-16 h-16 border-4 border-slate-200 rounded-full"></div>
+
+          <div className="w-16 h-16 border-4 border-green-600 border-t-transparent rounded-full animate-spin absolute top-0 left-0"></div>
+        </div>
+
+        {/* Text */}
+        <h2 className="mt-6 text-xl font-semibold text-slate-800">
+          Loading Company Details
+        </h2>
+
+        <p className="mt-2 text-sm text-slate-500">
+          Fetching latest unlisted share information...
+        </p>
+
       </div>
-    );
-  }
+
+      {/* Skeleton Preview */}
+      <div className="max-w-6xl mx-auto px-4 pb-16">
+
+        <div className="space-y-6 animate-pulse">
+
+          {[1, 2, 3].map((item) => (
+            <div
+              key={item}
+              className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm"
+            >
+
+              <div className="h-6 bg-slate-200 rounded w-64 mb-6"></div>
+
+              <div className="space-y-4">
+                <div className="h-4 bg-slate-200 rounded w-full"></div>
+                <div className="h-4 bg-slate-200 rounded w-full"></div>
+                <div className="h-4 bg-slate-200 rounded w-5/6"></div>
+                <div className="h-4 bg-slate-200 rounded w-4/6"></div>
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+      </div>
+    </div>
+  );
+}
 
   const overviewText = data.overview || "";
   const shortOverview =
@@ -117,6 +165,117 @@ const merged = {
   const displayPrice = Number(data.price || 0).toLocaleString("en-IN");
 
   return (
+  <>
+    <Helmet>
+
+      <title>
+        {data.name} Unlisted Share Price, Financials & Review | ShareBazaarOnline
+      </title>
+        <meta name="geo.region" content="IN" />
+        <meta name="geo.country" content="India" />
+        <meta name="language" content="English" />
+      <meta
+        name="description"
+        content={`Buy ${data.name} unlisted shares at best price. Check financials, lot size, valuation, shareholding, risks, management analysis and investor insights.`}
+      />
+      <link
+      rel="preload"
+      as="image"
+      href={data.logo}
+    />
+
+      <meta
+        name="keywords"
+        content={`${data.name} unlisted shares, ${data.name} share price, ${data.name} pre ipo, buy unlisted shares india`}
+      />
+
+      <link
+        rel="canonical"
+        href={`https://www.sharebazaaronline.com/preipo/${id}/${slug}`}
+      />
+
+      {/* OPEN GRAPH */}
+      <meta
+        property="og:title"
+        content={`${data.name} Unlisted Shares`}
+      />
+
+      <meta
+        property="og:description"
+        content={`Check ${data.name} unlisted share price, valuation, financials and investment details.`}
+      />
+
+      <meta
+        property="og:image"
+        content={data.logo}
+      />
+
+      <meta
+        property="og:url"
+        content={`https://www.sharebazaaronline.com/preipo/${id}/${slug}`}
+      />
+
+      <meta
+        property="og:type"
+        content="website"
+      />
+      <meta
+        name="robots"
+        content="index, follow"
+      />
+      <meta
+        name="twitter:card"
+        content="summary_large_image"
+      />
+
+      <meta
+        name="twitter:title"
+        content={`${data.name} Unlisted Shares`}
+      />
+
+      <meta
+        name="twitter:description"
+        content={`Check ${data.name} unlisted share price, valuation and financials.`}
+      />
+
+      <meta
+        name="twitter:image"
+        content={data.logo}
+      />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FinancialProduct",
+          name: data.name,
+          description: `${data.name} unlisted shares investment details`,
+          image: data.logo,
+          brand: {
+            "@type": "Brand",
+            name: data.name,
+          },
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "INR",
+            price: data.price,
+          },
+        })}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: data.faq?.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer,
+            },
+          })),
+        })}
+      </script>
+    </Helmet>
+
     <div className="bg-slate-50 min-h-screen">
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
@@ -127,8 +286,9 @@ const merged = {
             <div className="shrink-0">
               <div className="w-28 h-28 lg:w-36 lg:h-36 border rounded-xl p-4 bg-white shadow-md">
                 <img
-                  src={data.logo}
-                  alt={data.name}
+                  src={data.logo}           
+                  alt={`${data.name} unlisted share logo`}
+                  loading="lazy"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -164,7 +324,7 @@ const merged = {
 
         {/* ================= 1. COMPANY OVERVIEW ================= */}
         <Card>
-          <SectionHeader icon={Building2} title="About the Company" />
+          <SectionHeader icon={Building2} title={`About ${data.name} Unlisted Shares`}/>
           <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed text-[15px]">
             {showFullOverview ? overviewText : shortOverview}
 
@@ -181,7 +341,7 @@ const merged = {
 
         {/* ================= 2. COMPANY DETAILS TABLE ================= */}
         <Card>
-          <SectionHeader icon={IndianRupee} title="Company Details" />
+          <SectionHeader icon={IndianRupee} title={`${data.name} Share Details`}/>
           <TableWrapper>
             <table className="w-full min-w-[800px] text-sm border-collapse">
               <tbody className="divide-y">
@@ -266,7 +426,7 @@ const merged = {
 
         {/* ================= 6. INVESTOR INSIGHT ================= */}
         <Card>
-          <SectionHeader icon={BarChart3} title="Investor Insight" />
+          <SectionHeader icon={BarChart3} title={`Why Invest in ${data.name}`} />
           <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed">
             {data.investorInsight || data.managementInsight}
           </div>
@@ -418,7 +578,7 @@ const merged = {
 
         {/* ================= 15. MANAGEMENT INSIGHT ================= */}
         <Card>
-          <SectionHeader icon={BarChart3} title="Management Insight" />
+          <SectionHeader icon={BarChart3} title={`${data.name} Management Analysis`} />
           <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed">
             {data.managementInsight || "Leadership strategy, vision, execution capability, and corporate governance overview."}
           </div>
@@ -427,7 +587,7 @@ const merged = {
         {/* ================= FAQ SECTION ================= */}
         {data.faq && data.faq.length > 0 && (
           <section id="faq" className="bg-white p-6 rounded-xl border shadow-sm">
-            <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions (FAQ)</h2>
+            <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions About {data.name} Unlisted Shares</h2>
             <div className="space-y-3">
               {data.faq.map((item, index) => (
                 <div key={index} className="border rounded-lg overflow-hidden">
@@ -460,9 +620,90 @@ const merged = {
             Back to All Unlisted Shares
           </Link>
         </div>
+<div className="bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
 
+  {/* Heading */}
+  <div className="mb-6">
+    <h3 className="text-2xl font-bold text-slate-900">
+      Explore More Investment Opportunities
+    </h3>
+
+    <p className="text-slate-600 mt-2 text-sm lg:text-base">
+      Discover IPOs, unlisted shares, and broker comparison tools curated for smart investors.
+    </p>
+  </div>
+
+  {/* Links */}
+  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+
+    <Link
+      to="/ipo/ipo-list"
+      className="group bg-white border border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
+    >
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-lg font-semibold text-slate-900">
+            Latest IPOs
+          </p>
+
+          <p className="text-sm text-slate-500 mt-1">
+            Track live & upcoming IPOs
+          </p>
+        </div>
+
+        <span className="text-green-600 group-hover:translate-x-1 transition">
+          →
+        </span>
+      </div>
+    </Link>
+
+    <Link
+      to="/pre-ipo-stocks"
+      className="group bg-white border border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
+    >
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-lg font-semibold text-slate-900">
+            Unlisted Shares
+          </p>
+
+          <p className="text-sm text-slate-500 mt-1">
+            Invest before public listing
+          </p>
+        </div>
+
+        <span className="text-green-600 group-hover:translate-x-1 transition">
+          →
+        </span>
+      </div>
+    </Link>
+
+    <Link
+      to="/broker-analyzer"
+      className="group bg-white border border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
+    >
+      <div className="flex items-center justify-between">
+        <div>
+          <p className="text-lg font-semibold text-slate-900">
+            Compare Brokers
+          </p>
+
+          <p className="text-sm text-slate-500 mt-1">
+            Find the best broker platform
+          </p>
+        </div>
+
+        <span className="text-green-600 group-hover:translate-x-1 transition">
+          →
+        </span>
+      </div>
+    </Link>
+
+  </div>
+</div>
       </div>
     </div>
+    </>
   );
 };
 
