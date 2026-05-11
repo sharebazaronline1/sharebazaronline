@@ -15255,6 +15255,385 @@ export const fetchIPOs = async () => {
     "prospectus_pdf": "N/A",
     "investor_presentation": "N/A"
   }
+},
+{
+  "id": 78,
+  "name": "Goldline Pharmaceutical",
+  "logo": "/images/ipo/goldlinepharmaceutical.png",
+  "minInvestment": "₹2,58,000",
+  "open": "12 May 2026",
+  "close": "14 May 2026",
+  "listing": "19 May 2026",
+  "price": "41 – 43",
+  "lot": 3000,
+
+  "about_company": {
+    "company_name": "Goldline Pharmaceutical Limited",
+    "industry_sector": "Pharmaceuticals - Marketing & Distribution",
+    "founded_year": "Not specified",
+    "promoters": [
+      "Amol Laxmikant Mujumdar",
+      "Swapan Premprakash Khandelwal"
+    ],
+    "description": "Goldline Pharmaceutical Limited is engaged in the marketing and distribution of pharmaceutical products under the brand 'Goldline'. The company operates an asset-light business model through third-party manufacturers. Its product portfolio is divided into five segments: Goldline Pharma, Goldline Cardinal, Goldline Aayushman, Goldline InLife, and Goldline Wellness, covering specialties like Orthopedics, Cardiology, Pediatrics, Gastroenterology, Critical Care, and Wellness. The company has a network of 15 manufacturers and 7 distributors, with presence in Maharashtra, Madhya Pradesh, Odisha, Jharkhand, Tamil Nadu, Rajasthan, and Bihar."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Goldline Pharmaceutical Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹41",
+    "price_band_max": "₹43",
+    "lot_size": 3000,
+    "total_issue_size": "₹11.61 Cr (27,00,000 shares)",
+    "fresh_issue_size": "₹11.61 Cr (27,00,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "27,00,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹43",
+    "minimum_investment": "₹2,58,000 (2 lots / 6,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹41.28 Cr",
+    "pre_issue_shareholding": "Promoters 79.70%",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Asset-light pharmaceutical marketing and distribution company partnering with third-party manufacturers.",
+    "products_services": [
+      "Goldline Pharma (42 products)",
+      "Goldline Cardinal (54 products)",
+      "Goldline Aayushman (18 products)",
+      "Goldline InLife (22 products)",
+      "Goldline Wellness (10 products)"
+    ],
+    "competitive_strengths": [
+      "Diverse product portfolio across multiple specialties",
+      "Asset-light scalable business model",
+      "Experienced promoters and management",
+      "Strong distributor network",
+      "Focus on quality and compliance"
+    ],
+    "risks": [
+      "Dependence on third-party manufacturers",
+      "Regulatory risks in pharmaceuticals",
+      "Intense competition",
+      "Working capital intensive"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "12 May 2026",
+    "ipo_close_date": "14 May 2026",
+    "basis_of_allotment_date": "15 May 2026",
+    "refund_initiation_date": "18 May 2026",
+    "demat_credit_date": "18 May 2026",
+    "listing_date": "19 May 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_borrowings": "₹8.35 Cr",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.65%",
+    "hni_nii_quota": "15.22%",
+    "retail_quota": "35.13%",
+    "market_maker": "5.11%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "6000",
+      "amount": "₹2,58,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "9000",
+      "amount": "₹3,87,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "24000",
+      "amount": "₹10,32,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "21.02% (Dec 31, 2025) / 35.83% (Mar 31, 2025)",
+    "roce": "24.22% (Dec 31, 2025) / 38.45% (Mar 31, 2025)",
+    "pat_margin": "10.38% (Dec 31, 2025) / 10.09% (Mar 31, 2025)",
+    "ebitda_margin": "19.41% (Dec 31, 2025) / 20.78% (Mar 31, 2025)",
+    "debt_to_equity": "1.07 (Dec 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "19.39 Cr",
+      "total_income": "19.85 Cr",
+      "pat": "0.26 Cr",
+      "ebitda": "2.19 Cr",
+      "net_worth": "5.89 Cr",
+      "total_borrowing": "10.83 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "22.93 Cr",
+      "total_income": "23.57 Cr",
+      "pat": "1.81 Cr",
+      "ebitda": "4.30 Cr",
+      "net_worth": "7.86 Cr",
+      "total_borrowing": "11.13 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "26.28 Cr",
+      "total_income": "28.06 Cr",
+      "pat": "2.83 Cr",
+      "ebitda": "5.83 Cr",
+      "net_worth": "10.35 Cr",
+      "total_borrowing": "11.03 Cr"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "27.40 Cr",
+      "total_income": "21.41 Cr",
+      "pat": "2.22 Cr",
+      "ebitda": "4.16 Cr",
+      "net_worth": "12.36 Cr",
+      "total_borrowing": "9.47 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 12 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://www.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Cumulative Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "103, F-1, Leela Apartment, Shilpa HSG Society,Near Saptagiri Nagar, Shanidham,Narendra Nagar,Nagpur, Maharashtra, 440015",
+    "company_website": "https://www.goldlinepharma.in/",
+    "company_email": "info@goldlinepharma.in",
+    "company_phone": "+91 712 2786666"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.cumulativecapital.group/Admin/UploadedFiles/RHP-Goldline-Pharmaceutical-Limited-May-06,-2026.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "https://www.chittorgarh.net/reports/anchor-investor/goldline-pharmaceutical-ipo-anchor-allocation-letter.pdf"
+  }
+},
+{
+  "id": 79,
+  "name": "RFBL Flexi Pack",
+  "logo": "/images/ipo/rfblflexipack.png",
+  "minInvestment": "₹3,00,000",
+  "open": "12 May 2026",
+  "close": "14 May 2026",
+  "listing": "19 May 2026",
+  "price": "47 – 50",
+  "lot": 3000,
+
+  "about_company": {
+    "company_name": "RFBL Flexi Pack Limited",
+    "industry_sector": "Flexible Packaging Materials Manufacturing & Trading",
+    "founded_year": "2005",
+    "promoters": [
+      "Kunjit Maheshbhai Patel",
+      "Roopyaa Tradebizz Limited"
+    ],
+    "description": "RFBL Flexi Pack Limited is engaged in the manufacturing and trading of printed multilayer flexible packaging materials such as plastic film rolls and pouches. The company serves industries including food, pharmaceuticals, and home care. It operates on a B2B model with a manufacturing unit in Himatnagar, Gujarat. As of November 30, 2025, the company had 6 employees."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "RFBL Flexi Pack Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹47",
+    "price_band_max": "₹50",
+    "lot_size": 3000,
+    "total_issue_size": "₹35.33 Cr (70,65,000 shares)",
+    "fresh_issue_size": "₹35.33 Cr (70,65,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "70,65,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹50",
+    "minimum_investment": "₹3,00,000 (2 lots / 6,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹116.58 Cr",
+    "pre_issue_shareholding": "Promoters 100%",
+    "post_issue_shareholding": "Promoters 69.70%"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturer and trader of printed multilayer flexible packaging materials (plastic film rolls and pouches) for food, pharma, and home care industries.",
+    "products_services": [
+      "Printed Multilayer Flexible Packaging Films",
+      "Plastic Pouches",
+      "Woven Fabric Packaging Material",
+      "Polyester Laminated Films"
+    ],
+    "competitive_strengths": [
+      "Strong focus on quality assurance",
+      "Strategic location in Himatnagar, Gujarat",
+      "Experienced leadership",
+      "Integrated manufacturing operations",
+      "Customised and flexible product offerings"
+    ],
+    "risks": [
+      "Raw material price volatility",
+      "Competition in flexible packaging",
+      "Project execution risks for capacity expansion"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "12 May 2026",
+    "ipo_close_date": "14 May 2026",
+    "basis_of_allotment_date": "15 May 2026",
+    "refund_initiation_date": "18 May 2026",
+    "demat_credit_date": "18 May 2026",
+    "listing_date": "19 May 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_requirements": "₹12.41 Cr",
+    "funding_working_capital_requirements": "₹17.76 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "retail_quota": "35%",
+    "hni_quota": "15%",
+    "market_maker": "67,11,000 shares (firm allotment)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "6000",
+      "amount": "₹3,00,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "9000",
+      "amount": "₹4,50,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "7 lots",
+      "shares": "21000",
+      "amount": "₹10,50,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "60.18% (Mar 31, 2025) / 19.26% (Nov 30, 2025)",
+    "roce": "32.70% (Mar 31, 2025) / 14.26% (Nov 30, 2025)",
+    "pat_margin": "6.15% (Mar 31, 2025) / 5.51% (Nov 30, 2025)",
+    "ebitda_margin": "9.28% (Mar 31, 2025) / 8.55% (Nov 30, 2025)",
+    "debt_to_equity": "1.05 (Mar 31, 2025) / 0.80 (Nov 30, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "10.21 Cr",
+      "total_income": "46.86 Cr",
+      "pat": "0.67 Cr",
+      "ebitda": "1.34 Cr",
+      "net_worth": "3.89 Cr",
+      "total_borrowing": "2.06 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "22.48 Cr",
+      "total_income": "79.96 Cr",
+      "pat": "5.79 Cr",
+      "ebitda": "8.53 Cr",
+      "net_worth": "9.68 Cr",
+      "total_borrowing": "5.23 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "46.94 Cr",
+      "total_income": "135.46 Cr",
+      "pat": "8.33 Cr",
+      "ebitda": "12.57 Cr",
+      "net_worth": "18.00 Cr",
+      "total_borrowing": "18.88 Cr"
+    },
+    {
+      "period": "30 Sep 2025",
+      "assets": "51.54 Cr",
+      "total_income": "69.66 Cr",
+      "pat": "3.84 Cr",
+      "ebitda": "5.96 Cr",
+      "net_worth": "21.84 Cr",
+      "total_borrowing": "17.51 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 12 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "KFin Technologies Ltd.",
+    "registrar_website": "https://www.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Grow House Wealth Management Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Survey No 32, Plot No 15, Behind Marutinandan Temple Dhandha, Sabarkantha, Himatnagar, Gujarat 383001",
+    "company_website": "https://rfblflexi.com/",
+    "company_email": "info@rfblflexipack.com",
+    "company_phone": "+91 99988 25511"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_RFBL.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  }
 }
 
 
