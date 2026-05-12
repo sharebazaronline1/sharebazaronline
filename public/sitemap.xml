@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+
+  <!-- HOME -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>
+        https://www.sharebazaaronline.com/images/logo.png
+      </image:loc>
+    </image:image>
+  </url>
+
+  <!-- IPO TRACKER -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/ipo-tracker</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- IPO LIST -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/ipo/ipo-list</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- PRE IPO -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/pre-ipo-stocks</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.93</priority>
+  </url>
+
+  <!-- BROKER ANALYZER -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/broker-analyzer</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- INSIGHT HUB -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/insight-hub</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.88</priority>
+  </url>
+
+  <!-- SKILL UP -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/skill-up</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+  </url>
+
+  <!-- IPO GUIDE -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/ipoguide</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.76</priority>
+  </url>
+
+  <!-- PRE IPO GUIDE -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/preipoguide</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.76</priority>
+  </url>
+
+  <!-- HOW TO APPLY IPO -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/how-to-apply-ipo</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- LOGIN -->
+
+  <url>
+    <loc>https://www.sharebazaaronline.com/login</loc>
+    <lastmod>2026-05-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.30</priority>
+  </url>
+
+</urlset>
