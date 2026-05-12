@@ -7,30 +7,7 @@ export default defineConfig({
     react(),
 
     sitemap({
-      hostname:
-        "https://www.sharebazaaronline.com",
-
-      dynamicRoutes: [
-        "/",
-        "/ipo-tracker",
-        "/ipo/ipo-list",
-        "/pre-ipo-stocks",
-        "/broker-analyzer",
-        "/how-to-apply-ipo",
-        "/insight-hub",
-        "/skill-up",
-        "/ipoguide",
-        "/preipoguide",
-        "/login",
-      ],
-
-      changefreq: "daily",
-
-      priority: 0.9,
-
-      lastmod: new Date(),
-
-      generateRobotsTxt: true,
+      baseUrl: "https://www.sharebazaaronline.com",
     }),
   ],
 
