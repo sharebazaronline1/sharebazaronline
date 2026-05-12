@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
 import { fetchInsightDetails } from "../api/mockApi";
+import slugify from "../utils/slugify";
 
 const InsightHub = () => {
   const navigate = useNavigate();
@@ -77,8 +78,10 @@ useEffect(() => {
 }, []);
 
   const handleCardClick = (post) => {
-    navigate(`/insight-hub/${post.id}`);
-  };
+  navigate(
+    `/insight-hub/${post.id}/${slugify(post.title)}`
+  );
+};
 
   return (
     <div className="w-full min-h-screen">

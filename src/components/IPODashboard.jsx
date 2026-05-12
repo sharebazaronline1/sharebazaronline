@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useMemo } from "react";
+import slugify from "../utils/slugify";
 
 const LetterAvatar = ({ name }) => (
   <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-lg bg-gray-800 text-white font-bold text-sm">
@@ -129,7 +130,13 @@ const type = rawType === "SME" ? "SME" : "Mainboard";
             Apply
           </button>
           <button
-            onClick={() => navigate(`/ipo/${ipo.id}`)}
+           onClick={() =>
+  navigate(
+    `/ipo/${ipo.id}/${slugify(
+      ipo.name || ipo.fullName
+    )}`
+  )
+}
             className="flex-1 py-2.5 border border-gray-300 hover:bg-gray-100 text-xs font-semibold rounded-xl"
           >
             Details

@@ -5,6 +5,7 @@ import { useLocation } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import {useNavigate } from "react-router-dom";
 import { fetchPreIPODetails } from "../api/mockApi";
+import slugify from "../utils/slugify";
 
 const UnlistedSharesSidebar = () => {
   const { pathname } = useLocation();
@@ -127,7 +128,9 @@ const navigate = useNavigate();
   key={i}
  onClick={() => {
   if (stock.id) {
-    navigate(`/preipo/${stock.id}`);
+    navigate(
+  `/preipo/${stock.id}/${slugify(stock.name)}`
+);
   }
 }}
   className="px-3 py-2 hover:bg-gray-50 transition cursor-pointer flex items-center justify-between gap-2"

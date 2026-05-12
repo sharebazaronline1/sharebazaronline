@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useLocation,useNavigate } from "react-router-dom";
 import { fetchIPOs } from "../api/mockApi";
-
+import slugify from "../utils/slugify";
 const IPOSidebar = () => {
   const { pathname } = useLocation();
   const [formattedDate, setFormattedDate] = useState("");
@@ -149,7 +149,9 @@ const getIPOType = (ipo) => {
   key={i}
   onClick={() => {
     if (ipo.id) {
-      navigate(`/ipo/${ipo.id}`);
+     navigate(
+  `/ipo/${ipo.id}/${slugify(ipo.name)}`
+);
     }
   }}
   className="px-3 py-2 hover:bg-gray-50 transition cursor-pointer"
