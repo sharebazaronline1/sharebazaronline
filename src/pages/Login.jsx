@@ -14,45 +14,88 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const [mobile, setMobile] = useState("");
 
-  const generateShortId = (uid) => {
-    if (!uid) return "SB-GUEST000";
-    const short = uid.slice(-12);
-    const hash = btoa(short).replace(/[=+/]/g, "").slice(0, 8).toUpperCase();
-    return `SB-${hash}`;
-  };
 
  //  FIRST — save referral
 useEffect(() => {
-  const ref = new URLSearchParams(window.location.search).get("ref");
+  const saveReferral = async () => {
+    const ref = new URLSearchParams(
+      window.location.search
+    ).get("ref");
 
-  if (ref) {
-    
-    localStorage.setItem("referral_code", ref);
-  }
+    if (!ref) return;
+
+    // validate referral code
+    const { data: referrer } = await supabase
+      .from("profiles")
+      .select("id")
+      .eq("sb_user_id", ref)
+      .maybeSingle();
+
+    if (!referrer) {
+      console.error(
+        "Invalid referral code"
+      );
+
+      return;
+    }
+
+    localStorage.setItem(
+      "referral_code",
+      ref
+    );
+
+    sessionStorage.setItem(
+      "referral_code",
+      ref
+    );
+  };
+
+  saveReferral();
 }, []);
 
 //  SECOND — handle OAuth
 useEffect(() => {
+  let handled = false;
+
   const {
     data: { subscription },
   } = supabase.auth.onAuthStateChange(
     async (event, session) => {
+
+      if (handled) return;
+
       const user = session?.user;
 
       if (!user) return;
 
-     
+      if (
+        event !== "SIGNED_IN" &&
+        event !== "INITIAL_SESSION"
+      ) {
+        return;
+      }
 
-      // IMPORTANT:
-      // wait for referral completion first
+      handled = true;
+
+      console.log(
+        "Auth event:",
+        event
+      );
+
+      // WAIT FOR REFERRAL LOGIC
       await applyReferral(user);
 
-      // small delay for DB consistency
-      setTimeout(() => {
-        navigate("/dashboard", {
-          replace: true,
-        });
-      }, 1500);
+      // REMOVE GOOGLE CODE URL
+      window.history.replaceState(
+        {},
+        document.title,
+        "/login"
+      );
+
+      // NOW navigate
+      navigate("/dashboard", {
+        replace: true,
+      });
     }
   );
 
@@ -60,200 +103,195 @@ useEffect(() => {
 }, []);
 
 const applyReferral = async (user) => {
-  const referralCode =
-    localStorage.getItem("pending_referral") ||
-    localStorage.getItem("referral_code");
+  try {
+    const referralCode =
+      localStorage.getItem("pending_referral") ||
+      localStorage.getItem("referral_code") ||
+      sessionStorage.getItem("referral_code");
 
-  if (!referralCode || !user?.id) return;
-
-  console.log(
-    "Applying referral:",
-    referralCode
-  );
-
-  let profile = null;
-
-  // WAIT LONGER FOR GOOGLE OAUTH
- for (let i = 0; i < 60; i++) {
-    const { data, error } = await supabase
-      .from("profiles")
-      .select("*")
-      .eq("id", user.id)
-      .maybeSingle();
-
-    console.log(
-      "Checking profile...",
-      i,
-      data
-    );
-
-    if (data) {
-      profile = data;
-      break;
+    if (!referralCode || !user?.id) {
+      return;
     }
 
-    await new Promise((resolve) =>
-      setTimeout(resolve, 1500)
-    );
-  }
+    console.log("Applying referral:", referralCode);
 
-  if (!profile) {
+    // ==========================================
+    // WAIT FOR PROFILE CREATION
+    // ==========================================
+
+    let currentProfile = null;
+
+    for (let i = 0; i < 20; i++) {
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      if (data) {
+        currentProfile = data;
+        break;
+      }
+
+      await new Promise((resolve) =>
+        setTimeout(resolve, 1000)
+      );
+    }
+
+    if (!currentProfile) {
+      console.error("Profile creation timeout");
+      return;
+    }
+
+    console.log("Profile found:", currentProfile);
+
+    // ==========================================
+    // PREVENT SELF REFERRAL
+    // ==========================================
+
+    if (
+      currentProfile.sb_user_id === referralCode
+    ) {
+      console.error("Self referral blocked");
+      return;
+    }
+
+    // ==========================================
+    // UPDATE referred_by_code ONLY IF EMPTY
+    // ==========================================
+
+    if (!currentProfile.referred_by_code) {
+      const { error: updateError } =
+        await supabase
+          .from("profiles")
+          .update({
+            referred_by_code: referralCode,
+          })
+          .eq("id", user.id);
+
+      if (updateError) {
+        console.error(
+          "Referral update failed:",
+          updateError
+        );
+
+        return;
+      }
+
+      console.log("Referral code updated");
+    }
+
+    // ==========================================
+    // FIND REFERRER
+    // ==========================================
+
+    const {
+      data: referrerProfile,
+      error: referrerError,
+    } = await supabase
+      .from("profiles")
+      .select("id, sb_user_id")
+      .eq("sb_user_id", referralCode)
+      .maybeSingle();
+
+    if (referrerError || !referrerProfile) {
+      console.error(
+        "Referrer not found",
+        referrerError
+      );
+
+      return;
+    }
+
+    // ==========================================
+    // CHECK EXISTING REFERRAL
+    // ==========================================
+
+    const { data: existingReferral } =
+      await supabase
+        .from("referrals")
+        .select("id")
+        .eq("referred_sb_user_id", user.id)
+        .maybeSingle();
+
+    if (existingReferral) {
+      console.log("Referral already exists");
+
+      return;
+    }
+
+    // ==========================================
+    // INSERT REFERRAL
+    // ==========================================
+
+    const { error: insertError } =
+      await supabase
+        .from("referrals")
+        .insert({
+          referrer_sb_user_id:
+            referrerProfile.id,
+
+          referred_sb_user_id:
+            user.id,
+
+          referred_name:
+            currentProfile.full_name ||
+            user.user_metadata?.full_name ||
+            user.user_metadata?.name ||
+            "New User",
+
+          referred_email:
+            currentProfile.email ||
+            user.email,
+
+          referred_mobile:
+            currentProfile.mobile ||
+            user.user_metadata?.mobile ||
+            null,
+
+          status: "pending",
+
+          reward_amount: 0,
+
+          commission_earned: 0,
+        });
+
+    if (insertError) {
+      console.error(
+        "Referral insert failed:",
+        insertError
+      );
+
+      return;
+    }
+
+    console.log(
+      "Referral inserted successfully"
+    );
+
+    // ==========================================
+    // CLEANUP
+    // ==========================================
+
+    localStorage.removeItem(
+      "referral_code"
+    );
+
+    localStorage.removeItem(
+      "pending_referral"
+    );
+
+    sessionStorage.removeItem(
+      "referral_code"
+    );
+
+  } catch (err) {
     console.error(
-      " Profile never created"
+      "applyReferral crashed:",
+      err
     );
-    return;
   }
-
- // If referral already exists in profile,
-// continue checking referrals table
-
-if (profile.referred_by_code) {
-  console.log(
-    "Referral code already exists in profile"
-  );
-} else {
-
-  // UPDATE PROFILE ONLY IF EMPTY
-
-  const {
-    data: updatedProfile,
-    error: updateError,
-  } = await supabase
-    .from("profiles")
-    .update({
-      referred_by_code: referralCode,
-    })
-    .eq("id", user.id)
-    .select()
-    .single();
-
-  if (updateError) {
-    console.error(
-      "❌ Referral update failed:",
-      updateError
-    );
-
-    return;
-  }
-
- 
-}
-
- // =====================================================
-// 1. UPDATE PROFILE
-// =====================================================
-
-const { data: updatedProfile, error: updateError } =
-  await supabase
-    .from("profiles")
-    .update({
-      referred_by_code: referralCode,
-    })
-    .eq("id", user.id)
-    .select()
-    .single();
-
-if (updateError) {
-  console.error(
-    "❌ Referral update failed:",
-    updateError
-  );
-  return;
-}
-
-console.log(
-  " Profile referral updated"
-);
-
-// =====================================================
-// 2. FIND REFERRER
-// =====================================================
-
-const { data: referrerProfile, error: referrerError } =
-  await supabase
-    .from("profiles")
-    .select("id, sb_user_id")
-    .eq("sb_user_id", referralCode)
-    .maybeSingle();
-
-if (referrerError || !referrerProfile) {
-  console.error(
-    " Referrer not found",
-    referrerError
-  );
-  return;
-}
-
-// =====================================================
-// 3. CHECK EXISTING REFERRAL
-// =====================================================
-
-const { data: existingReferral } =
-  await supabase
-    .from("referrals")
-    .select("id")
-    .eq("referred_sb_user_id", user.id)
-    .maybeSingle();
-
-if (existingReferral) {
-  console.log(
-    "Referral already exists"
-  );
-
-  return;
-}
-
-// =====================================================
-// 4. INSERT REFERRAL
-// =====================================================
-
-const { error: referralInsertError } =
-  await supabase
-    .from("referrals")
-    .insert({
-      referrer_sb_user_id:
-        referrerProfile.id,
-
-      referred_sb_user_id:
-        user.id,
-
-      referred_name:
-        user.user_metadata?.full_name ||
-        user.user_metadata?.name ||
-        "New User",
-
-      referred_email:
-        user.email || null,
-
-      referred_mobile:
-        user.user_metadata?.mobile ||
-        null,
-
-      status: "pending",
-
-      reward_amount: 0,
-
-      commission_earned: 0,
-    });
-
-if (referralInsertError) {
-  console.error(
-    "Referral insert failed FULL:",
-    JSON.stringify(referralInsertError, null, 2)
-  );
-
-  return;
-} else {
-  console.log(
-    "Referral inserted successfully"
-  );
-}
-localStorage.removeItem("referral_code");
-localStorage.removeItem("pending_referral");
-
-
 };
-
   const handleEmailAuth = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -352,18 +390,21 @@ const handleGoogleLogin = async () => {
 
   // SAVE BOTH
   if (ref) {
-   
+  localStorage.setItem(
+    "referral_code",
+    ref
+  );
 
-    localStorage.setItem(
-      "referral_code",
-      ref
-    );
+  localStorage.setItem(
+    "pending_referral",
+    ref
+  );
 
-    localStorage.setItem(
-      "pending_referral",
-      ref
-    );
-  }
+  sessionStorage.setItem(
+    "referral_code",
+    ref
+  );
+}
 
   const { error } =
     await supabase.auth.signInWithOAuth({
