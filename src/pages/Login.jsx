@@ -87,10 +87,10 @@ useEffect(() => {
 
       // REMOVE GOOGLE CODE URL
       window.history.replaceState(
-        {},
-        document.title,
-        "/login"
-      );
+  {},
+  document.title,
+  window.location.pathname
+);
 
       // NOW navigate
       navigate("/dashboard", {
@@ -105,9 +105,11 @@ useEffect(() => {
 const applyReferral = async (user) => {
   try {
     const referralCode =
-      localStorage.getItem("pending_referral") ||
-      localStorage.getItem("referral_code") ||
-      sessionStorage.getItem("referral_code");
+  new URLSearchParams(
+    window.location.search
+  ).get("ref") ||
+  localStorage.getItem("pending_referral") ||
+  localStorage.getItem("referral_code");
 
     if (!referralCode || !user?.id) {
       return;
@@ -382,35 +384,41 @@ navigate("/dashboard", { replace: true });
   };
 
 const handleGoogleLogin = async () => {
-  const params = new URLSearchParams(
-    location.search
+
+  const ref = new URLSearchParams(
+    window.location.search
+  ).get("ref");
+
+  // create callback url
+  const redirectUrl = new URL(
+    `${window.location.origin}/login`
   );
 
-  const ref = params.get("ref");
-
-  // SAVE BOTH
+  // preserve referral
   if (ref) {
-  localStorage.setItem(
-    "referral_code",
-    ref
+    redirectUrl.searchParams.set(
+      "ref",
+      ref
+    );
+  }
+
+  // optional marker
+  redirectUrl.searchParams.set(
+    "provider",
+    "google"
   );
 
-  localStorage.setItem(
-    "pending_referral",
-    ref
+  console.log(
+    "OAuth redirect URL:",
+    redirectUrl.toString()
   );
-
-  sessionStorage.setItem(
-    "referral_code",
-    ref
-  );
-}
 
   const { error } =
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${window.location.origin}/login`,
+        redirectTo:
+          redirectUrl.toString(),
       },
     });
 
