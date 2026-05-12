@@ -1,5 +1,5 @@
 // src/pages/Login.jsx
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { supabase } from "../lib/supabase";
@@ -13,7 +13,7 @@ const Login = () => {
   const [isSignUp, setIsSignUp] = useState(false);
   const [loading, setLoading] = useState(false);
   const [mobile, setMobile] = useState("");
-
+  const authHandled = useRef(false);
 
  //  FIRST — save referral
 useEffect(() => {
@@ -40,14 +40,19 @@ useEffect(() => {
     }
 
     localStorage.setItem(
-      "referral_code",
-      ref
-    );
+  "referral_code",
+  ref
+);
 
-    sessionStorage.setItem(
-      "referral_code",
-      ref
-    );
+localStorage.setItem(
+  "pending_referral",
+  ref
+);
+
+sessionStorage.setItem(
+  "referral_code",
+  ref
+);
   };
 
   saveReferral();
@@ -55,14 +60,21 @@ useEffect(() => {
 
 //  SECOND — handle OAuth
 useEffect(() => {
-  let handled = false;
 
   const {
     data: { subscription },
   } = supabase.auth.onAuthStateChange(
     async (event, session) => {
 
-      if (handled) return;
+      console.log(
+        "Auth changed:",
+        event
+      );
+
+      // prevent duplicate execution
+      if (authHandled.current) {
+        return;
+      }
 
       const user = session?.user;
 
@@ -75,42 +87,66 @@ useEffect(() => {
         return;
       }
 
-      handled = true;
+      authHandled.current = true;
 
-      console.log(
-        "Auth event:",
-        event
-      );
+      try {
 
-      // WAIT FOR REFERRAL LOGIC
-      await applyReferral(user);
+        // IMPORTANT
+        await supabase.auth.getSession();
 
-      // REMOVE GOOGLE CODE URL
-      window.history.replaceState(
-  {},
-  document.title,
-  window.location.pathname
+await new Promise((resolve) =>
+  setTimeout(resolve, 3000)
 );
 
-      // NOW navigate
+await applyReferral(user);
+
+        console.log(
+          "Referral flow completed"
+        );
+
+      } catch (err) {
+
+        console.error(
+          "OAuth referral failed:",
+          err
+        );
+
+      }
+
+      // clean URL
+      window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+      );
+
       navigate("/dashboard", {
         replace: true,
       });
     }
   );
 
-  return () => subscription.unsubscribe();
+  return () => {
+    subscription.unsubscribe();
+  };
+
 }, []);
 
 const applyReferral = async (user) => {
   try {
     const referralCode =
-  new URLSearchParams(
-    window.location.search
-  ).get("ref") ||
+  
   localStorage.getItem("pending_referral") ||
   localStorage.getItem("referral_code");
+console.log(
+  "pending_referral:",
+  localStorage.getItem("pending_referral")
+);
 
+console.log(
+  "referral_code:",
+  localStorage.getItem("referral_code")
+);
     if (!referralCode || !user?.id) {
       return;
     }
@@ -140,12 +176,16 @@ const applyReferral = async (user) => {
       );
     }
 
-    if (!currentProfile) {
-      console.error("Profile creation timeout");
-      return;
-    }
+   if (!currentProfile) {
+  console.error("Profile creation timeout");
+  return;
+}
 
-    console.log("Profile found:", currentProfile);
+await new Promise((resolve) =>
+  setTimeout(resolve, 2500)
+);
+
+console.log("Profile found:", currentProfile);
 
     // ==========================================
     // PREVENT SELF REFERRAL
@@ -187,14 +227,14 @@ const applyReferral = async (user) => {
     // FIND REFERRER
     // ==========================================
 
-    const {
-      data: referrerProfile,
-      error: referrerError,
-    } = await supabase
-      .from("profiles")
-      .select("id, sb_user_id")
-      .eq("sb_user_id", referralCode)
-      .maybeSingle();
+   const {
+  data: referrerProfile,
+  error: referrerError,
+} = await supabase
+  .from("profiles")
+  .select("*")
+  .eq("sb_user_id", referralCode)
+  .maybeSingle();
 
     if (referrerError || !referrerProfile) {
       console.error(
@@ -221,17 +261,35 @@ const applyReferral = async (user) => {
 
       return;
     }
+console.log(
+  "FINAL REFERRAL INSERT DATA",
+  {
+    referrer_sb_user_id:
+      referrerProfile.id,
 
+    referred_sb_user_id:
+      user.id,
+
+    referred_name:
+      currentProfile.full_name,
+
+    referred_email:
+      currentProfile.email,
+  }
+);
     // ==========================================
     // INSERT REFERRAL
     // ==========================================
-
+console.log("INSERTING REFERRAL", {
+  referrer_sb_user_id: referrerProfile.id,
+  referred_sb_user_id: user.id,
+});
     const { error: insertError } =
       await supabase
         .from("referrals")
         .insert({
           referrer_sb_user_id:
-            referrerProfile.id,
+  referrerProfile.id,
 
           referred_sb_user_id:
             user.id,
@@ -260,9 +318,9 @@ const applyReferral = async (user) => {
 
     if (insertError) {
       console.error(
-        "Referral insert failed:",
-        insertError
-      );
+  "Referral insert failed:",
+  JSON.stringify(insertError, null, 2)
+);
 
       return;
     }
@@ -385,28 +443,24 @@ navigate("/dashboard", { replace: true });
 
 const handleGoogleLogin = async () => {
 
-  const ref = new URLSearchParams(
-    window.location.search
-  ).get("ref");
+  const ref =
+    localStorage.getItem("pending_referral") ||
+    localStorage.getItem("referral_code") ||
+    new URLSearchParams(
+      window.location.search
+    ).get("ref");
 
-  // create callback url
   const redirectUrl = new URL(
     `${window.location.origin}/login`
   );
 
-  // preserve referral
+  // PRESERVE REFERRAL
   if (ref) {
     redirectUrl.searchParams.set(
       "ref",
       ref
     );
   }
-
-  // optional marker
-  redirectUrl.searchParams.set(
-    "provider",
-    "google"
-  );
 
   console.log(
     "OAuth redirect URL:",
