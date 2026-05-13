@@ -1,3 +1,5 @@
+import slugify from "./slugify";
+
 export const buildSearchIndex = (
   ipos = [],
   preIpos = [],
@@ -17,7 +19,7 @@ export const buildSearchIndex = (
       Status ${ipo.status || ""}
       ${ipo.type || ""}
     `,
-    url: `/ipo/${ipo.id}`,
+    url: `/ipo/${ipo.id}/${slugify(ipo.name)}`,
   }));
 
   // ✅ PRE-IPO (WITH ANCHOR)
@@ -46,7 +48,7 @@ export const buildSearchIndex = (
     id: `blog-${b.id}`,
     title: b.title,
     content: b.content,
-    url: `/insight-hub`,
+    url: `/insight-hub/${b.id}/${slugify(b.title)}`,
   }));
 
   // ✅ UNLISTED SHARES (SAME PAGE + ANCHOR)
