@@ -52,10 +52,11 @@ const [referredOrdersMap, setReferredOrdersMap] = useState({});
 
   const calculateCommission = async (referredUserId, commissionRate) => {
     const { data: orders } = await supabase
-      .from("orders")
-      .select("total")
-      .eq("user_id", referredUserId)
-      .eq("status", "CONFIRMED");
+  .from("orders")
+  .select("total")
+  .eq("user_id", referredUserId)
+  .eq("status", "CONFIRMED")
+  .eq("order_type", "BUY");
 
     return orders?.reduce((sum, o) => sum + (Number(o.total || 0) * (commissionRate / 100)), 0) || 0;
   };
@@ -159,10 +160,10 @@ for (const user of enriched) {
   for (const ref of user.referredUsers) {
     if (!ref.referred_sb_user_id) continue;
 
-    const { data: orders } = await supabase
-      .from("orders")
-      .select("total, status")
-      .eq("user_id", ref.referred_sb_user_id);
+   const { data: orders } = await supabase
+  .from("orders")
+  .select("total, status, order_type")
+  .eq("user_id", ref.referred_sb_user_id);
 
     ordersMap[ref.referred_sb_user_id] = orders || [];
   }
@@ -209,12 +210,19 @@ setReferredOrdersMap(ordersMap);
     for (const ref of referrals || []) {
       const { data: orders } = await supabase
         .from("orders")
-        .select("total")
+       .select("total, status, order_type")
         .eq("user_id", ref.referred_sb_user_id);
 
       if (orders) {
         referralOrders += orders.length;
-        referralAmount += orders.reduce(
+        referralAmount += orders
+  .filter(
+    (o) =>
+      o.order_type === "BUY" &&
+      (o.status === "CONFIRMED" ||
+       o.status === "SETTLED")
+  )
+  .reduce(
           (sum, o) =>
             sum +
             ((Number(o.total) || 0) *
@@ -790,8 +798,9 @@ const downloadOrderReport = async () => {
   
   const eligibleOrders = orders.filter(
   (o) =>
-    o.status === "CONFIRMED" ||
-    o.status === "SETTLED"
+    (o.status === "CONFIRMED" ||
+      o.status === "SETTLED") &&
+    o.order_type === "BUY"
 );
 
   const commission = eligibleOrders.reduce(
@@ -1003,8 +1012,21 @@ const downloadOrderReport = async () => {
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600">Commission Earned</span>
                       <span className="text-md font-semibold text-emerald-700">
-                        ₹{referredOrders.reduce((sum, o) => 
-                          sum + ((Number(o.total) || 0) * ((selectedReferred?.referrer?.commission_rate || 0) / 100)), 0).toFixed(2)}
+                       ₹{referredOrders
+  .filter(
+    (o) =>
+      (o.status === "CONFIRMED" ||
+       o.status === "SETTLED") &&
+      o.order_type === "BUY"
+  )
+  .reduce(
+    (sum, o) =>
+      sum +
+      ((Number(o.total) || 0) *
+      ((selectedReferred?.referrer?.commission_rate || 0) / 100)),
+    0
+  )
+  .toFixed(2)}
                       </span>
                     </div>
                     <div className="flex justify-between items-center">
