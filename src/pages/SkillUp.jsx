@@ -75,38 +75,6 @@ const SkillUp = () => {
               </p>
             </motion.div>
 
-           <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay: 0.6 }}
-      onClick={() => window.open("https://www.optionquaant.in/", "_blank")}
-      className="cursor-pointer bg-gradient-to-br from-black via-gray-900 to-black 
-                 rounded-2xl shadow-lg p-10 text-center border border-yellow-500/30 
-                 hover:shadow-yellow-500/30 hover:scale-[1.02] transition-all duration-300"
-    >
-      {/* Icon */}
-      <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mx-auto mb-6 border border-yellow-400/30">
-        <span className="text-4xl">📊</span>
-      </div>
-
-     <h3 className="text-2xl font-bold mb-3 tracking-tight text-gray-100">
-        <span className="text-yellow-500">O</span>ption
-        <span className="text-yellow-500">Q</span>uaant
-      </h3>
-
-
-      {/* Badge */}
-      <div className="text-sm text-yellow-400 font-semibold bg-yellow-400/10 
-                      inline-block px-4 py-1 rounded-full mb-4 border border-yellow-400/30">
-        Limited-time early access
-      </div>
-
-      <p className="text-gray-600 font-normal leading-relaxed">
-              One Tool to Define Trend
-              </p>
-    </motion.div>
-
           </div>
         </div>
       </div>
