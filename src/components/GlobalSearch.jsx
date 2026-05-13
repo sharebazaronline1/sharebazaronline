@@ -66,7 +66,11 @@ const GlobalSearch = () => {
               <div
                 key={r.id}
                 onClick={() => {
-                  navigate(`${r.url}#${r.anchor}`);
+                  navigate(
+  r.anchor
+    ? `${r.url}#${r.anchor}`
+    : r.url
+);
                   setIsOpen(false);
                   setQuery("");
                 }}

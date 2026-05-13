@@ -1,11 +1,11 @@
-const slugify = (text = "") => {
+const slugify = (text) => {
   return text
     .toLowerCase()
-    .replace(/&/g, "and")
-    .replace(/[^\w\s-]/g, "")
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
-    .trim();
+    .replace(/^-+|-+$/g, "");
 };
 
 export default slugify;
