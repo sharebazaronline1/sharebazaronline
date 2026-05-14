@@ -96,25 +96,29 @@ useEffect(() => {
     return () => clearTimeout(t);
   }, [location.hash, location.key, ipos]);
 
-  const CompanyLogo = ({ name, logo }) => {
-    const firstLetter = name?.charAt(0).toUpperCase() || "?";
+const CompanyLogo = ({ name, logo }) => {
+  const firstLetter = name?.charAt(0).toUpperCase() || "?";
 
-    return (
-      <div className="w-12 h-12 sm:w-14 sm:h-14 min-w-[48px] rounded-xl bg-gray-500 flex items-center justify-center text-white font-bold text-lg shadow border overflow-hidden">
-        {logo ? (
-          <img
-            src={logo}
-            alt={name}
-            loading="lazy"
-            className="w-full h-full object-contain bg-white p-2"
-            onError={(e) => (e.currentTarget.style.display = "none")}
-          />
-        ) : (
-          <span>{firstLetter}</span>
-        )}
-      </div>
-    );
-  };
+  return (
+    <div className="flex-shrink-0 w-9 h-9 sm:w-12 sm:h-12 lg:w-14 lg:h-14 min-w-[36px] sm:min-w-[48px] rounded-xl bg-white border border-gray-200 shadow-sm flex items-center justify-center overflow-hidden">
+      {logo ? (
+        <img
+          src={logo}
+          alt={name}
+          loading="lazy"
+         className="max-w-[70%] max-h-[70%] object-contain"
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+          }}
+        />
+      ) : (
+        <span className="text-xs sm:text-sm font-bold text-gray-700">
+          {firstLetter}
+        </span>
+      )}
+    </div>
+  );
+};
 
   const visibleIPOs = ipos.slice(0, visibleCount);
 
@@ -144,9 +148,11 @@ useEffect(() => {
               Invest early in high-growth companies before they list
             </p>
           </div>
-
+<div className="sm:hidden flex items-center justify-end gap-2 px-4 py-2 bg-blue-50 border-b text-[11px] text-blue-700 font-medium animate-pulse">
+  <span>← Swipe →</span>
+</div>
           {/* TABLE */}
-          <div className="overflow-x-auto">
+        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-300">
             <table className="w-full min-w-[900px]">
               <thead>
                 <tr className="bg-gray-50 text-xs font-bold text-gray-700 uppercase border-b">
@@ -162,7 +168,7 @@ useEffect(() => {
                 {loading &&
                   Array.from({ length: ITEMS_PER_PAGE }).map((_, i) => (
                     <tr key={i} className="animate-pulse">
-                      <td className="px-6 py-4">
+                      <td className="px-3 sm:px-6 py-3 sm:py-4">
                         <div className="flex items-center gap-3">
                           <div className="w-12 h-12 bg-gray-200 rounded-xl" />
                           <div className="h-4 bg-gray-200 rounded w-48" />
@@ -196,10 +202,10 @@ useEffect(() => {
   `/preipo/${ipo.id}/${slugify(ipo.name)}`
 )}
                     >
-                      <td className="px-6 py-4">
-                        <div className="flex items-center gap-3">
+                      <td className="px-3 sm:px-6 py-3 sm:py-4">
+                       <div className="flex items-center gap-3 min-w-[220px]">
                           <CompanyLogo name={ipo.name} logo={ipo.logo} />
-                          <p className="font-medium text-gray-900 line-clamp-2">
+                        <p className="font-medium text-sm sm:text-base text-gray-900 line-clamp-2">
                             {ipo.name}
                           </p>
                         </div>

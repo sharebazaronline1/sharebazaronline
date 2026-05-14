@@ -15634,6 +15634,195 @@ export const fetchIPOs = async () => {
     "prospectus_pdf": "N/A",
     "investor_presentation": "N/A"
   }
+},
+{
+  "id": 80,
+  "name": "NFP Sampoorna Foods",
+  "logo": "/images/ipo/nfpsampoornafoods.png",
+  "minInvestment": "₹2,20,000",
+  "open": "18 May 2026",
+  "close": "20 May 2026",
+  "listing": "25 May 2026",
+  "price": "52 – 55",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "NFP Sampoorna Foods Limited",
+    "industry_sector": "Food Processing & Dry Fruits (Cashew, Almond, Makhana)",
+    "founded_year": "2019 (converted to public limited)",
+    "promoters": [
+      "Praveen Goel",
+      "Anju Goel",
+      "Yash Vardhan Goel"
+    ],
+    "description": "NFP Sampoorna Foods Limited is engaged in the processing, packaging, and distribution of premium dry fruits, especially cashew nuts. The company imports raw cashews mainly from Africa, processes them with strict quality control, and sells under its own brand. It offers cashews (W320, W400 grades), almonds, makhana (fox nuts), walnuts, and festive gift packs. Products are sold through offline channels and major e-commerce platforms like Amazon and Flipkart. The company holds ISO 9001:2015 and ISO 22000:2018 certifications. As of November 30, 2025, it had 140 permanent employees."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "NFP Sampoorna Foods Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹52",
+    "price_band_max": "₹55",
+    "lot_size": 2000,
+    "total_issue_size": "₹25 Cr (approx 44,60,000 shares)",
+    "fresh_issue_size": "₹24.53 Cr (approx 44,60,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "44,60,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹55",
+    "minimum_investment": "₹2,20,000 (2 lots / 4,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹69.49 Cr",
+    "pre_issue_shareholding": "Promoters 99.99%",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Processing and distribution of premium dry fruits with focus on quality and branding.",
+    "products_services": [
+      "Cashew Nuts (various grades)",
+      "Almonds (natural & roasted)",
+      "Makhana (plain, roasted, flavored)",
+      "Walnuts & Gift Packs"
+    ],
+    "competitive_strengths": [
+      "Quality certifications (ISO 9001 & 22000)",
+      "Strong sourcing from Africa",
+      "Established distribution network",
+      "Growing e-commerce presence"
+    ],
+    "risks": [
+      "Raw material price volatility",
+      "Import dependency",
+      "Intense competition in dry fruits segment"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "18 May 2026",
+    "ipo_close_date": "20 May 2026",
+    "basis_of_allotment_date": "21 May 2026",
+    "refund_initiation_date": "22 May 2026",
+    "demat_credit_date": "22 May 2026",
+    "listing_date": "25 May 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_working_capital_requirements": "₹7.25 Cr",
+    "prepayment_repayment_of_borrowings": "₹9.50 Cr",
+    "general_corporate_purposes": "Remaining amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "0.99%",
+    "hni_nii_quota": "49.43%",
+    "retail_quota": "49.58%",
+    "market_maker": "5.02%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,20,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "6000",
+      "amount": "₹3,30,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "10 lots",
+      "shares": "20000",
+      "amount": "₹11,00,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "28.21% (30 Nov 2025) / 34.82% (31 Mar 2025)",
+    "roce": "24.71% (30 Nov 2025) / 40.90% (31 Mar 2025)",
+    "pat_margin": "9.46% (30 Nov 2025) / 7.50% (31 Mar 2025)",
+    "ebitda_margin": "18.01% (30 Nov 2025) / 13.17% (31 Mar 2025)",
+    "debt_to_equity": "1.59 (30 Nov 2025) / 1.26 (31 Mar 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "8.90 Cr",
+      "total_income": "16.75 Cr",
+      "pat": "0.41 Cr",
+      "ebitda": "0.77 Cr",
+      "net_worth": "8.54 Cr",
+      "total_borrowing": "N/A"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "16.68 Cr",
+      "total_income": "6.00 Cr",
+      "pat": "0.15 Cr",
+      "ebitda": "0.56 Cr",
+      "net_worth": "6.34 Cr",
+      "total_borrowing": "8.53 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "27.03 Cr",
+      "total_income": "35.76 Cr",
+      "pat": "2.67 Cr",
+      "ebitda": "4.69 Cr",
+      "net_worth": "9.02 Cr",
+      "total_borrowing": "11.36 Cr"
+    },
+    {
+      "period": "30 Nov 2025",
+      "assets": "44.02 Cr",
+      "total_income": "36.96 Cr",
+      "pat": "3.49 Cr",
+      "ebitda": "6.64 Cr",
+      "net_worth": "15.70 Cr",
+      "total_borrowing": "24.94 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0 (flat)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "₹55 (flat)"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 18 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Skyline Financial Services Pvt. Ltd.",
+    "registrar_website": "https://www.skylinerta.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "3Dimension Capital Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Ground Floor B-3A & B-3B,Plot No 70,Najafgarh Road Industrial Area, Rama Road New Delhi, New Delhi, 110015",
+    "company_website": "https://www.sampoornanuts.com",
+    "company_email": "compliance@sampoornanuts.com",
+    "company_phone": "+91 9643829587"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://www.sampoornanuts.com/_files/ugd/6fcc6d_c8c3f3a226754a24939a595f8242c6f4.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  }
 }
 
 
