@@ -6607,24 +6607,24 @@ export const fetchIPOs = async () => {
 {
   "id": 34,
   "name": "NFP Sampoorna Foods",
-  "logo": "/images/ipo/sampoorna.png",
+  "logo": "/images/ipo/nfpsampoornafoods.png",
   "minInvestment": "₹2,20,000",
-  "open": "04 Feb 2026",
-  "close": "06 Feb 2026",
-  "listing": "11 Feb 2026",
+  "open": "18 May 2026",
+  "close": "20 May 2026",
+  "listing": "25 May 2026",
   "price": "52 – 55",
   "lot": 2000,
 
   "about_company": {
     "company_name": "NFP Sampoorna Foods Limited",
-    "industry_sector": "Food Processing / Dry Fruits & Nuts (Premium Cashew, Almonds, Makhana)",
-    "founded_year": "2019",
+    "industry_sector": "Food Processing & Dry Fruits (Cashew, Almond, Makhana)",
+    "founded_year": "2019 (converted to public limited)",
     "promoters": [
       "Praveen Goel",
       "Anju Goel",
       "Yash Vardhan Goel"
     ],
-    "description": "Incorporated in 2019, NFP Sampoorna Foods Limited specialises in processing, grading, packaging, and distributing premium dry fruits, primarily cashew nuts (imported raw from Africa), almonds, and makhana (fox nuts). It follows strict quality controls with ISO 9001:2015 and ISO 22000:2018 certifications. Products are sold offline and online via Amazon, Flipkart, and its website (sampoornanuts.com). It has 140 permanent employees as of Nov 30, 2025, with advanced roasting/packaging tech for freshness and nutrition. Focus on branded premium offerings including gift packs."
+    "description": "NFP Sampoorna Foods Limited is engaged in the processing, packaging, and distribution of premium dry fruits, especially cashew nuts. The company imports raw cashews mainly from Africa, processes them with strict quality control, and sells under its own brand. It offers cashews (W320, W400 grades), almonds, makhana (fox nuts), walnuts, and festive gift packs. Products are sold through offline channels and major e-commerce platforms like Amazon and Flipkart. The company holds ISO 9001:2015 and ISO 22000:2018 certifications. As of November 30, 2025, it had 140 permanent employees."
   },
 
   "ipo_basic_details": {
@@ -6635,73 +6635,63 @@ export const fetchIPOs = async () => {
     "price_band_min": "₹52",
     "price_band_max": "₹55",
     "lot_size": 2000,
-    "total_issue_size": "₹24.53 Cr (44,60,000 shares)",
-    "fresh_issue_size": "₹24.53 Cr (44,60,000 shares)",
+    "total_issue_size": "₹25 Cr (approx 44,60,000 shares)",
+    "fresh_issue_size": "₹24.53 Cr (approx 44,60,000 shares)",
     "offer_for_sale": "0",
     "shares_offered": "44,60,000 shares",
-    "listing_exchange": "NSE Emerge (SME)",
+    "listing_exchange": "NSE SME",
     "issue_price": "₹55",
-    "minimum_investment": "₹2,20,000 (2 lots / 4,000 shares at upper band)",
-    "market_cap_post_issue": "Approx ₹69–75 Cr pre-IPO; post-issue higher (~₹126 Cr basis on post-issue shares)",
-    "pre_issue_shareholding": "100% (Promoters 99.99%)",
-    "post_issue_shareholding": "Promoters ≈64–65%"
+    "minimum_investment": "₹2,20,000 (2 lots / 4,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹69.49 Cr",
+    "pre_issue_shareholding": "Promoters 99.99%",
+    "post_issue_shareholding": "Promoters diluted"
   },
 
   "company_overview": {
-    "business_model": "Integrated processing and distribution of premium dry fruits/nuts; import raw cashews from Africa, process domestically, sell branded via retail/online and institutional channels.",
+    "business_model": "Processing and distribution of premium dry fruits with focus on quality and branding.",
     "products_services": [
-      "Cashew Nuts (W320, W400 grades & variants)",
-      "Almonds (natural, roasted)",
-      "Makhana (fox nuts - plain, roasted, flavored)",
-      "Gift Packs (festive/corporate)"
+      "Cashew Nuts (various grades)",
+      "Almonds (natural & roasted)",
+      "Makhana (plain, roasted, flavored)",
+      "Walnuts & Gift Packs"
     ],
     "competitive_strengths": [
-      "Experienced promoters and management",
-      "Existing client relationships",
-      "Quality certifications & strict controls",
-      "Consistent growth, profitability & cash flows",
-      "Advanced technology for roasting/packaging",
-      "Online + offline presence"
+      "Quality certifications (ISO 9001 & 22000)",
+      "Strong sourcing from Africa",
+      "Established distribution network",
+      "Growing e-commerce presence"
     ],
     "risks": [
-      "Commodity price volatility (cashews/almonds)",
-      "Import dependence (Africa sourcing)",
-      "Competition in branded dry fruits",
-      "Working capital intensive",
-      "Seasonal demand (festive peaks)"
+      "Raw material price volatility",
+      "Import dependency",
+      "Intense competition in dry fruits segment"
     ]
   },
 
   "ipo_important_dates": {
-    "ipo_open_date": "04 Feb 2026",
-    "ipo_close_date": "06 Feb 2026",
-    "basis_of_allotment_date": "09 Feb 2026",
-    "refund_initiation_date": "10 Feb 2026",
-    "demat_credit_date": "10 Feb 2026",
-    "listing_date": "11 Feb 2026",
-    "upi_mandate_deadline": "06 Feb 2026"
+    "ipo_open_date": "18 May 2026",
+    "ipo_close_date": "20 May 2026",
+    "basis_of_allotment_date": "21 May 2026",
+    "refund_initiation_date": "22 May 2026",
+    "demat_credit_date": "22 May 2026",
+    "listing_date": "25 May 2026"
   },
 
   "ipo_objectives": {
-    "working_capital_requirements": "₹7.25 Cr",
-    "prepayment_repayment_borrowings": "₹9.50 Cr",
-    "general_corporate_purposes": "Remaining amount (approx ₹8.25 Cr inferred from total)"
+    "funding_working_capital_requirements": "₹7.25 Cr",
+    "prepayment_repayment_of_borrowings": "₹9.50 Cr",
+    "general_corporate_purposes": "Remaining amount"
   },
 
   "investor_reservation": {
-    "qib_quota": "≈21% (partial details; exact not fully listed)",
-    "retail_quota": "≈35%",
-    "hni_quota": "≈39% (bNII/sNII split)",
-    "others": "Market Maker 5.02% (2,24,000 shares)"
+    "qib_quota": "0.99%",
+    "hni_nii_quota": "49.43%",
+    "retail_quota": "49.58%",
+    "market_maker": "5.02%"
   },
 
   "market_lot_details": {
     "retail_minimum": {
-      "lot_size": "2 lots",
-      "shares": "4000",
-      "amount": "₹2,20,000"
-    },
-    "retail_maximum": {
       "lot_size": "2 lots",
       "shares": "4000",
       "amount": "₹2,20,000"
@@ -6719,70 +6709,65 @@ export const fetchIPOs = async () => {
   },
 
   "key_performance_indicators": {
-    "roe": "28.21% (Nov 2025) / 34.82% (FY25)",
-    "roce": "24.71% (Nov 2025) / 40.90% (FY25)",
-    "ronw": "22.20% (Nov 2025) / 29.76% (FY25)",
-    "pat_margin": "9.46% (Nov 2025) / 7.50% (FY25)",
-    "ebitda_margin": "18.01% (Nov 2025) / 13.17% (FY25)",
-    "eps": "₹3.27 (pre) / ₹4.14 (post)",
-    "nav_per_share": "N/A",
-    "debt_to_equity": "1.59 (Nov 2025) / 1.26 (FY25)",
-    "pe_ratio": "16.81x (pre) / 13.28x (post)",
-    "industry_pe": "20–40x (food processing/dry fruits)"
+    "roe": "28.21% (30 Nov 2025) / 34.82% (31 Mar 2025)",
+    "roce": "24.71% (30 Nov 2025) / 40.90% (31 Mar 2025)",
+    "pat_margin": "9.46% (30 Nov 2025) / 7.50% (31 Mar 2025)",
+    "ebitda_margin": "18.01% (30 Nov 2025) / 13.17% (31 Mar 2025)",
+    "debt_to_equity": "1.59 (30 Nov 2025) / 1.26 (31 Mar 2025)"
   },
 
   "company_financial_data": [
     {
       "period": "31 Mar 2023",
-      "assets": "₹8.90 Cr",
-      "total_income": "₹16.75 Cr",
-      "pat": "₹0.41 Cr",
-      "ebitda": "₹0.77 Cr",
-      "net_worth": "₹8.54 Cr",
+      "assets": "8.90 Cr",
+      "total_income": "16.75 Cr",
+      "pat": "0.41 Cr",
+      "ebitda": "0.77 Cr",
+      "net_worth": "8.54 Cr",
       "total_borrowing": "N/A"
     },
     {
       "period": "31 Mar 2024",
-      "assets": "₹16.68 Cr",
-      "total_income": "₹23.31 Cr",
-      "pat": "₹1.02 Cr",
-      "ebitda": "₹2.17 Cr",
-      "net_worth": "₹11.48 Cr",
-      "total_borrowing": "₹18.90 Cr"
+      "assets": "16.68 Cr",
+      "total_income": "6.00 Cr",
+      "pat": "0.15 Cr",
+      "ebitda": "0.56 Cr",
+      "net_worth": "6.34 Cr",
+      "total_borrowing": "8.53 Cr"
     },
     {
       "period": "31 Mar 2025",
-      "assets": "₹27.03 Cr",
-      "total_income": "₹35.76 Cr",
-      "pat": "₹2.67 Cr",
-      "ebitda": "₹4.69 Cr",
-      "net_worth": "₹9.02 Cr",
-      "total_borrowing": "₹11.36 Cr"
+      "assets": "27.03 Cr",
+      "total_income": "35.76 Cr",
+      "pat": "2.67 Cr",
+      "ebitda": "4.69 Cr",
+      "net_worth": "9.02 Cr",
+      "total_borrowing": "11.36 Cr"
     },
     {
       "period": "30 Nov 2025",
-      "assets": "₹44.02 Cr",
-      "total_income": "₹36.96 Cr",
-      "pat": "₹3.49 Cr",
-      "ebitda": "₹6.64 Cr",
-      "net_worth": "₹15.70 Cr",
-      "total_borrowing": "₹24.94 Cr"
+      "assets": "44.02 Cr",
+      "total_income": "36.96 Cr",
+      "pat": "3.49 Cr",
+      "ebitda": "6.64 Cr",
+      "net_worth": "15.70 Cr",
+      "total_borrowing": "24.94 Cr"
     }
   ],
 
   "grey_market_premium": {
-    "gmp_price": "₹0 – ₹2 (~0–3.6%)",
+    "gmp_price": "₹0 (flat)",
     "kostak_rate": "N/A",
     "subject_to_sauda": "N/A",
-    "gmp_last_updated": "Feb 2026",
-    "estimated_listing_price": "₹55 – ₹57 (flat to mild premium; actual listing performance not detailed, likely flat/muted for SME)"
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "₹55 (flat)"
   },
 
   "ipo_subscription_data": {
-    "qib_ex_anchor": "N/A (data not available on main page; typical low for small SME)",
-    "hni_subscription": "N/A",
-    "retail_subscription": "N/A",
-    "total_subscription": "N/A (IPO closed Feb 6, 2026; no final figures in sources, likely moderate/low as per SME trends)"
+    "total_subscription": "Pending (IPO opens 18 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
   },
 
   "ipo_intermediaries": {
@@ -6795,15 +6780,15 @@ export const fetchIPOs = async () => {
   },
 
   "company_information": {
-    "company_address": "Ground Floor B-3A & B-3B, Plot No 70, Najafgarh Road Industrial Area, Rama Road, New Delhi, Delhi 110015",
+    "company_address": "Ground Floor B-3A & B-3B,Plot No 70,Najafgarh Road Industrial Area, Rama Road New Delhi, New Delhi, 110015",
     "company_website": "https://www.sampoornanuts.com",
     "company_email": "compliance@sampoornanuts.com",
     "company_phone": "+91 9643829587"
   },
 
   "ipo_documents": {
-    "drhp_link": "https://nsearchives.nseindia.com/emerge/corporates/content/sezalm_30092025190636_NFPSampoornaFoodsLtd_RevisedDRHP.pdf",
-    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_SAMPOORNA.zip",
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://www.sampoornanuts.com/_files/ugd/6fcc6d_c8c3f3a226754a24939a595f8242c6f4.pdf",
     "prospectus_pdf": "N/A",
     "investor_presentation": "N/A"
   }
@@ -15635,195 +15620,7 @@ export const fetchIPOs = async () => {
     "investor_presentation": "N/A"
   }
 },
-{
-  "id": 80,
-  "name": "NFP Sampoorna Foods",
-  "logo": "/images/ipo/nfpsampoornafoods.png",
-  "minInvestment": "₹2,20,000",
-  "open": "18 May 2026",
-  "close": "20 May 2026",
-  "listing": "25 May 2026",
-  "price": "52 – 55",
-  "lot": 2000,
 
-  "about_company": {
-    "company_name": "NFP Sampoorna Foods Limited",
-    "industry_sector": "Food Processing & Dry Fruits (Cashew, Almond, Makhana)",
-    "founded_year": "2019 (converted to public limited)",
-    "promoters": [
-      "Praveen Goel",
-      "Anju Goel",
-      "Yash Vardhan Goel"
-    ],
-    "description": "NFP Sampoorna Foods Limited is engaged in the processing, packaging, and distribution of premium dry fruits, especially cashew nuts. The company imports raw cashews mainly from Africa, processes them with strict quality control, and sells under its own brand. It offers cashews (W320, W400 grades), almonds, makhana (fox nuts), walnuts, and festive gift packs. Products are sold through offline channels and major e-commerce platforms like Amazon and Flipkart. The company holds ISO 9001:2015 and ISO 22000:2018 certifications. As of November 30, 2025, it had 140 permanent employees."
-  },
-
-  "ipo_basic_details": {
-    "company_name": "NFP Sampoorna Foods Limited",
-    "ipo_type": "SME IPO",
-    "issue_type": "Fresh Issue (Book Built)",
-    "face_value": "₹10 per share",
-    "price_band_min": "₹52",
-    "price_band_max": "₹55",
-    "lot_size": 2000,
-    "total_issue_size": "₹25 Cr (approx 44,60,000 shares)",
-    "fresh_issue_size": "₹24.53 Cr (approx 44,60,000 shares)",
-    "offer_for_sale": "0",
-    "shares_offered": "44,60,000 shares",
-    "listing_exchange": "NSE SME",
-    "issue_price": "₹55",
-    "minimum_investment": "₹2,20,000 (2 lots / 4,000 shares)",
-    "market_cap_post_issue": "Pre-IPO ₹69.49 Cr",
-    "pre_issue_shareholding": "Promoters 99.99%",
-    "post_issue_shareholding": "Promoters diluted"
-  },
-
-  "company_overview": {
-    "business_model": "Processing and distribution of premium dry fruits with focus on quality and branding.",
-    "products_services": [
-      "Cashew Nuts (various grades)",
-      "Almonds (natural & roasted)",
-      "Makhana (plain, roasted, flavored)",
-      "Walnuts & Gift Packs"
-    ],
-    "competitive_strengths": [
-      "Quality certifications (ISO 9001 & 22000)",
-      "Strong sourcing from Africa",
-      "Established distribution network",
-      "Growing e-commerce presence"
-    ],
-    "risks": [
-      "Raw material price volatility",
-      "Import dependency",
-      "Intense competition in dry fruits segment"
-    ]
-  },
-
-  "ipo_important_dates": {
-    "ipo_open_date": "18 May 2026",
-    "ipo_close_date": "20 May 2026",
-    "basis_of_allotment_date": "21 May 2026",
-    "refund_initiation_date": "22 May 2026",
-    "demat_credit_date": "22 May 2026",
-    "listing_date": "25 May 2026"
-  },
-
-  "ipo_objectives": {
-    "funding_working_capital_requirements": "₹7.25 Cr",
-    "prepayment_repayment_of_borrowings": "₹9.50 Cr",
-    "general_corporate_purposes": "Remaining amount"
-  },
-
-  "investor_reservation": {
-    "qib_quota": "0.99%",
-    "hni_nii_quota": "49.43%",
-    "retail_quota": "49.58%",
-    "market_maker": "5.02%"
-  },
-
-  "market_lot_details": {
-    "retail_minimum": {
-      "lot_size": "2 lots",
-      "shares": "4000",
-      "amount": "₹2,20,000"
-    },
-    "shni_minimum": {
-      "lot_size": "3 lots",
-      "shares": "6000",
-      "amount": "₹3,30,000"
-    },
-    "bhni_minimum": {
-      "lot_size": "10 lots",
-      "shares": "20000",
-      "amount": "₹11,00,000"
-    }
-  },
-
-  "key_performance_indicators": {
-    "roe": "28.21% (30 Nov 2025) / 34.82% (31 Mar 2025)",
-    "roce": "24.71% (30 Nov 2025) / 40.90% (31 Mar 2025)",
-    "pat_margin": "9.46% (30 Nov 2025) / 7.50% (31 Mar 2025)",
-    "ebitda_margin": "18.01% (30 Nov 2025) / 13.17% (31 Mar 2025)",
-    "debt_to_equity": "1.59 (30 Nov 2025) / 1.26 (31 Mar 2025)"
-  },
-
-  "company_financial_data": [
-    {
-      "period": "31 Mar 2023",
-      "assets": "8.90 Cr",
-      "total_income": "16.75 Cr",
-      "pat": "0.41 Cr",
-      "ebitda": "0.77 Cr",
-      "net_worth": "8.54 Cr",
-      "total_borrowing": "N/A"
-    },
-    {
-      "period": "31 Mar 2024",
-      "assets": "16.68 Cr",
-      "total_income": "6.00 Cr",
-      "pat": "0.15 Cr",
-      "ebitda": "0.56 Cr",
-      "net_worth": "6.34 Cr",
-      "total_borrowing": "8.53 Cr"
-    },
-    {
-      "period": "31 Mar 2025",
-      "assets": "27.03 Cr",
-      "total_income": "35.76 Cr",
-      "pat": "2.67 Cr",
-      "ebitda": "4.69 Cr",
-      "net_worth": "9.02 Cr",
-      "total_borrowing": "11.36 Cr"
-    },
-    {
-      "period": "30 Nov 2025",
-      "assets": "44.02 Cr",
-      "total_income": "36.96 Cr",
-      "pat": "3.49 Cr",
-      "ebitda": "6.64 Cr",
-      "net_worth": "15.70 Cr",
-      "total_borrowing": "24.94 Cr"
-    }
-  ],
-
-  "grey_market_premium": {
-    "gmp_price": "₹0 (flat)",
-    "kostak_rate": "N/A",
-    "subject_to_sauda": "N/A",
-    "gmp_last_updated": "May 2026",
-    "estimated_listing_price": "₹55 (flat)"
-  },
-
-  "ipo_subscription_data": {
-    "total_subscription": "Pending (IPO opens 18 May 2026)",
-    "qib_ex_anchor": "Pending",
-    "hni_subscription": "Pending",
-    "retail_subscription": "Pending"
-  },
-
-  "ipo_intermediaries": {
-    "registrar": "Skyline Financial Services Pvt. Ltd.",
-    "registrar_website": "https://www.skylinerta.com"
-  },
-
-  "ipo_lead_manager": {
-    "lead_manager": "3Dimension Capital Services Ltd."
-  },
-
-  "company_information": {
-    "company_address": "Ground Floor B-3A & B-3B,Plot No 70,Najafgarh Road Industrial Area, Rama Road New Delhi, New Delhi, 110015",
-    "company_website": "https://www.sampoornanuts.com",
-    "company_email": "compliance@sampoornanuts.com",
-    "company_phone": "+91 9643829587"
-  },
-
-  "ipo_documents": {
-    "drhp_link": "Available on NSE SME",
-    "rhp_link": "https://www.sampoornanuts.com/_files/ugd/6fcc6d_c8c3f3a226754a24939a595f8242c6f4.pdf",
-    "prospectus_pdf": "N/A",
-    "investor_presentation": "N/A"
-  }
-}
 
 
 
