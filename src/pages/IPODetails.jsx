@@ -142,18 +142,27 @@ return (
   <>
     <Helmet>
       <title>
-        {ipo.name} IPO Details, GMP, Price, Review | ShareBazaarOnline
-      </title>
+{ipo.name} IPO GMP Today, Price Band, Allotment, Review & Subscription Status | ShareBazaarOnline
+</title>
 
       <meta
-        name="description"
-        content={`Apply for ${ipo.name} IPO. Check GMP, lot size, price band, allotment date, review and subscription status.`}
-      />
+  name="description"
+  content={`Check ${ipo.name} IPO GMP today, price band, lot size, subscription status, allotment date, review, financials and latest IPO news on ShareBazaarOnline.`}
+/>
 
       <meta
-        name="keywords"
-        content={`${ipo.name} IPO, ${ipo.name} GMP, ${ipo.name} review`}
-      />
+  name="keywords"
+  content={`
+    ${ipo.name} IPO,
+    ${ipo.name} IPO GMP,
+    ${ipo.name} IPO Review,
+    ${ipo.name} IPO Subscription Status,
+    ${ipo.name} IPO Price Band,
+    ${ipo.name} IPO Allotment,
+    ${ipo.name} SME IPO,
+    ${ipo.name} NSE SME IPO
+  `}
+/>
 
       <link
         rel="canonical"
@@ -184,6 +193,46 @@ return (
         property="og:image"
         content={ipo.logo}
       />
+
+      <script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: ipo.faq.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.answer
+    }
+  }))
+})}
+</script>
+<script type="application/ld+json">
+{JSON.stringify({
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ itemListElement:[
+   {
+     "@type":"ListItem",
+     position:1,
+     name:"Home",
+     item:"https://www.sharebazaaronline.com"
+   },
+   {
+     "@type":"ListItem",
+     position:2,
+     name:"IPO Tracker",
+     item:"https://www.sharebazaaronline.com/ipo-tracker"
+   },
+   {
+     "@type":"ListItem",
+     position:3,
+     name: ipo.name
+   }
+ ]
+})}
+</script>
     </Helmet>
 
     <div className="min-h-screen bg-gray-50">
@@ -196,7 +245,7 @@ return (
               {ipo.logo ? (
                 <img
                   src={ipo.logo}
-                  alt={ipo.name}
+                  alt={`${ipo.name} IPO GMP and company logo`}
                   className="w-14 h-14 object-contain border rounded-lg"
                 />
               ) : (
