@@ -15620,6 +15620,188 @@ export const fetchIPOs = async () => {
     "investor_presentation": "N/A"
   }
 },
+{
+  "id": 80,
+  "name": "Teamtech Formwork Solutions",
+  "logo": "/images/ipo/teamtechformwork.png",
+  "minInvestment": "₹2,52,000",
+  "open": "19 May 2026",
+  "close": "21 May 2026",
+  "listing": "26 May 2026",
+  "price": "61 – 63",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Teamtech Formwork Solutions Limited",
+    "industry_sector": "Construction Equipment / Formwork Systems Manufacturing & Rental",
+    "founded_year": "2018",
+    "promoters": [
+      "Eldo Varghese",
+      "Chaitanya Prakash Kotagiri",
+      "Salinraj Kunnummal"
+    ],
+    "description": "Teamtech Formwork Solutions Limited operates on a B2B model, manufacturing, refurbishing, and renting modular T-formwork and customised formwork systems for the construction industry. The company provides complete modular formwork solutions for vertical concrete structures such as walls, shafts, tanks, bridges, foundations, and circular walls. It operates a 20,000 sq. ft. manufacturing and refurbishment facility in Bollaram, Telangana. As of March 31, 2026, the company had 100 employees."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Teamtech Formwork Solutions Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹5 per share",
+    "price_band_min": "₹61",
+    "price_band_max": "₹63",
+    "lot_size": 2000,
+    "total_issue_size": "₹50.15 Cr (79,60,000 shares)",
+    "fresh_issue_size": "₹50.15 Cr (79,60,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "79,60,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹63",
+    "minimum_investment": "₹2,52,000 (2 lots / 4,000 shares)",
+    "market_cap_post_issue": "Pre-IPO To be declared",
+    "pre_issue_shareholding": "Promoters 81.25%",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing, refurbishing, and renting of modular formwork systems for construction projects.",
+    "products_services": [
+      "Modular T-Formwork Systems",
+      "Customised Formwork Panels",
+      "Formwork Accessories & Supporting Components",
+      "Refurbishment Services"
+    ],
+    "competitive_strengths": [
+      "Integrated manufacturing and refurbishment facility",
+      "Strong engineering and technical capabilities",
+      "Experienced management team",
+      "Pan-India and international market presence",
+      "Long-term customer relationships"
+    ],
+    "risks": [
+      "Project execution risks",
+      "Dependence on construction sector",
+      "Raw material price volatility"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "19 May 2026",
+    "ipo_close_date": "21 May 2026",
+    "basis_of_allotment_date": "22 May 2026",
+    "refund_initiation_date": "25 May 2026",
+    "demat_credit_date": "25 May 2026",
+    "listing_date": "26 May 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_new_manufacturing_unit": "₹11.92 Cr",
+    "repayment_pre_payment_of_borrowings": "₹15.50 Cr",
+    "working_capital_requirements": "₹13.77 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.97% (incl. Anchor)",
+    "hni_nii_quota": "15.00%",
+    "retail_quota": "35.03%",
+    "market_maker": "5.03%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,52,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "6000",
+      "amount": "₹3,78,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "16000",
+      "amount": "₹10,08,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "42.26%",
+    "roce": "40.92%",
+    "debt_to_equity": "0.50",
+    "pat_margin": "21.60%",
+    "ebitda_margin": "32.61%"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2024",
+      "assets": "24.96 Cr",
+      "total_income": "30.31 Cr",
+      "pat": "7.69 Cr",
+      "ebitda": "9.11 Cr",
+      "net_worth": "13.79 Cr",
+      "total_borrowing": "3.64 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "40.00 Cr",
+      "total_income": "32.98 Cr",
+      "pat": "7.84 Cr",
+      "ebitda": "9.24 Cr",
+      "net_worth": "21.63 Cr",
+      "total_borrowing": "11.10 Cr"
+    },
+    {
+      "period": "31 Mar 2026",
+      "assets": "66.75 Cr",
+      "total_income": "54.23 Cr",
+      "pat": "11.59 Cr",
+      "ebitda": "17.50 Cr",
+      "net_worth": "33.22 Cr",
+      "total_borrowing": "16.68 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 19 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "KFin Technologies Ltd.",
+    "registrar_website": "https://www.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "GetFive Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "3rd Floor, Plot No. 1050/1, Sree Sai Enclave, Survey No. 163/Part, Durgamatha House Building Cooperative Housing Society Ltd, Hydernagar, Hyderabad, Telangana 500049",
+    "company_website": "https://teamtechengg.com/",
+    "company_email": "complianceofficer@teamtechengg.com",
+    "company_phone": "+91 78010 46161"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_TEAMTECH.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  }
+}
 
 
 

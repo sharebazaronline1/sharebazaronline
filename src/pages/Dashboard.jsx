@@ -95,20 +95,46 @@ if (preIPOError) {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Sidebar
-        mobileOpen={mobileSidebarOpen}
-        setMobileOpen={setMobileSidebarOpen}
-      />
+     <Sidebar
+  mobileOpen={mobileSidebarOpen}
+  setMobileOpen={setMobileSidebarOpen}
+/>
 
       <main className="md:ml-64 p-4 md:p-8 transition-all">
         {/* Mobile Header */}
-        <header className="md:hidden flex items-center justify-between mb-6 bg-white p-4 rounded-xl shadow-sm">
-          <h1 className="text-lg font-bold text-gray-900">Dashboard</h1>
-          <button onClick={() => setMobileSidebarOpen(true)}>
-            <Menu size={24} />
-          </button>
-        </header>
+    <header className="md:hidden sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-4 mb-6">
+  <div className="flex items-center justify-between">
 
+    {/* LEFT */}
+    <div className="flex items-center gap-3">
+      <button
+        onClick={() => setMobileSidebarOpen(true)}
+        className="p-1"
+      >
+        <Menu size={24} />
+      </button>
+
+      <div>
+        <p className="text-xs text-gray-500">Welcome Back</p>
+        <h1 className="text-lg font-semibold text-gray-900 leading-tight">Dashboard</h1>
+      </div>
+
+      {/* Account Inactive / Complete KYC Button */}
+      <button
+        onClick={() => navigate("/kyc")} // redirect to KYC page
+        className="ml-2 px-2 py-1 border border-red-500 rounded-full text-gray-500 text-xs hover:bg-red-50 transition"
+        title="Complete your KYC"
+      >
+        Complete KYC
+      </button>
+    </div>
+
+    {/* RIGHT */}
+    <div className="shrink-0">
+      <UserProfileDropdown />
+    </div>
+  </div>
+</header>
         {/* Desktop Header */}
         <header className="hidden md:flex items-center justify-between mb-8">
           <div>

@@ -9,6 +9,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Search,
+  Menu,
   TrendingUp,
 } from "lucide-react";
 
@@ -98,35 +99,68 @@ const Holdings = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <Sidebar
-        mobileOpen={mobileSidebarOpen}
-        setMobileOpen={setMobileSidebarOpen}
-      />
-
+     <Sidebar
+  mobileOpen={mobileSidebarOpen}
+  setMobileOpen={setMobileSidebarOpen}
+/>
       <main className="md:ml-64 transition-all duration-300">
         <header className="sticky top-0 z-10 bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-6 shadow-sm">
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-              <h1 className="text-3xl font-semibold text-gray-900 tracking-tight flex items-center gap-3">
-                <TrendingUp className="text-emerald-600" />
-                My Holdings
-              </h1>
-              <p className="text-sm text-gray-600 mt-1">
-                Your Pre-IPO & Unlisted Shares from settled orders
-              </p>
-            </div>
+         <div className="max-w-7xl mx-auto">
+  {/* MOBILE HEADER */}
+  <div className="flex items-center justify-between md:hidden">
+    
+    {/* LEFT */}
+    <button
+      onClick={() => setMobileSidebarOpen(true)}
+      className="p-2"
+    >
+      <Menu size={24} />
+    </button>
 
-            <div className="flex items-center gap-3">
-              <button
-                onClick={fetchUserHoldings}
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm"
-              >
-                <RefreshCw size={17} />
-                Refresh
-              </button>
-              <UserProfileDropdown />
-            </div>
-          </div>
+    {/* CENTER */}
+    <div className="flex-1 text-center">
+      <h1 className="text-xl font-semibold text-gray-900">
+        My Holdings
+      </h1>
+
+      <p className="text-xs text-gray-500 mt-1">
+        Pre-IPO & Unlisted Shares
+      </p>
+    </div>
+
+    {/* RIGHT */}
+    <div className="flex items-center justify-end min-w-[40px]">
+      <UserProfileDropdown />
+    </div>
+  </div>
+
+  {/* DESKTOP HEADER */}
+  <div className="hidden md:flex items-center justify-between gap-4">
+    
+    <div>
+      <h1 className="text-3xl font-semibold text-gray-900 tracking-tight flex items-center gap-2">
+       
+        My Holdings
+      </h1>
+
+      <p className="text-sm text-gray-600 mt-1">
+        Your Pre-IPO & Unlisted Shares from settled orders
+      </p>
+    </div>
+
+    <div className="flex items-center gap-3">
+      <button
+        onClick={fetchUserHoldings}
+        className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 hover:border-gray-300 transition-all shadow-sm"
+      >
+        <RefreshCw size={17} />
+        Refresh
+      </button>
+
+      <UserProfileDropdown />
+    </div>
+  </div>
+</div>
         </header>
 
         <div className="px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto">

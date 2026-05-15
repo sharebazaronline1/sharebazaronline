@@ -257,17 +257,61 @@ if (quantity < minLot)
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Sidebar mobileOpen={mobileSidebarOpen} setMobileSidebarOpen={setMobileSidebarOpen}  />
+      <Sidebar
+  mobileOpen={mobileSidebarOpen}
+  setMobileOpen={setMobileSidebarOpen}
+/>
 
       <main className="md:ml-64 transition-all">
         {/* Header with title and profile */}
-        <header className="flex items-center justify-between p-4 md:p-6 lg:p-8 border-b bg-white sticky top-0 z-10">
-            <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Orders & Buy/Sell </h1>
-           <button onClick={() => setMobileSidebarOpen(true)}>
-                      <Menu size={24} />
-                    </button>
-          
-        </header>
+       <header className="sticky top-0 z-10 bg-white border-b border-gray-200 shadow-sm">
+  <div className="px-4 sm:px-6 lg:px-8 py-5">
+
+    {/* MOBILE HEADER */}
+    <div className="flex items-center justify-between md:hidden">
+
+      {/* LEFT */}
+      <button
+        onClick={() => setMobileSidebarOpen(true)}
+        className="p-2"
+      >
+        <Menu size={24} />
+      </button>
+
+      {/* CENTER */}
+      <div className="flex-1 text-center px-2">
+        <h1 className="text-xl font-semibold text-gray-900">
+          Orders
+        </h1>
+
+        <p className="text-xs text-gray-500 mt-1">
+          Buy & Sell Pre-IPO Shares
+        </p>
+      </div>
+
+      {/* RIGHT */}
+      <div className="flex items-center justify-end min-w-[40px]">
+        <UserProfileDropdown />
+      </div>
+    </div>
+
+    {/* DESKTOP HEADER */}
+    <div className="hidden md:flex items-center justify-between">
+      
+      <div>
+        <h1 className="text-3xl font-bold text-gray-900">
+          Orders & Buy/Sell
+        </h1>
+
+        <p className="text-sm text-gray-600 mt-1">
+          Manage your Pre-IPO buy & sell requests
+        </p>
+      </div>
+
+      <UserProfileDropdown />
+    </div>
+  </div>
+</header>
 
         {/* Content */}
         <div className="p-4 md:p-6 lg:p-8 flex flex-col lg:flex-row gap-6 xl:gap-8">

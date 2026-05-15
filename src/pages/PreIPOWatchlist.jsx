@@ -79,16 +79,39 @@ const PreIPOWatchlist = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Sidebar mobileOpen={mobileSidebarOpen} setMobileOpen={setMobileSidebarOpen} />
+    <Sidebar
+  mobileOpen={mobileSidebarOpen}
+  setMobileOpen={setMobileSidebarOpen}
+/>
 
       <main className="md:ml-64 p-4 md:p-8 transition-all">
         {/* Mobile Header */}
-        <header className="md:hidden flex items-center justify-between mb-6 bg-white p-4 rounded-xl shadow-sm">
-          <h1 className="text-lg font-bold text-gray-900">Pre-IPO Watchlist</h1>
-          <button onClick={() => setMobileSidebarOpen(true)}>
-            <Menu size={24} />
-          </button>
-        </header>
+      <header className="md:hidden sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-4 mb-6">
+  <div className="flex items-center justify-between">
+    
+    {/* LEFT */}
+    <div className="flex items-center gap-3">
+      <button
+        onClick={() => setMobileSidebarOpen(true)}
+        className="p-1"
+      >
+        <Menu size={24} />
+      </button>
+
+      <div>
+       
+        <h1 className="text-lg font-semibold text-gray-900 leading-tight">
+          Pre-IPO Watchlist
+        </h1>
+      </div>
+    </div>
+
+    {/* RIGHT */}
+    <div className="shrink-0">
+      <UserProfileDropdown />
+    </div>
+  </div>
+</header>
 
         {/* Desktop Header with User Profile Dropdown */}
         <header className="hidden md:flex items-center justify-between mb-8">

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import {
   Copy,
   Check,
+  Menu,
   Share2,
   Users,
   IndianRupee,
@@ -33,6 +34,7 @@ const Referrals = () => {
   const [referrals, setReferrals] = useState([]);
   const [totalRewards, setTotalRewards] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 const [commissionRate, setCommissionRate] = useState(0);
   const [referralName, setReferralName] = useState("");
   const [referralEmail, setReferralEmail] = useState("");
@@ -216,14 +218,36 @@ await fetchReferrals(user.id, commissionRate);
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Sidebar mobileOpen={false} setMobileOpen={() => {}} />
+       <Sidebar
+       mobileOpen={mobileSidebarOpen}
+       setMobileOpen={setMobileSidebarOpen}
+     />
       <main className="md:ml-64 px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
-        <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
-            Rewards & Referrals
-          </h1>
-          <UserProfileDropdown />
-        </div>
+       <header className="md:hidden sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-4 mb-6">
+  <div className="flex items-center justify-between">
+
+    <div className="flex items-center gap-3">
+      <button
+        onClick={() => setMobileSidebarOpen(true)}
+        className="p-1"
+      >
+        <Menu size={24} />
+      </button>
+
+      <div>
+        <p className="text-xs text-gray-500">
+          Rewards Program
+        </p>
+
+        <h1 className="text-lg font-semibold text-gray-900">
+          Referrals
+        </h1>
+      </div>
+    </div>
+
+    <UserProfileDropdown />
+  </div>
+</header>
 
         <div className="bg-white border border-gray-200 rounded-2xl shadow-sm max-w-5xl mx-auto p-6 sm:p-8 space-y-10">
           {/* HERO - unchanged */}

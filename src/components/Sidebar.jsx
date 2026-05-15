@@ -17,10 +17,9 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-const Sidebar = ({ mobileOpen, setMobileOpen }) => {
+const Sidebar = ({ mobileOpen = false, setMobileOpen = () => {} }) => {
   const navigate = useNavigate();
   const [profileOpen, setProfileOpen] = useState(false);
-
 
 
   return (
@@ -53,12 +52,41 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
 
         {/* Main Navigation Links */}
         <nav className="flex-1 px-4 py-6 space-y-1 overflow-y-auto">
-          <SidebarLink to="/dashboard" icon={<Home size={18} />} label="Dashboard" />
-          <SidebarLink to="/pre-ipo-watchlist" icon={<AlertCircle size={18} />} label="Pre-IPO Watchlist" />
-          <SidebarLink to="/kyc" icon={<BarChart2 size={18} />} label="Documents" />
-          <SidebarLink to="/orders" icon={<IndianRupee size={18} />} label="Orders" />
-          <SidebarLink to="/holdings" icon={<BriefcaseBusiness  size={18} />} label="Holdings" />
-        </nav>
+  <SidebarLink
+    to="/dashboard"
+    icon={<Home size={18} />}
+    label="Dashboard"
+    setMobileOpen={setMobileOpen}
+  />
+
+  <SidebarLink
+    to="/pre-ipo-watchlist"
+    icon={<AlertCircle size={18} />}
+    label="Pre-IPO Watchlist"
+    setMobileOpen={setMobileOpen}
+  />
+
+  <SidebarLink
+    to="/kyc"
+    icon={<BarChart2 size={18} />}
+    label="Documents"
+    setMobileOpen={setMobileOpen}
+  />
+
+  <SidebarLink
+    to="/orders"
+    icon={<IndianRupee size={18} />}
+    label="Orders"
+    setMobileOpen={setMobileOpen}
+  />
+
+  <SidebarLink
+    to="/holdings"
+    icon={<BriefcaseBusiness size={18} />}
+    label="Holdings"
+    setMobileOpen={setMobileOpen}
+  />
+</nav>
 
        
          {/* Ad Banner - Placed just above Logout */}
@@ -80,24 +108,30 @@ const Sidebar = ({ mobileOpen, setMobileOpen }) => {
   );
 };
 
-const SidebarLink = ({ to, icon, label }) => (
-  <NavLink
-    to={to}
-    end
-    className={({ isActive }) =>
-      `
-      flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition
-      ${
-        isActive
-          ? "bg-green-50 text-green-600"
-          : "text-gray-700 hover:bg-green-50 hover:text-green-600"
-      }
-      `
+const SidebarLink = ({
+  to,
+  icon,
+  label,
+  setMobileOpen,
+}) => (
+ <NavLink
+  to={to}
+  end
+  onClick={() => setMobileOpen(false)}
+  className={({ isActive }) =>
+    `
+    flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition
+    ${
+      isActive
+        ? "bg-green-50 text-green-600"
+        : "text-gray-700 hover:bg-green-50 hover:text-green-600"
     }
-  >
-    {icon}
-    <span>{label}</span>
-  </NavLink>
+    `
+  }
+>
+  {icon}
+  <span>{label}</span>
+</NavLink>
 );
 
 export default Sidebar;
