@@ -45,14 +45,11 @@ const [commissionRate, setCommissionRate] = useState(0);
   setLoading(true);
 
   try {
-    const { data: refData, error: refError } = await supabase
-      .from("referrals")
-      .select(`
-        *,
-        profiles:referred_sb_user_id ( id )
-      `)
-      .eq("referrer_sb_user_id", userId)
-      .order("created_at", { ascending: false });
+   const { data: refData, error: refError } = await supabase
+  .from("referrals")
+  .select("*")
+  .eq("referrer_sb_user_id", userId)
+  .order("created_at", { ascending: false });
 
     if (refError) throw refError;
 

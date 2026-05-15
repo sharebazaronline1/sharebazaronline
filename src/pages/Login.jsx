@@ -60,77 +60,57 @@ sessionStorage.setItem(
 
 //  SECOND — handle OAuth
 useEffect(() => {
+  const handleOAuthLogin = async () => {
+    if (authHandled.current) return;
 
-  const {
-    data: { subscription },
-  } = supabase.auth.onAuthStateChange(
-    async (event, session) => {
+    const { data: { session }, error } = await supabase.auth.getSession();
+    if (!session?.user) return;
 
-      console.log(
-        "Auth changed:",
-        event
-      );
+    const user = session.user;
+    authHandled.current = true;
 
-      // prevent duplicate execution
-      if (authHandled.current) {
-        return;
+    console.log("OAuth user:", user.id);
+
+    // wait for profile creation to propagate
+    let profile = null;
+    for (let i = 0; i < 20; i++) {
+      const { data, error } = await supabase
+        .from("profiles")
+        .select("*")
+        .eq("id", user.id)
+        .maybeSingle();
+
+      if (error) console.error(error);
+      if (data) {
+        profile = data;
+        break;
       }
 
-      const user = session?.user;
-
-      if (!user) return;
-
-      if (
-        event !== "SIGNED_IN" &&
-        event !== "INITIAL_SESSION"
-      ) {
-        return;
-      }
-
-      authHandled.current = true;
-
-      try {
-
-        // IMPORTANT
-        await supabase.auth.getSession();
-
-await new Promise((resolve) =>
-  setTimeout(resolve, 3000)
-);
-
-await applyReferral(user);
-
-        console.log(
-          "Referral flow completed"
-        );
-
-      } catch (err) {
-
-        console.error(
-          "OAuth referral failed:",
-          err
-        );
-
-      }
-
-      // clean URL
-      window.history.replaceState(
-        {},
-        document.title,
-        window.location.pathname
-      );
-
-      navigate("/dashboard", {
-        replace: true,
-      });
+      console.log("Waiting for profile...", i + 1);
+      await new Promise((resolve) => setTimeout(resolve, 1000));
     }
-  );
 
-  return () => {
-    subscription.unsubscribe();
+    if (!profile) {
+      console.error("Profile not created yet, cannot apply referral");
+      return;
+    }
+
+    console.log("Profile ready:", profile.id);
+    await applyReferral(user);
+
+   
+
+    // Clean up
+    localStorage.removeItem("oauth_referral");
+    localStorage.removeItem("referral_code");
+    sessionStorage.removeItem("referral_code");
+
+    // Redirect after referral is applied
+    navigate("/dashboard", { replace: true });
   };
 
-}, []);
+  handleOAuthLogin();
+}, [navigate]);
 
 const applyReferral = async (user) => {
   try {
@@ -159,22 +139,32 @@ console.log(
 
     let currentProfile = null;
 
-    for (let i = 0; i < 20; i++) {
-      const { data, error } = await supabase
-        .from("profiles")
-        .select("*")
-        .eq("id", user.id)
-        .maybeSingle();
+  for (let i = 0; i < 20; i++) {
 
-      if (data) {
-        currentProfile = data;
-        break;
-      }
+  const { data, error } = await supabase
+    .from("profiles")
+    .select("*")
+    .eq("id", user.id)
+    .maybeSingle();
 
-      await new Promise((resolve) =>
-        setTimeout(resolve, 1000)
-      );
-    }
+  if (error) {
+    console.error(error);
+  }
+
+  if (data) {
+    currentProfile = data;
+    break;
+  }
+
+  console.log(
+    "Waiting for profile...",
+    i + 1
+  );
+
+  await new Promise((resolve) =>
+    setTimeout(resolve, 1000)
+  );
+}
 
    if (!currentProfile) {
   console.error("Profile creation timeout");
@@ -209,7 +199,7 @@ console.log("Profile found:", currentProfile);
           .update({
             referred_by_code: referralCode,
           })
-          .eq("id", user.id);
+      .eq("id", user.id);
 
       if (updateError) {
         console.error(
@@ -253,7 +243,7 @@ console.log("Profile found:", currentProfile);
       await supabase
         .from("referrals")
         .select("id")
-        .eq("referred_sb_user_id", user.id)
+      .eq("referred_sb_user_id", currentProfile.id)
         .maybeSingle();
 
     if (existingReferral) {
@@ -268,7 +258,7 @@ console.log(
       referrerProfile.id,
 
     referred_sb_user_id:
-      user.id,
+     currentProfile.id,
 
     referred_name:
       currentProfile.full_name,
@@ -281,8 +271,11 @@ console.log(
     // INSERT REFERRAL
     // ==========================================
 console.log("INSERTING REFERRAL", {
-  referrer_sb_user_id: referrerProfile.id,
-  referred_sb_user_id: user.id,
+  referrer_sb_user_id:
+    referrerProfile.id,
+
+  referred_sb_user_id:
+    currentProfile.id,
 });
     const { error: insertError } =
       await supabase
@@ -292,7 +285,7 @@ console.log("INSERTING REFERRAL", {
   referrerProfile.id,
 
           referred_sb_user_id:
-            user.id,
+          currentProfile.id,
 
           referred_name:
             currentProfile.full_name ||
@@ -425,7 +418,7 @@ console.log("INSERTING REFERRAL", {
           mobile: user.user_metadata?.mobile || null,
           email_verified: true,
         })
-        .eq("id", user.id);
+        .eq("sb_user_id", user.id);
 
      await applyReferral(user);
 navigate("/dashboard", { replace: true });

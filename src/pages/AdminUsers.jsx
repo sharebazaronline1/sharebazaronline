@@ -80,22 +80,34 @@ const [referredOrdersMap, setReferredOrdersMap] = useState({});
             .select("*", { count: "exact", head: true })
             .eq("referrer_sb_user_id", profile.id);
 
-          const { data: referredUsers } = await supabase
-            .from("referrals")
-            .select(`
-              referred_name,
-              referred_email,
-              referred_mobile,
-              referred_sb_user_id,
-              reward_amount,
-              commission_earned,
-              status,
-              created_at,
-              profiles:referred_sb_user_id (
-                sb_user_id
-              )
-            `)
-            .eq("referrer_sb_user_id", profile.id);
+         const { data: referredUsersRaw } = await supabase
+  .from("referrals")
+  .select(`
+    referred_name,
+    referred_email,
+    referred_mobile,
+    referred_sb_user_id,
+    reward_amount,
+    commission_earned,
+    status,
+    created_at
+  `)
+  .eq("referrer_sb_user_id", profile.id);
+
+const referredUsers = await Promise.all(
+  (referredUsersRaw || []).map(async (ref) => {
+    const { data: referredProfile } = await supabase
+      .from("profiles")
+      .select("sb_user_id")
+      .eq("id", ref.referred_sb_user_id)
+      .maybeSingle();
+
+    return {
+      ...ref,
+      profiles: referredProfile || null,
+    };
+  })
+);
 
           const { count: orderCount } = await supabase
             .from("orders")
