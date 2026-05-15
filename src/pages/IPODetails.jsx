@@ -195,18 +195,20 @@ return (
       />
 
       <script type="application/ld+json">
-{JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: ipo.faq.map((f) => ({
-    "@type": "Question",
-    name: f.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: f.answer
-    }
-  }))
-})}
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: Array.isArray(ipo?.faq)
+      ? ipo.faq.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: f.answer,
+          },
+        }))
+      : [],
+  })}
 </script>
 <script type="application/ld+json">
 {JSON.stringify({

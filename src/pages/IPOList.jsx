@@ -123,21 +123,21 @@ const IPODashboard = () => {
 
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-          <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
-            <h2 className="text-3xl font-black text-gray-900">IPO Tracker</h2>
-            <p className="mt-2 text-lg text-gray-600">
+         <div className="px-4 sm:px-8 py-5 sm:py-6 bg-gray-50 border-b border-gray-200 text-center">
+           <h2 className="text-2xl sm:text-3xl font-black text-gray-900 leading-tight">IPO Tracker</h2>
+          <p className="mt-2 text-sm sm:text-lg text-gray-600">
               Live & Upcoming IPOs in India
             </p>
           </div>
 
-          <div className="px-8 py-5 border-b border-gray-200">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div className="flex gap-3 flex-wrap">
+        <div className="px-4 sm:px-8 py-4 sm:py-5 border-b border-gray-200">
+  <div className="flex items-center justify-between gap-3 overflow-x-auto scrollbar-hide whitespace-nowrap">
+             <div className="flex flex-wrap gap-2 sm:gap-3">
                 {tabs.map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all flex items-center gap-2 ${
+                    className={`px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap transition-all flex items-center gap-2 ${
                       activeTab === tab
                         ? "bg-green-600 text-white shadow-sm"
                         : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -145,7 +145,7 @@ const IPODashboard = () => {
                   >
                     {tab}
                     <span
-                      className={`px-2.5 py-0.5 rounded-full text-xs font-bold ${
+                     className={`px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-bold ${
                         activeTab === tab
                           ? "bg-white text-green-600"
                           : "bg-gray-300 text-gray-700"
@@ -157,18 +157,64 @@ const IPODashboard = () => {
                 ))}
               </div>
 
-              <select
-                value={typeFilter}
-                onChange={(e) => setTypeFilter(e.target.value)}
-                className="px-5 py-2.5 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
-              >
-                <option value="All">All Types</option>
-                <option value="Mainboard">Mainboard</option>
-                <option value="SME">SME</option>
-              </select>
+             <div className="relative shrink-0">
+  <select
+    value={typeFilter}
+    onChange={(e) => setTypeFilter(e.target.value)}
+    className="
+      h-9
+      min-w-[105px]
+      sm:min-w-[130px]
+      pl-3
+      pr-7
+      text-[11px]
+      sm:text-sm
+      font-medium
+      text-gray-700
+      bg-white
+      border border-gray-300
+      rounded-full
+      outline-none
+      appearance-none
+      shadow-sm
+      transition
+      focus:ring-1
+      focus:ring-green-500
+      focus:border-green-500
+      active:outline-none
+      tap-highlight-transparent
+    "
+    style={{
+      WebkitTapHighlightColor: "transparent",
+    }}
+  >
+    <option value="All">All Types</option>
+    <option value="Mainboard">Mainboard</option>
+    <option value="SME">SME</option>
+  </select>
+
+  {/* Arrow */}
+  <div className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-gray-400">
+    <svg
+      className="w-3 h-3"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M19 9l-7 7-7-7"
+      />
+    </svg>
+  </div>
+</div>
             </div>
           </div>
-
+<div className="sm:hidden flex items-center justify-end gap-2 px-4 py-2 bg-blue-50 border-b text-[11px] text-blue-700 font-medium animate-pulse">
+  <span>← Swipe →</span>
+</div>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[1200px]">
               <thead>
@@ -202,15 +248,15 @@ const IPODashboard = () => {
                         transition={{ delay: i * 0.04 }}
                         className="hover:bg-gray-50 transition cursor-pointer"
                         onClick={() =>
-  navigate(
-    `/ipo/${ipo.id}/${slugify(
-      ipo.name || ipo.fullName
-    )}`
-  )
-}
+                          navigate(
+                            `/ipo/${ipo.id}/${slugify(
+                              ipo.name || ipo.fullName
+                            )}`
+                          )
+                        }
                       >
                         <td className="px-6 py-5">
-                          <div className="flex items-center gap-4">
+                         <div className="flex items-center gap-3 min-w-[220px]">
                             {hasLogo ? (
                               <img
                                 src={ipo.logo}
@@ -228,8 +274,9 @@ const IPODashboard = () => {
 
                             <div>
                               <p className="font-semibold text-gray-900 text-base">{ipo.name}</p>
-                              <p className="text-xs text-gray-500 mt-0.5">{ipo.fullName || "Initial Public Offering"}</p>
-                              <span
+                                <p className="hidden sm:block text-xs text-gray-500 mt-0.5">
+                                  {ipo.fullName || "Initial Public Offering"}
+                                </p>                              <span
                                 className={`inline-flex mt-2 px-1 py-1 text-xs font-semibold rounded shadow-sm ${
                                   type === "SME"
                                     ? "bg-blue-100 text-blue-700 border border-blue-200"
