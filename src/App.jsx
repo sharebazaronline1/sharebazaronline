@@ -44,6 +44,7 @@ import AdminUsers from "./pages/AdminUsers"
 import ScrollToTop from "./components/ScrollToTop";
 import AdminPreIPO from "./pages/AdminPreIPO"
 import AdminOrders from "./pages/AdminOrders"
+import NotFound from "./pages/NotFound";
 import AdminBlog from "./pages/AdminBlog";
 // Optional: If you want admin to have its own layout without user sidebar/header
 function AdminLayout() {
@@ -141,7 +142,7 @@ function AppLayout() {
               </Route>
 
               {/* Catch-all redirect (optional) */}
-              <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
 
