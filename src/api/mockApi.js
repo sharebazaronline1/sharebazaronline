@@ -15801,6 +15801,179 @@ export const fetchIPOs = async () => {
     "prospectus_pdf": "N/A",
     "investor_presentation": "N/A"
   }
+},
+{
+  "id": 81,
+  "name": "Harikanta Overseas",
+  "logo": "/images/ipo/harikantaoverseas.png",
+  "minInvestment": "₹2,30,400",
+  "open": "20 May 2026",
+  "close": "22 May 2026",
+  "listing": "27 May 2026",
+  "price": "91 – 96",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Harikanta Overseas Limited",
+    "industry_sector": "Textiles / Synthetic Fabrics Manufacturing",
+    "founded_year": "2018",
+    "promoters": [
+      "Hardik Gotawala",
+      "Abhishek Gotawala",
+      "Nilesh Gotawala"
+    ],
+    "description": "Harikanta Overseas Limited is engaged in the manufacturing of synthetic textile fabrics. Its product range includes Ikat fabrics, polyester garment fabrics, saree fabrics, dhupion fabrics, poly linen, and natural fiber fabrics. The company primarily supplies fabrics for women’s wear such as sarees, dress materials, and kurtas, and also offers fabrics for men’s kurtas. It has a manufacturing unit in Surat, Gujarat, and exports to Bahrain, Singapore, and Thailand while serving domestic markets including Delhi, Bangalore, Karnataka, Maharashtra, Uttar Pradesh, Punjab, and Rajasthan. As of February 28, 2026, the company had 111 permanent employees."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Harikanta Overseas Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹91",
+    "price_band_max": "₹96",
+    "lot_size": 1200,
+    "total_issue_size": "₹25.63 Cr (26,70,000 shares)",
+    "fresh_issue_size": "₹25.63 Cr (26,70,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "26,70,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹96",
+    "minimum_investment": "₹2,30,400 (2 lots / 2,400 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹94.71 Cr",
+    "pre_issue_shareholding": "Promoters 96.87%",
+    "post_issue_shareholding": "Promoters 70.66%"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturer of synthetic textile fabrics with focus on women’s wear and export markets.",
+    "products_services": [
+      "Ikat Fabrics",
+      "Polyester Garment Fabrics",
+      "Saree Fabrics",
+      "Dhupion Fabrics",
+      "Poly Linen & Natural Fiber Fabrics"
+    ],
+    "competitive_strengths": [
+      "Quality products and efficient production process",
+      "Customization and flexibility",
+      "Global reach with exports to multiple countries",
+      "Diverse product range"
+    ],
+    "risks": [
+      "Highly competitive and fragmented textile sector",
+      "Raw material price volatility",
+      "Export market risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "20 May 2026",
+    "ipo_close_date": "22 May 2026",
+    "basis_of_allotment_date": "25 May 2026",
+    "refund_initiation_date": "26 May 2026",
+    "demat_credit_date": "26 May 2026",
+    "listing_date": "27 May 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_for_factory_premises": "₹5.40 Cr",
+    "capital_expenditure_for_plant_and_machineries": "₹9.33 Cr",
+    "working_capital_requirements": "₹4.75 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "2.02%",
+    "hni_nii_quota": "46.47%",
+    "retail_quota": "46.47%",
+    "market_maker": "5.03%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,30,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,45,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 lots",
+      "shares": "10800",
+      "amount": "₹10,36,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "31.15% (30 Nov 2025) / 56.72% (31 Mar 2025)",
+    "roce": "31.99% (30 Nov 2025) / 37.56% (31 Mar 2025)",
+    "pat_margin": "19.50% (30 Nov 2025) / 12.70% (31 Mar 2025)",
+    "ebitda_margin": "27.97% (30 Nov 2025) / 18.92% (31 Mar 2025)",
+    "debt_to_equity": "0.15 (30 Nov 2025) / 0.24 (31 Mar 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2025",
+      "assets": "23.12 Cr",
+      "total_income": "35.50 Cr",
+      "pat": "4.47 Cr",
+      "ebitda": "6.72 Cr",
+      "net_worth": "13.79 Cr",
+      "total_borrowing": "3.26 Cr"
+    },
+    {
+      "period": "30 Nov 2025",
+      "assets": "32.51 Cr",
+      "total_income": "26.28 Cr",
+      "pat": "5.09 Cr",
+      "ebitda": "7.35 Cr",
+      "net_worth": "18.77 Cr",
+      "total_borrowing": "2.87 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 20 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Interactive Financial Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "28, Sairam Ind Estate Bamroli, Surat, Gujarat 394107",
+    "company_website": "https://www.harikantaoverseas.com/",
+    "company_email": "info@harikantaoverseas.com",
+    "company_phone": "+91 98986 82560"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/harikanta-overseas-rhp.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  }
 }
 
 
