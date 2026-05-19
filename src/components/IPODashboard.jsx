@@ -72,7 +72,17 @@ const type = rawType === "SME" ? "SME" : "Mainboard";
   const isLive = isIPOActiveByDate(ipo.open, ipo.close);
 
   return (
-    <div className="w-full min-w-[300px] flex-shrink-0 bg-white border border-gray-300 rounded-2xl shadow-sm">
+    <div
+  className="
+    w-full
+    bg-white
+    border border-gray-200
+    rounded-2xl
+    shadow-sm
+    flex flex-col
+    h-full
+  "
+>
       <div className="p-4 flex flex-col gap-2 h-full">
         <div className="flex gap-3 items-start">
           {ipo.logo ? (
@@ -90,7 +100,7 @@ const type = rawType === "SME" ? "SME" : "Mainboard";
               {ipo.name}
             </h3>
             <p className="text-xs text-gray-500 truncate mt-0.5">
-              {ipo.fullName || "IPO"}
+              {ipo.about_company?.company_name || "IPO"}
             </p>
 
             <div className="flex items-center gap-2 mt-1 overflow-x-hidden">
@@ -211,37 +221,80 @@ const IPODashboard = ({ ipos = [] }) => {
         </div>
 
         {/* Mobile / Tablet Horizontal Scroll */}
-        <div className="lg:hidden overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400">
-          {top8IPOs.length > 0 ? (
-            <div className="flex gap-4 py-4 min-w-max">
-              {top8IPOs.map((ipo, i) => (
-                <motion.div
-                  key={ipo.id}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.08 }}
-                >
-                  <IPOCard ipo={ipo} />
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            <div className="py-20 text-center px-8">
-              <p className="text-2xl font-semibold text-gray-600">
-                No Live IPOs Right Now
-              </p>
-              <p className="text-lg text-gray-500 mt-4">
-                Check back soon for new opportunities.
-              </p>
-              <button
-                onClick={() => navigate("/how-to-apply-ipo")}
-                className="mt-8 px-8 py-4 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-lg"
-              >
-                Learn How to Apply for IPOs
-              </button>
-            </div>
-          )}
-        </div>
+       {/* Mobile / Tablet Horizontal Scroll */}
+<div
+  className="
+    lg:hidden
+    overflow-x-auto
+    scrollbar-hide
+    -mx-4
+    px-4
+    pb-2
+  "
+>
+  {top8IPOs.length > 0 ? (
+
+    <div
+      className="
+        flex
+        gap-3
+        snap-x
+        snap-mandatory
+      "
+    >
+
+      {top8IPOs.map((ipo, i) => (
+
+        <motion.div
+          key={ipo.id}
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: i * 0.05 }}
+          className="
+            w-[84%]
+            max-w-[285px]
+            flex-shrink-0
+            snap-center
+          "
+        >
+          <IPOCard ipo={ipo} />
+        </motion.div>
+
+      ))}
+
+    </div>
+
+  ) : (
+
+    <div className="py-20 text-center px-4">
+
+      <p className="text-xl font-semibold text-gray-600">
+        No Live IPOs Right Now
+      </p>
+
+      <p className="text-sm text-gray-500 mt-3">
+        Check back soon for new opportunities.
+      </p>
+
+      <button
+        onClick={() => navigate("/how-to-apply-ipo")}
+        className="
+          mt-6
+          w-full
+          py-3
+          bg-green-600
+          text-white
+          font-bold
+          rounded-xl
+        "
+      >
+        Learn How to Apply for IPOs
+      </button>
+
+    </div>
+
+  )}
+</div>
       </div>
     </div>
   );

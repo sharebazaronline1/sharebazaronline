@@ -275,7 +275,7 @@ const IPODashboard = () => {
                             <div>
                               <p className="font-semibold text-gray-900 text-base">{ipo.name}</p>
                                 <p className="hidden sm:block text-xs text-gray-500 mt-0.5">
-                                  {ipo.fullName || "Initial Public Offering"}
+                                  {ipo.about_company?.company_name || "Initial Public Offering"}
                                 </p>                              <span
                                 className={`inline-flex mt-2 px-1 py-1 text-xs font-semibold rounded shadow-sm ${
                                   type === "SME"

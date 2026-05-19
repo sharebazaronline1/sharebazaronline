@@ -338,58 +338,140 @@ minLotSize: finalLotSize,
   </div>
 </section>
        {/* BROKER ANALYZER */}
-      <section className="py-8">
-        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 text-white border-b border-gray-200 text-center">
-              <h2 className="text-2xl font-medium font-black text-white">Best Stock Brokers in India 2025</h2>
-              <p className="mt-2 text-lg text-white">
-                Trusted by millions
-              </p>
-            </div>
+     <section className="py-4 lg:py-8 overflow-hidden">
+  <div className="w-full max-w-7xl mx-auto px-2 sm:px-5 lg:px-8">
 
-            <div className="p-8" >
-              <BrokerAnalyzer />
-              <div className="text-center mt-2">
-                <button
-                  onClick={() => navigate('/brokers')}
-                  className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
-                >
-                  View All Brokers
-                </button>
-              </div>
-            </div>
-          </div>
+   <div className="
+  w-full
+  bg-white
+  rounded-2xl
+  shadow-sm
+  border border-gray-200
+  overflow-hidden
+">
+
+      {/* HEADER */}
+      <div className="
+        px-4 py-4
+        lg:px-8 lg:py-6
+        bg-gradient-to-r from-gray-800 to-gray-700
+        text-white
+        border-b border-gray-200
+        text-center
+      ">
+        <h2 className="
+          text-xl
+          sm:text-2xl
+          font-black
+          tracking-tight
+          text-white
+        ">
+          Best Stock Brokers in India 2025
+        </h2>
+
+        <p className="
+          mt-1
+          text-sm
+          sm:text-base
+          lg:text-lg
+          text-white/90
+        ">
+          Trusted by millions
+        </p>
+      </div>
+
+      {/* CONTENT */}
+    <div className="p-2 sm:p-4 lg:p-8">
+
+        <BrokerAnalyzer />
+
+        {/* BUTTON */}
+       <div className="text-center mt-3 lg:mt-2 px-1">
+
+          <button
+            onClick={() => navigate('/brokers')}
+            className="
+              w-full
+              sm:w-auto
+              px-6
+              sm:px-8
+              py-3
+              text-sm
+              sm:text-base
+              bg-green-600
+              hover:bg-green-700
+              text-white
+              font-bold
+              rounded-xl
+              sm:rounded-full
+              transition
+              shadow-md
+            "
+          >
+            View All Brokers
+          </button>
+
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       <AdBanner />
 
       {/* IPO SECTION */}
- <section className="py-2">
-  <div className="w-full max-w-full mx-auto px-6 lg:px-10">
+<section className="py-3 lg:py-2 overflow-hidden">
+  <div className="w-full max-w-full mx-auto px-2 sm:px-4 lg:px-10">
 
     {/* HORIZONTAL LAYOUT */}
     <div className="flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-3">
 
       {/* MAIN IPO TRACKER SECTION */}
-      <div className="flex-1 max-w-[1100px]">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+      <div className="flex-1 w-full max-w-[1100px]">
 
-          <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 border-b border-gray-200 text-center">
-            <h2 className="text-2xl font-black text-white">IPO Tracker</h2>
-            <p className="mt-2 text-lg text-white">
+        <div
+          className="
+            w-full
+            bg-white
+            rounded-2xl
+            shadow-sm
+            border border-gray-200
+            overflow-hidden
+          "
+        >
+
+          {/* HEADER */}
+          <div
+            className="
+              px-4 py-4
+              lg:px-8 lg:py-6
+              bg-gradient-to-r from-gray-800 to-gray-700
+              border-b border-gray-200
+              text-center
+            "
+          >
+            <h2 className="text-xl sm:text-2xl font-black text-white">
+              IPO Tracker
+            </h2>
+
+            <p className="mt-1 text-sm sm:text-base lg:text-lg text-white">
               Live & Upcoming IPOs in India
             </p>
           </div>
 
-          <div className="p-8">
+          {/* CONTENT */}
+          <div className="p-2 sm:p-4 lg:p-8">
+
             {isIPOLoading ? (
+
               <div className="flex justify-center py-20">
                 <div className="animate-spin rounded-full h-14 w-14 border-t-4 border-b-4 border-gray-800" />
               </div>
+
             ) : (
+
               (() => {
+
                 const today = new Date();
                 today.setHours(0, 0, 0, 0);
 
@@ -411,48 +493,94 @@ minLotSize: finalLotSize,
 
                 return (
                   <>
-                    {/* Mobile / Tablet */}
-                    <div className="lg:hidden overflow-x-auto px-2 pb-6 scrollbar-hide">
+                    {/* MOBILE / TABLET */}
+                    <div
+                      className="
+                        lg:hidden
+                        overflow-x-auto
+                        scrollbar-hide
+                        -mx-2
+                        px-2
+                        pb-3
+                      "
+                    >
+
                       {liveIPOs.length > 0 ? (
-                        <div className="flex gap-6">
+
+                        <div className="flex gap-3">
+
                           {liveIPOs.map((ipo) => (
+
                             <div
                               key={ipo.id}
-                              className="min-w-[280px] flex-shrink-0"
+                              className="
+                                w-[84%]
+                                max-w-[285px]
+                                flex-shrink-0
+                              "
                             >
                               <IPOCard ipo={ipo} />
                             </div>
+
                           ))}
+
                         </div>
+
                       ) : (
+
                         <div className="py-20 text-center">
+
                           <p className="text-xl font-semibold text-gray-600">
                             No Live IPOs Right Now
                           </p>
+
                         </div>
+
                       )}
+
                     </div>
 
-                    {/* Desktop */}
+                    {/* DESKTOP */}
                     <div className="hidden lg:block">
                       <IPODashboard ipos={liveIPOs} />
                     </div>
                   </>
                 );
+
               })()
+
             )}
 
-            <div className="text-center mt-8">
+            {/* BUTTON */}
+            <div className="text-center mt-4 lg:mt-8 px-1">
+
               <button
                 onClick={() => navigate("/ipo/ipo-list")}
-                className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
+                className="
+                  w-full
+                  sm:w-auto
+                  px-6
+                  sm:px-8
+                  py-3
+                  text-sm
+                  sm:text-base
+                  bg-green-600
+                  text-white
+                  font-bold
+                  rounded-xl
+                  sm:rounded-full
+                  hover:bg-green-700
+                  transition
+                  shadow-md
+                "
               >
                 View All IPO
               </button>
+
             </div>
 
           </div>
-         
+
         </div>
       </div>
 

@@ -15974,7 +15974,672 @@ export const fetchIPOs = async () => {
     "prospectus_pdf": "N/A",
     "investor_presentation": "N/A"
   }
+},
+{
+  "id": 82,
+  "name": "Q-Line Biotech",
+  "logo": "/images/ipo/qlinebiotech.png",
+  "minInvestment": "₹2,74,400",
+  "open": "21 May 2026",
+  "close": "25 May 2026",
+  "listing": "29 May 2026",
+  "price": "326 – 343",
+  "lot": 400,
+
+  "about_company": {
+    "company_name": "Q-Line Biotech Limited",
+    "industry_sector": "In-Vitro Diagnostics (IVD) / Diagnostic Reagents & Equipment",
+    "founded_year": "2010",
+    "promoters": [
+      "Saurabh Garg",
+      "Amita Garg",
+      "Ayush Garg",
+      "Ajay Kumar Mahanty",
+      "Abhay Agrawal"
+    ],
+    "description": "Q-Line Biotech Limited is a leading Indian manufacturer and marketer of In-Vitro Diagnostic (IVD) products. The company develops, manufactures, and supplies a wide range of diagnostic reagents, kits, Point-of-Care (POC) devices, consumables, and diagnostic equipment. Its portfolio covers Clinical Chemistry, Haematology, Immunodiagnostics, Molecular Diagnostics, and Rapid Tests. The company serves hospitals, diagnostic labs, medical colleges, and pathology centres across India."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Q-Line Biotech Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹326",
+    "price_band_max": "₹343",
+    "lot_size": 400,
+    "total_issue_size": "₹214.48 Cr (62,53,200 shares)",
+    "fresh_issue_size": "₹214.48 Cr (62,53,200 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "62,53,200 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹343",
+    "minimum_investment": "₹2,74,400 (2 lots / 800 shares)",
+    "market_cap_post_issue": "Pre-IPO ≈ ₹520 Cr (approx)",
+    "pre_issue_shareholding": "Promoters 96.77%",
+    "post_issue_shareholding": "Promoters ≈ 65-68%"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing and marketing of high-quality IVD reagents, kits, and equipment with strong focus on R&D and quality compliance.",
+    "products_services": [
+      "Clinical Chemistry Reagents",
+      "Haematology Reagents & Analyzers",
+      "Immunodiagnostics & ELISA Kits",
+      "Molecular Diagnostics",
+      "Rapid Test Kits & POC Devices",
+      "Diagnostic Equipment"
+    ],
+    "competitive_strengths": [
+      "Indigenous manufacturing with strong R&D",
+      "Wide product portfolio across multiple segments",
+      "Established distribution network",
+      "Quality certifications and regulatory compliance",
+      "Experienced promoters with deep domain knowledge"
+    ],
+    "risks": [
+      "Regulatory changes in diagnostics sector",
+      "Intense competition from multinational players",
+      "Dependence on imports for some raw materials"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "21 May 2026",
+    "ipo_close_date": "25 May 2026",
+    "anchor_bid_date": "20 May 2026",
+    "basis_of_allotment_date": "26 May 2026",
+    "refund_initiation_date": "27 May 2026",
+    "demat_credit_date": "27 May 2026",
+    "listing_date": "29 May 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹93.50 Cr",
+    "repayment_pre_payment_of_borrowings": "₹90.00 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.99% (incl. Anchor)",
+    "hni_nii_quota": "15.01%",
+    "retail_quota": "35.00%",
+    "market_maker": "5.01%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "800",
+      "amount": "₹2,74,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "1200",
+      "amount": "₹4,11,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "3200",
+      "amount": "₹10,97,600"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "16.88% (31 Dec 2025) / 17.66% (31 Mar 2025)",
+    "roce": "13.32% (31 Dec 2025) / 23.74% (31 Mar 2025)",
+    "pat_margin": "16.65% (31 Dec 2025) / 8.97% (31 Mar 2025)",
+    "ebitda_margin": "27.64% (31 Dec 2025) / 22.73% (31 Mar 2025)",
+    "debt_to_equity": "1.06 (31 Dec 2025) / 0.87 (31 Mar 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "251.58 Cr",
+      "total_income": "184.81 Cr",
+      "pat": "32.10 Cr",
+      "ebitda": "32.98 Cr",
+      "net_worth": "127.37 Cr",
+      "total_borrowing": "73.65 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "339.25 Cr",
+      "total_income": "206.45 Cr",
+      "pat": "34.44 Cr",
+      "ebitda": "37.63 Cr",
+      "net_worth": "161.81 Cr",
+      "total_borrowing": "96.91 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "455.49 Cr",
+      "total_income": "322.58 Cr",
+      "pat": "28.13 Cr",
+      "ebitda": "71.32 Cr",
+      "net_worth": "189.95 Cr",
+      "total_borrowing": "164.95 Cr"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "561.34 Cr",
+      "total_income": "236.50 Cr",
+      "pat": "38.69 Cr",
+      "ebitda": "64.23 Cr",
+      "net_worth": "229.04 Cr",
+      "total_borrowing": "243.85 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹63 (approx 18.37%)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "20 May 2026",
+    "estimated_listing_price": "₹406 – ₹410"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 21 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Purva Sharegistry (India) Pvt. Ltd.",
+    "registrar_website": "https://www.purvashare.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Hem Securities Ltd."
+  },
+
+  "company_information": {
+    "company_address": "298-281, Transport Nagar, Kanpur Road, Adjacent Transport Nagar Metro Station, Lucknow, Uttar Pradesh 226012",
+    "company_website": "https://qlinebiotech.com/",
+    "company_email": "compliance@qlinebiotech.com",
+    "company_phone": "+91 522-2435570"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://admin.qlinebiotech.com/uploads/investor/14fb9b2d52e3ffc226eb0e5fb5955322.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Q-Line Biotech Limited do?",
+      "answer": "Q-Line Biotech is a manufacturer and marketer of In-Vitro Diagnostic (IVD) reagents, kits, POC devices, and diagnostic equipment used in clinical chemistry, haematology, immunodiagnostics, and rapid testing."
+    },
+    {
+      "question": "When did the Q-Line Biotech IPO open and close?",
+      "answer": "The IPO opened on 21 May 2026 and closed on 25 May 2026."
+    },
+    {
+      "question": "What is the issue price of the Q-Line Biotech IPO?",
+      "answer": "The price band is ₹326 – ₹343 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Q-Line Biotech IPO?",
+      "answer": "The lot size is 400 shares."
+    },
+    {
+      "question": "What is the total issue size of the Q-Line Biotech IPO?",
+      "answer": "The total issue size is ₹214.48 Crore (entirely Fresh Issue)."
+    },
+    {
+      "question": "Where will Q-Line Biotech shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 29 May 2026."
+    },
+    {
+      "question": "What is the main object of the Q-Line Biotech IPO?",
+      "answer": "The main objects are to meet working capital requirements and repay borrowings."
+    }
+  ]
+},
+{
+  "id": 83,
+  "name": "Bio-Medica Laboratories",
+  "logo": "/images/ipo/biomedicalaboratories.png",
+  "minInvestment": "₹2,78,000",
+  "open": "21 May 2026",
+  "close": "25 May 2026",
+  "listing": "29 May 2026",
+  "price": "132 – 139",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "Bio-Medica Laboratories Limited",
+    "industry_sector": "Pharmaceuticals - Injectable Formulations (Parenteral)",
+    "founded_year": "2015",
+    "promoters": [
+      "Mr. Mukesh Mehta",
+      "Mr. Pradeep Mehta"
+    ],
+    "description": "Bio-Medica Laboratories Limited is engaged in the manufacturing and trading of pharmaceutical parenteral formulations (injectables). The company produces a wide range of ethical drugs, generic drugs, and OTC medications in liquid and dry powder injectable forms for human and veterinary use. It operates on a B2B contract manufacturing model and holds GMP & GLP certifications from the Food & Drugs Administration, Madhya Pradesh. The company has two manufacturing facilities in Indore, Madhya Pradesh."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Bio-Medica Laboratories Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹132",
+    "price_band_max": "₹139",
+    "lot_size": 1000,
+    "total_issue_size": "₹52.43 Cr (37,72,000 shares)",
+    "fresh_issue_size": "₹47.19 Cr (33,94,800 shares)",
+    "offer_for_sale": "₹5.24 Cr (3,77,200 shares)",
+    "shares_offered": "37,72,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹139",
+    "minimum_investment": "₹2,78,000 (2 lots / 2,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹174.79 Cr",
+    "pre_issue_shareholding": "Promoters 99.99%",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Contract manufacturing of liquid and dry powder injectable pharmaceutical formulations on B2B basis.",
+    "products_services": [
+      "Liquid Injectables (58 products)",
+      "Dry Powder Injectables (15 products)",
+      "Generic & Branded Pharmaceuticals",
+      "OTC Medications"
+    ],
+    "competitive_strengths": [
+      "Multi-product manufacturing capability",
+      "GMP & GLP certified facilities",
+      "Experienced promoters and team",
+      "Quality assurance focus"
+    ],
+    "risks": [
+      "Highly competitive and fragmented pharma segment",
+      "Regulatory risks",
+      "Raw material price volatility"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "21 May 2026",
+    "ipo_close_date": "25 May 2026",
+    "basis_of_allotment_date": "26 May 2026",
+    "refund_initiation_date": "27 May 2026",
+    "demat_credit_date": "27 May 2026",
+    "listing_date": "29 May 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_loan": "₹6.50 Cr",
+    "setting_up_new_manufacturing_facility": "₹28.50 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "1.00%",
+    "hni_nii_quota": "48.98%",
+    "retail_quota": "50.01%",
+    "market_maker": "1,89,000 shares (5.01%)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹2,78,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3000",
+      "amount": "₹4,17,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "8000",
+      "amount": "₹11,12,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "54.41% (30 Nov 2025) / 99.59% (31 Mar 2025)",
+    "roce": "23.22% (30 Nov 2025) / 48.20% (31 Mar 2025)",
+    "pat_margin": "30.35% (30 Nov 2025) / 25.64% (31 Mar 2025)",
+    "ebitda_margin": "47.11% (30 Nov 2025) / 39.83% (31 Mar 2025)",
+    "debt_to_equity": "2.23 (30 Nov 2025) / 1.02 (31 Mar 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "30 Nov 2025",
+      "assets": "65.17 Cr",
+      "total_income": "28.63 Cr",
+      "pat": "8.66 Cr",
+      "ebitda": "13.45 Cr",
+      "net_worth": "17.12 Cr",
+      "total_borrowing": "38.17 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "39.12 Cr",
+      "total_income": "38.33 Cr",
+      "pat": "9.79 Cr",
+      "ebitda": "15.21 Cr",
+      "net_worth": "14.73 Cr",
+      "total_borrowing": "15.01 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "19.53 Cr",
+      "total_income": "15.34 Cr",
+      "pat": "2.50 Cr",
+      "ebitda": "5.63 Cr",
+      "net_worth": "4.94 Cr",
+      "total_borrowing": "10.49 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "17.57 Cr",
+      "total_income": "16.25 Cr",
+      "pat": "0.33 Cr",
+      "ebitda": "1.70 Cr",
+      "net_worth": "2.44 Cr",
+      "total_borrowing": "9.61 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 21 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Skyline Financial Services Pvt. Ltd.",
+    "registrar_website": "https://www.skylinerta.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Narnolia Financial Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No. 11B-11C,Sector-E, Sanwer Road Industrial Area, Industrial Estate (Indore),Indore, Madhya Pradesh, 452015",
+    "company_website": "https://biomedica.co.in/",
+    "company_email": "companysecretary@biomedica.co.in",
+    "company_phone": "+91 7314102751"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/rhp_bio_medicallaboratories.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Bio-Medica Laboratories Limited do?",
+      "answer": "The company is engaged in manufacturing and trading of pharmaceutical parenteral (injectable) formulations in liquid and dry powder forms on a contract manufacturing (B2B) basis."
+    },
+    {
+      "question": "When did the Bio-Medica Laboratories IPO open and close?",
+      "answer": "The IPO opened on 21 May 2026 and closed on 25 May 2026."
+    },
+    {
+      "question": "What is the issue price of the Bio-Medica Laboratories IPO?",
+      "answer": "The price band is ₹132 – ₹139 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Bio-Medica Laboratories IPO?",
+      "answer": "The lot size is 1,000 shares."
+    },
+    {
+      "question": "What is the total issue size of the Bio-Medica Laboratories IPO?",
+      "answer": "The total issue size is ₹52.43 Crore (Fresh Issue ₹47.19 Cr + OFS ₹5.24 Cr)."
+    },
+    {
+      "question": "Where will Bio-Medica Laboratories shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 29 May 2026."
+    },
+    {
+      "question": "What is the main object of the Bio-Medica Laboratories IPO?",
+      "answer": "The main objects are repayment of loan and setting up a new manufacturing facility."
+    }
+  ]
+},
+{
+  "id": 84,
+  "name": "Vegorama Punjabi Angithi",
+  "logo": "/images/ipo/vegoramapunjabiangithi.png",
+  "minInvestment": "₹2,46,400",
+  "open": "20 May 2026",
+  "close": "22 May 2026",
+  "listing": "27 May 2026",
+  "price": "73 – 77",
+  "lot": 1600,
+
+  "about_company": {
+    "company_name": "Vegorama Punjabi Angithi Limited",
+    "industry_sector": "Restaurants & Cloud Kitchens (North Indian / Punjabi Cuisine)",
+    "founded_year": "2022",
+    "promoters": [
+      "Mr. Deepak Chadha",
+      "Mr. Subash Chander Chadha",
+      "Mrs. Teenu Chadha"
+    ],
+    "description": "Vegorama Punjabi Angithi Limited operates a chain of vegetarian quick-service restaurants and cloud kitchens under the brand 'Punjabi Angithi'. The company specializes in affordable North Indian (Punjabi) cuisine and offers dine-in, takeaway, home delivery, and cloud kitchen services. It currently operates 19 cloud kitchens and 2 fine-dining restaurants primarily in Delhi NCR. The company focuses on quality, value-for-money meals, and expansion through new outlets, centralized kitchens, and cloud kitchens."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Vegorama Punjabi Angithi Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹73",
+    "price_band_max": "₹77",
+    "lot_size": 1600,
+    "total_issue_size": "₹38.38 Cr (49,84,000 shares)",
+    "fresh_issue_size": "₹30.70 Cr (approx 39,87,000 shares)",
+    "offer_for_sale": "₹7.68 Cr (9,96,800 shares)",
+    "shares_offered": "49,84,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹77",
+    "minimum_investment": "₹2,46,400 (2 lots / 3,200 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹127.90 Cr",
+    "pre_issue_shareholding": "Promoters 99.41%",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Vegetarian quick-service restaurant chain and cloud kitchen operator specializing in Punjabi and North Indian cuisine.",
+    "products_services": [
+      "Dine-in Services",
+      "Takeaway & Home Delivery",
+      "Cloud Kitchen Operations",
+      "Catering Services",
+      "Fine Dining"
+    ],
+    "competitive_strengths": [
+      "Strong brand recognition in Punjabi cuisine",
+      "Affordable pricing with quality focus",
+      "Omnichannel presence (Dine-in + Cloud + Delivery)",
+      "Experienced management team",
+      "Scalable cloud kitchen model"
+    ],
+    "risks": [
+      "Intense competition in QSR and cloud kitchen segment",
+      "Dependence on food delivery platforms",
+      "Rising raw material and operational costs"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "20 May 2026",
+    "ipo_close_date": "22 May 2026",
+    "basis_of_allotment_date": "25 May 2026",
+    "refund_initiation_date": "26 May 2026",
+    "demat_credit_date": "26 May 2026",
+    "listing_date": "27 May 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_for_banquet_and_fine_dine": "₹11.82 Cr",
+    "capital_expenditure_for_centralized_kitchen": "₹4.27 Cr",
+    "capital_expenditure_for_new_cloud_kitchens": "₹4.93 Cr",
+    "upgradation_of_existing_cloud_kitchens": "₹2.30 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.97%",
+    "hni_nii_quota": "15.01%",
+    "retail_quota": "35.02%",
+    "market_maker": "5.04%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,46,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "4800",
+      "amount": "₹3,69,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 lots",
+      "shares": "14400",
+      "amount": "₹11,08,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "47.93% (Dec 31, 2025) / 80.39% (Mar 31, 2025)",
+    "roce": "53.73% (Dec 31, 2025) / 76.03% (Mar 31, 2025)",
+    "pat_margin": "8.60% (Dec 31, 2025) / 8.11% (Mar 31, 2025)",
+    "ebitda_margin": "11.81% (Dec 31, 2025) / 10.72% (Mar 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2023",
+      "assets": "5.59 Cr",
+      "total_income": "16.91 Cr",
+      "pat": "0.84 Cr",
+      "ebitda": "1.16 Cr",
+      "net_worth": "1.47 Cr",
+      "total_borrowing": "0.23 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "18.35 Cr",
+      "total_income": "66.37 Cr",
+      "pat": "4.64 Cr",
+      "ebitda": "6.04 Cr",
+      "net_worth": "6.12 Cr",
+      "total_borrowing": "4.00 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "24.77 Cr",
+      "total_income": "102.06 Cr",
+      "pat": "8.22 Cr",
+      "ebitda": "10.86 Cr",
+      "net_worth": "14.34 Cr",
+      "total_borrowing": "5.05 Cr"
+    },
+    {
+      "period": "31 Dec 2025",
+      "assets": "31.81 Cr",
+      "total_income": "105.35 Cr",
+      "pat": "9.04 Cr",
+      "ebitda": "12.40 Cr",
+      "net_worth": "23.37 Cr",
+      "total_borrowing": "3.62 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 20 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Corporate Makers Capital Ltd."
+  },
+
+  "company_information": {
+    "company_address": "B-376, Third Floor, Meera Bagh,Outer Ring Road Paschim Vihar,New Delhi, New Delhi, 110063",
+    "company_website": "https://www.punjabiangithi.in/",
+    "company_email": "compliance@punjabiangithi.in",
+    "company_phone": "+91-11-46112637"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/vegorama-punjabi-angithi-rhp.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Vegorama Punjabi Angithi Limited do?",
+      "answer": "The company operates vegetarian quick-service restaurants and cloud kitchens specializing in Punjabi and North Indian cuisine under the brand 'Punjabi Angithi'."
+    },
+    {
+      "question": "When did the Vegorama Punjabi Angithi IPO open and close?",
+      "answer": "The IPO opened on 20 May 2026 and closed on 22 May 2026."
+    },
+    {
+      "question": "What is the issue price of the Vegorama Punjabi Angithi IPO?",
+      "answer": "The price band is ₹73 – ₹77 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Vegorama Punjabi Angithi IPO?",
+      "answer": "The lot size is 1,600 shares."
+    },
+    {
+      "question": "What is the total issue size of the Vegorama Punjabi Angithi IPO?",
+      "answer": "The total issue size is ₹38.38 Crore (Fresh Issue + OFS)."
+    },
+    {
+      "question": "Where will Vegorama Punjabi Angithi shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 27 May 2026."
+    }
+  ]
 }
+
 
 
 
