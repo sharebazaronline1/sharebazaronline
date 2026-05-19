@@ -107,24 +107,46 @@ useEffect(() => {
         ) : blogs.length === 0 ? (
           <div className="text-center text-gray-500">No blogs found</div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-            {blogs.map((post, i) => (
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5">            
+           {blogs.map((post, i) => (
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
-                className="group bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full"
+               className="
+                        group
+                        bg-white
+                        rounded-2xl
+                        shadow-md
+                        hover:shadow-xl
+                        transition-all duration-300
+                        cursor-pointer
+                        flex flex-col
+                        h-full
+                        overflow-hidden
+                      "
                 onClick={() => handleCardClick(post)}
               >
                 {/* IMAGE */}
-                <div className="relative h-36 px-3 pt-3">
-                  <img
-                    src={post.image_url}
-                    alt={post.title}
-                    className="w-full h-full object-cover rounded-md"
-                  />
-                </div>
+            <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+
+              <img
+                src={post.image_url}
+                alt={post.title}
+                loading="lazy"
+                className="
+                  w-full
+                  h-full
+                  object-cover
+                  object-center
+                  rounded-none
+                  transition-transform duration-500
+                  group-hover:scale-105
+                "
+              />
+
+            </div>
 
                 {/* CONTENT */}
                 <div className="p-3 flex flex-col flex-1">
