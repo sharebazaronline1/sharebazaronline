@@ -107,7 +107,7 @@ useEffect(() => {
         ) : blogs.length === 0 ? (
           <div className="text-center text-gray-500">No blogs found</div>
         ) : (
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5">            
+           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5">           
            {blogs.map((post, i) => (
               <motion.article
                 key={post.id}
@@ -129,7 +129,7 @@ useEffect(() => {
                 onClick={() => handleCardClick(post)}
               >
                 {/* IMAGE */}
-            <div className="relative aspect-[16/9] overflow-hidden bg-gray-100">
+           <div className="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-gray-100">
 
               <img
                 src={post.image_url}
@@ -149,14 +149,14 @@ useEffect(() => {
             </div>
 
                 {/* CONTENT */}
-                <div className="p-3 flex flex-col flex-1">
+          <div className="p-2 sm:p-3 flex flex-col flex-1">
                   <time className="text-[11px] text-gray-500 mb-1">
                     {post.published_at
                       ? new Date(post.published_at).toLocaleDateString("en-IN")
                       : "—"}
                   </time>
 
-                  <h3 className="text-sm font-semibold text-gray-900 leading-snug line-clamp-3 mb-3">
+                  <h3 className="text-[13px] sm:text-sm font-semibold text-gray-900 leading-snug line-clamp-3 mb-2">
                     {post.title}
                   </h3>
 
