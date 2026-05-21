@@ -614,15 +614,21 @@ minLotSize: finalLotSize,
             ) : (
               <>
                 {/* Mobile: Horizontal scroll - reduced gap */}
-                <div className="lg:hidden overflow-x-auto -mx-4 px-4 pb-6 scrollbar-hide">
-                  <div className="flex gap-3">  {/* Reduced from gap-6 to gap-3 */}
-                    {unlistedStocks.map((stock) => (
-                      <div className="min-w-[250px] flex-shrink-0" key={stock.id}>
-                        <UnlistedCard stock={stock} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                {/* MOBILE */}
+<div className="lg:hidden space-y-3">
+
+  {unlistedStocks.slice(0, 3).map((stock) => (
+
+    <div
+      className="w-full"
+      key={stock.id}
+    >
+      <UnlistedCard stock={stock} />
+    </div>
+
+  ))}
+
+</div>
 
                 {/* Desktop: Grid - reduced gap */}
                 <div className="hidden lg:grid grid-cols-4 gap-3">  {/* Reduced from gap-6 to gap-3 */}

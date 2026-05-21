@@ -82,11 +82,16 @@ const BlogCard = ({ post, index }) => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08 }}
-      className="flex-shrink-0 w-64 sm:w-72"
+   className="
+  w-full
+  max-w-full
+  sm:flex-shrink-0
+  sm:w-72
+"
     >
       <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
         {/* Smaller Image */}
-        <div className="h-36 relative overflow-hidden bg-gray-100">
+       <div className="h-44 sm:h-36 relative overflow-hidden bg-gray-100">
           <img
             src={post.image}
             alt={post.title}
@@ -97,7 +102,7 @@ const BlogCard = ({ post, index }) => {
         </div>
 
         {/* Compact Content */}
-        <div className="p-4 flex flex-col flex-1">
+       <div className="p-3 sm:p-4 flex flex-col flex-1">
           <h3 className="font-bold text-gray-900 text-base leading-tight line-clamp-2">
             {post.title}
           </h3>
@@ -140,17 +145,33 @@ export default function Blogs() {
   }, [isHovered]);
 
   return (
-     <section className="pt-16 pb-4 lg:pt-4 lg:pb-4">
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+   <section className="pt-4 pb-4 lg:pt-4 lg:pb-4">
+      <div className="max-w-full mx-auto px-2 sm:px-6 lg:px-8">
         <div
           className="overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <div
-            ref={scrollRef}
-            className="flex gap-5 py-4 overflow-x-auto scrollbar-hide scroll-smooth"
-          >
+        {/* MOBILE - SHOW ONLY 3 VERTICAL */}
+<div className="sm:hidden space-y-4 py-2">
+
+  {blogPosts.slice(0, 3).map((post, index) => (
+
+    <BlogCard
+      key={post.id}
+      post={post}
+      index={index}
+    />
+
+  ))}
+
+</div>
+
+{/* DESKTOP / TABLET AUTO SCROLL */}
+<div
+  ref={scrollRef}
+  className="hidden sm:flex gap-5 py-4 overflow-x-auto scrollbar-hide scroll-smooth"
+>
             {/* Duplicate for seamless loop */}
             {[...blogPosts, ...blogPosts].map((post, index) => (
               <BlogCard

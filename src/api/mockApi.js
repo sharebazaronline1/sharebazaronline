@@ -16638,6 +16638,226 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 27 May 2026."
     }
   ]
+},
+{
+  "id": 85,
+  "name": "M R Maniveni Foods",
+  "logo": "/images/ipo/mrmanivenifoods.png",
+  "minInvestment": "₹2,08,000",
+  "open": "22 May 2026",
+  "close": "26 May 2026",
+  "listing": "01 Jun 2026",
+  "price": "51 – 52",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "M R Maniveni Foods Limited",
+    "industry_sector": "Food Processing - Pulses (Urad Dal & Toor Dal)",
+    "founded_year": "2010",
+    "promoters": [
+      "K R Manikandan",
+      "M Chandra",
+      "K Selvam"
+    ],
+    "description": "M R Maniveni Foods Limited is engaged in the business of processing, milling, packaging, and distribution of pulses, primarily Urad Dal and Toor Dal. The company operates on a B2B model and supplies to wholesalers, retailers, and institutional buyers. It uses automatic and semi-automatic milling units with a focus on quality and hygiene."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "M R Maniveni Foods Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹51",
+    "price_band_max": "₹52",
+    "lot_size": 2000,
+    "total_issue_size": "₹27.04 Cr (52,00,000 shares)",
+    "fresh_issue_size": "₹27.04 Cr (52,00,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "52,00,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹52",
+    "minimum_investment": "₹2,08,000 (2 lots / 4,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹101.78 Cr",
+    "pre_issue_shareholding": "Promoters 98.68%",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Processing and distribution of pulses (mainly Urad Dal and Toor Dal) on a B2B basis.",
+    "products_services": [
+      "Urad Dal",
+      "Toor Dal",
+      "Other Pulses & Agri Commodities"
+    ],
+    "competitive_strengths": [
+      "Longstanding presence in pulses industry",
+      "Experienced promoters and professional management",
+      "Scalable business model",
+      "Focus on quality and hygiene",
+      "Smooth operational flow"
+    ],
+    "risks": [
+      "Highly competitive and fragmented pulses segment",
+      "Raw material price volatility",
+      "Working capital intensive"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "22 May 2026",
+    "ipo_close_date": "26 May 2026",
+    "basis_of_allotment_date": "27 May 2026",
+    "refund_initiation_date": "29 May 2026",
+    "demat_credit_date": "29 May 2026",
+    "listing_date": "01 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_for_construction_of_factory": "₹12.69 Cr",
+    "capital_expenditure_for_plant_and_machinery": "₹13.61 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.64%",
+    "hni_nii_quota": "15.30%",
+    "retail_quota": "35.06%",
+    "market_maker": "5.00%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,08,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "6000",
+      "amount": "₹3,12,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "10 lots",
+      "shares": "20000",
+      "amount": "₹10,40,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "16.48% (Dec 31, 2025) / 26.67% (Mar 31, 2025)",
+    "roce": "12.58% (Dec 31, 2025) / 17.14% (Mar 31, 2025)",
+    "pat_margin": "2.87% (Dec 31, 2025) / 2.03% (Mar 31, 2025)",
+    "ebitda_margin": "5.74% (Dec 31, 2025) / 3.84% (Mar 31, 2025)",
+    "debt_to_equity": "1.02 (Dec 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Dec 2025",
+      "assets": "49.92 Cr",
+      "total_income": "116.19 Cr",
+      "pat": "3.34 Cr",
+      "ebitda": "6.67 Cr",
+      "net_worth": "21.93 Cr",
+      "total_borrowing": "22.40 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "41.12 Cr",
+      "total_income": "203.52 Cr",
+      "pat": "4.13 Cr",
+      "ebitda": "7.82 Cr",
+      "net_worth": "18.59 Cr",
+      "total_borrowing": "20.46 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "29.02 Cr",
+      "total_income": "155.00 Cr",
+      "pat": "2.18 Cr",
+      "ebitda": "5.05 Cr",
+      "net_worth": "12.36 Cr",
+      "total_borrowing": "15.00 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "24.80 Cr",
+      "total_income": "119.61 Cr",
+      "pat": "1.56 Cr",
+      "ebitda": "3.72 Cr",
+      "net_worth": "10.18 Cr",
+      "total_borrowing": "9.93 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 22 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Capital Square Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "S.No.220/3A-3B, Madhavaram-Redhills High Road (Near Vadaperumbakkam), Madhavaram, Chennai, Tamil Nadu 600060",
+    "company_website": "https://www.mrgolddhall.com/",
+    "company_email": "cs@mrgolddhall.com",
+    "company_phone": "+91 98407 77269"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/m-r-maniveni-foods-rhp.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does M R Maniveni Foods Limited do?",
+      "answer": "The company is engaged in processing, milling, packaging, and distribution of pulses, primarily Urad Dal and Toor Dal, catering mainly to B2B customers."
+    },
+    {
+      "question": "When did the M R Maniveni Foods IPO open and close?",
+      "answer": "The IPO opened on 22 May 2026 and closed on 26 May 2026."
+    },
+    {
+      "question": "What is the issue price of the M R Maniveni Foods IPO?",
+      "answer": "The price band is ₹51 – ₹52 per equity share."
+    },
+    {
+      "question": "What is the lot size of the M R Maniveni Foods IPO?",
+      "answer": "The lot size is 2,000 shares."
+    },
+    {
+      "question": "What is the total issue size of the M R Maniveni Foods IPO?",
+      "answer": "The total issue size is ₹27.04 Crore (entirely Fresh Issue)."
+    },
+    {
+      "question": "Where will M R Maniveni Foods shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 01 June 2026."
+    },
+    {
+      "question": "What is the main object of the M R Maniveni Foods IPO?",
+      "answer": "The main objects are capital expenditure for factory construction, plant and machinery, and general corporate purposes."
+    }
+  ]
 }
 
 

@@ -211,18 +211,23 @@ const BrokerAnalyzerGuide = () => {
                 <div className="flex-1 w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
                   {/* Trading Segments – moved to last position */}
                   <div>
-                    <h5 className="font-semibold text-gray-800 mb-3 text-lg">Trading Segments</h5>
-                    <div className="flex flex-wrap gap-2.5">
-                      {broker.segments.map((seg, i) => (
-                        <span
-                          key={i}
-                          className="px-4 py-1.5 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-200 shadow-sm"
-                        >
-                          {seg}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+  <h5 className="font-semibold text-gray-800 mb-3 text-lg">Trading Segments</h5>
+  <div className="flex flex-wrap gap-2.5">
+    {broker.segments.map((seg, i) => (
+      <span
+        key={i}
+        className="px-4 py-1.5 rounded-lg text-sm font-medium shadow-sm border"
+        style={{
+          backgroundColor: 'rgba(16, 185, 129, 0.1)', // light green bg
+          color: '#10b981',                           // green text
+          borderColor: 'rgba(16, 185, 129, 0.2)'     // subtle green border
+        }}
+      >
+        {seg}
+      </span>
+    ))}
+  </div>
+</div>
 
                   {/* Indicative Charges – at the very end */}
                   <div>
