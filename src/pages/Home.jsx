@@ -338,8 +338,8 @@ minLotSize: finalLotSize,
   </div>
 </section>
        {/* BROKER ANALYZER */}
-     <section className="py-4 lg:py-8 overflow-hidden">
-  <div className="w-full max-w-7xl mx-auto px-2 sm:px-5 lg:px-8">
+     <section className="py-3 lg:py-2 overflow-hidden">
+  <div className="w-full max-w-full mx-auto px-2 sm:px-5 lg:px-8">
 
    <div className="
   w-full

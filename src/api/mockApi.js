@@ -16858,7 +16858,407 @@ export const fetchIPOs = async () => {
       "answer": "The main objects are capital expenditure for factory construction, plant and machinery, and general corporate purposes."
     }
   ]
+},
+{
+  "id": 86,
+  "name": "Rajnandini Fashion",
+  "logo": "/images/ipo/rajnandinifashion.png",
+  "minInvestment": "₹2,52,000",
+  "open": "26 May 2026",
+  "close": "29 May 2026",
+  "listing": "03 Jun 2026",
+  "price": "59 – 63",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Rajnandini Fashion India Limited",
+    "industry_sector": "Textiles & Apparel / Ladies Ethnic Wear",
+    "founded_year": "2010",
+    "promoters": [
+      "Vikesh Sushil Lunawat",
+      "Sushil Kumar Lunawat",
+      "Priyanka Chopra"
+    ],
+    "description": "Rajnandini Fashion India Limited is engaged in the design, manufacturing, and sale of women’s ethnic and casual wear. The company offers a wide range of products including sarees, kurtis, kurta sets, unstitched dress materials, tops, tunics, dresses, and maternity wear. It operates through both B2C (own website and major e-commerce platforms like Amazon, Flipkart, Myntra, Ajio, Nykaa) and B2B channels. The company has in-house manufacturing facilities in Surat and Jaipur."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Rajnandini Fashion India Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹59",
+    "price_band_max": "₹63",
+    "lot_size": 2000,
+    "total_issue_size": "₹18.21 Cr (28,90,000 shares)",
+    "fresh_issue_size": "₹18.21 Cr (28,90,000 shares)",
+    "offer_for_sale": "0",
+    "shares_offered": "28,90,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹63",
+    "minimum_investment": "₹2,52,000 (2 lots / 4,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹65.33 Cr",
+    "pre_issue_shareholding": "Promoters 97.19%",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "Design, manufacturing, and sale of women’s ethnic and casual wear through online and offline channels.",
+    "products_services": [
+      "Sarees",
+      "Kurtis & Kurta Sets",
+      "Unstitched Dress Materials",
+      "Tops, Tunics & Dresses",
+      "Maternity Wear"
+    ],
+    "competitive_strengths": [
+      "Wide product range across multiple price points",
+      "Strong presence on major e-commerce platforms",
+      "In-house manufacturing facilities",
+      "Experienced promoters"
+    ],
+    "risks": [
+      "Intense competition in ethnic wear segment",
+      "Changing fashion trends",
+      "Dependence on e-commerce platforms"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "26 May 2026",
+    "ipo_close_date": "29 May 2026",
+    "basis_of_allotment_date": "01 Jun 2026",
+    "refund_initiation_date": "02 Jun 2026",
+    "demat_credit_date": "02 Jun 2026",
+    "listing_date": "03 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_capital_expenditure_for_new_manufacturing_facility": "₹1.35 Cr",
+    "repayment_of_borrowings": "₹5.50 Cr",
+    "working_capital_requirements": "₹7.00 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.78%",
+    "hni_nii_quota": "15.09%",
+    "retail_quota": "35.13%",
+    "market_maker": "5.05%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,52,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "6000",
+      "amount": "₹3,78,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "16000",
+      "amount": "₹10,08,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "74.74% (Mar 31, 2025)",
+    "roce": "40.00% (Mar 31, 2025)",
+    "pat_margin": "16.50% (Mar 31, 2025)",
+    "ebitda_margin": "24.38% (Mar 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Dec 2025",
+      "assets": "35.80 Cr",
+      "total_income": "31.22 Cr",
+      "pat": "5.14 Cr",
+      "ebitda": "7.11 Cr",
+      "net_worth": "14.42 Cr",
+      "total_borrowing": "13.96 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "25.35 Cr",
+      "total_income": "31.27 Cr",
+      "pat": "5.06 Cr",
+      "ebitda": "7.48 Cr",
+      "net_worth": "9.31 Cr",
+      "total_borrowing": "8.84 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "15.74 Cr",
+      "total_income": "23.60 Cr",
+      "pat": "2.29 Cr",
+      "ebitda": "3.79 Cr",
+      "net_worth": "4.24 Cr",
+      "total_borrowing": "7.01 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "11.71 Cr",
+      "total_income": "28.02 Cr",
+      "pat": "0.37 Cr",
+      "ebitda": "1.03 Cr",
+      "net_worth": "1.95 Cr",
+      "total_borrowing": "6.19 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹8 (as of 22 May 2026)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "₹71 – ₹75"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 26 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Seren Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "G1-41, RIICO, Tonk Road, Sitapura Industrial Area, Jaipur, Rajasthan 302022",
+    "company_website": "https://rfil.in/",
+    "company_email": "cs@rfil.in",
+    "company_phone": "+91-7878352054"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/rajnandini-fashion-india-rhp.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Rajnandini Fashion India Limited do?",
+      "answer": "The company designs, manufactures, and sells women’s ethnic and casual wear including sarees, kurtis, dress materials, tops, tunics, and maternity wear."
+    },
+    {
+      "question": "When did the Rajnandini Fashion IPO open and close?",
+      "answer": "The IPO opens on 26 May 2026 and closes on 29 May 2026."
+    },
+    {
+      "question": "What is the issue price of the Rajnandini Fashion IPO?",
+      "answer": "The price band is ₹59 – ₹63 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Rajnandini Fashion IPO?",
+      "answer": "The lot size is 2,000 shares."
+    },
+    {
+      "question": "What is the total issue size of the Rajnandini Fashion IPO?",
+      "answer": "The total issue size is ₹18.21 Crore (entirely Fresh Issue)."
+    },
+    {
+      "question": "Where will Rajnandini Fashion shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 03 June 2026."
+    }
+  ]
+},
+{
+  "id": 87,
+  "name": "SMR Jewels",
+  "logo": "/images/ipo/smrjewels.png",
+  "minInvestment": "₹2,70,000",
+  "open": "26 May 2026",
+  "close": "29 May 2026",
+  "listing": "03 Jun 2026",
+  "price": "128 – 135",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "SMR Jewels Limited",
+    "industry_sector": "Jewellery / Designer Heritage Jewellery",
+    "founded_year": "2018",
+    "promoters": [
+      "S Murugesh",
+      "R Sathish Kumar",
+      "M Sangeetha"
+    ],
+    "description": "SMR Jewels Limited is engaged in the design and distribution of designer heritage jewellery inspired by Indian culture, mythology, spirituality, and nature. The company offers traditional and contemporary jewellery collections including Polki, Meenakari, bridal jewellery, festive jewellery, and nature-inspired jewellery. The company primarily operates through a B2B business model supplying jewellery to retailers, jewellery chains, boutiques, and brands across India."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "SMR Jewels Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹128",
+    "price_band_max": "₹135",
+    "lot_size": 1000,
+    "total_issue_size": "₹67.23 Cr (49,80,000 shares)",
+    "fresh_issue_size": "₹54 Cr (40,00,000 shares)",
+    "offer_for_sale": "₹13.23 Cr (9,80,000 shares)",
+    "shares_offered": "49,80,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹135",
+    "minimum_investment": "₹2,70,000 (2 lots)",
+    "market_cap_post_issue": "Pre-IPO ≈ ₹198 Cr",
+    "pre_issue_shareholding": "Promoters high stake",
+    "post_issue_shareholding": "Promoters diluted"
+  },
+
+  "company_overview": {
+    "business_model": "B2B jewellery supply model catering to retailers, jewellery chains, boutique stores, and jewellery brands.",
+    "products_services": [
+      "Designer Heritage Jewellery",
+      "Nature-Inspired Jewellery",
+      "Polki Jewellery",
+      "Meenakari Jewellery",
+      "Bridal Jewellery",
+      "Festive Jewellery"
+    ],
+    "competitive_strengths": [
+      "Strong heritage-inspired jewellery portfolio",
+      "Experienced in-house design team",
+      "Strong retailer and boutique relationships",
+      "Pan-India artisan and job-worker network"
+    ],
+    "risks": [
+      "Dependence on third-party artisans",
+      "Designs are not formally registered",
+      "High competition in jewellery industry"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "26 May 2026",
+    "ipo_close_date": "29 May 2026",
+    "basis_of_allotment_date": "01 Jun 2026",
+    "refund_initiation_date": "02 Jun 2026",
+    "demat_credit_date": "02 Jun 2026",
+    "listing_date": "03 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "construction_of_jewellery_studio": "₹6.40 Cr",
+    "repayment_or_prepayment_of_borrowings": "₹6.50 Cr",
+    "long_term_working_capital_requirement": "₹30.00 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "9.50%",
+    "hni_nii_quota": "38.01%",
+    "retail_quota": "47.49%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹2,70,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "71.76%",
+    "roce": "47.92%",
+    "pat_margin": "3.96%",
+    "ebitda_margin": "5.76%"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2025",
+      "total_income": "₹263.25 Cr",
+      "pat": "₹10.41 Cr",
+      "ebitda": "₹15.16 Cr"
+    },
+    {
+      "period": "FY2024",
+      "total_income": "₹124.52 Cr",
+      "pat": "₹3.85 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 26 May 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Purva Sharegistry (India) Pvt. Ltd.",
+    "registrar_website": "https://www.purvashare.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Wealth Mine Networks Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "3 Vrindavan Apartments, Gulbai Tekra, Ahmedabad, Gujarat 380006",
+    "company_website": "https://smrjewels.in/",
+    "company_email": "info@smrjewels.in",
+    "company_phone": "+91-079-4941033"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/smr-jewels-rhp.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does SMR Jewels Limited do?",
+      "answer": "The company designs and distributes heritage-inspired jewellery including bridal, festive, Polki, Meenakari, and nature-inspired jewellery collections."
+    },
+    {
+      "question": "When did the SMR Jewels IPO open and close?",
+      "answer": "The IPO opens on 26 May 2026 and closes on 29 May 2026."
+    },
+    {
+      "question": "What is the issue price of the SMR Jewels IPO?",
+      "answer": "The price band is ₹128 to ₹135 per share."
+    },
+    {
+      "question": "What is the lot size of the SMR Jewels IPO?",
+      "answer": "The lot size is 1,000 shares."
+    },
+    {
+      "question": "What is the total issue size of the SMR Jewels IPO?",
+      "answer": "The total issue size is ₹67.23 Crore (Fresh Issue + OFS)."
+    },
+    {
+      "question": "Where will SMR Jewels shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 03 June 2026."
+    }
+  ]
 }
+
 
 
 
