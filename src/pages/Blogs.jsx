@@ -1,116 +1,84 @@
 // src/components/Blogs.jsx
+
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { supabase } from "../lib/supabase";
+import { fetchInsightDetails } from "../api/mockApi";
+import slugify from "../utils/slugify";
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Meesho IPO 2025: Complete Details & Review",
-    category: "Upcoming IPO",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
-    date: "2 hours ago",
-  },
-  {
-    id: 2,
-    title: "December 2025 SME IPO Bonanza – 12 New Issues",
-    category: "SME IPO",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
-    date: "1 Dec 2025",
-  },
-  {
-    id: 3,
-    title: "8 MEGA IPOs That Delivered 500%+ Returns in 2025",
-    category: "Listing Gains",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80",
-    date: "14 Dec 2025",
-  },
-  {
-    id: 4,
-    title: "Top 10 IPOs of 2025 – Spectacular Listing Performance",
-    category: "IPO Performance",
-    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80",
-    date: "13 Dec 2025",
-  },
-  {
-    id: 5,
-    title: "Reliance Industries Announces 1:1 Bonus Issue",
-    category: "Bonus Issue",
-    image: "https://images.unsplash.com/photo-1559526324-c1f0a2a9b2c5?w=800&q=80",
-    date: "7 Dec 2025",
-  },
-  {
-    id: 6,
-    title: "TCS Declares ₹48 Final Dividend – Record Date 15 Dec",
-    category: "Dividend",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    date: "13 Dec 2025",
-  },
-  {
-    id: 7,
-    title: "HDFC Bank Rights Issue Opens – ₹25,000 Cr Fundraise",
-    category: "Rights Issue",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80",
-    date: "9 Dec 2025",
-  },
-  {
-    id: 8,
-    title: "Axis Multi-Asset Allocation Fund NFO Opens",
-    category: "NFO",
-    image: "https://images.unsplash.com/photo-1559526324-593bbc0b6dc2?w=800&q=80",
-    date: "Today",
-  },
-  {
-    id: 9,
-    title: "Embassy REIT Announces 8.2% Dividend Yield",
-    category: "REITs",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-    date: "6 Dec 2025",
-  },
-  {
-    id: 10,
-    title: "10.5% GoI Floating Rate Bonds 2035 – Should You Invest?",
-    category: "Bonds",
-    image: "https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800&q=80",
-    date: "4 days ago",
-  },
-];
-
-const BlogCard = ({ post, index }) => {
+const BlogCard = ({ post, index, onClick }) => {
   return (
     <motion.div
       whileHover={{ y: -4 }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.08 }}
-   className="
-  w-full
-  max-w-full
-  sm:flex-shrink-0
-  sm:w-72
-"
+      onClick={() => onClick(post)}
+      className="
+        w-full
+        max-w-full
+        sm:flex-shrink-0
+        sm:w-72
+        cursor-pointer
+      "
     >
-      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col h-full">
-        {/* Smaller Image */}
-       <div className="h-44 sm:h-36 relative overflow-hidden bg-gray-100">
-          <img
-            src={post.image}
-            alt={post.title}
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-        </div>
+      <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col h-full">
 
-        {/* Compact Content */}
-       <div className="p-3 sm:p-4 flex flex-col flex-1">
-          <h3 className="font-bold text-gray-900 text-base leading-tight line-clamp-2">
+        {/* IMAGE */}
+     {/* IMAGE */}
+<div className="relative overflow-hidden bg-gray-100">
+
+  <img
+    src={post.image_url || "/images/placeholder.jpg"}
+    alt={post.title}
+    loading="lazy"
+    className="
+      w-full
+      h-auto
+      sm:h-44
+      object-contain
+      sm:object-cover
+      sm:object-top
+      transition-transform
+      duration-500
+      group-hover:scale-105
+      bg-white
+    "
+  />
+
+  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+</div>
+
+        {/* CONTENT */}
+        <div className="p-4 flex flex-col flex-1">
+
+          <p className="text-[13px] sm:text-sm text-green-600 font-medium mb-2 leading-normal">
+            {post.category || "Insights"}
+          </p>
+
+          <h3
+            className="
+              font-medium
+              text-gray-900
+              text-[10px]
+              sm:text-sm
+              leading-[1.45]
+              break-words
+              line-clamp-3
+            "
+          >
             {post.title}
           </h3>
-          <p className="text-xs text-gray-500 mt-2">{post.date}</p>
 
-          {/* Read More */}
-          <div className="mt-auto pt-3">
-            <button className="text-green-600 font-medium text-xs hover:text-green-700 flex items-center gap-1 transition">
+          <p className="text-sm text-gray-500 mt-3">
+            {post.published_at
+              ? new Date(post.published_at).toLocaleDateString("en-IN")
+              : "—"}
+          </p>
+
+          <div className="mt-auto pt-4">
+            <button className="text-green-600 font-medium text-sm hover:text-green-700 transition">
               Read More →
             </button>
           </div>
@@ -121,66 +89,179 @@ const BlogCard = ({ post, index }) => {
 };
 
 export default function Blogs() {
-  const scrollRef = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
+  const scrollRef = useRef(null);
+
+  const [isHovered, setIsHovered] = useState(false);
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // FETCH BLOGS
   useEffect(() => {
-    if (!isHovered && scrollRef.current) {
+    const fetchBlogs = async () => {
+      setLoading(true);
+
+      try {
+        // SUPABASE BLOGS
+        const { data: dbData, error } = await supabase
+          .from("blogs")
+          .select("*")
+          .eq("status", "published");
+
+        if (error) {
+          console.error("Supabase error:", error);
+        }
+
+        // MOCK BLOGS
+        const mockData = await fetchInsightDetails();
+
+        const formattedMock = mockData.map((item) => ({
+          id: `mock-${item.id}`,
+          title: item.title,
+          image_url: item.image,
+          published_at: item.date,
+          reading_time: item.readTime,
+          category: item.category,
+          content: item.content,
+          source: "mock",
+        }));
+
+        const formattedDB = (dbData || []).map((item) => ({
+          ...item,
+          source: "db",
+        }));
+
+        // MERGE BOTH
+        let merged = [...formattedDB, ...formattedMock];
+
+        // REMOVE DUPLICATES
+        const uniqueMap = new Map();
+
+        merged.forEach((item) => {
+          if (!uniqueMap.has(item.title)) {
+            uniqueMap.set(item.title, item);
+          }
+        });
+
+        merged = Array.from(uniqueMap.values());
+
+        // SORT LATEST FIRST
+        merged.sort((a, b) => {
+          return new Date(b.published_at || 0) - new Date(a.published_at || 0);
+        });
+
+        setBlogs(merged);
+
+      } catch (err) {
+        console.error("Error fetching blogs:", err);
+      }
+
+      setLoading(false);
+    };
+
+    fetchBlogs();
+  }, []);
+
+  // AUTO SCROLL
+  useEffect(() => {
+    if (!isHovered && scrollRef.current && blogs.length > 0) {
       const container = scrollRef.current;
+
       let position = 0;
       const speed = 0.5;
+
+      let animationFrame;
 
       const scroll = () => {
         if (!isHovered) {
           position += speed;
+
           if (position >= container.scrollWidth / 2) {
             position = 0;
           }
+
           container.scrollLeft = position;
         }
-        requestAnimationFrame(scroll);
+
+        animationFrame = requestAnimationFrame(scroll);
       };
+
       scroll();
+
+      return () => cancelAnimationFrame(animationFrame);
     }
-  }, [isHovered]);
+  }, [isHovered, blogs]);
+
+  const handleCardClick = (post) => {
+    navigate(`/insight-hub/${post.id}/${slugify(post.title)}`);
+  };
+
+  if (loading) {
+    return (
+      <section className="pt-4 pb-4 lg:pt-4 lg:pb-4">
+        <div className="text-center text-gray-500">
+          Loading blogs...
+        </div>
+      </section>
+    );
+  }
+
+  if (blogs.length === 0) {
+    return (
+      <section className="pt-4 pb-4 lg:pt-4 lg:pb-4">
+        <div className="text-center text-gray-500">
+          No blogs found
+        </div>
+      </section>
+    );
+  }
 
   return (
-   <section className="pt-4 pb-4 lg:pt-4 lg:pb-4">
+    <section className="pt-4 pb-4 lg:pt-4 lg:pb-4">
       <div className="max-w-full mx-auto px-2 sm:px-6 lg:px-8">
+
         <div
           className="overflow-hidden"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-        {/* MOBILE - SHOW ONLY 3 VERTICAL */}
-<div className="sm:hidden space-y-4 py-2">
 
-  {blogPosts.slice(0, 3).map((post, index) => (
-
-    <BlogCard
-      key={post.id}
-      post={post}
-      index={index}
-    />
-
-  ))}
-
-</div>
-
-{/* DESKTOP / TABLET AUTO SCROLL */}
-<div
-  ref={scrollRef}
-  className="hidden sm:flex gap-5 py-4 overflow-x-auto scrollbar-hide scroll-smooth"
->
-            {/* Duplicate for seamless loop */}
-            {[...blogPosts, ...blogPosts].map((post, index) => (
+          {/* MOBILE */}
+          <div className="sm:hidden space-y-4 py-2">
+            {blogs.slice(0, 3).map((post, index) => (
               <BlogCard
-                key={`${post.id}-${index}`}
+                key={post.id}
                 post={post}
-                index={index % blogPosts.length}
+                index={index}
+                onClick={handleCardClick}
               />
             ))}
           </div>
+
+          {/* DESKTOP / TABLET */}
+          <div
+            ref={scrollRef}
+            className="
+              hidden
+              sm:flex
+              gap-5
+              py-4
+              overflow-x-auto
+              scrollbar-hide
+              scroll-smooth
+            "
+          >
+            {[...blogs, ...blogs].map((post, index) => (
+              <BlogCard
+                key={`${post.id}-${index}`}
+                post={post}
+                index={index % blogs.length}
+                onClick={handleCardClick}
+              />
+            ))}
+          </div>
+
         </div>
       </div>
     </section>
