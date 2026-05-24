@@ -202,7 +202,7 @@ const { data: { subscription } } =
                 className={`absolute right-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded-xl shadow-xl z-[9999] transition-all duration-150 
                   ${brokerOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none translate-y-1"}`}
               >
-                <Link to="/broker-analyzer/compare" className="block px-4 py-2 hover:bg-gray-50 rounded-xl">Compare Brokers</Link>
+                <Link to="/comparebrokers" className="block px-4 py-2 hover:bg-gray-50 rounded-xl">Compare Brokers</Link>
               </div>
             </div>
 
@@ -411,7 +411,7 @@ const { data: { subscription } } =
               {mobileBroker && (
                 <div className="pl-6 space-y-2 mt-1">
                   <Link
-                    to="/broker-analyzer/compare"
+                    to="/comparebrokers"
                     className="block text-gray-600 hover:text-[#1e40af]"
                     onClick={() => setMobileMenuOpen(false)}
                   >

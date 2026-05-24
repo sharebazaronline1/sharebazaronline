@@ -46,6 +46,7 @@ import AdminPreIPO from "./pages/AdminPreIPO"
 import AdminOrders from "./pages/AdminOrders"
 import NotFound from "./pages/NotFound";
 import AdminBlog from "./pages/AdminBlog";
+import BrokerCompare from "./pages/BrokerCompare";
 // Optional: If you want admin to have its own layout without user sidebar/header
 function AdminLayout() {
   const location = useLocation();
@@ -109,6 +110,7 @@ function AppLayout() {
               <Route path="/skill-up" element={<SkillUp />} />
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
+                 <Route path="/comparebrokers" element={<BrokerCompare />} />
 
               {/* Login & Referral */}
               <Route path="/login" element={<Login />} />

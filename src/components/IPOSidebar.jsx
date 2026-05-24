@@ -18,7 +18,8 @@ const navigate = useNavigate();
   "/skill-up",
   "/ipoguide",
   "/preipoguide",
-  "/broker-analyzer"
+  "/broker-analyzer",
+  "/comparebrokers"
   
 ].includes(pathname) ||  pathname.startsWith("/ipo/") ||
   pathname.startsWith("/insight-hub")||
