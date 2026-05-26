@@ -17257,6 +17257,217 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 03 June 2026."
     }
   ]
+},
+{
+  "id": 88,
+  "name": "Merritronix",
+  "logo": "/images/ipo/merritronix.png",
+  "minInvestment": "₹2,98,000",
+  "open": "01 Jun 2026",
+  "close": "03 Jun 2026",
+  "listing": "08 Jun 2026",
+  "price": "141 – 149",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "Merritronix Limited",
+    "industry_sector": "Electronics Systems Design and Manufacturing (ESDM) / Defence & Aerospace Electronics",
+    "founded_year": "1988",
+    "promoters": [
+      "Dovari Yesudas",
+      "Dovari Amarnath",
+      "Vanaja D",
+      "Darsy Kethan Chandra",
+      "Dovari Thaman"
+    ],
+    "description": "Merritronix Limited is an Electronics Systems Design and Manufacturing (ESDM) company specializing in high-reliability, mission-critical electronic assemblies for defence, aerospace, telecom, and industrial electronics. It offers B2B services including component sourcing, PCB assembly, system integration, testing, box-building, and delivery of finished electronic products to India's defence and aerospace standards."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Merritronix Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹141",
+    "price_band_max": "₹149",
+    "lot_size": 1000,
+    "total_issue_size": "₹70.03 Cr (47,00,000 shares)",
+    "fresh_issue_size": "₹70.03 Cr (47,00,000 shares)",
+    "offer_for_sale": "₹0 Cr (0 shares)",
+    "shares_offered": "47,00,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹149 (Upper band)",
+    "minimum_investment": "₹2,98,000 (2 lots / 2,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹260.52 Cr",
+    "pre_issue_shareholding": "Promoters 85.17%",
+    "post_issue_shareholding": "Promoters ~62% (estimated post-dilution)"
+  },
+
+  "company_overview": {
+    "business_model": "B2B ESDM services for high-reliability electronic assemblies, primarily for defence and aerospace sectors.",
+    "products_services": [
+      "PCB Assembly (SMT & THT)",
+      "System Integration & Box Build",
+      "Component Sourcing & Obsolescence Management",
+      "Testing & Quality Assurance for Mission-Critical Applications"
+    ],
+    "competitive_strengths": [
+      "Three decades of operating legacy in mission-critical defence and aerospace electronics",
+      "Established track record in defence and aerospace programs",
+      "Strong capabilities in obsolescence management and lifecycle extension",
+      "Modern SMT infrastructure and IPC-A-610 Class 3 assembly capability",
+      "Strong order book providing revenue visibility",
+      "Experienced promoters and senior management"
+    ],
+    "risks": [
+      "Dependence on defence and aerospace sector orders",
+      "High competition in electronics manufacturing",
+      "Raw material price volatility and supply chain risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "01 Jun 2026",
+    "ipo_close_date": "03 Jun 2026",
+    "basis_of_allotment_date": "04 Jun 2026",
+    "refund_initiation_date": "05 Jun 2026",
+    "demat_credit_date": "05 Jun 2026",
+    "listing_date": "08 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_towards_machinery": "₹21.36 Cr",
+    "funding_working_capital_requirements": "₹21.95 Cr",
+    "repayment_pre_payment_of_borrowings": "₹12.72 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.91% (of net offer)",
+    "hni_nii_quota": "15.05%",
+    "retail_quota": "35.04%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹2,98,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3000",
+      "amount": "₹4,47,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "7 lots",
+      "shares": "7000",
+      "amount": "₹10,43,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "46.03% (Mar 31, 2026)",
+    "roce": "45.26% (Mar 31, 2026)",
+    "pat_margin": "10.33% (Mar 31, 2026)",
+    "ebitda_margin": "17.42% (Mar 31, 2026)",
+    "debt_to_equity": "0.81"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2026",
+      "assets": "154.40 Cr",
+      "total_income": "156.25 Cr",
+      "pat": "16.10 Cr",
+      "ebitda": "27.22 Cr",
+      "net_worth": "52.52 Cr",
+      "total_borrowing": "43.20 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "74.18 Cr",
+      "total_income": "114.04 Cr",
+      "pat": "8.66 Cr",
+      "ebitda": "15.18 Cr",
+      "net_worth": "16.23 Cr",
+      "total_borrowing": "18.57 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "68.44 Cr",
+      "total_income": "86.01 Cr",
+      "pat": "3.05 Cr",
+      "ebitda": "6.73 Cr",
+      "net_worth": "7.58 Cr",
+      "total_borrowing": "15.82 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "May 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 01 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "GYR Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "C-22, Electronic Complex, Kushaiguda, Hyderabad, Telangana 500062",
+    "company_website": "https://www.merritronix.com/",
+    "company_email": "cs@merritronix.com",
+    "company_phone": "+91 8297912056"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME / Chittorgarh",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/merritronix-rhp.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Merritronix Limited do?",
+      "answer": "Merritronix is an ESDM company specializing in high-reliability electronic assemblies for defence, aerospace, telecom, and industrial sectors."
+    },
+    {
+      "question": "When did the Merritronix IPO open and close?",
+      "answer": "The IPO opens on 01 Jun 2026 and closes on 03 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Merritronix IPO?",
+      "answer": "The price band is ₹141 – ₹149 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Merritronix IPO?",
+      "answer": "The lot size is 1,000 shares."
+    },
+    {
+      "question": "What is the total issue size of the Merritronix IPO?",
+      "answer": "The total issue size is ₹70.03 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Merritronix shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 08 June 2026."
+    }
+  ]
 }
 
 
