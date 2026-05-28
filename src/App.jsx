@@ -69,6 +69,8 @@ function AppLayout() {
     location.pathname.startsWith("/dashboard") ||
     location.pathname.startsWith("/portfolio") ||
     location.pathname.startsWith("/pre-ipo-watchlist") ||
+    location.pathname.startsWith("/pre-ipo-stocks") ||
+     location.pathname.startsWith("/ipo/ipo-list") ||
     location.pathname.startsWith("/kyc") ||
     location.pathname.startsWith("/orders") ||
     location.pathname.startsWith("/notifications") ||
@@ -76,7 +78,17 @@ function AppLayout() {
     location.pathname.startsWith("/referrals") ||
     location.pathname.startsWith("/holdings") ||
     location.pathname.startsWith("/admin"); // ← hide layout for admin too
-
+const hideHeader =
+  location.pathname.startsWith("/dashboard") ||
+  location.pathname.startsWith("/portfolio") ||
+  location.pathname.startsWith("/pre-ipo-watchlist") ||
+  location.pathname.startsWith("/kyc") ||
+  location.pathname.startsWith("/orders") ||
+  location.pathname.startsWith("/notifications") ||
+  location.pathname.startsWith("/settings") ||
+  location.pathname.startsWith("/referrals") ||
+  location.pathname.startsWith("/holdings") ||
+  location.pathname.startsWith("/admin");
   return (
     <>
       <Helmet>
@@ -89,7 +101,7 @@ function AppLayout() {
 
       <div className="min-h-screen  font-sans flex flex-col">
         {/* HEADER - only on public pages */}
-        {!isAuthOrProtectedPage && <HeaderAndNav />}
+      {!hideHeader && <HeaderAndNav />}
 
         {/* CONTENT */}
         <div className="flex-1 flex w-full">
@@ -163,7 +175,7 @@ function AppLayout() {
         </div>
 
         {/* FOOTER - only on public pages */}
-        {!isAuthOrProtectedPage && <Footer />}
+        {!hideHeader && <Footer />}
       </div>
     </>
   );
