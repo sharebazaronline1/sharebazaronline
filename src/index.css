@@ -15,7 +15,12 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(to right, #dcfcde, #cbdce7, #dcfcde);
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f6fffb 50%,
+    #eef8ff 100%
+  );
 }
 
 

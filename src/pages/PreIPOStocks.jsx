@@ -219,20 +219,24 @@ const PreIPOStocks = () => {
     <div className="w-full bg-[#f5faf7] min-h-screen">
 
       {/* HERO */}
-<section className="relative min-h-[calc(100vh-80px)] overflow-hidden border-b border-gray-200 bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff]">
-        <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-14">
+<section className="relative overflow-hidden border-gray-200 bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff] py-16 lg:py-8">
 
-          <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 items-center">
+  {/* Glow Effects */}
+  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-green-100/40 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+  <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-100/40 blur-3xl rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+  <div className="relative max-w-[1800px] mx-auto px-6">
+
+          <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-center">
 
             {/* LEFT */}
             <div className="xl:col-span-6">
 
-              <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-5 py-2 rounded-full text-sm font-semibold border border-green-200">
-                <TrendingUp size={16} />
+<div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-5 py-2 rounded-full text-sm font-semibold border border-green-200 shadow-sm">                <TrendingUp size={16} />
                 Pre-IPO & Unlisted Shares
               </div>
 
-              <h1 className="mt-6 text-5xl lg:text-7xl font-black leading-[0.95] tracking-[-3px] text-[#0f172a]">
+           <h1 className="mt-7 text-5xl md:text-6xl lg:text-7xl font-black tracking-[-3px] leading-[0.95] text-[#0f172a]">
                 Invest in{" "}
               
                   Tomorrow’s
@@ -251,9 +255,9 @@ const PreIPOStocks = () => {
               </p>
 
               {/* FEATURES */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
 
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center">
                     <TrendingUp
                       size={22}
@@ -478,7 +482,7 @@ const PreIPOStocks = () => {
                         {/* PRICE */}
                         <td className="px-6 py-5 text-center">
 
-                          <div className="font-bold text-green-600 text-lg">
+                          <div className="font-semibold text-gray-900 ">
                             ₹
                             {ipo.price?.toLocaleString(
                               "en-IN"
@@ -514,7 +518,7 @@ const PreIPOStocks = () => {
                               onClick={() =>
                                 navigate("/login")
                               }
-                              className="h-12 px-5 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-700 transition"
+                              className="h-12 px-5 rounded-xl bg-blue-600 text-white text-sm font-semibold hover:bg-blue-700 transition"
                             >
                               Buy Now
                             </button>

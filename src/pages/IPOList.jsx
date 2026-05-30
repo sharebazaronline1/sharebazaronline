@@ -192,7 +192,7 @@ const stats = [
 
    {/* HERO SECTION - FIXED & CLEAN */}
 {/* HERO SECTION - SQUARE CARDS */}
-<section className="relative overflow-hidden border-b border-gray-200 bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff] py-16 lg:py-14">
+<section className="relative overflow-hidden  border-gray-200 bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff] py-16 lg:py-2">
 
   {/* Glow Effects */}
   <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-green-100/40 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2"></div>
@@ -604,7 +604,7 @@ const stats = [
                         {/* PRICE */}
                         <td className="px-6 py-5 text-center">
 
-                          <span className="font-bold text-gray-900 text-base">
+                          <span className="font-semibold text-gray-900 text-base">
                             ₹{ipo.price}
                           </span>
 
@@ -638,7 +638,7 @@ const stats = [
                                   "/how-to-apply-ipo"
                                 );
                               }}
-                              className="px-5 py-2 rounded-xl text-sm font-semibold transition bg-green-600 text-white hover:bg-green-700 shadow-sm"
+                              className="px-5 py-2 rounded-xl text-sm font-semibold transition bg-blue-600 text-white hover:bg-blue-700 shadow-sm"
                             >
                               Apply
                             </button>
