@@ -81,20 +81,109 @@ const UnlistedGuideSection = () => {
 
   return (
     <>
-      {/* Banner using the provided image */}
- <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+<section className="relative overflow-hidden bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff] py-16 lg:py-8">
 
-        <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
-          <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
-            <img
-              src="/images/Unlistedguide.png"
-              alt="InsightHub"
-              className="absolute inset-0 w-full h-full object-top object-center"
-            />
+  {/* Background Glow */}
+  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-green-100/40 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2" />
+  <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-100/40 blur-3xl rounded-full translate-x-1/3 translate-y-1/3" />
+
+  <div className="relative max-w-[1800px] mx-auto px-6">
+
+    <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-center">
+
+      {/* LEFT CONTENT */}
+      <div className="xl:col-span-6">
+
+        <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-5 py-2 rounded-full text-sm font-semibold border border-green-200 shadow-sm">
+          <Building2 size={16} />
+          Unlisted Shares Guide
+        </div>
+
+        <h1 className="mt-7 text-5xl md:text-6xl lg:text-7xl font-black tracking-[-3px] leading-[0.95] text-[#0f172a]">
+           Guide to
+          <span className="text-green-600 block">
+            Unlisted Shares
+          </span>
+        </h1>
+
+        <p className="mt-6 text-lg lg:text-[22px] leading-9 text-slate-600 max-w-2xl">
+          Learn everything about pre-IPO shares,
+          valuation, taxation, risks, regulations,
+          and investing in India's fastest-growing
+          alternative asset class.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center">
+              <TrendingUp className="text-green-700" size={22} />
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900">
+                Growth Potential
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Early access before IPO
+              </p>
+            </div>
           </div>
+
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center">
+              <Shield className="text-blue-700" size={22} />
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900">
+                Regulated Process
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                NSDL & CDSL transfers
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-purple-100 flex items-center justify-center">
+              <FileText className="text-purple-700" size={22} />
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900">
+                Expert Guide
+              </p>
+              <p className="text-sm text-gray-500 mt-1">
+                Risks, tax & valuation
+              </p>
+            </div>
+          </div>
+
         </div>
 
       </div>
+
+      {/* RIGHT ILLUSTRATION */}
+      <div className="xl:col-span-6 relative">
+
+        <div className="relative flex justify-center">
+
+          <img
+            src="/images/hero-unlisted.png"
+            alt="Unlisted Shares Guide"
+            className="w-full max-w-[820px] object-contain drop-shadow-2xl"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
      <div className="py-8 lg:py-8">
         <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
