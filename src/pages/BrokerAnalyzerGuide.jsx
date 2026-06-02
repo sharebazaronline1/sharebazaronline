@@ -9,9 +9,13 @@ import {
   BarChart3,
   DollarSign,
   HelpCircle,
+  TrendingUp,
   Zap,
+  Landmark,
+  ShieldCheck,
   Star,
 } from "lucide-react";
+
 
 const brokerTypes = [
   {
@@ -116,16 +120,122 @@ const BrokerAnalyzerGuide = () => {
   const visibleFaqs = showAllFAQs ? faqs : faqs.slice(0, 10);
 
   return (
-   <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="w-screen relative left-1 -translate-x-1/2 -mx-8">
-          <div className="relative h-64 md:h-80 lg:h-96 xl:h-[500px] rounded overflow-hidden lg:mr-12">
-            <img
-              src="images/brokers/brokerguide.png"
-              alt="Broker Analysis"
-              className="absolute inset-0 w-full h-full object-top object-center"
-            />
-          </div>
+   <div className="w-full">
+        {/* HERO */}
+<section className="relative overflow-hidden bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff] py-16 lg:py-8">
+
+  {/* Glow Effects */}
+  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-green-100/40 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2" />
+  <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-100/40 blur-3xl rounded-full translate-x-1/3 translate-y-1/3" />
+
+  <div className="relative max-w-[1800px] mx-auto px-6">
+
+    <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-center">
+
+      {/* LEFT */}
+      <div className="xl:col-span-6">
+
+        <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-5 py-2 rounded-full text-sm font-semibold border border-green-200 shadow-sm">
+          <Landmark size={16} />
+          Broker Analysis Guide
         </div>
+
+        <h1 className="mt-7 text-5xl md:text-6xl lg:text-7xl font-black tracking-[-3px] leading-[0.95] text-[#0f172a]">
+          Compare India's
+          <span className="text-green-600 block">
+            Top Stock Brokers
+          </span>
+        </h1>
+
+        <p className="mt-6 text-lg lg:text-[22px] leading-9 text-slate-600 max-w-2xl">
+          Analyze brokerage charges, trading platforms,
+          account fees, ratings, and services offered by
+          leading brokers to choose the right partner for
+          your investing journey.
+        </p>
+
+        {/* FEATURES */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-green-100 flex items-center justify-center">
+              <BarChart3
+                size={22}
+                className="text-green-700"
+              />
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900">
+                Broker Comparison
+              </p>
+
+              <p className="text-sm text-gray-500 mt-1">
+                Compare charges & services
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-blue-100 flex items-center justify-center">
+              <ShieldCheck
+                size={22}
+                className="text-blue-700"
+              />
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900">
+                Trusted Platforms
+              </p>
+
+              <p className="text-sm text-gray-500 mt-1">
+                SEBI registered brokers
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-purple-100 flex items-center justify-center">
+              <TrendingUp
+                size={22}
+                className="text-purple-700"
+              />
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900">
+                Better Decisions
+              </p>
+
+              <p className="text-sm text-gray-500 mt-1">
+                Choose the right broker
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* RIGHT IMAGE */}
+      <div className="xl:col-span-6">
+
+        <div className="relative flex justify-center">
+          <img
+            src="/images/hero-broker.png"
+            alt="Broker Analysis Guide"
+            className="w-full max-w-[780px] object-contain drop-shadow-2xl"
+          />
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
       <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-4 mt-4">
   
 

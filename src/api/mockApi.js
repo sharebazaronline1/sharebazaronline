@@ -17468,6 +17468,213 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 08 June 2026."
     }
   ]
+},
+{
+  "id": 89,
+  "name": "CMR Green",
+  "logo": "/images/ipo/cmrgreen.png",
+  "minInvestment": "₹14,976",
+  "open": "03 Jun 2026",
+  "close": "05 Jun 2026",
+  "listing": "10 Jun 2026",
+  "price": "182 – 192",
+  "lot": 78,
+
+  "about_company": {
+    "company_name": "CMR Green Technologies Limited",
+    "industry_sector": "Non-Ferrous Metal Recycling / Secondary Aluminium",
+    "founded_year": "2006",
+    "promoters": [
+      "Mohan Agarwal",
+      "Pratibha Agarwal",
+      "Akshay Agarwal",
+      "Raghav Agarwal"
+    ],
+    "description": "CMR Green Technologies Limited is a leading non-ferrous metal recycler and one of the largest players in the secondary aluminium market in India. The company specializes in manufacturing recycled aluminium alloys (ingots and liquid form), zinc alloy ingots, aluminium billets, and deals in segregated scrap of various metals. It serves major automotive OEMs and Tier-1 suppliers including Honda, Bajaj Auto, Hero MotoCorp, Royal Enfield, Maruti Suzuki, and others."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "CMR Green Technologies Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Offer for Sale (Book Built)",
+    "face_value": "₹2 per share",
+    "price_band_min": "₹182",
+    "price_band_max": "₹192",
+    "lot_size": 78,
+    "total_issue_size": "₹630.88 Cr (3,28,58,323 shares)",
+    "fresh_issue_size": "₹0 Cr",
+    "offer_for_sale": "₹630.88 Cr (3,28,58,323 shares)",
+    "shares_offered": "3,28,58,323 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹192",
+    "minimum_investment": "₹14,976 (1 lot / 78 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹4,205.87 Cr",
+    "pre_issue_shareholding": "Promoters 86.95%",
+    "post_issue_shareholding": "Promoters 84%"
+  },
+
+  "company_overview": {
+    "business_model": "Non-ferrous metal recycling with focus on secondary aluminium alloys and supplying to automotive and industrial sectors.",
+    "products_services": [
+      "Recycled Aluminium Ingots",
+      "Liquid Aluminium Alloy",
+      "Aluminium Billets",
+      "Zinc Alloy Ingots",
+      "Metal Scrap (Copper, Brass, etc.)"
+    ],
+    "competitive_strengths": [
+      "Leading recycler in domestic aluminium recycling industry",
+      "Largest capacities with significant entry barriers",
+      "Strong relationships with major automotive OEMs",
+      "Diversified supplier base and strategic joint ventures",
+      "Focus on sustainability and decarbonization"
+    ],
+    "risks": [
+      "Volatility in metal prices",
+      "Dependence on automotive sector",
+      "Regulatory and environmental compliance risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "03 Jun 2026",
+    "ipo_close_date": "05 Jun 2026",
+    "basis_of_allotment_date": "08 Jun 2026",
+    "refund_initiation_date": "09 Jun 2026",
+    "demat_credit_date": "09 Jun 2026",
+    "listing_date": "10 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "offer_for_sale": "Entire proceeds go to selling shareholders"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Up to 50% of the Net Offer",
+    "hni_nii_quota": "Not less than 15% of the Net Offer",
+    "retail_quota": "Not less than 35% of the Net Offer"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "78",
+      "amount": "₹14,976"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "1,092",
+      "amount": "₹2,09,664"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 lots",
+      "shares": "5,226",
+      "amount": "₹10,03,392"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "0.10% (Dec 31, 2025)",
+    "roce": "9.30% (Dec 31, 2025)",
+    "pat_margin": "2.59% (Dec 31, 2025)",
+    "ebitda_margin": "5.17% (Dec 31, 2025)",
+    "debt_to_equity": "0.76"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Dec 2025",
+      "assets": "3,650.58 Cr",
+      "total_income": "6,291.00 Cr",
+      "pat": "162.39 Cr",
+      "ebitda": "316.62 Cr",
+      "net_worth": "594.18 Cr",
+      "total_borrowing": "1,303.22 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "2,815.86 Cr",
+      "total_income": "6,696.66 Cr",
+      "pat": "155.04 Cr",
+      "ebitda": "328.62 Cr",
+      "net_worth": "458.38 Cr",
+      "total_borrowing": "894.03 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "2,194.41 Cr",
+      "total_income": "5,968.44 Cr",
+      "pat": "-838.56 Cr",
+      "ebitda": "-705.98 Cr",
+      "net_worth": "317.54 Cr",
+      "total_borrowing": "498.65 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 03 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Equirus Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "7th Floor, Tower 2, L & T Business Park, 12/4 Delhi Mathura Road, Faridabad, Haryana 121003",
+    "company_website": "https://cmr.co.in/",
+    "company_email": "complianceofficer@cmr.co.in",
+    "company_phone": "+91 129 4223050"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE / Chittorgarh",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_CMRGREEN.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does CMR Green Technologies Limited do?",
+      "answer": "The company is a leading non-ferrous metal recycler specializing in recycled aluminium alloys and serving major automotive manufacturers."
+    },
+    {
+      "question": "When did the CMR Green Technologies IPO open and close?",
+      "answer": "The IPO opens on 03 Jun 2026 and closes on 05 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the CMR Green Technologies IPO?",
+      "answer": "The price band is ₹182 – ₹192 per equity share."
+    },
+    {
+      "question": "What is the lot size of the CMR Green Technologies IPO?",
+      "answer": "The lot size is 78 shares."
+    },
+    {
+      "question": "What is the total issue size of the CMR Green Technologies IPO?",
+      "answer": "The total issue size is ₹630.88 Crore (OFS only)."
+    },
+    {
+      "question": "Where will CMR Green Technologies shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 10 June 2026."
+    }
+  ]
 }
 
 
