@@ -17675,6 +17675,420 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE & NSE on 10 June 2026."
     }
   ]
+},
+{
+  "id": 90,
+  "name": "UHM Vacation",
+  "logo": "/images/ipo/uhmvacation.png",
+  "minInvestment": "₹2,65,600",
+  "open": "04 Jun 2026",
+  "close": "08 Jun 2026",
+  "listing": "11 Jun 2026",
+  "price": "157 – 166",
+  "lot": 800,
+
+  "about_company": {
+    "company_name": "UHM Vacation Limited",
+    "industry_sector": "Travel & Tourism / B2B Travel Aggregator",
+    "founded_year": "2009",
+    "promoters": [
+      "Izhar Ahmad",
+      "Rubeena Khatoon"
+    ],
+    "description": "UHM Vacation Ltd is a B2B travel and tourism aggregator offering a wide range of travel services through a single technology platform. The company sources airline tickets, hotel accommodations, cruises, car rentals, visa assistance, transfers, tours, and holiday packages. It connects travel service providers with travel agents and corporate travel managers in India and GCC countries."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "UHM Vacation Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹157",
+    "price_band_max": "₹166",
+    "lot_size": 800,
+    "total_issue_size": "₹36.02 Cr (21,69,600 shares)",
+    "fresh_issue_size": "₹29.04 Cr (17,49,600 shares approx.)",
+    "offer_for_sale": "₹6.97 Cr (4,20,000 shares)",
+    "shares_offered": "21,69,600 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹166",
+    "minimum_investment": "₹2,65,600 (2 lots / 1,600 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹110.32 Cr",
+    "pre_issue_shareholding": "Promoters 97.35%",
+    "post_issue_shareholding": "Promoters 65.40%"
+  },
+
+  "company_overview": {
+    "business_model": "B2B travel technology platform connecting suppliers and agents for travel services.",
+    "products_services": [
+      "Airline Tickets",
+      "Hotel Bookings",
+      "Cruises & Car Rentals",
+      "Visa Assistance & Tours",
+      "Holiday Packages"
+    ],
+    "competitive_strengths": [
+      "Comprehensive service offering on single platform",
+      "User-friendly technology platform",
+      "Presence in India and GCC countries",
+      "Scalable business model",
+      "Experienced management team"
+    ],
+    "risks": [
+      "Highly competitive and fragmented travel sector",
+      "Dependence on supplier relationships",
+      "Technology platform risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "04 Jun 2026",
+    "ipo_close_date": "08 Jun 2026",
+    "basis_of_allotment_date": "09 Jun 2026",
+    "refund_initiation_date": "10 Jun 2026",
+    "demat_credit_date": "10 Jun 2026",
+    "listing_date": "11 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "₹10.47 Cr",
+    "marketing_and_promotional_activities": "₹4.90 Cr",
+    "working_capital_requirements": "₹6.42 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "0.93%",
+    "hni_nii_quota": "48.95%",
+    "retail_quota": "50.12%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "1600",
+      "amount": "₹2,65,600"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "2400",
+      "amount": "₹3,98,400"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "6400",
+      "amount": "₹10,62,400"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "31.56% (28 Feb 2026)",
+    "roce": "35.14% (28 Feb 2026)",
+    "pat_margin": "17.80% (28 Feb 2026)",
+    "ebitda_margin": "20.32% (28 Feb 2026)",
+    "debt_to_equity": "0.00"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "28 Feb 2026",
+      "assets": "43.41 Cr",
+      "total_income": "45.29 Cr",
+      "pat": "8.05 Cr",
+      "ebitda": "9.19 Cr",
+      "net_worth": "30.05 Cr",
+      "total_borrowing": "0.06 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "39.06 Cr",
+      "total_income": "40.20 Cr",
+      "pat": "7.18 Cr",
+      "ebitda": "8.26 Cr",
+      "net_worth": "20.96 Cr",
+      "total_borrowing": "0.48 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "19.34 Cr",
+      "total_income": "30.66 Cr",
+      "pat": "5.27 Cr",
+      "ebitda": "5.87 Cr",
+      "net_worth": "13.72 Cr",
+      "total_borrowing": "0.38 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 04 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Sobhagya Capital Options Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "C 715, Dattani Plaza, Near E W Ind Est, Safed Pool, Saki Naka, Andheri (East), Mumbai, Maharashtra 400072",
+    "company_website": "https://www.uhmvacation.com/",
+    "company_email": "cs@uhmvacation.com",
+    "company_phone": "02246079484"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.bseindia.com/downloads/ipo/RHP_030620261736.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does UHM Vacation Limited do?",
+      "answer": "UHM Vacation is a B2B travel and tourism aggregator providing a technology platform for travel agents and corporate clients."
+    },
+    {
+      "question": "When did the UHM Vacation IPO open and close?",
+      "answer": "The IPO opens on 04 Jun 2026 and closes on 08 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the UHM Vacation IPO?",
+      "answer": "The price band is ₹157 – ₹166 per equity share."
+    },
+    {
+      "question": "What is the lot size of the UHM Vacation IPO?",
+      "answer": "The lot size is 800 shares."
+    },
+    {
+      "question": "What is the total issue size of the UHM Vacation IPO?",
+      "answer": "The total issue size is ₹36.02 Crore (Fresh Issue + OFS)."
+    },
+    {
+      "question": "Where will UHM Vacation shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 11 June 2026."
+    }
+  ]
+},
+{
+  "id": 91,
+  "name": "Hexagon Nutrition",
+  "logo": "/images/ipo/hexagonnutrition.png",
+  "minInvestment": "₹14,985",
+  "open": "05 Jun 2026",
+  "close": "09 Jun 2026",
+  "listing": "12 Jun 2026",
+  "price": "42 – 45",
+  "lot": 333,
+
+  "about_company": {
+    "company_name": "Hexagon Nutrition Limited",
+    "industry_sector": "Nutrition / Pharmaceuticals & Biotechnology",
+    "founded_year": "1993",
+    "promoters": [
+      "Arun Purushottam Kelkar",
+      "Subhash Purushottam Kelkar",
+      "Vikram Arun Kelkar",
+      "Nikhil Arun Kelkar"
+    ],
+    "description": "Hexagon Nutrition Ltd. is a research-driven nutrition company engaged in developing and manufacturing micronutrient premixes, branded wellness and clinical nutrition products, therapeutic formulations, and ready-to-use foods. The company operates manufacturing facilities in India and Uzbekistan with a strong focus on R&D and exports to over 75 countries."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Hexagon Nutrition Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Offer for Sale (Book Built)",
+    "face_value": "₹1 per share",
+    "price_band_min": "₹42",
+    "price_band_max": "₹45",
+    "lot_size": 333,
+    "total_issue_size": "₹138.87 Cr (3,08,59,704 shares)",
+    "fresh_issue_size": "₹0 Cr",
+    "offer_for_sale": "₹138.87 Cr (3,08,59,704 shares)",
+    "shares_offered": "3,08,59,704 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹45",
+    "minimum_investment": "₹14,985 (1 lot / 333 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹553.13 Cr",
+    "pre_issue_shareholding": "Promoters 89.41%",
+    "post_issue_shareholding": "Promoters 64.29%"
+  },
+
+  "company_overview": {
+    "business_model": "Research-driven manufacturing of nutrition products across B2C wellness, B2B2C premixes, and ESG-focused ready-to-use foods.",
+    "products_services": [
+      "Micronutrient Premixes",
+      "Branded Wellness & Clinical Nutrition",
+      "Therapeutic Formulations",
+      "Ready-to-Use Foods (RUFs) & Micronutrient Powders"
+    ],
+    "competitive_strengths": [
+      "Strong R&D capabilities with dedicated facilities",
+      "PAN-India omnichannel distribution network",
+      "Global presence with exports to 75+ countries",
+      "SEZ manufacturing facilities offering tax advantages",
+      "Established brands like Pentasure, Obesigo, Pediagold"
+    ],
+    "risks": [
+      "Competition in nutrition and pharmaceutical sector",
+      "Regulatory risks in food and nutrition industry",
+      "Raw material price volatility"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "05 Jun 2026",
+    "ipo_close_date": "09 Jun 2026",
+    "basis_of_allotment_date": "10 Jun 2026",
+    "refund_initiation_date": "11 Jun 2026",
+    "demat_credit_date": "11 Jun 2026",
+    "listing_date": "12 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "offer_for_sale": "Entire proceeds go to selling shareholders"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50.00%",
+    "hni_nii_quota": "15.00%",
+    "retail_quota": "35.00%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "333",
+      "amount": "₹14,985"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "4,662",
+      "amount": "₹2,09,790"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 lots",
+      "shares": "22,311",
+      "amount": "₹10,03,995"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "13.02% (Dec 31, 2025)",
+    "roce": "14.82% (Dec 31, 2025)",
+    "pat_margin": "9.81% (Dec 31, 2025)",
+    "ebitda_margin": "14.03% (Dec 31, 2025)",
+    "debt_to_equity": "0.18"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Dec 2025",
+      "assets": "327.60 Cr",
+      "total_income": "275.57 Cr",
+      "pat": "27.03 Cr",
+      "ebitda": "37.55 Cr",
+      "net_worth": "223.05 Cr",
+      "total_borrowing": "39.79 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "261.36 Cr",
+      "total_income": "331.29 Cr",
+      "pat": "24.38 Cr",
+      "ebitda": "40.07 Cr",
+      "net_worth": "195.60 Cr",
+      "total_borrowing": "26.60 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "250.54 Cr",
+      "total_income": "304.62 Cr",
+      "pat": "12.21 Cr",
+      "ebitda": "24.88 Cr",
+      "net_worth": "176.29 Cr",
+      "total_borrowing": "36.89 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "1.07x (as of Day 1)",
+    "qib_ex_anchor": "0.00x",
+    "hni_subscription": "1.26x",
+    "retail_subscription": "1.61x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Cumulative Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "404 Global Chamber, Adarsh Nagar Link Road, Andheri (W), Mumbai, Maharashtra 400053",
+    "company_website": "https://hexagonnutrition.com/",
+    "company_email": "cs.hnpl@hexagonnutrition.com",
+    "company_phone": "+91 22 6213 6710"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE / Chittorgarh",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_HEXAGON.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Hexagon Nutrition Limited do?",
+      "answer": "Hexagon Nutrition is a research-driven company manufacturing micronutrient premixes, wellness products, and ready-to-use nutritional foods."
+    },
+    {
+      "question": "When did the Hexagon Nutrition IPO open and close?",
+      "answer": "The IPO opens on 05 Jun 2026 and closes on 09 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Hexagon Nutrition IPO?",
+      "answer": "The price band is ₹42 – ₹45 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Hexagon Nutrition IPO?",
+      "answer": "The lot size is 333 shares."
+    },
+    {
+      "question": "What is the total issue size of the Hexagon Nutrition IPO?",
+      "answer": "The total issue size is ₹138.87 Crore (OFS only)."
+    },
+    {
+      "question": "Where will Hexagon Nutrition shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 12 June 2026."
+    }
+  ]
 }
 
 
