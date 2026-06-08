@@ -104,9 +104,8 @@ const hideHeader =
       {!hideHeader && <HeaderAndNav />}
 
         {/* CONTENT */}
-        <div className="flex-1 flex w-full">
-          {/* MAIN */}
-          <main className="flex-1 min-w-0 px-4 lg:px-6">
+        <div className="flex-1 flex justify-center">
+  <main className="w-full max-w-[1600px] min-w-0 px-4 lg:px-6">
             <Routes>
               {/* Public routes (with layout) */}
               <Route path="/" element={<Home />} />
@@ -162,7 +161,7 @@ const hideHeader =
 
           {/* RIGHT SIDEBAR - only on public pages */}
           {!isAuthOrProtectedPage && (
-            <aside className="hidden xl:block w-48 flex-shrink-0 mr-6">
+            <aside className="hidden xl:block w-48 flex-shrink-0 mr-4">
               <div className="sticky top-20 mt-96 py-8 flex flex-col gap-2">
                 <div className="h-24 bg-white rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center text-sm font-semibold text-gray-700 shadow-sm">
                   Banner Ad
