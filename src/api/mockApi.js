@@ -18089,6 +18089,215 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE & NSE on 12 June 2026."
     }
   ]
+},
+{
+  "id": 92,
+  "name": "GenXAI Analytics",
+  "logo": "/images/ipo/genxaianalytics.png",
+  "minInvestment": "₹2,78,400",
+  "open": "05 Jun 2026",
+  "close": "09 Jun 2026",
+  "listing": "12 Jun 2026",
+  "price": "110 – 116",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "GenXAI Analytics Limited",
+    "industry_sector": "IT - Software / Enterprise Analytics & AI Solutions",
+    "founded_year": "2007",
+    "promoters": [
+      "Rakesh Agarwal",
+      "Lakshmi Agarwal"
+    ],
+    "description": "GenXAI Analytics Limited is a technology-focused company providing enterprise performance management (EPM), analytics, data engineering, ERP, application development, and Generative AI solutions. The company offers AI-enabled workflow tools, proprietary platforms like GenXAI Smart IP, Sales Incentive Compensation Management, and GenAI Engine. It serves clients across consumer goods, manufacturing, retail, technology, telecom, and BFSI sectors with presence in India, Singapore, and the USA."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "GenXAI Analytics Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹110",
+    "price_band_max": "₹116",
+    "lot_size": 1200,
+    "total_issue_size": "₹54.84 Cr (47,28,000 shares)",
+    "fresh_issue_size": "₹54.84 Cr (47,28,000 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "47,28,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹116",
+    "minimum_investment": "₹2,78,400 (2 lots / 2,400 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹208.15 Cr",
+    "pre_issue_shareholding": "Promoters 90.28%",
+    "post_issue_shareholding": "Promoters 66.49%"
+  },
+
+  "company_overview": {
+    "business_model": "IT services and solutions provider focusing on enterprise analytics, performance management, data engineering, and Generative AI.",
+    "products_services": [
+      "Enterprise Performance Management (EPM)",
+      "Enterprise Resource Planning (ERP)",
+      "Data Engineering & Analytics",
+      "Application & Web Development",
+      "Generative AI Solutions",
+      "GenXAI Smart IP & Sales Incentive Tools"
+    ],
+    "competitive_strengths": [
+      "Long-standing strategic association with Anaplan",
+      "Established long-term client base",
+      "Diversified client & industry presence",
+      "Experienced promoters and management team",
+      "AI & cloud-focused innovative solutions"
+    ],
+    "risks": [
+      "Highly competitive IT services sector",
+      "Client concentration risk",
+      "Dependence on key technologies and partnerships"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "05 Jun 2026",
+    "ipo_close_date": "09 Jun 2026",
+    "basis_of_allotment_date": "10 Jun 2026",
+    "refund_initiation_date": "11 Jun 2026",
+    "demat_credit_date": "11 Jun 2026",
+    "listing_date": "12 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_working_capital_requirements": "₹7.20 Cr",
+    "repayment_pre_payment_of_borrowings": "₹3.00 Cr",
+    "capital_expenditure_for_new_products": "₹28.37 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50.00% (including Anchor)",
+    "hni_nii_quota": "15.00%",
+    "retail_quota": "35.00%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,78,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹4,17,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "9600",
+      "amount": "₹11,13,600"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "51.04% (Dec 31, 2025)",
+    "roce": "51.33% (Dec 31, 2025)",
+    "pat_margin": "16.58% (Dec 31, 2025)",
+    "ebitda_margin": "29.52% (Dec 31, 2025)",
+    "debt_to_equity": "0.52"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Dec 2025",
+      "assets": "72.79 Cr",
+      "total_income": "64.47 Cr",
+      "pat": "13.31 Cr",
+      "ebitda": "18.97 Cr",
+      "net_worth": "30.74 Cr",
+      "total_borrowing": "16.07 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "23.61 Cr",
+      "total_income": "28.88 Cr",
+      "pat": "6.55 Cr",
+      "ebitda": "10.03 Cr",
+      "net_worth": "11.03 Cr",
+      "total_borrowing": "7.27 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "11.33 Cr",
+      "total_income": "24.21 Cr",
+      "pat": "2.65 Cr",
+      "ebitda": "4.13 Cr",
+      "net_worth": "4.43 Cr",
+      "total_borrowing": "4.11 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "0.67x (as of Day 2)",
+    "qib_ex_anchor": "0.50x",
+    "hni_subscription": "1.23x",
+    "retail_subscription": "0.57x"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Choice Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "3rd Floor, Tower-7, Plot No.7, Teachers Colony, Baba Market, DCM, Ajmer Road, Jaipur, Rajasthan 302021",
+    "company_website": "https://www.genxai.com/",
+    "company_email": "secretarial@genxai.com",
+    "company_phone": "+91 9216043668"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE / Chittorgarh",
+    "rhp_link": "https://nsearchives.nseindia.com/content/ipo/RHP_GENXAI.zip",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does GenXAI Analytics Limited do?",
+      "answer": "GenXAI Analytics provides enterprise performance management, analytics, data engineering, and Generative AI solutions."
+    },
+    {
+      "question": "When did the GenXAI Analytics IPO open and close?",
+      "answer": "The IPO opens on 05 Jun 2026 and closes on 09 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the GenXAI Analytics IPO?",
+      "answer": "The price band is ₹110 – ₹116 per equity share."
+    },
+    {
+      "question": "What is the lot size of the GenXAI Analytics IPO?",
+      "answer": "The lot size is 1,200 shares."
+    },
+    {
+      "question": "What is the total issue size of the GenXAI Analytics IPO?",
+      "answer": "The total issue size is ₹54.84 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will GenXAI Analytics shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 12 June 2026."
+    }
+  ]
 }
 
 
