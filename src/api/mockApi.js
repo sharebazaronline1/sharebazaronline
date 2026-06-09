@@ -18298,6 +18298,222 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on NSE SME on 12 June 2026."
     }
   ]
+},
+{
+  "id": 93,
+  "name": "Utkal Speciality",
+  "logo": "/images/ipo/utkalspeciality.png",
+  "minInvestment": "₹2,64,000",
+  "open": "10 Jun 2026",
+  "close": "12 Jun 2026",
+  "listing": "17 Jun 2026",
+  "price": "62 – 66",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Utkal Speciality Industries India Limited",
+    "industry_sector": "Paper & Packaging / Paper-based Products",
+    "founded_year": "2015",
+    "promoters": [
+      "Akash Agrawal",
+      "Meena Agarwal",
+      "Manoj Agarwal"
+    ],
+    "description": "Utkal Speciality Industries India Limited is engaged in the manufacturing of paper-based products and packaging materials. The company offers a wide range of paper-based alternatives for everyday use as well as special occasions, serving B2B and B2C segments including smaller manufacturers and end retailers."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Utkal Speciality Industries India Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹62",
+    "price_band_max": "₹66",
+    "lot_size": 2000,
+    "total_issue_size": "₹34.54 Cr (52,34,000 shares)",
+    "fresh_issue_size": "₹34.54 Cr (52,34,000 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "52,34,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹66",
+    "minimum_investment": "₹2,64,000 (2 lots / 4,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹128.92 Cr",
+    "pre_issue_shareholding": "Promoters 100%",
+    "post_issue_shareholding": "Promoters 73.20%"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing of paper-based products and packaging materials for B2B and B2C segments.",
+    "products_services": [
+      "Paper-based Products",
+      "Packaging Materials"
+    ],
+    "competitive_strengths": [
+      "Vast selection of SKUs",
+      "Strategically located on the highway linking Kolkata to Chennai",
+      "Fully integrated end-to-end manufacturing unit",
+      "Lower freight costs due to suppliers mainly from the South",
+      "Focus on consistent high-quality delivery"
+    ],
+    "risks": [
+      "Highly competitive and fragmented paper packaging industry",
+      "Static revenue growth in recent years",
+      "Sustainability of improved margins"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "10 Jun 2026",
+    "ipo_close_date": "12 Jun 2026",
+    "basis_of_allotment_date": "15 Jun 2026",
+    "refund_initiation_date": "16 Jun 2026",
+    "demat_credit_date": "16 Jun 2026",
+    "listing_date": "17 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_incremental_working_capital": "₹5.31 Cr",
+    "prepayment_or_repayment_of_borrowings": "₹11.00 Cr",
+    "funding_capital_expenditure_new_facility": "₹9.60 Cr",
+    "general_corporate_purposes": "Balance amount",
+    "offer_related_expenses": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "1.01%",
+    "hni_nii_quota": "39.60%",
+    "retail_quota": "59.40%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,64,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "6000",
+      "amount": "₹3,96,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "16000",
+      "amount": "₹10,56,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "22.50% (Dec 31, 2025)",
+    "roce": "16.78% (Dec 31, 2025)",
+    "pat_margin": "13.79% (Dec 31, 2025)",
+    "ebitda_margin": "19.51% (Dec 31, 2025)",
+    "debt_to_equity": "0.63"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Dec 2025",
+      "assets": "48.63 Cr",
+      "total_income": "40.90 Cr",
+      "pat": "5.48 Cr",
+      "ebitda": "7.76 Cr",
+      "net_worth": "27.12 Cr",
+      "total_borrowing": "17.16 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "44.04 Cr",
+      "total_income": "50.28 Cr",
+      "pat": "6.68 Cr",
+      "ebitda": "9.22 Cr",
+      "net_worth": "21.64 Cr",
+      "total_borrowing": "17.37 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "37.60 Cr",
+      "total_income": "44.15 Cr",
+      "pat": "3.24 Cr",
+      "ebitda": "6.19 Cr",
+      "net_worth": "9.95 Cr",
+      "total_borrowing": "25.43 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "35.27 Cr",
+      "total_income": "46.23 Cr",
+      "pat": "2.21 Cr",
+      "ebitda": "4.23 Cr",
+      "net_worth": "6.07 Cr",
+      "total_borrowing": "25.41 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 10 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Cameo Corporate Services Ltd.",
+    "registrar_website": "https://ipo.cameoindia.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Affinity Global Capital Market Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "IDC0 Plot No. I/5/B,Food Processing Park,Khurda,Khurda, Odisha, 752057",
+    "company_website": "https://utkalspeciality.com/",
+    "company_email": "compliance@utkalspeciality.com",
+    "company_phone": "+91 90401-34060"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://affinityglobalcap.in/wp-content/uploads/2026/06/RHP_Utkal.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Utkal Speciality Industries India Limited do?",
+      "answer": "The company manufactures paper-based products and packaging materials for B2B and B2C segments."
+    },
+    {
+      "question": "When did the Utkal Speciality IPO open and close?",
+      "answer": "The IPO opens on 10 Jun 2026 and closes on 12 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Utkal Speciality IPO?",
+      "answer": "The price band is ₹62 – ₹66 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Utkal Speciality IPO?",
+      "answer": "The lot size is 2,000 shares."
+    },
+    {
+      "question": "What is the total issue size of the Utkal Speciality IPO?",
+      "answer": "The total issue size is ₹34.54 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Utkal Speciality shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 17 June 2026."
+    }
+  ]
 }
 
 
