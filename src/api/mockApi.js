@@ -18514,6 +18514,213 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on NSE SME on 17 June 2026."
     }
   ]
+},
+{
+  "id": 94,
+  "name": "Susan Electricals",
+  "logo": "/images/ipo/susanelectricals.png",
+  "minInvestment": "₹2,54,000",
+  "open": "11 Jun 2026",
+  "close": "15 Jun 2026",
+  "listing": "18 Jun 2026",
+  "price": "120 – 127",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "Susan Electricals India Limited",
+    "industry_sector": "Cables / Wires / Conductors",
+    "founded_year": "2007",
+    "promoters": [
+      "Vishal Jain",
+      "Mahak Jain"
+    ],
+    "description": "Susan Electricals India Ltd. is engaged in the manufacturing of aluminium and copper-based electrical winding wires, conductors, and power cables. The company offers winding wires & strips for transformers, motors, alternators, aluminium stranded conductors for power distribution, and LT/HT power cables (PVC & XLPE). It also undertakes trading of raw materials and job work services."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Susan Electricals India Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹120",
+    "price_band_max": "₹127",
+    "lot_size": 1000,
+    "total_issue_size": "₹70.38 Cr (55,42,000 shares)",
+    "fresh_issue_size": "₹60.22 Cr (47,42,000 shares approx.)",
+    "offer_for_sale": "₹10.16 Cr (8,00,000 shares)",
+    "shares_offered": "55,42,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹127",
+    "minimum_investment": "₹2,54,000 (2 lots / 2,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹258.20 Cr",
+    "pre_issue_shareholding": "Promoters 92.47%",
+    "post_issue_shareholding": "Promoters 66.97%"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing of electrical wires, conductors, and power cables with trading and job work services.",
+    "products_services": [
+      "Aluminium & Copper Winding Wires & Strips",
+      "Aluminium Stranded Conductors",
+      "LT Power Cables (PVC & XLPE)",
+      "HT Power Cables",
+      "LT Aerial Bunched Cables"
+    ],
+    "competitive_strengths": [
+      "Multi-state vendor registrations with DISCOMs",
+      "Strong access to government and utility tenders",
+      "Positioned to benefit from RDSS and rural electrification",
+      "Established technical capabilities and quality standards",
+      "Wide geographic presence"
+    ],
+    "risks": [
+      "Dependence on government tenders and DISCOMs",
+      "Raw material price volatility (aluminium & copper)",
+      "Intense competition in wires & cables industry"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "11 Jun 2026",
+    "ipo_close_date": "15 Jun 2026",
+    "basis_of_allotment_date": "16 Jun 2026",
+    "refund_initiation_date": "17 Jun 2026",
+    "demat_credit_date": "17 Jun 2026",
+    "listing_date": "18 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_expansion": "₹10.29 Cr",
+    "funding_working_capital_requirements": "₹33.00 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.94% (including Anchor)",
+    "hni_nii_quota": "15.05%",
+    "retail_quota": "35.01%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2000",
+      "amount": "₹2,54,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3000",
+      "amount": "₹3,81,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "8000",
+      "amount": "₹10,16,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "64.64% (Mar 31, 2026)",
+    "roce": "29.05% (Mar 31, 2026)",
+    "pat_margin": "6.77% (Mar 31, 2026)",
+    "ebitda_margin": "11.91% (Mar 31, 2026)",
+    "debt_to_equity": "N/A"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2026",
+      "assets": "130.05 Cr",
+      "total_income": "269.96 Cr",
+      "pat": "18.25 Cr",
+      "ebitda": "32.08 Cr",
+      "net_worth": "38.48 Cr",
+      "total_borrowing": "66.72 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "73.68 Cr",
+      "total_income": "136.05 Cr",
+      "pat": "5.65 Cr",
+      "ebitda": "12.00 Cr",
+      "net_worth": "17.98 Cr",
+      "total_borrowing": "45.27 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "38.08 Cr",
+      "total_income": "103.59 Cr",
+      "pat": "0.76 Cr",
+      "ebitda": "3.64 Cr",
+      "net_worth": "6.21 Cr",
+      "total_borrowing": "24.79 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 11 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Mudra RTA Ventures Private Limited",
+    "registrar_website": "https://mudra-rta.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Seren Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "1703, Nirmal Tower,26, Barakhamba Road,Connaught Plaza New Delhi, New Delhi, 110001",
+    "company_website": "https://seil.net.in/",
+    "company_email": "office@seil.net.in",
+    "company_phone": "0120-4331296"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://seil.net.in/wp-content/uploads/2026/06/SUSAN-ELECTRICALS-RHP-FINAL.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Susan Electricals India Limited do?",
+      "answer": "The company manufactures aluminium and copper winding wires, conductors, and power cables for electrical and power distribution industry."
+    },
+    {
+      "question": "When did the Susan Electricals IPO open and close?",
+      "answer": "The IPO opens on 11 Jun 2026 and closes on 15 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Susan Electricals IPO?",
+      "answer": "The price band is ₹120 – ₹127 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Susan Electricals IPO?",
+      "answer": "The lot size is 1,000 shares."
+    },
+    {
+      "question": "What is the total issue size of the Susan Electricals IPO?",
+      "answer": "The total issue size is ₹70.38 Crore (Fresh Issue + OFS)."
+    },
+    {
+      "question": "Where will Susan Electricals shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 18 June 2026."
+    }
+  ]
 }
 
 
