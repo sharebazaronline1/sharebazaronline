@@ -296,9 +296,216 @@ minLotSize: finalLotSize,
 <div className="w-full min-h-screen bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200">
 <section className="relative overflow-hidden">
 
-<div className="max-w-7xl mx-auto px-6 lg:px-8 py-6 lg:py-2">
-<div className="grid lg:grid-cols-2 items-center gap-16">      {/* LEFT IMAGE */}
-     {/* LEFT IMAGE */}
+<div className="max-w-[1600px] mx-auto px-4 lg:px-0 py-6 lg:py-2">
+<div className="grid lg:grid-cols-2 items-center gap-12 xl:gap-20">
+<div className="flex flex-col  lg:-translate-x-8 justify-center items-start text-left w-full">        {/* Badge */}
+        <div
+          className="
+            inline-flex
+            items-center
+            gap-2
+            px-5
+            py-3
+            rounded-full
+            bg-green-50
+            border
+            border-green-200
+            text-green-700
+            bg-green-100
+            font-semibold
+            shadow-sm
+          "
+        >
+          <ShieldCheck className="w-5 h-5" />
+          Trusted by Millions of Investors
+        </div>
+
+    <motion.h2
+  initial={{ opacity: 0, y: -15 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="
+    mt-4
+    w-full
+    text-left
+    text-slate-900
+    font-black
+    leading-[0.95]
+    tracking-tight
+    text-4xl
+    lg:text-5xl
+    xl:text-5xl
+  "
+>
+  India's Most Trusted
+  <br />
+  Analysis Platform for
+</motion.h2>
+
+        {/* Animated Word */}
+      <div className="h-24 mt-2 flex items-center justify-start w-full">
+          <AnimatePresence mode="wait">
+  <motion.span
+    key={index}
+    initial={{ opacity: 0, y: 12 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -12 }}
+    transition={{ duration: 0.3 }}
+  className="
+  z-20
+  text-green-600
+  font-black
+  leading-none
+  text-5xl
+  lg:text-6xl
+  xl:text-6xl
+  text-left
+  w-full
+  whitespace-nowrap
+"
+  >
+    {features[index]}
+  </motion.span>
+</AnimatePresence>
+
+        </div>
+
+        {/* Description */}
+        <p
+          className="
+            mt-4
+            text-lg
+            xl:text-2xl
+            text-slate-600
+            max-w-xl
+            leading-relaxed
+          "
+        >
+          Your Trusted One-Stop Platform for Smarter
+          Investment Decisions.
+        </p>
+
+        {/* Buttons */}<div className="flex flex-row justify-start gap-3 mt-8">
+        <button
+  onClick={() => navigate("/ipo/ipo-list")}
+  className="
+    flex-1
+    sm:flex-none
+    px-4 sm:px-8
+    py-3 sm:py-4
+    rounded-2xl
+    bg-green-600
+    hover:bg-green-700
+    text-white
+    font-bold
+    shadow-lg
+    transition
+    text-sm sm:text-base
+  "
+>
+  Explore IPOs
+</button>
+
+<button
+  onClick={() => navigate("/comparebrokers")}
+  className="
+    flex-1
+    sm:flex-none
+    px-4 sm:px-8
+    py-3 sm:py-4
+    rounded-2xl
+    border
+    border-green-500
+    bg-white
+    text-green-700
+    font-bold
+    hover:bg-green-50
+    transition
+    text-sm sm:text-base
+  "
+>
+  Compare Brokers
+</button>
+
+        </div>
+            {/* STATS */}
+<div
+  className="
+    mt-8
+    w-full
+    max-w-[650px]
+    bg-white
+    border border-slate-200
+    rounded-2xl
+    shadow-sm
+    p-4
+  "
+>
+  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+
+    {[
+      {
+        value: "50+",
+        label: "Live IPOs",
+        icon: TrendingUp,
+      },
+      {
+        value: "150+",
+        label: "Unlisted Shares",
+        icon: Building2,
+      },
+      {
+        value: "50+",
+        label: "Brokers Compared",
+        icon: UserCog2Icon,
+      },
+      {
+        value: "2M+",
+        label: "Investors",
+        icon: UserCheck,
+      },
+    ].map(({ value, label, icon: Icon }, index) => (
+      <div
+        key={label}
+        className={`
+          flex items-center gap-3
+          ${
+            index !== 3
+              ? "lg:border-r border-slate-200"
+              : ""
+          }
+        `}
+      >
+        <div
+          className="
+            w-10 h-10
+            rounded-full
+            bg-green-50
+            flex items-center justify-center
+            flex-shrink-0
+          "
+        >
+          <Icon className="w-5 h-5 text-green-600" />
+        </div>
+
+        <div>
+          <h4 className="text-sm lg:text-lg font-bold  text-slate-900 leading-none">
+            {value}
+          </h4>
+
+          <p className="text-xs text-slate-500">
+            {label}
+          </p>
+        </div>
+      </div>
+    ))}
+
+  </div>
+</div>
+        
+
+      </div>    
+    
 <div className="hidden lg:flex justify-center">
 
   <div className="relative">
@@ -364,232 +571,28 @@ minLotSize: finalLotSize,
    
 
     <img
-      src="/images/hero-img.png"
-      alt="Investment Platform"
-      className="
-        relative
-        z-10
-        w-[300px]
-        xl:w-[360px]
-        object-contain
-        drop-shadow-[0_25px_35px_rgba(16,185,129,0.15)]
-      "
-    />
+  src="/images/hero-img.png"
+  alt="Investment Platform"
+  className="
+    relative
+    z-10
+    w-[420px]
+    xl:w-[520px]
+    object-contain
+  "
+/>
 
   </div>
 
-</div>
-
-      {/* RIGHT CONTENT */}
-   <div className="flex flex-col justify-center lg:items-start text-center lg:text-left ">
-
-        {/* Badge */}
-        <div
-          className="
-            inline-flex
-            items-center
-            gap-2
-            px-5
-            py-3
-            rounded-full
-            bg-green-50
-            border
-            border-green-200
-            text-green-700
-            bg-green-100
-            font-semibold
-            shadow-sm
-          "
-        >
-          <ShieldCheck className="w-5 h-5" />
-          Trusted by Millions of Investors
-        </div>
-
-     <motion.h2
-  initial={{ opacity: 0, y: -15 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8 }}
-  className="
-    mt-4
-    text-slate-900
-    font-black
-    leading-[1]
-    tracking-tight
-    text-2xl
-    lg:text-4xl
-    xl:text-5xl
-    max-w-4xl
-  "
->
-  India's Most Trusted
-  <br />
-  Analysis Platform for
-</motion.h2>
-
-        {/* Animated Word */}
-        <div className="h-24 mt-0 sm:mt-1 lg:mt-2 flex items-center">
-          <AnimatePresence mode="wait">
-  <motion.span
-    key={index}
-    initial={{ opacity: 0, y: 12 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -12 }}
-    transition={{ duration: 0.3 }}
-    className="
-    z-20
-      text-green-600
-      font-black
-      leading-none
-      text-3xl
-      sm:text-8xl
-      md:text-5xl
-      lg:text-6xl
-      xl:text-7xl
-      text-center
-      lg:text-left
-      w-full
-      whitespace-nowrap
-    "
-  >
-    {features[index]}
-  </motion.span>
-</AnimatePresence>
-
-        </div>
-
-        {/* Description */}
-        <p
-          className="
-            mt-2
-            text-lg
-            xl:text-xl
-            text-slate-600
-            max-w-xl
-            leading-relaxed
-          "
-        >
-          Your Trusted One-Stop Platform for Smarter
-          Investment Decisions.
-        </p>
-
-        {/* Buttons */}
-<div className="flex flex-row justify-center lg:justify-start gap-3 mt-8 w-full">
-        <button
-  onClick={() => navigate("/ipo/ipo-list")}
-  className="
-    flex-1
-    sm:flex-none
-    px-4 sm:px-8
-    py-3 sm:py-4
-    rounded-2xl
-    bg-green-600
-    hover:bg-green-700
-    text-white
-    font-bold
-    shadow-lg
-    transition
-    text-sm sm:text-base
-  "
->
-  Explore IPOs
-</button>
-
-<button
-  onClick={() => navigate("/comparebrokers")}
-  className="
-    flex-1
-    sm:flex-none
-    px-4 sm:px-8
-    py-3 sm:py-4
-    rounded-2xl
-    border
-    border-green-500
-    bg-white
-    text-green-700
-    font-bold
-    hover:bg-green-50
-    transition
-    text-sm sm:text-base
-  "
->
-  Compare Brokers
-</button>
-
-        </div>
-        
-
-      </div>
-           
-
+</div> 
     </div>
-    {/* STATS */}
-<div className=" grid grid-cols-2 lg:grid-cols-4 gap-6">
 
-  {[
-    {
-      value: "50+",
-      label: "Live IPOs",
-      icon: TrendingUp,
-    },
-    {
-      value: "150+",
-      label: "Unlisted Shares",
-      icon: Building2,
-    },
-    {
-      value: "50+",
-      label: "Brokers Compared",
-      icon: UserCog2Icon,
-    },
-    {
-      value: "2M+",
-      label: "Investors",
-      icon: UserCheck,
-    },
-  ].map(({ value, label, icon: Icon }) => (
-    <div
-      key={label}
-      className="
-        bg-white
-        rounded-3xl
-        border border-green-50
-        shadow-[0_10px_30px_rgba(0,0,0,0.05)]
-        p-6 lg:p-8
-        flex flex-col items-center
-        text-center
-        transition-all duration-300
-        hover:-translate-y-1
-        hover:shadow-[0_15px_40px_rgba(16,185,129,0.12)]
-      "
-    >
-      <div
-        className="
-          w-16 h-16 lg:w-20 lg:h-20
-          rounded-full
-          bg-green-50
-          flex items-center justify-center
-          mb-4
-        "
-      >
-        <Icon className="w-8 h-8 lg:w-10 lg:h-10 text-green-600" />
-      </div>
-
-      <h4 className="text-3xl  lg:text-3xl font-black text-green-600">
-        {value}
-      </h4>
-
-      <p className="mt-2 text-base lg:text-xl font-semibold text-slate-700">
-        {label}
-      </p>
-    </div>
-  ))}
-
-</div>
 
   </div>
 
 </section>
-       {/* BROKER ANALYZER */}
+
+    {/* BROKER ANALYZER */}
      <section className="py-3 lg:py-2 overflow-hidden">
   <div className="w-full max-w-full mx-auto px-2 sm:px-5 lg:px-8">
 
