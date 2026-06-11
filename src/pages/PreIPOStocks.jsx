@@ -225,7 +225,7 @@ const PreIPOStocks = () => {
   <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-green-100/40 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2"></div>
   <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-100/40 blur-3xl rounded-full translate-x-1/3 translate-y-1/3"></div>
 
-  <div className="relative max-w-[1800px] mx-auto px-6">
+ <div className="relative w-full px-4 lg:px-8">
 
           <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-center">
 
@@ -341,12 +341,22 @@ const PreIPOStocks = () => {
       </section>
 
       {/* MAIN CONTENT */}
-      <section className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+     <section className="w-full px-4 lg:px-8 py-10">
 
-        <div className="grid grid-cols-1 xl:grid-cols-[1fr_320px] gap-8">
+        <div className="w-full">
 
           {/* LEFT TABLE */}
-          <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+          <div
+  className="
+    w-full
+    bg-white
+    rounded-[28px]
+    border
+    border-slate-200
+    shadow-[0_10px_40px_rgba(15,23,42,0.05)]
+    overflow-hidden
+  "
+>
 
             {/* HEADER */}
             <div className="px-8 py-7 border-gray-200">
@@ -377,7 +387,7 @@ const PreIPOStocks = () => {
             </div>
 
             {/* TABLE */}
-            <div className="overflow-x-auto">
+<div className="w-full overflow-x-auto">
 
               <table className="w-full min-w-[1100px]">
 

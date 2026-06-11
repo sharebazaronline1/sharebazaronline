@@ -18,7 +18,7 @@ import { Helmet } from "react-helmet-async";
 import slugify from "../utils/slugify";
 /* ================= REUSABLE ================= */
 const Card = ({ children }) => (
-  <section className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+  <section className="bg-white rounded-2xl border-slate-200 shadow-sm overflow-hidden">
     {children}
   </section>
 );
@@ -113,7 +113,7 @@ if (!data) {
         <div className="relative">
           <div className="w-16 h-16 border-4 border-slate-200 rounded-full"></div>
 
-          <div className="w-16 h-16 border-4 border-green-600 border-t-transparent rounded-full animate-spin absolute top-0 left-0"></div>
+          <div className="w-16 h-16 border-4 border-green-600 -transparent rounded-full animate-spin absolute top-0 left-0"></div>
         </div>
 
         {/* Text */}
@@ -135,7 +135,7 @@ if (!data) {
           {[1, 2, 3].map((item) => (
             <div
               key={item}
-              className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm"
+              className="bg-white border-slate-200 rounded-2xl p-6 shadow-sm"
             >
 
               <div className="h-6 bg-slate-200 rounded w-64 mb-6"></div>
@@ -284,7 +284,7 @@ if (!data) {
           <div className="flex flex-col md:flex-row items-start md:items-center gap-6 ml-4 lg:ml-6 py-8 pl-6 lg:pl-96 relative">
             {/* LOGO */}
             <div className="shrink-0">
-              <div className="w-28 h-28 lg:w-36 lg:h-36 border rounded-xl p-4 bg-white shadow-md">
+              <div className="w-28 h-28 lg:w-36 lg:h-36 rounded-xl p-4 bg-white shadow-md">
                 <img
                   src={data.logo}           
                   alt={`${data.name} unlisted share logo`}
@@ -544,7 +544,7 @@ if (!data) {
           <SectionHeader icon={Users} title="Shareholding Pattern" />
           <div className="p-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
             {data.shareholding?.map((s, i) => (
-              <div key={i} className="border rounded-xl p-4 bg-slate-50 text-center">
+              <div key={i} className="rounded-xl p-4 bg-slate-50 text-center">
                 <p className="font-semibold text-lg mb-2">{s.year}</p>
                 <p className="text-sm">Promoter: <span className="font-medium">{s.promoters}</span></p>
                 <p className="text-sm">Institutional: <span className="font-medium">{s.institutional || "-"}</span></p>
@@ -590,7 +590,7 @@ if (!data) {
             <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions About {data.name} Unlisted Shares</h2>
             <div className="space-y-3">
               {data.faq.map((item, index) => (
-                <div key={index} className="border rounded-lg overflow-hidden">
+                <div key={index} className="rounded-lg overflow-hidden">
                   <button
                     onClick={() => toggleFaq(index)}
                     className="w-full flex justify-between items-center px-4 py-3 text-left bg-gray-50 hover:bg-gray-100 transition"
@@ -603,7 +603,7 @@ if (!data) {
                     )}
                   </button>
                   {openFaqs[index] && (
-                    <div className="px-4 pb-4 pt-2 text-gray-700 text-sm md:text-base border-t">
+                    <div className="px-4 pb-4 pt-2 text-gray-700 text-sm md:text-base ">
                       {item.answer}
                     </div>
                   )}
@@ -620,7 +620,7 @@ if (!data) {
             Back to All Unlisted Shares
           </Link>
         </div>
-<div className="bg-gradient-to-br from-white to-slate-50 border border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
+<div className="bg-gradient-to-br from-white to-slate-50 border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
 
   {/* Heading */}
   <div className="mb-6">
@@ -638,7 +638,7 @@ if (!data) {
 
     <Link
       to="/ipo/ipo-list"
-      className="group bg-white border border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
+      className="group bg-white border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
     >
       <div className="flex items-center justify-between">
         <div>
@@ -659,7 +659,7 @@ if (!data) {
 
     <Link
       to="/pre-ipo-stocks"
-      className="group bg-white border border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
+      className="group bg-white border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
     >
       <div className="flex items-center justify-between">
         <div>
@@ -680,7 +680,7 @@ if (!data) {
 
     <Link
       to="/broker-analyzer"
-      className="group bg-white border border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
+      className="group bg-white border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
     >
       <div className="flex items-center justify-between">
         <div>
