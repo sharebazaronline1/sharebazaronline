@@ -33,11 +33,11 @@ const Sidebar = ({ mobileOpen = false, setMobileOpen = () => {} }) => {
       )}
 
       <aside
-        className={`fixed top-0 left-0 h-screen w-64 bg-white border-r z-50 transform transition-transform
+        className={`fixed top-0 left-0 h-screen w-64 bg-white  z-50 transform transition-transform
         ${mobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 flex flex-col`}
       >
         {/* Header with Logo */}
-        <div className="p-6 border-b flex justify-between items-center bg-white">
+        <div className="p-6 flex justify-between items-center bg-white">
           <button 
             onClick={() => window.location.href = '/'} 
             className="flex items-center"
@@ -98,7 +98,7 @@ const Sidebar = ({ mobileOpen = false, setMobileOpen = () => {} }) => {
             <p className="text-xs text-gray-600 mb-3">
               Get exclusive IPO alerts, priority access & more!
             </p>
-            <button className="w-full bg-green-600 text-white text-sm font-medium py-2 rounded-lg hover:bg-green-700 transition">
+            <button className="w-full bg-[#16A34A] text-white text-sm font-medium py-2 rounded-lg hover:bg-[#15803D] transition">
               Upgrade Now
             </button>
           </div>

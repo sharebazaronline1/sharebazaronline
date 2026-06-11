@@ -119,7 +119,7 @@ useEffect(() => {
 
       <main className="md:ml-64 p-4 md:p-8 transition-all">
         {/* Mobile Header */}
-        <header className="md:hidden sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-4 mb-6">
+        <header className="md:hidden sticky top-0 z-20 bg-white border-gray-200 px-4 py-4 mb-6">
   <div className="flex items-center justify-between">
 
     {/* LEFT */}
@@ -166,7 +166,7 @@ useEffect(() => {
         )}
 
         {/* Profile Section */}
-        <section className="bg-white rounded-2xl p-6 border shadow-sm mb-6">
+        <section className="bg-white rounded-2xl p-6 -sm mb-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-bold flex items-center gap-2">
               <User className="text-green-600" />
@@ -222,7 +222,7 @@ useEffect(() => {
               <button
                 onClick={handleUpdateProfile}
                 disabled={loading}
-                className="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 transition font-medium"
+                className="bg-[#16A34A] text-white px-6 py-3 rounded-xl hover:bg-[#15803D] transition font-medium"
               >
                 {loading ? "Updating..." : "Save Changes"}
               </button>
@@ -234,7 +234,7 @@ useEffect(() => {
         </section>
 
         {/* Security Section */}
-        <section className="bg-white rounded-2xl p-6 border shadow-sm mb-6">
+        <section className="bg-white rounded-2xl p-6 -sm mb-6">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-bold flex items-center gap-2">
               <Lock className="text-green-600" />
@@ -290,7 +290,7 @@ useEffect(() => {
               <button
                 onClick={handleUpdatePassword}
                 disabled={loading}
-                className="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 transition font-medium"
+                className="bg-[#16A34A] text-white px-6 py-3 rounded-xl hover:bg-[#15803D] transition font-medium"
               >
                 {loading ? "Updating..." : "Change Password"}
               </button>
@@ -302,7 +302,7 @@ useEffect(() => {
         </section>
 
         {/* Notifications Preferences */}
-        <section className="bg-white rounded-2xl p-6 border shadow-sm mb-6">
+        <section className="bg-white rounded-2xl p-6 -sm mb-6">
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
             <BellRing className="text-green-600" />
             Notification Preferences
@@ -325,7 +325,7 @@ useEffect(() => {
                 />
                 <div
                   className={`w-11 h-6 rounded-full px-0.5 transition-colors duration-200 flex items-center
-                    ${emailNotifications ? "bg-green-600 justify-end" : "bg-gray-300 justify-start"}
+                    ${emailNotifications ? "bg-[#16A34A] justify-end" : "bg-gray-300 justify-start"}
                   `}
                 >
                   <div className="h-5 w-5 bg-white rounded-full shadow" />
@@ -350,7 +350,7 @@ useEffect(() => {
                 />
                 <div
                   className={`w-11 h-6 rounded-full px-0.5 transition-colors duration-200 flex items-center
-                    ${ipoAlerts ? "bg-green-600 justify-end" : "bg-gray-300 justify-start"}
+                    ${ipoAlerts ? "bg-[#16A34A] justify-end" : "bg-gray-300 justify-start"}
                   `}
                 >
                   <div className="h-5 w-5 bg-white rounded-full shadow" />
@@ -375,7 +375,7 @@ useEffect(() => {
                 />
                 <div
                   className={`w-11 h-6 rounded-full px-0.5 transition-colors duration-200 flex items-center
-                    ${gmpUpdates ? "bg-green-600 justify-end" : "bg-gray-300 justify-start"}
+                    ${gmpUpdates ? "bg-[#16A34A] justify-end" : "bg-gray-300 justify-start"}
                   `}
                 >
                   <div className="h-5 w-5 bg-white rounded-full shadow" />
@@ -400,7 +400,7 @@ useEffect(() => {
                 />
                 <div
                   className={`w-11 h-6 rounded-full px-0.5 transition-colors duration-200 flex items-center
-                    ${orderStatus ? "bg-green-600 justify-end" : "bg-gray-300 justify-start"}
+                    ${orderStatus ? "bg-[#16A34A] justify-end" : "bg-gray-300 justify-start"}
                   `}
                 >
                   <div className="h-5 w-5 bg-white rounded-full shadow" />
@@ -425,7 +425,7 @@ useEffect(() => {
                 />
                 <div
                   className={`w-11 h-6 rounded-full px-0.5 transition-colors duration-200 flex items-center
-                    ${portfolioChanges ? "bg-green-600 justify-end" : "bg-gray-300 justify-start"}
+                    ${portfolioChanges ? "bg-[#16A34A] justify-end" : "bg-gray-300 justify-start"}
                   `}
                 >
                   <div className="h-5 w-5 bg-white rounded-full shadow" />
@@ -436,14 +436,14 @@ useEffect(() => {
 
           <button
             onClick={handleSavePreferences}
-            className="mt-6 bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 transition font-medium"
+            className="mt-6 bg-[#16A34A] text-white px-6 py-3 rounded-xl hover:bg-[#15803D] transition font-medium"
           >
             Save Preferences
           </button>
         </section>
 
         {/* Theme & Language */}
-        <section className="bg-white rounded-2xl p-6 border shadow-sm mb-6">
+        <section className="bg-white rounded-2xl p-6 -sm mb-6">
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
             <SettingsIcon className="text-green-600" />
             App Preferences
@@ -466,7 +466,7 @@ useEffect(() => {
                 />
                 <div
                   className={`w-11 h-6 rounded-full px-0.5 transition-colors duration-200 flex items-center
-                    ${darkMode ? "bg-green-600 justify-end" : "bg-gray-300 justify-start"}
+                    ${darkMode ? "bg-[#16A34A] justify-end" : "bg-gray-300 justify-start"}
                   `}
                 >
                   <div className="h-5 w-5 bg-white rounded-full shadow" />
@@ -497,20 +497,20 @@ useEffect(() => {
 
           <button
             onClick={handleSavePreferences}
-            className="mt-6 bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 transition font-medium"
+            className="mt-6 bg-[#16A34A] text-white px-6 py-3 rounded-xl hover:bg-[#15803D] transition font-medium"
           >
             Save Preferences
           </button>
         </section>
 
         {/* Active Devices */}
-        <section className="bg-white rounded-2xl p-6 border shadow-sm mb-6">
+        <section className="bg-white rounded-2xl p-6 -sm mb-6">
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
             <Smartphone className="text-green-600" />
             Active Devices
           </h2>
           <div className="space-y-4">
-            <div className="flex justify-between items-center border-b pb-3">
+            <div className="flex justify-between items-center pb-3">
               <p className="text-gray-700">Current Device - Web Browser</p>
               <button className="text-red-600 hover:underline font-medium">Log out</button>
             </div>

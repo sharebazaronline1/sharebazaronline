@@ -483,7 +483,7 @@ const handleGoogleLogin = async () => {
         backgroundSize: "70%",
       }}
     >
-      <div className="absolute inset-0 bg-black/40"></div>
+     
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -566,7 +566,7 @@ const handleGoogleLogin = async () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3 bg-green-600 text-white font-bold rounded-xl hover:bg-green-700 transition disabled:opacity-60"
+                className="w-full py-3 bg-[#16A34A] text-white font-bold rounded-xl hover:bg-[#15803D] transition disabled:opacity-60"
               >
                 {loading
                   ? "Please wait..."
@@ -578,7 +578,7 @@ const handleGoogleLogin = async () => {
 
             <div className="relative my-6">
               <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-gray-200" />
+                <div className="w-full border-gray-200" />
               </div>
               <div className="relative flex justify-center text-sm">
                 <span className="px-4 bg-white text-gray-500">or</span>

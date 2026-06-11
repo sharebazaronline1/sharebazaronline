@@ -223,7 +223,7 @@ await fetchReferrals(user.id, commissionRate);
        setMobileOpen={setMobileSidebarOpen}
      />
       <main className="md:ml-64 px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
-       <header className="md:hidden sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-4 mb-6">
+       <header className="md:hidden sticky top-0 z-20 bg-white border-gray-200 px-4 py-4 mb-6">
   <div className="flex items-center justify-between">
 
     <div className="flex items-center gap-3">
@@ -265,7 +265,7 @@ await fetchReferrals(user.id, commissionRate);
             {!showLink ? (
               <button
                 onClick={() => setShowLink(true)}
-                className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium text-lg transition shadow-md"
+                className="px-10 py-4 bg-[#16A34A] hover:bg-[#15803D] text-white rounded-full font-medium text-lg transition shadow-md"
               >
                 Get My Referral Link
               </button>
@@ -281,7 +281,7 @@ await fetchReferrals(user.id, commissionRate);
                     onClick={handleCopy}
                     disabled={!referralLink}
                     className={`min-w-[120px] flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg text-white font-medium transition ${
-                      copied ? "bg-green-700" : "bg-green-600 hover:bg-green-700"
+                      copied ? "bg-[#15803D]" : "bg-[#16A34A] hover:bg-[#15803D]"
                     } disabled:opacity-50 disabled:cursor-not-allowed`}
                   >
                     {copied ? <Check size={18} /> : <Copy size={18} />}
@@ -330,7 +330,7 @@ await fetchReferrals(user.id, commissionRate);
           </div>
 
           {/* HOW IT WORKS - unchanged */}
-          <div className="border-t pt-10">
+          <div className="pt-10">
             <h3 className="text-xl font-semibold text-center mb-10">How it works</h3>
             <div className="hidden sm:grid grid-cols-5 items-center text-center max-w-4xl mx-auto gap-2">
               <div className="space-y-4">
@@ -372,7 +372,7 @@ await fetchReferrals(user.id, commissionRate);
           </div>
 
           {/* REFER VIA EMAIL / MOBILE - unchanged */}
-          <div className="border-t pt-10">
+          <div className="pt-10">
             <h3 className="text-xl font-semibold mb-6">Refer via Email or Mobile</h3>
             <form onSubmit={handleReferralSubmit} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <input
@@ -401,7 +401,7 @@ await fetchReferrals(user.id, commissionRate);
               <div className="sm:col-span-3 mt-4">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-10 py-4 bg-green-600 hover:bg-green-700 text-white rounded-xl font-medium transition shadow-md"
+                  className="w-full sm:w-auto px-10 py-4 bg-[#16A34A] hover:bg-[#15803D] text-white rounded-xl font-medium transition shadow-md"
                 >
                   <Share2 size={18} className="inline mr-2" />
                   Send Referral
@@ -411,7 +411,7 @@ await fetchReferrals(user.id, commissionRate);
           </div>
 
           {/* REFERRALS & EARNINGS - FIXED with Clean Input */}
-          <div className="border-t pt-10">
+          <div className="pt-10">
             <h3 className="text-xl font-semibold mb-8 flex items-center gap-3">
               <Users size={24} className="text-green-600" />
               Your Referrals & Earnings
@@ -439,7 +439,7 @@ await fetchReferrals(user.id, commissionRate);
                   </p>
 
                   {/* Withdraw Input Section */}
-                  <div className="mt-8 pt-6 border-t border-green-200">
+                  <div className="mt-8 pt-6 border-green-200">
                     <div className="flex flex-col sm:flex-row items-center gap-4 max-w-md mx-auto">
                       <div className="flex-1 relative">
                         <span className="absolute left-4 top-1/4 -translate-y-1/2 text-gray-500 text-lg">₹</span>
@@ -463,7 +463,7 @@ await fetchReferrals(user.id, commissionRate);
                       </div>
                       <button
                         onClick={handleWithdraw}
-                        className="w-full sm:w-auto px-10 py-4 bg-green-600 hover:bg-green-700 text-white rounded-2xl font-medium transition shadow-md flex items-center justify-center gap-3"
+                        className="w-full sm:w-auto px-10 py-4 bg-[#16A34A] hover:bg-[#15803D] text-white rounded-2xl font-medium transition shadow-md flex items-center justify-center gap-3"
                       >
                         <IndianRupee size={20} />
                         Withdraw

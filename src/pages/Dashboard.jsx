@@ -102,7 +102,7 @@ if (preIPOError) {
 
       <main className="md:ml-64 p-4 md:p-8 transition-all">
         {/* Mobile Header */}
-    <header className="md:hidden sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-4 mb-6">
+    <header className="md:hidden sticky top-0 z-20 bg-white border-gray-200 px-4 py-4 mb-6">
   <div className="flex items-center justify-between">
 
     {/* LEFT */}
@@ -122,7 +122,7 @@ if (preIPOError) {
       {/* Account Inactive / Complete KYC Button */}
       <button
         onClick={() => navigate("/kyc")} // redirect to KYC page
-        className="ml-2 px-2 py-1 border border-red-500 rounded-full text-gray-500 text-xs hover:bg-red-50 transition"
+        className="ml-2 px-2 py-1 border-red-500 rounded-full text-gray-500 text-xs hover:bg-red-50 transition"
         title="Complete your KYC"
       >
         Complete KYC
@@ -152,7 +152,7 @@ if (preIPOError) {
 
           <div className="flex items-center gap-4">
             {accountStatus !== "active" && (
-              <div className="bg-amber-50 border border-red-300 rounded-2xl px-5 py-3 flex items-center gap-3">
+              <div className="bg-amber-50 border-red-300 rounded-2xl px-5 py-3 flex items-center gap-3">
                 <div>
                   <p className="font-semibold text-amber-800 text-sm">
                     Account is Inactive
@@ -206,7 +206,7 @@ if (preIPOError) {
 
         {/* Main Sections */}
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
-          <section className="bg-white rounded-2xl p-5 border shadow-sm xl:col-span-2 h-72 flex flex-col">
+          <section className="bg-white rounded-2xl p-5 -sm xl:col-span-2 h-72 flex flex-col">
             <h2 className="text-xl font-bold mb-4">Top Trending</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 flex-1">
@@ -229,7 +229,7 @@ if (preIPOError) {
             </div>
           </section>
 
-          <section className="bg-white rounded-2xl p-5 border shadow-sm h-72 flex flex-col">
+          <section className="bg-white rounded-2xl p-5 -sm h-72 flex flex-col">
             <h2 className="text-xl font-bold mb-4">Portfolio Mix</h2>
 
             <div className="flex-1 bg-gray-50 rounded-xl flex items-center justify-center">
@@ -241,7 +241,7 @@ if (preIPOError) {
             </p>
           </section>
 
-          <section className="bg-white rounded-2xl p-6 border shadow-sm xl:col-span-3">
+          <section className="bg-white rounded-2xl p-6 -sm xl:col-span-3">
             <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
               <TrendingUp className="text-green-600" />
               Upcoming Unlisted Shares
@@ -278,7 +278,7 @@ if (preIPOError) {
 const StatCard = ({ icon, title, value, change, onClick }) => (
   <div
     onClick={onClick}
-    className={`bg-white rounded-xl p-5 border shadow-sm ${
+    className={`bg-white rounded-xl p-5 -sm ${
       onClick ? "cursor-pointer hover:shadow-md transition" : ""
     }`}
   >
@@ -303,7 +303,7 @@ const SmallPreIPOItem = ({
   demand,
   navigate,
 }) => (
-  <div className="bg-white border border-gray-200 rounded-2xl p-4 flex flex-col gap-3 hover:shadow-md transition">
+  <div className="bg-white border-gray-200 rounded-2xl p-4 flex flex-col gap-3 hover:shadow-md transition">
     <h4 className="font-semibold text-gray-900 text-sm leading-snug">
       {name}
     </h4>
@@ -323,7 +323,7 @@ const SmallPreIPOItem = ({
     <div className="pt-2">
       <button
         onClick={() => navigate("/orders")}
-        className="w-full py-2 text-xs font-semibold rounded-xl bg-green-600 text-white hover:bg-green-700 transition"
+        className="w-full py-2 text-xs font-semibold rounded-xl bg-[#16A34A] text-white hover:bg-[#15803D] transition"
       >
         Buy
       </button>
@@ -338,7 +338,7 @@ const UnlistedCard = ({
   status,
   navigate,
 }) => (
-  <div className="bg-gray-50 rounded-xl p-4 border hover:shadow-md transition">
+  <div className="bg-gray-50 rounded-xl p-4 hover:shadow-md transition">
     <h4 className="font-bold text-gray-900">{name}</h4>
 
     <p className="text-sm text-gray-600 mt-1">
@@ -356,7 +356,7 @@ const UnlistedCard = ({
 
       <button
         onClick={() => navigate("/orders")}
-        className="px-4 py-1.5 text-sm font-semibold rounded-full border border-green-600 text-green-600 hover:bg-green-50 transition"
+        className="px-4 py-1.5 text-sm font-semibold rounded-full border-green-600 text-green-600 hover:bg-green-50 transition"
       >
         Buy
       </button>

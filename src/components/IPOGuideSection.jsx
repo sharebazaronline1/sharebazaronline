@@ -116,7 +116,7 @@ const FAQSection = () => {
         <div className="text-center mt-8">
           <button
             onClick={() => setShowAllFAQs(true)}
-            className="px-8 py-3 bg-green-600 text-white font-medium rounded-full hover:bg-blue-700 transition"
+            className="px-8 py-3 bg-[#16A34A] text-white font-medium rounded-full hover:bg-blue-700 transition"
           >
             View All FAQs ({faqs.length - 10} more)
           </button>
@@ -135,11 +135,10 @@ const IPOGuideSection = () => {
   });
   return (
    <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-      <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff] py-16 lg:py-8">
+      <section className="relative overflow-hidden py-16 lg:py-8">
 
   {/* Glow Effects */}
-  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-green-100/40 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2" />
-  <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-100/40 blur-3xl rounded-full translate-x-1/3 translate-y-1/3" />
+
 
   <div className="relative w-full mx-auto px-2">
 
@@ -292,7 +291,7 @@ const IPOGuideSection = () => {
       <div className="flex-1 max-w-[1100px]">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
 
-          <div className="px-8 py-6 bg-gray-50 border-b border-gray-200 text-center">
+          <div className="px-8 py-6 bg-gray-50 border-gray-200 text-center">
             <h2 className="text-3xl font-black text-gray-900">IPO Tracker</h2>
             <p className="mt-2 text-lg text-gray-600">
               Live & Upcoming IPOs in India
@@ -361,7 +360,7 @@ const IPOGuideSection = () => {
             <div className="text-center mt-8">
               <button
                 onClick={() => navigate("/ipo/ipo-list")}
-                className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
+                className="px-8 py-3.5 bg-[#16A34A] text-white font-bold rounded-full hover:bg-[#15803D] transition shadow-md"
               >
                 View All IPO
               </button>
@@ -938,7 +937,7 @@ const IPOGuideSection = () => {
             Application Methods: Broker platforms (Zerodha, Groww, Angel One), Bank ASBA portals, UPI mandate approval is mandatory for retail investors.
           </p>
           <div className="text-center mt-6">
-            <button onClick={() => navigate('/how-to-apply-ipo')} className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition shadow-lg text-lg">
+            <button onClick={() => navigate('/how-to-apply-ipo')} className="px-10 py-4 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold rounded-full transition shadow-lg text-lg">
               Apply Now
             </button>
           </div>

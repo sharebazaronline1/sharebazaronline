@@ -93,14 +93,14 @@ const BrokerDropdown = ({ label, selected, onSelect }) => {
       <p className="text-sm font-medium text-gray-600 mb-2 ml-1">{label}</p>
       <button
         onClick={() => setOpen(!open)}
-        className="w-full h-14 bg-white border border-gray-200 hover:border-blue-500 focus:border-blue-600 rounded-2xl px-5 flex items-center justify-between transition-all shadow-sm"
+        className="w-full h-14 bg-white border-gray-200 hover:border-blue-500 focus:border-blue-600 rounded-2xl px-5 flex items-center justify-between transition-all shadow-sm"
       >
         <div className="flex items-center gap-3 truncate">
           {selected ? (
             <img
               src={selected.logo}
               alt={selected.name}
-              className="w-12 h-12 rounded-lg object-contain border p-1 bg-white"
+              className="w-12 h-12 rounded-lg object-contain p-1 bg-white"
             />
           ) : (
             <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
@@ -120,7 +120,7 @@ const BrokerDropdown = ({ label, selected, onSelect }) => {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 8 }}
-            className="absolute z-50 mt-2 w-full bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden"
+            className="absolute z-50 mt-2 w-full bg-white border-gray-200 rounded-2xl shadow-xl overflow-hidden"
           >
             <div className="max-h-72 overflow-y-auto py-2">
               {brokers.map((broker) => (
@@ -129,7 +129,7 @@ const BrokerDropdown = ({ label, selected, onSelect }) => {
                   onClick={() => { onSelect(broker); setOpen(false); }}
                   className="w-full px-5 py-3.5 hover:bg-blue-50 flex items-center gap-4 transition-all"
                 >
-                  <img src={broker.logo} alt={broker.name} className="w-12 h-12 rounded-xl object-contain border bg-white p-1" />
+                  <img src={broker.logo} alt={broker.name} className="w-12 h-12 rounded-xl object-contain bg-white p-1" />
                   <div className="flex-1 text-left">
                     <p className="font-semibold text-gray-900">{broker.name}</p>
                     <p className="text-xs text-gray-500">{broker.type} Broker</p>
@@ -159,7 +159,7 @@ const CompareCard = ({ broker, highlight }) => {
   return (
     <motion.div
       whileHover={{ y: -10 }}
-      className={`relative bg-gradient-to-br from-blue-50 to-white rounded-3xl overflow-hidden shadow-xl border transition-all duration-300 ${
+      className={`relative bg-gradient-to-br from-blue-50 to-white rounded-3xl overflow-hidden shadow-xl transition-all duration-300 ${
         highlight ? "border-blue-600 ring-2 ring-blue-100" : "border-gray-100 hover:border-gray-200"
       }`}
     >
@@ -199,7 +199,7 @@ const CompareCard = ({ broker, highlight }) => {
               ["Equity Delivery", broker.charges.delivery],
               ["Equity Intraday", broker.charges.intraday],
             ].map(([label, val]) => (
-              <div key={label} className="flex justify-between text-sm border-b border-gray-100 pb-3 last:border-0 last:pb-0">
+              <div key={label} className="flex justify-between text-sm border-gray-100 pb-3 last:border-0 last:pb-0">
                 <span className="text-gray-600">{label}</span>
                 <span className="font-semibold text-gray-900">{val}</span>
               </div>
@@ -213,7 +213,7 @@ const CompareCard = ({ broker, highlight }) => {
             {broker.segments.map((seg, i) => (
               <span
                 key={i}
-                className="px-4 py-2 text-xs font-medium bg-green-50 text-green-700 border border-blue-100 rounded-2xl"
+                className="px-4 py-2 text-xs font-medium bg-green-50 text-green-700 border-blue-100 rounded-2xl"
               >
                 {seg}
               </span>
@@ -222,10 +222,10 @@ const CompareCard = ({ broker, highlight }) => {
         </div>
 
         <div className="pt-4 flex gap-3">
-          <button className="flex-1 py-4 border border-gray-300 font-semibold rounded-2xl hover:bg-gray-50 transition-colors text-sm">
+          <button className="flex-1 py-4 border-gray-300 font-semibold rounded-2xl hover:bg-gray-50 transition-colors text-sm">
             Details
           </button>
-          <button className="flex-1 py-4 bg-green-600 hover:bg-green-700 text-white font-bold rounded-2xl transition-all text-sm">
+          <button className="flex-1 py-4 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold rounded-2xl transition-all text-sm">
             Open Account
           </button>
         </div>
@@ -292,9 +292,9 @@ const CompareBroker = () => {
               <motion.div
                 key={idx}
                 whileHover={{ y: -6 }}
-                className="bg-white rounded-3xl p-7 shadow-sm border border-gray-100 hover:shadow-xl transition-all"
+                className="bg-white rounded-3xl p-7 shadow-sm border-gray-100 hover:shadow-xl transition-all"
               >
-                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br from-${feature.color}-100 to-white flex items-center justify-center border border-${feature.color}-100`}>
+                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br from-${feature.color}-100 to-white flex items-center justify-center border-${feature.color}-100`}>
                   <Icon className={`text-${feature.color}-600`} size={34} />
                 </div>
                 <h3 className="text-xl font-bold mt-6 text-gray-900">{feature.title}</h3>
@@ -305,7 +305,7 @@ const CompareBroker = () => {
         </div>
 
         {/* Broker Selection */}
-        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border border-gray-100">
+        <div className="bg-white rounded-3xl shadow-xl p-8 md:p-10 border-gray-100">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <BrokerDropdown label="Broker 1" selected={broker1} onSelect={setBroker1} />
             <BrokerDropdown label="Broker 2" selected={broker2} onSelect={setBroker2} />
@@ -316,7 +316,7 @@ const CompareBroker = () => {
             <button
               onClick={handleCompare}
               disabled={selectedBrokers.length < 2}
-              className="px-12 py-4 bg-green-600 hover:bg-green-700 disabled:bg-gray-300 text-white font-bold text-lg rounded-3xl flex items-center gap-3 shadow-xl transition-all disabled:cursor-not-allowed"
+              className="px-12 py-4 bg-[#16A34A] hover:bg-[#15803D] disabled:bg-gray-300 text-white font-bold text-lg rounded-3xl flex items-center gap-3 shadow-xl transition-all disabled:cursor-not-allowed"
             >
               START COMPARISON
             </button>

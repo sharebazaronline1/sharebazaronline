@@ -56,7 +56,7 @@ const Portfolio = () => {
               <p className="text-gray-600 mb-8">
                 Start building your wealth by investing in high-growth pre-IPO and unlisted companies.
               </p>
-              <button className="bg-green-600 text-white px-8 py-3 rounded-xl hover:bg-green-700 transition font-medium inline-flex items-center gap-2">
+              <button className="bg-[#16A34A] text-white px-8 py-3 rounded-xl hover:bg-[#15803D] transition font-medium inline-flex items-center gap-2">
                 <PlusCircle size={20} />
                 Explore Investments
               </button>
@@ -93,12 +93,12 @@ const Portfolio = () => {
             </div>
 
             {/* Holdings Table */}
-            <section className="bg-white rounded-2xl p-6 border shadow-sm mb-6">
+            <section className="bg-white rounded-2xl p-6 -sm mb-6">
               <h2 className="text-xl font-bold mb-6">Your Holdings</h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
                   <thead>
-                    <tr className="border-b text-left text-gray-600 font-medium">
+                    <tr className="text-left text-gray-600 font-medium">
                       <th className="pb-4">Company</th>
                       <th className="pb-4 text-center">Shares</th>
                       <th className="pb-4 text-right">Avg. Cost</th>
@@ -109,7 +109,7 @@ const Portfolio = () => {
                   </thead>
                   <tbody>
                     {holdings.map((holding, i) => (
-                      <tr key={i} className="border-b last:border-0 hover:bg-gray-50 transition">
+                      <tr key={i} className="last:border-0 hover:bg-gray-50 transition">
                         <td className="py-5 font-medium text-gray-900">{holding.name}</td>
                         <td className="py-5 text-center">{holding.shares}</td>
                         <td className="py-5 text-right">₹{holding.avgPrice.toLocaleString()}</td>
@@ -126,7 +126,7 @@ const Portfolio = () => {
             </section>
 
             {/* Performance Chart */}
-            <section className="bg-white rounded-2xl p-6 border shadow-sm">
+            <section className="bg-white rounded-2xl p-6 -sm">
               <h2 className="text-xl font-bold mb-6">Portfolio Performance</h2>
               <div className="h-80 bg-gray-50 rounded-xl flex items-center justify-center">
                 <BarChart2 className="w-16 h-16 text-green-600" />
@@ -141,7 +141,7 @@ const Portfolio = () => {
 };
 
 const StatCard = ({ icon, title, value, change }) => (
-  <div className="bg-white rounded-2xl p-6 border shadow-sm">
+  <div className="bg-white rounded-2xl p-6 -sm">
     <div className="flex items-center justify-between mb-4">
       <div className="p-3 bg-green-100 text-green-600 rounded-xl">{icon}</div>
       {change !== "—" && (

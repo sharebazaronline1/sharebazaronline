@@ -349,7 +349,7 @@ const PreIPOStocks = () => {
           <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
 
             {/* HEADER */}
-            <div className="px-8 py-7 border-b border-gray-200">
+            <div className="px-8 py-7 border-gray-200">
 
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
 
@@ -372,7 +372,7 @@ const PreIPOStocks = () => {
             </div>
 
             {/* MOBILE SWIPE */}
-            <div className="sm:hidden flex items-center justify-end gap-2 px-4 py-2 bg-blue-50 border-b text-[11px] text-blue-700 font-medium">
+            <div className="sm:hidden flex items-center justify-end gap-2 px-4 py-2 bg-blue-50 text-[11px] text-blue-700 font-medium">
               ← Swipe →
             </div>
 
@@ -383,7 +383,7 @@ const PreIPOStocks = () => {
 
                 <thead>
 
-                  <tr className="bg-gray-50 border-b border-gray-200">
+                  <tr className="bg-gray-50 border-gray-200">
 
                     <th className="px-6 py-4 text-left text-xs font-bold uppercase tracking-wider text-gray-500">
                       Company
@@ -551,7 +551,7 @@ const PreIPOStocks = () => {
 
             {/* FOOTER */}
             {!loading && ipos.length > 0 && (
-              <div className="px-6 py-5 border-t border-gray-200 bg-[#f8fcf9]">
+              <div className="px-6 py-5 border-gray-200 bg-[#f8fcf9]">
 
                 <div className="flex items-center justify-between flex-wrap gap-4">
 

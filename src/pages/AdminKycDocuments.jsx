@@ -119,7 +119,7 @@ const AdminKycDocuments = () => {
                 key={doc.user_id}
                 className="bg-white rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-200"
               >
-                <div className="p-6 border-b border-gray-100">
+                <div className="p-6 border-gray-100">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
                       <h3 className="font-semibold text-lg text-gray-900">
@@ -186,7 +186,7 @@ const AdminKycDocuments = () => {
                             <button
                               onClick={() => updateStatus(doc.user_id, type, "Verified")}
                               disabled={actionLoading[`${doc.user_id}-${type}`]}
-                              className="flex-1 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition disabled:opacity-50"
+                              className="flex-1 py-2 bg-[#16A34A] text-white text-sm rounded-lg hover:bg-[#15803D] transition disabled:opacity-50"
                             >
                               Verify
                             </button>

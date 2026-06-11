@@ -26,6 +26,7 @@ const navigate = useNavigate();
       "/skill-up",
       "/broker-analyzer"
      
+     
     ].includes(pathname) ||
     pathname.startsWith("/ipo/") ||
     pathname.startsWith("/insight-hub") ||
@@ -148,7 +149,7 @@ const navigate = useNavigate();
         </div>
 
         {/* Footer */}
-        <div className="bg-gray-50 px-4 py-2 text-center border-t border-gray-200 rounded-b-lg">
+        <div className="bg-gray-50 px-4 py-2 text-center border-gray-200 rounded-b-lg">
           <p className="text-xs text-gray-500">Updated daily • Jan 2026</p>
         </div>
       </div>

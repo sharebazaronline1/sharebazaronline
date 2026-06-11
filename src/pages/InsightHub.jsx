@@ -92,11 +92,8 @@ useEffect(() => {
   return (
     <div className="w-full min-h-screen">
       {/* HERO */}
-  <section className="relative overflow-hidden bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff] py-16 lg:py-8">
+  <section className="relative overflow-hidden py-16 lg:py-8">
 
-  {/* Glow Effects */}
-  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-green-100/40 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2" />
-  <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-100/40 blur-3xl rounded-full translate-x-1/3 translate-y-1/3" />
 
   <div className="relative max-w-[1800px] mx-auto px-6">
 
@@ -281,7 +278,7 @@ useEffect(() => {
 
         {/* LOAD MORE (optional later pagination) */}
         <div className="text-center mt-14">
-          <button className="px-8 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition shadow-md">
+          <button className="px-8 py-3 bg-[#16A34A] text-white font-semibold rounded-full hover:bg-[#15803D] transition shadow-md">
             Load More Insights
           </button>
         </div>

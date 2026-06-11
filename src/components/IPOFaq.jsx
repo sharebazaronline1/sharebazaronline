@@ -123,7 +123,7 @@ const IPOFAQ = () => {
           <div className="text-center mt-10">
             <button
               onClick={showMore}
-              className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-full transition shadow-md"
+              className="px-8 py-3 bg-[#16A34A] hover:bg-[#15803D] text-white font-medium rounded-full transition shadow-md"
             >
               View More FAQs ({faqs.length - visibleCount} remaining)
             </button>

@@ -104,7 +104,7 @@ const Holdings = () => {
   setMobileOpen={setMobileSidebarOpen}
 />
       <main className="md:ml-64 transition-all duration-300">
-        <header className="sticky top-0 z-10 bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-6 shadow-sm">
+        <header className="sticky top-0 z-10 bg-white border-gray-200 px-4 sm:px-6 lg:px-8 py-6 shadow-sm">
          <div className="max-w-7xl mx-auto">
   {/* MOBILE HEADER */}
   <div className="flex items-center justify-between md:hidden">
@@ -213,7 +213,7 @@ const Holdings = () => {
               </div>
 
               {totalPages > 1 && (
-                <div className="flex items-center justify-center gap-6 py-8 border-t bg-white">
+                <div className="flex items-center justify-center gap-6 py-8 bg-white">
                   <button
                     onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
                     disabled={currentPage === 1}

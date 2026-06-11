@@ -71,7 +71,7 @@ const UserProfileDropdown = () => {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-3 hover:bg-gray-100 rounded-full p-2 transition-all duration-200"
       >
-        <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-semibold">
+        <div className="w-10 h-10 rounded-full bg-[#16A34A] flex items-center justify-center text-white font-semibold">
           {avatarLetter}
         </div>
       </button>

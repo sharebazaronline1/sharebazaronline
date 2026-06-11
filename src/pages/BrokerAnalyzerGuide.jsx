@@ -122,11 +122,9 @@ const BrokerAnalyzerGuide = () => {
   return (
    <div className="w-full">
         {/* HERO */}
-<section className="relative overflow-hidden bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff] py-16 lg:py-8">
+<section className="relative overflow-hidden py-16 lg:py-8">
 
-  {/* Glow Effects */}
-  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-green-100/40 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2" />
-  <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-100/40 blur-3xl rounded-full translate-x-1/3 translate-y-1/3" />
+
 
   <div className="relative max-w-[1800px] mx-auto px-6">
 
@@ -431,7 +429,7 @@ const BrokerAnalyzerGuide = () => {
           </div>
           <button
             onClick={() => navigate("/login")}
-            className="px-5 py-2 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition shadow-lg"
+            className="px-5 py-2 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold rounded-full transition shadow-lg"
           >
             Open Account
           </button>
@@ -447,7 +445,7 @@ const BrokerAnalyzerGuide = () => {
           </div>
           <div className="space-y-2">
             {visibleFaqs.map((faq, i) => (
-              <div key={i} className="border-b border-gray-100 last:border-0">
+              <div key={i} className="border-gray-100 last:border-0">
                 <button
                   onClick={() => toggle(i)}
                   className="w-full py-3 flex items-center justify-between text-left hover:bg-gray-50 transition"

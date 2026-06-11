@@ -26,11 +26,11 @@ const AdminSidebar = ({ mobileOpen, setMobileOpen }) => {
       )}
 
       <aside
-        className={`fixed top-0 left-0 h-screen w-64 bg-white border-r z-50 transform transition-transform
+        className={`fixed top-0 left-0 h-screen w-64 bg-white  z-50 transform transition-transform
         ${mobileOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 flex flex-col`}
       >
         {/* Header with Logo */}
-        <div className="p-6 border-b flex justify-between items-center bg-white">
+        <div className="p-6 flex justify-between items-center bg-white">
           <button 
             onClick={() => window.location.href = '/'} 
             className="flex items-center"
@@ -58,7 +58,7 @@ const AdminSidebar = ({ mobileOpen, setMobileOpen }) => {
         </nav>
 
         {/* Footer */}
-        <div className="p-4 border-t text-xs text-gray-500">
+        <div className="p-4 text-xs text-gray-500">
           Logged in as <span className="font-medium">Admin</span>
         </div>
       </aside>

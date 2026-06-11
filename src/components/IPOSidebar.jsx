@@ -184,7 +184,7 @@ const getIPOType = (ipo) => {
             )}
           </div>
 
-          <div className="bg-gray-50 px-4 py-2 text-center border-t border-gray-200 rounded-b-lg">
+          <div className="bg-gray-50 px-4 py-2 text-center border-gray-200 rounded-b-lg">
             <p className="text-xs text-gray-500">Updated daily • Dec 2025</p>
           </div>
         </div>

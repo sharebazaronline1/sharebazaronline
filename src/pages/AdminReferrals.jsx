@@ -181,7 +181,7 @@ const AdminReferrals = () => {
       <AdminSidebar />
 
       <main className="md:ml-64 transition-all duration-300">
-        <header className="sticky top-0 z-10 bg-white backdrop-blur-lg border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-6 shadow-sm">
+        <header className="sticky top-0 z-10 bg-white backdrop-blur-lg border-gray-200 px-4 sm:px-6 lg:px-8 py-6 shadow-sm">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 max-w-7xl mx-auto">
             <div>
               <h1 className="text-3xl font-semibold text-gray-900 tracking-tight">Referrals Overview</h1>
@@ -375,7 +375,7 @@ const AdminReferrals = () => {
               )}
             </div>
 
-            <div className="px-6 sm:px-8 py-5 border-t flex justify-end">
+            <div className="px-6 sm:px-8 py-5 flex justify-end">
               <button onClick={closeOrdersModal} className="px-8 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-2xl transition-colors">
                 Close
               </button>

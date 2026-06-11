@@ -24,7 +24,7 @@ const Card = ({ children }) => (
 );
 
 const SectionHeader = ({ icon: Icon, title }) => (
-  <div className="flex items-center gap-3 px-6 py-3 border-b bg-slate-50">
+  <div className="flex items-center gap-3 px-6 py-3 bg-slate-50">
     <Icon className="w-5 h-5 text-slate-600" />
     <h2 className="text-lg lg:text-xl font-semibold text-slate-800">
       {title}
@@ -314,7 +314,7 @@ if (!data) {
 
               <button
                 onClick={() => navigate('/login')}
-                className="px-10 py-4 bg-green-600 text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-xl hover:bg-green-700 transform hover:-translate-y-1 transition-all duration-200 flex items-center gap-2 whitespace-nowrap"
+                className="px-10 py-4 bg-[#16A34A] text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-xl hover:bg-[#15803D] transform hover:-translate-y-1 transition-all duration-200 flex items-center gap-2 whitespace-nowrap"
               >
                 Buy Now @ ₹{displayPrice}
               </button>
@@ -586,7 +586,7 @@ if (!data) {
 
         {/* ================= FAQ SECTION ================= */}
         {data.faq && data.faq.length > 0 && (
-          <section id="faq" className="bg-white p-6 rounded-xl border shadow-sm">
+          <section id="faq" className="bg-white p-6 rounded-xl -sm">
             <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions About {data.name} Unlisted Shares</h2>
             <div className="space-y-3">
               {data.faq.map((item, index) => (

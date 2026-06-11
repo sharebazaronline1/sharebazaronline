@@ -81,12 +81,10 @@ const UnlistedGuideSection = () => {
 
   return (
     <>
-<section className="relative overflow-hidden bg-gradient-to-br from-white via-[#f6fffb] to-[#eef8ff] py-16 lg:py-8">
+<section className="relative overflow-hidden py-16 lg:py-8">
 
   {/* Background Glow */}
-  <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-green-100/40 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2" />
-  <div className="absolute bottom-0 right-0 w-[350px] h-[350px] bg-blue-100/40 blur-3xl rounded-full translate-x-1/3 translate-y-1/3" />
-
+ 
   <div className="relative max-w-[1800px] mx-auto px-6">
 
     <div className="grid grid-cols-1 xl:grid-cols-12 gap-14 items-center">
@@ -503,7 +501,7 @@ const UnlistedGuideSection = () => {
 
   <button
     onClick={() => navigate('/login')}
-    className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-bold rounded-full transition shadow-md whitespace-nowrap"
+    className="px-8 py-3 bg-[#16A34A] hover:bg-[#15803D] text-white font-bold rounded-full transition shadow-md whitespace-nowrap"
   >
     Buy Now
   </button>
@@ -550,7 +548,7 @@ const UnlistedGuideSection = () => {
               <div className="text-center mt-8">
                 <button
                   onClick={() => setShowAllFAQs(true)}
-                  className="px-10 py-4 bg-green-600 hover:bg-green-700 text-white font-medium rounded-full transition shadow-lg text-lg"
+                  className="px-10 py-4 bg-[#16A34A] hover:bg-[#15803D] text-white font-medium rounded-full transition shadow-lg text-lg"
                 >
                   View All FAQs ({faqs.length - 10} more)
                 </button>

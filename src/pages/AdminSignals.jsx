@@ -240,7 +240,7 @@ const AdminSignals = () => {
               <div className="flex justify-end">
                 <button
                   disabled={saving}
-                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-2xl font-semibold flex items-center gap-2 transition"
+                  className="bg-[#16A34A] hover:bg-[#15803D] text-white px-8 py-3 rounded-2xl font-semibold flex items-center gap-2 transition"
                 >
                   {saving ? (
                     <>
@@ -264,7 +264,7 @@ const AdminSignals = () => {
           {/* SIGNALS */}
           <div className="bg-white rounded-3xl border border-gray-100 shadow-sm overflow-hidden">
 
-            <div className="px-8 py-6 border-b bg-gray-50">
+            <div className="px-8 py-6 bg-gray-50">
               <h2 className="text-xl font-bold text-gray-900">
                 Uploaded Signals
               </h2>

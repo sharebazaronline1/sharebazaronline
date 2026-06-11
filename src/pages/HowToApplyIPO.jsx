@@ -276,7 +276,7 @@ const HowToApplyIPO = () => {
               href="https://ipostatus.kfintech.com/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white text-sm rounded hover:bg-green-700 transition"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-[#16A34A] text-white text-sm rounded hover:bg-[#15803D] transition"
             >
               Registrar (KFintech) <ExternalLink size={14} />
             </a>

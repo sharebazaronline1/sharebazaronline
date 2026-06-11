@@ -361,7 +361,7 @@ const stats = [
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
 
           {/* FILTER BAR */}
-          <div className="px-4 sm:px-8 py-5 border-b border-gray-200 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+          <div className="px-4 sm:px-8 py-5 border-gray-200 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
 
             {/* TABS */}
             <div className="flex flex-wrap gap-3">
@@ -374,7 +374,7 @@ const stats = [
                     px-5 py-2.5 rounded-2xl text-sm font-semibold transition-all flex items-center gap-2
                     ${
                       activeTab === tab
-                        ? "bg-green-600 text-white shadow-sm"
+                        ? "bg-[#16A34A] text-white shadow-sm"
                         : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                     }
                   `}
@@ -454,7 +454,7 @@ const stats = [
 
               <thead>
 
-                <tr className="bg-gray-50 border-b border-gray-200">
+                <tr className="bg-gray-50 border-gray-200">
 
                   <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-gray-500">
                     Company
@@ -672,7 +672,7 @@ const stats = [
 
           {/* PAGINATION */}
           {totalPages > 1 && (
-            <div className="px-6 py-5 border-t border-gray-200 flex items-center justify-between">
+            <div className="px-6 py-5 border-gray-200 flex items-center justify-between">
 
               <p className="text-sm text-gray-500">
                 Showing{" "}
@@ -715,7 +715,7 @@ const stats = [
                       ${
                         currentPage ===
                         index + 1
-                          ? "bg-green-600 text-white"
+                          ? "bg-[#16A34A] text-white"
                           : "border border-gray-300 text-gray-700 hover:bg-gray-50"
                       }
                     `}

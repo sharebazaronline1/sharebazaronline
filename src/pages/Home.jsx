@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
-import { fetchIPOs, fetchPreIPODetails } from '../api/mockApi';
+import { fetchIPOs, fetchPreIPODetails,fetchUnlisted } from '../api/mockApi';
 import { supabase } from "../lib/supabase";
 import IPODashboard, { IPOCard } from "../components/IPODashboard";
 import UnlistedCard from '../components/UnlistedCard';
@@ -45,242 +45,19 @@ export default function Home() {
 const [isUnlistedLoading, setIsUnlistedLoading] = useState(true);
 
 useEffect(() => {
-  const loadUnlisted = async () => {
-    setIsUnlistedLoading(true);
+ const loadUnlisted = async () => {
+  setIsUnlistedLoading(true);
 
-    try {
-      const detailedData = await fetchPreIPODetails();
+  try {
+    const data = await fetchUnlisted();
 
-      const { data: dbData, error } = await supabase
-        .from("pre_ipo_companies")
-        .select("name, price, lot_size");
-
-      if (error) {
-        console.error("Supabase error:", error);
-      }
-
-      // ONLY THESE COMPANIES
-   const allowedCompanies = [
-  "oyo",
-  "oravel",
-
-  "nse",
-
-  "care health",
- 
-
-  "metropolitan",
-  "mse",
-
-  "pharmeasy",
-  "api holdings",
-
-  "ola electric",
-
-  "mobikwik",
-];
-
-      const normalizeName = (str = "") => {
-        return str
-          .toLowerCase()
-          .replace(/limited|ltd|llp|private|unlisted|shares?|share/gi, "")
-          .replace(/[^\w\s]/g, " ")
-          .replace(/\s+/g, " ")
-          .trim();
-      };
-
-    const dbMap = {};
-
-// Strong alias mapping
-const aliases = {
-  oyo: [
-    "oravel stays",
-    "oyo",
-  ],
-
-  nse: [
-    "nse india",
-    "national stock exchange",
-  ],
-
-  mse: [
-    "metropolitan stock exchange",
-    "mse",
-  ],
-
-  pharmeasy: [
-    "pharmeasy",
-    "api holdings",
-  ],
-
-  care: [
-    "care health insurance",
-    "care health",
-  ],
-
-  ola: [
-    "ola electric",
-    "ola electric mobility",
-  ],
-
-  mobikwik: [
-    "mobikwik",
-    "one mobikwik",
-  ],
+    setUnlistedStocks(data);
+  } catch (err) {
+    console.error(err);
+  } finally {
+    setIsUnlistedLoading(false);
+  }
 };
-
-dbData?.forEach((db) => {
-  const normalizedDb = normalizeName(db.name);
-
-  Object.entries(aliases).forEach(([aliasKey, values]) => {
-    if (
-      values.some((v) => normalizedDb.includes(v))
-    ) {
-      dbMap[aliasKey] = db;
-    }
-  });
-});
-
-      const merged = detailedData
-        .filter((item) => {
-          const normalized = normalizeName(item.name);
-
-         return allowedCompanies.some((company) =>
-  normalized.includes(company)
-);
-        })
-        .map((item) => {
-       const normalizedName = normalizeName(item.name);
-
-// DIRECT DB MATCH
-const dbItem = dbData?.find((db) => {
-  const dbName = normalizeName(db.name);
-
-  return (
-    normalizedName.includes(dbName) ||
-    dbName.includes(normalizedName) ||
-
-    (normalizedName.includes("oyo") &&
-      dbName.includes("oravel")) ||
-
-    (normalizedName.includes("nse") &&
-      dbName.includes("nse")) ||
-
-    (normalizedName.includes("metropolitan") &&
-      dbName.includes("metropolitan")) ||
-
-    (normalizedName.includes("pharmeasy") &&
-      dbName.includes("pharmeasy")) ||
-
-    (normalizedName.includes("care health") &&
-      dbName.includes("care")) ||
-
-    (normalizedName.includes("ola") &&
-      dbName.includes("ola")) ||
-
-    (normalizedName.includes("mobikwik") &&
-      dbName.includes("mobikwik"))
-  );
-});
-         
-
-        const rawLotSize =
-  dbItem?.lot_size ||
-  item.shareDetails?.lot_size ||
-  item.shareDetails?.lotSize ||
-  item.lot_size ||
-  item.lotSize ||
-  item.minLotSize ||
-  item.min_lot ||
-  0;
-
-// Extract only numbers from values like:
-// "5,000 Shares"
-// "200"
-// "1000 shares"
-
-const lotSize = Number(
-  String(rawLotSize).replace(/[^\d]/g, "")
-);
-
-const finalLotSize =
-  !isNaN(lotSize) && lotSize > 0
-    ? lotSize
-    : null;
-          return {
-  ...item,
-
-  // PRICE
-  price: dbItem?.price
-    ? Number(dbItem.price)
-    : Number(
-        String(
-          item.shareDetails?.indicativeUnlistedSharePrice ||
-          item.price ||
-          0
-        )
-          .replace(/[^\d.-]/g, "")
-          .split("-")[0]
-      ),
-
-  // LOT SIZE
-  lotSize: finalLotSize,
-minLotSize: finalLotSize,
-
-  // MIN INVEST
-  minInvestment:
-    finalLotSize
-      ? finalLotSize *
-        (
-          dbItem?.price
-            ? Number(dbItem.price)
-            : Number(
-                String(
-                  item.shareDetails?.indicativeUnlistedSharePrice ||
-                  item.price ||
-                  0
-                )
-                  .replace(/[^\d.-]/g, "")
-                  .split("-")[0]
-              )
-        )
-      : null,
-
-  depository:
-    item.shareDetails?.depository ||
-    item.depository ||
-    "NSDL & CDSL",
-};
-        });
-
-      // SORT SAME AS SCREENSHOT
-      const ordered = [
-        "oyo",
-        "nse india",
-        "care health insurance",
-        "metropolitan stock exchange",
-        "pharmeasy",
-        "ola electric",
-        "mobikwik",
-      ];
-
-      merged.sort((a, b) => {
-        const aName = normalizeName(a.name);
-        const bName = normalizeName(b.name);
-
-        return (
-          ordered.findIndex((x) => aName.includes(x)) -
-          ordered.findIndex((x) => bName.includes(x))
-        );
-      });
-
-      setUnlistedStocks(merged);
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setIsUnlistedLoading(false);
-    }
-  };
 
   loadUnlisted();
 }, []);
@@ -293,18 +70,19 @@ minLotSize: finalLotSize,
   }, []);
 
   return (
-<div className="w-full min-h-screen bg-gradient-to-b from-slate-50 via-slate-100 to-slate-200">
+<div className="w-full min-h-screen ">
 <section className="relative overflow-hidden">
 
 <div className="max-w-[1600px] mx-auto px-4 lg:px-0 py-6 lg:py-2">
-<div className="grid lg:grid-cols-2 items-center gap-12 xl:gap-20">
-<div className="flex flex-col  lg:-translate-x-8 justify-center items-start text-left w-full">        {/* Badge */}
+<div className="grid lg:grid-cols-2 items-center gap-8 xl:gap-16">
+<div className="flex flex-col justify-center items-start text-left w-full">      {/* Badge */}
         <div
           className="
             inline-flex
             items-center
             gap-2
             px-5
+            mt-2
             py-3
             rounded-full
             bg-green-50
@@ -375,7 +153,7 @@ minLotSize: finalLotSize,
           className="
             mt-4
             text-lg
-            xl:text-2xl
+            xl:text-xl
             text-slate-600
             max-w-xl
             leading-relaxed
@@ -394,8 +172,8 @@ minLotSize: finalLotSize,
     px-4 sm:px-8
     py-3 sm:py-4
     rounded-2xl
-    bg-green-600
-    hover:bg-green-700
+    bg-[#16A34A]
+    hover:bg-[#15803D]
     text-white
     font-bold
     shadow-lg
@@ -489,7 +267,7 @@ minLotSize: finalLotSize,
         </div>
 
         <div>
-          <h4 className="text-sm lg:text-lg font-bold  text-slate-900 leading-none">
+          <h4 className="text-sm lg:text-md font-bold  text-slate-900 leading-none">
             {value}
           </h4>
 
@@ -504,8 +282,8 @@ minLotSize: finalLotSize,
 </div>
         
 
-      </div>    
-    
+      </div>    {/* LEFT IMAGE */}
+     {/* LEFT IMAGE */}
 <div className="hidden lg:flex justify-center">
 
   <div className="relative">
@@ -585,6 +363,11 @@ minLotSize: finalLotSize,
   </div>
 
 </div> 
+
+      {/* RIGHT CONTENT */}
+
+           
+
     </div>
 
 
@@ -592,464 +375,845 @@ minLotSize: finalLotSize,
 
 </section>
 
-    {/* BROKER ANALYZER */}
-     <section className="py-3 lg:py-2 overflow-hidden">
-  <div className="w-full max-w-full mx-auto px-2 sm:px-5 lg:px-8">
+{/* HEADER */}
+{/* UNLISTED */}
+<div className="flex items-center justify-between mb-6">
+  <div>
+    <h3 className="text-2xl font-bold text-slate-900">
+      Trending Unlisted Shares
+    </h3>
 
-   <div className="
-  w-full
-  bg-white
-  rounded-2xl
-  shadow-sm
-  border border-gray-200
-  overflow-hidden
-">
+    <p className="text-sm text-slate-500 mt-1">
+      Most searched pre-IPO and unlisted companies
+    </p>
+  </div>
 
-      {/* HEADER */}
-      <div className="
-        px-4 py-4
-        lg:px-8 lg:py-6
-        bg-gradient-to-r from-gray-800 to-gray-700
-        text-white
-        border-b border-gray-200
-        text-center
-      ">
-        <h2 className="
-          text-xl
-          sm:text-2xl
-          font-black
-          tracking-tight
-          text-white
-        ">
-          Best Stock Brokers in India 2025
-        </h2>
+  <button
+    onClick={() => navigate("/pre-ipo-stocks")}
+    className="
+      hidden lg:flex
+      items-center
+      gap-2
+      font-semibold
+      text-[#00B14F]
+      hover:text-[#009944]
+      transition
+    "
+  >
+    View All →
+  </button>
+</div>
 
-        <p className="
-          mt-1
-          text-sm
-          sm:text-base
-          lg:text-lg
-          text-white/90
-        ">
-          Trusted by millions
+{/* MOBILE */}
+<div className="lg:hidden flex gap-3 overflow-x-auto scrollbar-hide pb-3">
+  {unlistedStocks.slice(0, 10).map((stock) => (
+    <div
+      key={stock.id}
+      className="
+        min-w-[220px]
+        bg-white
+        border border-slate-200
+        rounded-2xl
+        p-4
+        flex
+        items-center
+        gap-3
+        shadow-sm
+        flex-shrink-0
+      "
+    >
+      <div
+        className="
+          w-14 h-14
+          rounded-xl
+          border border-slate-100
+          bg-white
+          flex items-center justify-center
+          flex-shrink-0
+        "
+      >
+        <img
+          src={stock.logo}
+          alt={stock.name}
+          className="w-10 h-10 object-contain"
+        />
+      </div>
+
+      <div className="min-w-0 flex-1">
+        <h4
+          className="
+            text-sm
+            font-bold
+            text-slate-900
+            truncate
+          "
+        >
+          {stock.name}
+        </h4>
+
+        <p className="mt-1 text-base font-semibold text-slate-700">
+          ₹{parseFloat(stock.price || 0).toLocaleString("en-IN")}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
+{/* DESKTOP */}
+<div
+  className="
+    hidden lg:grid
+    grid-cols-2
+    xl:grid-cols-3
+    2xl:grid-cols-6
+    gap-4
+  "
+>
+  {unlistedStocks.slice(0, 6).map((stock) => (
+    <div
+      key={stock.id}
+      className="
+        bg-white
+        border border-slate-200
+        rounded-2xl
+        px-4
+        py-5
+        hover:border-green-200
+        hover:shadow-md
+        transition-all
+        h-[110px]
+      "
+    >
+      <div className="flex items-center gap-3 h-full">
+
+        {/* Logo */}
+        <div
+          className="
+            w-16 h-16
+            rounded-xl
+            border border-slate-100
+            bg-white
+            flex items-center justify-center
+            flex-shrink-0
+          "
+        >
+          <img
+            src={stock.logo}
+            alt={stock.name}
+            className="
+              w-11 h-11
+              object-contain
+            "
+          />
+        </div>
+
+        {/* Content */}
+        <div className="min-w-0 flex-1">
+          <h4
+            className="
+              text-[15px]
+              font-bold
+              text-slate-900
+              truncate
+              leading-tight
+            "
+          >
+            {stock.name}
+          </h4>
+
+          <p
+            className="
+              mt-2
+              text-lg
+              font-semibold
+              text-slate-700
+            "
+          >
+            ₹{parseFloat(stock.price || 0).toLocaleString("en-IN")}
+          </p>
+        </div>
+
+      </div>
+    </div>
+  ))}
+</div>
+
+{/* MOBILE VIEW ALL */}
+<div className="lg:hidden text-center mt-4">
+  <button
+    onClick={() => navigate("/pre-ipo-stocks")}
+    className="
+      text-[#00B14F]
+      font-semibold
+      text-sm
+    "
+  >
+    View All →
+  </button>
+</div>
+
+
+<section className="py-12 lg:py-16">
+  <div className="max-w-[1600px] mx-auto px-4 lg:px-0">
+
+    <div className="flex flex-col xl:flex-row gap-6 items-stretch">
+
+   
+      <div
+  className="
+    rounded-[28px]
+    bg-white
+    border border-slate-200
+    shadow-[0_10px_40px_rgba(15,23,42,0.05)]
+    overflow-hidden
+  "
+>
+  {/* Accent */}
+  <div className="h-1.5 bg-gradient-to-r from-blue-600 via-cyan-500 to-green-500" />
+
+  {/* Header */}
+  <div className="px-6 lg:px-10 pt-8 pb-6">
+
+    <p className="text-sm font-semibold text-blue-700 tracking-wide">
+      BROKER ANALYZER
+    </p>
+
+    <h2 className="mt-2 text-3xl lg:text-4xl font-black text-slate-900">
+      Best Stock Brokers in India
+    </h2>
+
+    <p className="mt-3 text-slate-500 max-w-2xl">
+      Compare brokerage charges, platform features, ratings,
+      trading tools and account opening benefits across India's
+      leading stock brokers.
+    </p>
+
+  </div>
+
+  {/* CONTENT */}
+  <div className="px-6 lg:px-10 pb-8 ">
+
+    <BrokerAnalyzer />
+
+    {/* Bottom CTA */}
+    <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+      <div>
+        <h3 className="font-semibold text-slate-900">
+          Looking for the right broker?
+        </h3>
+
+        <p className="text-sm text-slate-500">
+          Compare top brokers side-by-side and choose the one that
+          matches your investing style.
         </p>
       </div>
 
-      {/* CONTENT */}
-    <div className="p-2 sm:p-4 lg:p-8">
+      <button
+        onClick={() => navigate("/comparebrokers")}
+        className="
+          px-8
+          py-3
+          rounded-xl
+          bg-green-700
+          hover:bg-green-800
+          text-white
+          font-semibold
+          transition
+        "
+      >
+        View All Brokers →
+      </button>
 
-        <BrokerAnalyzer />
+    </div>
 
-        {/* BUTTON */}
-       <div className="text-center mt-3 lg:mt-2 px-1">
+  </div>
+</div>
 
-          <button
-            onClick={() => navigate('/brokers')}
-            className="
-              w-full
-              sm:w-auto
-              px-6
-              sm:px-8
-              py-3
-              text-sm
-              sm:text-base
-              bg-green-600
-              hover:bg-green-700
-              text-white
-              font-bold
-              rounded-xl
-              sm:rounded-full
-              transition
-              shadow-md
-            "
-          >
-            View All Brokers
-          </button>
+      {/* ================= RIGHT CTA ================= */}
+      <div
+        className="
+          hidden xl:block
+          w-[340px]
+          flex-shrink-0
+        "
+      >
+        <div
+          className="
+            relative
+            overflow-hidden
+            rounded-3xl
+            bg-gradient-to-br
+            from-[#061A40]
+            via-[#0A2558]
+            to-[#0E3A73]
+            p-7
+            shadow-2xl
+            border border-cyan-500/10
+            sticky
+            top-24
+            text-white
+          "
+        >
+{/* CANDLESTICKS */}
+<div className="absolute bottom-8 right-4 opacity-[0.06] pointer-events-none">
+  <svg
+    width="180"
+    height="100"
+    viewBox="0 0 180 100"
+    fill="none"
+  >
+    {[30, 50, 40, 70, 60, 85].map((y, i) => (
+      <g key={i}>
+        <line
+          x1={i * 28 + 15}
+          y1={100 - y - 10}
+          x2={i * 28 + 15}
+          y2={100 - y + 10}
+          stroke="#67E8F9"
+          strokeWidth="2"
+        />
 
+        <rect
+          x={i * 28 + 10}
+          y={100 - y}
+          width="10"
+          height="18"
+          rx="2"
+          fill="#22D3EE"
+        />
+      </g>
+    ))}
+  </svg>
+</div>
+          {/* GRID BG */}
+          <div className="absolute inset-0 opacity-[0.04]">
+            <svg width="100%" height="100%">
+              <defs>
+                <pattern
+                  id="grid"
+                  width="24"
+                  height="24"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M24 0 L0 0 0 24"
+                    fill="none"
+                    stroke="white"
+                    strokeWidth="1"
+                  />
+                </pattern>
+              </defs>
+
+              <rect
+                width="100%"
+                height="100%"
+                fill="url(#grid)"
+              />
+            </svg>
+            
+          </div>
+          
+
+          {/* Glow */}
+          <div className="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-cyan-400/10 blur-3xl" />
+
+          {/* Content */}
+          <div className="relative z-10">
+
+            <div
+              className="
+                inline-flex
+                items-center
+                px-3 py-1
+                rounded-full
+                bg-cyan-400/10
+                border border-cyan-400/20
+                text-cyan-300
+                text-xs
+                font-semibold
+              "
+            >
+              Broker Analysis
+            </div>
+
+            <h3 className="mt-4 text-4xl font-black leading-tight">
+              Find Your
+              <span className="block text-cyan-400">
+                Perfect Broker
+              </span>
+            </h3>
+
+            <p className="mt-3 text-slate-300 text-sm leading-relaxed">
+              Compare brokerage fees, platform features,
+              ratings and trading tools before opening
+              your account.
+            </p>
+
+            <div className="mt-6 space-y-3">
+              {[
+                "Compare Brokerage Charges",
+                "Trading Platform Features",
+                "Ratings & User Reviews",
+                "Advanced Broker Analysis",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 text-sm"
+                >
+                  <div className="w-2 h-2 rounded-full bg-cyan-400" />
+                  <span className="text-slate-200">
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+           
+
+            <button
+              onClick={() => navigate("/comparebrokers")}
+              className="
+                mt-6
+                w-full
+                py-3.5
+                rounded-xl
+                bg-cyan-500
+                hover:bg-cyan-400
+                text-slate-950
+                font-bold
+                transition-all
+              "
+            >
+              Compare Brokers →
+            </button>
+
+          </div>
         </div>
       </div>
+
     </div>
+
   </div>
 </section>
 
       <AdBanner />
 
-      {/* IPO SECTION */}
-<section className="py-3 lg:py-2 overflow-hidden">
-  <div className="w-full max-w-full mx-auto px-2 sm:px-4 lg:px-10">
+<section className="py-12 lg:py-16">
+  <div className="max-w-[1600px] mx-auto px-4 lg:px-0">
 
-    {/* HORIZONTAL LAYOUT */}
-    <div className="flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-3">
+    <div className="flex flex-col xl:flex-row gap-6 items-start">
 
-      {/* MAIN IPO TRACKER SECTION */}
-      <div className="flex-1 w-full max-w-[1100px]">
+      {/* ================= LEFT IPO SECTION ================= */}
+      <div className="flex-1 min-w-0">
 
         <div
           className="
-            w-full
+            rounded-[28px]
             bg-white
-            rounded-2xl
-            shadow-sm
-            border border-gray-200
+            border border-slate-200
+            shadow-[0_10px_40px_rgba(15,23,42,0.05)]
             overflow-hidden
           "
         >
+          {/* Accent */}
+          <div className="h-1.5 bg-gradient-to-r from-blue-600 via-cyan-500 to-green-500" />
 
-          {/* HEADER */}
-          <div
-            className="
-              px-4 py-4
-              lg:px-8 lg:py-6
-              bg-gradient-to-r from-gray-800 to-gray-700
-              border-b border-gray-200
-              text-center
-            "
-          >
-            <h2 className="text-xl sm:text-2xl font-black text-white">
-              IPO Tracker
+          {/* Header */}
+          <div className="px-6 lg:px-10 pt-8 pb-6">
+
+            <p className="text-sm font-semibold text-blue-700 tracking-wide">
+              IPO TRACKER
+            </p>
+
+            <h2 className="mt-2 text-3xl lg:text-4xl font-black text-slate-900">
+              Live & Upcoming IPOs
             </h2>
 
-            <p className="mt-1 text-sm sm:text-base lg:text-lg text-white">
-              Live & Upcoming IPOs in India
+            <p className="mt-3 text-slate-500 max-w-2xl">
+              Track open IPOs, upcoming issues, price bands,
+              lot sizes and listing schedules in one place.
             </p>
+
           </div>
 
-          {/* CONTENT */}
-          <div className="p-2 sm:p-4 lg:p-8">
+          {/* IPO CONTENT */}
+          <div className="px-6 lg:px-10 pb-8">
 
             {isIPOLoading ? (
-
               <div className="flex justify-center py-20">
-                <div className="animate-spin rounded-full h-14 w-14 border-t-4 border-b-4 border-gray-800" />
+                <div className="animate-spin rounded-full h-14 w-14 border-t-4 border-b-4 border-green-600" />
               </div>
-
             ) : (
-
-              (() => {
-
-                const today = new Date();
-                today.setHours(0, 0, 0, 0);
-
-                const liveIPOs = ipos
-                  .map((ipo) => ({
-                    ...ipo,
-                    _openDate: new Date(ipo.open),
-                    _closeDate: new Date(ipo.close),
-                  }))
-                  .filter(
-                    (ipo) =>
-                      !isNaN(ipo._openDate) &&
-                      !isNaN(ipo._closeDate) &&
-                      ipo._openDate <= today &&
-                      today <= ipo._closeDate
-                  )
-                  .sort((a, b) => a._closeDate - b._closeDate)
-                  .slice(0, 8);
-
-                return (
-                  <>
-                    {/* MOBILE / TABLET */}
-                    <div
-                      className="
-                        lg:hidden
-                        overflow-x-auto
-                        scrollbar-hide
-                        -mx-2
-                        px-2
-                        pb-3
-                      "
-                    >
-
-                      {liveIPOs.length > 0 ? (
-
-                        <div className="flex gap-3">
-
-                          {liveIPOs.map((ipo) => (
-
-                            <div
-                              key={ipo.id}
-                              className="
-                                w-[84%]
-                                max-w-[285px]
-                                flex-shrink-0
-                              "
-                            >
-                              <IPOCard ipo={ipo} />
-                            </div>
-
-                          ))}
-
-                        </div>
-
-                      ) : (
-
-                        <div className="py-20 text-center">
-
-                          <p className="text-xl font-semibold text-gray-600">
-                            No Live IPOs Right Now
-                          </p>
-
-                        </div>
-
-                      )}
-
-                    </div>
-
-                    {/* DESKTOP */}
-                    <div className="hidden lg:block">
-                      <IPODashboard ipos={liveIPOs} />
-                    </div>
-                  </>
-                );
-
-              })()
-
+              <IPODashboard ipos={ipos} />
             )}
 
-            {/* BUTTON */}
-            <div className="text-center mt-4 lg:mt-8 px-1">
+            <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+              <div>
+                <h3 className="font-semibold text-slate-900">
+                  Looking for all IPOs?
+                </h3>
+
+                <p className="text-sm text-slate-500">
+                  Explore upcoming, closed and listed IPOs with complete details.
+                </p>
+              </div>
 
               <button
                 onClick={() => navigate("/ipo/ipo-list")}
                 className="
-                  w-full
-                  sm:w-auto
-                  px-6
-                  sm:px-8
+                  px-8
                   py-3
-                  text-sm
-                  sm:text-base
-                  bg-green-600
-                  text-white
-                  font-bold
                   rounded-xl
-                  sm:rounded-full
-                  hover:bg-green-700
+                  bg-green-700
+                  hover:bg-green-800
+                  text-white
+                  font-semibold
                   transition
-                  shadow-md
                 "
               >
-                View All IPO
+                View All IPOs →
               </button>
 
             </div>
 
           </div>
-
         </div>
+
       </div>
 
     </div>
+
   </div>
 </section>
 
-<AdBanner />
 
-{/* UNLISTED SHARES */}
-<section className="py-0">
-  <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-    {/* Removed ml-4 lg:ml-6 — unnecessary and causing misalignment */}
 
-    {/* FLEX LAYOUT WITH MAIN + SIDEBAR */}
-    <div className="flex flex-col xl:flex-row xl:items-start gap-4 xl:gap-3">
 
-      {/* MAIN UNLISTED SHARES SECTION */}
-      <div className="flex-1">
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-          <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 border-b border-gray-200 text-center">
-            <h2 className="text-2xl font-black text-white">Unlisted Shares</h2>
-            <p className="mt-2 text-lg text-white">Curated marketplace with verified listings</p>
-          </div>
-
-          <div className="p-8">
-            {isUnlistedLoading ? (
-              <div className="flex justify-center py-20">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-green-600" />
-              </div>
-            ) : (
-              <>
-                {/* Mobile: Horizontal scroll - reduced gap */}
-                {/* MOBILE */}
-<div className="lg:hidden space-y-3">
-
-  {unlistedStocks.slice(0, 3).map((stock) => (
-
-    <div
-      className="w-full"
-      key={stock.id}
-    >
-      <UnlistedCard stock={stock} />
-    </div>
-
-  ))}
-
-</div>
-
-                {/* Desktop: Grid - reduced gap */}
-                <div className="hidden lg:grid grid-cols-4 gap-3">  {/* Reduced from gap-6 to gap-3 */}
-                  {unlistedStocks.map((stock) => (
-                    <UnlistedCard key={stock.id} stock={stock} />
-                  ))}
-                </div>
-
-                <div className="text-center mt-8">
-                  <button
-                    onClick={() => navigate("/pre-ipo-stocks")}
-                    className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
-                  >
-                    View All Unlisted Shares
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 
 
 
       <AdBanner />
 
       {/* BLOGS */}
-      <section className="py-2">
-        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 border-b border-gray-200 text-center">
-              <h2 className="text-2xl font-bold text-white">News & Blogs</h2>
-              <p className="mt-2 text-lg text-white">
-                Latest updates on IPOs, Dividends, Bonus Issues, Rights, NFOs, REITs & Bonds
-              </p>
-            </div>
+      <section className="py-12 lg:py-16">
+  <div className="w-full">
 
-            <div className="px-8 py-8">
-              <Blogs />
+    <div
+      className="
+        rounded-[28px]
+        bg-white
+        border border-slate-200
+        shadow-[0_10px_40px_rgba(15,23,42,0.05)]
+        overflow-hidden
+      "
+    >
+      {/* Accent */}
+      <div className="h-1.5 bg-gradient-to-r from-blue-600 via-cyan-500 to-green-500" />
 
-              <div className="text-center mt-2">
-                <button
-                  onClick={() => navigate("/insight-hub")}
-                  className="px-8 py-3.5 bg-green-600 text-white font-bold rounded-full hover:bg-green-700 transition shadow-md"
-                >
-                  View All News & Blogs 
-                </button>
-              </div>
-            </div>
+      {/* Header */}
+      <div className="px-6 lg:px-10 pt-8 pb-6">
+
+        <p className="text-sm font-semibold text-blue-700 tracking-wide">
+          INSIGHT HUB
+        </p>
+
+        <h2 className="mt-2 text-3xl lg:text-4xl font-black text-slate-900">
+          News & Blogs
+        </h2>
+
+        <p className="mt-3 text-slate-500 max-w-2xl">
+          Stay updated with the latest IPO news, dividend announcements,
+          bonus issues, rights issues, NFO launches, REITs, bonds and
+          market insights.
+        </p>
+
+      </div>
+
+      {/* Content */}
+      <div className="px-6 lg:px-10 pb-8">
+
+        <Blogs />
+
+        {/* Bottom CTA */}
+        <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+          <div>
+            <h3 className="font-semibold text-slate-900">
+              Explore all market insights
+            </h3>
+
+            <p className="text-sm text-slate-500">
+              Read expert analysis, IPO updates and investment research.
+            </p>
           </div>
+
+          <button
+            onClick={() => navigate("/insight-hub")}
+            className="
+              px-8
+              py-3
+              rounded-xl
+              bg-green-700
+              hover:bg-green-800
+              text-white
+              font-semibold
+              transition
+            "
+          >
+            View All Articles →
+          </button>
+
         </div>
-      </section>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
       <AdBanner />
 
      
 
       {/* WHY CHOOSE US */}
-      <section className="py-2 pb-8">
-        <div className="w-full max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="px-8 py-6 bg-gradient-to-r from-gray-800 to-gray-700 border-b border-gray-200 text-center">
-              <h2 className="text-2xl font-bold  text-white">
-                Your Ultimate Hub for{" "}
-                <span className="text-green-600">Smarter Stock-Market Decisions</span>{" "}
-                in India
-              </h2>
-              <p className="mt-2 text-lg text-white">
-                Everything you need — IPO updates, unlisted shares, broker comparison, and market insights — all in one powerful platform.
-              </p>
-            </div>
+    <section className="py-12 lg:py-16 pb-8">
+  <div className="w-full">
 
-            <div className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-full mx-auto">
-                {[
-                  {
-                    icon: TrendingUp,
-                    title: "Real-Time IPO Updates & Insights",
-                    items: [
-                      "Live IPO timelines & issue details",
-                      "Daily GMP (Grey Market Premium)",
-                      "Real-time subscription status",
-                      "Instant allotment & listing alerts",
-                      "Complete SME + Mainboard calendar",
-                    ],
-                  },
-                  {
-                    icon: Gem,
-                    title: "Unlisted & Pre-IPO Shares",
-                    items: [
-                      "Verified prices & availability",
-                      "ESOP buyback opportunities",
-                      "Valuation trends & financials",
-                      "Transparent buy/sell process",
-                      "Curated high-growth startups",
-                    ],
-                  },
-                  {
-                    icon: Scale,
-                    title: "Compare Top Stock Brokers",
-                    items: [
-                      "Brokerage & account charges",
-                      "Platform speed & features",
-                      "Charts, tools & order types",
-                      "Customer support ratings",
-                      "Margin, IPO funding & perks",
-                    ],
-                  },
-                  {
-                    icon: Lightbulb,
-                    title: "Deep Market Insights",
-                    items: [
-                      "Sector trends & outlook",
-                      "Fundamentals & valuations",
-                      "Dividend, bonus & buybacks",
-                      "Analyst reports & summaries",
-                      "Actionable investment ideas",
-                    ],
-                  },
-                ].map(({ icon: Icon, title, items }, i) => (
-                  <div
-                    key={i}
-                    className="bg-gray-50/70 rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-shadow"
-                  >
-                    <div className="flex items-start gap-4 mb-6">
-                      <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-8 h-8 text-green-700" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900">
-                        {title}
-                      </h3>
-                    </div>
-                   <ul className="space-y-4 flex flex-col items-center">
-  {items.map((item, idx) => (
-    <li key={idx} className="flex items-center gap-3 text-gray-700">
-      <Check className="w-6 h-6 text-green-600 flex-shrink-0" />
-      <span className="text-center">{item}</span>
-    </li>
-  ))}
-</ul>
-                  </div>
-                ))}
-              </div>
+    <div
+      className="
+        rounded-[28px]
+        bg-white
+        border border-slate-200
+        shadow-[0_10px_40px_rgba(15,23,42,0.05)]
+        overflow-hidden
+      "
+    >
+      {/* Accent */}
+      <div className="h-1.5 bg-gradient-to-r from-blue-600 via-cyan-500 to-green-500" />
 
-              
-            </div>
-          </div>
-        </div>
-      </section>
-      <div className="text-center">
-                <div className="inline-flex items-center gap-4 bg-green-50 text-green-700 px-10 py-6 rounded-full text-2xl font-bold shadow-lg">
-                  <Star className="w-10 h-10 text-yellow-500 fill-current" />
-                  <span>Why Investors Trust Us</span>
+      {/* Header */}
+      <div className="px-6 lg:px-10 pt-8 pb-6">
+
+        <p className="text-sm font-semibold text-blue-700 tracking-wide">
+          WHY SHAREBAZAARONLINE
+        </p>
+
+        <h2 className="mt-2 text-3xl lg:text-4xl font-black text-slate-900">
+          Your Ultimate Hub for
+          <span className="text-green-600">
+            {" "}Smarter Stock-Market Decisions
+          </span>
+        </h2>
+
+        <p className="mt-3 text-slate-500 max-w-3xl">
+          Everything you need — IPO updates, unlisted shares,
+          broker comparison, and market insights —
+          all in one powerful platform.
+        </p>
+
+      </div>
+
+      {/* Content */}
+      <div className="px-6 lg:px-10 pb-10">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+          {[
+            {
+              icon: TrendingUp,
+              title: "Real-Time IPO Updates & Insights",
+              items: [
+                "Live IPO timelines & issue details",
+                "Daily GMP (Grey Market Premium)",
+                "Real-time subscription status",
+                "Instant allotment & listing alerts",
+                "Complete SME + Mainboard calendar",
+              ],
+            },
+            {
+              icon: Gem,
+              title: "Unlisted & Pre-IPO Shares",
+              items: [
+                "Verified prices & availability",
+                "ESOP buyback opportunities",
+                "Valuation trends & financials",
+                "Transparent buy/sell process",
+                "Curated high-growth startups",
+              ],
+            },
+            {
+              icon: Scale,
+              title: "Compare Top Stock Brokers",
+              items: [
+                "Brokerage & account charges",
+                "Platform speed & features",
+                "Charts, tools & order types",
+                "Customer support ratings",
+                "Margin, IPO funding & perks",
+              ],
+            },
+            {
+              icon: Lightbulb,
+              title: "Deep Market Insights",
+              items: [
+                "Sector trends & outlook",
+                "Fundamentals & valuations",
+                "Dividend, bonus & buybacks",
+                "Analyst reports & summaries",
+                "Actionable investment ideas",
+              ],
+            },
+          ].map(({ icon: Icon, title, items }, i) => (
+            <div
+              key={i}
+              className="
+                rounded-3xl
+                border border-slate-200
+                bg-slate-50/70
+                p-7
+                hover:shadow-lg
+                hover:border-green-200
+                transition-all
+              "
+            >
+              <div className="flex items-start gap-4 mb-6">
+
+                <div
+                  className="
+                    w-14 h-14
+                    rounded-2xl
+                    bg-green-50
+                    border border-green-100
+                    flex items-center justify-center
+                    flex-shrink-0
+                  "
+                >
+                  <Icon className="w-7 h-7 text-green-600" />
                 </div>
-                <p className="mt-6 mb-6 text-2xl font-medium text-gray-800 max-w-full mx-auto">
-                  Because we make the Indian stock market{" "}
-                  <span className="text-green-600 font-bold">
-                    simple, transparent, and truly accessible
-                  </span>{" "}
-                  — for everyone.
-                </p>
+
+                <h3 className="text-xl lg:text-2xl font-bold text-slate-900 leading-snug">
+                  {title}
+                </h3>
+
               </div>
+
+              <ul className="space-y-3">
+                {items.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-start gap-3"
+                  >
+                    <Check className="w-5 h-5 mt-0.5 text-green-600 flex-shrink-0" />
+
+                    <span className="text-slate-600">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+            </div>
+          ))}
+
+        </div>
+
+        {/* Bottom CTA */}
+
+        <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+
+          <div>
+            <h3 className="font-semibold text-slate-900">
+              Everything you need in one platform
+            </h3>
+
+            <p className="text-sm text-slate-500">
+              IPO tracking, unlisted shares, broker comparison and market research.
+            </p>
+          </div>
+
+          <button
+            onClick={() => navigate("/ipo/ipo-list")}
+            className="
+              px-8
+              py-3
+              rounded-xl
+              bg-green-700
+              hover:bg-green-800
+              text-white
+              font-semibold
+              transition
+            "
+          >
+            Explore Platform →
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+  <div className="text-center">
+
+  <div
+    className="
+      inline-flex
+      items-center
+      gap-3
+      px-5
+      py-2.5
+      rounded-full
+      bg-green-50
+      border border-green-100
+      text-green-700
+      text-sm
+      font-semibold
+      tracking-wide
+    "
+  >
+    <Star className="w-4 h-4 text-yellow-500 fill-current" />
+    TRUSTED BY INVESTORS ACROSS INDIA
+  </div>
+
+  <h2
+    className="
+      mt-5
+      text-3xl
+      lg:text-5xl
+      font-black
+      leading-tight
+      text-slate-900
+    "
+  >
+    Why Investors
+    <span className="text-green-600">
+      {" "}Trust Us
+    </span>
+  </h2>
+
+  <p
+    className="
+      mt-4
+      text-base
+      lg:text-xl
+      text-slate-600
+      max-w-4xl
+      mx-auto
+      leading-relaxed
+    "
+  >
+    We make the Indian stock market
+    <span className="font-semibold text-slate-900">
+      {" "}simple, transparent and accessible
+    </span>
+    {" "}through reliable IPO data, unlisted share insights,
+    broker comparison tools and market intelligence.
+  </p>
+
+</div>
 
     </div>
   );

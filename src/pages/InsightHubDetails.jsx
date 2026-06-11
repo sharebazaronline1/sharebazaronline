@@ -188,7 +188,7 @@ const BlogDetail = () => {
 
           <Link
             to="/insight-hub"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition"
+            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#16A34A] text-white font-semibold rounded-full hover:bg-[#15803D] transition"
           >
             <ArrowLeft size={18} />
             Back to Insights

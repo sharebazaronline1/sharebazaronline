@@ -131,7 +131,7 @@ const { data: { subscription } } =
     : "?";
 
   return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+    <header className="bg-white border-gray-100 sticky top-0 z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* HEADER FLEX */}
         <div className="flex items-center justify-between h-16">
@@ -220,7 +220,7 @@ const { data: { subscription } } =
                   aria-label="User menu"
                 >
                   {/* Same green circle avatar as UserProfileDropdown */}
-                  <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-semibold">
+                  <div className="w-10 h-10 rounded-full bg-[#16A34A] flex items-center justify-center text-white font-semibold">
                     {avatarLetter}
                   </div>
                   <span className="text-sm font-medium text-gray-700 hidden xl:block">
@@ -239,7 +239,7 @@ const { data: { subscription } } =
 
                     <div className="absolute right-0 mt-3 w-64 bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden z-50">
                       {/* User Info Header */}
-                      <div className="px-5 py-4 bg-green-50 border-b border-gray-100">
+                      <div className="px-5 py-4 bg-green-50 border-gray-100">
                         <p className="text-base font-bold text-gray-900">
                           {user.user_metadata?.full_name || "User"}
                         </p>
@@ -278,7 +278,7 @@ const { data: { subscription } } =
                       </div>
 
                       {/* Logout */}
-                      <div className="border-t border-gray-100 pt-2">
+                      <div className="border-gray-100 pt-2">
                         <button
                           onClick={() => {
                             handleLogout();
@@ -298,7 +298,7 @@ const { data: { subscription } } =
               /* Login Button - When not logged in */
               <Link
                 to="/login"
-                className="ml-4 lg:ml-8 px-7 py-2.5 bg-green-600 text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl hover:bg-green-700 transform hover:scale-105 transition-all duration-200"
+                className="ml-4 lg:ml-8 px-7 py-2.5 bg-[#16A34A] text-white font-bold text-sm rounded-full shadow-lg hover:shadow-xl hover:bg-[#15803D] transform hover:scale-105 transition-all duration-200"
               >
                 Login
               </Link>
@@ -321,7 +321,7 @@ const { data: { subscription } } =
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-gray-200 shadow-lg">
+        <div className="lg:hidden bg-white border-gray-200 shadow-lg">
           <div className="px-6 py-6 space-y-5 text-base font-semibold max-h-[calc(100vh-4rem)] overflow-y-auto">
             <Link
               to="/"
@@ -439,13 +439,13 @@ const { data: { subscription } } =
 
             {/* Mobile Login/Profile with User ID */}
             {user ? (
-              <div className="pt-4 border-t border-gray-200">
+              <div className="pt-4 border-gray-200">
                <Link
   to="/dashboard"
   onClick={() => setMobileMenuOpen(false)}
   className="flex items-center gap-3 mb-3 cursor-pointer"
 >
-  <div className="w-10 h-10 rounded-full bg-green-600 flex items-center justify-center text-white font-semibold">
+  <div className="w-10 h-10 rounded-full bg-[#16A34A] flex items-center justify-center text-white font-semibold">
     {avatarLetter}
   </div>
   <div>
@@ -475,7 +475,7 @@ const { data: { subscription } } =
               <Link
                 to="/login"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-center mt-6 py-3 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition"
+                className="block text-center mt-6 py-3 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-[#16A34A] transition"
               >
                 Login
               </Link>

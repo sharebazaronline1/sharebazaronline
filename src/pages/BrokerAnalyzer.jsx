@@ -74,7 +74,7 @@ const BrokerCard = ({ broker }) => {
       "
     >
       {/* HEADER */}
-      <div className="px-3 py-3 border-b border-gray-100">
+      <div className="px-3 py-3 border-gray-100">
         <div className="flex items-center gap-3">
           <ImageLogo src={broker.img} alt={broker.name} />
 
@@ -134,7 +134,8 @@ const BrokerCard = ({ broker }) => {
             text-xs
             font-semibold
             text-white
-            bg-green-500
+            bg-green-600
+            hover:bg-green-700
             rounded-lg
           "
         >
@@ -148,8 +149,8 @@ const BrokerCard = ({ broker }) => {
             py-2
             text-xs
             font-semibold
-            text-gray-700
-            border border-gray-300
+            text-green-700
+            border border-green-300
             rounded-lg
             bg-white
           "
@@ -164,7 +165,7 @@ const BrokerCard = ({ broker }) => {
 // MAIN
 const BrokerAnalyzer = () => {
   return (
-    <section className="py-3 lg:py-10">
+    <section className="py-3 lg:py-2">
 
       <div className="max-w-full mx-auto">
 

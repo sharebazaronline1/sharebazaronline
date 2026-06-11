@@ -147,7 +147,7 @@ const type = rawType === "SME" ? "SME" : "Mainboard";
     )}`
   )
 }
-            className="flex-1 py-2.5 border border-gray-300 hover:bg-gray-100 text-xs font-semibold rounded-xl"
+            className="flex-1 py-2.5 border border-green-300 text-green-700 text-xs font-semibold rounded-xl"
           >
             Details
           </button>
@@ -192,7 +192,7 @@ const IPODashboard = ({ ipos = [] }) => {
 }, [ipos]);
 
   return (
-    <div className="py-4 px-4 lg:py-8">
+    <div className="py-4 px-4 lg:py-4">
       <div className="w-full">
         {/* Desktop Grid */}
         <div className="hidden lg:grid grid-cols-4 gap-4">
@@ -220,42 +220,20 @@ const IPODashboard = ({ ipos = [] }) => {
           )}
         </div>
 
-        {/* Mobile / Tablet Horizontal Scroll */}
-       {/* Mobile / Tablet Horizontal Scroll */}
-<div
-  className="
-    lg:hidden
-    overflow-x-auto
-    scrollbar-hide
-    -mx-4
-    px-4
-    pb-2
-  "
->
+      
+{/* Mobile / Tablet Vertical Layout */}
+<div className="lg:hidden">
   {top8IPOs.length > 0 ? (
 
-    <div
-      className="
-        flex
-        gap-3
-        snap-x
-        snap-mandatory
-      "
-    >
+    <div className="space-y-4">
 
       {top8IPOs.map((ipo, i) => (
 
         <motion.div
           key={ipo.id}
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.05 }}
-          className="
-            w-[84%]
-            max-w-[285px]
-            flex-shrink-0
-            snap-center
-          "
         >
           <IPOCard ipo={ipo} />
         </motion.div>
@@ -266,7 +244,7 @@ const IPODashboard = ({ ipos = [] }) => {
 
   ) : (
 
-    <div className="py-20 text-center px-4">
+    <div className="py-12 text-center">
 
       <p className="text-xl font-semibold text-gray-600">
         No Live IPOs Right Now
@@ -282,10 +260,12 @@ const IPODashboard = ({ ipos = [] }) => {
           mt-6
           w-full
           py-3
+          rounded-xl
           bg-green-600
+          hover:bg-green-700
           text-white
           font-bold
-          rounded-xl
+          transition
         "
       >
         Learn How to Apply for IPOs

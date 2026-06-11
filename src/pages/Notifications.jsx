@@ -63,7 +63,7 @@ const Notifications = () => {
 
       <main className="md:ml-64 p-4 md:p-8 transition-all">
         {/* Mobile Header */}
-       <header className="md:hidden sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-4 mb-6">
+       <header className="md:hidden sticky top-0 z-20 bg-white border-gray-200 px-4 py-4 mb-6">
   <div className="flex items-center justify-between">
 
     {/* LEFT */}
@@ -106,7 +106,7 @@ const Notifications = () => {
         </header>
 
         {/* Notification List */}
-        <section className="bg-white rounded-2xl p-6 border shadow-sm">
+        <section className="bg-white rounded-2xl p-6 -sm">
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
             <Bell className="text-green-600" />
             Recent Notifications

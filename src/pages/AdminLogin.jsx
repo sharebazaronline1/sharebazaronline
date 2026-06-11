@@ -141,7 +141,7 @@ const handleAdminLogin = async (e) => {
                 className={`w-full py-3.5 rounded-xl font-semibold text-white transition-all shadow-md flex items-center justify-center gap-2 ${
                   loading
                     ? "bg-green-400 cursor-not-allowed"
-                    : "bg-green-600 hover:bg-green-700 active:scale-[0.98]"
+                    : "bg-[#16A34A] hover:bg-[#15803D] active:scale-[0.98]"
                 }`}
               >
                 {loading ? (

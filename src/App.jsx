@@ -163,9 +163,7 @@ const hideHeader =
           {!isAuthOrProtectedPage && (
             <aside className="hidden xl:block w-48 flex-shrink-0 mr-4">
               <div className="sticky top-20 mt-96 py-8 flex flex-col gap-2">
-                <div className="h-24 bg-white rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center text-sm font-semibold text-gray-700 shadow-sm">
-                  Banner Ad
-                </div>
+            
                 <UpcomingIpoSidebar />
                 <UnlistedSharesSidebar />
               </div>

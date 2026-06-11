@@ -264,7 +264,7 @@ if (quantity < minLot)
 
       <main className="md:ml-64 transition-all">
         {/* Header with title and profile */}
-       <header className="sticky top-0 z-10 bg-white border-b border-gray-200 shadow-sm">
+       <header className="sticky top-0 z-10 bg-white border-gray-200 shadow-sm">
   <div className="px-4 sm:px-6 lg:px-8 py-5">
 
     {/* MOBILE HEADER */}
@@ -320,7 +320,7 @@ if (quantity < minLot)
             className="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden w-full lg:w-1/2 max-w-2xl flex flex-col"
             style={{ maxHeight: "85vh" }}
           >
-            <div className="p-5 md:p-6 border-b bg-gray-50 shrink-0">
+            <div className="p-5 md:p-6 bg-gray-50 shrink-0">
               <h2 className="text-lg font-bold flex items-center gap-2.5">
                 <IndianRupee className="text-green-600" size={22} />
                 {activeTab === "buy" ? "Buy Interest" : "Sell Interest"}
@@ -329,7 +329,7 @@ if (quantity < minLot)
 
             <div className="p-5 md:p-6 space-y-6 overflow-y-auto flex-1">
               {/* Tabs */}
-              <div className="flex border-b shrink-0">
+              <div className="flex shrink-0">
                 <button
                   onClick={() => setActiveTab("buy")}
                   className={`flex-1 py-3.5 text-sm font-medium transition-colors ${
@@ -496,7 +496,7 @@ if (quantity < minLot)
 </div>
 
               {/* Total + Submit */}
-              <div className="pt-6 border-t space-y-5 sticky bottom-0 bg-white pb-2">
+              <div className="pt-6 space-y-5 sticky bottom-0 bg-white pb-2">
                 <div className="flex justify-between items-center">
                   <span className="text-base font-medium text-gray-700">Total Amount</span>
                   <span className="text-2xl font-bold text-green-700">
@@ -532,7 +532,7 @@ const isBelowLot =
         className={`w-full py-3.5 rounded-xl font-semibold text-white transition-all shadow-md ${
           isBelowLot
             ? "bg-gray-400 cursor-not-allowed"
-            : "bg-green-600 hover:bg-green-700 hover:shadow-lg active:scale-[0.98]"
+            : "bg-[#16A34A] hover:bg-[#15803D] hover:shadow-lg active:scale-[0.98]"
         }`}
       >
         {activeTab === "buy"
@@ -575,7 +575,7 @@ const isBelowLot =
                   </p>
                   <button
                     onClick={() => navigate("/ipo/ipo-list")}
-                    className="bg-green-600 text-white px-8 py-4 rounded-xl hover:bg-green-700 transition font-medium shadow-md hover:shadow-lg"
+                    className="bg-[#16A34A] text-white px-8 py-4 rounded-xl hover:bg-[#15803D] transition font-medium shadow-md hover:shadow-lg"
                   >
                     Explore Pre-IPOs
                   </button>
@@ -585,7 +585,7 @@ const isBelowLot =
               <div className="overflow-x-auto flex-1">
                 <table className="w-full min-w-[640px] text-sm">
                   <thead>
-                    <tr className="border-b bg-gray-50 text-gray-700 text-left">
+                    <tr className="bg-gray-50 text-gray-700 text-left">
                       <th className="py-4 px-4 font-medium">Type</th>
                       <th className="py-4 px-4 font-medium">Company</th>
                       <th className="py-4 px-4 font-medium text-right">Qty</th>
@@ -599,7 +599,7 @@ const isBelowLot =
                     {orders.slice(0, 6).map((order) => (
                       <tr
                         key={order.id}
-                        className="border-b last:border-0 hover:bg-gray-50 transition-colors"
+                        className="last:border-0 hover:bg-gray-50 transition-colors"
                       >
                         <td className="py-3 px-4">
                           <span

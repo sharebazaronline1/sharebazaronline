@@ -86,7 +86,7 @@ const PreIPOWatchlist = () => {
 
       <main className="md:ml-64 p-4 md:p-8 transition-all">
         {/* Mobile Header */}
-      <header className="md:hidden sticky top-0 z-20 bg-white border-b border-gray-200 px-4 py-4 mb-6">
+      <header className="md:hidden sticky top-0 z-20 bg-white border-gray-200 px-4 py-4 mb-6">
   <div className="flex items-center justify-between">
     
     {/* LEFT */}
@@ -131,7 +131,7 @@ const PreIPOWatchlist = () => {
           {watchlist.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 border shadow-sm hover:shadow-lg transition"
+              className="bg-white rounded-2xl p-6 -sm hover:shadow-lg transition"
             >
               <div className="flex justify-between items-start mb-4">
                 <div>
@@ -156,7 +156,7 @@ const PreIPOWatchlist = () => {
                 </div>
               </div>
 
-              <div className="mt-6 pt-4 border-t flex items-center justify-between">
+              <div className="mt-6 pt-4 flex items-center justify-between">
                 <span
                   className={`text-xs px-3 py-1 rounded-full font-medium ${
                     item.demand.includes("Very High") || item.demand.includes("High")
@@ -236,7 +236,7 @@ const PreIPOWatchlist = () => {
          <div className="mt-10 text-center">
   <button
     onClick={() => navigate("/pre-ipo-stocks")}
-    className="inline-flex items-center gap-3 px-10 py-4 bg-green-600 text-white font-medium rounded-xl hover:bg-green-700 transition shadow-md hover:shadow-lg"
+    className="inline-flex items-center gap-3 px-10 py-4 bg-[#16A34A] text-white font-medium rounded-xl hover:bg-[#15803D] transition shadow-md hover:shadow-lg"
   >
     <TrendingUp size={20} />
     View More
@@ -250,7 +250,7 @@ const PreIPOWatchlist = () => {
 
 // DRHP Card Component (new)
 const DRHPCard = ({ name, sector, filedDate, expectedListing, status }) => (
-  <div className="bg-white rounded-2xl p-6 border shadow-sm hover:shadow-lg transition">
+  <div className="bg-white rounded-2xl p-6 -sm hover:shadow-lg transition">
     <div className="flex justify-between items-start mb-4">
       <div>
         <h3 className="text-lg font-bold text-gray-900">{name}</h3>
@@ -273,7 +273,7 @@ const DRHPCard = ({ name, sector, filedDate, expectedListing, status }) => (
       </div>
     </div>
 
-    <div className="mt-6 pt-4 border-t flex items-center justify-between">
+    <div className="mt-6 pt-4 flex items-center justify-between">
       <button className="text-sm font-semibold text-blue-600 hover:underline flex items-center gap-1">
         <FileText size={16} />
         View DRHP
@@ -287,7 +287,7 @@ const DRHPCard = ({ name, sector, filedDate, expectedListing, status }) => (
 
 const SuggestionCard = ({ name, price, demand, sector,navigate  }) => (
  
-  <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border shadow-sm hover:shadow-md transition">
+  <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 -sm hover:shadow-md transition">
     <h4 className="font-bold text-gray-900 text-lg">{name}</h4>
     <p className="text-sm text-gray-600 mt-1">Sector: {sector}</p>
     <p className="text-sm text-gray-600 mt-2">Price: {price}</p>

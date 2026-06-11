@@ -15,6 +15,7 @@ import {
   Clock,
   CreditCard,
   X,
+  Menu,
   TrendingUp,
   FileText,
   ChevronLeft,
@@ -29,7 +30,7 @@ const AdminUsers = () => {
   const [error, setError] = useState(null);
   const [editingRates, setEditingRates] = useState({});
   const [expandedUserId, setExpandedUserId] = useState(null);
-
+const [mobileOpen, setMobileOpen] = useState(false);
   // Modals
   const [selectedReferred, setSelectedReferred] = useState(null);
   const [referredOrders, setReferredOrders] = useState([]);
@@ -539,57 +540,121 @@ const downloadOrderReport = async () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <AdminSidebar />
+      <AdminSidebar
+  mobileOpen={mobileOpen}
+  setMobileOpen={setMobileOpen}
+/>
 
       <main className="md:ml-64 transition-all duration-300">
-        <header className="sticky top-0 z-10 bg-white border-b border-gray-200 px-4 sm:px-6 lg:px-8 py-6 shadow-sm">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 max-w-7xl mx-auto">
-            <div>
-              <h1 className="text-3xl font-semibold text-gray-900 tracking-tight">Users Overview</h1>
-              <p className="text-sm text-gray-600 mt-1">All registered users • Orders • Portfolio • Referrals • KYC</p>
-            </div>
+       <header className="sticky top-0 z-10 bg-white border-gray-200 px-4 py-4 shadow-sm">
+  <div className="max-w-7xl mx-auto">
+    
+    {/* Mobile Header */}
+    <div className="flex items-center justify-between md:hidden">
+      
+      {/* Left */}
+      <div className="flex items-center gap-3">
+        <button
+          onClick={() => setMobileOpen(true)}
+          className="p-2.5 rounded-xl border border-gray-200 bg-white shadow-sm"
+        >
+          <Menu size={22} />
+        </button>
 
-            <div className="flex items-center gap-3 relative">
+        <div>
+          <h1 className="text-2xl font-bold leading-tight text-gray-900">
+            Users
+          </h1>
+
+          <p className="text-xs text-gray-500">
+            Registered users
+          </p>
+        </div>
+      </div>
+
+      {/* Right */}
+      <div className="flex items-center gap-2">
+        <button
+          onClick={fetchUsers}
+          className="p-2.5 rounded-xl border border-gray-200 bg-white shadow-sm"
+        >
+          <RefreshCw size={18} />
+        </button>
+
+        <button
+          onClick={() =>
+            setShowDownloadDropdown(!showDownloadDropdown)
+          }
+          className="p-2.5 rounded-xl border border-gray-200 bg-white shadow-sm"
+        >
+          <Download size={18} />
+        </button>
+      </div>
+    </div>
+
+    {/* Desktop Header */}
+    <div className="hidden md:flex items-center justify-between gap-4">
+      <div>
+        <h1 className="text-3xl font-semibold text-gray-900 tracking-tight">
+          Users Overview
+        </h1>
+
+        <p className="text-sm text-gray-600 mt-1">
+          All registered users • Orders • Portfolio • Referrals • KYC
+        </p>
+      </div>
+
+      <div className="flex items-center gap-3 relative">
+        <button
+          onClick={fetchUsers}
+          className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 shadow-sm"
+        >
+          <RefreshCw size={17} />
+          Refresh
+        </button>
+
+        <div className="relative">
+          <button
+            onClick={() =>
+              setShowDownloadDropdown(!showDownloadDropdown)
+            }
+            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 shadow-sm"
+          >
+            <Download size={17} />
+            Download Report
+            <ChevronDown size={16} />
+          </button>
+
+          {showDownloadDropdown && (
+            <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
               <button
-                onClick={fetchUsers}
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm"
+                onClick={() => {
+                  downloadUserReport();
+                  setShowDownloadDropdown(false);
+                }}
+                className="w-full text-left px-6 py-3 hover:bg-gray-50 text-sm"
               >
-                <RefreshCw size={17} />
-                Refresh
+                User Summary Report
               </button>
 
-              <div className="relative">
-                <button
-                  onClick={() => setShowDownloadDropdown(!showDownloadDropdown)}
-                  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all shadow-sm"
-                >
-                  <Download size={17} />
-                  Download Report
-                  <ChevronDown size={16} />
-                </button>
-
-                {showDownloadDropdown && (
-                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
-                    <button
-                      onClick={() => { downloadUserReport(); setShowDownloadDropdown(false); }}
-                      className="w-full text-left px-6 py-3 hover:bg-gray-50 flex items-center gap-3 text-sm"
-                    >
-                      User Summary Report
-                    </button>
-                    <button
-                      onClick={() => { downloadOrderReport(); setShowDownloadDropdown(false); }}
-                      className="w-full text-left px-6 py-3 hover:bg-gray-50 flex items-center gap-3 text-sm"
-                    >
-                      All Orders Report
-                    </button>
-                  </div>
-                )}
-              </div>
-
-              <UserProfileDropdown />
+              <button
+                onClick={() => {
+                  downloadOrderReport();
+                  setShowDownloadDropdown(false);
+                }}
+                className="w-full text-left px-6 py-3 hover:bg-gray-50 text-sm"
+              >
+                All Orders Report
+              </button>
             </div>
-          </div>
-        </header>
+          )}
+        </div>
+
+        <UserProfileDropdown />
+      </div>
+    </div>
+  </div>
+</header>
 
         <div className="px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto">
           {error && (
@@ -696,14 +761,14 @@ const downloadOrderReport = async () => {
                       {expandedUserId === user.id && (
                         <tr>
                           <td colSpan={10} className="p-0 bg-gray-50">
-                            <div className="px-6 py-8">
-                              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 mb-10">
+                          <div className="px-3 py-4 md:px-6 md:py-8">
+                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-5 mb-6">
                                 <div className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm h-full">
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
+                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2 md:mb-4">
                                     <Clock size={18} className="text-gray-500" />
                                     Account Details
                                   </h4>
-                                  <div className="space-y-2.5 text-sm">
+                                  <div className="space-y-1.5 md:space-y-2.5 text-sm">
                                     <div className="flex justify-between">
                                       <span className="text-gray-500">Joined</span>
                                       <span className="font-medium">
@@ -718,14 +783,14 @@ const downloadOrderReport = async () => {
                                 </div>
 
                                 <div 
-                                  className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm h-full cursor-pointer hover:bg-emerald-50 transition-colors"
+                                  className="bg-white p-3 md:p-5 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm h-full cursor-pointer hover:bg-emerald-50 transition-colors"
                                   onClick={() => openMainUserOrders(user)}
                                 >
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
+                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2 md:mb-4">
                                     <Package size={18} className="text-gray-500" />
                                     Activity
                                   </h4>
-                                  <div className="space-y-2.5 text-sm">
+                                  <div className="space-y-1.5 md:space-y-2.5 text-sm">
                                     <div className="flex justify-between">
                                       <span className="text-gray-500">Orders</span>
                                       <span className="font-medium text-emerald-600 underline">{user.orderCount || 0}</span>
@@ -739,19 +804,19 @@ const downloadOrderReport = async () => {
                                   </div>
                                 </div>
 
-                                <div className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm h-full flex flex-col">
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
+                                <div className="bg-white p-3 md:p-5 rounded-2xl md:rounded-3xl border border-gray-100 shadow-sm h-full flex flex-col">
+                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2 md:mb-4">
                                     <Users size={18} className="text-gray-500" />
                                     Referrals
                                   </h4>
                                   <div className="mt-auto">
-                                    <div className="text-5xl font-semibold text-emerald-700 tracking-tighter">{user.referralCount}</div>
+                                  <div className="text-3xl md:text-5xl font-semibold text-emerald-700 tracking-tighter">{user.referralCount}</div>
                                     <p className="text-sm text-gray-500 mt-1">Total referred users</p>
                                   </div>
                                 </div>
 
                                 <div className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm h-full">
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
+                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2 md:mb-4">
                                     <ShieldCheck size={18} className="text-gray-500" />
                                     KYC Status
                                   </h4>
@@ -761,12 +826,12 @@ const downloadOrderReport = async () => {
                                 </div>
 
                                 <div className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm h-full">
-                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-4">
+                                  <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2 md:mb-4">
                                     <CreditCard size={18} className="text-gray-500" />
                                     Bank Account
                                   </h4>
                                   {user.bankAccount && user.bankAccount.bank_name ? (
-                                    <div className="space-y-2.5 text-sm">
+                                    <div className="space-y-1.5 md:space-y-2.5 text-sm">
                                       <div>
                                         <span className="text-gray-500 text-xs block">Bank Name</span>
                                         <p className="font-medium text-gray-800 mt-1">{user.bankAccount.bank_name}</p>
@@ -990,7 +1055,7 @@ const downloadOrderReport = async () => {
               )}
             </div>
 
-            <div className="px-6 sm:px-8 py-5 border-t flex justify-end">
+            <div className="px-6 sm:px-8 py-5 flex justify-end">
               <button onClick={closeMainModal} className="px-8 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-2xl transition-colors">
                 Close
               </button>
@@ -1127,7 +1192,7 @@ const downloadOrderReport = async () => {
               </div>
             </div>
 
-            <div className="px-6 sm:px-8 py-5 border-t flex justify-end">
+            <div className="px-6 sm:px-8 py-5 flex justify-end">
               <button onClick={closeReferredModal} className="px-8 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-100 rounded-2xl transition-colors">
                 Close
               </button>

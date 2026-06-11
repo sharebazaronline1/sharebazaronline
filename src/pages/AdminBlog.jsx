@@ -194,7 +194,7 @@ const modules = {
 
       <main className="md:ml-64">
         {/* HEADER */}
-        <header className="bg-white border-b px-8 py-6 shadow-sm">
+        <header className="bg-white px-8 py-6 shadow-sm">
           <div className="max-w-6xl mx-auto flex justify-between items-center">
             <div>
               <h1 className="text-2xl font-semibold text-gray-900">
@@ -323,7 +323,7 @@ const modules = {
             <div className="flex justify-end">
               <button
                 disabled={loading}
-                className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-medium flex items-center gap-2"
+                className="bg-[#16A34A] hover:bg-[#15803D] text-white px-8 py-3 rounded-xl font-medium flex items-center gap-2"
               >
                 <Save size={18} />
                 {loading ? "Publishing..." : "Publish"}
