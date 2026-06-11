@@ -9,6 +9,7 @@ import {
   BarChart2,
   Briefcase,
   FileText,
+  AlertTriangle,
   IndianRupee,
   Menu,
   TrendingUp,
@@ -120,13 +121,26 @@ if (preIPOError) {
       </div>
 
       {/* Account Inactive / Complete KYC Button */}
-      <button
-        onClick={() => navigate("/kyc")} // redirect to KYC page
-        className="ml-2 px-2 py-1 border-red-500 rounded-full text-gray-500 text-xs hover:bg-red-50 transition"
-        title="Complete your KYC"
-      >
-        Complete KYC
-      </button>
+     <button
+  onClick={() => navigate("/kyc")}
+  className="
+    ml-2
+    px-4
+    py-2
+    rounded-full
+    bg-blue-600
+    hover:bg-blue-700
+    text-white
+    text-xs
+    font-semibold
+    shadow-sm
+    transition-all
+    whitespace-nowrap
+  "
+  title="Complete your KYC"
+>
+  Complete KYC
+</button>
     </div>
 
     {/* RIGHT */}
@@ -149,31 +163,71 @@ if (preIPOError) {
               Track IPOs, Pre-IPOs & portfolio performance
             </p>
           </div>
+<div className="flex items-center gap-4">
+  {accountStatus !== "active" && (
+    <div
+      className="
+        flex items-center gap-4
+        px-5 py-3
+        rounded-2xl
+        border border-orange-200
+        bg-gradient-to-r
+        from-orange-50
+        to-amber-50
+        shadow-sm
+      "
+    >
+      {/* Icon */}
+      <div
+        className="
+          w-10 h-10
+          rounded-xl
+          bg-orange-100
+          flex items-center justify-center
+          flex-shrink-0
+        "
+      >
+        <AlertTriangle
+          size={20}
+          className="text-orange-600"
+        />
+      </div>
 
-          <div className="flex items-center gap-4">
-            {accountStatus !== "active" && (
-              <div className="bg-amber-50 border-red-300 rounded-2xl px-5 py-3 flex items-center gap-3">
-                <div>
+      {/* Text */}
+      <div>
                   <p className="font-semibold text-amber-800 text-sm">
                     Account is Inactive
-                  </p>
+        </p>
 
-                  <p className="text-xs text-amber-700">
-                    Complete documents to trade
-                  </p>
-                </div>
+        <p className="text-xs text-slate-600">
+          Complete your KYC to start trading
+        </p>
+      </div>
 
-                <button
-                  onClick={() => navigate("/kyc")}
-                  className="px-5 py-2 bg-blue-500 hover:bg-amber-700 text-white text-sm font-medium rounded-xl transition whitespace-nowrap"
-                >
-                  Complete Now
-                </button>
-              </div>
-            )}
+      {/* CTA */}
+      <button
+        onClick={() => navigate("/kyc")}
+        className="
+          ml-2
+          px-5 py-2.5
+          rounded-xl
+          bg-blue-600
+          hover:bg-blue-700
+          text-white
+          text-sm
+          font-semibold
+          transition-all
+          shadow-sm
+          whitespace-nowrap
+        "
+      >
+        Complete KYC
+      </button>
+    </div>
+  )}
 
-            <UserProfileDropdown />
-          </div>
+  <UserProfileDropdown />
+</div>
         </header>
 
         {/* Stats */}
