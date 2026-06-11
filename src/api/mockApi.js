@@ -18721,6 +18721,211 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 18 June 2026."
     }
   ]
+},
+{
+  "id": 95,
+  "name": "Horizon Reclaim",
+  "logo": "/images/ipo/horizonreclaim.png",
+  "minInvestment": "₹2,47,200",
+  "open": "12 Jun 2026",
+  "close": "16 Jun 2026",
+  "listing": "19 Jun 2026",
+  "price": "98 – 103",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Horizon Reclaim (India) Limited",
+    "industry_sector": "Rubber Recycling / Reclaimed Rubber",
+    "founded_year": "2006",
+    "promoters": [
+      "Mohit Bajaj",
+      "Malika Bajaj"
+    ],
+    "description": "Horizon Reclaim (India) Ltd. is engaged in the manufacturing of reclaimed rubber derived from used tyres, tubes, tread peelings, and industrial scrap. The company produces Natural Rubber Reclaim, Synthetic Rubber Reclaim (EPDM & Butyl), and Crumb Rubber. It operates on a B2B model primarily serving SMEs and industrial customers in the northwestern region of India."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Horizon Reclaim (India) Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹98",
+    "price_band_max": "₹103",
+    "lot_size": 1200,
+    "total_issue_size": "₹54.27 Cr (52,69,200 shares)",
+    "fresh_issue_size": "₹54.27 Cr (52,69,200 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "52,69,200 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹103",
+    "minimum_investment": "₹2,47,200 (2 lots / 2,400 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹201.01 Cr",
+    "pre_issue_shareholding": "Promoters 95.84%",
+    "post_issue_shareholding": "Promoters ~70%"
+  },
+
+  "company_overview": {
+    "business_model": "B2B manufacturing of reclaimed rubber products from recycled tyre waste.",
+    "products_services": [
+      "Natural Rubber Reclaim",
+      "Synthetic Rubber Reclaim (EPDM & Butyl)",
+      "Crumb Rubber"
+    ],
+    "competitive_strengths": [
+      "In-house manufacturing facility supported by technology driven process",
+      "Diversified Customer Base and Long-Standing Customer Relationships",
+      "Experienced Promoter Directors with Strong Industry Expertise",
+      "Stringent Quality Control Ensuring Standardized Product Quality"
+    ],
+    "risks": [
+      "Highly competitive and fragmented reclaimed rubber industry",
+      "Raw material availability and price volatility",
+      "Sustainability of high growth and margins"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "12 Jun 2026",
+    "ipo_close_date": "16 Jun 2026",
+    "basis_of_allotment_date": "17 Jun 2026",
+    "refund_initiation_date": "18 Jun 2026",
+    "demat_credit_date": "18 Jun 2026",
+    "listing_date": "19 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_working_capital_requirements": "₹6.00 Cr",
+    "prepayment_or_repayment_of_borrowings": "₹26.70 Cr",
+    "funding_capital_expenditure_for_plant_and_machinery": "₹9.43 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.99%",
+    "hni_nii_quota": "15.01%",
+    "retail_quota": "35.00%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,47,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,70,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 lots",
+      "shares": "10800",
+      "amount": "₹11,12,400"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "53.63% (Mar 31, 2026)",
+    "roce": "25.45% (Mar 31, 2026)",
+    "pat_margin": "21.25% (Mar 31, 2026)",
+    "ebitda_margin": "32.64% (Mar 31, 2026)",
+    "debt_to_equity": "1.44"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2026",
+      "assets": "64.88 Cr",
+      "total_income": "50.01 Cr",
+      "pat": "10.50 Cr",
+      "ebitda": "16.32 Cr",
+      "net_worth": "24.83 Cr",
+      "total_borrowing": "35.76 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "26.08 Cr",
+      "total_income": "36.39 Cr",
+      "pat": "7.07 Cr",
+      "ebitda": "10.46 Cr",
+      "net_worth": "14.33 Cr",
+      "total_borrowing": "10.03 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "8.45 Cr",
+      "total_income": "20.44 Cr",
+      "pat": "0.71 Cr",
+      "ebitda": "1.17 Cr",
+      "net_worth": "7.26 Cr",
+      "total_borrowing": "N/A"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 12 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "GYR Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Khasra no. 9, Dehradun Road, Near Nirankari Bhawan, Village - Kumar Hera, Saharanpur, Uttar Pradesh - 247001",
+    "company_website": "https://horizonreclaim.com/",
+    "company_email": "cs@horizonreclaim.com",
+    "company_phone": "+91 8171000900"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/06/rhphorizon.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Horizon Reclaim (India) Limited do?",
+      "answer": "The company manufactures reclaimed rubber from recycled tyre waste."
+    },
+    {
+      "question": "When did the Horizon Reclaim IPO open and close?",
+      "answer": "The IPO opens on 12 Jun 2026 and closes on 16 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Horizon Reclaim IPO?",
+      "answer": "The price band is ₹98 – ₹103 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Horizon Reclaim IPO?",
+      "answer": "The lot size is 1,200 shares."
+    },
+    {
+      "question": "What is the total issue size of the Horizon Reclaim IPO?",
+      "answer": "The total issue size is ₹54.27 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Horizon Reclaim shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 19 June 2026."
+    }
+  ]
 }
 
 
