@@ -18926,6 +18926,214 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 19 June 2026."
     }
   ]
+},
+{
+  "id": 96,
+  "name": "Clay Craft",
+  "logo": "/images/ipo/claycraft.png",
+  "minInvestment": "₹2,43,600",
+  "open": "17 Jun 2026",
+  "close": "19 Jun 2026",
+  "listing": "24 Jun 2026",
+  "price": "193 – 203",
+  "lot": 600,
+
+  "about_company": {
+    "company_name": "Clay Craft India Limited",
+    "industry_sector": "Ceramics / Tableware / Bone China Crockery",
+    "founded_year": "1994",
+    "promoters": [
+      "Rajesh Narain Agarwal",
+      "Vikas Agarwal",
+      "Bharat Agarwal",
+      "Deepak Agarwal"
+    ],
+    "description": "Clay Craft India Ltd. is a manufacturer of bone china crockery and ceramic tableware. The company specialises in high-quality dining products including plates, cups, saucers, mugs, platters, tea & coffee service sets, and other kitchenware. It serves households, hotels, restaurants, corporate gifting, and HoReCa segment with customised solutions. The company offers approximately 5,770 SKUs under different brands."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Clay Craft India Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹193",
+    "price_band_max": "₹203",
+    "lot_size": 600,
+    "total_issue_size": "₹110.11 Cr (54,24,000 shares)",
+    "fresh_issue_size": "₹110.11 Cr (54,24,000 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "54,24,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹203",
+    "minimum_investment": "₹2,43,600 (2 lots / 1,200 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹417.58 Cr",
+    "pre_issue_shareholding": "Promoters 100%",
+    "post_issue_shareholding": "Promoters 73.63%"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing and distribution of bone china crockery, ceramic tableware, and customised solutions for HoReCa and corporate clients.",
+    "products_services": [
+      "Dinnerware",
+      "Mugs",
+      "Platters & Accessories",
+      "Tea & Coffee Service Sets",
+      "Others (Customised Ceramic Solutions)"
+    ],
+    "competitive_strengths": [
+      "Integrated and Scalable Manufacturing Capabilities",
+      "Experienced Promoter and Management Team",
+      "In-house Design Development with focus on Quality and Innovation",
+      "Diversified Product Portfolio (5,770+ SKUs)",
+      "Extensive Distribution Network and Multi-channel Presence"
+    ],
+    "risks": [
+      "Highly competitive and fragmented ceramics industry",
+      "Sustainability of high growth and margins",
+      "Raw material price volatility"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "17 Jun 2026",
+    "ipo_close_date": "19 Jun 2026",
+    "basis_of_allotment_date": "22 Jun 2026",
+    "refund_initiation_date": "23 Jun 2026",
+    "demat_credit_date": "23 Jun 2026",
+    "listing_date": "24 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_new_facility": "₹97.00 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.97% (including Anchor)",
+    "hni_nii_quota": "15.02%",
+    "retail_quota": "35.01%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "1200",
+      "amount": "₹2,43,600"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "1800",
+      "amount": "₹3,65,400"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 lots",
+      "shares": "5400",
+      "amount": "₹10,96,200"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "17.71% (Mar 31, 2026)",
+    "roce": "18.26% (Mar 31, 2026)",
+    "pat_margin": "15.02% (Mar 31, 2026)",
+    "ebitda_margin": "23.33% (Mar 31, 2026)",
+    "debt_to_equity": "0.30"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2026",
+      "assets": "251.95 Cr",
+      "total_income": "184.57 Cr",
+      "pat": "27.01 Cr",
+      "ebitda": "41.96 Cr",
+      "net_worth": "166.06 Cr",
+      "total_borrowing": "49.98 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "217.39 Cr",
+      "total_income": "154.44 Cr",
+      "pat": "20.76 Cr",
+      "ebitda": "35.39 Cr",
+      "net_worth": "139.05 Cr",
+      "total_borrowing": "47.75 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "188.67 Cr",
+      "total_income": "146.99 Cr",
+      "pat": "13.50 Cr",
+      "ebitda": "28.65 Cr",
+      "net_worth": "117.01 Cr",
+      "total_borrowing": "46.80 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 17 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Hem Securities Ltd."
+  },
+
+  "company_information": {
+    "company_address": "F-766 & F-766 A, Road No. 1-D, Vishwakarma Industrial Area, Jaipur, Rajasthan 302013",
+    "company_website": "https://www.claycraftindia.com/",
+    "company_email": "cs@claycraftindia.com",
+    "company_phone": "+91 141 4107978"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://hemadmin.hemsecurities.com/images/Files/offer/1078.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Clay Craft India Limited do?",
+      "answer": "The company manufactures bone china crockery, ceramic tableware, and customised solutions for households, hotels, and corporate clients."
+    },
+    {
+      "question": "When did the Clay Craft IPO open and close?",
+      "answer": "The IPO opens on 17 Jun 2026 and closes on 19 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Clay Craft IPO?",
+      "answer": "The price band is ₹193 – ₹203 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Clay Craft IPO?",
+      "answer": "The lot size is 600 shares."
+    },
+    {
+      "question": "What is the total issue size of the Clay Craft IPO?",
+      "answer": "The total issue size is ₹110.11 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Clay Craft shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 24 June 2026."
+    }
+  ]
 }
 
 
