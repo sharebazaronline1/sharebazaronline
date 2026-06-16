@@ -19134,6 +19134,427 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on NSE SME on 24 June 2026."
     }
   ]
+},
+{
+  "id": 97,
+  "name": "Avience Biomedicals",
+  "logo": "/images/ipo/aviencebiomedicals.png",
+  "minInvestment": "₹2,49,600",
+  "open": "18 Jun 2026",
+  "close": "22 Jun 2026",
+  "listing": "25 Jun 2026",
+  "price": "196 – 208",
+  "lot": 600,
+
+  "about_company": {
+    "company_name": "Avience Biomedicals Limited",
+    "industry_sector": "Pharmaceuticals / Biotechnology / IVD & Diagnostics",
+    "founded_year": "2024",
+    "promoters": [
+      "Dharam Deo Choudhary",
+      "Ram Nagina Choudhary",
+      "Janardan Pal",
+      "Deepa Choudhary"
+    ],
+    "description": "Avience Biomedicals Limited is an ISO certified company specializing in manufacturing, supplying, and exporting molecular diagnostic solutions, rapid test kits, biochemistry analyzers, hematology analyzers, and other medical devices in the IVD (In-Vitro Diagnostics) segment. The company operates primarily in B2B and B2G markets serving pathology labs, hospitals, and research centers across India and overseas."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Avience Biomedicals Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹196",
+    "price_band_max": "₹208",
+    "lot_size": 600,
+    "total_issue_size": "₹30.24 Cr (14,53,800 shares)",
+    "fresh_issue_size": "₹30.24 Cr (14,53,800 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "14,53,800 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹208",
+    "minimum_investment": "₹2,49,600 (2 lots / 1,200 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹114.09 Cr",
+    "pre_issue_shareholding": "Promoters 87.89%",
+    "post_issue_shareholding": "Promoters 64.59%"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing, trading, and distribution of IVD products, rapid test kits, analyzers, and medical devices (B2B & B2G).",
+    "products_services": [
+      "Rapid Test Kits (Dengue, Malaria, Syphilis, etc.)",
+      "Biochemistry Analyzers & Reagents",
+      "Hematology Analyzers",
+      "Molecular Diagnostics (RT-qPCR)",
+      "Oxygen Concentrators & Viral Transport Medium"
+    ],
+    "competitive_strengths": [
+      "Strong industry experience and expertise",
+      "Diverse product portfolio across diagnostics and medical devices",
+      "Strong distribution network in India and growing international presence",
+      "Cost-effective and affordable solutions",
+      "ISO certified with stringent quality control"
+    ],
+    "risks": [
+      "Highly competitive diagnostics and medical devices sector",
+      "Regulatory approvals and compliance risks",
+      "Raw material and supply chain dependencies"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "18 Jun 2026",
+    "ipo_close_date": "22 Jun 2026",
+    "basis_of_allotment_date": "23 Jun 2026",
+    "refund_initiation_date": "24 Jun 2026",
+    "demat_credit_date": "24 Jun 2026",
+    "listing_date": "25 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_new_manufacturing_unit": "₹15.96 Cr",
+    "funding_working_capital_requirements": "₹8.25 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.83% (including Anchor)",
+    "hni_nii_quota": "15.09%",
+    "retail_quota": "35.08%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "1200",
+      "amount": "₹2,49,600"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "1800",
+      "amount": "₹3,74,400"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 lots",
+      "shares": "5400",
+      "amount": "₹11,23,200"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "22.38% (Jan 31, 2026)",
+    "roce": "16.99% (Jan 31, 2026)",
+    "pat_margin": "15.86% (Mar 31, 2025)",
+    "ebitda_margin": "24.70% (Jan 31, 2026)",
+    "debt_to_equity": "0.94"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Jan 2026",
+      "assets": "66.07 Cr",
+      "total_income": "41.94 Cr",
+      "pat": "5.74 Cr",
+      "ebitda": "10.34 Cr",
+      "net_worth": "28.52 Cr",
+      "total_borrowing": "26.73 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "56.52 Cr",
+      "total_income": "45.97 Cr",
+      "pat": "7.23 Cr",
+      "ebitda": "11.41 Cr",
+      "net_worth": "22.78 Cr",
+      "total_borrowing": "22.16 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "34.65 Cr",
+      "total_income": "24.37 Cr",
+      "pat": "2.14 Cr",
+      "ebitda": "4.08 Cr",
+      "net_worth": "6.21 Cr",
+      "total_borrowing": "15.13 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 18 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Skyline Financial Services Pvt. Ltd.",
+    "registrar_website": "https://www.skylinerta.com/ipo.php"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Fintellectual Corporate Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "C-11, Block-C, Community Centre, Janakpuri A-3, New Delhi, Delhi 110058",
+    "company_website": "https://avienbio.com/",
+    "company_email": "info@avienbio.com",
+    "company_phone": "1800-12-04-636"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/aviencerhp-1.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Avience Biomedicals Limited do?",
+      "answer": "The company manufactures and supplies IVD products, rapid test kits, diagnostic analyzers, and medical devices."
+    },
+    {
+      "question": "When did the Avience Biomedicals IPO open and close?",
+      "answer": "The IPO opens on 18 Jun 2026 and closes on 22 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Avience Biomedicals IPO?",
+      "answer": "The price band is ₹196 – ₹208 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Avience Biomedicals IPO?",
+      "answer": "The lot size is 600 shares."
+    },
+    {
+      "question": "What is the total issue size of the Avience Biomedicals IPO?",
+      "answer": "The total issue size is ₹30.24 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Avience Biomedicals shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 25 June 2026."
+    }
+  ]
+},
+{
+  "id": 98,
+  "name": "Leapfrog Engineering",
+  "logo": "/images/ipo/leapfrogengineering.png",
+  "minInvestment": "₹2,76,000",
+  "open": "17 Jun 2026",
+  "close": "19 Jun 2026",
+  "listing": "24 Jun 2026",
+  "price": "21 – 23",
+  "lot": 6000,
+
+  "about_company": {
+    "company_name": "Leapfrog Engineering Services Limited",
+    "industry_sector": "Engineering Services / EPCC",
+    "founded_year": "2005",
+    "promoters": [
+      "Experienced Promoters (details in RHP)"
+    ],
+    "description": "Leapfrog Engineering Services Limited is engaged in providing integrated Engineering, Procurement, Construction and Commissioning (EPCC) services. The company offers end-to-end solutions across Electrical, Instrumentation & Automation, Fire Protection & Safety Systems, and Building Automation Systems for industries including Oil & Gas, Food Processing, Pharmaceuticals, and Metals."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Leapfrog Engineering Services Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue cum OFS (Book Built)",
+    "face_value": "₹1 per share",
+    "price_band_min": "₹21",
+    "price_band_max": "₹23",
+    "lot_size": 6000,
+    "total_issue_size": "₹88.51 Cr (3,84,84,000 shares)",
+    "fresh_issue_size": "₹79.60 Cr (3,46,08,696 shares approx.)",
+    "offer_for_sale": "₹8.91 Cr (38,76,000 shares)",
+    "shares_offered": "3,84,84,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹23",
+    "minimum_investment": "₹2,76,000 (2 lots / 12,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹326.12 Cr",
+    "pre_issue_shareholding": "Promoters (details in RHP)",
+    "post_issue_shareholding": "Promoters (post dilution)"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated EPCC services provider offering Electrical, Instrumentation, Fire Protection, and Building Automation solutions.",
+    "products_services": [
+      "Electrical Solutions (MV/LV Switchgears, EPC Contracts)",
+      "Instrumentation & Industrial Automation",
+      "Fire Protection & Safety Systems",
+      "Building Automation Systems (HVAC, Access Control, Surveillance)"
+    ],
+    "competitive_strengths": [
+      "Experienced Promoters and strong management team",
+      "Strong Order Book",
+      "Global presence",
+      "Diversified portfolio across market segments",
+      "Established track record of timely execution"
+    ],
+    "risks": [
+      "Dependence on order book execution",
+      "Competition in EPCC sector",
+      "Project execution and regulatory risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "17 Jun 2026",
+    "ipo_close_date": "19 Jun 2026",
+    "basis_of_allotment_date": "22 Jun 2026",
+    "refund_initiation_date": "23 Jun 2026",
+    "demat_credit_date": "23 Jun 2026",
+    "listing_date": "24 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "fresh_issue_objectives": "To fund working capital, capital expenditure, debt repayment, and general corporate purposes (details in RHP)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "1.03%",
+    "hni_nii_quota": "38.90%",
+    "retail_quota": "60.07%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "12000",
+      "amount": "₹2,76,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "18000",
+      "amount": "₹4,14,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "48000",
+      "amount": "₹11,04,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "N/A",
+    "roce": "N/A",
+    "pat_margin": "N/A",
+    "ebitda_margin": "N/A",
+    "debt_to_equity": "N/A"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Dec 2025",
+      "assets": "156.04 Cr",
+      "total_income": "105.05 Cr",
+      "pat": "14.18 Cr",
+      "ebitda": "20.18 Cr",
+      "net_worth": "67.44 Cr",
+      "total_borrowing": "32.22 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "149.17 Cr",
+      "total_income": "137.37 Cr",
+      "pat": "16.22 Cr",
+      "ebitda": "21.57 Cr",
+      "net_worth": "53.26 Cr",
+      "total_borrowing": "20.11 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "51.11 Cr",
+      "total_income": "162.88 Cr",
+      "pat": "16.39 Cr",
+      "ebitda": "19.73 Cr",
+      "net_worth": "21.71 Cr",
+      "total_borrowing": "13.78 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "66.45 Cr",
+      "total_income": "105.38 Cr",
+      "pat": "0.28 Cr",
+      "ebitda": "1.01 Cr",
+      "net_worth": "5.32 Cr",
+      "total_borrowing": "13.05 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 17 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Integrated Registry Management Services Pvt. Ltd.",
+    "registrar_website": "https://www.integratedindia.in"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Finshore Management Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Details available in RHP",
+    "company_website": "N/A",
+    "company_email": "N/A",
+    "company_phone": "N/A"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/jun-2026/leapfrog-engineering-services-limited_102069.html",
+    "rhp_link": "Available on BSE SME / Chittorgarh",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Leapfrog Engineering Services Limited do?",
+      "answer": "The company provides integrated EPCC services including Electrical, Instrumentation, Fire Protection, and Building Automation solutions."
+    },
+    {
+      "question": "When did the Leapfrog Engineering IPO open and close?",
+      "answer": "The IPO opens on 17 Jun 2026 and closes on 19 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Leapfrog Engineering IPO?",
+      "answer": "The price band is ₹21 – ₹23 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Leapfrog Engineering IPO?",
+      "answer": "The lot size is 6,000 shares."
+    },
+    {
+      "question": "What is the total issue size of the Leapfrog Engineering IPO?",
+      "answer": "The total issue size is ₹88.51 Crore (Fresh Issue + OFS)."
+    },
+    {
+      "question": "Where will Leapfrog Engineering shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 24 June 2026."
+    }
+  ]
 }
 
 
