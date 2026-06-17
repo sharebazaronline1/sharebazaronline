@@ -19516,10 +19516,10 @@ export const fetchIPOs = async () => {
   },
 
   "company_information": {
-    "company_address": "Details available in RHP",
-    "company_website": "N/A",
-    "company_email": "N/A",
-    "company_phone": "N/A"
+    "company_address": "No 496, Chaithanya Dhriti Rudresh,6th Main, 8th Cross, Vijaya Bank Layout,Bannerghatta Road Bangalore Urban, Karnataka, 560076",
+    "company_website": "https://www.lesgroup.in/",
+    "company_email": "cs@lesgroup.in",
+    "company_phone": "+91 78994 81340"
   },
 
   "ipo_documents": {
@@ -19553,6 +19553,436 @@ export const fetchIPOs = async () => {
     {
       "question": "Where will Leapfrog Engineering shares be listed?",
       "answer": "The shares will be listed on BSE SME on 24 June 2026."
+    }
+  ]
+},
+{
+  "id": 99,
+  "name": "Riyaasat Lifestyle",
+  "logo": "/images/ipo/riyaasatlifestyle.png",
+  "minInvestment": "₹2,59,200",
+  "open": "18 Jun 2026",
+  "close": "22 Jun 2026",
+  "listing": "25 Jun 2026",
+  "price": "102 – 108",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Riyaasat Lifestyle Limited",
+    "industry_sector": "Textiles / Ethnic Wear / Apparel Retail",
+    "founded_year": "2021",
+    "promoters": [
+      "Gaurang Ramanbhai Galiya",
+      "Ramanbhai Nanubhai Galiya",
+      "Sobhanaben R Galiya"
+    ],
+    "description": "Riyaasat Lifestyle Limited is engaged in designing, manufacturing, and retailing ethnic wear for men and women. The company offers products such as Kurta, Payjama, Sherwani, Jodhpuri, Lehenga, Gown, etc. It operates through Exclusive Brand Outlets (EBOs) and online platforms. As of March 31, 2026, the company has 6 EBOs across Gujarat and Maharashtra."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Riyaasat Lifestyle Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹102",
+    "price_band_max": "₹108",
+    "lot_size": 1200,
+    "total_issue_size": "₹30.77 Cr (28,48,800 shares)",
+    "fresh_issue_size": "₹30.77 Cr (28,48,800 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "28,48,800 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹108",
+    "minimum_investment": "₹2,59,200 (2 lots / 2,400 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹116.04 Cr",
+    "pre_issue_shareholding": "Promoters 99.87%",
+    "post_issue_shareholding": "Promoters 73.40%"
+  },
+
+  "company_overview": {
+    "business_model": "Design, manufacturing and retail of ethnic wear through EBOs and online platforms.",
+    "products_services": [
+      "Men's Ethnic Wear (Kurta, Sherwani, Payjama, Jodhpuri)",
+      "Women's Ethnic Wear (Lehenga, Gown)",
+      "Customised Ethnic Clothing"
+    ],
+    "competitive_strengths": [
+      "Customization options",
+      "Quality at affordable prices",
+      "Strategic store locations and in-house workshop",
+      "Strong brand reputation in men's ethnic wear",
+      "Omnichannel presence"
+    ],
+    "risks": [
+      "Highly competitive ethnic wear market",
+      "High debt levels",
+      "Regional concentration (mainly Gujarat)"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "18 Jun 2026",
+    "ipo_close_date": "22 Jun 2026",
+    "basis_of_allotment_date": "23 Jun 2026",
+    "refund_initiation_date": "24 Jun 2026",
+    "demat_credit_date": "24 Jun 2026",
+    "listing_date": "25 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_new_stores": "₹12.47 Cr",
+    "working_capital_requirements": "₹9.50 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "5.06%",
+    "hni_nii_quota": "35.70%",
+    "retail_quota": "59.24%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "2400",
+      "amount": "₹2,59,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "3600",
+      "amount": "₹3,88,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "9600",
+      "amount": "₹10,36,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "28.15% (Jan 31, 2026)",
+    "roce": "17.34% (Jan 31, 2026)",
+    "pat_margin": "15.40% (Jan 31, 2026)",
+    "ebitda_margin": "26.13% (Jan 31, 2026)",
+    "debt_to_equity": "2.24"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Jan 2026",
+      "assets": "76.15 Cr",
+      "total_income": "28.13 Cr",
+      "pat": "4.29 Cr",
+      "ebitda": "7.28 Cr",
+      "net_worth": "17.39 Cr",
+      "total_borrowing": "38.97 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "33.91 Cr",
+      "total_income": "25.19 Cr",
+      "pat": "4.87 Cr",
+      "ebitda": "6.25 Cr",
+      "net_worth": "13.10 Cr",
+      "total_borrowing": "8.87 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "17.75 Cr",
+      "total_income": "23.34 Cr",
+      "pat": "4.08 Cr",
+      "ebitda": "5.14 Cr",
+      "net_worth": "6.23 Cr",
+      "total_borrowing": "4.74 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "8.79 Cr",
+      "total_income": "20.94 Cr",
+      "pat": "1.32 Cr",
+      "ebitda": "1.70 Cr",
+      "net_worth": "2.15 Cr",
+      "total_borrowing": "1.02 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 18 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Skyline Financial Services Pvt. Ltd.",
+    "registrar_website": "https://www.skylinerta.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Mark Corporate Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "01/GF, 'Time Square'B/S. 'Pariseema C.G. Road,Ahmedabad, Gujarat, 380009",
+    "company_website": "https://www.riyaasat.in/",
+    "company_email": "cs@riyaasat.in",
+    "company_phone": "+918866115025"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/riyaasat-rhp.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Riyaasat Lifestyle Limited do?",
+      "answer": "The company designs, manufactures, and retails ethnic wear for men and women through EBOs and online platforms."
+    },
+    {
+      "question": "When did the Riyaasat Lifestyle IPO open and close?",
+      "answer": "The IPO opens on 18 Jun 2026 and closes on 22 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Riyaasat Lifestyle IPO?",
+      "answer": "The price band is ₹102 – ₹108 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Riyaasat Lifestyle IPO?",
+      "answer": "The lot size is 1,200 shares."
+    },
+    {
+      "question": "What is the total issue size of the Riyaasat Lifestyle IPO?",
+      "answer": "The total issue size is ₹30.77 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Riyaasat Lifestyle shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 25 June 2026."
+    }
+  ]
+},
+{
+  "id": 100,
+  "name": "Anubhav Plast",
+  "logo": "/images/ipo/anubhavplast.png",
+  "minInvestment": "₹2,56,000",
+  "open": "19 Jun 2026",
+  "close": "23 Jun 2026",
+  "listing": "29 Jun 2026",
+  "price": "77 – 80",
+  "lot": 1600,
+
+  "about_company": {
+    "company_name": "Anubhav Plast Limited",
+    "industry_sector": "Steel Pipes & Tubes / ERW Pipes & Swaged Poles",
+    "founded_year": "1987",
+    "promoters": [
+      "Onkar Nath Gupta",
+      "Vinamra Gupta",
+      "Bina Gupta",
+      "Tanvi Gupta"
+    ],
+    "description": "Anubhav Plast Limited is engaged in the manufacturing of Electric Resistance Welding (ERW) steel pipes and tubes (round and square hollow sections) and swaged steel tubular poles. The company markets its products under the “ANUBHAV” brand and serves electricity transmission & distribution, street lighting, telecom, construction, irrigation, and general engineering sectors."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Anubhav Plast Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹77",
+    "price_band_max": "₹80",
+    "lot_size": 1600,
+    "total_issue_size": "₹24.00 Cr (30,00,000 shares)",
+    "fresh_issue_size": "₹24.00 Cr (30,00,000 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "30,00,000 shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹80",
+    "minimum_investment": "₹2,56,000 (2 lots / 3,200 shares)",
+    "market_cap_post_issue": "To be declared",
+    "pre_issue_shareholding": "80,00,000 shares (99.99%)",
+    "post_issue_shareholding": "1,10,00,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing of ERW steel pipes, tubes, and swaged steel tubular poles.",
+    "products_services": [
+      "ERW Steel Pipes & Tubes",
+      "Square & Rectangular Hollow Sections",
+      "Swaged Steel Tubular Poles"
+    ],
+    "competitive_strengths": [
+      "Strategically Located Manufacturing Facilities",
+      "Backward Integrated Manufacturing",
+      "Diversified High-Quality Product Range",
+      "Strong presence in government tender-based projects"
+    ],
+    "risks": [
+      "Dependence on government tenders",
+      "Raw material price volatility",
+      "Intense competition in steel pipes industry"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "19 Jun 2026",
+    "ipo_close_date": "23 Jun 2026",
+    "basis_of_allotment_date": "24 Jun 2026",
+    "refund_initiation_date": "25 Jun 2026",
+    "demat_credit_date": "25 Jun 2026",
+    "listing_date": "29 Jun 2026"
+  },
+
+  "ipo_objectives": {
+    "establishment_new_manufacturing_facility": "₹2.20 Cr",
+    "working_capital_requirements": "₹13.75 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.80%",
+    "hni_nii_quota": "15.16%",
+    "retail_quota": "35.04%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "3200",
+      "amount": "₹2,56,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "4800",
+      "amount": "₹3,84,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 lots",
+      "shares": "12800",
+      "amount": "₹10,24,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "29.10% (Dec 31, 2025)",
+    "roce": "42.65% (Dec 31, 2025)",
+    "pat_margin": "6.58% (Dec 31, 2025)",
+    "ebitda_margin": "12.78% (Dec 31, 2025)",
+    "debt_to_equity": "1.67 (Dec 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Dec 2025",
+      "assets": "66.69 Cr",
+      "total_income": "80.60 Cr",
+      "pat": "5.30 Cr",
+      "ebitda": "10.29 Cr",
+      "net_worth": "20.85 Cr",
+      "total_borrowing": "34.81 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "55.50 Cr",
+      "total_income": "98.31 Cr",
+      "pat": "6.00 Cr",
+      "ebitda": "12.18 Cr",
+      "net_worth": "15.55 Cr",
+      "total_borrowing": "32.64 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "41.69 Cr",
+      "total_income": "87.41 Cr",
+      "pat": "2.08 Cr",
+      "ebitda": "6.64 Cr",
+      "net_worth": "9.55 Cr",
+      "total_borrowing": "28.99 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "37.91 Cr",
+      "total_income": "87.21 Cr",
+      "pat": "0.74 Cr",
+      "ebitda": "4.26 Cr",
+      "net_worth": "7.47 Cr",
+      "total_borrowing": "27.80 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 19 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Capital Square Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "7/41 A, Basement, Basant Tower, Tilak Nagar, Swarup Nagar, Kanpur, Uttar Pradesh - 208002",
+    "company_website": "https://anubhavpole.com/",
+    "company_email": "cs@anubhavpole.com",
+    "company_phone": "+91 7526065186"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on BSE SME",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/anubhav-plast-rhp.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Anubhav Plast Limited do?",
+      "answer": "The company manufactures ERW steel pipes, tubes, and swaged steel tubular poles under the brand ANUBHAV."
+    },
+    {
+      "question": "When did the Anubhav Plast IPO open and close?",
+      "answer": "The IPO opens on 19 Jun 2026 and closes on 23 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Anubhav Plast IPO?",
+      "answer": "The price band is ₹77 – ₹80 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Anubhav Plast IPO?",
+      "answer": "The lot size is 1,600 shares."
+    },
+    {
+      "question": "What is the total issue size of the Anubhav Plast IPO?",
+      "answer": "The total issue size is ₹24.00 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Anubhav Plast shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 29 June 2026."
     }
   ]
 }
