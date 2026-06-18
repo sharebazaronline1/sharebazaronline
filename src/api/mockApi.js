@@ -19985,7 +19985,227 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 29 June 2026."
     }
   ]
+},
+{
+"id": 101,
+"name": "Turtlemint Fintech",
+"logo": "/images/ipo/turtlemint.png",
+"minInvestment": "₹14,896",
+"open": "19 Jun 2026",
+"close": "23 Jun 2026",
+"listing": "29 Jun 2026",
+"price": "144 – 152",
+"lot": 98,
+
+"about_company": {
+"company_name": "Turtlemint Fintech Solutions Limited",
+"industry_sector": "Insurtech / Financial Technology",
+"founded_year": "2015",
+"promoters": [
+"Dhirendra Nalin Mahyavanshi",
+"Anand Rohidas Prabhudesai"
+],
+"description": "Turtlemint Fintech Solutions Limited is a technology-driven insurance distribution platform that connects insurance advisors, customers, and insurers. The company offers health, life, motor, and general insurance products through its digital ecosystem and serves one of India's largest advisor networks."
+},
+
+"ipo_basic_details": {
+"company_name": "Turtlemint Fintech Solutions Limited",
+"ipo_type": "Mainboard IPO",
+"issue_type": "Book Built Issue",
+"face_value": "₹1 per share",
+"price_band_min": "₹144",
+"price_band_max": "₹152",
+"lot_size": 98,
+"total_issue_size": "₹882.67 Cr",
+"fresh_issue_size": "₹660.72 Cr",
+"offer_for_sale": "₹221.95 Cr",
+"shares_offered": "5,80,70,398 shares",
+"listing_exchange": "BSE, NSE",
+"issue_price": "₹152",
+"minimum_investment": "₹14,896",
+"market_cap_post_issue": "₹4,310 Cr – ₹4,513 Cr (estimated)",
+"pre_issue_shareholding": "25,10,10,354 shares",
+"post_issue_shareholding": "Pending"
+},
+
+"company_overview": {
+"business_model": "Technology-enabled insurance distribution and advisory platform.",
+"products_services": [
+"Health Insurance",
+"Life Insurance",
+"Motor Insurance",
+"General Insurance",
+"Insurance Advisor Platform",
+"Embedded Insurance Solutions"
+],
+"competitive_strengths": [
+"Large digital insurance advisor network",
+"Strong insurer partnerships",
+"Technology-driven distribution model",
+"Pan-India customer reach",
+"Established insurtech brand"
+],
+"risks": [
+"Continuing losses in recent financial years",
+"Highly competitive insurtech sector",
+"Dependence on insurance partners",
+"Regulatory changes affecting insurance distribution"
+]
+},
+
+"ipo_important_dates": {
+"ipo_open_date": "19 Jun 2026",
+"ipo_close_date": "23 Jun 2026",
+"basis_of_allotment_date": "24 Jun 2026",
+"refund_initiation_date": "25 Jun 2026",
+"demat_credit_date": "25 Jun 2026",
+"listing_date": "29 Jun 2026"
+},
+
+"ipo_objectives": {
+"brand_marketing": "Expansion of brand awareness and customer acquisition",
+"technology_development": "Investment in technology platform and product innovation",
+"working_capital_requirements": "Business growth initiatives",
+"general_corporate_purposes": "Balance amount"
+},
+
+"investor_reservation": {
+"qib_quota": "75%",
+"hni_nii_quota": "15%",
+"retail_quota": "10%"
+},
+
+"market_lot_details": {
+"retail_minimum": {
+"lot_size": "1 lot",
+"shares": "98",
+"amount": "₹14,896"
+},
+"shni_minimum": {
+"lot_size": "14 lots",
+"shares": "1,372",
+"amount": "₹2,08,544"
+},
+"bhni_minimum": {
+"lot_size": "68 lots",
+"shares": "6,664",
+"amount": "₹10,12,928"
 }
+},
+
+"key_performance_indicators": {
+"roe": "Negative",
+"roce": "Negative",
+"pat_margin": "Negative",
+"ebitda_margin": "Negative",
+"debt_to_equity": "0.00"
+},
+
+"company_financial_data": [
+{
+"period": "30 Sep 2025",
+"assets": "472.67 Cr",
+"total_income": "469.37 Cr",
+"pat": "-125.15 Cr",
+"ebitda": "N/A",
+"net_worth": "329.95 Cr",
+"total_borrowing": "0.00 Cr"
+},
+{
+"period": "31 Mar 2025",
+"assets": "578.69 Cr",
+"total_income": "693.21 Cr",
+"pat": "-194.11 Cr",
+"ebitda": "N/A",
+"net_worth": "410.46 Cr",
+"total_borrowing": "0.00 Cr"
+},
+{
+"period": "31 Mar 2024",
+"assets": "612.55 Cr",
+"total_income": "119.12 Cr",
+"pat": "-193.35 Cr",
+"ebitda": "N/A",
+"net_worth": "563.80 Cr",
+"total_borrowing": "0.00 Cr"
+},
+{
+"period": "31 Mar 2023",
+"assets": "900.37 Cr",
+"total_income": "460.11 Cr",
+"pat": "-288.18 Cr",
+"ebitda": "N/A",
+"net_worth": "743.45 Cr",
+"total_borrowing": "0.00 Cr"
+}
+],
+
+"grey_market_premium": {
+"gmp_price": "Check latest market updates",
+"kostak_rate": "N/A",
+"subject_to_sauda": "N/A",
+"gmp_last_updated": "Jun 2026",
+"estimated_listing_price": "Pending"
+},
+
+"ipo_subscription_data": {
+"total_subscription": "Pending",
+"qib_ex_anchor": "Pending",
+"hni_subscription": "Pending",
+"retail_subscription": "Pending"
+},
+
+"ipo_intermediaries": {
+"registrar": "KFin Technologies Limited",
+"registrar_website": "https://www.kfintech.com"
+},
+
+"ipo_lead_manager": {
+"lead_manager": "ICICI Securities Limited"
+},
+
+"company_information": {
+"company_address": "The ORB, 4B, 1st Floor, A Wing, Marol Village, Andheri East, Mumbai, Maharashtra 400099",
+"company_website": "https://www.turtlemint.com",
+"company_email": "support@turtlemint.com",
+"company_phone": "1800 266 0101"
+},
+
+"ipo_documents": {
+"drhp_link": "https://www.icicisecurities.com/console/uploads/actual/TURTLEMINT-FINTECH-SOLUTIONS-LIMITED---RHP_1781540751_81.pdf",
+"rhp_link": "Available in IPO filings",
+"prospectus_pdf": "Pending",
+"investor_presentation": "Pending"
+},
+
+"faq": [
+{
+"question": "What does Turtlemint Fintech Solutions do?",
+"answer": "Turtlemint operates a technology-driven insurance distribution platform offering health, life, motor and general insurance products."
+},
+{
+"question": "When does the Turtlemint IPO open and close?",
+"answer": "The IPO opens on 19 June 2026 and closes on 23 June 2026."
+},
+{
+"question": "What is the IPO price band?",
+"answer": "The price band is ₹144 to ₹152 per share."
+},
+{
+"question": "What is the lot size?",
+"answer": "The minimum lot size is 98 shares."
+},
+{
+"question": "What is the total issue size?",
+"answer": "The IPO size is approximately ₹882.67 crore."
+},
+{
+"question": "Where will the shares be listed?",
+"answer": "The shares are proposed to be listed on both BSE and NSE on 29 June 2026."
+}
+]
+}
+
 
 
 
