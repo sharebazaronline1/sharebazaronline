@@ -159,7 +159,7 @@ const hideHeader =
             </Routes>
           </main>
 
-          {/* RIGHT SIDEBAR - only on public pages */}
+          {/* RIGHT SIDEBAR - only on public pages
           {!isAuthOrProtectedPage && (
             <aside className="hidden xl:block w-48 flex-shrink-0 mr-4">
               <div className="sticky top-20 mt-96 py-8 flex flex-col gap-2">
@@ -168,7 +168,7 @@ const hideHeader =
                 <UnlistedSharesSidebar />
               </div>
             </aside>
-          )}
+          )} */}
         </div>
 
         {/* FOOTER - only on public pages */}

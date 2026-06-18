@@ -42,6 +42,7 @@ const AdminBlog = () => {
   const [readingTime, setReadingTime] = useState(5);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+const [heading, setHeading] = useState("");
 
  const categories = [
   "IPO News",
@@ -110,19 +111,20 @@ const AdminBlog = () => {
     const { data, error } = await supabase
       .from("blogs")
       .insert([
-        {
-          title,
-          excerpt: cleanExcerpt,
-          content,
-          image_url: imageUrl || null,
-          category,
-          reading_time: Number(readingTime),
-          status: "published",
-          slug,
-          author: "Admin",
-          published_at: new Date().toISOString(),
-        },
-      ])
+  {
+    title,
+    heading,
+    excerpt: cleanExcerpt,
+    content,
+    image_url: imageUrl || null,
+    category,
+    reading_time: Number(readingTime),
+    status: "published",
+    slug,
+    author: "Admin",
+    published_at: new Date().toISOString(),
+  },
+])
       .select();
 
     if (error) {
@@ -136,6 +138,7 @@ const AdminBlog = () => {
     setSuccess(true);
 
     setTitle("");
+    setHeading("");
     setExcerpt("");
     setContent("");
     setImageUrl("");
@@ -221,10 +224,19 @@ const modules = {
             {/* TITLE */}
             <input
               type="text"
-              placeholder="Enter blog title..."
+              placeholder="Enter blog Slug..."
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              className="w-full text-2xl font-semibold px-5 py-4 border rounded-xl focus:ring-2 focus:ring-green-500"
+              className="w-full text-2xl font-medium px-5 py-4 border rounded-xl focus:ring-2 focus:ring-green-500"
+            />
+
+            {/* HEADING */}
+            <input
+              type="text"
+              placeholder="Enter heading..."
+              value={heading}
+              onChange={(e) => setHeading(e.target.value)}
+              className="w-full text-lg px-5 py-4 border rounded-xl focus:ring-2 focus:ring-green-500"
             />
 
             {/* HORIZONTAL */}

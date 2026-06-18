@@ -118,7 +118,7 @@ const BlogDetail = () => {
 
         {/* TITLE */}
         <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-          {blog.title}
+          {blog.heading}
         </h1>
 
         {/* META */}
@@ -143,7 +143,16 @@ const BlogDetail = () => {
             {blog.reading_time || "10 min read"}
           </span>
         </div>
-
+{/* FEATURED IMAGE */}
+{blog.image_url && (
+  <div className="mb-10">
+    <img
+      src={blog.image_url}
+      alt={blog.title || blog.heading}
+      className="w-full h-auto object-contain rounded-2xl shadow-sm"
+    />
+  </div>
+)}
         
 
         {/* ARTICLE */}

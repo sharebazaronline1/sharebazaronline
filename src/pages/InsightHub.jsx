@@ -264,7 +264,7 @@ useEffect(() => {
                   </time>
 
                   <h3 className="text-[13px] sm:text-sm font-semibold text-gray-900 leading-snug line-clamp-3 mb-2">
-                    {post.title}
+                    {post.heading}
                   </h3>
 
                   <span className="mt-auto text-xs font-semibold text-green-600 hover:text-green-700">

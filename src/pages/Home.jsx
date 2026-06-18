@@ -3,12 +3,13 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
-import { fetchIPOs, fetchPreIPODetails,fetchUnlisted } from '../api/mockApi';
+import { fetchIPOs, fetchPreIPODetails } from '../api/mockApi';
 import { supabase } from "../lib/supabase";
 import IPODashboard, { IPOCard } from "../components/IPODashboard";
 import UnlistedCard from '../components/UnlistedCard';
 import Blogs from './Blogs';
-import UpcomingIpoSidebar from '../components/IPOSidebar'
+import UpcomingIpoSidebar from '../components/IPOSidebar';
+import slugify from "../utils/slugify";
 import BrokerAnalyzer from './BrokerAnalyzer';
 import UnlistedSharesSidebar from '../components/UnlistedSidebar';
 import { TrendingUp,UserRound,Clock3,ShieldCheck,UserCheck, Gem, Scale, Lightbulb, Star, Check,Building2, UserCircle2, UserCog2Icon } from 'lucide-react';
@@ -45,19 +46,77 @@ export default function Home() {
 const [isUnlistedLoading, setIsUnlistedLoading] = useState(true);
 
 useEffect(() => {
- const loadUnlisted = async () => {
-  setIsUnlistedLoading(true);
+  const loadUnlisted = async () => {
+    setIsUnlistedLoading(true);
 
-  try {
-    const data = await fetchUnlisted();
+    try {
+      const detailedData = await fetchPreIPODetails();
 
-    setUnlistedStocks(data);
-  } catch (err) {
-    console.error(err);
-  } finally {
-    setIsUnlistedLoading(false);
-  }
-};
+      const { data: dbData, error } = await supabase
+        .from("pre_ipo_companies")
+        .select("*");
+
+      if (error) throw error;
+
+      const normalizeName = (str = "") =>
+        str
+          .toLowerCase()
+          .replace(
+            /limited|ltd|llp|private|unlisted|shares?|share/gi,
+            ""
+          )
+          .replace(/[^\w\s]/g, " ")
+          .replace(/\s+/g, " ")
+          .trim();
+
+      const dbMap = {};
+
+      dbData?.forEach((db) => {
+        dbMap[normalizeName(db.name)] = db;
+      });
+
+      const merged = dbData.map((db) => {
+        const dbKey = normalizeName(db.name);
+
+        const detail =
+          detailedData.find(
+            (item) =>
+              normalizeName(item.name) === dbKey
+          ) || {};
+
+        return {
+          id: db.id,
+          name: db.name,
+          price: Number(db.price || 0),
+          logo:
+            detail.logo ||
+            db.logo_url ||
+            "/images/company-placeholder.png",
+        };
+      });
+
+      const allowedCompanies = [
+        "oyo",
+        "nse",
+        "care health",
+        "metropolitan",
+        "pharmeasy",
+        "csk",
+      ];
+
+      const filtered = merged.filter((company) =>
+        allowedCompanies.some((keyword) =>
+          company.name.toLowerCase().includes(keyword)
+        )
+      );
+
+      setUnlistedStocks(filtered);
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setIsUnlistedLoading(false);
+    }
+  };
 
   loadUnlisted();
 }, []);
@@ -407,21 +466,27 @@ useEffect(() => {
 {/* MOBILE */}
 <div className="lg:hidden flex gap-3 overflow-x-auto scrollbar-hide pb-3">
   {unlistedStocks.slice(0, 10).map((stock) => (
-    <div
-      key={stock.id}
-      className="
-        min-w-[220px]
-        bg-white
-        border border-slate-200
-        rounded-2xl
-        p-4
-        flex
-        items-center
-        gap-3
-        shadow-sm
-        flex-shrink-0
-      "
-    >
+   <div
+  key={stock.id}
+  onClick={() =>
+    navigate(
+      `/preipo/${stock.id}/${slugify(stock.name)}`
+    )
+  }
+  className="
+    min-w-[220px]
+    bg-white
+    border border-slate-200
+    rounded-2xl
+    p-4
+    flex
+    items-center
+    gap-3
+    shadow-sm
+    flex-shrink-0
+    cursor-pointer
+  "
+>
       <div
         className="
           w-14 h-14
@@ -471,19 +536,25 @@ useEffect(() => {
 >
   {unlistedStocks.slice(0, 6).map((stock) => (
     <div
-      key={stock.id}
-      className="
-        bg-white
-        border border-slate-200
-        rounded-2xl
-        px-4
-        py-5
-        hover:border-green-200
-        hover:shadow-md
-        transition-all
-        h-[110px]
-      "
-    >
+  key={stock.id}
+  onClick={() =>
+    navigate(
+      `/preipo/${stock.id}/${slugify(stock.name)}`
+    )
+  }
+  className="
+    bg-white
+    border border-slate-200
+    rounded-2xl
+    px-4
+    py-5
+    hover:border-green-200
+    hover:shadow-md
+    transition-all
+    h-[110px]
+    cursor-pointer
+  "
+>
       <div className="flex items-center gap-3 h-full">
 
         {/* Logo */}
