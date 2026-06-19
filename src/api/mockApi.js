@@ -20204,7 +20204,426 @@ export const fetchIPOs = async () => {
 "answer": "The shares are proposed to be listed on both BSE and NSE on 29 June 2026."
 }
 ]
+},
+{
+  "id": 102,
+  "name": "Advit Jewels",
+  "logo": "/images/ipo/advitjewels.png",
+  "minInvestment": "₹13,800",
+  "open": "23 Jun 2026",
+  "close": "25 Jun 2026",
+  "listing": "01 Jul 2026",
+  "price": "130 – 138",
+  "lot": 100,
+
+  "about_company": {
+    "company_name": "Advit Jewels Limited",
+    "industry_sector": "Jewellery / Fine Jewellery (Kundan, Polki, Diamond)",
+    "founded_year": "2019",
+    "promoters": [
+      "Details available in RHP"
+    ],
+    "description": "Advit Jewels Limited is a Jaipur-based jewellery company specializing in handcrafted fine jewellery, with expertise in Kundan, Polki, Diamond, and Studded pieces under the brand name 'Rambhajo'. The company blends traditional techniques with modern designs. It primarily operates on a B2B model supplying to dealers, showrooms, and retailers, while also serving B2C customers for exclusive, made-to-order jewellery. In FY25, 81.63% of revenue came from B2B and 18.37% from B2C."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Advit Jewels Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹130",
+    "price_band_max": "₹138",
+    "lot_size": 100,
+    "total_issue_size": "₹165.16 Cr (1,19,68,000 shares)",
+    "fresh_issue_size": "₹165.16 Cr (1,19,68,000 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "1,19,68,000 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹138",
+    "minimum_investment": "₹13,800 (1 lot / 100 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹632.18 Cr",
+    "pre_issue_shareholding": "3,38,42,000 shares",
+    "post_issue_shareholding": "4,58,10,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing and supply of handcrafted fine jewellery (B2B + B2C).",
+    "products_services": [
+      "Kundan Jewellery",
+      "Polki Jewellery",
+      "Diamond Jewellery",
+      "Studded Jewellery",
+      "Necklaces, Earrings, Rings, Bangles, Customized Pieces"
+    ],
+    "competitive_strengths": [
+      "Organized manufacturing under one roof",
+      "Diversified product offering",
+      "Robust operational systems and quality control",
+      "Experienced leadership",
+      "In-house design and manufacturing"
+    ],
+    "risks": [
+      "High competition in jewellery sector",
+      "Gold price volatility",
+      "Dependence on artisan skills"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Jun 2026",
+    "ipo_close_date": "25 Jun 2026",
+    "basis_of_allotment_date": "29 Jun 2026",
+    "refund_initiation_date": "30 Jun 2026",
+    "demat_credit_date": "30 Jun 2026",
+    "listing_date": "01 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_incremental_working_capital": "₹65.00 Cr",
+    "repayment_pre_payment_of_borrowings": "₹65.00 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.98%",
+    "hni_nii_quota": "15.01%",
+    "retail_quota": "35.01%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "100",
+      "amount": "₹13,800"
+    },
+    "shni_minimum": {
+      "lot_size": "15 lots",
+      "shares": "1500",
+      "amount": "₹2,07,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "73 lots",
+      "shares": "7300",
+      "amount": "₹10,07,400"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "35.89% (Dec 31, 2025)",
+    "roce": "24.09% (Dec 31, 2025)",
+    "pat_margin": "20.55% (Dec 31, 2025)",
+    "ebitda_margin": "29.63% (Dec 31, 2025)",
+    "debt_to_equity": "1.29 (Mar 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Dec 2025",
+      "assets": "164.20 Cr",
+      "total_income": "123.80 Cr",
+      "pat": "25.44 Cr",
+      "ebitda": "36.68 Cr",
+      "net_worth": "83.65 Cr",
+      "total_borrowing": "64.92 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "140.85 Cr",
+      "total_income": "124.94 Cr",
+      "pat": "25.37 Cr",
+      "ebitda": "37.15 Cr",
+      "net_worth": "58.13 Cr",
+      "total_borrowing": "74.80 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "67.21 Cr",
+      "total_income": "69.45 Cr",
+      "pat": "14.71 Cr",
+      "ebitda": "18.95 Cr",
+      "net_worth": "32.80 Cr",
+      "total_borrowing": "19.70 Cr"
+    },
+    {
+      "period": "31 Mar 2023",
+      "assets": "29.01 Cr",
+      "total_income": "46.60 Cr",
+      "pat": "10.39 Cr",
+      "ebitda": "12.77 Cr",
+      "net_worth": "18.08 Cr",
+      "total_borrowing": "5.84 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 23 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Holani Consultants Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Flat No. 301, Pearl Premier,Plot No. 4, Jamna Lal Bajaj Marg C-Scheme,Jaipur, Rajasthan, 302001",
+    "company_website": "https://rambhajo.com/",
+    "company_email": "cs@advitjewels.com",
+    "company_phone": "+91 9216035990"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "https://www.sebi.gov.in/filings/public-issues/jun-2026/advit-jewels-limited-rhp_102061.html",
+    "rhp_link": "Available on BSE / NSE",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Advit Jewels Limited do?",
+      "answer": "Advit Jewels manufactures and supplies handcrafted fine jewellery (Kundan, Polki, Diamond) under the brand Rambhajo."
+    },
+    {
+      "question": "When did the Advit Jewels IPO open and close?",
+      "answer": "The IPO opens on 23 Jun 2026 and closes on 25 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Advit Jewels IPO?",
+      "answer": "The price band is ₹130 – ₹138 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Advit Jewels IPO?",
+      "answer": "The lot size is 100 shares."
+    },
+    {
+      "question": "What is the total issue size of the Advit Jewels IPO?",
+      "answer": "The total issue size is ₹165.16 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Advit Jewels shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 01 July 2026."
+    }
+  ]
+},
+{
+  "id": 106,
+  "name": "Shreedhar Spinners",
+  "logo": "/images/ipo/shreedharspinners.png",
+  "minInvestment": "₹2,12,000",
+  "open": "23 Jun 2026",
+  "close": "25 Jun 2026",
+  "listing": "01 Jul 2026",
+  "price": "51 – 53",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Shreedhar Spinners Limited",
+    "industry_sector": "Textiles / Cotton Yarn Manufacturing",
+    "founded_year": "2020",
+    "promoters": [
+      "Dharmendra Mohandas Goyal",
+      "Vishal Agarwal"
+    ],
+    "description": "Shreedhar Spinners Limited is a cotton yarn manufacturing company engaged in the production of 100% compact spun cotton yarn with counts ranging from Ne 10s to Ne 40s. The company operates a modern spinning facility with 28,608 spindles and an installed capacity of 10,000 MT per annum in Amravati Textile Park, Maharashtra. It supplies yarn for knitting and weaving applications to apparel, denim, towels, shirting, and other textile manufacturers (B2B model)."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Shreedhar Spinners Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹51",
+    "price_band_max": "₹53",
+    "lot_size": 2000,
+    "total_issue_size": "₹30.68 Cr (57,88,000 shares)",
+    "fresh_issue_size": "₹30.68 Cr (57,88,000 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "57,88,000 shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹53",
+    "minimum_investment": "₹2,12,000 (2 lots / 4,000 shares)",
+    "market_cap_post_issue": "Pre-IPO ₹113.62 Cr",
+    "pre_issue_shareholding": "1,56,50,000 shares",
+    "post_issue_shareholding": "2,14,38,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "B2B manufacturer of compact spun cotton yarn.",
+    "products_services": [
+      "Compact Spun Cotton Yarn (Ne 10s to Ne 40s)",
+      "Yarn for Knitting & Weaving Applications"
+    ],
+    "competitive_strengths": [
+      "Modern spinning facility with 28,608 spindles",
+      "Strategic location in cotton-rich Vidarbha region",
+      "ISO certified quality, environment & safety systems",
+      "Strong customer relationships",
+      "Experienced promoters (Chartered Accountants with 25+ years in textiles)"
+    ],
+    "risks": [
+      "Raw material (cotton) price volatility",
+      "Competition in spinning industry",
+      "Dependence on textile sector demand"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Jun 2026",
+    "ipo_close_date": "25 Jun 2026",
+    "basis_of_allotment_date": "29 Jun 2026",
+    "refund_initiation_date": "30 Jun 2026",
+    "demat_credit_date": "30 Jun 2026",
+    "listing_date": "01 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "Major portion",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.94%",
+    "hni_nii_quota": "15.03%",
+    "retail_quota": "35.02%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 lots",
+      "shares": "4000",
+      "amount": "₹2,12,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 lots",
+      "shares": "6000",
+      "amount": "₹3,18,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "10 lots",
+      "shares": "20000",
+      "amount": "₹10,60,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "25.00% (approx Mar 31, 2026)",
+    "roce": "N/A",
+    "pat_margin": "4.21% (Mar 31, 2026)",
+    "ebitda_margin": "12.02% (Mar 31, 2026)",
+    "debt_to_equity": "High"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2026",
+      "assets": "172.12 Cr",
+      "total_income": "146.55 Cr",
+      "pat": "6.17 Cr",
+      "ebitda": "17.62 Cr",
+      "net_worth": "29.76 Cr",
+      "total_borrowing": "115.90 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "102.32 Cr",
+      "total_income": "134.43 Cr",
+      "pat": "3.42 Cr",
+      "ebitda": "13.11 Cr",
+      "net_worth": "20.34 Cr",
+      "total_borrowing": "65.31 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "92.28 Cr",
+      "total_income": "126.35 Cr",
+      "pat": "3.35 Cr",
+      "ebitda": "13.41 Cr",
+      "net_worth": "16.92 Cr",
+      "total_borrowing": "62.11 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 23 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Marwadi Chandarana Intermediaries Brokers Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "503, Matharu Arcade Subhash Road Vile Parle East,Mumbai, Maharashtra, 400057",
+    "company_website": "https://shreedharspinners.com/",
+    "company_email": "company.sec@shreedhar.com",
+    "company_phone": "+91 22 4515 8777"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE SME",
+    "rhp_link": "https://shreedharspinners.com/wp-content/uploads/2026/06/RHP-Shreedhar-Spinners-Limited.pdf",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Shreedhar Spinners Limited do?",
+      "answer": "The company manufactures 100% compact spun cotton yarn for knitting and weaving applications."
+    },
+    {
+      "question": "When did the Shreedhar Spinners IPO open and close?",
+      "answer": "The IPO opens on 23 Jun 2026 and closes on 25 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Shreedhar Spinners IPO?",
+      "answer": "The price band is ₹51 – ₹53 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Shreedhar Spinners IPO?",
+      "answer": "The lot size is 2,000 shares."
+    },
+    {
+      "question": "What is the total issue size of the Shreedhar Spinners IPO?",
+      "answer": "The total issue size is ₹30.68 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Shreedhar Spinners shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 01 July 2026."
+    }
+  ]
 }
+
 
 
 
