@@ -20827,6 +20827,445 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE & NSE on 01 July 2026."
     }
   ]
+},
+{
+  "id": 105,
+  "name": "IC Electricals Company",
+  "logo": "/images/ipo/ic-electricals.png",
+  "minInvestment": "₹2,37,600",
+  "open": "25 Jun 2026",
+  "close": "30 Jun 2026",
+  "listing": "03 Jul 2026",
+  "price": "94 - 99",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "IC Electricals Company Limited",
+    "industry_sector": "Railway Engineering & Electrical Equipment Manufacturing",
+    "founded_year": "2005",
+    "promoters": [
+      "Sunil Kumar Verma",
+      "Renu Verma",
+      "SHBD LLP",
+      "Safe System India Private Limited"
+    ],
+    "description": "IC Electricals Company Limited is a New Delhi-based engineering and manufacturing company serving the Indian Railways sector. The company manufactures electronic systems, rotating machines, railway electrification solutions, traction motors, alternators, battery chargers, vigilance control devices, passenger information systems, and turnkey railway electrification projects."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "IC Electricals Company Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Building Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹94",
+    "price_band_max": "₹99",
+    "lot_size": "1200 Shares",
+    "total_issue_size": "48,39,600 Equity Shares (₹47.91 Cr)",
+    "fresh_issue_size": "48,39,600 Equity Shares",
+    "offer_for_sale": "Nil",
+    "shares_offered": "48,39,600 Equity Shares",
+    "listing_exchange": "NSE SME (NSE Emerge)",
+    "issue_price": "₹94 - ₹99",
+    "minimum_investment": "₹2,37,600",
+    "market_cap_post_issue": "₹180.79 Cr",
+    "pre_issue_shareholding": "82.92%",
+    "post_issue_shareholding": "60.94%"
+  },
+
+  "company_overview": {
+    "business_model": "Business-to-Government (B2G) model serving Indian Railways and railway-related organizations.",
+    "products_services": [
+      "Electronic Systems for Railways",
+      "Rotating Machines",
+      "Railway Electrification Solutions",
+      "Traction Motors",
+      "Alternators",
+      "Battery Chargers",
+      "Vigilance Control Devices",
+      "Passenger Information Systems",
+      "Turnkey Railway Electrification Projects"
+    ],
+    "competitive_strengths": [
+      "Nearly two decades of operating experience",
+      "Established supplier to Indian Railways",
+      "Strong B2G business model",
+      "Specialized railway engineering expertise",
+      "Long-standing relationships with railway agencies",
+      "Growing order book in railway sector"
+    ],
+    "risks": [
+      "High dependence on Indian Railways orders",
+      "Government procurement cycle risks",
+      "Customer concentration risk",
+      "Working capital intensive business",
+      "Competitive railway equipment industry"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "anchor_bidding_date": "24 Jun 2026",
+    "ipo_open_date": "25 Jun 2026",
+    "ipo_close_date": "30 Jun 2026",
+    "basis_of_allotment_date": "01 Jul 2026",
+    "refund_initiation_date": "02 Jul 2026",
+    "demat_credit_date": "02 Jul 2026",
+    "listing_date": "03 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_working_capital_requirements": "₹33.60 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "hni_nii_quota": "15%",
+    "retail_quota": "35%",
+    "anchor_investor_quota": "28.27%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "2400",
+      "amount": "₹2,37,600"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "3600",
+      "amount": "₹3,56,400"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 Lots",
+      "shares": "10800",
+      "amount": "₹10,69,200"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "24.88%",
+    "roce": "18.47%",
+    "pat_margin": "9.84%",
+    "ebitda_margin": "17.96%",
+    "eps": "₹10.49",
+    "nav": "₹47.40",
+    "debt_to_equity": "1.05"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026",
+      "assets": "₹193.44 Cr",
+      "total_income": "₹143.81 Cr",
+      "pat": "₹14.10 Cr",
+      "ebitda": "₹25.82 Cr",
+      "net_worth": "₹65.74 Cr",
+      "total_borrowing": "TBA"
+    },
+    {
+      "period": "FY2025",
+      "assets": "₹160.04 Cr",
+      "total_income": "₹122.39 Cr",
+      "pat": "₹9.41 Cr",
+      "ebitda": "₹20.06 Cr",
+      "net_worth": "₹49.54 Cr",
+      "total_borrowing": "₹55.78 Cr"
+    },
+    {
+      "period": "FY2024",
+      "assets": "₹143.89 Cr",
+      "total_income": "₹99.75 Cr",
+      "pat": "₹4.62 Cr",
+      "ebitda": "₹13.44 Cr",
+      "net_worth": "₹30.95 Cr",
+      "total_borrowing": "₹47.80 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Skyline Financial Services Private Limited",
+    "registrar_website": "https://www.skylinerta.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Nexgen Financial Solutions Private Limited"
+  },
+
+  "company_information": {
+    "company_address": "156, DSIDC, Okhla Industrial Area, Phase-I, New Delhi - 110020",
+    "company_website": "https://www.icelectricals.in",
+    "company_email": "info@icelectricals.in",
+    "company_phone": "+91 011 490507"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Pending",
+    "rhp_link": "https://www.chittorgarh.net/reports/ncd/rhp_icel.pdf",
+    "prospectus_pdf": "Pending",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does IC Electricals Company Limited do?",
+      "answer": "The company manufactures railway electronic systems, rotating machines, electrification solutions, traction motors, alternators and related equipment for Indian Railways."
+    },
+    {
+      "question": "When does the IC Electricals IPO open and close?",
+      "answer": "The IPO opens on 25 June 2026 and closes on 30 June 2026."
+    },
+    {
+      "question": "What is the price band of IC Electricals IPO?",
+      "answer": "The IPO price band is ₹94 to ₹99 per share."
+    },
+    {
+      "question": "What is the lot size of IC Electricals IPO?",
+      "answer": "The market lot is 1,200 shares."
+    },
+    {
+      "question": "What is the minimum investment for retail investors?",
+      "answer": "Retail investors need to apply for 2 lots (2,400 shares), requiring ₹2,37,600 at the upper price band."
+    },
+    {
+      "question": "What is the total issue size of IC Electricals IPO?",
+      "answer": "The IPO consists of a fresh issue of 48,39,600 equity shares aggregating up to ₹47.91 crore."
+    },
+    {
+      "question": "Where will IC Electricals shares be listed?",
+      "answer": "The shares will be listed on NSE SME (NSE Emerge) on 03 July 2026."
+    }
+  ]
+},
+{
+  "id": 106,
+  "name": "Jivial Industries",
+  "logo": "/images/ipo/jivial-industries.png",
+  "minInvestment": "₹2,35,200",
+  "open": "23 Jun 2026",
+  "close": "25 Jun 2026",
+  "listing": "01 Jul 2026",
+  "price": "196",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Jivial Industries Limited",
+    "industry_sector": "Architectural & Building Products Manufacturing",
+    "founded_year": "2021",
+    "promoters": [
+      "Anand Jitendrabhai Chovatiya",
+      "Sheetalben Anand Chovatiya"
+    ],
+    "description": "Jivial Industries Limited is engaged in the manufacturing of premium aluminium railings, stainless steel glass railings, partition systems, and other architectural products. The company operates manufacturing facilities in Rajkot, Gujarat, catering to residential, commercial, and infrastructure projects across India."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Jivial Industries Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fixed Price Issue",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹196",
+    "price_band_max": "₹196",
+    "lot_size": "1200 Shares",
+    "total_issue_size": "16,32,700 Equity Shares (₹31.99 Cr)",
+    "fresh_issue_size": "13,60,000 Equity Shares (₹26.65 Cr)",
+    "offer_for_sale": "2,72,400 Equity Shares (₹5.34 Cr)",
+    "shares_offered": "16,32,700 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹196",
+    "minimum_investment": "₹2,35,200",
+    "market_cap_post_issue": "₹96.90 Cr (Approx.)",
+    "pre_issue_shareholding": "47.85%",
+    "post_issue_shareholding": "39.18%"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing and supplying aluminium railings, stainless steel glass railings, partition systems, and architectural products through dealer and project-based channels.",
+    "products_services": [
+      "Aluminium Railings",
+      "Stainless Steel Glass Railings",
+      "Partition Systems",
+      "Architectural Hardware Products",
+      "Customized Railing Solutions"
+    ],
+    "competitive_strengths": [
+      "Specialized architectural products portfolio",
+      "Modern manufacturing facility in Rajkot",
+      "Strong regional brand presence",
+      "Growing profitability",
+      "Experienced promoter group",
+      "Focus on premium product segment"
+    ],
+    "risks": [
+      "Small operating history as a listed entity",
+      "Dependence on construction and real estate sector",
+      "Raw material price fluctuations",
+      "SME liquidity risks",
+      "Customer concentration risk"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Jun 2026",
+    "ipo_close_date": "25 Jun 2026",
+    "basis_of_allotment_date": "29 Jun 2026",
+    "refund_initiation_date": "30 Jun 2026",
+    "demat_credit_date": "30 Jun 2026",
+    "listing_date": "01 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "purchase_of_new_machinery": "Part of IPO Proceeds",
+    "capital_expenditure_for_renovation": "Part of IPO Proceeds",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50%",
+    "hni_nii_quota": "15%",
+    "retail_quota": "35%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "1200",
+      "amount": "₹2,35,200"
+    },
+    "shni_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "2400",
+      "amount": "₹4,70,400"
+    },
+    "bhni_minimum": {
+      "lot_size": "5 Lots",
+      "shares": "6000",
+      "amount": "₹11,76,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "36.55%",
+    "roce": "44.12%",
+    "pat_margin": "24.61%",
+    "ebitda_margin": "31.74%",
+    "eps": "₹17.95",
+    "nav": "₹42.68",
+    "debt_to_equity": "0.18"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2025",
+      "assets": "₹10.25 Cr",
+      "total_income": "₹12.07 Cr",
+      "pat": "₹2.97 Cr",
+      "ebitda": "₹3.83 Cr",
+      "net_worth": "₹7.06 Cr",
+      "total_borrowing": "₹1.29 Cr"
+    },
+    {
+      "period": "FY2024",
+      "assets": "₹6.94 Cr",
+      "total_income": "₹11.06 Cr",
+      "pat": "₹2.41 Cr",
+      "ebitda": "₹3.04 Cr",
+      "net_worth": "₹4.09 Cr",
+      "total_borrowing": "₹1.05 Cr"
+    },
+    {
+      "period": "FY2023",
+      "assets": "₹2.16 Cr",
+      "total_income": "₹8.40 Cr",
+      "pat": "₹1.17 Cr",
+      "ebitda": "₹1.58 Cr",
+      "net_worth": "₹1.68 Cr",
+      "total_borrowing": "₹0.49 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Private Limited",
+    "registrar_website": "https://www.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Corporate Makers Capital Limited"
+  },
+
+  "company_information": {
+    "company_address": "Shade No. A1/5, Road-C, Aji GIDC, Rajkot, Gujarat - 360003",
+    "company_website": "https://www.jivialrailings.com",
+    "company_email": "cs@jivialrailings.com",
+    "company_phone": "+91 84690 22953"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on NSE",
+    "rhp_link": "Available on NSE",
+    "prospectus_pdf": "https://www.jivialrailings.com/assets/Invester-realtion-file/Prospect/Prospectus.pdf",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Jivial Industries Limited do?",
+      "answer": "The company manufactures aluminium railings, stainless steel glass railings, partition systems, and architectural products."
+    },
+    {
+      "question": "When does the Jivial Industries IPO open and close?",
+      "answer": "The IPO opens on 23 June 2026 and closes on 25 June 2026."
+    },
+    {
+      "question": "What is the issue price of Jivial Industries IPO?",
+      "answer": "The IPO is offered at a fixed price of ₹196 per share."
+    },
+    {
+      "question": "What is the lot size of Jivial Industries IPO?",
+      "answer": "The minimum application lot is 1,200 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,35,200 for one lot of 1,200 shares."
+    },
+    {
+      "question": "What is the issue size of Jivial Industries IPO?",
+      "answer": "The IPO size is ₹31.99 crore comprising a fresh issue and an offer for sale."
+    },
+    {
+      "question": "Where will Jivial Industries shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 01 July 2026."
+    }
+  ]
 }
 
 
