@@ -20421,7 +20421,7 @@ export const fetchIPOs = async () => {
   ]
 },
 {
-  "id": 106,
+  "id": 103,
   "name": "Shreedhar Spinners",
   "logo": "/images/ipo/shreedharspinners.png",
   "minInvestment": "₹2,12,000",
@@ -20620,6 +20620,211 @@ export const fetchIPOs = async () => {
     {
       "question": "Where will Shreedhar Spinners shares be listed?",
       "answer": "The shares will be listed on NSE SME on 01 July 2026."
+    }
+  ]
+},
+{
+  "id": 104,
+  "name": "Waterways Leisure Tourism",
+  "logo": "/images/ipo/waterwaysleisure.png",
+  "minInvestment": "₹14,544",
+  "open": "23 Jun 2026",
+  "close": "25 Jun 2026",
+  "listing": "01 Jul 2026",
+  "price": "769 – 808",
+  "lot": 18,
+
+  "about_company": {
+    "company_name": "Waterways Leisure Tourism Limited",
+    "industry_sector": "Cruise / Hospitality / Leisure Tourism",
+    "founded_year": "2020",
+    "promoters": [
+      "Global Shipping and Leisure Limited",
+      "Rajesh Chandumal Hotwani"
+    ],
+    "description": "Waterways Leisure Tourism Limited is one of India’s leading domestic ocean cruise operators, operating under the brand Cordelia Cruises. The company offers luxury cruise experiences focused on Indian culture, hospitality, entertainment, and cuisine. It operates the cruise vessel MV Empress (796 cabins) and plans to add Norwegian Sky and Norwegian Sun to its fleet. The company holds approximately 79% market share in India’s domestic ocean cruise industry."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Waterways Leisure Tourism Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Fresh Issue (Book Built)",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹769",
+    "price_band_max": "₹808",
+    "lot_size": 18,
+    "total_issue_size": "₹585.00 Cr (72,40,099 shares)",
+    "fresh_issue_size": "₹585.00 Cr (72,40,099 shares)",
+    "offer_for_sale": "₹0 Cr",
+    "shares_offered": "72,40,099 shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹808",
+    "minimum_investment": "₹14,544 (1 lot / 18 shares)",
+    "market_cap_post_issue": "To be declared",
+    "pre_issue_shareholding": "99.27%",
+    "post_issue_shareholding": "89.35%"
+  },
+
+  "company_overview": {
+    "business_model": "Asset-light model for operating luxury ocean cruises with direct booking focus.",
+    "products_services": [
+      "Luxury Ocean Cruises",
+      "Themed Cruises & Corporate Events",
+      "MICE & Wedding Facilities",
+      "Onboard Entertainment & Dining"
+    ],
+    "competitive_strengths": [
+      "Leading market share (~79%) in domestic ocean cruises",
+      "Strong direct booking channel",
+      "Asset-light operating model",
+      "Unique India-focused cruise experience",
+      "Fleet expansion plans"
+    ],
+    "risks": [
+      "High dependence on tourism sector recovery",
+      "High capital-intensive business",
+      "Seasonal nature of cruise business"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Jun 2026",
+    "ipo_close_date": "25 Jun 2026",
+    "basis_of_allotment_date": "29 Jun 2026",
+    "refund_initiation_date": "30 Jun 2026",
+    "demat_credit_date": "30 Jun 2026",
+    "listing_date": "01 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "payment_towards_deposit_lease_rental": "₹480.01 Cr",
+    "general_corporate_purposes": "Balance amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not less than 75%",
+    "hni_nii_quota": "Not more than 15%",
+    "retail_quota": "Not more than 10%"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 lot",
+      "shares": "18",
+      "amount": "₹14,544"
+    },
+    "shni_minimum": {
+      "lot_size": "14 lots",
+      "shares": "252",
+      "amount": "₹2,03,616"
+    },
+    "bhni_minimum": {
+      "lot_size": "69 lots",
+      "shares": "1242",
+      "amount": "₹10,03,536"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "0.92% (Mar 31, 2026)",
+    "roce": "1.14% (Mar 31, 2026)",
+    "pat_margin": "0.09% (Mar 31, 2026)",
+    "ebitda_margin": "0.20% (Mar 31, 2026)",
+    "debt_to_equity": "1.27 (Mar 31, 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "31 Mar 2026",
+      "assets": "341.78 Cr",
+      "total_income": "586.99 Cr",
+      "pat": "52.14 Cr",
+      "ebitda": "117.48 Cr",
+      "net_worth": "80.20 Cr",
+      "total_borrowing": "101.90 Cr"
+    },
+    {
+      "period": "31 Mar 2025",
+      "assets": "247.37 Cr",
+      "total_income": "597.68 Cr",
+      "pat": "168.19 Cr",
+      "ebitda": "215.46 Cr",
+      "net_worth": "32.78 Cr",
+      "total_borrowing": "30.44 Cr"
+    },
+    {
+      "period": "31 Mar 2024",
+      "assets": "399.20 Cr",
+      "total_income": "452.15 Cr",
+      "pat": "-122.73 Cr",
+      "ebitda": "111.15 Cr",
+      "net_worth": "-118.07 Cr",
+      "total_borrowing": "5.18 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "N/A (pre-listing)",
+    "kostak_rate": "N/A",
+    "subject_to_sauda": "N/A",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "N/A"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending (IPO opens 23 Jun 2026)",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Centrum Broking Ltd."
+  },
+
+  "company_information": {
+    "company_address": "A-1601, Marathon Futurex, NM Joshi Marg, Lower Parel, Delisle Road, Mumbai, Maharashtra 400013",
+    "company_website": "https://www.cordeliacruises.com/",
+    "company_email": "cs@waterways-leisure.com",
+    "company_phone": "+91 022 71541821"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on SEBI / BSE / NSE",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/jun-2026/waterways-leisure-tourism-limited-rhp_102226.html",
+    "prospectus_pdf": "N/A",
+    "investor_presentation": "N/A"
+  },
+
+  "faq": [
+    {
+      "question": "What does Waterways Leisure Tourism Limited do?",
+      "answer": "The company operates luxury ocean cruises under the Cordelia Cruises brand."
+    },
+    {
+      "question": "When did the Waterways Leisure Tourism IPO open and close?",
+      "answer": "The IPO opens on 23 Jun 2026 and closes on 25 Jun 2026."
+    },
+    {
+      "question": "What is the issue price of the Waterways Leisure Tourism IPO?",
+      "answer": "The price band is ₹769 – ₹808 per equity share."
+    },
+    {
+      "question": "What is the lot size of the Waterways Leisure Tourism IPO?",
+      "answer": "The lot size is 18 shares."
+    },
+    {
+      "question": "What is the total issue size of the Waterways Leisure Tourism IPO?",
+      "answer": "The total issue size is ₹585.00 Crore (Fresh Issue)."
+    },
+    {
+      "question": "Where will Waterways Leisure Tourism shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 01 July 2026."
     }
   ]
 }
