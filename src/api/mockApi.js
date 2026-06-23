@@ -21266,6 +21266,676 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 01 July 2026."
     }
   ]
+},
+{
+  "id": 107,
+  "name": "Sri Priyanka Geo Commex Limited",
+  "logo": "/images/ipo/sripriyanka.png",
+  "minInvestment": "₹2,54,400",
+  "open": "24 Jun 2026",
+  "close": "29 Jun 2026",
+  "listing": "02 Jul 2026",
+  "price": "207-212",
+  "lot": 600,
+
+  "about_company": {
+    "company_name": "Sri Priyanka Geo Commex Limited",
+    "industry_sector": "Commodities (Critical Minerals & Edible Oils)",
+    "founded_year": "1990",
+    "promoters": [
+      "Venkata Sai Shiv Prasad Nuthalapati",
+      "Ravi Kumar Nuthalapati",
+      "Veera Vikram Nuthalapati"
+    ],
+    "description": "Sri Priyanka Geo Commex Ltd is a globally diversified commodity-focused group with two main business segments — critical minerals (Barite, Fluorspar, and Copper Cathode) and rice bran oil. It operates through subsidiaries in Singapore and Morocco for minerals and has a manufacturing facility in Andhra Pradesh for rice bran oil (capacity: 60,000 MT Solvent Extraction + 15,000 MT refinery)."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Sri Priyanka Geo Commex Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹207",
+    "price_band_max": "₹212",
+    "lot_size": "600 Shares",
+    "total_issue_size": "44,58,000 Equity Shares (₹94.51 Cr)",
+    "fresh_issue_size": "44,58,000 Equity Shares (₹94.51 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "44,58,000 Equity Shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹207 to ₹212",
+    "minimum_investment": "₹2,54,400 (Upper price band)",
+    "market_cap_post_issue": "Approx. ₹344 Cr (Pre-issue valuation)",
+    "pre_issue_shareholding": "100%",
+    "post_issue_shareholding": "72.54%"
+  },
+
+  "company_overview": {
+    "business_model": "Supply of critical minerals (Barite, Fluorspar, Copper Cathode via international subsidiaries) and manufacturing/refining of rice bran oil and by-products.",
+    "products_services": [
+      "Barite",
+      "Fluorspar",
+      "Copper Cathode",
+      "Crude & Refined Rice Bran Oil",
+      "De-Oiled Rice Bran and other by-products"
+    ],
+    "competitive_strengths": [
+      "Diversified and de-risked business operations",
+      "Strategic international operational hubs (Singapore, Morocco)",
+      "Fully automated manufacturing unit with quality focus",
+      "Long-term procurement and supply arrangements",
+      "Well-diversified client base across India and international markets"
+    ],
+    "risks": [
+      "Commodity price volatility",
+      "Dependence on international supply chains and subsidiaries",
+      "Working capital intensive business",
+      "SME liquidity risks",
+      "Sustainability of recent profit growth"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "24 Jun 2026",
+    "ipo_close_date": "29 Jun 2026",
+    "basis_of_allotment_date": "30 Jun 2026",
+    "refund_initiation_date": "01 Jul 2026",
+    "demat_credit_date": "01 Jul 2026",
+    "listing_date": "02 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_loans": "₹10.00 Cr",
+    "working_capital_requirements": "₹16.50 Cr (Company) + ₹47.00 Cr (Subsidiary)",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "0.98% of Net Issue",
+    "hni_nii_quota": "29.71% of Net Issue",
+    "retail_quota": "69.31% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "1,200",
+      "amount": "₹2,54,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "1,800",
+      "amount": "₹3,81,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "4,800",
+      "amount": "₹10,17,600"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "42.86% (as on Dec 31, 2025)",
+    "roce": "46.17% (as on Dec 31, 2025)",
+    "pat_margin": "7.15% (as on Dec 31, 2025)",
+    "ebitda_margin": "10.53% (as on Dec 31, 2025)",
+    "eps": "₹8.34 (Pre) / ₹14.58 (Post)",
+    "nav": "Not specified",
+    "debt_to_equity": "1.04 (as on Dec 31, 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "9M FY2026 (31 Dec 2025)",
+      "assets": "₹157.71 Cr",
+      "total_income": "₹249.67 Cr",
+      "pat": "₹17.76 Cr",
+      "ebitda": "₹26.15 Cr",
+      "net_worth": "₹51.05 Cr",
+      "total_borrowing": "₹53.29 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹81.22 Cr",
+      "total_income": "₹266.65 Cr",
+      "pat": "₹9.82 Cr",
+      "ebitda": "₹16.46 Cr",
+      "net_worth": "₹31.80 Cr",
+      "total_borrowing": "₹35.43 Cr"
+    },
+    {
+      "period": "FY2024",
+      "assets": "₹67.27 Cr",
+      "total_income": "₹250.19 Cr",
+      "pat": "₹2.04 Cr",
+      "ebitda": "₹6.05 Cr",
+      "net_worth": "₹21.24 Cr",
+      "total_borrowing": "₹33.91 Cr"
+    },
+    {
+      "period": "FY2023",
+      "assets": "₹66.88 Cr",
+      "total_income": "₹219.48 Cr",
+      "pat": "₹1.33 Cr",
+      "ebitda": "₹4.08 Cr",
+      "net_worth": "₹19.04 Cr",
+      "total_borrowing": "₹25.10 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Cameo Corporate Services Ltd.",
+    "registrar_website": "https://ipo.cameoindia.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Horizon Management Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "7B, 7th Floor, Century Plaza, 560-562, Anna Salai, Chennai, Tamil Nadu - 600018",
+    "company_website": "https://www.spgeocl.com",
+    "company_email": "cs@spgeocl.com",
+    "company_phone": "044 2432 360"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available (RHP linked on site)",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/sripriyankarhp.pdf",
+    "prospectus_pdf": "Available on company/RHP sources",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Sri Priyanka Geo Commex Limited do?",
+      "answer": "The company is engaged in critical minerals trading (Barite, Fluorspar, Copper Cathode) and manufacturing of rice bran oil."
+    },
+    {
+      "question": "When does the Sri Priyanka Geo Commex IPO open and close?",
+      "answer": "The IPO opens on 24 June 2026 and closes on 29 June 2026."
+    },
+    {
+      "question": "What is the issue price of Sri Priyanka Geo Commex IPO?",
+      "answer": "The IPO price band is ₹207 to ₹212 per share."
+    },
+    {
+      "question": "What is the lot size of Sri Priyanka Geo Commex IPO?",
+      "answer": "The minimum application lot is 600 shares (Retail min. 2 lots / 1,200 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,54,400 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Sri Priyanka Geo Commex IPO?",
+      "answer": "The IPO size is ₹94.51 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Sri Priyanka Geo Commex shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 02 July 2026."
+    }
+  ]
+},
+{
+  "id": 108,
+  "name": "Dhanwel Hybrid Seeds Limited",
+  "logo": "/images/ipo/dhanwel.png",
+  "minInvestment": "₹2,37,600",
+  "open": "24 Jun 2026",
+  "close": "29 Jun 2026",
+  "listing": "02 Jul 2026",
+  "price": "95-99",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Dhanwel Hybrid Seeds Limited",
+    "industry_sector": "Agricultural Seeds (Hybrid Seeds Manufacturing & Supply)",
+    "founded_year": "2018",
+    "promoters": [
+      "Not explicitly listed on main page (Experienced Promoter group mentioned)"
+    ],
+    "description": "Dhanwel Hybrid Seeds Limited is engaged in the business of seed manufacturing and supply for various field crops and vegetables. It develops and produces quality seeds by sourcing improved genetic material, working with contract farmers, and processing at its facility in Jashapar, Jamnagar, Gujarat."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Dhanwel Hybrid Seeds Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹95",
+    "price_band_max": "₹99",
+    "lot_size": "1200 Shares",
+    "total_issue_size": "27,00,000 Equity Shares (₹26.73 Cr)",
+    "fresh_issue_size": "27,00,000 Equity Shares (₹26.73 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "27,00,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹95 to ₹99",
+    "minimum_investment": "₹2,37,600 (Upper price band)",
+    "market_cap_post_issue": "₹90.12 Cr (Pre-issue approx.)",
+    "pre_issue_shareholding": "64,03,320 shares",
+    "post_issue_shareholding": "91,03,320 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Sourcing, production, processing, and supply of hybrid seeds for field crops and vegetables through contract farming and direct procurement.",
+    "products_services": [
+      "Groundnut Seeds",
+      "Soybean Seeds",
+      "Gram Seeds",
+      "Sesame Seeds",
+      "Wheat Seeds",
+      "Green Gram Seeds",
+      "Black Gram Seeds",
+      "Fenugreek Seeds",
+      "Cumin Seeds",
+      "Other Vegetable & Field Crop Seeds"
+    ],
+    "competitive_strengths": [
+      "Wide Range of Seeds and its Variants",
+      "Quality Assurance",
+      "Customer Satisfaction",
+      "Experienced Promoter supported by dedicated Management team",
+      "Strong order book of Rs 1,312.50 Lakhs"
+    ],
+    "risks": [
+      "Highly competitive and fragmented seed industry",
+      "Sustainability of recent high profit growth",
+      "Dependence on agriculture and monsoon",
+      "Small operating history as listed entity",
+      "Working capital intensive operations"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "24 Jun 2026",
+    "ipo_close_date": "29 Jun 2026",
+    "basis_of_allotment_date": "30 Jun 2026",
+    "refund_initiation_date": "01 Jul 2026",
+    "demat_credit_date": "01 Jul 2026",
+    "listing_date": "02 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_borrowings": "₹7.60 Cr",
+    "working_capital_requirements": "₹11.60 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "1.12% of Net Issue",
+    "hni_nii_quota": "49.44% of Net Issue",
+    "retail_quota": "49.44% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "2,400",
+      "amount": "₹2,37,600"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "3,600",
+      "amount": "₹3,56,400"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 Lots",
+      "shares": "10,800",
+      "amount": "₹10,69,200"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "37.15%",
+    "roce": "49.36%",
+    "pat_margin": "8.20%",
+    "ebitda_margin": "12.38%",
+    "eps": "Not specified (Post-issue EPS mentioned in RHP)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.39"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹36.99 Cr",
+      "total_income": "₹74.59 Cr",
+      "pat": "₹6.12 Cr",
+      "ebitda": "₹9.24 Cr",
+      "net_worth": "₹19.66 Cr",
+      "total_borrowing": "₹7.68 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹21.07 Cr",
+      "total_income": "₹44.13 Cr",
+      "pat": "₹2.16 Cr",
+      "ebitda": "₹3.66 Cr",
+      "net_worth": "₹13.27 Cr",
+      "total_borrowing": "₹5.97 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹7.89 Cr",
+      "total_income": "₹35.49 Cr",
+      "pat": "₹1.91 Cr",
+      "ebitda": "₹2.79 Cr",
+      "net_worth": "₹3.65 Cr",
+      "total_borrowing": "₹1.94 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Cameo Corporate Services Ltd.",
+    "registrar_website": "https://ipo.cameoindia.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Wealth Mine Networks Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Survey No. 289/1, Opp. Saffron School, Rajkot-Kalawad Highway, At- Jashapar, Jamnagar, Gujarat - 361160",
+    "company_website": "https://www.dhanwelseeds.com",
+    "company_email": "info@dhanwelseeds.com",
+    "company_phone": "+91 7778889978"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.wealthminenetworks.com/pdf/Red%20Herring%20Prospectus%20dhsl.pdf",
+    "prospectus_pdf": "Available via RHP link",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Dhanwel Hybrid Seeds Limited do?",
+      "answer": "The company is engaged in manufacturing and supply of hybrid seeds for field crops and vegetables."
+    },
+    {
+      "question": "When does the Dhanwel Hybrid Seeds IPO open and close?",
+      "answer": "The IPO opens on 24 June 2026 and closes on 29 June 2026."
+    },
+    {
+      "question": "What is the issue price of Dhanwel Hybrid Seeds IPO?",
+      "answer": "The IPO price band is ₹95 to ₹99 per share."
+    },
+    {
+      "question": "What is the lot size of Dhanwel Hybrid Seeds IPO?",
+      "answer": "The lot size is 1,200 shares. Retail minimum is 2 lots (2,400 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,37,600 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Dhanwel Hybrid Seeds IPO?",
+      "answer": "The IPO size is ₹26.73 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Dhanwel Hybrid Seeds shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 02 July 2026."
+    }
+  ]
+},
+{
+  "id": 109,
+  "name": "CSM Technologies Limited",
+  "logo": "/images/ipo/csmtechnologies.png",
+  "minInvestment": "₹14,916",
+  "open": "24 Jun 2026",
+  "close": "29 Jun 2026",
+  "listing": "02 Jul 2026",
+  "price": "107-113",
+  "lot": 132,
+
+  "about_company": {
+    "company_name": "CSM Technologies Limited",
+    "industry_sector": "IT Services & Consulting (GovTech & Digital Transformation)",
+    "founded_year": "1998",
+    "promoters": [
+      "Priyadarshi Pany",
+      "Lagna Panda"
+    ],
+    "description": "CSM Technologies is a leading GovTech and digital transformation company with 27+ years of experience. It specializes in building e-governance platforms, custom IT solutions, and digital infrastructure for government and private clients across sectors like agriculture, education, mining, healthcare, and public services. The company has a strong international presence in 12+ countries and an order book of ₹357.63 Cr as of March 31, 2026."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "CSM Technologies Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹107",
+    "price_band_max": "₹113",
+    "lot_size": "132 Shares",
+    "total_issue_size": "1,29,01,000 Equity Shares (₹145.78 Cr)",
+    "fresh_issue_size": "1,29,01,000 Equity Shares (₹145.78 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "1,29,01,000 Equity Shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹107 to ₹113",
+    "minimum_investment": "₹14,916 (Upper price band)",
+    "market_cap_post_issue": "₹583.12 Cr (Pre-issue)",
+    "pre_issue_shareholding": "94.90%",
+    "post_issue_shareholding": "Approx. 71% (diluted)"
+  },
+
+  "company_overview": {
+    "business_model": "Providing end-to-end IT solutions, e-governance platforms, digital transformation services, consulting, and proprietary technology solutions primarily to government entities and enterprises.",
+    "products_services": [
+      "E-Governance Platforms",
+      "Digital Transformation Solutions",
+      "GovTech Applications",
+      "Data Analytics & Dashboards",
+      "AI/ML-based Systems",
+      "Sector-specific Solutions (Agriculture, Education, Mining, etc.)"
+    ],
+    "competitive_strengths": [
+      "Deep sectoral expertise in government projects",
+      "Proprietary technology and patented innovations",
+      "Extensive geographic footprint (12+ countries)",
+      "Strong order book of ₹357.63 Cr",
+      "Experienced promoters and management team",
+      "Track record of healthy financial performance and awards"
+    ],
+    "risks": [
+      "High dependence on government contracts",
+      "Intense competition in IT sector",
+      "Working capital intensive operations",
+      "Execution risks in large projects",
+      "Valuation concerns"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "24 Jun 2026",
+    "ipo_close_date": "29 Jun 2026",
+    "basis_of_allotment_date": "30 Jun 2026",
+    "refund_initiation_date": "01 Jul 2026",
+    "demat_credit_date": "01 Jul 2026",
+    "listing_date": "02 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹56.00 Cr",
+    "repayment_of_borrowings": "₹22.63 Cr",
+    "inorganic_growth_and_general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Net Issue",
+    "hni_nii_quota": "Not less than 15% of the Net Issue",
+    "retail_quota": "Not less than 35% of the Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "132",
+      "amount": "₹14,916"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "1,848",
+      "amount": "₹2,08,824"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 Lots",
+      "shares": "8,976",
+      "amount": "₹10,14,288"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "23.75% (Dec 2025)",
+    "roce": "24.40% (Dec 2025)",
+    "pat_margin": "8.80% (Dec 2025)",
+    "ebitda_margin": "18.16% (Dec 2025)",
+    "eps": "₹3.64 (Pre) / ₹3.80 (Post)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.86 (Dec 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "9M FY2026 (31 Dec 2025)",
+      "assets": "₹206.00 Cr",
+      "total_income": "₹167.05 Cr",
+      "pat": "₹14.70 Cr",
+      "ebitda": "₹30.07 Cr",
+      "net_worth": "₹88.88 Cr",
+      "total_borrowing": "Not specified"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹154.55 Cr",
+      "total_income": "₹200.63 Cr",
+      "pat": "₹14.09 Cr",
+      "ebitda": "₹29.27 Cr",
+      "net_worth": "₹76.18 Cr",
+      "total_borrowing": "Not specified"
+    },
+    {
+      "period": "FY2024",
+      "assets": "₹124.45 Cr",
+      "total_income": "₹198.65 Cr",
+      "pat": "₹12.55 Cr",
+      "ebitda": "₹23.71 Cr",
+      "net_worth": "₹59.75 Cr",
+      "total_borrowing": "Not specified"
+    },
+    {
+      "period": "FY2023",
+      "assets": "₹80.02 Cr",
+      "total_income": "₹161.50 Cr",
+      "pat": "₹15.82 Cr",
+      "ebitda": "₹27.87 Cr",
+      "net_worth": "₹50.31 Cr",
+      "total_borrowing": "Not specified"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Keynote Financial Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No - E/56, Infocity-1, Chandrasekharpur, Dist.: Khurda, Khordha, Bhubaneswar, Odisha - 751024",
+    "company_website": "https://www.csm.tech",
+    "company_email": "secretarial@csm.tech",
+    "company_phone": "+91 674 6635900"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on SEBI",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/jun-2026/csm-technologies-limited-rhp_102194.html",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does CSM Technologies Limited do?",
+      "answer": "The company provides IT solutions, e-governance platforms, and digital transformation services primarily to government clients."
+    },
+    {
+      "question": "When does the CSM Technologies IPO open and close?",
+      "answer": "The IPO opens on 24 June 2026 and closes on 29 June 2026."
+    },
+    {
+      "question": "What is the issue price of CSM Technologies IPO?",
+      "answer": "The IPO price band is ₹107 to ₹113 per share."
+    },
+    {
+      "question": "What is the lot size of CSM Technologies IPO?",
+      "answer": "The lot size is 132 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,916 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of CSM Technologies IPO?",
+      "answer": "The IPO size is ₹145.78 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will CSM Technologies shares be listed?",
+      "answer": "The shares will be listed on BSE and NSE on 02 July 2026."
+    }
+  ]
 }
 
 
