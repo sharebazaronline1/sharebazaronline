@@ -21936,6 +21936,233 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE and NSE on 02 July 2026."
     }
   ]
+},
+{
+  "id": 110,
+  "name": "Crazy Snacks Limited",
+  "logo": "/images/ipo/crazysnacks.png",
+  "minInvestment": "₹2,52,000",
+  "open": "25 Jun 2026",
+  "close": "30 Jun 2026",
+  "listing": "03 Jul 2026",
+  "price": "39-42",
+  "lot": 3000,
+
+  "about_company": {
+    "company_name": "Crazy Snacks Limited",
+    "industry_sector": "Food Processing (Bakery & Snacks)",
+    "founded_year": "1995",
+    "promoters": [
+      "Navin Kumar Agarwal",
+      "Upma Agrawal"
+    ],
+    "description": "Crazy Snacks Limited is engaged in the production of bakery items and a diverse range of snacks including namkeens, chips, popcorn, potato sticks, rusks, cookies, breads, buns, and cakes. It operates under three brands: Crazy (affordable segment), Bity (premium cakes/breads), and Baked Gold (premium cookies/rusks). The company primarily operates in Uttar Pradesh and Bihar with two manufacturing facilities and a network of over 2,000 distributors."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Crazy Snacks Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹39",
+    "price_band_max": "₹42",
+    "lot_size": "3000 Shares",
+    "total_issue_size": "74,94,000 Equity Shares (₹31.47 Cr)",
+    "fresh_issue_size": "60,00,000 Equity Shares (₹25.20 Cr)",
+    "offer_for_sale": "14,94,000 Equity Shares (₹6.27 Cr)",
+    "shares_offered": "74,94,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹39 to ₹42",
+    "minimum_investment": "₹2,52,000 (Upper price band)",
+    "market_cap_post_issue": "₹100.54 Cr (Pre-issue)",
+    "pre_issue_shareholding": "1,79,38,830 shares (76.14% Promoter)",
+    "post_issue_shareholding": "2,39,37,830 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing and distribution of snacks and bakery products across affordable and premium segments through own brands and a strong distributor network in North India.",
+    "products_services": [
+      "Rusks",
+      "Cookies",
+      "Breads & Buns",
+      "Cakes",
+      "Chips",
+      "Namkeen",
+      "Popcorn",
+      "Potato Sticks"
+    ],
+    "competitive_strengths": [
+      "Diverse Product Portfolio (150+ SKUs)",
+      "Quality Control and In-house Packaging",
+      "Inclusive Pricing Across Segments (₹2 to ₹170)",
+      "Strong Distribution Network",
+      "Established Brands in North India"
+    ],
+    "risks": [
+      "Intense competition in FMCG snacks sector",
+      "High dependence on North India markets",
+      "Raw material price volatility",
+      "Working capital intensive operations",
+      "SME liquidity and execution risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "25 Jun 2026",
+    "ipo_close_date": "30 Jun 2026",
+    "basis_of_allotment_date": "01 Jul 2026",
+    "refund_initiation_date": "02 Jul 2026",
+    "demat_credit_date": "02 Jul 2026",
+    "listing_date": "03 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_for_machinery": "₹9.92 Cr",
+    "repayment_of_borrowings": "₹5.71 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Net Offer",
+    "hni_nii_quota": "Not more than 15% of the Net Offer",
+    "retail_quota": "Not less than 35% of the Net Offer"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "6,000",
+      "amount": "₹2,52,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "9,000",
+      "amount": "₹3,78,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "24,000",
+      "amount": "₹10,08,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "15.00% (Dec 2025) / 18.61% (Mar 2025)",
+    "roce": "10.04% (Dec 2025)",
+    "pat_margin": "Not specified",
+    "ebitda_margin": "Not specified",
+    "eps": "₹3.53 (Pre) / ₹3.34 (Post)",
+    "nav": "Not specified",
+    "debt_to_equity": "1.63 (Dec 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "9M FY2026 (31 Dec 2025)",
+      "assets": "₹121.61 Cr",
+      "total_income": "₹87.56 Cr",
+      "pat": "₹6.00 Cr",
+      "ebitda": "Not specified",
+      "net_worth": "₹42.82 Cr",
+      "total_borrowing": "₹69.91 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹109.82 Cr",
+      "total_income": "₹111.63 Cr",
+      "pat": "₹6.33 Cr",
+      "ebitda": "Not specified",
+      "net_worth": "₹36.82 Cr",
+      "total_borrowing": "₹63.26 Cr"
+    },
+    {
+      "period": "FY2024",
+      "assets": "₹85.90 Cr",
+      "total_income": "₹129.08 Cr",
+      "pat": "₹5.32 Cr",
+      "ebitda": "Not specified",
+      "net_worth": "₹31.25 Cr",
+      "total_borrowing": "₹45.22 Cr"
+    },
+    {
+      "period": "FY2023",
+      "assets": "₹88.61 Cr",
+      "total_income": "₹89.17 Cr",
+      "pat": "₹3.54 Cr",
+      "ebitda": "Not specified",
+      "net_worth": "₹26.43 Cr",
+      "total_borrowing": "₹48.01 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Inventure Merchant Banker Services Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Shri Pramodaay Bhawan, 10 Park Road Officers Residence Lane, Near Sahara Press, Gorakhpur, Uttar Pradesh - 273001",
+    "company_website": "https://crazy.org.in/",
+    "company_email": "secretarial@crazy.org.in",
+    "company_phone": "+91 98380 76426"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/crazy-snacks-rhp.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Crazy Snacks Limited do?",
+      "answer": "The company manufactures bakery items and snacks such as namkeens, chips, rusks, cookies, and cakes under brands like Crazy, Bity, and Baked Gold."
+    },
+    {
+      "question": "When does the Crazy Snacks IPO open and close?",
+      "answer": "The IPO opens on 25 June 2026 and closes on 30 June 2026."
+    },
+    {
+      "question": "What is the issue price of Crazy Snacks IPO?",
+      "answer": "The IPO price band is ₹39 to ₹42 per share."
+    },
+    {
+      "question": "What is the lot size of Crazy Snacks IPO?",
+      "answer": "The lot size is 3,000 shares. Retail minimum is 2 lots (6,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,52,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Crazy Snacks IPO?",
+      "answer": "The IPO size is ₹31.47 crore (Fresh Issue + OFS)."
+    },
+    {
+      "question": "Where will Crazy Snacks shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 03 July 2026."
+    }
+  ]
 }
 
 
