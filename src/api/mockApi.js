@@ -22163,6 +22163,233 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 03 July 2026."
     }
   ]
+},
+{
+  "id": 111,
+  "name": "Aastha Spintex Limited",
+  "logo": "/images/ipo/aasthaspintex.png",
+  "minInvestment": "₹14,960",
+  "open": "29 Jun 2026",
+  "close": "01 Jul 2026",
+  "listing": "06 Jul 2026",
+  "price": "125-136",
+  "lot": 110,
+
+  "about_company": {
+    "company_name": "Aastha Spintex Limited",
+    "industry_sector": "Textiles (Cotton Yarn & Ginning)",
+    "founded_year": "2013",
+    "promoters": [
+      "Patel Divyang Jashwantbhai",
+      "Rasiklal Valjibhai Patel",
+      "Gothi Vivek Rasiklal",
+      "Jashwantbhai Valjibhai Patel"
+    ],
+    "description": "Aastha Spintex Limited is engaged in the manufacturing and trading of carded, combed, and compact combed cotton yarns along with cotton bales. The company operates a semi-automated integrated spinning and ginning facility at Halvad, Morbi, Gujarat. Cotton yarns are used in knitting and weaving for products like denim, terry towels, shirting, sheeting, sweaters, socks, home textiles, and industrial fabrics."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Aastha Spintex Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹125",
+    "price_band_max": "₹136",
+    "lot_size": "110 Shares",
+    "total_issue_size": "1,25,00,000 Equity Shares (₹170 Cr)",
+    "fresh_issue_size": "1,25,00,000 Equity Shares (₹170 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "1,25,00,000 Equity Shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹125 to ₹136",
+    "minimum_investment": "₹14,960 (Upper price band)",
+    "market_cap_post_issue": "₹600.33 Cr (Pre-issue)",
+    "pre_issue_shareholding": "3,16,42,190 shares",
+    "post_issue_shareholding": "4,41,42,190 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated cotton ginning and spinning operations with captive consumption of cotton bales for yarn production and external sales.",
+    "products_services": [
+      "Carded Cotton Yarn",
+      "Combed Cotton Yarn",
+      "Compact Combed Cotton Yarn",
+      "Cotton Bales",
+      "Cotton Yarn Waste"
+    ],
+    "competitive_strengths": [
+      "Fully integrated cotton spinning infrastructure with modern technologies",
+      "Long standing relationship with key customers",
+      "Strategically located manufacturing facility with expansion scope",
+      "Strong renewable energy infrastructure for sustainable and cost-efficient manufacturing",
+      "Delivering strong financials and operating metrics",
+      "Strong promoters and experienced management team"
+    ],
+    "risks": [
+      "High dependence on cotton raw material price volatility",
+      "Intense competition in textile industry",
+      "Execution risk related to acquisition of Falcon Yarns",
+      "Working capital intensive business",
+      "Mainboard valuation risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "29 Jun 2026",
+    "ipo_close_date": "01 Jul 2026",
+    "basis_of_allotment_date": "02 Jul 2026",
+    "refund_initiation_date": "03 Jul 2026",
+    "demat_credit_date": "03 Jul 2026",
+    "listing_date": "06 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "acquisition_of_falcon_yarns": "Part payment of purchase consideration (₹111.51 Cr approx.)",
+    "inter_corporate_deposits": "Funding working capital of Falcon Yarns Private Limited (₹10 Cr approx.)",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 20% of the Net Issue",
+    "hni_nii_quota": "Not less than 40% of the Net Issue",
+    "retail_quota": "Not less than 40% of the Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "110",
+      "amount": "₹14,960"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "1,540",
+      "amount": "₹2,09,440"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 Lots",
+      "shares": "7,370",
+      "amount": "₹10,02,320"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "12.80% (Dec 2025) / 23.21% (Mar 2025)",
+    "roce": "12.13% (Dec 2025) / 18.89% (Mar 2025)",
+    "pat_margin": "5.60% (Dec 2025) / 6.53% (Mar 2025)",
+    "ebitda_margin": "11.25% (Dec 2025) / 13.20% (Mar 2025)",
+    "eps": "₹7.24 (Pre) / ₹5.30 (Post)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.66 (Dec 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "9M FY2026 (31 Dec 2025)",
+      "assets": "₹331.66 Cr",
+      "total_income": "₹314.02 Cr",
+      "pat": "₹17.56 Cr",
+      "ebitda": "₹35.25 Cr",
+      "net_worth": "₹153.18 Cr",
+      "total_borrowing": "Not specified"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹274.20 Cr",
+      "total_income": "₹352.17 Cr",
+      "pat": "₹22.92 Cr",
+      "ebitda": "₹46.36 Cr",
+      "net_worth": "₹121.05 Cr",
+      "total_borrowing": "Not specified"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹240.57 Cr",
+      "total_income": "₹305.67 Cr",
+      "pat": "₹16.29 Cr",
+      "ebitda": "₹34.25 Cr",
+      "net_worth": "₹76.38 Cr",
+      "total_borrowing": "Not specified"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹172.59 Cr",
+      "total_income": "₹239.69 Cr",
+      "pat": "₹1.06 Cr",
+      "ebitda": "₹11.60 Cr",
+      "net_worth": "₹60.01 Cr",
+      "total_borrowing": "Not specified"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://www.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "BOI Merchant Bankers Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Survey No 1441, 1442, 1448/1, 1449, 1450/2 P2 & 1443/P2, Halvad Maliya Highway, Halvad, Surendranagar, Gujarat - 363330",
+    "company_website": "https://www.aasthaspintex.com",
+    "company_email": "info@aasthaspintex.com",
+    "company_phone": "+91 90815 35400"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on SEBI",
+    "rhp_link": "https://aasthaspintex.com/pdf/RHP/RHP_Aastha.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Aastha Spintex Limited do?",
+      "answer": "The company manufactures and trades carded, combed, and compact combed cotton yarns and cotton bales."
+    },
+    {
+      "question": "When does the Aastha Spintex IPO open and close?",
+      "answer": "The IPO opens on 29 June 2026 and closes on 01 July 2026."
+    },
+    {
+      "question": "What is the issue price of Aastha Spintex IPO?",
+      "answer": "The IPO price band is ₹125 to ₹136 per share."
+    },
+    {
+      "question": "What is the lot size of Aastha Spintex IPO?",
+      "answer": "The lot size is 110 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,960 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Aastha Spintex IPO?",
+      "answer": "The IPO size is ₹170 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Aastha Spintex shares be listed?",
+      "answer": "The shares will be listed on BSE and NSE on 06 July 2026."
+    }
+  ]
 }
 
 
