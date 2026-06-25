@@ -22390,6 +22390,461 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE and NSE on 06 July 2026."
     }
   ]
+},
+{
+  "id": 112,
+  "name": "Twinkle Papers Limited",
+  "logo": "/images/ipo/twinklepapers.png",
+  "minInvestment": "₹2,76,000",
+  "open": "29 Jun 2026",
+  "close": "01 Jul 2026",
+  "listing": "06 Jul 2026",
+  "price": "64-69",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Twinkle Papers Limited",
+    "industry_sector": "Packaging (Corrugated Boxes & Polymer Products)",
+    "founded_year": "1995",
+    "promoters": [
+      "Amit Jain",
+      "Ayush Jain",
+      "Ruchi Jain"
+    ],
+    "description": "Twinkle Papers Limited is engaged in the manufacture of packaging and material handling products, including corrugated boxes, multi-colored printed fiberboard cartons, HDPE drums, jerrycans, plastic crates, heavy-duty pallets, molded plastic furniture, and dustbins. The company operates under the brand 'Twinkle' and serves industries such as food & beverage, dairy, pharmaceuticals, chemicals, textiles, and construction. It uses technologies like blow molding, injection molding, and rotational molding with HDPE and LLDPE granules."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Twinkle Papers Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹64",
+    "price_band_max": "₹69",
+    "lot_size": "2000 Shares",
+    "total_issue_size": "39,88,000 Equity Shares (₹28 Cr)",
+    "fresh_issue_size": "39,88,000 Equity Shares (₹28 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "39,88,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹64 to ₹69",
+    "minimum_investment": "₹2,76,000 (Upper price band)",
+    "market_cap_post_issue": "₹104.54 Cr (Pre-issue)",
+    "pre_issue_shareholding": "1,11,62,992 shares",
+    "post_issue_shareholding": "1,51,50,992 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing of corrugated packaging and polymer-based molded products with in-house R&D for custom solutions, serving multiple industries through B2B sales.",
+    "products_services": [
+      "Corrugated Boxes",
+      "Multi-colored Printed Fiberboard Cartons",
+      "HDPE Drums and Jerrycans",
+      "Plastic Crates and Heavy-duty Pallets",
+      "Molded Plastic Furniture",
+      "Dustbins"
+    ],
+    "competitive_strengths": [
+      "Experienced and Qualified Management",
+      "Strong and Consistent Financial Performance",
+      "Growing Customer Base",
+      "Scalable and Reliable Business Model",
+      "Experienced Promoters with Domain Knowledge",
+      "In-house R&D for Custom Solutions"
+    ],
+    "risks": [
+      "Raw material price volatility (plastic granules)",
+      "Competition in packaging industry",
+      "Working capital intensive operations",
+      "Dependence on few key industries",
+      "SME listing liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "29 Jun 2026",
+    "ipo_close_date": "01 Jul 2026",
+    "basis_of_allotment_date": "02 Jul 2026",
+    "refund_initiation_date": "03 Jul 2026",
+    "demat_credit_date": "03 Jul 2026",
+    "listing_date": "06 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_for_expansion": "₹6.50 Cr",
+    "repayment_of_loans": "₹7.00 Cr",
+    "working_capital_requirements": "₹8.00 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "5.02% of Net Issue",
+    "hni_nii_quota": "47.47% of Net Issue",
+    "retail_quota": "47.52% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "4,000",
+      "amount": "₹2,76,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "6,000",
+      "amount": "₹4,14,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "16,000",
+      "amount": "₹11,04,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "21.66% (Sep 2025) / 17.75% (Mar 2025)",
+    "roce": "18.82% (Sep 2025) / 22.83% (Mar 2025)",
+    "pat_margin": "7.49% (Sep 2025) / 4.25% (Mar 2025)",
+    "ebitda_margin": "14.92% (Sep 2025) / 11.79% (Mar 2025)",
+    "eps": "₹2.98 (Pre) / ₹4.75 (Post)",
+    "nav": "Not specified",
+    "debt_to_equity": "2.15 (Sep 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "9M FY2026 (31 Dec 2025)",
+      "assets": "₹93.37 Cr",
+      "total_income": "₹73.13 Cr",
+      "pat": "₹5.40 Cr",
+      "ebitda": "₹10.75 Cr",
+      "net_worth": "₹24.94 Cr",
+      "total_borrowing": "₹53.69 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹75.38 Cr",
+      "total_income": "₹83.98 Cr",
+      "pat": "₹3.33 Cr",
+      "ebitda": "₹9.63 Cr",
+      "net_worth": "₹19.54 Cr",
+      "total_borrowing": "₹40.79 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹61.22 Cr",
+      "total_income": "₹58.75 Cr",
+      "pat": "₹1.61 Cr",
+      "ebitda": "₹8.47 Cr",
+      "net_worth": "₹11.07 Cr",
+      "total_borrowing": "₹33.88 Cr"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹50.64 Cr",
+      "total_income": "₹54.96 Cr",
+      "pat": "₹0.90 Cr",
+      "ebitda": "₹5.47 Cr",
+      "net_worth": "₹9.46 Cr",
+      "total_borrowing": "₹29.62 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Alankit Assignments Ltd.",
+    "registrar_website": "https://www.alankit.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Novus Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Ludhiana Road, Malerkotla, Distt. Sangrur, Punjab - 148023",
+    "company_website": "https://twinklepapers.com",
+    "company_email": "amit@twinklepapers.com",
+    "company_phone": "+91 01675-351790"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/twinkle-papers-ipo-rhp.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Twinkle Papers Limited do?",
+      "answer": "The company manufactures corrugated boxes and polymer-based packaging products like drums, jerrycans, crates, and pallets."
+    },
+    {
+      "question": "When does the Twinkle Papers IPO open and close?",
+      "answer": "The IPO opens on 29 June 2026 and closes on 01 July 2026."
+    },
+    {
+      "question": "What is the issue price of Twinkle Papers IPO?",
+      "answer": "The IPO price band is ₹64 to ₹69 per share."
+    },
+    {
+      "question": "What is the lot size of Twinkle Papers IPO?",
+      "answer": "The lot size is 2,000 shares. Retail minimum is 2 lots (4,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,76,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Twinkle Papers IPO?",
+      "answer": "The IPO size is ₹28 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Twinkle Papers shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 06 July 2026."
+    }
+  ]
+},
+{
+  "id": 113,
+  "name": "Adon Agro Commodities Limited",
+  "logo": "/images/ipo/adonagro.png",
+  "minInvestment": "₹2,80,000",
+  "open": "29 Jun 2026",
+  "close": "01 Jul 2026",
+  "listing": "06 Jul 2026",
+  "price": "66-70",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Adon Agro Commodities Limited",
+    "industry_sector": "Agro Commodities (Dry Fruits, Nuts & Seeds)",
+    "founded_year": "Not explicitly stated (Operations scaled in recent years)",
+    "promoters": [
+      "Narayanswamy Venkitkrishnan",
+      "Jigisha Narayanswamy",
+      "Shubham Ratan Sharma"
+    ],
+    "description": "Adon Agro Commodities Ltd. is primarily engaged in the sourcing, importing, processing, packing, and distribution of dry fruits, nuts, seeds, and berries. The product portfolio includes almonds, cashews, walnuts, pistachios, raisins, dried dates, apricots, figs, and assorted mixes. Products are sold in bulk and packaged formats under the proprietary brand 'Hunger Nuts'. The company operates an in-house processing facility at MIDC Mahape, Navi Mumbai."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Adon Agro Commodities Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹66",
+    "price_band_max": "₹70",
+    "lot_size": "2000 Shares",
+    "total_issue_size": "62,90,000 Equity Shares (₹44.03 Cr)",
+    "fresh_issue_size": "62,90,000 Equity Shares (₹44.03 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "62,90,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹66 to ₹70",
+    "minimum_investment": "₹2,80,000 (Upper price band)",
+    "market_cap_post_issue": "₹161.12 Cr (Pre-issue)",
+    "pre_issue_shareholding": "1,67,27,270 shares (90.04% Promoter)",
+    "post_issue_shareholding": "2,30,17,270 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Sourcing (domestic & international), processing, and multi-channel distribution (B2B bulk, wholesale, modern trade, exports, e-commerce) of dry fruits and nuts.",
+    "products_services": [
+      "Almonds",
+      "Cashews",
+      "Walnuts",
+      "Pistachios",
+      "Raisins",
+      "Dried Dates, Apricots, Figs",
+      "Assorted Dry Fruit Mixes",
+      "Corporate & Festive Gift Hampers"
+    ],
+    "competitive_strengths": [
+      "Integrated Operating Model",
+      "Diversified Product Portfolio",
+      "In-house Processing Capabilities",
+      "Multiple Distribution Channels",
+      "International Sourcing Network"
+    ],
+    "risks": [
+      "Commodity price volatility",
+      "Dependence on imports and global supply chains",
+      "Working capital intensive operations",
+      "Competition in dry fruits segment",
+      "SME liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "29 Jun 2026",
+    "ipo_close_date": "01 Jul 2026",
+    "basis_of_allotment_date": "02 Jul 2026",
+    "refund_initiation_date": "03 Jul 2026",
+    "demat_credit_date": "03 Jul 2026",
+    "listing_date": "06 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹32.00 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "1.07% of Net Issue",
+    "hni_nii_quota": "49.38% of Net Issue",
+    "retail_quota": "49.55% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "4,000",
+      "amount": "₹2,80,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "6,000",
+      "amount": "₹4,20,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "16,000",
+      "amount": "₹11,20,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "88.16% (Jan 2026) / 84.36% (Mar 2025)",
+    "roce": "68.79% (Jan 2026) / 60.65% (Mar 2025)",
+    "pat_margin": "7.50% (Jan 2026) / 7.01% (Mar 2025)",
+    "ebitda_margin": "10.89% (Jan 2026) / 10.14% (Mar 2025)",
+    "eps": "₹4.32 (Pre) / ₹10.91 (Post)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.28 (Jan 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "10M FY2026 (31 Jan 2026)",
+      "assets": "₹86.43 Cr",
+      "total_income": "₹287.33 Cr",
+      "pat": "₹21.55 Cr",
+      "ebitda": "₹31.28 Cr",
+      "net_worth": "₹36.72 Cr",
+      "total_borrowing": "₹10.19 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹39.11 Cr",
+      "total_income": "₹103.04 Cr",
+      "pat": "₹7.22 Cr",
+      "ebitda": "₹10.45 Cr",
+      "net_worth": "₹12.17 Cr",
+      "total_borrowing": "₹4.74 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹20.22 Cr",
+      "total_income": "₹72.92 Cr",
+      "pat": "₹1.79 Cr",
+      "ebitda": "₹2.84 Cr",
+      "net_worth": "₹4.95 Cr",
+      "total_borrowing": "₹6.96 Cr"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹3.65 Cr",
+      "total_income": "₹22.33 Cr",
+      "pat": "₹0.09 Cr",
+      "ebitda": "₹0.47 Cr",
+      "net_worth": "₹0.26 Cr",
+      "total_borrowing": "Nil"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Galactico Corporate Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Office No. I-3029, 3rd Floor, Akshar Business Park, Sector 25, Plot No. 3, Janta Market Road, Vashi, Navi Mumbai, Thane, Maharashtra - 400703",
+    "company_website": "https://www.adonagrocommodities.com",
+    "company_email": "cs@adonagrocommodities.com",
+    "company_phone": " 022-6501 1773"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://adonagrocommodities.com/wp-content/uploads/2026/06/AACL-Red-Herring-Prospectus.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Adon Agro Commodities Limited do?",
+      "answer": "The company is engaged in sourcing, processing, and distribution of dry fruits, nuts, seeds, and berries under the brand Hunger Nuts."
+    },
+    {
+      "question": "When does the Adon Agro Commodities IPO open and close?",
+      "answer": "The IPO opens on 29 June 2026 and closes on 01 July 2026."
+    },
+    {
+      "question": "What is the issue price of Adon Agro Commodities IPO?",
+      "answer": "The IPO price band is ₹66 to ₹70 per share."
+    },
+    {
+      "question": "What is the lot size of Adon Agro Commodities IPO?",
+      "answer": "The lot size is 2,000 shares. Retail minimum is 2 lots (4,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,80,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Adon Agro Commodities IPO?",
+      "answer": "The IPO size is ₹44.03 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Adon Agro Commodities shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 06 July 2026."
+    }
+  ]
 }
 
 
