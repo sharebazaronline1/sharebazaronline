@@ -22845,6 +22845,459 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 06 July 2026."
     }
   ]
+},
+{
+  "id": 114,
+  "name": "Vinit Mobile Limited",
+  "logo": "/images/ipo/vinitmobile.png",
+  "minInvestment": "₹2,52,800",
+  "open": "30 Jun 2026",
+  "close": "02 Jul 2026",
+  "listing": "07 Jul 2026",
+  "price": "150-158",
+  "lot": 800,
+
+  "about_company": {
+    "company_name": "Vinit Mobile Limited",
+    "industry_sector": "Retail (Multi-brand Mobile Phones & Accessories)",
+    "founded_year": "2011",
+    "promoters": [
+      "Vinit Jalan",
+      "Shweta Jalan"
+    ],
+    "description": "Vinit Mobile Limited is a multi-brand mobile retail company operating 35 company-owned and company-operated (COCO) stores in Surat district, Gujarat. It sells smartphones from brands like Apple, Samsung, Vivo, Oppo, Xiaomi, Realme, Motorola, and OnePlus, along with tablets, data cards, and accessories. The company also offers EMI financing options and after-sales support, and engages in B2B bulk sales."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Vinit Mobile Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹150",
+    "price_band_max": "₹158",
+    "lot_size": "800 Shares",
+    "total_issue_size": "21,60,000 Equity Shares (₹34.13 Cr)",
+    "fresh_issue_size": "21,60,000 Equity Shares (₹34.13 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "21,60,000 Equity Shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹150 to ₹158",
+    "minimum_investment": "₹2,52,800 (Upper price band)",
+    "market_cap_post_issue": "₹97.49 Cr (Pre-issue)",
+    "pre_issue_shareholding": "40,10,000 shares",
+    "post_issue_shareholding": "61,70,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Retail sales through COCO stores, B2B bulk sales, and financing tie-ups with institutions like Bajaj Finserv, HDB Financial, and TVS Credit.",
+    "products_services": [
+      "Smartphones (Multi-brand)",
+      "Tablets",
+      "Mobile Accessories",
+      "Data Cards",
+      "After-sales Support"
+    ],
+    "competitive_strengths": [
+      "Company Owned Company Operated (COCO) Stores",
+      "Experienced Promoters and Management Team",
+      "Multi-Brand Retailing",
+      "Extensive Network in Surat",
+      "Strategic Store Locations",
+      "Centralized Inventory Management",
+      "EMI Financing Options"
+    ],
+    "risks": [
+      "High competition in mobile retail sector",
+      "Dependence on Surat region",
+      "Working capital intensive operations",
+      "Rapid technological changes in smartphones",
+      "SME liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jun 2026",
+    "ipo_close_date": "02 Jul 2026",
+    "basis_of_allotment_date": "03 Jul 2026",
+    "refund_initiation_date": "06 Jul 2026",
+    "demat_credit_date": "06 Jul 2026",
+    "listing_date": "07 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "set_up_cost_of_new_stores": "₹0.62 Cr",
+    "working_capital_requirements": "₹23.75 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "21,600 shares (~1.05% of Net Issue)",
+    "hni_nii_quota": "40.00% of Net Issue",
+    "retail_quota": "58.95% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "1,600",
+      "amount": "₹2,52,800"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "2,400",
+      "amount": "₹3,79,200"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "6,400",
+      "amount": "₹10,11,200"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "52.61% (Dec 2025) / 84.78% (Mar 2025)",
+    "roce": "46.48% (Dec 2025) / 73.66% (Mar 2025)",
+    "pat_margin": "9.12% (Dec 2025) / 6.44% (Mar 2025)",
+    "ebitda_margin": "13.60% (Dec 2025) / 9.53% (Mar 2025)",
+    "eps": "₹9.73 (Pre) / ₹11.04 (Post)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.62 (Dec 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "9M FY2026 (31 Dec 2025)",
+      "assets": "₹25.04 Cr",
+      "total_income": "₹56.01 Cr",
+      "pat": "₹5.11 Cr",
+      "ebitda": "₹7.53 Cr",
+      "net_worth": "₹9.71 Cr",
+      "total_borrowing": "₹6.07 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹13.34 Cr",
+      "total_income": "₹60.63 Cr",
+      "pat": "₹3.90 Cr",
+      "ebitda": "₹5.72 Cr",
+      "net_worth": "₹4.60 Cr",
+      "total_borrowing": "₹3.04 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹7.41 Cr",
+      "total_income": "₹28.59 Cr",
+      "pat": "₹0.007 Cr",
+      "ebitda": "₹1.05 Cr",
+      "net_worth": "₹0.70 Cr",
+      "total_borrowing": "₹3.10 Cr"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹0.01 Cr",
+      "total_income": "₹0.00 Cr",
+      "pat": "₹0.00 Cr",
+      "ebitda": "₹0.00 Cr",
+      "net_worth": "-₹0.02 Cr",
+      "total_borrowing": "₹0.03 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://www.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Comfort Securities Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No. 358, Ground, 1st & 2nd Floor, Gopal Nagar, Bamroli Althan Expressway, Pandesara, Surat, Gujarat - 394221",
+    "company_website": "https://www.vinitmobile.com/",
+    "company_email": "compliance@vinitmobile.com",
+    "company_phone": "+91 92279 84148"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://res.cloudinary.com/dmtuhujus/image/upload/v1782227820/Vinit_RHP_23.06.2026_VML_wcxwbv.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Vinit Mobile Limited do?",
+      "answer": "The company operates multi-brand mobile phone retail stores and sells accessories in Surat, Gujarat."
+    },
+    {
+      "question": "When does the Vinit Mobile IPO open and close?",
+      "answer": "The IPO opens on 30 June 2026 and closes on 02 July 2026."
+    },
+    {
+      "question": "What is the issue price of Vinit Mobile IPO?",
+      "answer": "The IPO price band is ₹150 to ₹158 per share."
+    },
+    {
+      "question": "What is the lot size of Vinit Mobile IPO?",
+      "answer": "The lot size is 800 shares. Retail minimum is 2 lots (1,600 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,52,800 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Vinit Mobile IPO?",
+      "answer": "The IPO size is ₹34.13 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Vinit Mobile shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 07 July 2026."
+    }
+  ]
+},
+{
+  "id": 115,
+  "name": "Atharva Polyplast Limited",
+  "logo": "/images/ipo/atharvapoly.png",
+  "minInvestment": "₹2,40,000",
+  "open": "30 Jun 2026",
+  "close": "02 Jul 2026",
+  "listing": "07 Jul 2026",
+  "price": "55-60",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Atharva Polyplast Limited",
+    "industry_sector": "Plastics (Precision Injection Moulded Components)",
+    "founded_year": "2014",
+    "promoters": [
+      "Anujit Shivaji Darade",
+      "Shivaji Kisan Darade",
+      "Ashish Shivaji Darade"
+    ],
+    "description": "Atharva Polyplast manufactures precision plastic components using injection moulding with materials such as Polypropylene (PP), ABS, HDPE, and engineering polymers. It serves industries including furniture, home appliances, and automotive. The company works with OEMs and Tier-1 suppliers, offering end-to-end solutions from mould design and prototyping to production and assembly. It operates a manufacturing facility of over 2.34 lakh sq. ft. in Bhosari, Pune, with ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 certifications."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Atharva Polyplast Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹55",
+    "price_band_max": "₹60",
+    "lot_size": "2000 Shares",
+    "total_issue_size": "45,00,000 Equity Shares (₹27 Cr)",
+    "fresh_issue_size": "45,00,000 Equity Shares (₹27 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "45,00,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹55 to ₹60",
+    "minimum_investment": "₹2,40,000 (Upper price band)",
+    "market_cap_post_issue": "₹101.10 Cr (Pre-issue)",
+    "pre_issue_shareholding": "1,23,49,998 shares (100% Promoter)",
+    "post_issue_shareholding": "1,68,49,998 shares"
+  },
+
+  "company_overview": {
+    "business_model": "B2B manufacturing of precision plastic injection moulded components with in-house mould design, prototyping, production, assembly, and quality control for OEMs and Tier-1 suppliers.",
+    "products_services": [
+      "Precision Plastic Injection Moulded Components",
+      "Components for Furniture",
+      "Home Appliances Parts",
+      "Automotive Plastic Parts",
+      "Custom Moulded Products (PP, ABS, HDPE, Engineering Polymers)"
+    ],
+    "competitive_strengths": [
+      "Strong relationships with established customers",
+      "Experienced Promoters and Management",
+      "Comprehensive range of plastic components",
+      "Sustainable and responsible manufacturing",
+      "Diversified geographical reach",
+      "Modern manufacturing facility with multiple large-tonnage machines"
+    ],
+    "risks": [
+      "Raw material price volatility (polymers)",
+      "Dependence on key industries (furniture, appliances, auto)",
+      "Competition in plastic components manufacturing",
+      "Working capital intensive operations",
+      "SME liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jun 2026",
+    "ipo_close_date": "02 Jul 2026",
+    "basis_of_allotment_date": "03 Jul 2026",
+    "refund_initiation_date": "06 Jul 2026",
+    "demat_credit_date": "06 Jul 2026",
+    "listing_date": "07 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure": "₹3.00 Cr",
+    "repayment_of_borrowings": "₹3.00 Cr",
+    "working_capital_requirements": "₹13.00 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.84% of Net Issue (incl. Anchor)",
+    "hni_nii_quota": "15.02% of Net Issue",
+    "retail_quota": "35.14% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "4,000",
+      "amount": "₹2,40,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "6,000",
+      "amount": "₹3,60,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 Lots",
+      "shares": "18,000",
+      "amount": "₹10,80,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "30.74% (Jan 2026) / 51.00% (Mar 2025)",
+    "roce": "24.92% (Jan 2026) / 35.31% (Mar 2025)",
+    "pat_margin": "11.14% (Jan 2026) / 11.12% (Mar 2025)",
+    "ebitda_margin": "19.71% (Jan 2026) / 19.32% (Mar 2025)",
+    "eps": "₹4.28 (Pre) / ₹3.37 (Post)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.57 (Jan 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "10M FY2026 (31 Jan 2026)",
+      "assets": "₹42.54 Cr",
+      "total_income": "₹43.90 Cr",
+      "pat": "₹4.73 Cr",
+      "ebitda": "₹8.36 Cr",
+      "net_worth": "₹17.73 Cr",
+      "total_borrowing": "₹10.04 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹30.88 Cr",
+      "total_income": "₹49.06 Cr",
+      "pat": "₹5.29 Cr",
+      "ebitda": "₹9.19 Cr",
+      "net_worth": "₹13.01 Cr",
+      "total_borrowing": "₹7.91 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹32.66 Cr",
+      "total_income": "₹43.09 Cr",
+      "pat": "₹2.00 Cr",
+      "ebitda": "₹6.05 Cr",
+      "net_worth": "₹7.72 Cr",
+      "total_borrowing": "₹13.59 Cr"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹32.92 Cr",
+      "total_income": "₹46.82 Cr",
+      "pat": "₹0.71 Cr",
+      "ebitda": "₹4.77 Cr",
+      "net_worth": "₹5.72 Cr",
+      "total_borrowing": "₹16.16 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Horizon Management Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "W-163A, S Block, MIDC Bhosari, Pune, Maharashtra - 411026",
+    "company_website": "https://atharvapolyplast.in/",
+    "company_email": "atharvapolyplast.smeipo@in.mpms.mufg.com",
+    "company_phone": "+91 94220 49184"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/atharva-polyplast-ipo-rhp.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Atharva Polyplast Limited do?",
+      "answer": "The company manufactures precision plastic injection moulded components for furniture, home appliances, and automotive industries."
+    },
+    {
+      "question": "When does the Atharva Polyplast IPO open and close?",
+      "answer": "The IPO opens on 30 June 2026 and closes on 02 July 2026."
+    },
+    {
+      "question": "What is the issue price of Atharva Polyplast IPO?",
+      "answer": "The IPO price band is ₹55 to ₹60 per share."
+    },
+    {
+      "question": "What is the lot size of Atharva Polyplast IPO?",
+      "answer": "The lot size is 2,000 shares. Retail minimum is 2 lots (4,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,40,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Atharva Polyplast IPO?",
+      "answer": "The IPO size is ₹27 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Atharva Polyplast shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 07 July 2026."
+    }
+  ]
 }
 
 
