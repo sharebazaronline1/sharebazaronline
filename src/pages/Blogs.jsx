@@ -59,7 +59,7 @@ const BlogCard = ({ post, index, onClick }) => {
 
           <h3
             className="
-              font-medium
+              font-semibold
               text-gray-900
               text-[10px]
               sm:text-sm
@@ -68,7 +68,7 @@ const BlogCard = ({ post, index, onClick }) => {
               line-clamp-3
             "
           >
-            {post.title}
+            {post.heading}
           </h3>
 
           <p className="text-sm text-gray-500 mt-3">
