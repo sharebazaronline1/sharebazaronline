@@ -240,7 +240,7 @@ useEffect(() => {
     text-sm sm:text-base
   "
 >
-  Explore IPOs
+  Explore IPO
 </button>
 
 <button
@@ -262,6 +262,26 @@ useEffect(() => {
   "
 >
   Compare Brokers
+</button>
+<button
+  onClick={() => navigate("/pre-ipo-stocks")}
+  className="
+    flex-1
+    sm:flex-none
+    px-4 sm:px-8
+    py-3 sm:py-4
+    rounded-2xl
+    border
+    border-green-500
+    bg-white
+    text-green-700
+    font-bold
+    hover:bg-green-50
+    transition
+    text-sm sm:text-base
+  "
+>
+  Pre IPO
 </button>
 
         </div>

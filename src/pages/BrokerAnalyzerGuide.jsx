@@ -302,6 +302,15 @@ const BrokerAnalyzerGuide = () => {
               key={idx}
               className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden w-full hover:shadow-md transition-shadow duration-300"
             >
+              <div className="flex justify-end p-4 pb-0">
+  <button
+    onClick={() => navigate(`/comparebrokers/${broker.name.toLowerCase().replace(/\s+/g, "-")}`)}
+    className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-600 text-white hover:bg-emerald-700 transition"
+  >
+    Open
+   
+  </button>
+</div>
               <div className="flex flex-col md:flex-row items-start p-6 md:p-8 gap-6 md:gap-10">
                 {/* Left: Logo + Name + Type + Rating */}
                 <div className="flex flex-col items-center md:items-start min-w-[180px] md:min-w-[220px] text-center md:text-left">
@@ -399,6 +408,7 @@ const BrokerAnalyzerGuide = () => {
             ].map((rec, idx) => (
               <div
                 key={idx}
+                  onClick={() => navigate("/comparebrokers")}
                 className="bg-gray-50 border border-gray-200 rounded-xl p-5 text-center hover:border-gray-300 transition"
               >
                 <h4 className="text-lg font-semibold text-gray-800 mb-4">{rec.title}</h4>

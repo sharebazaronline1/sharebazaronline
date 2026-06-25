@@ -357,9 +357,6 @@ const Footer = () => {
                 <li><Link to="/ipo/ipo-list" className="hover:text-green-400 transition">IPO Updates</Link></li>
                 <li><Link to="/pre-ipo-stocks" className="hover:text-green-400 transition">Unlisted Shares</Link></li>
                 <li><Link to="/broker-analyzer" className="hover:text-green-400 transition">Broker Comparison</Link></li>
-                <li><Link to="/skill-up" className="hover:text-green-400 transition">Options</Link></li>
-                <li><Link to="/skill-up" className="hover:text-green-400 transition">Futures</Link></li>
-                <li><Link to="/skill-up" className="hover:text-green-400 transition">Commodity</Link></li>
                 <li><Link to="/skill-up" className="hover:text-green-400 transition">ETFs</Link></li>
                 <li><Link to="/skill-up" className="hover:text-green-400 transition">Mutual Funds</Link></li>
                 <li><Link to="/skill-up" className="hover:text-green-400 transition">NFO</Link></li>
@@ -413,14 +410,7 @@ const Footer = () => {
       </a>
     </li>
 
-    <li>
-      <Link
-        to="/skill-up"
-        className="hover:text-green-400 transition"
-      >
-        Glossary
-      </Link>
-    </li>
+    
 
   </ul>
 
@@ -458,7 +448,7 @@ const Footer = () => {
                 to="/"
                 className="hover:text-green-400 transition"
               >
-                Terms of Service
+                Terms and Conditions
               </Link>
 
               <Link

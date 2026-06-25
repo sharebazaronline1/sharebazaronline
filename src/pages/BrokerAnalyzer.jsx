@@ -143,7 +143,7 @@ const BrokerCard = ({ broker }) => {
         </button>
 
         <button
-          onClick={() => navigate(`/broker/${broker.id}`)}
+          onClick={() => navigate("/comparebrokers")}
           className="
             flex-1
             py-2
