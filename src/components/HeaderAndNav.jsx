@@ -137,9 +137,10 @@ const { data: { subscription } } =
         <div className="flex items-center justify-between h-16">
 
           {/* Logo - Left side */}
-          <Link to="/" className="flex items-center flex-shrink-0">
-            <img src="/images/sharebazaar.png" alt="ShareBazaarOnline" className="h-6 w-auto" />
-          </Link>
+         {/* Logo - Left side */}
+<Link to="/" className="flex items-center flex-shrink-0 -ml-2 lg:-ml-16">
+  <img src="/images/sharebazaar.png" alt="ShareBazaarOnline" className="h-6 w-auto" />
+</Link>
 
           {/* All Menu Items + Login/Profile - Right side */}
           <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold">
@@ -205,7 +206,7 @@ const { data: { subscription } } =
                 <Link to="/comparebrokers" className="block px-4 py-2 hover:bg-gray-50 rounded-xl">Compare Brokers</Link>
               </div>
             </div>
-
+ <Link to="/corporateactions" className="text-gray-700 hover:text-[#1e40af] transition">Corporate Actions</Link>
             <Link to="/insight-hub" className="text-gray-700 hover:text-[#1e40af] transition">Insight Hub</Link>
             <Link to="/skill-up" className="text-gray-700 hover:text-[#1e40af] transition">SkillUp</Link>
 
@@ -420,7 +421,13 @@ const { data: { subscription } } =
                 </div>
               )}
             </div>
-
+ <Link
+              to="/corporateactions"
+              className="block py-2 text-gray-800"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Corporate Actions
+            </Link>
             <Link
               to="/insight-hub"
               className="block py-2 text-gray-800"

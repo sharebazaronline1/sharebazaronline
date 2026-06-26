@@ -47,6 +47,8 @@ import AdminOrders from "./pages/AdminOrders"
 import NotFound from "./pages/NotFound";
 import AdminBlog from "./pages/AdminBlog";
 import BrokerCompare from "./pages/BrokerCompare";
+import AdminDividends from "./pages/AdminCorporateActions";
+import CorporateActions from "./pages/CorporateActions"
 // Optional: If you want admin to have its own layout without user sidebar/header
 function AdminLayout() {
   const location = useLocation();
@@ -122,6 +124,7 @@ const hideHeader =
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
                  <Route path="/comparebrokers" element={<BrokerCompare />} />
+                  <Route path="/corporateactions" element={<CorporateActions />} />
 
               {/* Login & Referral */}
               <Route path="/login" element={<Login />} />
@@ -151,6 +154,7 @@ const hideHeader =
                 <Route path="/admin-orders" element={<AdminOrders />} />
                 <Route path="/admin-blogs" element={<AdminBlog />} />
                 <Route path="/admin-signals" element={<AdminSignals />} />
+                <Route path="/admin-corporate" element={<AdminDividends />} />
                 
               </Route>
 
