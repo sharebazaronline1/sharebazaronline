@@ -23298,7 +23298,1130 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 07 July 2026."
     }
   ]
+},
+{
+  "id": 116,
+  "name": "Kratikal Tech Limited",
+  "logo": "/images/ipo/kratikaltech.png",
+  "minInvestment": "₹2,70,000",
+  "open": "30 Jun 2026",
+  "close": "02 Jul 2026",
+  "listing": "07 Jul 2026",
+  "price": "128-135",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "Kratikal Tech Limited",
+    "industry_sector": "Cybersecurity (AI-driven SaaS & Consulting)",
+    "founded_year": "2013",
+    "promoters": [
+      "Pavan Kumar",
+      "Paratosh Kumar",
+      "Dip Jung Thapa"
+    ],
+    "description": "Kratikal Tech Limited is an AI-driven cybersecurity company providing SaaS-based cyber risk management solutions through its proprietary platforms (Threatcop for People Security Management and AutoSecT for Vulnerability Management) and comprehensive cybersecurity consulting services. It offers VAPT, red teaming, GRC, vCISO, and awareness programs. The company serves BFSI, fintech, IT/ITES, healthcare, manufacturing, and e-commerce sectors in India and international markets. It is CERT-In empanelled and NSE empanelled for system audits."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Kratikal Tech Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹128",
+    "price_band_max": "₹135",
+    "lot_size": "1000 Shares",
+    "total_issue_size": "29,40,000 Equity Shares (₹39.69 Cr)",
+    "fresh_issue_size": "29,40,000 Equity Shares (₹39.69 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "29,40,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹128 to ₹135",
+    "minimum_investment": "₹2,70,000 (Upper price band)",
+    "market_cap_post_issue": "₹149.86 Cr (Pre-issue)",
+    "pre_issue_shareholding": "81,60,545 shares",
+    "post_issue_shareholding": "1,11,00,545 shares"
+  },
+
+  "company_overview": {
+    "business_model": "SaaS-based cybersecurity platforms (Threatcop & AutoSecT) + professional consulting services (VAPT, GRC, Red Teaming, vCISO).",
+    "products_services": [
+      "Threatcop (People Security Management SaaS)",
+      "AutoSecT (AI-powered VMDR & Penetration Testing)",
+      "Vulnerability Assessment & Penetration Testing (VAPT)",
+      "Red Teaming Exercises",
+      "Governance, Risk & Compliance (GRC) Services",
+      "Virtual CISO (vCISO) Services",
+      "Cybersecurity Awareness Programs"
+    ],
+    "competitive_strengths": [
+      "Comprehensive People Security Management platform",
+      "AI-driven cybersecurity and vulnerability management solutions",
+      "Real-time DMARC monitoring",
+      "End-to-end coverage across people, process, and technology",
+      "Proprietary platforms (Threatcop & AutoSecT)",
+      "CERT-In empanelment and regulatory credibility",
+      "Diverse service portfolio and experienced team"
+    ],
+    "risks": [
+      "Intense competition in cybersecurity sector",
+      "Dependence on technology evolution and AI effectiveness",
+      "Relatively short operating history in high-growth SaaS model",
+      "Cybersecurity execution and data privacy risks",
+      "SME liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jun 2026",
+    "ipo_close_date": "02 Jul 2026",
+    "basis_of_allotment_date": "03 Jul 2026",
+    "refund_initiation_date": "06 Jul 2026",
+    "demat_credit_date": "06 Jul 2026",
+    "listing_date": "07 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "investment_in_subsidiaries": "₹23.08 Cr (for sales & marketing and workforce in UAE & USA subsidiaries)",
+    "product_development": "₹9.23 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.78% of Net Issue",
+    "hni_nii_quota": "15.16% of Net Issue",
+    "retail_quota": "35.05% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "2000",
+      "amount": "₹2,70,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "3000",
+      "amount": "₹4,05,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "8000",
+      "amount": "₹10,80,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "34.95%",
+    "roce": "34.35%",
+    "pat_margin": "16.73%",
+    "ebitda_margin": "24.73%",
+    "eps": "₹7.53 (Pre) / ₹5.53 (Post)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.00"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹30.12 Cr",
+      "total_income": "₹36.86 Cr",
+      "pat": "₹6.14 Cr",
+      "ebitda": "₹9.08 Cr",
+      "net_worth": "₹24.02 Cr",
+      "total_borrowing": "₹0.01 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹15.58 Cr",
+      "total_income": "₹21.15 Cr",
+      "pat": "₹3.81 Cr",
+      "ebitda": "₹5.51 Cr",
+      "net_worth": "₹11.13 Cr",
+      "total_borrowing": "₹0.01 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹9.05 Cr",
+      "total_income": "₹13.28 Cr",
+      "pat": "₹3.20 Cr",
+      "ebitda": "₹3.87 Cr",
+      "net_worth": "₹6.56 Cr",
+      "total_borrowing": "₹0.03 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Beeline Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "5th Floor, A-5, Sector 68, Grovy Optiva, Gautam Buddha Nagar, Noida, Uttar Pradesh - 201301",
+    "company_website": "https://kratikal.com",
+    "company_email": "cs@kratikal.com",
+    "company_phone": "+91 92208 41199"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://kratikal.com/static/IPO-Compliance/kratikal-rhp.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Kratikal Tech Limited do?",
+      "answer": "The company provides AI-driven cybersecurity SaaS platforms (Threatcop & AutoSecT) and consulting services including VAPT, GRC, and awareness programs."
+    },
+    {
+      "question": "When does the Kratikal Tech IPO open and close?",
+      "answer": "The IPO opens on 30 June 2026 and closes on 02 July 2026."
+    },
+    {
+      "question": "What is the issue price of Kratikal Tech IPO?",
+      "answer": "The IPO price band is ₹128 to ₹135 per share."
+    },
+    {
+      "question": "What is the lot size of Kratikal Tech IPO?",
+      "answer": "The lot size is 1,000 shares. Retail minimum is 2 lots (2,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,70,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Kratikal Tech IPO?",
+      "answer": "The IPO size is ₹39.69 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Kratikal Tech shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 07 July 2026."
+    }
+  ]
+},
+{
+  "id": 117,
+  "name": "Sampark India Logistics Limited",
+  "logo": "/images/ipo/samparkindialogistics.png",
+  "minInvestment": "₹2,68,800",
+  "open": "30 Jun 2026",
+  "close": "02 Jul 2026",
+  "listing": "07 Jul 2026",
+  "price": "80-84",
+  "lot": 1600,
+
+  "about_company": {
+    "company_name": "Sampark India Logistics Limited",
+    "industry_sector": "Logistics & Supply Chain (Carrying & Forwarding Agent)",
+    "founded_year": "2012",
+    "promoters": [
+      "Not explicitly listed in summary (Experienced leadership mentioned)"
+    ],
+    "description": "Sampark India Logistics Limited is engaged in providing end-to-end logistics and supply chain solutions as a carrying and forwarding agent. It offers integrated services including freight forwarding, warehousing, and distribution for bulk goods across industries such as automotive, pharmaceuticals, consumer durables, and textiles. The company operates a PAN-India network of 50 branch offices across 18 states and manages 8 leased warehouses totaling 1,24,500 sq. ft."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Sampark India Logistics Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹80",
+    "price_band_max": "₹84",
+    "lot_size": "1600 Shares",
+    "total_issue_size": "32,40,000 Equity Shares (₹27.22 Cr)",
+    "fresh_issue_size": "32,40,000 Equity Shares (₹27.22 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "32,40,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹80 to ₹84",
+    "minimum_investment": "₹2,68,800 (Upper price band)",
+    "market_cap_post_issue": "₹102.97 Cr (Pre-issue)",
+    "pre_issue_shareholding": "90,18,750 shares",
+    "post_issue_shareholding": "1,22,58,750 shares"
+  },
+
+  "company_overview": {
+    "business_model": "B2B logistics services including freight transportation (FTL/LTL), warehousing, and distribution with PAN-India network and IT-enabled operations.",
+    "products_services": [
+      "Full Truck Load (FTL) Transportation",
+      "Less Than Truck Load (LTL) Services",
+      "Warehousing & Distribution",
+      "Freight Forwarding",
+      "Supply Chain Solutions"
+    ],
+    "competitive_strengths": [
+      "Expertise-driven leadership",
+      "Commitment to quality assurance",
+      "Long-term client relationships",
+      "Comprehensive end-to-end logistics solutions",
+      "PAN India presence",
+      "Quicker Smart Service (QSS)"
+    ],
+    "risks": [
+      "Competition in logistics sector",
+      "Fuel price volatility",
+      "Dependence on key industries",
+      "Working capital intensive operations",
+      "SME liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jun 2026",
+    "ipo_close_date": "02 Jul 2026",
+    "basis_of_allotment_date": "03 Jul 2026",
+    "refund_initiation_date": "06 Jul 2026",
+    "demat_credit_date": "06 Jul 2026",
+    "listing_date": "07 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹19.72 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.82% of Net Issue",
+    "hni_nii_quota": "15.13% of Net Issue",
+    "retail_quota": "35.05% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "3,200",
+      "amount": "₹2,68,800"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "4,800",
+      "amount": "₹4,03,200"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "12,800",
+      "amount": "₹10,75,200"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "14.39% (Dec 2025) / 23.29% (Mar 2025)",
+    "roce": "21.01% (Dec 2025) / 33.54% (Mar 2025)",
+    "pat_margin": "Not specified",
+    "ebitda_margin": "Not specified",
+    "eps": "Not specified",
+    "nav": "Not specified",
+    "debt_to_equity": "0.89"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "9M FY2026 (31 Dec 2025)",
+      "assets": "₹121.37 Cr",
+      "total_income": "₹153.24 Cr",
+      "pat": "₹6.32 Cr",
+      "ebitda": "₹12.97 Cr",
+      "net_worth": "₹43.93 Cr",
+      "total_borrowing": "₹39.15 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹110.45 Cr",
+      "total_income": "₹201.62 Cr",
+      "pat": "₹8.76 Cr",
+      "ebitda": "₹16.16 Cr",
+      "net_worth": "₹37.61 Cr",
+      "total_borrowing": "₹33.55 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹104.66 Cr",
+      "total_income": "₹182.63 Cr",
+      "pat": "₹6.37 Cr",
+      "ebitda": "₹12.01 Cr",
+      "net_worth": "₹28.85 Cr",
+      "total_borrowing": "₹33.39 Cr"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹80.44 Cr",
+      "total_income": "₹188.18 Cr",
+      "pat": "₹3.28 Cr",
+      "ebitda": "₹8.33 Cr",
+      "net_worth": "₹22.47 Cr",
+      "total_borrowing": "₹25.76 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Maashitla Securities Pvt. Ltd.",
+    "registrar_website": "https://maashitla.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Finshore Management Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No.48, Bhule Ram Colony, Block B, Gali No.7, Rangpuri Extension, Palam Airport, Delhi - 110037",
+    "company_website": "https://silpl.rathigroup.info",
+    "company_email": "compliance@silpl.com",
+    "company_phone": "+91 93555 79723"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://silpl.rathigroup.info/assets/images/ipo/rhp_sampark_bse_22062026_final.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Sampark India Logistics Limited do?",
+      "answer": "The company provides end-to-end logistics and supply chain solutions as a carrying and forwarding agent."
+    },
+    {
+      "question": "When does the Sampark India Logistics IPO open and close?",
+      "answer": "The IPO opens on 30 June 2026 and closes on 02 July 2026."
+    },
+    {
+      "question": "What is the issue price of Sampark India Logistics IPO?",
+      "answer": "The IPO price band is ₹80 to ₹84 per share."
+    },
+    {
+      "question": "What is the lot size of Sampark India Logistics IPO?",
+      "answer": "The lot size is 1,600 shares. Retail minimum is 2 lots (3,200 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,68,800 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Sampark India Logistics IPO?",
+      "answer": "The IPO size is ₹27.22 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Sampark India Logistics shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 07 July 2026."
+    }
+  ]
+},
+{
+  "id": 118,
+  "name": "Seemax Resources Limited",
+  "logo": "/images/ipo/seemaxresources.png",
+  "minInvestment": "₹2,82,000",
+  "open": "30 Jun 2026",
+  "close": "02 Jul 2026",
+  "listing": "07 Jul 2026",
+  "price": "134-141",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "Seemax Resources Limited",
+    "industry_sector": "Material Handling Equipment (Rental, Trading & Services)",
+    "founded_year": "2015",
+    "promoters": [
+      "Amit Naldev Trivedi",
+      "Seema Trivedi"
+    ],
+    "description": "Seemax Resources Limited provides material handling equipment solutions through trading, rental, leasing, maintenance, and servicing of forklifts, cranes, stackers, reach trucks, pallet trucks, and other industrial machinery. It caters to industries including automotive, steel, cement, textiles, warehousing & logistics, construction, ports, and aviation. The company offers comprehensive solutions for material movement and warehouse operations."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Seemax Resources Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹134",
+    "price_band_max": "₹141",
+    "lot_size": "1000 Shares",
+    "total_issue_size": "14,00,000 Equity Shares (₹19.74 Cr)",
+    "fresh_issue_size": "14,00,000 Equity Shares (₹19.74 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "14,00,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹134 to ₹141",
+    "minimum_investment": "₹2,82,000 (Upper price band)",
+    "market_cap_post_issue": "₹62.04 Cr (Pre-issue)",
+    "pre_issue_shareholding": "30,00,000 shares",
+    "post_issue_shareholding": "44,00,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Rental, trading, leasing, maintenance, and servicing of material handling equipment with a focus on operational efficiency for clients across multiple sectors.",
+    "products_services": [
+      "Forklifts",
+      "Cranes",
+      "Stackers & Reach Trucks",
+      "Pallet Trucks",
+      "Container Handling Equipment",
+      "Other Industrial Machinery (Rental, Sales & Servicing)"
+    ],
+    "competitive_strengths": [
+      "Comprehensive rental solutions with value-added services",
+      "Skilled and dedicated workforce",
+      "Quality assurance",
+      "Experienced promoters and technical expertise",
+      "Authorized dealership network"
+    ],
+    "risks": [
+      "Equipment maintenance and depreciation risks",
+      "Competition in material handling sector",
+      "Dependence on industrial and infrastructure activity",
+      "Capital intensive operations",
+      "SME liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jun 2026",
+    "ipo_close_date": "02 Jul 2026",
+    "basis_of_allotment_date": "03 Jul 2026",
+    "refund_initiation_date": "06 Jul 2026",
+    "demat_credit_date": "06 Jul 2026",
+    "listing_date": "07 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_for_equipment": "₹10.00 Cr",
+    "repayment_of_borrowings": "₹1.50 Cr",
+    "working_capital_requirements": "₹3.25 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "5.26% of Net Issue",
+    "hni_nii_quota": "49.62% of Net Issue",
+    "retail_quota": "45.11% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "2000",
+      "amount": "₹2,82,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "3000",
+      "amount": "₹4,23,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "8000",
+      "amount": "₹11,28,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "32.80% (Dec 2025) / 48.65% (Mar 2025)",
+    "roce": "31.72% (Dec 2025) / 43.09% (Mar 2025)",
+    "pat_margin": "19.52% (Dec 2025) / 15.52% (Mar 2025)",
+    "ebitda_margin": "30.55% (Dec 2025) / 33.63% (Mar 2025)",
+    "eps": "Not specified",
+    "nav": "Not specified",
+    "debt_to_equity": "1.65 (Dec 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "9M FY2026 (31 Dec 2025)",
+      "assets": "₹24.50 Cr",
+      "total_income": "₹12.43 Cr",
+      "pat": "₹2.24 Cr",
+      "ebitda": "₹3.51 Cr",
+      "net_worth": "₹7.96 Cr",
+      "total_borrowing": "₹13.13 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹18.46 Cr",
+      "total_income": "₹14.46 Cr",
+      "pat": "₹2.24 Cr",
+      "ebitda": "₹4.85 Cr",
+      "net_worth": "₹5.72 Cr",
+      "total_borrowing": "₹9.68 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹16.66 Cr",
+      "total_income": "₹11.41 Cr",
+      "pat": "₹1.43 Cr",
+      "ebitda": "₹3.78 Cr",
+      "net_worth": "₹3.48 Cr",
+      "total_borrowing": "₹10.94 Cr"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹11.34 Cr",
+      "total_income": "₹11.38 Cr",
+      "pat": "₹0.79 Cr",
+      "ebitda": "₹2.34 Cr",
+      "net_worth": "₹2.05 Cr",
+      "total_borrowing": "₹7.58 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Cameo Corporate Services Ltd.",
+    "registrar_website": "https://ipo.cameoindia.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Wealth Mine Networks Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "403, Mayfair Corporate Park, Behind DPS School, Kalali, Vadodara, Gujarat - 390012",
+    "company_website": "https://www.seemaxresources.com",
+    "company_email": "info@seemaxresources.com",
+    "company_phone": "+91 99040 89444"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://seemaxresources.com/img/ipo/RHP-Seemax-with-binder.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Seemax Resources Limited do?",
+      "answer": "The company provides material handling equipment solutions through rental, trading, leasing, maintenance, and servicing of forklifts, cranes, and other industrial machinery."
+    },
+    {
+      "question": "When does the Seemax Resources IPO open and close?",
+      "answer": "The IPO opens on 30 June 2026 and closes on 02 July 2026."
+    },
+    {
+      "question": "What is the issue price of Seemax Resources IPO?",
+      "answer": "The IPO price band is ₹134 to ₹141 per share."
+    },
+    {
+      "question": "What is the lot size of Seemax Resources IPO?",
+      "answer": "The lot size is 1,000 shares. Retail minimum is 2 lots (2,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,82,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Seemax Resources IPO?",
+      "answer": "The IPO size is ₹19.74 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Seemax Resources shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 07 July 2026."
+    }
+  ]
+},
+{
+  "id": 119,
+  "name": "Knack Packaging Limited",
+  "logo": "/images/ipo/knackpackaging.png",
+  "minInvestment": "₹14,960",
+  "open": "01 Jul 2026",
+  "close": "03 Jul 2026",
+  "listing": "08 Jul 2026",
+  "price": "161-170",
+  "lot": 88,
+
+  "about_company": {
+    "company_name": "Knack Packaging Limited",
+    "industry_sector": "Packaging Materials & Solutions",
+    "founded_year": "Not specified",
+    "promoters": [
+      "Not specified"
+    ],
+    "description": "Knack Packaging Limited is an innovation-oriented, export-led packaging solution provider globally. The company primarily designs, develops, and manufactures highly customizable Printed and Laminated Woven Polypropylene (PLWPP) bags and PLWPP pinch-bottom bags. It features an integrated 1.12 million sq. ft manufacturing base in Gujarat with an extensive repository of over 73,000 printing cylinders and handles a live production matrix exceeding 13,000 distinct SKUs."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Knack Packaging Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹161",
+    "price_band_max": "₹170",
+    "lot_size": "88 Shares",
+    "total_issue_size": "2,58,52,941 Equity Shares (₹439.50 Cr)",
+    "fresh_issue_size": "2,23,52,941 Equity Shares (₹380.00 Cr)",
+    "offer_for_sale": "35,00,000 Equity Shares (₹59.50 Cr)",
+    "shares_offered": "2,58,52,941 Equity Shares",
+    "listing_exchange": "BSE, NSE",
+    "issue_price": "₹161 to ₹170",
+    "minimum_investment": "₹14,960 (Upper price band)",
+    "market_cap_post_issue": "Not specified",
+    "pre_issue_shareholding": "10,00,00,000 shares",
+    "post_issue_shareholding": "Not specified"
+  },
+
+  "company_overview": {
+    "business_model": "The company earns revenue through B2B sales of customized flexible packaging solutions, manufacturing and delivering high-volume orders to branded businesses across multiple industry domains domestically and internationally.",
+    "products_services": [
+      "Printed and Laminated Woven Polypropylene (PLWPP) Bags",
+      "PLWPP Pinch-Bottom Bags",
+      "Gusset Bags",
+      "Block-Bottom Bags",
+      "Value Bags",
+      "Retail Shopping Bags"
+    ],
+    "competitive_strengths": [
+      "Dominant market stature with substantial domestic market share in flexible bulk PLWPP bags domain",
+      "Vertically integrated manufacturing and printing execution across a singular site driving down handling costs",
+      "Capability to produce highly complicated, customized packaging designs with accuracy",
+      "Extensive global reach serving over 1,950 B2B clients across 68+ international markets",
+      "Strong corporate partnerships with domestic and global industry leaders"
+    ],
+    "risks": [
+      "Significant dependence on export markets and global demand conditions",
+      "Raw material price fluctuations impacting operational margins",
+      "High competition within the industrial packaging sector",
+      "Exposure to foreign exchange fluctuations",
+      "Concentration risks related to manufacturing infrastructure being restricted to one place (Gujarat)"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "01 Jul 2026",
+    "ipo_close_date": "03 Jul 2026",
+    "basis_of_allotment_date": "06 Jul 2026",
+    "refund_initiation_date": "07 Jul 2026",
+    "demat_credit_date": "07 Jul 2026",
+    "listing_date": "08 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "partial_funding_of_capital_expenditure_for_new_facility": "₹320.00 Cr",
+    "general_corporate_purposes_and_issue_expenses": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Net Issue",
+    "hni_nii_quota": "Not less than 15% of the Net Issue",
+    "retail_quota": "Not less than 35% of the Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "88",
+      "amount": "₹14,960"
+    },
+    "retail_maximum": {
+      "lot_size": "13 Lots",
+      "shares": "1144",
+      "amount": "₹1,94,480"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "1232",
+      "amount": "₹2,09,440"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 Lots",
+      "shares": "5896",
+      "amount": "₹10,02,320"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "35.75% (Mar 2026) / 41.70% (Mar 2025)",
+    "roce": "46.71% (Mar 2026) / 50.36% (Mar 2025)",
+    "pat_margin": "10.99% (Mar 2026)",
+    "ebitda_margin": "20.42% (Mar 2026)",
+    "eps": "₹9.27 (Pre-IPO)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.62 (Mar 2026) / 0.80 (Mar 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹595.25 Cr",
+      "total_income": "₹843.77 Cr",
+      "pat": "₹92.72 Cr",
+      "ebitda": "₹172.29 Cr",
+      "net_worth": "₹308.19 Cr",
+      "total_borrowing": "₹192.47 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹449.36 Cr",
+      "total_income": "₹747.38 Cr",
+      "pat": "₹73.81 Cr",
+      "ebitda": "₹144.34 Cr",
+      "net_worth": "₹214.71 Cr",
+      "total_borrowing": "₹172.06 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹379.38 Cr",
+      "total_income": "₹659.01 Cr",
+      "pat": "₹45.98 Cr",
+      "ebitda": "₹101.37 Cr",
+      "net_worth": "₹140.62 Cr",
+      "total_borrowing": "₹173.09 Cr"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹269.33 Cr",
+      "total_income": "₹518.47 Cr",
+      "pat": "₹19.87 Cr",
+      "ebitda": "₹54.84 Cr",
+      "net_worth": "₹95.34 Cr",
+      "total_borrowing": "₹122.66 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹14",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "₹184"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Private Limited",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Systematix Corporate Services Ltd., IDBI Capital Markets & Securities Ltd., Pantomath Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "330/A, Kalasagar Shopping Hub, Opp. Saibaba Temple, Satadhar Cross Road, Ghatlodiya, Ahmedabad, Gujarat - 380061",
+    "company_website": "https://knackpackaging.com",
+    "company_email": "compliance@knackpackaging.com",
+    "company_phone": "+91 9925171483"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://knackpackaging.com/INV/KnackPackagingLimited-RHP.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Knack Packaging Limited do?",
+      "answer": "The company designs, develops, and manufactures highly customizable Printed and Laminated Woven Polypropylene (PLWPP) bags and packaging products for food, agriculture, and industrial applications globally."
+    },
+    {
+      "question": "When does the Knack Packaging IPO open and close?",
+      "answer": "The IPO opens on 01 July 2026 and closes on 03 Jul 2026."
+    },
+    {
+      "question": "What is the issue price of Knack Packaging IPO?",
+      "answer": "The IPO price band is set at ₹161 to ₹170 per share."
+    },
+    {
+      "question": "What is the lot size of Knack Packaging IPO?",
+      "answer": "The lot size is 88 shares. Retail minimum application is 1 lot (88 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,960 (upper price band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Knack Packaging IPO?",
+      "answer": "The total IPO size is ₹439.50 crore, consisting of a Fresh Issue of ₹380.00 crore and an Offer for Sale of ₹59.50 crore."
+    },
+    {
+      "question": "Where will Knack Packaging shares be listed?",
+      "answer": "The shares will be listed as a Mainboard issue on BSE and NSE on 08 July 2026."
+    }
+  ]
+},
+{
+  "id": 120,
+  "name": "Teja Engineering Industries Limited",
+  "logo": "/images/ipo/tejaengineering.png",
+  "minInvestment": "₹2,64,000",
+  "open": "30 Jun 2026",
+  "close": "02 Jul 2026",
+  "listing": "07 Jul 2026",
+  "price": "220",
+  "lot": 600,
+
+  "about_company": {
+    "company_name": "Teja Engineering Industries Limited",
+    "industry_sector": "Oil & Gas, Power, and Energy Infrastructure Services",
+    "founded_year": "2023",
+    "promoters": [
+      "Not specified"
+    ],
+    "description": "Teja Engineering Industries Limited provides comprehensive technical services across the Oil & Gas, Power, and Energy sectors. Its service profile encompasses Operation & Maintenance (O&M), Annual Maintenance Contracts (AMC), Erection & Commissioning (E&C), stainless-steel tubing installations, instrument calibration, overhauling, and non-destructive testing of pressure vessels and safety relief valves. It heavily supports OEMs, CNG compressor packagers, and city gas distribution networks."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Teja Engineering Industries Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Fixed Price IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹220",
+    "price_band_max": "₹220",
+    "lot_size": "600 Shares",
+    "total_issue_size": "16,98,000 Equity Shares (₹37.36 Cr)",
+    "fresh_issue_size": "16,98,000 Equity Shares (₹37.36 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "16,98,000 Equity Shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹220",
+    "minimum_investment": "₹2,64,000",
+    "market_cap_post_issue": "₹141.18 Cr",
+    "pre_issue_shareholding": "47,19,300 shares",
+    "post_issue_shareholding": "64,17,300 shares"
+  },
+
+  "company_overview": {
+    "business_model": "The company operates a project and contract-based B2B framework providing field-level engineering, installation, regulatory testing, and continuous lifecycle maintenance services to public and private sector energy enterprises.",
+    "products_services": [
+      "Operation & Maintenance (O&M) Services",
+      "Annual Maintenance Contracts (AMC)",
+      "Erection & Commissioning (E&C) & Project Works",
+      "Stainless-Steel Tubing Installations",
+      "Instrument Calibration",
+      "Testing & Servicing of Safety Relief Valves (SRVs)",
+      "Non-Destructive Thickness Testing of Pressure Vessels"
+    ],
+    "competitive_strengths": [
+      "Specialized engineering and maintenance expertise within the growing city gas distribution sector",
+      "Strong historical execution track record inheriting the legacy of its predecessor firm",
+      "Multi-state workflow presence optimizing service delivery across active energy grids",
+      "ISO 9001:2015, ISO 14001:2015, and ISO 45001:2018 multi-certified operational frameworks",
+      "Robust core workforce of industry-specific technical professionals"
+    ],
+    "risks": [
+      "Sustainability of rapidly escalating operational profit margins",
+      "Revenue reliance on periodic project-based execution timelines and contract renewals",
+      "Highly fragmented and fiercely competitive domestic engineering services landscape",
+      "Vulnerability to delays or capital slowdowns in larger infrastructure and industrial projects",
+      "Concentration of operations primarily within the Indian domestic energy segment"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jun 2026",
+    "ipo_close_date": "02 Jul 2026",
+    "basis_of_allotment_date": "03 Jul 2026",
+    "refund_initiation_date": "06 Jul 2026",
+    "demat_credit_date": "06 Jul 2026",
+    "listing_date": "07 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_for_machinery_and_equipment": "₹18.06 Cr",
+    "funding_working_capital_requirements": "₹9.26 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Nil",
+    "hni_nii_quota": "50.00% of Net Issue",
+    "retail_quota": "50.00% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "1200",
+      "amount": "₹2,64,000"
+    },
+    "retail_maximum": {
+      "lot_size": "2 Lots",
+      "shares": "1200",
+      "amount": "₹2,64,000"
+    },
+    "hni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "1800",
+      "amount": "₹3,96,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "42.44% (Mar 2025)",
+    "roce": "18.47% (Dec 2025) / 26.14% (Mar 2025)",
+    "pat_margin": "9.84% (Dec 2025) / 7.69% (Mar 2025)",
+    "ebitda_margin": "12.42% (Mar 2025)",
+    "eps": "₹8.80 (Diluted Pre-IPO)",
+    "nav": "₹26.72 (Mar 2025)",
+    "debt_to_equity": "1.01 (Mar 2025)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "9M FY2026 (31 Dec 2025)",
+      "assets": "₹48.26 Cr",
+      "total_income": "₹54.32 Cr",
+      "pat": "Not specified",
+      "ebitda": "Not specified",
+      "net_worth": "Not specified",
+      "total_borrowing": "Not specified"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹33.09 Cr",
+      "total_income": "₹55.23 Cr",
+      "pat": "₹4.02 Cr",
+      "ebitda": "₹6.86 Cr",
+      "net_worth": "₹12.61 Cr",
+      "total_borrowing": "₹12.85 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹20.95 Cr",
+      "total_income": "₹31.62 Cr",
+      "pat": "₹2.16 Cr",
+      "ebitda": "₹3.78 Cr",
+      "net_worth": "₹6.65 Cr",
+      "total_borrowing": "₹7.09 Cr"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹14.26 Cr",
+      "total_income": "₹24.58 Cr",
+      "pat": "₹0.79 Cr",
+      "ebitda": "₹2.34 Cr",
+      "net_worth": "₹2.05 Cr",
+      "total_borrowing": "₹7.58 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹0",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jun 2026",
+    "estimated_listing_price": "₹220"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "KFin Technologies Limited",
+    "registrar_website": "https://kosmic.kfintech.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Interactive Financial Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "A/14 Shantiniketan Society, Near Shravan Chokdi, Bharuch, Gujarat - 392001",
+    "company_website": "https://www.tejaengineering.com",
+    "company_email": "info@tejaengineering.com",
+    "company_phone": "02642-239705"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "Available",
+    "prospectus_pdf": "https://ifinservices.in/pdf/teja-FINAL-PROSPECTUS.pdf",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Teja Engineering Industries Limited do?",
+      "answer": "The company specializes in natural gas compression lifecycle services, pipeline infrastructure, and comprehensive operation and maintenance (O&M) technical solutions across the oil, gas, and energy sectors."
+    },
+    {
+      "question": "When does the Teja Engineering Industries IPO open and close?",
+      "answer": "The IPO opens on 30 June 2026 and closes on 02 July 2026."
+    },
+    {
+      "question": "What is the issue price of Teja Engineering Industries IPO?",
+      "answer": "The IPO is a Fixed Price issue set at ₹220 per share."
+    },
+    {
+      "question": "What is the lot size of Teja Engineering Industries IPO?",
+      "answer": "The dynamic lot structural minimum for a retail application requires bidding for 2 lots, which equals 1,200 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,64,000 for the mandatory minimum of 1,200 shares."
+    },
+    {
+      "question": "What is the issue size of Teja Engineering Industries IPO?",
+      "answer": "The total IPO fresh issue size is ₹37.36 crore."
+    },
+    {
+      "question": "Where will Teja Engineering Industries shares be listed?",
+      "answer": "The shares will be listed on the NSE SME platform on 07 July 2026."
+    }
+  ]
 }
+
 
 
 
