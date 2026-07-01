@@ -1,51 +1,72 @@
 // src/pages/AdminCorporateActions.jsx
+
 import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabase";
 import AdminSidebar from "../components/AdminSidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
-import { Save, Plus, Trash2, Loader2, CheckCircle, Edit2 } from "lucide-react";
+import { Save, Plus, Trash2, Loader2, CheckCircle, Edit2, X, RefreshCw } from "lucide-react";
 
 const AdminCorporateActions = () => {
-  const [activeTab, setActiveTab] = useState("dividends");
+  const [activeTab, setActiveTab] = useState("buyback");
   const [submitLoading, setSubmitLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [fetchLoading, setFetchLoading] = useState(false);
-
-  // Form Data for Adding New
-  const [data, setData] = useState({
-    dividends: [{ company: "", type: "Final", percentage: "", announcement: "", record: "", ex_dividend: "" }],
-    rights: [{ company: "", ratio: "", premium: "", announcement: "", record: "", ex_rights: "" }],
-    bonus: [{ company: "", ratio: "", announcement: "", record: "", ex_bonus: "" }],
-    splits: [{ company: "", old_fv: "", new_fv: "", announcement: "", record: "", split_date: "" }],
-  });
-
-  // Existing Records
   const [existingRecords, setExistingRecords] = useState([]);
   const [editModal, setEditModal] = useState(null);
 
+  // Form Data schemas strictly aligned to standard inputs and mock dataset columns
+  const [data, setData] = useState({
+    buyback: [{ company: "", buyback_price: "", cmp: "", premium: "", record: "", size: "" }],
+    dividends: [{ company: "", type: "Final Dividend", percentage: "", announcement: "", record: "", ex_date: "", payment_date: "" }],
+    rights: [{ company: "", ratio: "", rights_price: "", market_price: "", discount: "", announcement: "", record: "", ex_date: "" }],
+    bonus: [{ company: "", ratio: "", announcement: "", record: "", ex_date: "" }],
+    splits: [{ company: "", ratio: "", old_fv: "", new_fv: "", announcement: "", record: "", ex_date: "" }],
+    other: [{ company: "", action_type: "", key_detail: "", announcement: "", record: "", ex_date: "", status: "Completed" }],
+  });
+
   const tabs = [
+    { id: "buyback", label: "Buyback", dbType: "buyback" },
     { id: "dividends", label: "Dividends", dbType: "dividend" },
     { id: "rights", label: "Rights Issue", dbType: "rights" },
-    { id: "bonus", label: "Bonus Shares", dbType: "bonus" },
-    { id: "splits", label: "Stock Splits", dbType: "split" },
+    { id: "bonus", label: "Bonus Issue", dbType: "bonus" },
+    { id: "splits", label: "Stock Split", dbType: "split" },
+    { id: "other", label: "Other Actions", dbType: "other" },
   ];
 
-  const currentTabConfig = tabs.find(t => t.id === activeTab);
+  const currentTabConfig = tabs.find((t) => t.id === activeTab);
   const currentData = data[activeTab];
-  const setCurrentData = (newData) => setData(prev => ({ ...prev, [activeTab]: newData }));
+  const setCurrentData = (newData) => setData((prev) => ({ ...prev, [activeTab]: newData }));
 
-  // Fetch Records
+  const otherActionTypes = [
+    "Merger", "Demerger", "Takeover / Acquisition", "Open Offer", "Delisting",
+    "OFS", "QIP", "Preferential Allotment", "Warrants Issue", "ESOP Allotment",
+    "AGM", "EGM", "Board Meeting", "Postal Ballot", "E-Voting",
+    "Promoter Stake Increase", "Promoter Stake Sale", "Pledge Release",
+    "FPO", "Bond Issue", "NCD Issue", "Insolvency Resolution", "CIRP Process",
+    "Subsidiary Incorporation", "Joint Venture", "Change of Company Name",
+    "IPO Listing", "Change in Director", "CEO Appointment", "Auditor Appointment",
+    "Regulatory Action", "Trading Suspension", "Revocation of Suspension",
+    "Distribution", "Unit Split"
+  ];
+
+  // Extracts YYYY-MM-DD from any date string to guarantee clean formatting without timestamps
+  const formatDateOnly = (dateValue) => {
+    if (!dateValue) return null;
+    return dateValue.split("T")[0];
+  };
+
   const fetchRecords = async () => {
     setFetchLoading(true);
     try {
       const { data: records, error } = await supabase
         .from("corporate_actions")
         .select("*")
-        .order("announcement", { ascending: false });
+        .order("created_at", { ascending: false });
+
       if (error) throw error;
       setExistingRecords(records || []);
     } catch (err) {
-      console.error(err);
+      console.error("Error fetching records:", err);
     } finally {
       setFetchLoading(false);
     }
@@ -56,12 +77,27 @@ const AdminCorporateActions = () => {
   }, []);
 
   const addNewRow = () => {
-    let newRow = {};
-    if (activeTab === "dividends") newRow = { company: "", type: "Final", percentage: "", announcement: "", record: "", ex_dividend: "" };
-    else if (activeTab === "rights") newRow = { company: "", ratio: "", premium: "", announcement: "", record: "", ex_rights: "" };
-    else if (activeTab === "bonus") newRow = { company: "", ratio: "", announcement: "", record: "", ex_bonus: "" };
-    else if (activeTab === "splits") newRow = { company: "", old_fv: "", new_fv: "", announcement: "", record: "", split_date: "" };
-
+    let newRow = { company: "" };
+    switch (activeTab) {
+      case "buyback":
+        newRow = { company: "", buyback_price: "", cmp: "", premium: "", record: "", size: "" };
+        break;
+      case "dividends":
+        newRow = { company: "", type: "Final Dividend", percentage: "", announcement: "", record: "", ex_date: "", payment_date: "" };
+        break;
+      case "rights":
+        newRow = { company: "", ratio: "", rights_price: "", market_price: "", discount: "", announcement: "", record: "", ex_date: "" };
+        break;
+      case "bonus":
+        newRow = { company: "", ratio: "", announcement: "", record: "", ex_date: "" };
+        break;
+      case "splits":
+        newRow = { company: "", ratio: "", old_fv: "", new_fv: "", announcement: "", record: "", ex_date: "" };
+        break;
+      case "other":
+        newRow = { company: "", action_type: "", key_detail: "", announcement: "", record: "", ex_date: "", status: "Completed" };
+        break;
+    }
     setCurrentData([...currentData, newRow]);
   };
 
@@ -76,45 +112,35 @@ const AdminCorporateActions = () => {
     setCurrentData(updated);
   };
 
-  // Submit New Entries
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const validEntries = currentData.filter(item => item.company?.trim());
+    const validEntries = currentData.filter((item) => item.company?.trim());
     if (validEntries.length === 0) return alert("Please fill at least one company name");
 
     setSubmitLoading(true);
     try {
-      let formattedData = [];
-
-      if (activeTab === "dividends") {
-        formattedData = validEntries.map(item => ({
-          action_type: "dividend", company: item.company.trim(), type: item.type,
-          ratio_or_percentage: item.percentage ? parseFloat(item.percentage) : null,
-          announcement: item.announcement || null, record: item.record || null,
-          ex_date: item.ex_dividend || null, year: new Date().getFullYear().toString(),
-        }));
-      } else if (activeTab === "rights") {
-        formattedData = validEntries.map(item => ({
-          action_type: "rights", company: item.company.trim(), ratio_or_percentage: item.ratio,
-          premium: item.premium ? parseFloat(item.premium) : null,
-          announcement: item.announcement || null, record: item.record || null,
-          ex_date: item.ex_rights || null,
-        }));
-      } else if (activeTab === "bonus") {
-        formattedData = validEntries.map(item => ({
-          action_type: "bonus", company: item.company.trim(), ratio_or_percentage: item.ratio,
-          announcement: item.announcement || null, record: item.record || null,
-          ex_date: item.ex_bonus || null,
-        }));
-      } else if (activeTab === "splits") {
-        formattedData = validEntries.map(item => ({
-          action_type: "split", company: item.company.trim(),
-          old_fv: item.old_fv ? parseInt(item.old_fv) : null,
-          new_fv: item.new_fv ? parseInt(item.new_fv) : null,
-          announcement: item.announcement || null, record: item.record || null,
-          ex_date: item.split_date || null,
-        }));
-      }
+      const formattedData = validEntries.map((item) => ({
+        action_type: currentTabConfig.dbType,
+        company: item.company.trim(),
+        type: item.type || null,
+        ratio_or_percentage: item.ratio || item.percentage || null,
+        rights_price: item.rights_price ? parseFloat(item.rights_price) : null,
+        market_price: item.market_price ? parseFloat(item.market_price) : null,
+        discount: item.discount || null,
+        buyback_price: item.buyback_price ? parseFloat(item.buyback_price) : null,
+        cmp: item.cmp ? parseFloat(item.cmp) : null,
+        premium: item.premium || null,
+        size: item.size || null,
+        key_detail: item.key_detail || null,
+        action_type_detail: item.action_type || null,
+        announcement: formatDateOnly(item.announcement),
+        record: formatDateOnly(item.record),
+        ex_date: formatDateOnly(item.ex_date),
+        payment_date: formatDateOnly(item.payment_date),
+        status: item.status || null,
+        old_fv: item.old_fv ? parseInt(item.old_fv) : null,
+        new_fv: item.new_fv ? parseInt(item.new_fv) : null,
+      }));
 
       const { error } = await supabase.from("corporate_actions").insert(formattedData);
       if (error) throw error;
@@ -122,14 +148,15 @@ const AdminCorporateActions = () => {
       setSuccess(true);
       fetchRecords();
 
-      const emptyRow = activeTab === "dividends" ? 
-        { company: "", type: "Final", percentage: "", announcement: "", record: "", ex_dividend: "" } :
-        activeTab === "rights" ? { company: "", ratio: "", premium: "", announcement: "", record: "", ex_rights: "" } :
-        activeTab === "bonus" ? { company: "", ratio: "", announcement: "", record: "", ex_bonus: "" } :
-        { company: "", old_fv: "", new_fv: "", announcement: "", record: "", split_date: "" };
+      let blankRow = { company: "" };
+      if (activeTab === "buyback") blankRow = { company: "", buyback_price: "", cmp: "", premium: "", record: "", size: "" };
+      if (activeTab === "dividends") blankRow = { company: "", type: "Final Dividend", percentage: "", announcement: "", record: "", ex_date: "", payment_date: "" };
+      if (activeTab === "rights") blankRow = { company: "", ratio: "", rights_price: "", market_price: "", discount: "", announcement: "", record: "", ex_date: "" };
+      if (activeTab === "bonus") blankRow = { company: "", ratio: "", announcement: "", record: "", ex_date: "" };
+      if (activeTab === "splits") blankRow = { company: "", ratio: "", old_fv: "", new_fv: "", announcement: "", record: "", ex_date: "" };
+      if (activeTab === "other") blankRow = { company: "", action_type: "", key_detail: "", announcement: "", record: "", ex_date: "", status: "Completed" };
 
-      setData(prev => ({ ...prev, [activeTab]: [emptyRow] }));
-
+      setData((prev) => ({ ...prev, [activeTab]: [blankRow] }));
       setTimeout(() => setSuccess(false), 2500);
     } catch (err) {
       alert("Error: " + err.message);
@@ -139,79 +166,102 @@ const AdminCorporateActions = () => {
   };
 
   const handleDelete = async (id) => {
-    if (!confirm("Delete this record?")) return;
+    if (!confirm("Are you sure you want to delete this corporate action record?")) return;
     const { error } = await supabase.from("corporate_actions").delete().eq("id", id);
     if (error) alert(error.message);
     else fetchRecords();
   };
 
-  const openEdit = (record) => setEditModal({ ...record });
+  const openEdit = (record) => {
+    setEditModal({
+      ...record,
+      ratio: record.ratio_or_percentage,
+      percentage: record.ratio_or_percentage,
+      action_type: record.action_type_detail,
+      old_fv: record.old_fv || "",
+      new_fv: record.new_fv || "",
+      announcement: formatDateOnly(record.announcement) || "",
+      record: formatDateOnly(record.record) || "",
+      ex_date: formatDateOnly(record.ex_date) || "",
+      payment_date: formatDateOnly(record.payment_date) || "",
+    });
+  };
 
   const handleUpdate = async () => {
     if (!editModal) return;
-
     const { error } = await supabase
       .from("corporate_actions")
       .update({
         company: editModal.company,
-        type: editModal.type,
-        ratio_or_percentage: editModal.ratio_or_percentage,
-        premium: editModal.premium ? parseFloat(editModal.premium) : null,
+        type: editModal.type || null,
+        ratio_or_percentage: activeTab === "dividends" ? editModal.percentage : editModal.ratio || null,
+        rights_price: editModal.rights_price ? parseFloat(editModal.rights_price) : null,
+        market_price: editModal.market_price ? parseFloat(editModal.market_price) : null,
+        discount: editModal.discount || null,
+        buyback_price: editModal.buyback_price ? parseFloat(editModal.buyback_price) : null,
+        cmp: editModal.cmp ? parseFloat(editModal.cmp) : null,
+        premium: editModal.premium || null,
+        size: editModal.size || null,
+        key_detail: editModal.key_detail || null,
+        action_type_detail: editModal.action_type || null,
+        announcement: formatDateOnly(editModal.announcement),
+        record: formatDateOnly(editModal.record),
+        ex_date: formatDateOnly(editModal.ex_date),
+        payment_date: formatDateOnly(editModal.payment_date),
+        status: editModal.status || null,
         old_fv: editModal.old_fv ? parseInt(editModal.old_fv) : null,
         new_fv: editModal.new_fv ? parseInt(editModal.new_fv) : null,
-        announcement: editModal.announcement || null,
-        record: editModal.record || null,
-        ex_date: editModal.ex_date || null,
       })
       .eq("id", editModal.id);
 
-    if (error) alert(error.message);
-    else {
+    if (error) {
+      alert(error.message);
+    } else {
       setEditModal(null);
       fetchRecords();
     }
   };
 
   const updateEditModal = (field, value) => {
-    setEditModal(prev => ({ ...prev, [field]: value }));
+    setEditModal((prev) => ({ ...prev, [field]: value }));
   };
 
-  // Filter records based on the current selected tab configuration
   const filteredRecords = existingRecords.filter(
-    record => record.action_type === currentTabConfig?.dbType
+    (record) => record.action_type === currentTabConfig?.dbType
   );
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex">
       <AdminSidebar />
-      <main className="md:ml-64">
-        <header className="bg-white px-8 py-6 shadow-sm">
-          <div className="max-w-6xl mx-auto flex justify-between items-center">
+      <main className="flex-1 md:ml-64 min-w-0">
+        <header className="bg-white px-8 py-6 shadow-xs border-b border-gray-200">
+          <div className="max-w-[1600px] mx-auto flex justify-between items-center gap-4">
             <div>
-              <h1 className="text-2xl font-semibold text-gray-900">Corporate Actions </h1>
-              <p className="text-gray-500 text-sm mt-1">Manage Dividends, Rights, Bonus & Splits</p>
+              <h1 className="text-2xl font-semibold text-gray-900 tracking-tight">Corporate Actions Manager</h1>
+              <p className="text-gray-500 text-sm mt-0.5">Maintain splits, dividends, buybacks, rights issues, and general structural announcements</p>
             </div>
             <UserProfileDropdown />
           </div>
         </header>
 
-        <div className="max-w-6xl mx-auto px-6 py-10 space-y-10">
-
+        <div className="max-w-[1600px] mx-auto px-8 py-10 space-y-8">
           {success && (
-            <div className="p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl flex items-center gap-2">
-              <CheckCircle className="text-green-600" /> Saved successfully!
+            <div className="p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl flex items-center gap-3 font-medium text-sm animate-fadeIn">
+              <CheckCircle className="text-emerald-600" size={18} />  Database updated successfully!
             </div>
           )}
 
-          {/* Global Tabs Navigation shared across creation and viewing forms */}
-          <div className="flex border-b">
-            {tabs.map(tab => (
+          {/* Nav Tab Options */}
+          <div className="flex border-b border-gray-200 overflow-x-auto bg-white rounded-xl shadow-xs p-1">
+            {tabs.map((tab) => (
               <button
                 key={tab.id}
                 type="button"
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-8 py-4 font-medium text-sm transition-all ${
-                  activeTab === tab.id ? "border-b-4 border-green-600 text-green-700" : "text-gray-600 hover:text-gray-900"
+                className={`px-6 py-3 text-xs uppercase tracking-wider whitespace-nowrap rounded-lg transition-all ${
+                  activeTab === tab.id
+                    ? "bg-slate-100 text-emerald-700 shadow-xs font-semibold"
+                    : "text-gray-500 hover:text-gray-900 hover:bg-gray-50"
                 }`}
               >
                 {tab.label}
@@ -219,82 +269,195 @@ const AdminCorporateActions = () => {
             ))}
           </div>
 
-          {/* ==================== ADD NEW SECTION ==================== */}
-          <div className="bg-white border rounded-2xl p-6 shadow-sm">
-            <h2 className="text-xl font-semibold mb-4">Add New {currentTabConfig?.label}</h2>
-            <form onSubmit={handleSubmit}>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse">
+          {/* Form Processing Area */}
+          <div className="bg-white border border-gray-200 rounded-2xl shadow-xs p-6">
+            <h2 className="text-lg text-gray-900 mb-4 uppercase tracking-wider"> New {currentTabConfig?.label}</h2>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="overflow-x-auto border border-gray-100 rounded-xl">
+                <table className="w-full border-collapse min-w-[1250px]">
                   <thead>
-                    <tr className="bg-gray-50 border-b text-sm text-gray-600">
-                      <th className="px-4 py-3 text-left">Company</th>
-                      {activeTab === "dividends" && <><th className="px-4 py-3 text-left">Type</th><th className="px-4 py-3 text-left">%</th></>}
-                      {(activeTab === "rights" || activeTab === "bonus") && <th className="px-4 py-3 text-left">Ratio</th>}
-                      {activeTab === "rights" && <th className="px-4 py-3 text-left">Premium</th>}
-                      {activeTab === "splits" && <><th className="px-4 py-3 text-left">Old FV</th><th className="px-4 py-3 text-left">New FV</th></>}
-                      <th className="px-4 py-3 text-left">Announcement</th>
-                      <th className="px-4 py-3 text-left">Record</th>
-                      <th className="px-4 py-3 text-left">Ex Date</th>
+                    <tr className="bg-gray-50/70 text-[11px] uppercase tracking-widest text-gray-500 border-b border-gray-200">
+                      <th className="px-4 py-3 text-left w-72">Company</th>
+                      {activeTab === "dividends" && (
+                        <>
+                          <th className="px-4 py-3 text-left w-48">Dividend Type</th>
+                          <th className="px-4 py-3 text-left w-36">Yield %</th>
+                        </>
+                      )}
+                      {activeTab === "rights" && (
+                        <>
+                          <th className="px-4 py-3 text-left w-36">Ratio</th>
+                          <th className="px-4 py-3 text-left w-36">Rights Price</th>
+                          <th className="px-4 py-3 text-left w-36">Market Price</th>
+                          <th className="px-4 py-3 text-left w-36">Discount</th>
+                        </>
+                      )}
+                      {activeTab === "bonus" && <th className="px-4 py-3 text-left w-36">Bonus Ratio</th>}
+                      {activeTab === "splits" && (
+                        <>
+                          <th className="px-4 py-3 text-left w-36">Split Ratio</th>
+                          <th className="px-4 py-3 text-left w-36">Old FV</th>
+                          <th className="px-4 py-3 text-left w-36">New FV</th>
+                        </>
+                      )}
+                      {activeTab === "buyback" && (
+                        <>
+                          <th className="px-4 py-3 text-left w-36">Buyback Price</th>
+                          <th className="px-4 py-3 text-left w-36">CMP</th>
+                          <th className="px-4 py-3 text-left w-36">Premium %</th>
+                          <th className="px-4 py-3 text-left w-44">Size</th>
+                        </>
+                      )}
+                      {activeTab === "other" && (
+                        <>
+                          <th className="px-4 py-3 text-left w-64">Action Type</th>
+                          <th className="px-4 py-3 text-left w-72">Key Detail</th>
+                          <th className="px-4 py-3 text-left w-40">Status</th>
+                        </>
+                      )}
+                      <th className="px-4 py-3 text-left w-40">Announcement</th>
+                      <th className="px-4 py-3 text-left w-40">Record Date</th>
+                      <th className="px-4 py-3 text-left w-40">Ex Date</th>
+                      {activeTab === "dividends" && <th className="px-4 py-3 text-left w-40">Payment Date</th>}
                       <th className="w-12"></th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody className="divide-y divide-gray-100 bg-white">
                     {currentData.map((row, index) => (
-                      <tr key={index} className="border-b hover:bg-gray-50">
-                        <td className="px-4 py-3">
-                          <input type="text" value={row.company} onChange={(e) => handleInputChange(index, "company", e.target.value)}
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-500" placeholder="Company Name" required={index === 0} />
+                      <tr key={index} className="hover:bg-gray-50/50">
+                        <td className="px-3 py-3">
+                          <input
+                            type="text"
+                            value={row.company || ""}
+                            onChange={(e) => handleInputChange(index, "company", e.target.value)}
+                            className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                            placeholder="e.g. Reliance Industries"
+                            required
+                          />
                         </td>
 
                         {activeTab === "dividends" && (
                           <>
-                            <td className="px-4 py-3">
-                              <select value={row.type} onChange={(e) => handleInputChange(index, "type", e.target.value)} className="w-full px-3 py-2 border rounded-lg">
-                                <option value="Final">Final</option>
-                                <option value="Special">Special</option>
-                                <option value="Interim">Interim</option>
+                            <td className="px-3 py-3">
+                              <select
+                                value={row.type || ""}
+                                onChange={(e) => handleInputChange(index, "type", e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                              >
+                                <option value="Final Dividend">Final Dividend</option>
+                                <option value="Interim Dividend">Interim Dividend</option>
+                                <option value="Special Dividend">Special Dividend</option>
                               </select>
                             </td>
-                            <td className="px-4 py-3">
-                              <input type="number" step="0.01" value={row.percentage} onChange={(e) => handleInputChange(index, "percentage", e.target.value)} className="w-full px-3 py-2 border rounded-lg" placeholder="10" />
+                            <td className="px-3 py-3">
+                              <input
+                                type="text"
+                                value={row.percentage || ""}
+                                onChange={(e) => handleInputChange(index, "percentage", e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                                placeholder="1.40%"
+                              />
                             </td>
                           </>
                         )}
 
-                        {(activeTab === "rights" || activeTab === "bonus") && (
-                          <td className="px-4 py-3">
-                            <input type="text" value={row.ratio} onChange={(e) => handleInputChange(index, "ratio", e.target.value)} className="w-full px-3 py-2 border rounded-lg" placeholder="2:1" />
-                          </td>
+                        {activeTab === "rights" && (
+                          <>
+                            <td className="px-3 py-3"><input type="text" value={row.ratio || ""} onChange={(e) => handleInputChange(index, "ratio", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="01:15" /></td>
+                            <td className="px-3 py-3"><input type="number" value={row.rights_price || ""} onChange={(e) => handleInputChange(index, "rights_price", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="1257" /></td>
+                            <td className="px-3 py-3"><input type="number" value={row.market_price || ""} onChange={(e) => handleInputChange(index, "market_price", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="1500" /></td>
+                            <td className="px-3 py-3"><input type="text" value={row.discount || ""} onChange={(e) => handleInputChange(index, "discount", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="~16%" /></td>
+                          </>
                         )}
 
-                        {activeTab === "rights" && (
-                          <td className="px-4 py-3">
-                            <input type="number" value={row.premium} onChange={(e) => handleInputChange(index, "premium", e.target.value)} className="w-full px-3 py-2 border rounded-lg" placeholder="0" />
+                        {activeTab === "bonus" && (
+                          <td className="px-3 py-3">
+                            <input type="text" value={row.ratio || ""} onChange={(e) => handleInputChange(index, "ratio", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="1:1" />
                           </td>
                         )}
 
                         {activeTab === "splits" && (
                           <>
-                            <td className="px-4 py-3"><input type="number" value={row.old_fv} onChange={(e) => handleInputChange(index, "old_fv", e.target.value)} className="w-full px-3 py-2 border rounded-lg" placeholder="10" /></td>
-                            <td className="px-4 py-3"><input type="number" value={row.new_fv} onChange={(e) => handleInputChange(index, "new_fv", e.target.value)} className="w-full px-3 py-2 border rounded-lg" placeholder="2" /></td>
+                            <td className="px-3 py-3">
+                              <input type="text" value={row.ratio || ""} onChange={(e) => handleInputChange(index, "ratio", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="1:5" />
+                            </td>
+                            <td className="px-3 py-3">
+                              <input type="number" value={row.old_fv || ""} onChange={(e) => handleInputChange(index, "old_fv", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="10" />
+                            </td>
+                            <td className="px-3 py-3">
+                              <input type="number" value={row.new_fv || ""} onChange={(e) => handleInputChange(index, "new_fv", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="2" />
+                            </td>
                           </>
                         )}
 
-                        <td className="px-4 py-3"><input type="date" value={row.announcement} onChange={(e) => handleInputChange(index, "announcement", e.target.value)} className="w-full px-3 py-2 border rounded-lg" /></td>
-                        <td className="px-4 py-3"><input type="date" value={row.record} onChange={(e) => handleInputChange(index, "record", e.target.value)} className="w-full px-3 py-2 border rounded-lg" /></td>
-                        <td className="px-4 py-3">
-                          <input type="date"
-                            value={activeTab === "dividends" ? row.ex_dividend : activeTab === "rights" ? row.ex_rights : activeTab === "bonus" ? row.ex_bonus : row.split_date}
-                            onChange={(e) => {
-                              const field = activeTab === "dividends" ? "ex_dividend" : activeTab === "rights" ? "ex_rights" : activeTab === "bonus" ? "ex_bonus" : "split_date";
-                              handleInputChange(index, field, e.target.value);
-                            }}
-                            className="w-full px-3 py-2 border rounded-lg"
-                          />
+                        {activeTab === "buyback" && (
+                          <>
+                            <td className="px-3 py-3"><input type="number" value={row.buyback_price || ""} onChange={(e) => handleInputChange(index, "buyback_price", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="445" /></td>
+                            <td className="px-3 py-3"><input type="number" value={row.cmp || ""} onChange={(e) => handleInputChange(index, "cmp", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="380" /></td>
+                            <td className="px-3 py-3"><input type="text" value={row.premium || ""} onChange={(e) => handleInputChange(index, "premium", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="17.10%" /></td>
+                            <td className="px-3 py-3"><input type="text" value={row.size || ""} onChange={(e) => handleInputChange(index, "size", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none" placeholder="₹12,000 Cr" /></td>
+                          </>
+                        )}
+
+                        {activeTab === "other" && (
+                          <>
+                            <td className="px-3 py-3">
+                              <select
+                                value={row.action_type || ""}
+                                onChange={(e) => handleInputChange(index, "action_type", e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white focus:outline-none"
+                              >
+                                <option value="">Select Category</option>
+                                {otherActionTypes.map((type, i) => (
+                                  <option key={i} value={type}>{type}</option>
+                                ))}
+                              </select>
+                            </td>
+                            <td className="px-3 py-3">
+                              <input
+                                type="text"
+                                value={row.key_detail || ""}
+                                onChange={(e) => handleInputChange(index, "key_detail", e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none"
+                                placeholder="Details / Issue scale"
+                              />
+                            </td>
+                            <td className="px-3 py-3">
+                              <input
+                                type="text"
+                                value={row.status || ""}
+                                onChange={(e) => handleInputChange(index, "status", e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none"
+                                placeholder="Completed / Ongoing"
+                              />
+                            </td>
+                          </>
+                        )}
+
+                        <td className="px-3 py-3">
+                          <input type="date" value={row.announcement || ""} onChange={(e) => handleInputChange(index, "announcement", e.target.value)} className="w-full px-2 py-1.5 border border-gray-300 rounded-lg text-sm bg-white" />
                         </td>
-                        <td className="px-4 py-3">
-                          <button type="button" onClick={() => removeRow(index)} className="text-red-500 hover:text-red-700" disabled={currentData.length === 1}>
-                            <Trash2 size={18} />
+                        <td className="px-3 py-3">
+                          <input type="date" value={row.record || ""} onChange={(e) => handleInputChange(index, "record", e.target.value)} className="w-full px-2 py-1.5 border border-gray-300 rounded-lg text-sm bg-white" />
+                        </td>
+                        <td className="px-3 py-3">
+                          <input type="date" value={row.ex_date || ""} onChange={(e) => handleInputChange(index, "ex_date", e.target.value)} className="w-full px-2 py-1.5 border border-gray-300 rounded-lg text-sm bg-white" />
+                        </td>
+                        {activeTab === "dividends" && (
+                          <td className="px-3 py-3">
+                            <input type="date" value={row.payment_date || ""} onChange={(e) => handleInputChange(index, "payment_date", e.target.value)} className="w-full px-2 py-1.5 border border-gray-300 rounded-lg text-sm bg-white" />
+                          </td>
+                        )}
+
+                        <td className="px-3 py-3 text-center">
+                          <button
+                            type="button"
+                            onClick={() => removeRow(index)}
+                            className="text-gray-400 hover:text-red-600 transition-colors"
+                            disabled={currentData.length === 1}
+                          >
+                            <Trash2 size={16} />
                           </button>
                         </td>
                       </tr>
@@ -303,71 +466,83 @@ const AdminCorporateActions = () => {
                 </table>
               </div>
 
-              <div className="flex justify-between mt-6">
-                <button type="button" onClick={addNewRow} className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-5 py-2.5 rounded-xl text-sm font-medium">
-                  <Plus size={18} /> Add Row
+              <div className="flex justify-between items-center pt-2">
+                <button
+                  type="button"
+                  onClick={addNewRow}
+                  className="flex items-center gap-1.5 text-xs bg-slate-100 hover:bg-slate-200 text-slate-800 px-4 py-2.5 rounded-lg font-medium transition"
+                >
+                  <Plus size={14} /> Add Dataset Row
                 </button>
-                <button type="submit" disabled={submitLoading} className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-medium flex items-center gap-2">
-                  {submitLoading ? <Loader2 className="animate-spin" size={18} /> : <Save size={18} />}
-                  Save {currentTabConfig?.label}
+
+                <button
+                  type="submit"
+                  disabled={submitLoading}
+                  className="bg-emerald-600 hover:bg-emerald-700 disabled:bg-gray-300 text-white text-xs tracking-wider uppercase px-6 py-2.5 rounded-lg font-medium flex items-center gap-2 transition"
+                >
+                  {submitLoading ? <Loader2 className="animate-spin" size={14} /> : <Save size={14} />}
+                  Commit Entries
                 </button>
               </div>
             </form>
           </div>
 
-          {/* ==================== EXISTING RECORDS SECTION ==================== */}
-          <div className="bg-white border rounded-2xl p-6 shadow-sm">
+          {/* Records Readout list view */}
+          <div className="bg-white border border-gray-200 rounded-2xl shadow-xs p-6">
             <div className="flex justify-between items-center mb-6">
-              <h2 className="text-xl font-semibold">Existing {currentTabConfig?.label}</h2>
-              <button onClick={fetchRecords} className="text-green-600 hover:underline font-medium">Refresh</button>
+              <div>
+                <h2 className="text-lg text-gray-900 tracking-tight uppercase">Database Directory</h2>
+                <p className="text-xs text-gray-400">Current live records stored inside database category</p>
+              </div>
+              <button 
+                onClick={fetchRecords} 
+                className="flex items-center gap-1.5 text-xs text-emerald-600 font-medium border border-emerald-100 bg-emerald-50/50 hover:bg-emerald-50 px-3 py-1.5 rounded-lg transition"
+              >
+                <RefreshCw size={12} className={fetchLoading ? "animate-spin" : ""} /> Refresh Stack
+              </button>
             </div>
 
             {fetchLoading ? (
-              <p className="text-center py-8 text-gray-500">Loading records...</p>
+              <p className="text-center py-12 text-sm text-gray-400 tracking-wide">Querying cloud schema database...</p>
             ) : filteredRecords.length === 0 ? (
-              <p className="text-center py-8 text-gray-400">No data found for {currentTabConfig?.label}.</p>
+              <p className="text-center py-12 text-sm text-gray-400">No active {currentTabConfig?.label} records indexed.</p>
             ) : (
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse text-sm">
+              <div className="overflow-x-auto border border-gray-100 rounded-xl">
+                <table className="w-full border-collapse text-xs text-left">
                   <thead>
-                    <tr className="bg-gray-100 text-gray-600 font-medium">
-                      <th className="px-4 py-3 text-left">Company</th>
-                      {activeTab === "dividends" && <th className="px-4 py-3 text-left">Type</th>}
-                      {activeTab === "dividends" && <th className="px-4 py-3 text-left">Percentage</th>}
-                      {(activeTab === "rights" || activeTab === "bonus") && <th className="px-4 py-3 text-left">Ratio</th>}
-                      {activeTab === "rights" && <th className="px-4 py-3 text-left">Premium</th>}
-                      {activeTab === "splits" && <th className="px-4 py-3 text-left">Old Face Value</th>}
-                      {activeTab === "splits" && <th className="px-4 py-3 text-left">New Face Value</th>}
-                      <th className="px-4 py-3 text-left">Announcement</th>
-                      <th className="px-4 py-3 text-left">Record</th>
-                      <th className="px-4 py-3 text-left">Ex Date</th>
-                      <th className="px-4 py-3 text-center">Actions</th>
+                    <tr className="bg-gray-50 text-gray-500 font-medium border-b border-gray-200">
+                      <th className="px-6 py-3">Company</th>
+                      <th className="px-6 py-3">Calculated Metrics / Details</th>
+                      <th className="px-6 py-3">Announcement</th>
+                      <th className="px-6 py-3">Record Date</th>
+                      <th className="px-6 py-3">Ex Date</th>
+                      <th className="px-6 py-3 text-center w-24">Actions</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    {filteredRecords.map(record => (
-                      <tr key={record.id} className="border-b hover:bg-gray-50">
-                        <td className="px-4 py-3 font-medium text-gray-900">{record.company}</td>
-                        
-                        {activeTab === "dividends" && <td className="px-4 py-3">{record.type || "-"}</td>}
-                        {activeTab === "dividends" && <td className="px-4 py-3">{record.ratio_or_percentage ? `${record.ratio_or_percentage}%` : "-"}</td>}
-                        
-                        {(activeTab === "rights" || activeTab === "bonus") && <td className="px-4 py-3">{record.ratio_or_percentage || "-"}</td>}
-                        {activeTab === "rights" && <td className="px-4 py-3">{record.premium !== null ? record.premium : "-"}</td>}
-                        
-                        {activeTab === "splits" && <td className="px-4 py-3">{record.old_fv || "-"}</td>}
-                        {activeTab === "splits" && <td className="px-4 py-3">{record.new_fv || "-"}</td>}
-
-                        <td className="px-4 py-3">{record.announcement?.split("T")[0] || "-"}</td>
-                        <td className="px-4 py-3">{record.record?.split("T")[0] || "-"}</td>
-                        <td className="px-4 py-3">{record.ex_date?.split("T")[0] || "-"}</td>
-                        <td className="px-4 py-3 text-center space-x-4">
-                          <button onClick={() => openEdit(record)} className="text-blue-600 hover:text-blue-800">
-                            <Edit2 size={18} />
-                          </button>
-                          <button onClick={() => handleDelete(record.id)} className="text-red-600 hover:text-red-800">
-                            <Trash2 size={18} />
-                          </button>
+                  <tbody className="divide-y divide-gray-100 font-medium text-slate-800">
+                    {filteredRecords.map((record) => (
+                      <tr key={record.id} className="hover:bg-gray-50/40">
+                        <td className="px-6 py-3.5 text-gray-950 font-semibold">{record.company}</td>
+                        <td className="px-6 py-3.5 text-gray-600 font-normal">
+                          {activeTab === "buyback" && `Price: ₹${record.buyback_price} | Size: ${record.size || "-"} | Premium: ${record.premium || "-"}`}
+                          {activeTab === "dividends" && `${record.type || "Dividend"}: ${record.ratio_or_percentage || "-"}`}
+                          {activeTab === "rights" && `Ratio: ${record.ratio_or_percentage} @ ₹${record.rights_price} (Discount: ${record.discount || "-"})`}
+                          {activeTab === "bonus" && `Bonus Ratio: ${record.ratio_or_percentage}`}
+                          {activeTab === "splits" && `Split Ratio: ${record.ratio_or_percentage || "-"} (FV: ₹${record.old_fv || "-"} to ₹${record.new_fv || "-"})`}
+                          {activeTab === "other" && `[${record.action_type_detail || "Other"}] ${record.key_detail || "-"} (${record.status || "Completed"})`}
+                        </td>
+                        <td className="px-6 py-3.5 text-gray-500 font-mono font-normal">{formatDateOnly(record.announcement) || "-"}</td>
+                        <td className="px-6 py-3.5 text-gray-500 font-mono font-normal">{formatDateOnly(record.record) || "-"}</td>
+                        <td className="px-6 py-3.5 text-gray-500 font-mono font-normal">{formatDateOnly(record.ex_date) || "-"}</td>
+                        <td className="px-6 py-3.5 text-center">
+                          <div className="flex gap-3 justify-center items-center">
+                            <button onClick={() => openEdit(record)} className="text-blue-500 hover:text-blue-700 transition">
+                              <Edit2 size={14} />
+                            </button>
+                            <button onClick={() => handleDelete(record.id)} className="text-gray-400 hover:text-red-600 transition">
+                              <Trash2 size={14} />
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     ))}
@@ -376,86 +551,178 @@ const AdminCorporateActions = () => {
               </div>
             )}
           </div>
-
         </div>
       </main>
 
-      {/* Edit Modal */}
+      {/* Dynamic contextual Edit Overlay Modal */}
       {editModal && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl w-full max-w-2xl max-h-[90vh] overflow-auto">
-            <div className="p-8">
-              <h3 className="text-2xl font-semibold mb-6">Edit Corporate Action</h3>
-              <div className="space-y-5">
-                <div>
-                  <label className="block text-sm font-medium mb-1">Company</label>
-                  <input type="text" value={editModal.company || ""} onChange={(e) => updateEditModal("company", e.target.value)} className="w-full px-4 py-3 border rounded-xl" />
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 backdrop-blur-xs">
+          <div className="bg-white rounded-2xl w-full max-w-xl max-h-[85vh] flex flex-col shadow-xl animate-scaleUp">
+            <div className="p-5 border-b border-gray-100 flex justify-between items-center bg-gray-50 rounded-t-2xl">
+              <h3 className="text-md font-medium text-gray-900 uppercase tracking-wider">Modify {currentTabConfig?.label}</h3>
+              <button onClick={() => setEditModal(null)} className="text-gray-400 hover:text-gray-600">
+                <X size={18} />
+              </button>
+            </div>
+
+            <div className="p-6 overflow-y-auto space-y-4 flex-1 text-sm">
+              <div>
+                <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Company Name</label>
+                <input
+                  type="text"
+                  value={editModal.company || ""}
+                  onChange={(e) => updateEditModal("company", e.target.value)}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                />
+              </div>
+
+              {activeTab === "dividends" && (
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Dividend Type</label>
+                    <select
+                      value={editModal.type || ""}
+                      onChange={(e) => updateEditModal("type", e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                    >
+                      <option value="Final Dividend">Final Dividend</option>
+                      <option value="Interim Dividend">Interim Dividend</option>
+                      <option value="Special Dividend">Special Dividend</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Yield %</label>
+                    <input
+                      type="text"
+                      value={editModal.percentage || ""}
+                      onChange={(e) => updateEditModal("percentage", e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                    />
+                  </div>
                 </div>
+              )}
 
-                {editModal.action_type === "dividend" && (
-                  <>
-                    <div>
-                      <label className="block text-sm font-medium mb-1">Type</label>
-                      <select value={editModal.type || ""} onChange={(e) => updateEditModal("type", e.target.value)} className="w-full px-4 py-3 border rounded-xl">
-                        <option value="Final">Final</option>
-                        <option value="Special">Special</option>
-                        <option value="Interim">Interim</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-1">Percentage</label>
-                      <input type="number" step="0.01" value={editModal.ratio_or_percentage || ""} onChange={(e) => updateEditModal("ratio_or_percentage", e.target.value)} className="w-full px-4 py-3 border rounded-xl" />
-                    </div>
-                  </>
-                )}
-
-                {(editModal.action_type === "rights" || editModal.action_type === "bonus") && (
+              {activeTab === "rights" && (
+                <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-1">Ratio</label>
-                    <input type="text" value={editModal.ratio_or_percentage || ""} onChange={(e) => updateEditModal("ratio_or_percentage", e.target.value)} className="w-full px-4 py-3 border rounded-xl" placeholder="2:1" />
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Ratio</label>
+                    <input type="text" value={editModal.ratio || ""} onChange={(e) => updateEditModal("ratio", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
                   </div>
-                )}
-
-                {editModal.action_type === "rights" && (
                   <div>
-                    <label className="block text-sm font-medium mb-1">Premium</label>
-                    <input type="number" value={editModal.premium || ""} onChange={(e) => updateEditModal("premium", e.target.value)} className="w-full px-4 py-3 border rounded-xl" />
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Rights Price</label>
+                    <input type="number" value={editModal.rights_price || ""} onChange={(e) => updateEditModal("rights_price", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
                   </div>
-                )}
-
-                {editModal.action_type === "split" && (
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium mb-1">Old Face Value</label>
-                      <input type="number" value={editModal.old_fv || ""} onChange={(e) => updateEditModal("old_fv", e.target.value)} className="w-full px-4 py-3 border rounded-xl" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium mb-1">New Face Value</label>
-                      <input type="number" value={editModal.new_fv || ""} onChange={(e) => updateEditModal("new_fv", e.target.value)} className="w-full px-4 py-3 border rounded-xl" />
-                    </div>
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Market Price</label>
+                    <input type="number" value={editModal.market_price || ""} onChange={(e) => updateEditModal("market_price", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
                   </div>
-                )}
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Discount</label>
+                    <input type="text" value={editModal.discount || ""} onChange={(e) => updateEditModal("discount", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
+                  </div>
+                </div>
+              )}
 
+              {activeTab === "bonus" && (
+                <div>
+                  <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Bonus Ratio</label>
+                  <input type="text" value={editModal.ratio || ""} onChange={(e) => updateEditModal("ratio", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
+                </div>
+              )}
+
+              {activeTab === "splits" && (
                 <div className="grid grid-cols-3 gap-4">
                   <div>
-                    <label className="block text-sm font-medium mb-1">Announcement</label>
-                    <input type="date" value={editModal.announcement?.split("T")[0] || ""} onChange={(e) => updateEditModal("announcement", e.target.value)} className="w-full px-4 py-3 border rounded-xl" />
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Split Ratio</label>
+                    <input type="text" value={editModal.ratio || ""} onChange={(e) => updateEditModal("ratio", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-1">Record Date</label>
-                    <input type="date" value={editModal.record?.split("T")[0] || ""} onChange={(e) => updateEditModal("record", e.target.value)} className="w-full px-4 py-3 border rounded-xl" />
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Old FV</label>
+                    <input type="number" value={editModal.old_fv || ""} onChange={(e) => updateEditModal("old_fv", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-1">Ex Date</label>
-                    <input type="date" value={editModal.ex_date?.split("T")[0] || ""} onChange={(e) => updateEditModal("ex_date", e.target.value)} className="w-full px-4 py-3 border rounded-xl" />
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">New FV</label>
+                    <input type="number" value={editModal.new_fv || ""} onChange={(e) => updateEditModal("new_fv", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
                   </div>
                 </div>
-              </div>
+              )}
 
-              <div className="flex justify-end gap-4 mt-8">
-                <button onClick={() => setEditModal(null)} className="px-8 py-3 border rounded-xl font-medium">Cancel</button>
-                <button onClick={handleUpdate} className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-xl font-medium">Update Record</button>
+              {activeTab === "buyback" && (
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Buyback Price</label>
+                    <input type="number" value={editModal.buyback_price || ""} onChange={(e) => updateEditModal("buyback_price", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">CMP</label>
+                    <input type="number" value={editModal.cmp || ""} onChange={(e) => updateEditModal("cmp", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Premium %</label>
+                    <input type="text" value={editModal.premium || ""} onChange={(e) => updateEditModal("premium", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Size</label>
+                    <input type="text" value={editModal.size || ""} onChange={(e) => updateEditModal("size", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
+                  </div>
+                </div>
+              )}
+
+              {activeTab === "other" && (
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Action Type</label>
+                    <select
+                      value={editModal.action_type || ""}
+                      onChange={(e) => updateEditModal("action_type", e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white text-slate-900 focus:outline-none"
+                    >
+                      <option value="">Select Category</option>
+                      {otherActionTypes.map((type, i) => (
+                        <option key={i} value={type}>{type}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Key Detail</label>
+                    <input type="text" value={editModal.key_detail || ""} onChange={(e) => updateEditModal("key_detail", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Status</label>
+                    <input type="text" value={editModal.status || ""} onChange={(e) => updateEditModal("status", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none" />
+                  </div>
+                </div>
+              )}
+
+              <div className="grid grid-cols-2 gap-4 pt-2">
+                <div>
+                  <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Announcement</label>
+                  <input type="date" value={editModal.announcement || ""} onChange={(e) => updateEditModal("announcement", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 bg-white" />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Record Date</label>
+                  <input type="date" value={editModal.record || ""} onChange={(e) => updateEditModal("record", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 bg-white" />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Ex Date</label>
+                  <input type="date" value={editModal.ex_date || ""} onChange={(e) => updateEditModal("ex_date", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 bg-white" />
+                </div>
+                {activeTab === "dividends" && (
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Payment Date</label>
+                    <input type="date" value={editModal.payment_date || ""} onChange={(e) => updateEditModal("payment_date", e.target.value)} className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 bg-white" />
+                  </div>
+                )}
               </div>
+            </div>
+
+            <div className="p-5 border-t border-gray-100 flex justify-end gap-3 bg-gray-50 rounded-b-2xl">
+              <button type="button" onClick={() => setEditModal(null)} className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 text-xs font-medium transition">
+                Cancel
+              </button>
+              <button type="button" onClick={handleUpdate} className="px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-medium transition">
+                Save Adjustments
+              </button>
             </div>
           </div>
         </div>

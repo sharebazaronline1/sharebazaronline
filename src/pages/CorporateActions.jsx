@@ -9,24 +9,27 @@ import {
   Percent, 
   ArrowLeftRight, 
   Award, 
-  TrendingUp 
+  TrendingUp,
+  Briefcase
 } from "lucide-react";
 
 const CorporateActions = () => {
-  const [activeTab, setActiveTab] = useState("dividends");
+  const [activeTab, setActiveTab] = useState("buyback");
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedYear, setSelectedYear] = useState("2026");
 
   const tabs = [
-    { id: "rights", label: "RIGHTS", dbType: "rights" },
-    { id: "bonus", label: "BONUS", dbType: "bonus" },
-    { id: "splits", label: "SPLITS", dbType: "split" },
-    { id: "dividends", label: "DIVIDENDS", dbType: "dividend" },
+    { id: "buyback", label: "Buyback", dbType: "buyback" },
+    { id: "dividends", label: "Dividends", dbType: "dividend" },
+    { id: "rights", label: "Rights Issue", dbType: "rights" },
+    { id: "bonus", label: "Bonus Issue", dbType: "bonus" },
+    { id: "splits", label: "Stock Split", dbType: "split" },
+    { id: "others", label: "Other Actions", dbType: "other" },
   ];
 
-  const currentTabLabel = tabs.find((t) => t.id === activeTab)?.label || "DIVIDENDS";
+  const currentTabLabel = tabs.find((t) => t.id === activeTab)?.label || "Dividends";
 
   // Fetch from Supabase on Mount & Filters Change
   useEffect(() => {
@@ -37,7 +40,7 @@ const CorporateActions = () => {
         let query = supabase
           .from("corporate_actions")
           .select("*")
-          .eq("action_type", currentConfig?.dbType || "dividend")
+          .eq("action_type", currentConfig?.dbType || "buyback")
           .order("ex_date", { ascending: false });
 
         const { data, error } = await query;
@@ -54,16 +57,18 @@ const CorporateActions = () => {
     fetchCorporateActions();
   }, [activeTab]);
 
-  // Client side filtering for search & dynamic year matching based on ex_date
+  // Client side filtering for search & year matching based on ex_date or announcement
   const filteredRecords = records.filter((item) => {
     const matchesSearch = item.company?.toLowerCase().includes(searchQuery.toLowerCase());
-    const matchesYear = item.ex_date ? item.ex_date.startsWith(selectedYear) : true;
+    const dateToCheck = item.ex_date || item.announcement || "";
+    const matchesYear = dateToCheck ? dateToCheck.startsWith(selectedYear) : true;
     return matchesSearch && matchesYear;
   });
 
   const formatDate = (dateStr) => {
-    if (!dateStr) return "-";
+    if (!dateStr || dateStr.toUpperCase() === "N/A") return "-";
     const date = new Date(dateStr);
+    if (isNaN(date.getTime())) return dateStr; // Return raw string if it's already structured text
     return date
       .toLocaleDateString("en-GB", {
         day: "2-digit",
@@ -80,25 +85,43 @@ const CorporateActions = () => {
       {/* ==================== HERO SECTION ==================== */}
       <section className="relative overflow-hidden py-16 bg-white border-b border-gray-100">
         <div className="relative max-w-[1800px] mx-auto px-6 text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-green-100 text-[#16A34A] px-5 py-2 rounded-full text-sm font-semibold border border-green-200 shadow-sm mb-6">
-            <BookOpen size={16} />
-            Corporate Actions Hub
+          
+          {/* Badges Container */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+            <div className="inline-flex items-center gap-2 bg-emerald-50 text-[#16A34A] px-4 py-1.5 rounded-full text-xs font-bold border border-emerald-200/60 shadow-xs">
+              <BookOpen size={14} />
+              Corporate Actions Calendar
+            </div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-xs font-bold border border-blue-200/60 shadow-xs">
+              <TrendingUp size={14} />
+              Live Market Tracking
+            </div>
           </div>
 
           {/* Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-[-2px] text-[#0f172a] capitalize">
-            Upcoming {currentTabLabel.toLowerCase()} Shares
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 mb-4">
+            Corporate Actions Matrix
           </h1>
-          <p className="mt-4 text-base lg:text-lg text-slate-600 max-w-2xl mx-auto">
-            Keep track of corporate declarations, important record checkpoints, ex-dates, and fundamental shifts across your stock portfolio.
+          
+          {/* Interactive dynamic subheader layout */}
+          <p className="text-base text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            Stay informed on essential stock distributions, company restructurings, and upcoming eligibility dates. Want to explore delistings or mergers?{" "}
+            <button 
+              onClick={() => {
+                setActiveTab("others");
+                setSearchQuery("");
+              }}
+              className="text-[#16A34A] hover:text-[#15803D] font-bold inline-flex items-center gap-0.5 transition"
+            >
+              Track More Actions
+            </button>
           </p>
         </div>
       </section>
 
       {/* ==================== TABS BAR ==================== */}
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex justify-center">
-        <div className="flex bg-slate-100 p-1.5 rounded-full items-center gap-1 shadow-inner border border-slate-200/60">
+        <div className="flex bg-slate-100 p-1.5 rounded-xl items-center gap-1 shadow-inner border border-slate-200/60 overflow-x-auto max-w-full scrollbar-none">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -106,9 +129,9 @@ const CorporateActions = () => {
                 setActiveTab(tab.id);
                 setSearchQuery("");
               }}
-              className={`px-8 py-2.5 rounded-full text-xs font-bold tracking-wider transition-all duration-300 ${
+              className={`px-6 py-2 rounded-lg text-xs font-bold tracking-wide whitespace-nowrap transition-all duration-200 ${
                 activeTab === tab.id
-                  ? "bg-white text-[#16A34A] shadow-md ring-1 ring-black/5"
+                  ? "bg-white text-[#16A34A] shadow-sm border border-slate-200/40"
                   : "text-slate-500 hover:text-slate-800"
               }`}
             >
@@ -124,13 +147,11 @@ const CorporateActions = () => {
           
           {/* Controls Bar Header */}
           <div className="px-6 py-5 border-b border-slate-100 bg-white flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-            
-            {/* Left Box Header Space Placeholder if empty */}
             <div className="text-slate-800 font-bold text-base select-none">
-              Upcoming {currentTabLabel.charAt(0) + currentTabLabel.slice(1).toLowerCase()} Actions
+              Upcoming {currentTabLabel} Records
             </div>
 
-            {/* Right Search and Filtering Tools - FORCE ALIGNED RIGHT */}
+            {/* Filters */}
             <div className="flex items-center gap-3 w-full lg:w-auto justify-end lg:justify-end lg:ml-auto">
               <div className="relative max-w-xs w-full lg:w-64">
                 <Search className="absolute left-3 top-2.5 text-slate-400" size={16} />
@@ -164,74 +185,223 @@ const CorporateActions = () => {
               </div>
             ) : filteredRecords.length === 0 ? (
               <div className="text-center py-20 text-slate-400">
-                No corporate corporate records matched your selected criteria.
+                No data matched your selected metrics for {currentTabLabel}.
               </div>
             ) : (
               <table className="w-full border-collapse text-[13px] text-slate-700">
                 <thead>
                   <tr className="bg-slate-50/70 border-b border-slate-200 text-slate-500 font-semibold text-center select-none">
-                    <th className="px-6 py-3.5 text-left font-semibold text-slate-600 w-1/3 border-r border-slate-200/60">Company</th>
+                    <th className="px-6 py-3.5 text-left font-semibold text-slate-600 w-1/4 border-r border-slate-200/60">Company</th>
                     
-                    {activeTab === "dividends" && (
+                    {/* Buyback Columns */}
+                    {activeTab === "buyback" && (
                       <>
-                        <th className="px-4 py-3.5 border-r border-slate-200/60">Type</th>
-                        <th className="px-4 py-3.5 border-r border-slate-200/60">%</th>
-                      </>
-                    )}
-                    {(activeTab === "rights" || activeTab === "bonus") && (
-                      <th className="px-4 py-3.5 border-r border-slate-200/60">Ratio</th>
-                    )}
-                    {activeTab === "rights" && (
-                      <th className="px-4 py-3.5 border-r border-slate-200/60">Premium</th>
-                    )}
-                    {activeTab === "splits" && (
-                      <>
-                        <th className="px-4 py-3.5 border-r border-slate-200/60">Old Face Value</th>
-                        <th className="px-4 py-3.5 border-r border-slate-200/60">New Face Value</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Buyback Price</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">CMP</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Premium</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Record Date</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Ex Date</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Size</th>
                       </>
                     )}
 
-                    <th className="px-4 py-3.5 border-r border-slate-200/60">Announcement</th>
-                    <th className="px-4 py-3.5 border-r border-slate-200/60">Record</th>
-                    <th className="px-4 py-3.5">Ex-{currentTabLabel.charAt(0) + currentTabLabel.slice(1).toLowerCase()}</th>
+                    {/* Dividends Columns */}
+                    {activeTab === "dividends" && (
+                      <>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Dividend Type</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Yield %</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Announcement</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Record Date</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Ex Date</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Payment Date</th>
+                      </>
+                    )}
+                    
+                    {/* Rights Issue Columns */}
+                    {activeTab === "rights" && (
+                      <>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Ratio</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Rights Price</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Market Price</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Discount</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Record Date</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Ex Date</th>
+                      </>
+                    )}
+
+                    {/* Bonus Issue Columns */}
+                    {activeTab === "bonus" && (
+                      <>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Bonus Ratio</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Announcement</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Record Date</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Ex-Bonus Date</th>
+                      </>
+                    )}
+                    
+                    {/* Stock Split Columns */}
+                    {activeTab === "splits" && (
+                      <>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Split Ratio</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Old FV</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">New FV</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Announcement</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Record Date</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Ex Date</th>
+                      </>
+                    )}
+
+                    {/* Other Corporate Actions Columns */}
+                    {activeTab === "others" && (
+                      <>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Action Type</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Key Detail</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Announcement Date</th>
+                        <th className="px-4 py-3.5 border-r border-slate-200/60">Status</th>
+                      </>
+                    )}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 font-medium text-slate-800 text-center">
                   {filteredRecords.map((row) => (
                     <tr key={row.id} className="hover:bg-slate-50/60 transition-colors">
-                      {/* Company Name */}
                       <td className="px-6 py-4 text-left font-bold text-slate-900 border-r border-slate-100">
                         {row.company}
                       </td>
 
-                      {/* Dividends Specific Structural Columns */}
+                      {/* Buyback Render */}
+                      {activeTab === "buyback" && (
+                        <>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-900 font-bold">
+                            {row.buyback_price !== null && row.buyback_price !== undefined ? `₹${row.buyback_price}` : "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600">
+                            {row.cmp !== null && row.cmp !== undefined ? `₹${row.cmp}` : "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 font-bold text-emerald-600">
+                            {row.premium || "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.record)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.ex_date)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 font-semibold">
+                            {row.size || "-"}
+                          </td>
+                        </>
+                      )}
+
+                      {/* Dividends Render */}
                       {activeTab === "dividends" && (
                         <>
-                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600">{row.type || "Final"}</td>
-                          <td className="px-4 py-4 border-r border-slate-100 font-bold text-slate-900">{row.ratio_or_percentage || "-"}</td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600">
+                            {row.type || "Final Dividend"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 font-bold text-slate-900">
+                            {row.ratio_or_percentage || "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.announcement)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.record)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.ex_date)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-900 font-semibold text-xs tracking-wider">
+                            {formatDate(row.payment_date)}
+                          </td>
                         </>
                       )}
 
-                      {/* Rights & Bonus Specific Structural Columns */}
-                      {(activeTab === "rights" || activeTab === "bonus") && (
-                        <td className="px-4 py-4 border-r border-slate-100 font-bold text-[#0f172a]">{row.ratio_or_percentage || "-"}</td>
-                      )}
+                      {/* Rights Issue Render */}
                       {activeTab === "rights" && (
-                        <td className="px-4 py-4 border-r border-slate-100">{row.premium !== null ? `₹${row.premium}` : "-"}</td>
+                        <>
+                          <td className="px-4 py-4 border-r border-slate-100 font-bold text-slate-950">
+                            {row.ratio_or_percentage || "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-900">
+                            {row.rights_price !== null && row.rights_price !== undefined ? `₹${row.rights_price}` : "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600">
+                            {row.market_price !== null && row.market_price !== undefined ? `₹${row.market_price}` : "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-amber-600 font-semibold">
+                            {row.discount || "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.record)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.ex_date)}
+                          </td>
+                        </>
                       )}
 
-                      {/* Splits Specific Structural Columns */}
+                      {/* Bonus Issue Render */}
+                      {activeTab === "bonus" && (
+                        <>
+                          <td className="px-4 py-4 border-r border-slate-100 font-bold text-slate-950">
+                            {row.ratio_or_percentage || "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.announcement)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.record)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 font-semibold text-xs tracking-wider text-slate-900">
+                            {formatDate(row.ex_date)}
+                          </td>
+                        </>
+                      )}
+
+                      {/* Splits Render */}
                       {activeTab === "splits" && (
                         <>
-                          <td className="px-4 py-4 border-r border-slate-100 text-slate-500">{row.old_fv || "-"}</td>
-                          <td className="px-4 py-4 border-r border-slate-100 font-bold text-green-600">{row.new_fv || "-"}</td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 font-bold">
+                            {row.ratio_or_percentage || "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-500">
+                            {row.old_fv !== null && row.old_fv !== undefined ? `₹${row.old_fv}` : "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 font-bold text-emerald-600">
+                            {row.new_fv !== null && row.new_fv !== undefined ? `₹${row.new_fv}` : "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.announcement)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.record)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.ex_date)}
+                          </td>
                         </>
                       )}
 
-                      {/* Shared Standard Dates Columns */}
-                      <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">{formatDate(row.announcement)}</td>
-                      <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">{formatDate(row.record)}</td>
-                      <td className="px-4 py-4 font-semibold text-xs tracking-wider text-slate-900">{formatDate(row.ex_date)}</td>
+                      {/* Other Actions Render */}
+                      {activeTab === "others" && (
+                        <>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-center font-semibold">
+                            {row.action_type_detail || "General Action"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-center max-w-xs truncate font-semibold">
+                            {row.key_detail || "-"}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-slate-600 text-xs tracking-wider">
+                            {formatDate(row.announcement)}
+                          </td>
+                          <td className="px-4 py-4 border-r border-slate-100 text-emerald-700 font-bold text-xs tracking-wide">
+                            <span className="bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200/50 inline-block">
+                              {row.status || "Completed"}
+                            </span>
+                          </td>
+                        </>
+                      )}
                     </tr>
                   ))}
                 </tbody>
@@ -240,7 +410,6 @@ const CorporateActions = () => {
           </div>
         </div>
 
-        {/* ==================== FOOTER / PAGINATION ACTION ==================== */}
         {!loading && filteredRecords.length > 0 && (
           <div className="text-center mt-12">
             <button className="px-10 py-3 bg-[#16A34A] text-white text-xs font-bold tracking-widest rounded-md hover:bg-[#15803D] transition shadow-md uppercase">
