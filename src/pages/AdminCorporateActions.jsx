@@ -488,69 +488,174 @@ const AdminCorporateActions = () => {
           </div>
 
           {/* Records Readout list view */}
-          <div className="bg-white border border-gray-200 rounded-2xl shadow-xs p-6">
-            <div className="flex justify-between items-center mb-6">
-              <div>
-                <h2 className="text-lg text-gray-900 tracking-tight uppercase">Database Directory</h2>
-                <p className="text-xs text-gray-400">Current live records stored inside database category</p>
-              </div>
-              <button 
-                onClick={fetchRecords} 
-                className="flex items-center gap-1.5 text-xs text-emerald-600 font-medium border border-emerald-100 bg-emerald-50/50 hover:bg-emerald-50 px-3 py-1.5 rounded-lg transition"
-              >
-                <RefreshCw size={12} className={fetchLoading ? "animate-spin" : ""} /> Refresh Stack
-              </button>
-            </div>
+         {/* Records Readout list view */}
+<div className="bg-white border border-gray-200 rounded-2xl shadow-xs p-6">
+  <div className="flex justify-between items-center mb-6">
+    <div>
+      <h2 className="text-lg text-gray-900 tracking-tight uppercase">Database Directory</h2>
+      <p className="text-xs text-gray-400">Current live records stored inside database category</p>
+    </div>
+    <button 
+      onClick={fetchRecords} 
+      className="flex items-center gap-1.5 text-xs text-emerald-600 font-medium border border-emerald-100 bg-emerald-50/50 hover:bg-emerald-50 px-3 py-1.5 rounded-lg transition"
+    >
+      <RefreshCw size={12} className={fetchLoading ? "animate-spin" : ""} /> Refresh Stack
+    </button>
+  </div>
 
-            {fetchLoading ? (
-              <p className="text-center py-12 text-sm text-gray-400 tracking-wide">Querying cloud schema database...</p>
-            ) : filteredRecords.length === 0 ? (
-              <p className="text-center py-12 text-sm text-gray-400">No active {currentTabConfig?.label} records indexed.</p>
-            ) : (
-              <div className="overflow-x-auto border border-gray-100 rounded-xl">
-                <table className="w-full border-collapse text-xs text-left">
-                  <thead>
-                    <tr className="bg-gray-50 text-gray-500 font-medium border-b border-gray-200">
-                      <th className="px-6 py-3">Company</th>
-                      <th className="px-6 py-3">Calculated Metrics / Details</th>
-                      <th className="px-6 py-3">Announcement</th>
-                      <th className="px-6 py-3">Record Date</th>
-                      <th className="px-6 py-3">Ex Date</th>
-                      <th className="px-6 py-3 text-center w-24">Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-100 font-medium text-slate-800">
-                    {filteredRecords.map((record) => (
-                      <tr key={record.id} className="hover:bg-gray-50/40">
-                        <td className="px-6 py-3.5 text-gray-950 font-semibold">{record.company}</td>
-                        <td className="px-6 py-3.5 text-gray-600 font-normal">
-                          {activeTab === "buyback" && `Price: ₹${record.buyback_price} | Size: ${record.size || "-"} | Premium: ${record.premium || "-"}`}
-                          {activeTab === "dividends" && `${record.type || "Dividend"}: ${record.ratio_or_percentage || "-"}`}
-                          {activeTab === "rights" && `Ratio: ${record.ratio_or_percentage} @ ₹${record.rights_price} (Discount: ${record.discount || "-"})`}
-                          {activeTab === "bonus" && `Bonus Ratio: ${record.ratio_or_percentage}`}
-                          {activeTab === "splits" && `Split Ratio: ${record.ratio_or_percentage || "-"} (FV: ₹${record.old_fv || "-"} to ₹${record.new_fv || "-"})`}
-                          {activeTab === "other" && `[${record.action_type_detail || "Other"}] ${record.key_detail || "-"} (${record.status || "Completed"})`}
-                        </td>
-                        <td className="px-6 py-3.5 text-gray-500 font-mono font-normal">{formatDateOnly(record.announcement) || "-"}</td>
-                        <td className="px-6 py-3.5 text-gray-500 font-mono font-normal">{formatDateOnly(record.record) || "-"}</td>
-                        <td className="px-6 py-3.5 text-gray-500 font-mono font-normal">{formatDateOnly(record.ex_date) || "-"}</td>
-                        <td className="px-6 py-3.5 text-center">
-                          <div className="flex gap-3 justify-center items-center">
-                            <button onClick={() => openEdit(record)} className="text-blue-500 hover:text-blue-700 transition">
-                              <Edit2 size={14} />
-                            </button>
-                            <button onClick={() => handleDelete(record.id)} className="text-gray-400 hover:text-red-600 transition">
-                              <Trash2 size={14} />
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+  {fetchLoading ? (
+    <p className="text-center py-12 text-sm text-gray-400 tracking-wide">Querying cloud schema database...</p>
+  ) : filteredRecords.length === 0 ? (
+    <p className="text-center py-12 text-sm text-gray-400">No active {currentTabConfig?.label} records indexed.</p>
+  ) : (
+    <div className="overflow-x-auto border border-gray-100 rounded-xl">
+      <table className="w-full border-collapse text-xs text-left">
+        <thead>
+          <tr className="bg-gray-50 text-gray-500 font-medium border-b border-gray-200">
+            <th className="px-4 py-3 text-left w-72">Company</th>
+
+            {/* Same columns as input form */}
+            {activeTab === "dividends" && (
+              <>
+                <th className="px-4 py-3 text-left w-48">Dividend Type</th>
+                <th className="px-4 py-3 text-left w-36">Yield %</th>
+              </>
             )}
-          </div>
+            {activeTab === "rights" && (
+              <>
+                <th className="px-4 py-3 text-left w-36">Ratio</th>
+                <th className="px-4 py-3 text-left w-36">Rights Price</th>
+                <th className="px-4 py-3 text-left w-36">Market Price</th>
+                <th className="px-4 py-3 text-left w-36">Discount</th>
+              </>
+            )}
+            {activeTab === "bonus" && <th className="px-4 py-3 text-left w-36">Bonus Ratio</th>}
+            {activeTab === "splits" && (
+              <>
+                <th className="px-4 py-3 text-left w-36">Split Ratio</th>
+                <th className="px-4 py-3 text-left w-36">Old FV</th>
+                <th className="px-4 py-3 text-left w-36">New FV</th>
+              </>
+            )}
+            {activeTab === "buyback" && (
+              <>
+                <th className="px-4 py-3 text-left w-36">Buyback Price</th>
+                <th className="px-4 py-3 text-left w-36">CMP</th>
+                <th className="px-4 py-3 text-left w-36">Premium %</th>
+                <th className="px-4 py-3 text-left w-44">Size</th>
+              </>
+            )}
+            {activeTab === "other" && (
+              <>
+                <th className="px-4 py-3 text-left w-64">Action Type</th>
+                <th className="px-4 py-3 text-left w-72">Key Detail</th>
+                <th className="px-4 py-3 text-left w-40">Status</th>
+              </>
+            )}
+
+            <th className="px-4 py-3 text-left w-40">Announcement</th>
+            <th className="px-4 py-3 text-left w-40">Record Date</th>
+            <th className="px-4 py-3 text-left w-40">Ex Date</th>
+            {activeTab === "dividends" && <th className="px-4 py-3 text-left w-40">Payment Date</th>}
+            
+            <th className="w-20 text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-gray-100 bg-white text-sm">
+          {filteredRecords.map((record) => (
+            <tr key={record.id} className="hover:bg-gray-50/50">
+              <td className="px-4 py-3.5 font-semibold text-gray-900">{record.company}</td>
+
+              {/* Dividends */}
+              {activeTab === "dividends" && (
+                <>
+                  <td className="px-4 py-3.5">{record.type || "-"}</td>
+                  <td className="px-4 py-3.5">{record.ratio_or_percentage || "-"}</td>
+                </>
+              )}
+
+              {/* Rights */}
+              {activeTab === "rights" && (
+                <>
+                  <td className="px-4 py-3.5">{record.ratio_or_percentage || "-"}</td>
+                  <td className="px-4 py-3.5">{record.rights_price || "-"}</td>
+                  <td className="px-4 py-3.5">{record.market_price || "-"}</td>
+                  <td className="px-4 py-3.5">{record.discount || "-"}</td>
+                </>
+              )}
+
+              {/* Bonus */}
+              {activeTab === "bonus" && (
+                <td className="px-4 py-3.5">{record.ratio_or_percentage || "-"}</td>
+              )}
+
+              {/* Splits */}
+              {activeTab === "splits" && (
+                <>
+                  <td className="px-4 py-3.5">{record.ratio_or_percentage || "-"}</td>
+                  <td className="px-4 py-3.5">{record.old_fv || "-"}</td>
+                  <td className="px-4 py-3.5">{record.new_fv || "-"}</td>
+                </>
+              )}
+
+              {/* Buyback */}
+              {activeTab === "buyback" && (
+                <>
+                  <td className="px-4 py-3.5">₹{record.buyback_price || "-"}</td>
+                  <td className="px-4 py-3.5">₹{record.cmp || "-"}</td>
+                  <td className="px-4 py-3.5">{record.premium || "-"}</td>
+                  <td className="px-4 py-3.5">{record.size || "-"}</td>
+                </>
+              )}
+
+              {/* Other */}
+              {activeTab === "other" && (
+                <>
+                  <td className="px-4 py-3.5">{record.action_type_detail || "-"}</td>
+                  <td className="px-4 py-3.5">{record.key_detail || "-"}</td>
+                  <td className="px-4 py-3.5">{record.status || "-"}</td>
+                </>
+              )}
+
+              <td className="px-4 py-3.5 text-gray-500 font-mono">
+                {formatDateOnly(record.announcement) || "-"}
+              </td>
+              <td className="px-4 py-3.5 text-gray-500 font-mono">
+                {formatDateOnly(record.record) || "-"}
+              </td>
+              <td className="px-4 py-3.5 text-gray-500 font-mono">
+                {formatDateOnly(record.ex_date) || "-"}
+              </td>
+
+              {activeTab === "dividends" && (
+                <td className="px-4 py-3.5 text-gray-500 font-mono">
+                  {formatDateOnly(record.payment_date) || "-"}
+                </td>
+              )}
+
+              <td className="px-4 py-3.5 text-center">
+                <div className="flex gap-3 justify-center">
+                  <button 
+                    onClick={() => openEdit(record)} 
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    <Edit2 size={15} />
+                  </button>
+                  <button 
+                    onClick={() => handleDelete(record.id)} 
+                    className="text-red-500 hover:text-red-700"
+                  >
+                    <Trash2 size={15} />
+                  </button>
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )}
+</div>
         </div>
       </main>
 
