@@ -13,7 +13,7 @@ const brokers = [
     openAccountUrl: "https://zerodha.com/open-account/",
   },
   {
-    id: "angelone",
+    id: "angel-one",
     name: "Angel One",
     img: "/images/angelone.png",
     brokerage: "₹0 Delivery • ₹20 Intraday & F&O",
@@ -143,7 +143,7 @@ const BrokerCard = ({ broker }) => {
         </button>
 
         <button
-          onClick={() => navigate("/comparebrokers")}
+          onClick={() => navigate(`/brokerdetails/${broker.id}`)}
           className="
             flex-1
             py-2
@@ -153,6 +153,8 @@ const BrokerCard = ({ broker }) => {
             border border-green-300
             rounded-lg
             bg-white
+            hover:bg-slate-50
+            transition-colors
           "
         >
           Details

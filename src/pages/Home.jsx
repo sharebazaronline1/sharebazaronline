@@ -271,12 +271,11 @@ useEffect(() => {
     px-4 sm:px-8
     py-3 sm:py-4
     rounded-2xl
-    border
-    border-green-500
-    bg-white
-    text-green-700
+    bg-[#16A34A]
+    hover:bg-[#15803D]
+    text-white
     font-bold
-    hover:bg-green-50
+    shadow-lg
     transition
     text-sm sm:text-base
   "
