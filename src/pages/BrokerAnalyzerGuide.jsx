@@ -7,6 +7,7 @@ import {
   ChevronUp,
   AlertTriangle,
   BarChart3,
+  Laptop,
   HelpCircle,
   TrendingUp,
   Landmark,
@@ -97,7 +98,6 @@ const StarRating = ({ rating }) => {
 };
 
 const SegmentBadge = ({ label, segments = [] }) => {
-  const hasSegment = segments.some((seg) => seg?.toLowerCase() === label?.toLowerCase());
   return (
     <div className="flex items-center gap-1.5 text-xs font-medium ">
       <CheckCircle2 size={14} className="text-emerald-500 fill-emerald-50" />
@@ -163,7 +163,6 @@ const BrokerAnalyzerGuide = () => {
     return true;
   });
 
-  // Target recommendations configuration template
   const dynamicRecommendationCategories = [
     { title: "Best for Beginners", brokers: ["Zerodha", "Groww", "Angel One"] },
     { title: "Best for Active Traders", brokers: ["Zerodha", "Dhan", "Fyers"] },
@@ -293,14 +292,14 @@ const BrokerAnalyzerGuide = () => {
         <AdBanner />
 
         {/* COMPACT BLUE FILTER BAR */}
-        <div className="bg-white border border-gray-200 rounded-xl p-1.5 inline-flex gap-1.5 shadow-xs">
+        <div className="bg-white border border-gray-200 rounded-xl p-1.5 inline-flex gap-1.5 shadow-sm">
           {["All", "Discount", "Full Service", "Both"].map((filterOpt) => (
             <button
               key={filterOpt}
               onClick={() => setSelectedFilter(filterOpt)}
               className={`px-5 py-2 rounded-lg text-sm font-semibold transition-all ${
                 selectedFilter === filterOpt
-                  ? "bg-blue-600 text-white shadow-xs"
+                  ? "bg-blue-600 text-white shadow-sm"
                   : "bg-transparent text-gray-600 hover:bg-gray-100"
               }`}
             >
@@ -309,7 +308,7 @@ const BrokerAnalyzerGuide = () => {
           ))}
         </div>
 
-        {/* BROKERS LIST */}
+        {/* BROKERS LIST - RENDERED FULL WIDTH */}
         <section className="space-y-4">
           {loading ? (
             <div className="bg-white rounded-2xl border border-gray-200 py-20 text-center">
@@ -321,191 +320,208 @@ const BrokerAnalyzerGuide = () => {
               No brokers found matching this filter configuration.
             </div>
           ) : (
-            filteredBrokers.map((broker) => {
-              const charges = broker.details?.brokerage_charges || {};
-              const openingCharges = broker.details?.account_opening_charges || {};
-              const platform = broker.details?.platform || {};
+          filteredBrokers.map((broker) => {
+  const charges = broker.details?.brokerage_charges || {};
+  const openingCharges = broker.details?.account_opening_charges || {};
+  const platform = broker.details?.platform || {};
 
-              const openingFee = openingCharges.individual_account_opening_fee ?? "Free";
-              const deliveryFee = charges.equity_delivery_individual ?? "₹0";
-              const intradayFee = charges.intraday_individual ?? "₹20";
-              const optionsFee = charges.options_individual ?? "₹20/order";
-              const activeUsersText = broker.active_users?.trim() || "N/A";
+  const openingFee = openingCharges.individual_account_opening_fee ?? "Free";
+  const deliveryFee = charges.equity_delivery_individual ?? "₹0";
+  const intradayFee = charges.intraday_individual ?? "₹20";
+  const activeUsersText = broker.active_users?.trim() || "N/A";
+  const segmentCollection = broker.segments || ["Equity", "F&O"];
+  const currentSlug = broker.slug || broker.name.toLowerCase().replace(/\s+/g, "-");
 
-              const segmentCollection = broker.segments || ["Equity", "F&O"];
-              const currentSlug = broker.slug || broker.name.toLowerCase().replace(/\s+/g, "-");
+  return (
+    <div
+      key={broker.id}
+      className="w-full bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-all duration-200 p-5 flex flex-col md:flex-row justify-between items-stretch gap-6"
+    >
+      {/* Main Metadata Panel */}
+      <div className="flex-1 flex flex-col justify-between gap-5">
+        
+        {/* Core Header Section (Kept Identical) */}
+        <div className="flex items-center gap-4.5">
+          <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl border border-slate-100 p-3 bg-white flex-shrink-0 flex items-center justify-center shadow-sm">
+            <img
+              src={broker.logo || "/images/brokers/fallback.png"}
+              alt={broker.name}
+              className="max-h-full max-w-full object-contain"
+              onError={(e) => { e.target.src = "/images/brokers/fallback.png"; }}
+            />
+          </div>
+          
+          <div className="flex flex-col gap-1.5">
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
+              <h4 className="text-xl font-bold text-slate-900 tracking-tight leading-none">
+                {broker.name}
+              </h4>
+              <span className="px-2.5 py-0.5 bg-blue-50/80 text-blue-600 border border-blue-100/40 rounded-md text-[10px] font-bold uppercase tracking-wider">
+                {broker.broker_type?.includes("Discount") && (broker.broker_type?.includes("Full-Service") || broker.broker_type?.includes("Full Service"))
+                  ? "Hybrid" 
+                  : broker.broker_type?.includes("Discount") ? "Discount" : "Full-Service"}
+              </span>
+            </div>
+            
+            <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1">
+              <StarRating rating={broker.rating} />
+              <div className="h-3.5 w-[1px] bg-slate-200 hidden sm:block"></div>
+              <span className="text-xs text-slate-400 font-medium">
+                {activeUsersText} Active Clients
+              </span>
+            </div>
+          </div>
+        </div>
 
-              return (
-                <div
-                  key={broker.id}
-                  className="bg-white border border-gray-200 rounded-xl shadow-xs hover:shadow-sm transition-all duration-150 p-5 flex flex-col md:flex-row md:items-stretch justify-between gap-5"
-                >
-                  {/* LEFT COLUMN: BRAND STACK */}
-                  <div className="flex flex-col items-start gap-1 min-w-[210px] border-b md:border-b-0 md:border-r border-gray-100 pb-4 md:pb-0 md:pr-5 flex-shrink-0">
-                    <img
-                      src={broker.logo || "/images/brokers/fallback.png"}
-                      alt={broker.name}
-                      className="w-14 h-14 object-contain rounded-xl border border-gray-100 p-1.5 bg-white mb-1"
-                      onError={(e) => { e.target.src = "/images/brokers/fallback.png"; }}
-                    />
-                    <h4 className="text-base font-semibold text-slate-900 tracking-tight leading-tight">
-                      {broker.name}
-                    </h4>
-                    <StarRating rating={broker.rating} />
-                    <span className="text-xs text-slate-400 font-medium">
-                      {activeUsersText} Active Clients
-                    </span>
-                    <span className="mt-1 px-2 py-0.5 bg-blue-50/60 text-blue-600 border border-blue-100/50 rounded text-[10px] font-bold uppercase tracking-wider">
-                      {broker.broker_type?.includes("Discount") && (broker.broker_type?.includes("Full-Service") || broker.broker_type?.includes("Full Service"))
-                        ? "Discount / Full Service" 
-                        : broker.broker_type?.includes("Discount") ? "Discount Broker" : "Full-Service Broker"}
-                    </span>
-                  </div>
-
-                  {/* CENTER COLUMN: METRICS & PARAMETERS */}
-                  <div className="flex-1 flex flex-col justify-between gap-3.5">
-                    <div className="flex flex-wrap items-center gap-x-4 gap-y-2 bg-slate-50/60 px-3.5 py-2 rounded-lg border border-slate-100">
-                      <span className="text-[11px] font-bold uppercase text-slate-400 tracking-wider mr-1">Segments:</span>
-                      {["Equity", "Commodity", "Currency", "Futures", "Options"].map(seg => (
-                        <SegmentBadge key={seg} label={seg} segments={segmentCollection} />
-                      ))}
+        {/* Rebuilt Specifications Row - Standardized, Wrap-Safe, No Hidden Popups */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-slate-50/60 p-4 rounded-xl border border-slate-100 items-start">
+          <div className="flex flex-col gap-1 min-w-0">
+            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">A/C Opening</p>
+            <p className="text-sm font-semibold text-slate-700 whitespace-normal break-words leading-snug">{openingFee}</p>
+          </div>
+          
+          <div className="flex flex-col gap-1 min-w-0">
+            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Delivery Fee</p>
+            <p className="text-sm font-semibold text-slate-700 whitespace-normal break-words leading-snug">{deliveryFee}</p>
+          </div>
+          
+          <div className="flex flex-col gap-1 min-w-0">
+            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Intraday Fee</p>
+            <p className="text-sm font-semibold text-slate-700 whitespace-normal break-words leading-snug">{intradayFee}</p>
+          </div>
+          
+          <div className="flex flex-col gap-1 min-w-0">
+            <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Platforms Available</p>
+            <div className="flex flex-col gap-1 text-xs font-medium text-slate-600 mt-0.5">
+              {platform.mobile_trading_platform || platform.web_trading_platform ? (
+                <>
+                  {platform.mobile_trading_platform && (
+                    <div className="flex items-center gap-1.5 break-words">
+                      <Smartphone size={13} className="text-slate-400 flex-shrink-0" />
+                      <span>{platform.mobile_trading_platform} (App)</span>
                     </div>
-
-                    <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 px-0.5">
-                      <div>
-                        <p className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mb-0.5">Account Opening</p>
-                        <p className="text-sm font-medium text-slate-700 break-words">{openingFee}</p>
-                      </div>
-                      <div>
-                        <p className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mb-0.5">Delivery Fee</p>
-                        <p className="text-sm font-medium text-slate-700 break-words">{deliveryFee}</p>
-                      </div>
-                      <div>
-                        <p className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mb-0.5">Intraday Fee</p>
-                        <p className="text-sm font-medium text-slate-700 break-words">{intradayFee}</p>
-                      </div>
-                      <div>
-                        <p className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mb-0.5">Options Trading</p>
-                        <p className="text-sm font-medium text-slate-700 break-words">{optionsFee}</p>
-                      </div>
-                      <div className="col-span-2 lg:col-span-1 group relative">
-                        <p className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider mb-0.5">Platforms</p>
-                        <div className="flex flex-col gap-0.5 text-slate-600 max-w-full">
-                          {platform.mobile_trading_platform && (
-                            <span className="text-xs font-medium flex items-center gap-1 truncate max-w-[160px]">
-                              <Smartphone size={12} className="text-slate-400 flex-shrink-0" /> 
-                              {platform.mobile_trading_platform}
-                            </span>
-                          )}
-                          {platform.web_trading_platform && (
-                            <span className="text-xs font-medium flex items-center gap-1 truncate max-w-[160px]">
-                              <Monitor size={12} className="text-slate-400 flex-shrink-0" /> 
-                              {platform.web_trading_platform}
-                            </span>
-                          )}
-                          {!platform.mobile_trading_platform && !platform.web_trading_platform && (
-                            <span className="text-xs text-slate-400">Standard Terminal</span>
-                          )}
-                        </div>
-                        
-                        {(platform.mobile_trading_platform || platform.web_trading_platform) && (
-                          <div className="absolute left-0 top-full mt-2 bg-slate-900 text-white text-xs p-2.5 rounded shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-150 z-20 min-w-[240px] border border-slate-700">
-                            {platform.mobile_trading_platform && <div className="break-words">• Mobile: {platform.mobile_trading_platform}</div>}
-                            {platform.web_trading_platform && <div className="mt-1 break-words">• Web: {platform.web_trading_platform}</div>}
-                          </div>
-                        )}
-                      </div>
+                  )}
+                  {platform.web_trading_platform && (
+                    <div className="flex items-center gap-1.5 break-words">
+                      <Laptop size={13} className="text-slate-400 flex-shrink-0" />
+                      <span>{platform.web_trading_platform} (Web)</span>
                     </div>
-                  </div>
+                  )}
+                </>
+              ) : (
+                <span className="text-slate-400 italic">Standard Trading Terminal</span>
+              )}
+            </div>
+          </div>
+        </div>
 
-                  {/* RIGHT COLUMN: ACTION STACK */}
-                  <div className="flex flex-row md:flex-col justify-end items-center md:items-stretch gap-2 min-w-[150px] border-t md:border-t-0 pt-4 md:pt-0 border-gray-100">
-                    <button
-                      onClick={() => navigate(`/brokerdetails/${currentSlug}`)}
-                      className="flex-1 md:flex-initial text-center py-2 px-4 border border-slate-200 text-slate-600 bg-white hover:bg-slate-50 text-xs font-semibold rounded-lg transition-all duration-150"
-                    >
-                      Full Details
-                    </button>
-                    <button
-                      onClick={() => {
-                        if (broker.account_opening_url) {
-                          window.open(broker.account_opening_url, "_blank", "noopener,noreferrer");
-                        } else {
-                          navigate("/login");
-                        }
-                      }}
-                      className="flex-1 md:flex-initial py-2 px-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold rounded-lg transition-all duration-150 flex items-center justify-center gap-1 shadow-xs"
-                    >
-                      Open Account
-                      <ArrowUpRight size={13} />
-                    </button>
-                  </div>
-                </div>
-              );
-            })
+        {/* Segment Badges Container */}
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 px-1">
+          <span className="text-[9px] font-bold uppercase text-slate-400 tracking-wider">Available Segments:</span>
+          <div className="flex flex-wrap gap-x-3 gap-y-0.5">
+            {["Equity", "Commodity", "Currency", "Futures", "Options"].map(seg => (
+              <SegmentBadge key={seg} label={seg} segments={segmentCollection} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Action Buttons Panel */}
+      <div className="flex flex-row md:flex-col justify-center items-stretch gap-2.5 min-w-full md:min-w-[165px] border-t md:border-t-0 md:border-l border-slate-100 pt-4 md:pt-0 md:pl-5 flex-shrink-0">
+        <button
+          onClick={() => {
+            if (broker.account_opening_url) {
+              window.open(broker.account_opening_url, "_blank", "noopener,noreferrer");
+            } else {
+              navigate("/login");
+            }
+          }}
+          className="flex-1 md:flex-initial order-2 md:order-1 py-3 px-4 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold rounded-lg transition-colors flex items-center justify-center gap-1 shadow-sm whitespace-nowrap"
+        >
+          Open Account
+          <ArrowUpRight size={13} className="stroke-[2.5]" />
+        </button>
+        
+        <button
+          onClick={() => navigate(`/brokerdetails/${currentSlug}`)}
+          className="flex-1 md:flex-initial order-1 md:order-2 text-center py-3 px-4 border border-slate-200 text-slate-600 bg-white hover:bg-slate-50 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap"
+        >
+          Full Details
+        </button>
+      </div>
+    </div>
+  );
+})
           )}
         </section>
 
         <AdBanner />
 
-        {/* REFACTORED RECOMMENDATIONS SECTION */}
+        {/* TOP RECOMMENDATIONS SECTION - DYNAMIC REDIRECT ON CLICK */}
         <div className="bg-white rounded-3xl border border-gray-200 p-10">
-          <h3 className="text-center uppercase tracking-[2px] text-sm font-bold text-slate-500 mb-8">
-            Our Top Recommendations
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {dynamicRecommendationCategories.map((rec, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-50 rounded-2xl p-8 text-center border border-transparent"
-              >
-                <h4 className="font-bold uppercase tracking-wider text-sm mb-6 text-slate-600">
-                  {rec.title}
-                </h4>
-                <div className="flex justify-center gap-8">
-                  {rec.brokers.map((brokerName, i) => {
-                    // Match text strings dynamically against downloaded database schemas
-                    const brokerMatch = brokersList.find(
-                      (b) => b.name?.toLowerCase().trim() === brokerName.toLowerCase().trim()
-                    );
+  <h3 className="text-center uppercase tracking-[2px] text-sm font-bold text-slate-500 mb-8">
+    Our Top Recommendations
+  </h3>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {dynamicRecommendationCategories.map((rec, idx) => {
+      // 1. Gather all computed slugs belonging to this exact recommendation row group
+      const cardSlugs = rec.brokers.map((brokerName) => {
+        const match = brokersList.find(
+          (b) => b.name?.toLowerCase().trim() === brokerName.toLowerCase().trim()
+        );
+        return match?.slug || brokerName.toLowerCase().replace(/\s+/g, "-");
+      });
 
-                    // Compute clean fallback routing params if the database state hasn't resolved
-                    const computedSlug = brokerMatch?.slug || brokerName.toLowerCase().replace(/\s+/g, "-");
-                    const supabaseLogo = brokerMatch?.logo;
+      // 2. Generate multi-param search routing options mapping query values directly
+      const queryParams = cardSlugs
+        .map((slug, i) => `broker${i + 1}=${slug}`)
+        .join("&");
 
-                    return (
-                      <div
-                        key={i}
-                        onClick={() => navigate(`/brokerdetails/${computedSlug}`)}
-                        className="text-center cursor-pointer group"
-                      >
-                        <div className="w-14 h-14 bg-white border rounded-2xl mx-auto mb-3 flex items-center justify-center text-2xl font-bold text-slate-400 overflow-hidden transition-all duration-200 group-hover:scale-105 group-hover:border-green-300 group-hover:shadow-xs">
-                          {supabaseLogo ? (
-                            <img
-                              src={supabaseLogo}
-                              alt={`${brokerName} logo`}
-                              className="w-full h-full object-contain p-2"
-                              onError={(e) => {
-                                // Dynamic UI recovery fallback if image load errors out
-                                e.target.style.display = "none";
-                                e.target.parentNode.innerText = brokerName[0];
-                              }}
-                            />
-                          ) : (
-                            <span>{brokerName[0]}</span>
-                          )}
-                        </div>
-                        <p className="text-sm font-semibold text-slate-700 group-hover:text-green-600 transition-colors">
-                          {brokerName}
-                        </p>
-                      </div>
-                    );
-                  })}
+      return (
+        <div
+          key={idx}
+          onClick={() => navigate(`/comparebrokers?${queryParams}`)}
+          className="bg-slate-50 rounded-2xl p-8 text-center border border-transparent hover:border-emerald-500/30 hover:shadow-md cursor-pointer transition-all duration-200 group"
+        >
+          <h4 className="font-bold uppercase tracking-wider text-sm mb-6 text-slate-600 group-hover:text-emerald-600 transition-colors">
+            {rec.title}
+          </h4>
+          <div className="flex justify-center gap-8">
+            {rec.brokers.map((brokerName, i) => {
+              const brokerMatch = brokersList.find(
+                (b) => b.name?.toLowerCase().trim() === brokerName.toLowerCase().trim()
+              );
+              const supabaseLogo = brokerMatch?.logo;
+
+              return (
+                <div key={i} className="text-center pointer-events-none">
+                  <div className="w-14 h-14 bg-white border rounded-2xl mx-auto mb-3 flex items-center justify-center text-2xl font-bold text-slate-400 overflow-hidden transition-all duration-200 group-hover:scale-105 group-hover:border-green-300">
+                    {supabaseLogo ? (
+                      <img
+                        src={supabaseLogo}
+                        alt={`${brokerName} logo`}
+                        className="w-full h-full object-contain p-2"
+                        onError={(e) => {
+                          e.target.style.display = "none";
+                          e.target.parentNode.innerText = brokerName[0];
+                        }}
+                      />
+                    ) : (
+                      <span>{brokerName[0]}</span>
+                    )}
+                  </div>
+                  <p className="text-sm font-semibold text-slate-700">
+                    {brokerName}
+                  </p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
+      );
+    })}
+  </div>
+</div>
 
         {/* FAQ SECTION */}
         <div className="bg-white rounded-3xl border border-gray-200 p-10">

@@ -1,6 +1,5 @@
-// src/pages/CompareBroker.jsx
 import { useMemo, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import {
   ChevronDown,
   ShieldCheck,
@@ -32,7 +31,6 @@ const StarRating = ({ rating }) => (
   </div>
 );
 
-// Clean and format Active Users text safely
 const formatActiveUsers = (text) => {
   if (!text) return "N/A";
   return text
@@ -83,7 +81,7 @@ const BrokerDropdown = ({ brokers, label, selected, onSelect }) => {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 8 }}
-            className="absolute Republic z-50 mt-2 w-full bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden"
+            className="absolute z-50 mt-2 w-full bg-white border border-gray-200 rounded-2xl shadow-2xl overflow-hidden"
           >
             <div className="max-h-72 overflow-y-auto py-2">
               {brokers.map((broker) => (
@@ -130,9 +128,9 @@ const CompareCard = ({ broker, highlight }) => {
   const activeUsersFormatted = formatActiveUsers(broker.active_users);
 
   let brokerType = broker.broker_type
-    .replace(/operating on a Discount Brokerage \(Flat[- ]?Fee\) Model/gi, "")
-    .replace(/Full-Service Broker \(with discount-style flat-fee plans\)/gi, "Full-Service Broker")
-    .trim() || "Broker";
+    ?.replace(/operating on a Discount Brokerage \(Flat[- ]?Fee\) Model/gi, "")
+    ?.replace(/Full-Service Broker \(with discount-style flat-fee plans\)/gi, "Full-Service Broker")
+    ?.trim() || "Broker";
 
   return (
     <motion.div
@@ -248,6 +246,7 @@ const LoadingAnimation = () => (
 const CompareBroker = () => {
   const [brokers, setBrokers] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [searchParams] = useSearchParams();
 
   const [broker1, setBroker1] = useState(null);
   const [broker2, setBroker2] = useState(null);
@@ -258,19 +257,52 @@ const CompareBroker = () => {
 
   useEffect(() => {
     const fetchBrokers = async () => {
-      const { data, error } = await supabase
-        .from('brokers')
-        .select('*')
-        .order('name', { ascending: true });
+      try {
+        const { data, error } = await supabase
+          .from("brokers")
+          .select("*")
+          .order("name", { ascending: true });
 
-      if (error) console.error("Error fetching brokers:", error);
-      else setBrokers(data || []);
+        if (error) throw error;
+        if (data) {
+          setBrokers(data);
+          
+          // Identify and bind any specific URL configuration parameters 
+          const urlParam1 = searchParams.get("broker1");
+          const urlParam2 = searchParams.get("broker2");
+          const urlParam3 = searchParams.get("broker3");
 
-      setLoading(false);
+          let b1Match = null;
+          let b2Match = null;
+          let b3Match = null;
+
+          if (urlParam1) {
+            b1Match = data.find((b) => (b.slug || b.name.toLowerCase().replace(/\s+/g, "-")) === urlParam1.toLowerCase().trim());
+            if (b1Match) setBroker1(b1Match);
+          }
+          if (urlParam2) {
+            b2Match = data.find((b) => (b.slug || b.name.toLowerCase().replace(/\s+/g, "-")) === urlParam2.toLowerCase().trim());
+            if (b2Match) setBroker2(b2Match);
+          }
+          if (urlParam3) {
+            b3Match = data.find((b) => (b.slug || b.name.toLowerCase().replace(/\s+/g, "-")) === urlParam3.toLowerCase().trim());
+            if (b3Match) setBroker3(b3Match);
+          }
+
+          // Automatically pop open the metrics breakdown if multiple entries are matched
+          const totalPreselected = [b1Match, b2Match, b3Match].filter(Boolean).length;
+          if (totalPreselected >= 2) {
+            setShowComparison(true);
+          }
+        }
+      } catch (err) {
+        console.error("Error setting initial values:", err);
+      } finally {
+        setLoading(false);
+      }
     };
-
     fetchBrokers();
-  }, []);
+  }, [searchParams]);
 
   const selectedBrokers = [broker1, broker2, broker3].filter(Boolean);
 
