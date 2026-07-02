@@ -20833,9 +20833,9 @@ export const fetchIPOs = async () => {
   "name": "IC Electricals Company",
   "logo": "/images/ipo/ic-electricals.png",
   "minInvestment": "₹2,37,600",
-  "open": "25 Jun 2026",
-  "close": "30 Jun 2026",
-  "listing": "03 Jul 2026",
+  "open": "03 Jul 2026",
+  "close": "07 Jul 2026",
+  "listing": "10 Jul 2026",
   "price": "94 - 99",
   "lot": 1200,
 
