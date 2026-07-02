@@ -1,7 +1,7 @@
 // src/pages/BrokerReviewDetail.jsx
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Clock, Calendar, Star, StarHalf, Award, Users, ChevronRight } from "lucide-react";
+import { Clock, Calendar, Star, StarHalf, Award, Users, ChevronRight, ShieldCheck, Building2, MapPin, Landmark } from "lucide-react";
 import { supabase } from "../lib/supabase";
 
 const BrokerReviewDetail = () => {
@@ -133,6 +133,40 @@ const BrokerReviewDetail = () => {
     return stars;
   };
 
+  // Helper function to dynamically parse and structure mixed nested objects/arrays inside `details`
+  const renderDetailsValue = (val) => {
+    if (val === null || val === undefined) return "N/A";
+    
+    if (Array.isArray(val)) {
+      return (
+        <ul className="list-disc pl-4 space-y-1 text-slate-600">
+          {val.map((item, idx) => (
+            <li key={idx}>{renderDetailsValue(item)}</li>
+          ))}
+        </ul>
+      );
+    }
+    
+    if (typeof val === "object") {
+      return (
+        <div className="space-y-1.5 text-slate-600">
+          {Object.entries(val).map(([subKey, subVal]) => (
+            <div key={subKey} className="flex flex-col sm:flex-row sm:items-start gap-1">
+              <span className="font-semibold text-slate-800 capitalize min-w-[160px] sm:after:content-[':']">
+                {subKey.replace(/_/g, " ")}
+              </span>
+              <span className="text-slate-600 sm:pl-1">
+                {typeof subVal === "object" ? renderDetailsValue(subVal) : String(subVal)}
+              </span>
+            </div>
+          ))}
+        </div>
+      );
+    }
+    
+    return String(val);
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-slate-50/50">
@@ -157,13 +191,21 @@ const BrokerReviewDetail = () => {
     );
   }
 
-  // Bind values dynamically directly to your provided table properties
   const currentRating = broker?.rating || review?.rating || 4.2;
   const currentActiveUsers = broker?.active_users || review?.active_users;
   const targetActionUrl = broker?.account_opening_url || broker?.website || "#";
 
+  // Helper function to parse any key variations safely from JSONB fields
+  const getJsonbValue = (keys) => {
+    if (!broker?.details || typeof broker.details !== 'object') return null;
+    for (const key of keys) {
+      if (broker.details[key]) return broker.details[key];
+    }
+    return null;
+  };
+
   return (
-    <div className="bg-slate-50/50 min-h-screen pb-24 text-slate-900 font-sans antialiased">
+    <div className="min-h-screen pb-24 text-slate-900 font-sans antialiased">
       <div className="max-w-[1140px] mx-auto px-4 sm:px-6 lg:px-8 pt-6">
         
         {/* Breadcrumb Navigation */}
@@ -176,13 +218,13 @@ const BrokerReviewDetail = () => {
         </nav>
 
         {/* Content Presentation Flow */}
-        <div className="space-y-6">
+        <div className="space-y-10">
           
           {/* Header Panel */}
-          <div className="bg-white rounded-2xl border border-slate-100 p-6 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden">
+          <div className="py-6 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-600"></div>
             
-            <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+            <div className="flex flex-wrap items-center justify-between gap-4 mb-4 pt-4">
               <div className="flex items-center gap-2 text-emerald-600">
                 <Award size={18} className="stroke-[2.5]" />
                 <span className="font-bold uppercase tracking-wider text-xs">Verified Review Desk • 2026</span>
@@ -194,7 +236,7 @@ const BrokerReviewDetail = () => {
               )}
             </div>
 
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
+            <div className="flex flex-col-reverse md:flex-row md:items-center justify-between gap-6 mb-6">
               <div className="space-y-2 max-w-2xl">
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-950 leading-tight">
                   {review.title}
@@ -202,7 +244,7 @@ const BrokerReviewDetail = () => {
                 {broker?.tagline && <p className="text-slate-500 text-sm sm:text-base font-medium">{broker.tagline}</p>}
               </div>
               {broker?.logo && (
-                <div className="w-16 h-16 rounded-xl border border-slate-100 p-2 flex items-center justify-center bg-white shadow-xs flex-shrink-0">
+                <div className="w-24 h-24 md:w-28 md:h-28 rounded-2xl border border-slate-100 p-3 flex items-center justify-center bg-white shadow-md flex-shrink-0 transition-transform hover:scale-[1.02]">
                   <img src={broker.logo} alt={`${broker.name} logo`} className="max-w-full max-h-full object-contain" />
                 </div>
               )}
@@ -249,9 +291,99 @@ const BrokerReviewDetail = () => {
             </div>
           </div>
 
+          {/* DYNAMIC BROKER PROFILE SPECIFICATIONS TABLE */}
+          {broker && (
+            <div className="overflow-hidden border border-slate-100 rounded-xl shadow-xs">
+              <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 px-6 py-4 flex items-center gap-2">
+                <Landmark size={20} className="text-emerald-100" />
+                <h3 className="text-base sm:text-lg font-bold text-white tracking-wide">
+                  {broker.name} Profile & Regulatory Specifications
+                </h3>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse text-left text-sm">
+                  <tbody>
+                    <tr className="border-b border-slate-100 hover:bg-slate-50/40 transition">
+                      <td className="w-1/3 p-4 font-semibold text-slate-900 bg-slate-50/50 flex items-center gap-2">
+                     Broker Name
+                      </td>
+                      <td className="p-4 text-slate-700 font-medium">{broker.name}</td>
+                    </tr>
+                    <tr className="border-b border-slate-100 hover:bg-slate-50/40 transition">
+                      <td className="p-4 font-semibold text-slate-900 bg-slate-50/50 flex items-center gap-2">
+                        Entity Type
+                      </td>
+                      <td className="p-4 text-slate-700 capitalize">{broker.broker_type || "Discount Broker"}</td>
+                    </tr>
+                    {broker.sebi_registration && (
+                      <tr className="border-b border-slate-100 hover:bg-slate-50/40 transition">
+                        <td className="p-4 font-semibold text-slate-900 bg-slate-50/50 flex items-center gap-2">
+                          <ShieldCheck size={16} className="text-emerald-600" /> SEBI Registration
+                        </td>
+                        <td className="p-4 text-slate-700 font-mono text-xs font-semibold tracking-wider bg-emerald-50/10 text-emerald-800">
+                          {broker.sebi_registration}
+                        </td>
+                      </tr>
+                    )}
+                    {broker.founded_year && (
+                      <tr className="border-b border-slate-100 hover:bg-slate-50/40 transition">
+                        <td className="p-4 font-semibold text-slate-900 bg-slate-50/50 flex items-center gap-2">
+                          <Calendar size={16} className="text-slate-400" /> Incorporation Year
+                        </td>
+                        <td className="p-4 text-slate-700">{broker.founded_year}</td>
+                      </tr>
+                    )}
+                    {broker.headquarters && (
+                      <tr className="border-b border-slate-100 hover:bg-slate-50/40 transition">
+                        <td className="p-4 font-semibold text-slate-900 bg-slate-50/50 flex items-center gap-2">
+                          <MapPin size={16} className="text-slate-400" /> Corporate Headquarters
+                        </td>
+                        <td className="p-4 text-slate-700">{broker.headquarters}</td>
+                      </tr>
+                    )}
+                    
+                    {getJsonbValue(['maintenance_charges', 'amc', 'annual_maintenance']) && (
+                      <tr className="border-b border-slate-100 hover:bg-slate-50/40 transition">
+                        <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Annual Maintenance (AMC)</td>
+                        <td className="p-4 text-slate-700">{renderDetailsValue(getJsonbValue(['maintenance_charges', 'amc', 'annual_maintenance']))}</td>
+                      </tr>
+                    )}
+                    {getJsonbValue(['delivery_brokerage', 'equity_delivery']) && (
+                      <tr className="border-b border-slate-100 hover:bg-slate-50/40 transition">
+                        <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Equity Delivery Rates</td>
+                        <td className="p-4 text-slate-700">{renderDetailsValue(getJsonbValue(['delivery_brokerage', 'equity_delivery']))}</td>
+                      </tr>
+                    )}
+                    {getJsonbValue(['intraday_brokerage', 'equity_intraday']) && (
+                      <tr className="border-b border-slate-100 hover:bg-slate-50/40 transition">
+                        <td className="p-4 font-semibold text-slate-900 bg-slate-50/50">Intraday Brokerage Rates</td>
+                        <td className="p-4 text-slate-700">{renderDetailsValue(getJsonbValue(['intraday_brokerage', 'equity_intraday']))}</td>
+                      </tr>
+                    )}
+
+                    {broker.details && typeof broker.details === 'object' && 
+                      Object.entries(broker.details)
+                        .filter(([key]) => !['maintenance_charges', 'amc', 'annual_maintenance', 'delivery_brokerage', 'equity_delivery', 'intraday_brokerage', 'equity_intraday'].includes(key))
+                        .map(([key, val]) => (
+                          <tr key={key} className="border-b border-slate-100 hover:bg-slate-50/40 transition">
+                            <td className="p-4 font-semibold text-slate-900 bg-slate-50/50 capitalize">
+                              {key.replace(/_/g, ' ')}
+                            </td>
+                            <td className="p-4 text-slate-700">
+                              {renderDetailsValue(val)}
+                            </td>
+                          </tr>
+                        ))
+                    }
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
           {/* MAIN ARTICLE MARKUP PANEL */}
           <article
-            className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-slate-100 shadow-sm text-slate-800 overflow-hidden
+            className="bg-white text-slate-800 overflow-hidden
               [&_h2]:text-xl [&_h2]:sm:text-2xl [&_h2]:font-bold [&_h2]:text-slate-950 [&_h2]:border-b [&_h2]:border-slate-100 [&_h2]:pb-3 [&_h2]:mt-10 [&_h2]:mb-5
               [&_h3]:text-lg [&_h3]:sm:text-xl [&_h3]:font-bold [&_h3]:text-slate-900 [&_h3]:mt-8 [&_h3]:mb-3
               [&_p]:text-slate-600 [&_p]:leading-relaxed [&_p]:mb-5 [&_p]:text-sm [&_p]:sm:text-base
@@ -274,7 +406,7 @@ const BrokerReviewDetail = () => {
 
           {/* Dynamic Similar Brokers Block */}
           {competitors.length > 0 && (
-            <div className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-100 shadow-sm">
+            <div className="py-6">
               <div className="flex justify-between items-center mb-5">
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900">Compare Similar Brokers</h3>
                 <Link to="/comparebrokers" className="text-emerald-600 hover:text-emerald-700 font-medium text-sm flex items-center gap-1 transition">
