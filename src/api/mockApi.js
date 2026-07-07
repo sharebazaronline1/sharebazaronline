@@ -24420,6 +24420,651 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on the NSE SME platform on 07 July 2026."
     }
   ]
+},
+{
+  "id": 121,
+  "name": "Happy Steels Limited",
+  "logo": "/images/ipo/happysteels.png",
+  "minInvestment": "₹2,64,000",
+  "open": "09 Jul 2026",
+  "close": "13 Jul 2026",
+  "listing": "16 Jul 2026",
+  "price": "62-66",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Happy Steels Limited",
+    "industry_sector": "Auto Components (Forged & Machined Transmission/Driveline Parts)",
+    "founded_year": "1996",
+    "promoters": [
+      "Parveen Kumar Garg",
+      "Abhishek Garg",
+      "Deepak Garg",
+      "Parveen Kumar Garg (HUF)"
+    ],
+    "description": "Happy Steels Limited is an integrated manufacturer of safety-critical, forged, and machined transmission and driveline components catering to on-highway, off-highway, electric vehicle (EV), and defence applications. The company operates across the full value chain including forging, heat treatment, precision machining, gear cutting, and more. It supplies axles, long spline shafts, spindles, and other load-bearing components to OEMs and Tier-I suppliers in India and overseas."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Happy Steels Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹62",
+    "price_band_max": "₹66",
+    "lot_size": "2000 Shares",
+    "total_issue_size": "37,88,000 Equity Shares (₹25.00 Cr)",
+    "fresh_issue_size": "37,88,000 Equity Shares (₹25.00 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "37,88,000 Equity Shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹62 to ₹66",
+    "minimum_investment": "₹2,64,000 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO Market Cap ₹94.29 Cr)",
+    "pre_issue_shareholding": "1,04,98,180 shares",
+    "post_issue_shareholding": "1,42,86,180 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated manufacturing of forged and machined auto components with full value chain capabilities for OEMs in automotive, EV, and defence sectors.",
+    "products_services": [
+      "Axles",
+      "Long Spline Shafts",
+      "Spindles",
+      "Safety-critical and Load-bearing Transmission/Driveline Components"
+    ],
+    "competitive_strengths": [
+      "Integrated manufacturing capabilities (forging to precision machining)",
+      "Focus on safety-critical components",
+      "In-house expertise in heat treatment and quality control",
+      "Diversified customer base (domestic & international)",
+      "Scalable infrastructure in Ludhiana"
+    ],
+    "risks": [
+      "Inconsistent bottom-line performance",
+      "Highly competitive and fragmented auto components sector",
+      "Dependence on automotive and industrial demand",
+      "Raw material and execution risks in capex"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "09 Jul 2026",
+    "ipo_close_date": "13 Jul 2026",
+    "basis_of_allotment_date": "14 Jul 2026",
+    "refund_initiation_date": "15 Jul 2026",
+    "demat_credit_date": "15 Jul 2026",
+    "listing_date": "16 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_for_plant_and_machinery": "₹13.16 Cr",
+    "repayment_of_borrowings": "₹4.98 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹18.14 Cr (Net Proceeds)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.97% of Net Issue (incl. Anchor)",
+    "hni_nii_quota": "15.01% of Net Issue",
+    "retail_quota": "35.02% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "4000",
+      "amount": "₹2,64,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "6000",
+      "amount": "₹3,96,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "16000",
+      "amount": "₹10,56,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "19.49% (Mar 2026)",
+    "roce": "20.89% (Mar 2026)",
+    "pat_margin": "7.50% (Mar 2026)",
+    "ebitda_margin": "16.14% (Mar 2026)",
+    "eps": "6.77 (Pre-IPO)",
+    "nav": "Not specified",
+    "debt_to_equity": "1.18 (Mar 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹99.66 Cr",
+      "total_income": "₹96.57 Cr",
+      "pat": "₹7.10 Cr",
+      "ebitda": "₹15.27 Cr",
+      "net_worth": "₹39.98 Cr",
+      "total_borrowing": "₹47.18 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹78.62 Cr",
+      "total_income": "₹82.52 Cr",
+      "pat": "₹2.34 Cr",
+      "ebitda": "₹8.49 Cr",
+      "net_worth": "₹32.88 Cr",
+      "total_borrowing": "₹34.21 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹78.37 Cr",
+      "total_income": "₹82.24 Cr",
+      "pat": "₹4.69 Cr",
+      "ebitda": "₹11.08 Cr",
+      "net_worth": "₹30.54 Cr",
+      "total_borrowing": "₹35.69 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "Check RHP for details"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Share India Capital Services Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Kanganwal Road Jaspal Banger Ludhiana, Punjab, 141122",
+    "company_website": "https://happysteels.com/",
+    "company_email": "cs@happysteels.com",
+    "company_phone": "+91 6239821029"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://happysteels.com/wp-content/uploads/2026/07/HappySteelsLtd_RHP.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Happy Steels Limited do?",
+      "answer": "The company manufactures forged and machined safety-critical transmission and driveline components for automotive, EV, and defence sectors."
+    },
+    {
+      "question": "When does the Happy Steels IPO open and close?",
+      "answer": "The IPO opens on 09 July 2026 and closes on 13 July 2026."
+    },
+    {
+      "question": "What is the issue price of Happy Steels IPO?",
+      "answer": "The IPO price band is ₹62 to ₹66 per share."
+    },
+    {
+      "question": "What is the lot size of Happy Steels IPO?",
+      "answer": "The lot size is 2,000 shares. Retail minimum is 2 lots (4,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,64,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Happy Steels IPO?",
+      "answer": "The IPO size is ₹25.00 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Happy Steels shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 16 July 2026."
+    }
+  ]
+},
+{
+  "id": 122,
+  "name": "Kusumgar Limited",
+  "logo": "/images/ipo/kusumgar.png",
+  "minInvestment": "₹14,665",
+  "open": "08 Jul 2026",
+  "close": "10 Jul 2026",
+  "listing": "15 Jul 2026",
+  "price": "398-419",
+  "lot": 35,
+
+  "about_company": {
+    "company_name": "Kusumgar Limited",
+    "industry_sector": "Engineered Fabrics (Woven, Coated & Laminated Synthetic Fabrics)",
+    "founded_year": "1990",
+    "promoters": [
+      "Yogesh Kantilal Kusumgar",
+      "Siddharth Yogesh Kusumgar",
+      "Sapna Siddharth Kusumgar",
+      "Siddharth Yogesh Kusumgar (HUF)"
+    ],
+    "description": "Kusumgar Ltd is a manufacturer of woven, coated, and laminated synthetic fabrics (engineered fabrics) primarily based on polyamide and polyester filaments using polyurethane chemistry. It has developed over 1,000 SKUs serving aerospace & defence, industrial & automotive, and outdoor & lifestyle segments. The company has expanded into finished products such as parachute systems, stealth materials, camouflage nets, and deployable shelters."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Kusumgar Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹1 per share",
+    "price_band_min": "₹398",
+    "price_band_max": "₹419",
+    "lot_size": "35 Shares",
+    "total_issue_size": "1,55,13,126 Equity Shares (₹650 Cr)",
+    "fresh_issue_size": "Nil",
+    "offer_for_sale": "1,55,13,126 Equity Shares (₹650 Cr)",
+    "shares_offered": "1,55,13,126 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹398 to ₹419",
+    "minimum_investment": "₹14,665 (Upper price band)",
+    "market_cap_post_issue": "₹4,399.14 Cr (Pre-IPO)",
+    "pre_issue_shareholding": "10,49,91,372 shares",
+    "post_issue_shareholding": "10,49,91,372 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturer of high-performance engineered fabrics and solutions for specialised applications, with expansion into finished defence products.",
+    "products_services": [
+      "Aerospace & Defence Fabrics (parachutes, tactical clothing, stealth systems)",
+      "Aerospace & Defence Solutions (parachute systems, camouflage nets, deployable shelters)",
+      "Industrial & Automotive Fabrics (tapes, MRG, inflatables)",
+      "Outdoor & Lifestyle Fabrics (athleisure, rainwear, tents, backpacks)"
+    ],
+    "competitive_strengths": [
+      "High entry barriers market",
+      "Strong technical capabilities and unique solutions",
+      "Diversified presence across end-use segments",
+      "Long-standing customer relationships",
+      "Experienced promoters and professional management",
+      "Over 1,000 SKUs developed"
+    ],
+    "risks": [
+      "Inconsistent top-line and bottom-line performance",
+      "Dependence on order book and defence/industrial demand",
+      "Debt levels",
+      "Execution risks on expansion"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "08 Jul 2026",
+    "ipo_close_date": "10 Jul 2026",
+    "basis_of_allotment_date": "13 Jul 2026",
+    "refund_initiation_date": "14 Jul 2026",
+    "demat_credit_date": "14 Jul 2026",
+    "listing_date": "15 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "offer_for_sale": "Pure OFS – No proceeds to the company (exit for selling shareholders)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Net Offer",
+    "hni_nii_quota": "Not less than 15% of the Net Offer",
+    "retail_quota": "Not less than 35% of the Net Offer",
+    "employee_quota": "Up to ₹5 Cr with ₹39 discount"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "35",
+      "amount": "₹14,665"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "490",
+      "amount": "₹2,05,310"
+    },
+    "bhni_minimum": {
+      "lot_size": "69 Lots",
+      "shares": "2,415",
+      "amount": "₹10,11,885"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "25.82% (Mar 2026)",
+    "roce": "24.76% (Mar 2026)",
+    "pat_margin": "13.80% (Mar 2026)",
+    "ebitda_margin": "27.15% (Mar 2026)",
+    "eps": "9.35",
+    "nav": "Not specified",
+    "debt_to_equity": "0.44 (Mar 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹905.07 Cr",
+      "total_income": "₹711.78 Cr",
+      "pat": "₹98.20 Cr",
+      "ebitda": "₹187.85 Cr",
+      "net_worth": "₹502.95 Cr",
+      "total_borrowing": "₹223.58 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹632.40 Cr",
+      "total_income": "₹790.21 Cr",
+      "pat": "₹111.99 Cr",
+      "ebitda": "₹188.39 Cr",
+      "net_worth": "₹257.75 Cr",
+      "total_borrowing": "₹246.50 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹584.74 Cr",
+      "total_income": "₹474.55 Cr",
+      "pat": "₹84.40 Cr",
+      "ebitda": "₹131.85 Cr",
+      "net_worth": "₹140.36 Cr",
+      "total_borrowing": "₹76.53 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Axis Capital Ltd. (and others)"
+  },
+
+  "company_information": {
+    "company_address": "101, Manjushree, V.M. Road, Corner of N.S. Road No. 5, JVPD Scheme, Vile Parle (West), Mumbai, Maharashtra - 400056",
+    "company_website": "https://www.kusumgar.com/",
+    "company_email": "cs@kusumgar.com",
+    "company_phone": "+91 22 61125100"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on SEBI site",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/jul-2026/kusumgar-limited-rhp_102510.html",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Kusumgar Limited do?",
+      "answer": "The company manufactures engineered synthetic fabrics and solutions for aerospace & defence, industrial, automotive, outdoor, and lifestyle applications."
+    },
+    {
+      "question": "When does the Kusumgar IPO open and close?",
+      "answer": "The IPO opens on 08 July 2026 and closes on 10 July 2026."
+    },
+    {
+      "question": "What is the issue price of Kusumgar IPO?",
+      "answer": "The IPO price band is ₹398 to ₹419 per share."
+    },
+    {
+      "question": "What is the lot size of Kusumgar IPO?",
+      "answer": "The lot size is 35 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,665 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Kusumgar IPO?",
+      "answer": "The IPO size is ₹650 crore (Pure Offer for Sale)."
+    },
+    {
+      "question": "Where will Kusumgar shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 15 July 2026."
+    }
+  ]
+},
+{
+  "id": 123,
+  "name": "Devson Catalyst Limited",
+  "logo": "/images/ipo/devsoncatalyst.png",
+  "minInvestment": "₹2,83,200",
+  "open": "09 Jul 2026",
+  "close": "13 Jul 2026",
+  "listing": "16 Jul 2026",
+  "price": "112-118",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Devson Catalyst Limited",
+    "industry_sector": "Specialty Chemicals (Catalysts, Adsorbents & Ceramic Balls)",
+    "founded_year": "Not specified (operations established)",
+    "promoters": [
+      "Pratapbhai Devjibhai Siyania",
+      "Prahladbhai Devjibhai Shiyaniya",
+      "Patel Savan Prahladbhai",
+      "Patel Krishna Savanbhai"
+    ],
+    "description": "Devson Catalyst Limited is an indigenous manufacturer of catalysts, adsorbents, and ceramic balls used in oil & gas refineries, petrochemicals, steel, fertilizers, and other industrial processes. The company operates a manufacturing facility in Wadhwan, Gujarat, with an installed capacity of 6,205 MT per annum. It serves B2B customers in domestic and international markets."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Devson Catalyst Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹112",
+    "price_band_max": "₹118",
+    "lot_size": "1200 Shares",
+    "total_issue_size": "35,88,000 Equity Shares (₹42.34 Cr)",
+    "fresh_issue_size": "33,38,000 Equity Shares (₹39.39 Cr)",
+    "offer_for_sale": "2,50,000 Equity Shares (₹2.95 Cr)",
+    "shares_offered": "35,88,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹112 to ₹118",
+    "minimum_investment": "₹2,83,200 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹160.34 Cr)",
+    "pre_issue_shareholding": "1,02,50,000 shares",
+    "post_issue_shareholding": "1,35,88,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "B2B manufacturer of catalysts, adsorbents, and ceramic balls for industrial processes, with focus on quality and import substitution.",
+    "products_services": [
+      "Catalysts",
+      "Adsorbents",
+      "Ceramic Balls"
+    ],
+    "competitive_strengths": [
+      "Indigenous manufacturer in high-entry-barrier industry",
+      "Consistent profitability",
+      "Strategically located facility with multi-product capability",
+      "Strong customer relationships and growing global presence"
+    ],
+    "risks": [
+      "Industry competition and raw material dependency",
+      "Execution risks on new manufacturing unit",
+      "Reliance on industrial sector demand"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "09 Jul 2026",
+    "ipo_close_date": "13 Jul 2026",
+    "basis_of_allotment_date": "14 Jul 2026",
+    "refund_initiation_date": "15 Jul 2026",
+    "demat_credit_date": "15 Jul 2026",
+    "listing_date": "16 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "capital_expenditure_for_new_unit": "₹17.40 Cr",
+    "working_capital_requirements": "₹12.00 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹29.40 Cr (Net Proceeds from Fresh Issue)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.75% of Net Issue",
+    "hni_nii_quota": "15.08% of Net Issue",
+    "retail_quota": "35.18% of Net Issue",
+    "employee_quota": "Available (2-3 lots)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "2400",
+      "amount": "₹2,83,200"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "3600",
+      "amount": "₹4,24,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "9600",
+      "amount": "₹11,32,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "45.97% (Mar 2026)",
+    "roce": "47.60% (Mar 2026)",
+    "pat_margin": "Not specified",
+    "ebitda_margin": "29.49% (Mar 2026)",
+    "eps": "12.22 (Pre-IPO)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.07 (Mar 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹41.63 Cr",
+      "total_income": "₹56.84 Cr",
+      "pat": "₹12.52 Cr",
+      "ebitda": "₹16.76 Cr",
+      "net_worth": "₹33.50 Cr",
+      "total_borrowing": "Nil (or minimal)"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹27.38 Cr",
+      "total_income": "₹53.54 Cr",
+      "pat": "₹7.67 Cr",
+      "ebitda": "₹10.93 Cr",
+      "net_worth": "₹20.98 Cr",
+      "total_borrowing": "₹2.78 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹21.49 Cr",
+      "total_income": "₹43.75 Cr",
+      "pat": "₹4.08 Cr",
+      "ebitda": "₹6.69 Cr",
+      "net_worth": "₹13.36 Cr",
+      "total_borrowing": "₹4.17 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "JJ IPO Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No 213 To 218 and 233 To 237, Phase II, Ambawadi, GIDC, Wadhwan City, Surendranagar, Gujarat - 363030",
+    "company_website": "https://www.devsongroup.com/",
+    "company_email": "info@devsongroup.com",
+    "company_phone": "+91 7201010244"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.jjipoadvisors.com/wp-content/uploads/2026/07/RHP_Devson.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Devson Catalyst Limited do?",
+      "answer": "The company manufactures catalysts, adsorbents, and ceramic balls for oil & gas, petrochemicals, fertilizers, and other industrial applications."
+    },
+    {
+      "question": "When does the Devson Catalyst IPO open and close?",
+      "answer": "The IPO opens on 09 July 2026 and closes on 13 July 2026."
+    },
+    {
+      "question": "What is the issue price of Devson Catalyst IPO?",
+      "answer": "The IPO price band is ₹112 to ₹118 per share."
+    },
+    {
+      "question": "What is the lot size of Devson Catalyst IPO?",
+      "answer": "The lot size is 1,200 shares. Retail minimum is 2 lots (2,400 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,83,200 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Devson Catalyst IPO?",
+      "answer": "The IPO size is ₹42.34 crore (Fresh Issue ₹39.39 Cr + OFS ₹2.95 Cr)."
+    },
+    {
+      "question": "Where will Devson Catalyst shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 16 July 2026."
+    }
+  ]
 }
 
 
