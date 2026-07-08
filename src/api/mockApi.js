@@ -25065,8 +25065,220 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 16 July 2026."
     }
   ]
-}
+},
+{
+  "id": 124,
+  "name": "Laser Power & Infra Limited",
+  "logo": "/images/ipo/laserpowerinfra.png",
+  "minInvestment": "₹14,980",
+  "open": "09 Jul 2026",
+  "close": "13 Jul 2026",
+  "listing": "16 Jul 2026",
+  "price": "203-214",
+  "lot": 70,
 
+  "about_company": {
+    "company_name": "Laser Power & Infra Limited",
+    "industry_sector": "Power Cables, Conductors & EPC (Power Transmission & Distribution)",
+    "founded_year": "1988",
+    "promoters": [
+      "Deepak Goel",
+      "Devesh Goel",
+      "Akshat Goel",
+      "Rakhi Goel"
+    ],
+    "description": "Laser Power & Infra Ltd. is a Kolkata-based integrated manufacturer of power cables, conductors, and specialised products for the power transmission and distribution industry. It has expanded into the EPC segment for rural/urban electrification, substations, and power infrastructure. The company operates three manufacturing units in West Bengal with a combined capacity of 85,448 MT and has a strong order book."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Laser Power & Infra Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹5 per share",
+    "price_band_min": "₹203",
+    "price_band_max": "₹214",
+    "lot_size": "70 Shares",
+    "total_issue_size": "3,46,72,896 Equity Shares (₹742 Cr)",
+    "fresh_issue_size": "2,53,27,102 Equity Shares (₹542 Cr)",
+    "offer_for_sale": "93,45,794 Equity Shares (₹200 Cr)",
+    "shares_offered": "3,46,72,896 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹203 to ₹214",
+    "minimum_investment": "₹14,980 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹3,003.88 Cr)",
+    "pre_issue_shareholding": "11,50,41,240 shares",
+    "post_issue_shareholding": "14,03,68,342 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated manufacturing of power cables/conductors + EPC services for power distribution and infrastructure.",
+    "products_services": [
+      "Power and Control Cables",
+      "Speciality Products & Conductors",
+      "EPC Solutions (Rural/Urban Electrification, Substations)"
+    ],
+    "competitive_strengths": [
+      "Leading player in East India for power cables & conductors",
+      "Strong manufacturing & backward integration",
+      "Robust EPC execution capabilities",
+      "Marquee customer base and international presence",
+      "Strategic partnerships"
+    ],
+    "risks": [
+      "Revenue fluctuation",
+      "High debt (being partially repaid)",
+      "Execution and project risks in EPC",
+      "Competition in power sector"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "09 Jul 2026",
+    "ipo_close_date": "13 Jul 2026",
+    "basis_of_allotment_date": "14 Jul 2026",
+    "refund_initiation_date": "15 Jul 2026",
+    "demat_credit_date": "15 Jul 2026",
+    "listing_date": "16 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_borrowings": "₹490 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Net Offer",
+    "hni_nii_quota": "Not less than 15% of the Net Offer",
+    "retail_quota": "Not less than 35% of the Net Offer"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "70",
+      "amount": "₹14,980"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "980",
+      "amount": "₹2,09,720"
+    },
+    "bhni_minimum": {
+      "lot_size": "67 Lots",
+      "shares": "4,690",
+      "amount": "₹10,03,660"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "23.32% (Mar 2026)",
+    "roce": "17.83% (Mar 2026)",
+    "pat_margin": "6.46% (Mar 2026)",
+    "ebitda_margin": "12.96% (Mar 2026)",
+    "eps": "13.18 (Pre-IPO)",
+    "nav": "Not specified",
+    "debt_to_equity": "1.10 (Mar 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹2,632.36 Cr",
+      "total_income": "₹2,347.89 Cr",
+      "pat": "₹151.59 Cr",
+      "ebitda": "₹301.44 Cr",
+      "net_worth": "₹725.41 Cr",
+      "total_borrowing": "₹828.23 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹2,270.17 Cr",
+      "total_income": "₹2,592.53 Cr",
+      "pat": "₹106.75 Cr",
+      "ebitda": "₹250.39 Cr",
+      "net_worth": "₹574.58 Cr",
+      "total_borrowing": "₹502.95 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹1,986.99 Cr",
+      "total_income": "₹1,763.65 Cr",
+      "pat": "₹40.41 Cr",
+      "ebitda": "₹156.10 Cr",
+      "net_worth": "₹473.44 Cr",
+      "total_borrowing": "₹393.75 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "IIFL Capital Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "4A, Pollock Street, 3rd Floor, Kolkata, West Bengal - 700001",
+    "company_website": "https://www.laserpowerinfra.com/",
+    "company_email": "investor.grievance@laserpowerinfra.com",
+    "company_phone": "+91 33 4822 9195"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://laserpowerinfra.com/wp-content/uploads/2026/07/Red-Herring-Prospectus.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Laser Power & Infra Limited do?",
+      "answer": "The company manufactures power cables, conductors, and provides EPC services for power transmission and distribution."
+    },
+    {
+      "question": "When does the Laser Power & Infra IPO open and close?",
+      "answer": "The IPO opens on 09 July 2026 and closes on 13 July 2026."
+    },
+    {
+      "question": "What is the issue price of Laser Power & Infra IPO?",
+      "answer": "The IPO price band is ₹203 to ₹214 per share."
+    },
+    {
+      "question": "What is the lot size of Laser Power & Infra IPO?",
+      "answer": "The lot size is 70 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,980 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Laser Power & Infra IPO?",
+      "answer": "The IPO size is ₹742 crore (Fresh Issue ₹542 Cr + OFS ₹200 Cr)."
+    },
+    {
+      "question": "Where will Laser Power & Infra shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 16 July 2026."
+    }
+  ]
+}
 
 
 
