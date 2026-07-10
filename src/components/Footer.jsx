@@ -271,11 +271,11 @@ const Footer = () => {
               <ul className="space-y-3 text-sm text-slate-300">
                 <li><Link to="/ipo/ipo-list" className="hover:text-green-400 transition">IPO Updates</Link></li>
                 <li><Link to="/pre-ipo-stocks" className="hover:text-green-400 transition">Unlisted Shares</Link></li>
-                <li><Link to="/broker-analyzer" className="hover:text-green-400 transition">Broker Comparison</Link></li>
+                <li><Link to="/broker-analyzer" className="hover:text-green-400 transition">Broker Analyzer</Link></li>
                 <li><Link to="/skill-up" className="hover:text-green-400 transition">ETFs</Link></li>
                 <li><Link to="/skill-up" className="hover:text-green-400 transition">Mutual Funds</Link></li>
                 <li><Link to="/skill-up" className="hover:text-green-400 transition">NFO</Link></li>
-                <li><Link to="/skill-up" className="hover:text-green-400 transition">Corporate Actions</Link></li>
+                <li><Link to="/corporateactions" className="hover:text-green-400 transition">Corporate Actions</Link></li>
               </ul>
             </div>
 

@@ -24,6 +24,29 @@ const featureCards = [
   { icon: ShieldCheck, title: "Trusted & Safe", desc: "SEBI registered & investor trusted brokers.", color: "blue" },
 ];
 
+const formatCharge = (value) => {
+  if (!value) return "—";
+
+  let text = String(value).trim();
+
+  if (/free/i.test(text)) return "Free";
+
+  // Standardize multiple variations of the Rupee sign/entity wrappers
+  text = text
+    .replace(/&#8377;|&\s*₹\s*;|&amp;#8377;/g, "₹")
+    .replace(/\\u20B9/g, "₹")
+    .replace(/Rs\.?/gi, "₹");
+
+  // Regex safely extracts decimals or integers following potential symbol mutations
+  const match = text.match(/(\d+(\.\d+)?)/);
+
+  if (match) {
+    return `₹${match[1]}/order`;
+  }
+
+  return text.length > 28 ? text.substring(0, 28) + "..." : text;
+};
+
 const StarRating = ({ rating }) => (
   <div className="flex items-center justify-center gap-1.5">
     <Star size={18} className="fill-amber-400 text-amber-400" />
@@ -116,7 +139,7 @@ const fixedSegments = ["Equity", "F&O", "Commodity", "Currency"];
 const CompareCard = ({ broker, highlight }) => {
   if (!broker) {
     return (
-      <div className="bg-white border-2 border-dashed border-gray-200 rounded-3xl h-full min-h-[600px] flex flex-col items-center justify-center text-center p-8 transition-colors hover:border-gray-300">
+      <div className="bg-white border-2 border-dashed border-gray-200 rounded-3xl h-[920px] flex flex-col items-center justify-center text-center p-8 transition-colors hover:border-gray-300">
         <BarChart3 size={48} className="text-gray-300 mb-4" />
         <p className="font-bold text-gray-400 text-lg">Select a Broker</p>
         <p className="text-sm text-gray-400 mt-1 max-w-[200px]">Add a broker to start comparison parameters</p>
@@ -135,7 +158,7 @@ const CompareCard = ({ broker, highlight }) => {
   return (
     <motion.div
       whileHover={{ y: -4 }}
-      className={`relative bg-white rounded-3xl overflow-hidden border h-full flex flex-col transition-all duration-300 ${
+      className={`relative bg-white rounded-3xl overflow-hidden border flex flex-col h-[920px] transition-all duration-300 ${
         highlight 
           ? "border-emerald-500 shadow-xl ring-4 ring-emerald-50" 
           : "border-gray-200/80 shadow-md hover:shadow-xl hover:border-gray-300"
@@ -147,16 +170,18 @@ const CompareCard = ({ broker, highlight }) => {
         </div>
       )}
 
-      {/* Header */}
-      <div className="px-6 pt-10 pb-6 text-center border-b border-gray-100 flex flex-col items-center">
+      {/* Header Segment */}
+      <div className="px-6 pt-10 pb-6 text-center border-b border-gray-100 h-[260px] flex flex-col items-center justify-between">
         <div className="w-24 h-24 bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center justify-center">
           <img src={broker.logo} alt={broker.name} className="w-full h-full object-contain" />
         </div>
 
-        <h3 className="text-2xl font-extrabold text-gray-900 mt-5 tracking-tight min-h-[32px] flex items-center">{broker.name}</h3>
+        <h3 className="text-2xl font-extrabold text-center h-16 flex items-center justify-center leading-tight text-gray-900 mt-2 tracking-tight">
+          {broker.name}
+        </h3>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 gap-4 w-full max-w-xs mt-6 bg-gray-50/70 p-3.5 rounded-2xl border border-gray-100">
+        <div className="grid grid-cols-2 gap-4 w-full max-w-xs bg-gray-50/70 p-3.5 rounded-2xl border border-gray-100">
           <div className="border-r border-gray-200 last:border-0 pr-2">
             <StarRating rating={rating} />
             <p className="text-[11px] font-semibold uppercase tracking-wider text-gray-400 mt-1">Rating</p>
@@ -164,7 +189,7 @@ const CompareCard = ({ broker, highlight }) => {
           <div className="pl-2 flex flex-col justify-center items-center">
             <div className="flex items-center gap-1.5 text-gray-900">
               <Users size={16} className="text-emerald-600 flex-shrink-0" />
-              <span className="text-base font-bold tracking-tight leading-none break-all line-clamp-2 max-w-full">
+              <span className="text-base font-bold leading-tight text-center line-clamp-2 h-10 flex items-center justify-center">
                 {activeUsersFormatted}
               </span>
             </div>
@@ -172,29 +197,32 @@ const CompareCard = ({ broker, highlight }) => {
           </div>
         </div>
 
-        <div className="mt-5">
+        <div className="mt-5 h-10 flex items-center">
           <span className="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-700 font-bold rounded-xl text-xs uppercase tracking-wide">
             {brokerType}
           </span>
         </div>
       </div>
 
-      {/* Content */}
-      <div className="p-6 flex-1 flex flex-col bg-white">
-        <div className="mb-8">
+      {/* Content Segment */}
+      <div className="p-6 flex-1 flex flex-col bg-white justify-between">
+        <div className="mb-8 h-[330px]">
           <p className="uppercase text-xs tracking-widest text-gray-400 mb-4 font-bold">KEY CHARGES</p>
           <div className="divide-y divide-gray-100 text-sm">
             {[
               ["Account Opening", getAccountCharge(broker, "individual_account_opening_fee")],
-              ["Equity Delivery", getCharge(broker, "equity_delivery_individual")],
-              ["Intraday", getCharge(broker, "intraday_individual")],
-              ["Futures", getCharge(broker, "futures_individual")],
-              ["Options", getCharge(broker, "options_individual")],
+              ["Equity Delivery", getCharge(broker, "equity_delivery_for_individuals")],
+              ["Intraday", getCharge(broker, "intraday_for_individuals")],
+              ["Futures", getCharge(broker, "futures_trades_for_individuals")],
+              ["Options", getCharge(broker, "option_trades_for_individuals") || getCharge(broker, "options_trades_for_individuals")],
             ].map(([label, value]) => (
-              <div key={label} className="flex justify-between items-start gap-4 py-3.5 first:pt-0 last:pb-0">
-                <span className="text-gray-500 font-medium text-xs md:text-sm flex-shrink-0">{label}</span>
-                <span className="font-semibold text-gray-900 text-right text-xs md:text-sm leading-tight break-words max-w-[65%]">
-                  {value}
+              <div 
+                key={label} 
+                className="flex justify-between items-start gap-4 min-h-[64px] py-3 border-b border-gray-100 last:border-0"
+              >
+                <span className="text-gray-500 font-medium text-xs md:text-sm flex-shrink-0 mt-0.5">{label}</span>
+                <span className="font-semibold text-gray-900 text-xs md:text-sm leading-5 text-right line-clamp-3 overflow-hidden max-w-[65%]">
+                  {formatCharge(value)}
                 </span>
               </div>
             ))}
@@ -217,14 +245,14 @@ const CompareCard = ({ broker, highlight }) => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="mt-auto pt-6 grid grid-cols-2 gap-3 border-t border-gray-100">
+        <div className="mt-auto pt-6 border-t border-gray-100 grid grid-cols-2 gap-3 h-[88px]">
           <Link
             to={`/brokerdetails/${broker.slug}`}
-            className="py-3.5 border-2 border-gray-200 text-gray-700 font-bold rounded-xl hover:bg-gray-50 transition-colors text-center text-sm"
+            className="py-3.5 border-2 border-gray-200 text-gray-700 font-bold rounded-xl hover:bg-gray-50 transition-colors text-center text-sm flex items-center justify-center"
           >
             View Details
           </Link>
-          <button className="py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all shadow-md shadow-emerald-600/10 text-sm">
+          <button className="py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl transition-all shadow-md shadow-emerald-600/10 text-sm flex items-center justify-center">
             Open Account
           </button>
         </div>
@@ -265,9 +293,13 @@ const CompareBroker = () => {
 
         if (error) throw error;
         if (data) {
-          setBrokers(data);
+          const parsedData = data.map(broker => ({
+            ...broker,
+            details: typeof broker.details === "string" ? JSON.parse(broker.details) : broker.details
+          }));
+
+          setBrokers(parsedData);
           
-          // Identify and bind any specific URL configuration parameters 
           const urlParam1 = searchParams.get("broker1");
           const urlParam2 = searchParams.get("broker2");
           const urlParam3 = searchParams.get("broker3");
@@ -277,19 +309,18 @@ const CompareBroker = () => {
           let b3Match = null;
 
           if (urlParam1) {
-            b1Match = data.find((b) => (b.slug || b.name.toLowerCase().replace(/\s+/g, "-")) === urlParam1.toLowerCase().trim());
+            b1Match = parsedData.find((b) => (b.slug || b.name.toLowerCase().replace(/\s+/g, "-")) === urlParam1.toLowerCase().trim());
             if (b1Match) setBroker1(b1Match);
           }
           if (urlParam2) {
-            b2Match = data.find((b) => (b.slug || b.name.toLowerCase().replace(/\s+/g, "-")) === urlParam2.toLowerCase().trim());
+            b2Match = parsedData.find((b) => (b.slug || b.name.toLowerCase().replace(/\s+/g, "-")) === urlParam2.toLowerCase().trim());
             if (b2Match) setBroker2(b2Match);
           }
           if (urlParam3) {
-            b3Match = data.find((b) => (b.slug || b.name.toLowerCase().replace(/\s+/g, "-")) === urlParam3.toLowerCase().trim());
+            b3Match = parsedData.find((b) => (b.slug || b.name.toLowerCase().replace(/\s+/g, "-")) === urlParam3.toLowerCase().trim());
             if (b3Match) setBroker3(b3Match);
           }
 
-          // Automatically pop open the metrics breakdown if multiple entries are matched
           const totalPreselected = [b1Match, b2Match, b3Match].filter(Boolean).length;
           if (totalPreselected >= 2) {
             setShowComparison(true);
@@ -392,7 +423,7 @@ const CompareBroker = () => {
             {isLoading ? (
               <LoadingAnimation />
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+              <div className="grid gap-8 lg:grid-cols-3 items-stretch">
                 <CompareCard broker={broker1} highlight={broker1 && broker1.name === highestRated?.name} />
                 <CompareCard broker={broker2} highlight={broker2 && broker2.name === highestRated?.name} />
                 <CompareCard broker={broker3} highlight={broker3 && broker3.name === highestRated?.name} />

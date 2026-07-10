@@ -16,17 +16,18 @@ import {
 import { fetchPreIPODetails } from "../api/mockApi";
 import { Helmet } from "react-helmet-async";
 import slugify from "../utils/slugify";
+
 /* ================= REUSABLE ================= */
 const Card = ({ children }) => (
-  <section className="bg-white rounded-2xl border-slate-200 shadow-sm overflow-hidden">
+  <section className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
     {children}
   </section>
 );
 
 const SectionHeader = ({ icon: Icon, title }) => (
-  <div className="flex items-center gap-3 px-6 py-3 bg-slate-50">
-    <Icon className="w-5 h-5 text-slate-600" />
-    <h2 className="text-lg lg:text-xl font-semibold text-slate-800">
+  <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 px-6 py-3 flex items-center gap-3">
+    {Icon && <Icon className="w-5 h-5 text-white" />}
+    <h2 className="text-lg lg:text-xl font-bold text-white tracking-wide">
       {title}
     </h2>
   </div>
@@ -43,9 +44,9 @@ const PreIPODetails = () => {
   const [openFaqs, setOpenFaqs] = useState({});
   const navigate = useNavigate();
   const [showFullOverview, setShowFullOverview] = useState(false);
-const slug = data?.name
-  ? slugify(data.name)
-  : "";
+
+  const slug = data?.name ? slugify(data.name) : "";
+
   const formatKey = (key) =>
     key
       .replace(/([A-Z])/g, " $1")
@@ -65,9 +66,9 @@ const slug = data?.name
 
       if (!selected) return;
 
-     const { data: dbData, error } = await supabase
-  .from("pre_ipo_companies")
-  .select("name, price, lot_size");
+      const { data: dbData, error } = await supabase
+        .from("pre_ipo_companies")
+        .select("name, price, lot_size");
 
       if (error) console.error(error);
 
@@ -80,81 +81,65 @@ const slug = data?.name
       );
 
       const updatedPrice = dbItem ? Number(dbItem.price) : selected.price;
+      const updatedLotSize = dbItem?.lot_size || selected.shareDetails?.lotSize || "-";
 
-    const updatedLotSize = dbItem?.lot_size || selected.shareDetails?.lotSize || "-";
-
-const merged = {
-  ...selected,
-
-  price: updatedPrice,
-
-  shareDetails: {
-    ...selected.shareDetails,
-
-    indicativeUnlistedSharePrice: `₹${updatedPrice}`,
-
-    lotSize: updatedLotSize,
-  },
-};
+      const merged = {
+        ...selected,
+        price: updatedPrice,
+        shareDetails: {
+          ...selected.shareDetails,
+          indicativeUnlistedSharePrice: `₹${updatedPrice}`,
+          lotSize: updatedLotSize,
+        },
+      };
       setData(merged);
     };
 
     load();
   }, [id]);
 
-if (!data) {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  if (!data) {
+    return (
+      <div className="min-h-screen bg-slate-50">
+        {/* Center Loader */}
+        <div className="flex flex-col items-center justify-center py-32">
+          {/* Spinner */}
+          <div className="relative">
+            <div className="w-16 h-16 border-4 border-slate-200 rounded-full"></div>
+            <div className="w-16 h-16 border-4 border-emerald-600 border-t-transparent rounded-full animate-spin absolute top-0 left-0"></div>
+          </div>
 
-      {/* Center Loader */}
-      <div className="flex flex-col items-center justify-center py-32">
-
-        {/* Spinner */}
-        <div className="relative">
-          <div className="w-16 h-16 border-4 border-slate-200 rounded-full"></div>
-
-          <div className="w-16 h-16 border-4 border-green-600 -transparent rounded-full animate-spin absolute top-0 left-0"></div>
+          {/* Text */}
+          <h2 className="mt-6 text-xl font-semibold text-slate-800">
+            Loading Company Details
+          </h2>
+          <p className="mt-2 text-sm text-slate-500">
+            Fetching latest unlisted share information...
+          </p>
         </div>
 
-        {/* Text */}
-        <h2 className="mt-6 text-xl font-semibold text-slate-800">
-          Loading Company Details
-        </h2>
-
-        <p className="mt-2 text-sm text-slate-500">
-          Fetching latest unlisted share information...
-        </p>
-
-      </div>
-
-      {/* Skeleton Preview */}
-      <div className="max-w-6xl mx-auto px-4 pb-16">
-
-        <div className="space-y-6 animate-pulse">
-
-          {[1, 2, 3].map((item) => (
-            <div
-              key={item}
-              className="bg-white border-slate-200 rounded-2xl p-6 shadow-sm"
-            >
-
-              <div className="h-6 bg-slate-200 rounded w-64 mb-6"></div>
-
-              <div className="space-y-4">
-                <div className="h-4 bg-slate-200 rounded w-full"></div>
-                <div className="h-4 bg-slate-200 rounded w-full"></div>
-                <div className="h-4 bg-slate-200 rounded w-5/6"></div>
-                <div className="h-4 bg-slate-200 rounded w-4/6"></div>
+        {/* Skeleton Preview */}
+        <div className="max-w-6xl mx-auto px-4 pb-16">
+          <div className="space-y-6 animate-pulse">
+            {[1, 2, 3].map((item) => (
+              <div
+                key={item}
+                className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm"
+              >
+                <div className="h-6 bg-slate-200 rounded w-64 mb-6"></div>
+                <div className="space-y-4">
+                  <div className="h-4 bg-slate-200 rounded w-full"></div>
+                  <div className="h-4 bg-slate-200 rounded w-full"></div>
+                  <div className="h-4 bg-slate-200 rounded w-5/6"></div>
+                  <div className="h-4 bg-slate-200 rounded w-4/6"></div>
+                </div>
               </div>
-
-            </div>
-          ))}
-
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 
   const overviewText = data.overview || "";
   const shortOverview =
@@ -165,294 +150,160 @@ if (!data) {
   const displayPrice = Number(data.price || 0).toLocaleString("en-IN");
 
   return (
-  <>
-    <Helmet>
-
-      <title>
-        {data.name} Unlisted Share Price, Financials & Review | ShareBazaarOnline
-      </title>
+    <>
+      <Helmet>
+        <title>
+          {data.name} Unlisted Share Price, Financials & Review | ShareBazaarOnline
+        </title>
         <meta name="geo.region" content="IN" />
         <meta name="geo.country" content="India" />
         <meta name="language" content="English" />
-      <meta
-        name="description"
-        content={`Buy ${data.name} unlisted shares at best price. Check financials, lot size, valuation, shareholding, risks, management analysis and investor insights.`}
-      />
-      <link
-      rel="preload"
-      as="image"
-      href={data.logo}
-    />
+        <meta
+          name="description"
+          content={`Buy ${data.name} unlisted shares at best price. Check financials, lot size, valuation, shareholding, risks, management analysis and investor insights.`}
+        />
+        <link rel="preload" as="image" href={data.logo} />
+        <meta
+          name="keywords"
+          content={`${data.name} unlisted shares, ${data.name} share price, ${data.name} pre ipo, buy unlisted shares india`}
+        />
+        <link
+          rel="canonical"
+          href={`https://www.sharebazaaronline.com/preipo/${id}/${slug}`}
+        />
 
-      <meta
-        name="keywords"
-        content={`${data.name} unlisted shares, ${data.name} share price, ${data.name} pre ipo, buy unlisted shares india`}
-      />
+        {/* OPEN GRAPH */}
+        <meta property="og:title" content={`${data.name} Unlisted Shares`} />
+        <meta
+          property="og:description"
+          content={`Check ${data.name} unlisted share price, valuation, financials and investment details.`}
+        />
+        <meta property="og:image" content={data.logo} />
+        <meta
+          property="og:url"
+          content={`https://www.sharebazaaronline.com/preipo/${id}/${slug}`}
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${data.name} Unlisted Shares`} />
+        <meta
+          name="twitter:description"
+          content={`Check ${data.name} unlisted share price, valuation and financials.`}
+        />
+        <meta name="twitter:image" content={data.logo} />
 
-      <link
-        rel="canonical"
-        href={`https://www.sharebazaaronline.com/preipo/${id}/${slug}`}
-      />
-
-      {/* OPEN GRAPH */}
-      <meta
-        property="og:title"
-        content={`${data.name} Unlisted Shares`}
-      />
-
-      <meta
-        property="og:description"
-        content={`Check ${data.name} unlisted share price, valuation, financials and investment details.`}
-      />
-
-      <meta
-        property="og:image"
-        content={data.logo}
-      />
-
-      <meta
-        property="og:url"
-        content={`https://www.sharebazaaronline.com/preipo/${id}/${slug}`}
-      />
-
-      <meta
-        property="og:type"
-        content="website"
-      />
-      <meta
-        name="robots"
-        content="index, follow"
-      />
-      <meta
-        name="twitter:card"
-        content="summary_large_image"
-      />
-
-      <meta
-        name="twitter:title"
-        content={`${data.name} Unlisted Shares`}
-      />
-
-      <meta
-        name="twitter:description"
-        content={`Check ${data.name} unlisted share price, valuation and financials.`}
-      />
-
-      <meta
-        name="twitter:image"
-        content={data.logo}
-      />
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FinancialProduct",
-          name: data.name,
-          description: `${data.name} unlisted shares investment details`,
-          image: data.logo,
-          brand: {
-            "@type": "Brand",
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FinancialProduct",
             name: data.name,
-          },
-          offers: {
-            "@type": "Offer",
-            priceCurrency: "INR",
-            price: data.price,
-          },
-        })}
-      </script>
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          mainEntity: data.faq?.map((faq) => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer,
+            description: `${data.name} unlisted shares investment details`,
+            image: data.logo,
+            brand: {
+              "@type": "Brand",
+              name: data.name,
             },
-          })),
-        })}
-      </script>
-    </Helmet>
+            offers: {
+              "@type": "Offer",
+              priceCurrency: "INR",
+              price: data.price,
+            },
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: data.faq?.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          })}
+        </script>
+      </Helmet>
 
-    <div className="bg-slate-50 min-h-screen">
-      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+      <div className="bg-slate-50 min-h-screen">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+          
+          {/* ================= HERO ================= */}
+          <header className="relative bg-slate-50">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6 ml-4 lg:ml-6 py-8 pl-6 lg:pl-96 relative">
+              {/* LOGO */}
+              <div className="shrink-0">
+                <div className="w-28 h-28 lg:w-36 lg:h-36 rounded-xl p-4 bg-white shadow-md border border-gray-100">
+                  <img
+                    src={data.logo}
+                    alt={`${data.name} unlisted share logo`}
+                    loading="lazy"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
 
-        {/* ================= HERO ================= */}
-        <header className="relative bg-slate-50">
-          <div className="flex flex-col md:flex-row items-start md:items-center gap-6 ml-4 lg:ml-6 py-8 pl-6 lg:pl-96 relative">
-            {/* LOGO */}
-            <div className="shrink-0">
-              <div className="w-28 h-28 lg:w-36 lg:h-36 rounded-xl p-4 bg-white shadow-md">
-                <img
-                  src={data.logo}           
-                  alt={`${data.name} unlisted share logo`}
-                  loading="lazy"
-                  className="w-full h-full object-contain"
-                />
+              {/* TEXT + BIG PRICE */}
+              <div className="pt-2 lg:pt-4">
+                <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 tracking-tight">
+                  {data.name}
+                </h1>
+                <p className="text-base lg:text-lg text-slate-600 leading-relaxed max-w-4xl">
+                  {data.shareDetails?.companyName || data.name}
+                </p>
               </div>
             </div>
 
-            {/* TEXT + BIG PRICE */}
-            <div className="pt-2 lg:pt-4">
-              <h1 className="text-4xl lg:text-5xl font-extrabold text-slate-900 mb-2 tracking-tight">
-                {data.name}
-              </h1>
-              <p className="text-base lg:text-lg text-slate-600 leading-relaxed max-w-4xl">
-                {data.shareDetails?.companyName || data.name}
-              </p>
-            </div>
-          </div>
+            {/* FULL-WIDTH sticky bar with integrated price */}
+            <div className="sticky top-[72px] sm:top-[88px] left-0 right-0 w-screen rounded-lg z-40 bg-blue-100 shadow-lg">
+              <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center gap-4 text-blue-700 font-medium">
+                  <span className="text-lg">Ready to invest in this opportunity? Apply now through our trusted platforms.</span>
+                </div>
 
-          {/* FULL-WIDTH sticky bar with integrated price */}
-          <div className="sticky top-[72px] sm:top-[88px] left-0 right-0 w-screen rounded-lg z-40 bg-blue-100 shadow-lg">
-            <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center gap-4 text-blue-700 font-medium">
-                <span className="text-lg">Ready to invest in this opportunity? Apply now through our trusted platforms.</span>
+                <button
+                  onClick={() => navigate("/login")}
+                  className="px-10 py-4 bg-[#16A34A] text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-xl hover:bg-[#15803D] transform hover:-translate-y-1 transition-all duration-200 flex items-center gap-2 whitespace-nowrap"
+                >
+                  Buy Now @ ₹{displayPrice}
+                </button>
               </div>
-
-              <button
-                onClick={() => navigate('/login')}
-                className="px-10 py-4 bg-[#16A34A] text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-xl hover:bg-[#15803D] transform hover:-translate-y-1 transition-all duration-200 flex items-center gap-2 whitespace-nowrap"
-              >
-                Buy Now @ ₹{displayPrice}
-              </button>
             </div>
-          </div>
-        </header>
+          </header>
 
-        {/* ================= 1. COMPANY OVERVIEW ================= */}
-        <Card>
-          <SectionHeader icon={Building2} title={`About ${data.name} Unlisted Shares`}/>
-          <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed text-[15px]">
-            {showFullOverview ? overviewText : shortOverview}
-
-            {overviewText.length > 900 && (
-              <button
-                onClick={() => setShowFullOverview(!showFullOverview)}
-                className="block mt-4 text-green-600 font-semibold text-sm hover:underline"
-              >
-                {showFullOverview ? "View less" : "View more"}
-              </button>
-            )}
-          </div>
-        </Card>
-
-        {/* ================= 2. COMPANY DETAILS TABLE ================= */}
-        <Card>
-          <SectionHeader icon={IndianRupee} title={`${data.name} Share Details`}/>
-          <TableWrapper>
-            <table className="w-full min-w-[800px] text-sm border-collapse">
-              <tbody className="divide-y">
-                {Object.entries(data.shareDetails || {}).map(([key, value]) => (
-                  <tr key={key} className="hover:bg-slate-50">
-                    <td className="px-6 py-3 font-medium text-slate-600 w-1/2">
-                      {formatKey(key)}
-                    </td>
-                    <td className="px-6 py-3 text-slate-900 text-right font-semibold">
-                      {value}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </TableWrapper>
-        </Card>
-
-        {/* ================= 3. FINANCIAL ANNUAL REPORT SUMMARY ================= */}
-        <Card>
-          <SectionHeader icon={BarChart3} title="Financial Annual Report Summary" />
-          <div className="p-6 text-slate-700 leading-relaxed whitespace-pre-line">
-            {data.financials?.annualReportSummary || "Detailed audited financial performance summary will be updated soon."}
-          </div>
-        </Card>
-
-        {/* ================= 4. INCOME STATEMENT ================= */}
-        <Card>
-          <SectionHeader icon={BarChart3} title="Income Statement (Profit & Loss) (₹ in Crore)" />
-          <TableWrapper>
-            <table className="w-full min-w-[700px] text-sm">
-              <thead className="bg-slate-100">
-                <tr>
-                  <th className="px-4 py-3 text-left">Particulars</th>
-                  <th className="px-4 py-3 text-right">FY22</th>
-                  <th className="px-4 py-3 text-right">FY23</th>
-                  <th className="px-4 py-3 text-right">FY24</th>
-                  <th className="px-4 py-3 text-right">FY25 (if avail.)</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                {data.financials?.incomeStatement?.map((r, i) => (
-                  <tr key={i}>
-                    <td className="px-4 py-3">{r.label}</td>
-                    <td className="px-4 py-3 text-right">{r.fy22}</td>
-                    <td className="px-4 py-3 text-right">{r.fy23}</td>
-                    <td className="px-4 py-3 text-right">{r.fy24}</td>
-                    <td className="px-4 py-3 text-right">{r.fy25 || "-"}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </TableWrapper>
-        </Card>
-
-        {/* ================= 5. KEY FINANCIAL RATIOS ================= */}
-        <Card>
-          <SectionHeader icon={BarChart3} title="Key Financial Ratios (Last 3–5 Years)" />
-          <TableWrapper>
-            <table className="w-full min-w-[600px] text-sm">
-              <thead className="bg-slate-100">
-                <tr>
-                  <th className="px-4 py-3 text-left">Ratio</th>
-                  <th className="px-4 py-3 text-right">FY22</th>
-                  <th className="px-4 py-3 text-right">FY23</th>
-                  <th className="px-4 py-3 text-right">FY24</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                {data.financials?.keyRatios?.map((ratio, i) => (
-                  <tr key={i}>
-                    <td className="px-4 py-3 font-medium">{ratio.label}</td>
-                    <td className="px-4 py-3 text-right">{ratio.fy22}</td>
-                    <td className="px-4 py-3 text-right">{ratio.fy23}</td>
-                    <td className="px-4 py-3 text-right">{ratio.fy24}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </TableWrapper>
-        </Card>
-
-        {/* ================= 6. INVESTOR INSIGHT ================= */}
-        <Card>
-          <SectionHeader icon={BarChart3} title={`Why Invest in ${data.name}`} />
-          <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed">
-            {data.investorInsight || data.managementInsight}
-          </div>
-        </Card>
-
-        {/* ================= 7. BALANCE SHEET ================= */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {/* ================= 1. COMPANY OVERVIEW ================= */}
           <Card>
-            <SectionHeader icon={Wallet} title="Balance Sheet - Assets (₹ in Crore)" />
+            <SectionHeader icon={Building2} title={`About ${data.name} Unlisted Shares`} />
+            <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed text-[15px]">
+              {showFullOverview ? overviewText : shortOverview}
+
+              {overviewText.length > 900 && (
+                <button
+                  onClick={() => setShowFullOverview(!showFullOverview)}
+                  className="block mt-4 text-emerald-600 font-semibold text-sm hover:underline"
+                >
+                  {showFullOverview ? "View less" : "View more"}
+                </button>
+              )}
+            </div>
+          </Card>
+
+          {/* ================= 2. COMPANY DETAILS TABLE ================= */}
+          <Card>
+            <SectionHeader icon={IndianRupee} title={`${data.name} Share Details`} />
             <TableWrapper>
-              <table className="w-full text-sm">
-                <thead className="bg-slate-100">
-                  <tr>
-                    <th className="px-4 py-3 text-left">Item</th>
-                    <th className="px-4 py-3 text-right">FY22</th>
-                    <th className="px-4 py-3 text-right">FY23</th>
-                    <th className="px-4 py-3 text-right">FY24</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y">
-                  {data.balanceSheet?.assets?.map((item, i) => (
-                    <tr key={i}>
-                      <td className="px-4 py-3">{item.label}</td>
-                      <td className="px-4 py-3 text-right">{item.fy22}</td>
-                      <td className="px-4 py-3 text-right">{item.fy23}</td>
-                      <td className="px-4 py-3 text-right">{item.fy24}</td>
+              <table className="w-full min-w-[800px] text-sm border-collapse">
+                <tbody className="divide-y divide-gray-100">
+                  {Object.entries(data.shareDetails || {}).map(([key, value]) => (
+                    <tr key={key} className="hover:bg-slate-50/50">
+                      <td className="px-6 py-3 font-medium text-slate-600 w-1/2">
+                        {formatKey(key)}
+                      </td>
+                      <td className="px-6 py-3 text-slate-900 text-right font-semibold">
+                        {value}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -460,249 +311,340 @@ if (!data) {
             </TableWrapper>
           </Card>
 
+          {/* ================= 3. FINANCIAL ANNUAL REPORT SUMMARY ================= */}
           <Card>
-            <SectionHeader icon={Wallet} title="Balance Sheet - Liabilities & Equity (₹ in Crore)" />
+            <SectionHeader icon={BarChart3} title="Financial Annual Report Summary" />
+            <div className="p-6 text-slate-700 leading-relaxed whitespace-pre-line">
+              {data.financials?.annualReportSummary || "Detailed audited financial performance summary will be updated soon."}
+            </div>
+          </Card>
+
+          {/* ================= 4. INCOME STATEMENT ================= */}
+          <Card>
+            <SectionHeader icon={BarChart3} title="Income Statement (Profit & Loss) (₹ in Crore)" />
             <TableWrapper>
-              <table className="w-full text-sm">
+              <table className="w-full min-w-[700px] text-sm">
                 <thead className="bg-slate-100">
                   <tr>
-                    <th className="px-4 py-3 text-left">Item</th>
+                    <th className="px-4 py-3 text-left">Particulars</th>
                     <th className="px-4 py-3 text-right">FY22</th>
                     <th className="px-4 py-3 text-right">FY23</th>
                     <th className="px-4 py-3 text-right">FY24</th>
+                    <th className="px-4 py-3 text-right">FY25 (if avail.)</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y">
-                  {data.balanceSheet?.liabilities?.map((item, i) => (
-                    <tr key={i}>
-                      <td className="px-4 py-3">{item.label}</td>
-                      <td className="px-4 py-3 text-right">{item.fy22}</td>
-                      <td className="px-4 py-3 text-right">{item.fy23}</td>
-                      <td className="px-4 py-3 text-right">{item.fy24}</td>
+                <tbody className="divide-y divide-gray-100">
+                  {data.financials?.incomeStatement?.map((r, i) => (
+                    <tr key={i} className="hover:bg-slate-50/30">
+                      <td className="px-4 py-3">{r.label}</td>
+                      <td className="px-4 py-3 text-right font-medium">{r.fy22}</td>
+                      <td className="px-4 py-3 text-right font-medium">{r.fy23}</td>
+                      <td className="px-4 py-3 text-right font-medium">{r.fy24}</td>
+                      <td className="px-4 py-3 text-right font-medium">{r.fy25 || "-"}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </TableWrapper>
           </Card>
-        </section>
 
-        {/* ================= 8 & 9. LIABILITIES BREAKDOWN + INSIGHTS ================= */}
-        <Card>
-          <SectionHeader icon={AlertTriangle} title="Liabilities Breakdown & Balance Sheet Insights" />
-          <div className="p-6 text-slate-700 space-y-6">
-            <div>
-              <h4 className="font-semibold mb-2">Liabilities Breakdown</h4>
-              <p className="text-sm leading-relaxed">
-                {data.liabilitiesBreakdown || "Short-term liabilities, long-term borrowings, and other obligations details will be updated."}
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-2">Balance Sheet Insights</h4>
-              <p className="text-sm leading-relaxed">
-                {data.balanceSheetInsights || "Financial stability, leverage, and solvency analysis will be provided here."}
-              </p>
-            </div>
-          </div>
-        </Card>
-
-        {/* ================= 10 & 11. CASH FLOW ================= */}
-        <Card>
-          <SectionHeader icon={BarChart3} title="Cash Flow Statement (₹ in Crore)" />
-          <TableWrapper>
-            <table className="w-full min-w-[700px] text-sm">
-              <thead className="bg-slate-100">
-                <tr>
-                  <th className="px-4 py-3 text-left">Particulars</th>
-                  <th className="px-4 py-3 text-right">FY22</th>
-                  <th className="px-4 py-3 text-right">FY23</th>
-                  <th className="px-4 py-3 text-right">FY24</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y">
-                {data.cashFlow?.data?.map((c, i) => (
-                  <tr key={i}>
-                    <td className="px-4 py-3">{c.label}</td>
-                    <td className="px-4 py-3 text-right">{c.fy22}</td>
-                    <td className="px-4 py-3 text-right">{c.fy23}</td>
-                    <td className="px-4 py-3 text-right">{c.fy24}</td>
+          {/* ================= 5. KEY FINANCIAL RATIOS ================= */}
+          <Card>
+            <SectionHeader icon={BarChart3} title="Key Financial Ratios (Last 3–5 Years)" />
+            <TableWrapper>
+              <table className="w-full min-w-[600px] text-sm">
+                <thead className="bg-slate-100">
+                  <tr>
+                    <th className="px-4 py-3 text-left">Ratio</th>
+                    <th className="px-4 py-3 text-right">FY22</th>
+                    <th className="px-4 py-3 text-right">FY23</th>
+                    <th className="px-4 py-3 text-right">FY24</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </TableWrapper>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {data.financials?.keyRatios?.map((ratio, i) => (
+                    <tr key={i} className="hover:bg-slate-50/30">
+                      <td className="px-4 py-3 font-medium text-slate-700">{ratio.label}</td>
+                      <td className="px-4 py-3 text-right font-semibold text-slate-900">{ratio.fy22}</td>
+                      <td className="px-4 py-3 text-right font-semibold text-slate-900">{ratio.fy23}</td>
+                      <td className="px-4 py-3 text-right font-semibold text-slate-900">{ratio.fy24}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </TableWrapper>
+          </Card>
 
-          <div className="px-6 pb-6 text-sm text-slate-600 space-y-1">
-            {data.cashFlow?.insights?.map((insight, idx) => (
-              <p key={idx}>• {insight}</p>
-            ))}
-          </div>
-        </Card>
+          {/* ================= 6. INVESTOR INSIGHT ================= */}
+          <Card>
+            <SectionHeader icon={BarChart3} title={`Why Invest in ${data.name}`} />
+            <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed">
+              {data.investorInsight || data.managementInsight}
+            </div>
+          </Card>
 
-        {/* ================= 12. SHAREHOLDING PATTERN ================= */}
-        <Card>
-          <SectionHeader icon={Users} title="Shareholding Pattern" />
-          <div className="p-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            {data.shareholding?.map((s, i) => (
-              <div key={i} className="rounded-xl p-4 bg-slate-50 text-center">
-                <p className="font-semibold text-lg mb-2">{s.year}</p>
-                <p className="text-sm">Promoter: <span className="font-medium">{s.promoters}</span></p>
-                <p className="text-sm">Institutional: <span className="font-medium">{s.institutional || "-"}</span></p>
-                <p className="text-sm">Public / Others: <span className="font-medium">{s.public}</span></p>
+          {/* ================= 7. BALANCE SHEET ================= */}
+          <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <Card>
+              <SectionHeader icon={Wallet} title="Balance Sheet - Assets (₹ in Crore)" />
+              <TableWrapper>
+                <table className="w-full text-sm">
+                  <thead className="bg-slate-100">
+                    <tr>
+                      <th className="px-4 py-3 text-left">Item</th>
+                      <th className="px-4 py-3 text-right">FY22</th>
+                      <th className="px-4 py-3 text-right">FY23</th>
+                      <th className="px-4 py-3 text-right">FY24</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {data.balanceSheet?.assets?.map((item, i) => (
+                      <tr key={i} className="hover:bg-slate-50/30">
+                        <td className="px-4 py-3">{item.label}</td>
+                        <td className="px-4 py-3 text-right font-medium">{item.fy22}</td>
+                        <td className="px-4 py-3 text-right font-medium">{item.fy23}</td>
+                        <td className="px-4 py-3 text-right font-medium">{item.fy24}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </TableWrapper>
+            </Card>
+
+            <Card>
+              <SectionHeader icon={Wallet} title="Balance Sheet - Liabilities & Equity (₹ in Crore)" />
+              <TableWrapper>
+                <table className="w-full text-sm">
+                  <thead className="bg-slate-100">
+                    <tr>
+                      <th className="px-4 py-3 text-left">Item</th>
+                      <th className="px-4 py-3 text-right">FY22</th>
+                      <th className="px-4 py-3 text-right">FY23</th>
+                      <th className="px-4 py-3 text-right">FY24</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-100">
+                    {data.balanceSheet?.liabilities?.map((item, i) => (
+                      <tr key={i} className="hover:bg-slate-50/30">
+                        <td className="px-4 py-3">{item.label}</td>
+                        <td className="px-4 py-3 text-right font-medium">{item.fy22}</td>
+                        <td className="px-4 py-3 text-right font-medium">{item.fy23}</td>
+                        <td className="px-4 py-3 text-right font-medium">{item.fy24}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </TableWrapper>
+            </Card>
+          </section>
+
+          {/* ================= 8 & 9. LIABILITIES BREAKDOWN + INSIGHTS ================= */}
+          <Card>
+            <SectionHeader icon={AlertTriangle} title="Liabilities Breakdown & Balance Sheet Insights" />
+            <div className="p-6 text-slate-700 space-y-6">
+              <div>
+                <h4 className="font-semibold mb-2 text-slate-900">Liabilities Breakdown</h4>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  {data.liabilitiesBreakdown || "Short-term liabilities, long-term borrowings, and other obligations details will be updated."}
+                </p>
               </div>
-            ))}
-          </div>
-        </Card>
+              <div>
+                <h4 className="font-semibold mb-2 text-slate-900">Balance Sheet Insights</h4>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  {data.balanceSheetInsights || "Financial stability, leverage, and solvency analysis will be provided here."}
+                </p>
+              </div>
+            </div>
+          </Card>
 
-        {/* ================= 13. PROMOTERS / MANAGEMENT ================= */}
-        <Card>
-          <SectionHeader icon={Users} title="Promoters & Management" />
-          <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed">
-            {data.promotersManagement || "Promoter background, key management personnel, and board of directors details coming soon."}
-          </div>
-        </Card>
+          {/* ================= 10 & 11. CASH FLOW ================= */}
+          <Card>
+            <SectionHeader icon={BarChart3} title="Cash Flow Statement (₹ in Crore)" />
+            <TableWrapper>
+              <table className="w-full min-w-[700px] text-sm">
+                <thead className="bg-slate-100">
+                  <tr>
+                    <th className="px-4 py-3 text-left">Particulars</th>
+                    <th className="px-4 py-3 text-right">FY22</th>
+                    <th className="px-4 py-3 text-right">FY23</th>
+                    <th className="px-4 py-3 text-right">FY24</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100">
+                  {data.cashFlow?.data?.map((c, i) => (
+                    <tr key={i} className="hover:bg-slate-50/30">
+                      <td className="px-4 py-3">{c.label}</td>
+                      <td className="px-4 py-3 text-right font-medium">{c.fy22}</td>
+                      <td className="px-4 py-3 text-right font-medium">{c.fy23}</td>
+                      <td className="px-4 py-3 text-right font-medium">{c.fy24}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </TableWrapper>
 
-        {/* ================= 14. RTA INFO ================= */}
-        <Card>
-          <SectionHeader icon={Users} title="Registrar & Transfer Agent (RTA)" />
-          <div className="p-6">
-            <p><strong>Registrar:</strong> {data.rta?.registrar || "Not Available"}</p>
-            <p className="mt-2">
-              <strong>Website:</strong>{" "}
-              <a href={data.rta?.website} target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
-                {data.rta?.website || "N/A"}
-              </a>
-            </p>
-          </div>
-        </Card>
+            <div className="px-6 pb-6 text-sm text-slate-600 space-y-1">
+              {data.cashFlow?.insights?.map((insight, idx) => (
+                <p key={idx}>• {insight}</p>
+              ))}
+            </div>
+          </Card>
 
-        {/* ================= 15. MANAGEMENT INSIGHT ================= */}
-        <Card>
-          <SectionHeader icon={BarChart3} title={`${data.name} Management Analysis`} />
-          <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed">
-            {data.managementInsight || "Leadership strategy, vision, execution capability, and corporate governance overview."}
-          </div>
-        </Card>
-
-        {/* ================= FAQ SECTION ================= */}
-        {data.faq && data.faq.length > 0 && (
-          <section id="faq" className="bg-white p-6 rounded-xl -sm">
-            <h2 className="text-2xl font-bold mb-6">Frequently Asked Questions About {data.name} Unlisted Shares</h2>
-            <div className="space-y-3">
-              {data.faq.map((item, index) => (
-                <div key={index} className="rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full flex justify-between items-center px-4 py-3 text-left bg-gray-50 hover:bg-gray-100 transition"
-                  >
-                    <span className="font-medium text-gray-800">{item.question}</span>
-                    {openFaqs[index] ? (
-                      <ChevronUp size={20} className="text-gray-600" />
-                    ) : (
-                      <ChevronDown size={20} className="text-gray-600" />
-                    )}
-                  </button>
-                  {openFaqs[index] && (
-                    <div className="px-4 pb-4 pt-2 text-gray-700 text-sm md:text-base ">
-                      {item.answer}
-                    </div>
-                  )}
+          {/* ================= 12. SHAREHOLDING PATTERN ================= */}
+          <Card>
+            <SectionHeader icon={Users} title="Shareholding Pattern" />
+            <div className="p-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {data.shareholding?.map((s, i) => (
+                <div key={i} className="rounded-xl p-4 bg-slate-50 border border-gray-100 text-center">
+                  <p className="font-bold text-lg text-slate-900 mb-2">{s.year}</p>
+                  <p className="text-sm text-slate-600">Promoter: <span className="font-semibold text-slate-800">{s.promoters}</span></p>
+                  <p className="text-sm text-slate-600">Institutional: <span className="font-semibold text-slate-800">{s.institutional || "-"}</span></p>
+                  <p className="text-sm text-slate-600">Public / Others: <span className="font-semibold text-slate-800">{s.public}</span></p>
                 </div>
               ))}
             </div>
-          </section>
-        )}
+          </Card>
 
-        {/* ================= BACK BUTTON ================= */}
-        <div className="text-center pt-4">
-          <Link to="/pre-ipo-stocks" className="inline-flex items-center gap-2 font-semibold text-slate-700 hover:text-slate-900">
-            <ArrowLeft size={18} />
-            Back to All Unlisted Shares
-          </Link>
+          {/* ================= 13. PROMOTERS / MANAGEMENT ================= */}
+          <Card>
+            <SectionHeader icon={Users} title="Promoters & Management" />
+            <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed">
+              {data.promotersManagement || "Promoter background, key management personnel, and board of directors details coming soon."}
+            </div>
+          </Card>
+
+          {/* ================= 14. RTA INFO ================= */}
+          <Card>
+            <SectionHeader icon={Users} title="Registrar & Transfer Agent (RTA)" />
+            <div className="p-6 text-sm text-slate-700">
+              <p><strong>Registrar:</strong> {data.rta?.registrar || "Not Available"}</p>
+              <p className="mt-2">
+                <strong>Website:</strong>{" "}
+                <a href={data.rta?.website} target="_blank" rel="noopener noreferrer" className="text-emerald-600 font-medium hover:underline">
+                  {data.rta?.website || "N/A"}
+                </a>
+              </p>
+            </div>
+          </Card>
+
+          {/* ================= 15. MANAGEMENT INSIGHT ================= */}
+          <Card>
+            <SectionHeader icon={BarChart3} title={`${data.name} Management Analysis`} />
+            <div className="p-6 text-slate-700 whitespace-pre-line leading-relaxed">
+              {data.managementInsight || "Leadership strategy, vision, execution capability, and corporate governance overview."}
+            </div>
+          </Card>
+
+          {/* ================= FAQ SECTION ================= */}
+          {data.faq && data.faq.length > 0 && (
+            <section id="faq" className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
+              <h2 className="text-2xl font-bold mb-6 text-slate-900">Frequently Asked Questions About {data.name} Unlisted Shares</h2>
+              <div className="space-y-3">
+                {data.faq.map((item, index) => (
+                  <div key={index} className="rounded-lg overflow-hidden border border-gray-100">
+                    <button
+                      onClick={() => toggleFaq(index)}
+                      className="w-full flex justify-between items-center px-4 py-3 text-left bg-gray-50/50 hover:bg-gray-50 transition font-medium text-slate-800"
+                    >
+                      <span>{item.question}</span>
+                      {openFaqs[index] ? (
+                        <ChevronUp size={20} className="text-slate-500" />
+                      ) : (
+                        <ChevronDown size={20} className="text-slate-500" />
+                      )}
+                    </button>
+                    {openFaqs[index] && (
+                      <div className="px-4 pb-4 pt-2 text-slate-600 text-sm md:text-base leading-relaxed bg-white border-t border-gray-50">
+                        {item.answer}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* ================= BACK BUTTON ================= */}
+          <div className="text-center pt-4">
+            <Link to="/pre-ipo-stocks" className="inline-flex items-center gap-2 font-semibold text-slate-600 hover:text-slate-900 transition-colors">
+              <ArrowLeft size={18} />
+              Back to All Unlisted Shares
+            </Link>
+          </div>
+
+          {/* ================= EXPLORE LINKS ================= */}
+          <div className="bg-gradient-to-br from-white to-slate-50 border border-gray-200 rounded-2xl p-6 lg:p-8 shadow-sm">
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-slate-900">
+                Explore More Investment Opportunities
+              </h3>
+              <p className="text-slate-500 mt-2 text-sm lg:text-base">
+                Discover IPOs, unlisted shares, and broker comparison tools curated for smart investors.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <Link
+                to="/ipo/ipo-list"
+                className="group bg-white border border-gray-200 rounded-xl px-5 py-4 hover:border-emerald-500 hover:shadow-md transition-all duration-200"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-lg font-semibold text-slate-900">
+                      Latest IPOs
+                    </p>
+                    <p className="text-sm text-slate-400 mt-1">
+                      Track live & upcoming IPOs
+                    </p>
+                  </div>
+                  <span className="text-emerald-600 group-hover:translate-x-1 transition font-bold">
+                    →
+                  </span>
+                </div>
+              </Link>
+
+              <Link
+                to="/pre-ipo-stocks"
+                className="group bg-white border border-gray-200 rounded-xl px-5 py-4 hover:border-emerald-500 hover:shadow-md transition-all duration-200"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-lg font-semibold text-slate-900">
+                      Unlisted Shares
+                    </p>
+                    <p className="text-sm text-slate-400 mt-1">
+                      Invest before public listing
+                    </p>
+                  </div>
+                  <span className="text-emerald-600 group-hover:translate-x-1 transition font-bold">
+                    →
+                  </span>
+                </div>
+              </Link>
+
+              <Link
+                to="/broker-analyzer"
+                className="group bg-white border border-gray-200 rounded-xl px-5 py-4 hover:border-emerald-500 hover:shadow-md transition-all duration-200"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <p className="text-lg font-semibold text-slate-900">
+                      Compare Brokers
+                    </p>
+                    <p className="text-sm text-slate-400 mt-1">
+                      Find the best broker platform
+                    </p>
+                  </div>
+                  <span className="text-emerald-600 group-hover:translate-x-1 transition font-bold">
+                    →
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+
         </div>
-<div className="bg-gradient-to-br from-white to-slate-50 border-slate-200 rounded-2xl p-6 lg:p-8 shadow-sm">
-
-  {/* Heading */}
-  <div className="mb-6">
-    <h3 className="text-2xl font-bold text-slate-900">
-      Explore More Investment Opportunities
-    </h3>
-
-    <p className="text-slate-600 mt-2 text-sm lg:text-base">
-      Discover IPOs, unlisted shares, and broker comparison tools curated for smart investors.
-    </p>
-  </div>
-
-  {/* Links */}
-  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-
-    <Link
-      to="/ipo/ipo-list"
-      className="group bg-white border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
-    >
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-lg font-semibold text-slate-900">
-            Latest IPOs
-          </p>
-
-          <p className="text-sm text-slate-500 mt-1">
-            Track live & upcoming IPOs
-          </p>
-        </div>
-
-        <span className="text-green-600 group-hover:translate-x-1 transition">
-          →
-        </span>
       </div>
-    </Link>
-
-    <Link
-      to="/pre-ipo-stocks"
-      className="group bg-white border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
-    >
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-lg font-semibold text-slate-900">
-            Unlisted Shares
-          </p>
-
-          <p className="text-sm text-slate-500 mt-1">
-            Invest before public listing
-          </p>
-        </div>
-
-        <span className="text-green-600 group-hover:translate-x-1 transition">
-          →
-        </span>
-      </div>
-    </Link>
-
-    <Link
-      to="/broker-analyzer"
-      className="group bg-white border-slate-200 rounded-xl px-5 py-4 hover:border-green-500 hover:shadow-md transition-all duration-200"
-    >
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-lg font-semibold text-slate-900">
-            Compare Brokers
-          </p>
-
-          <p className="text-sm text-slate-500 mt-1">
-            Find the best broker platform
-          </p>
-        </div>
-
-        <span className="text-green-600 group-hover:translate-x-1 transition">
-          →
-        </span>
-      </div>
-    </Link>
-
-  </div>
-</div>
-      </div>
-    </div>
     </>
   );
 };
