@@ -25278,6 +25278,217 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE & NSE on 16 July 2026."
     }
   ]
+},
+{
+  "id": 125,
+  "name": "Millworks Technologies Limited",
+  "logo": "/images/ipo/millworkstechnologies.png",
+  "minInvestment": "₹2,64,800",
+  "open": "14 Jul 2026",
+  "close": "16 Jul 2026",
+  "listing": "21 Jul 2026",
+  "price": "315-331",
+  "lot": 400,
+
+  "about_company": {
+    "company_name": "Millworks Technologies Limited",
+    "industry_sector": "Heavy Electrical Equipment",
+    "founded_year": "Not specified",
+    "promoters": [
+      "Not specified"
+    ],
+    "description": "Millworks Technologies Ltd. is a precision engineering company specializing in the manufacture of high-accuracy machined components, sheet metal parts, and integrated assemblies for mission-critical applications across the railways, aerospace, defence, and semiconductor industries."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Millworks Technologies Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Book Build Issue",
+    "face_value": "₹10 Per Equity Share",
+    "price_band_min": "₹315",
+    "price_band_max": "₹331",
+    "lot_size": "400 Shares (Retail Application minimum size is 2 Lots / 800 Shares)",
+    "total_issue_size": "48,44,000 Equity Shares (₹160.34 Cr)",
+    "fresh_issue_size": "44,20,000 Equity Shares (₹146.30 Cr) (Ex Market Maker)",
+    "offer_for_sale": "0 Equity Shares (₹0.00 Cr)",
+    "shares_offered": "48,44,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹315 to ₹331",
+    "minimum_investment": "₹2,64,800 (Retail minimum criteria requires 2 lots)",
+    "market_cap_post_issue": "₹583.05 Cr",
+    "pre_issue_shareholding": "1,27,70,755 shares",
+    "post_issue_shareholding": "1,76,14,755 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Precision manufacturing focused on high-accuracy engineered parts and complex electronic/mechanical systems for defense, railway networks, aerospace structures, and global semiconductor fabrication setups.",
+    "products_services": [
+      "High-accuracy machined components",
+      "Sheet metal fabrications",
+      "Integrated electronic/mechanical assemblies"
+    ],
+    "competitive_strengths": [
+      "Niche expertise inside highly technical, mission-critical sectors like defense and semiconductor manufacturing.",
+      "Robust client domain trust covering diversified industrial verticals.",
+      "High-growth performance track record displaying extensive top-line scale over recent years."
+    ],
+    "risks": [
+      "Heavy reliance on technological precision updates and raw engineering talent acquisition.",
+      "Vulnerability to sector-specific macro demand shocks within capital equipment environments."
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "14 Jul 2026",
+    "ipo_close_date": "16 Jul 2026",
+    "basis_of_allotment_date": "17 Jul 2026",
+    "refund_initiation_date": "20 Jul 2026",
+    "demat_credit_date": "20 Jul 2026",
+    "listing_date": "21 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "funding_capital_expenditure_to_purchase_plant_and_machinery": "₹61.03 Cr",
+    "funding_the_working_capital_requirements_of_the_company": "₹81.50 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "market_maker_quota": "4,24,000 shares (8.75% of the Issue)",
+    "qib_quota": "22,09,200 shares (45.61% of the Issue)",
+    "anchor_investor_quota": "13,25,200 shares (27.36% of the Issue)",
+    "hni_nii_quota": "6,63,600 shares (13.70% of the Issue)",
+    "retail_quota": "15,47,200 shares (31.94% of the Issue)"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "800",
+      "amount": "₹2,64,800"
+    },
+    "retail_maximum": {
+      "lot_size": "2 Lots",
+      "shares": "800",
+      "amount": "₹2,64,800"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "1200",
+      "amount": "₹3,97,200"
+    },
+    "shni_maximum": {
+      "lot_size": "7 Lots",
+      "shares": "2800",
+      "amount": "₹9,26,800"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "3200",
+      "amount": "₹10,59,200"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "40.96% (Pre-IPO)",
+    "roce": "23.03% (Pre-IPO)",
+    "pat_margin": "24.16% (FY2026 based on restated tables)",
+    "ebitda_margin": "36.70% (FY2026 based on restated tables)",
+    "eps": "₹29.02 (Pre-IPO) / ₹21.04 (Post-IPO)",
+    "nav": "₹64.73 per share",
+    "debt_to_equity": "0.41 (Pre-IPO)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹198.37 Cr",
+      "total_income": "₹153.40 Cr",
+      "pat": "₹37.06 Cr",
+      "ebitda": "₹56.30 Cr",
+      "net_worth": "₹82.67 Cr",
+      "total_borrowing": "₹17.02 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹39.82 Cr",
+      "total_income": "₹22.42 Cr",
+      "pat": "₹5.25 Cr",
+      "ebitda": "₹7.89 Cr",
+      "net_worth": "₹23.31 Cr",
+      "total_borrowing": "₹9.63 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹10.54 Cr",
+      "total_income": "₹9.40 Cr",
+      "pat": "₹1.95 Cr",
+      "ebitda": "₹2.78 Cr",
+      "net_worth": "₹2.33 Cr",
+      "total_borrowing": "₹4.57 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "₹350",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "₹681"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Purva Sharegistry (India) Pvt.Ltd.",
+    "registrar_website": "https://www.purvashare.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "GYR Capital Advisors Pvt.Ltd."
+  },
+
+  "company_information": {
+    "company_address": "No.458/1, 10th A Cross, Phase-4, Peenya Industrial Area, Peenya Small Industries, Bangalore Urban, Karnataka, 560058",
+    "company_website": "https://millworksindia.com/",
+    "company_email": "cs@millworksindia.com",
+    "company_phone": "+91 9187045959"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://gyrcapitaladvisors.com/wp-content/uploads/2026/07/RHP_Millworks-07.07.2026.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Millworks Technologies Limited do?",
+      "answer": "The company operates as a precision engineering entity manufacturing high-accuracy machined parts, integrated system setups, and sheet metal configurations for specialized industries like aerospace, defense, railways, and semiconductor networks."
+    },
+    {
+      "question": "When does the Millworks Technologies IPO open and close?",
+      "answer": "The IPO opens on July 14, 2026, and closes on July 16, 2026."
+    },
+    {
+      "question": "What is the price band of the Millworks Technologies IPO?",
+      "answer": "The book-built issue price band is set between ₹315 and ₹331 per share."
+    },
+    {
+      "question": "What is the baseline public minimum retail lot configuration?",
+      "answer": "The base standard lot size is 400 shares. However, the mandatory retail allocation requires an application structure of 2 lots (800 shares), bringing the entry price to a fixed minimum of ₹2,64,800."
+    },
+    {
+      "question": "What is the total size of the Millworks Technologies issue?",
+      "answer": "The total issue size is ₹160.34 crore consisting of 48,44,000 equity shares, structured entirely as a fresh capital issue."
+    }
+  ]
 }
 
 
