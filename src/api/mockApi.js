@@ -25489,6 +25489,424 @@ export const fetchIPOs = async () => {
       "answer": "The total issue size is ₹160.34 crore consisting of 48,44,000 equity shares, structured entirely as a fresh capital issue."
     }
   ]
+},
+{
+  "id": 126,
+  "name": "SBI Funds Management Limited",
+  "logo": "/images/ipo/sbifundsmgmt.png",
+  "minInvestment": "₹14,924",
+  "open": "14 Jul 2026",
+  "close": "16 Jul 2026",
+  "listing": "21 Jul 2026",
+  "price": "545-574",
+  "lot": 26,
+
+  "about_company": {
+    "company_name": "SBI Funds Management Limited",
+    "industry_sector": "Asset Management (Mutual Funds, PMS, etc.)",
+    "founded_year": "1992",
+    "promoters": [
+      "State Bank of India",
+      "Amundi India Holding",
+      "Amundi Asset Management"
+    ],
+    "description": "SBI Funds Management Ltd is the largest asset management company in India by AUM. It manages SBI Mutual Fund and offers a wide range of products including equity, debt, hybrid funds, ETFs, index funds, and PMS. It has a strong SIP franchise and international presence."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "SBI Funds Management Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹1 per share",
+    "price_band_min": "₹545",
+    "price_band_max": "₹574",
+    "lot_size": "26 Shares",
+    "total_issue_size": "17,09,56,631 Equity Shares (₹9,813 Cr)",
+    "fresh_issue_size": "Nil",
+    "offer_for_sale": "17,09,56,631 Equity Shares (₹9,813 Cr)",
+    "shares_offered": "17,09,56,631 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹545 to ₹574",
+    "minimum_investment": "₹14,924 (Upper price band)",
+    "market_cap_post_issue": "₹1,16,913.90 Cr (Pre-IPO)",
+    "pre_issue_shareholding": "2,03,68,27,612 shares",
+    "post_issue_shareholding": "2,03,68,27,612 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Asset management with focus on mutual funds, PMS, and international mandates; joint venture between SBI and Amundi.",
+    "products_services": [
+      "Equity, Debt, Hybrid Funds",
+      "ETFs & Index Funds",
+      "Portfolio Management Services (PMS)",
+      "Specialized Investment Funds (SIF)",
+      "Overseas Funds"
+    ],
+    "competitive_strengths": [
+      "Largest AMC in India by AUM",
+      "Leader in PMS and SIPs",
+      "Strong brand and distribution network",
+      "Process-driven investment framework",
+      "Global presence and technology use"
+    ],
+    "risks": [
+      "Market volatility affecting AUM",
+      "Competition in asset management",
+      "Regulatory changes",
+      "Dependence on parent SBI"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "14 Jul 2026",
+    "ipo_close_date": "16 Jul 2026",
+    "basis_of_allotment_date": "17 Jul 2026",
+    "refund_initiation_date": "20 Jul 2026",
+    "demat_credit_date": "20 Jul 2026",
+    "listing_date": "21 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "offer_for_sale": "Pure OFS – No proceeds to the company (exit for selling shareholders)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Offer",
+    "hni_nii_quota": "Not less than 15% of the Offer",
+    "retail_quota": "Not less than 35% of the Offer",
+    "employee_shareholder_discounts": "Available with discounts"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "26",
+      "amount": "₹14,924"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "364",
+      "amount": "₹2,08,936"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 Lots",
+      "shares": "1,768",
+      "amount": "₹10,14,832"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "43.02% (Mar 2026)",
+    "roce": "Not specified",
+    "pat_margin": "Not specified",
+    "ebitda_margin": "92.46% (Mar 2026)",
+    "eps": "15.06",
+    "nav": "Not specified",
+    "debt_to_equity": "Low (asset light model)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹6,420.45 Cr",
+      "total_income": "₹4,976.11 Cr",
+      "pat": "₹3,067.38 Cr",
+      "ebitda": "₹4,058.44 Cr",
+      "net_worth": "₹5,963.06 Cr",
+      "total_borrowing": "Minimal"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹8,771.86 Cr",
+      "total_income": "₹4,236.15 Cr",
+      "pat": "₹2,540.15 Cr",
+      "ebitda": "₹3,412.94 Cr",
+      "net_worth": "₹8,297.53 Cr",
+      "total_borrowing": "Minimal"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹7,106.93 Cr",
+      "total_income": "₹3,426.08 Cr",
+      "pat": "₹2,072.79 Cr",
+      "ebitda": "₹2,718.82 Cr",
+      "net_worth": "₹6,747.75 Cr",
+      "total_borrowing": "Minimal"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "Check RHP"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Kotak Mahindra Capital Co. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "9th Floor, Crescenzo, C-38 & 39, G Block, Bandra Kurla Complex, Bandra (East), Mumbai, Maharashtra - 400051",
+    "company_website": "https://sbifunds.com",
+    "company_email": "companysecretary@sbimf.com",
+    "company_phone": "+91 22 6179 3000"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.sbimf.com/docs/default-source/sbi-funds/offer-documents/rhp-document.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does SBI Funds Management Limited do?",
+      "answer": "It is India's largest AMC managing SBI Mutual Fund and various investment products."
+    },
+    {
+      "question": "When does the SBI Funds Management IPO open and close?",
+      "answer": "The IPO opens on 14 July 2026 and closes on 16 July 2026."
+    },
+    {
+      "question": "What is the issue price of SBI Funds Management IPO?",
+      "answer": "The IPO price band is ₹545 to ₹574 per share."
+    },
+    {
+      "question": "What is the lot size of SBI Funds Management IPO?",
+      "answer": "The lot size is 26 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,924 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of SBI Funds Management IPO?",
+      "answer": "The IPO size is ₹9,813 crore (Pure Offer for Sale)."
+    },
+    {
+      "question": "Where will SBI Funds Management shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 21 July 2026."
+    }
+  ]
+},
+{
+  "id": 127,
+  "name": "Alpine Texworld Limited",
+  "logo": "/images/ipo/alpinetexworld.png",
+  "minInvestment": "₹14,910",
+  "open": "14 Jul 2026",
+  "close": "16 Jul 2026",
+  "listing": "21 Jul 2026",
+  "price": "100-105",
+  "lot": 142,
+
+  "about_company": {
+    "company_name": "Alpine Texworld Limited",
+    "industry_sector": "Textiles (Dyeing, Processing & Weaving of Fabrics)",
+    "founded_year": "2016",
+    "promoters": [
+      "Sumit Champalal Agarwal",
+      "Sandeep Santkumar Agarwal",
+      "Sachinkumar Santkumar Agarwal"
+    ],
+    "description": "Alpine Texworld Limited is engaged in dyeing, processing, and weaving of fabrics. It produces high-quality textiles with two manufacturing units and focuses on denim, suiting, shirting, and RFD fabrics. The company emphasizes green energy with solar installations and operates in the B2B segment for garment manufacturers."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Alpine Texworld Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹100",
+    "price_band_max": "₹105",
+    "lot_size": "142 Shares",
+    "total_issue_size": "1,20,24,000 Equity Shares (₹126.25 Cr)",
+    "fresh_issue_size": "1,20,24,000 Equity Shares (₹126.25 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "1,20,24,000 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹100 to ₹105",
+    "minimum_investment": "₹14,910 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹401.59 Cr)",
+    "pre_issue_shareholding": "2,62,23,000 shares",
+    "post_issue_shareholding": "3,82,47,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated textile manufacturing with focus on dyeing, processing, and weaving using automated machinery and renewable energy.",
+    "products_services": [
+      "Dyed and Processed Fabrics",
+      "Denim, Suiting, Shirting & RFD Fabrics",
+      "Grey Fabric (new weaving unit planned)"
+    ],
+    "competitive_strengths": [
+      "Well-positioned for growing textile demand",
+      "Automated machinery from global brands",
+      "Strategic investments and green energy focus",
+      "Experienced promoters",
+      "Healthy financial track record"
+    ],
+    "risks": [
+      "Highly competitive textile sector",
+      "Raw material price volatility",
+      "Execution risks on new weaving unit",
+      "Debt levels"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "14 Jul 2026",
+    "ipo_close_date": "16 Jul 2026",
+    "basis_of_allotment_date": "17 Jul 2026",
+    "refund_initiation_date": "20 Jul 2026",
+    "demat_credit_date": "20 Jul 2026",
+    "listing_date": "21 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "new_weaving_unit_capex": "₹32.08 Cr",
+    "repayment_of_borrowings": "₹52.20 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 1% of the Issue",
+    "hni_nii_quota": "Not less than 29% of the Issue",
+    "retail_quota": "Not less than 70% of the Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "142",
+      "amount": "₹14,910"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "1,988",
+      "amount": "₹2,08,740"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 Lots",
+      "shares": "9,656",
+      "amount": "₹10,13,880"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "33.85% (Mar 2026)",
+    "roce": "17.56% (Mar 2026)",
+    "pat_margin": "6.34% (Mar 2026)",
+    "ebitda_margin": "13.84% (Mar 2026)",
+    "eps": "8.28 (Pre-IPO)",
+    "nav": "Not specified",
+    "debt_to_equity": "2.35 (Mar 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹305.31 Cr",
+      "total_income": "₹350.18 Cr",
+      "pat": "₹21.72 Cr",
+      "ebitda": "₹47.45 Cr",
+      "net_worth": "₹72.88 Cr",
+      "total_borrowing": "₹177.60 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹294.86 Cr",
+      "total_income": "₹237.66 Cr",
+      "pat": "₹8.63 Cr",
+      "ebitda": "₹27.00 Cr",
+      "net_worth": "₹51.13 Cr",
+      "total_borrowing": "₹166.09 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "Check RHP"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "D&A Financial Services Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Block No 614-1105, Village Paldi,Pirana Miroli Road, Paldi Kankaj,Dascroi Ahmedabad, Gujarat, 382425",
+    "company_website": "https://alpinetexworld.com/",
+    "company_email": "info@aplinetexworld.com",
+    "company_phone": "+91 9725309926"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on SEBI",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/jul-2026/alpine-texworld-limited-rhp_102719.html",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Alpine Texworld Limited do?",
+      "answer": "The company is engaged in dyeing, processing, and weaving of fabrics for the textile industry."
+    },
+    {
+      "question": "When does the Alpine Texworld IPO open and close?",
+      "answer": "The IPO opens on 14 July 2026 and closes on 16 July 2026."
+    },
+    {
+      "question": "What is the issue price of Alpine Texworld IPO?",
+      "answer": "The IPO price band is ₹100 to ₹105 per share."
+    },
+    {
+      "question": "What is the lot size of Alpine Texworld IPO?",
+      "answer": "The lot size is 142 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,910 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Alpine Texworld IPO?",
+      "answer": "The IPO size is ₹126.25 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Alpine Texworld shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 21 July 2026."
+    }
+  ]
 }
 
 
