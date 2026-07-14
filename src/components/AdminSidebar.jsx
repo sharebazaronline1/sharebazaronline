@@ -11,6 +11,7 @@ import {
   IndianRupee,
   Newspaper,
   Activity,
+  ClipboardList,
   ScrollText,
 } from "lucide-react";
 
@@ -53,8 +54,14 @@ const AdminSidebar = ({ mobileOpen, setMobileOpen }) => {
           <SidebarLink to="/admin-referrals" icon={<Share2 size={18} />} label="Referrals" />
           <SidebarLink to="/admin-preipo" icon={<TrendingUp size={18} />} label="Pre IPO" />
           <SidebarLink to="/admin-orders" icon={<IndianRupee size={18} />} label="Orders" />
+            <SidebarLink to="/admin-blogs" icon={<Newspaper  size={18} />} label="Blogs" />
           <SidebarLink to="/admin-corporate" icon={<Layers size={18} />} label="Corporate Actions" />
-          <SidebarLink to="/admin-blogs" icon={<Newspaper  size={18} />} label="Blogs" />
+           <SidebarLink 
+  to="/admin-addcorporate" 
+  icon={<ClipboardList size={18} />} 
+  label="Corporate Upload" 
+/>
+        
           <SidebarLink to="/admin-signals" icon={<Activity   size={18} />} label="Signal Upload" />
           <SidebarLink to="/admin-settings" icon={<Settings size={18} />} label="Settings" />
         </nav>

@@ -46,6 +46,7 @@ import AdminPreIPO from "./pages/AdminPreIPO"
 import AdminOrders from "./pages/AdminOrders"
 import NotFound from "./pages/NotFound";
 import AdminBlog from "./pages/AdminBlog";
+import AdminAddCorporateActions from "./pages/AdminAddCorporateActions"
 import BrokerCompare from "./pages/BrokerCompare";
 import AdminDividends from "./pages/AdminCorporateActions";
 import CorporateActions from "./pages/CorporateActions"
@@ -157,6 +158,7 @@ const hideHeader =
                 <Route path="/admin-blogs" element={<AdminBlog />} />
                 <Route path="/admin-signals" element={<AdminSignals />} />
                 <Route path="/admin-corporate" element={<AdminDividends />} />
+                <Route path="/admin-addcorporate" element={<AdminAddCorporateActions />} />
                 
               </Route>
 

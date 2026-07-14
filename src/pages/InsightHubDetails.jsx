@@ -3,15 +3,32 @@
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ArrowLeft, Clock, User, Calendar, Share2 } from "lucide-react";
-import { supabase } from "../lib/supabase"; // ✅ FIXED
+import { supabase } from "../lib/supabase";
 import { fetchInsightDetails } from "../api/mockApi";
-
 
 const BlogDetail = () => {
   const { id } = useParams();
 
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  // Corporate Action Categories
+  const corporateCategories = [
+    "Buyback", "Stock Split", "Bonus Issue", "Dividend", "Rights Issue",
+    "Merger", "Demerger", "Takeover / Acquisition", "Open Offer", "Delisting",
+    "OFS", "QIP", "Preferential Allotment", "Warrants Issue", "ESOP Allotment",
+    "FPO", "Bond Issue", "NCD Issue", "Distribution", "Unit Split",
+    "AGM", "EGM", "Board Meeting", "Postal Ballot", "E-Voting",
+    "Promoter Stake Increase", "Promoter Stake Sale", "Pledge Release",
+    "Scheme of Arrangement", "Insolvency Resolution", "CIRP Process",
+    "Subsidiary Incorporation", "Joint Venture", "Change of Company Name",
+    "IPO Listing", "Change in Director", "CEO Appointment", "Auditor Appointment",
+    "Regulatory Action", "Trading Suspension", "Revocation of Suspension",
+  ];
+
+  const isCorporateAction = blog?.category 
+    ? corporateCategories.includes(blog.category) 
+    : false;
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -23,7 +40,6 @@ const BlogDetail = () => {
         // MOCK BLOG
         if (String(id).startsWith("mock-")) {
           const mockData = await fetchInsightDetails();
-
           const cleanId = id.replace("mock-", "");
 
           const mockBlog = mockData.find(
@@ -49,14 +65,10 @@ const BlogDetail = () => {
             .single();
 
           if (!error && data) {
-            foundBlog = {
-              ...data,
-              source: "db",
-            };
+            foundBlog = { ...data, source: "db" };
           } else {
             // FALLBACK MOCK
             const mockData = await fetchInsightDetails();
-
             const mockBlog = mockData.find(
               (item) =>
                 String(item.id) === String(id) ||
@@ -106,7 +118,6 @@ const BlogDetail = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
         {/* CATEGORY */}
@@ -123,7 +134,6 @@ const BlogDetail = () => {
 
         {/* META */}
         <div className="flex flex-wrap justify-center gap-5 text-sm text-gray-500 mb-10">
-
           {blog.author && (
             <span className="flex items-center gap-2">
               <User size={16} />
@@ -143,53 +153,30 @@ const BlogDetail = () => {
             {blog.reading_time || "10 min read"}
           </span>
         </div>
-{/* FEATURED IMAGE */}
-{blog.image_url && (
-  <div className="mb-10">
-    <img
-      src={blog.image_url}
-      alt={blog.title || blog.heading}
-      className="w-full h-auto object-contain rounded-2xl shadow-sm"
-    />
-  </div>
-)}
-        
 
-        {/* ARTICLE */}
+        {/* FEATURED IMAGE */}
+        {blog.image_url && (
+          <div className="mb-10">
+            <img
+              src={blog.image_url}
+              alt={blog.title || blog.heading}
+              className="w-full h-auto object-contain rounded-2xl shadow-sm"
+            />
+          </div>
+        )}
+
+        {/* ARTICLE CONTENT */}
         <article
-          className="blog-content text-gray-800"
+          className={`prose-content ${isCorporateAction ? "corporate-content" : "blog-content"}`}
           dangerouslySetInnerHTML={{
-            __html: (blog.content || "")
-
-              // REMOVE EMPTY PARAGRAPHS
-              .replace(/<p>(\s|&nbsp;|<br\s*\/?>)*<\/p>/gi, "")
-
-              // REMOVE MULTIPLE BR TAGS
-              .replace(/(<br\s*\/?>\s*){2,}/gi, "<br />")
-
-              // REMOVE INLINE HUGE SPACING
-              .replace(/margin-top:[^;"]+;?/gi, "")
-              .replace(/margin-bottom:[^;"]+;?/gi, "")
-              .replace(/padding-top:[^;"]+;?/gi, "")
-              .replace(/padding-bottom:[^;"]+;?/gi, "")
-
-              // TABLE RESPONSIVE
-              .replace(
-                /<table/g,
-                '<div class="overflow-x-auto my-6 rounded-xl border border-gray-200"><table class="min-w-full border-collapse"'
-              )
-              .replace(/<\/table>/g, "</table></div>"),
+            __html: blog.content || "",
           }}
         />
 
         {/* FOOTER */}
         <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6">
-
           <div className="flex items-center gap-3">
-            <span className="font-medium text-gray-700">
-              Share this article
-            </span>
-
+            <span className="font-medium text-gray-700">Share this article</span>
             <button className="p-2 bg-white rounded-full border hover:bg-gray-100 transition">
               <Share2 size={18} />
             </button>
@@ -205,103 +192,103 @@ const BlogDetail = () => {
         </div>
       </div>
 
-      {/* STYLES */}
-      <style jsx>{`
-        .blog-content {
-          font-size: 16px;
-          line-height: 1.8;
-        }
-
-        .blog-content p {
-          margin-bottom: 18px !important;
-          line-height: 1.8 !important;
-          color: #374151;
-        }
-
-        .blog-content h1,
-        .blog-content h2,
-        .blog-content h3,
-        .blog-content h4 {
-          color: #111827;
-          font-weight: 700;
-          line-height: 1.3;
-          margin-top: 40px !important;
-          margin-bottom: 18px !important;
-        }
-
-        .blog-content h2 {
-          font-size: 28px;
-        }
-
-        .blog-content h3 {
-          font-size: 24px;
-        }
-
-        .blog-content ul,
-        .blog-content ol {
-          margin: 20px 0 !important;
-          padding-left: 24px !important;
-        }
-
-        .blog-content li {
-          margin-bottom: 10px !important;
-          line-height: 1.8 !important;
-        }
-
-        .blog-content table {
-          width: 100%;
-        }
-
-        .blog-content th {
-          background: #f3f4f6;
-          font-weight: 600;
-          text-align: left;
-          padding: 14px;
-          border: 1px solid #d1d5db;
-        }
-
-        .blog-content td {
-          padding: 14px;
-          border: 1px solid #d1d5db;
-        }
-
-        .blog-content img {
-          border-radius: 14px;
-          margin: 24px 0;
-        }
-
-        @media (max-width: 640px) {
+      {/* CONDITIONAL STYLES - Only apply for normal blogs */}
+      {!isCorporateAction && (
+        <style jsx>{`
           .blog-content {
-            font-size: 15px;
-            line-height: 1.7;
+            font-size: 16px;
+            line-height: 1.8;
           }
 
           .blog-content p {
-            margin-bottom: 16px !important;
+            margin-bottom: 18px !important;
+            line-height: 1.8 !important;
+            color: #374151;
           }
 
-          .blog-content h2 {
-            font-size: 24px;
+          .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4 {
+            color: #111827;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-top: 40px !important;
+            margin-bottom: 18px !important;
           }
 
-          .blog-content h3 {
-            font-size: 20px;
+          .blog-content h2 { font-size: 28px; }
+          .blog-content h3 { font-size: 24px; }
+
+          .blog-content ul, .blog-content ol {
+            margin: 20px 0 !important;
+            padding-left: 24px !important;
           }
 
           .blog-content li {
-            margin-bottom: 8px !important;
+            margin-bottom: 10px !important;
+            line-height: 1.8 !important;
           }
 
-          .blog-content th,
-          .blog-content td {
-            padding: 10px;
-            font-size: 14px;
+          .blog-content table {
+            width: 100%;
           }
-        }
-      `}</style>
+
+          .blog-content th {
+            background: #f3f4f6;
+            font-weight: 600;
+            text-align: left;
+            padding: 14px;
+            border: 1px solid #d1d5db;
+          }
+
+          .blog-content td {
+            padding: 14px;
+            border: 1px solid #d1d5db;
+          }
+
+          .blog-content img {
+            border-radius: 14px;
+            margin: 24px 0;
+          }
+
+          @media (max-width: 640px) {
+            .blog-content {
+              font-size: 15px;
+              line-height: 1.7;
+            }
+            .blog-content h2 { font-size: 24px; }
+            .blog-content h3 { font-size: 20px; }
+          }
+        `}</style>
+      )}
+
+      {/* Minimal styles for Corporate Actions - shows HTML as it is */}
+      {isCorporateAction && (
+        <style jsx>{`
+          .corporate-content {
+            font-size: 16px;
+            line-height: 1.75;
+          }
+
+          .corporate-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+          }
+
+          .corporate-content th,
+          .corporate-content td {
+            border: 1px solid #d1d5db;
+            padding: 12px;
+            text-align: left;
+          }
+
+          .corporate-content th {
+            background-color: #f8fafc;
+            font-weight: 600;
+          }
+        `}</style>
+      )}
     </div>
   );
 };
 
 export default BlogDetail;
-
