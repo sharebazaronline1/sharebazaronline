@@ -25907,6 +25907,440 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE & NSE on 21 July 2026."
     }
   ]
+},
+{
+  "id": 128,
+  "name": "Sotefin Bharat Limited",
+  "logo": "/images/ipo/sotefinbharat.png",
+  "minInvestment": "₹2,24,400",
+  "open": "16 Jul 2026",
+  "close": "20 Jul 2026",
+  "listing": "23 Jul 2026",
+  "price": "178-187",
+  "lot": 600,
+
+  "about_company": {
+    "company_name": "Sotefin Bharat Limited",
+    "industry_sector": "Automated Parking Solutions (Mechanised & Robotic Parking Systems)",
+    "founded_year": "2012",
+    "promoters": [
+      "Arup Choudhuri",
+      "Jignesh Pravinchandra Sanghavi",
+      "PISA International Pvt. Ltd."
+    ],
+    "description": "Sotefin Bharat provides mechanised and automated parking solutions with turnkey services. It offers robotic parking systems (SILOMAT technology), puzzle, tower, and stack parking systems. The company has executed over 55 projects and is working on 30+ projects in India and internationally (US, Dubai)."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Sotefin Bharat Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹178",
+    "price_band_max": "₹187",
+    "lot_size": "600 Shares",
+    "total_issue_size": "48,00,000 Equity Shares (₹89.76 - 90 Cr)",
+    "fresh_issue_size": "48,00,000 Equity Shares (₹89.76 - 90 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "48,00,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹178 to ₹187",
+    "minimum_investment": "₹2,24,400 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹339.60 Cr)",
+    "pre_issue_shareholding": "1,33,60,307 shares",
+    "post_issue_shareholding": "1,81,60,307 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Turnkey provider of automated parking solutions including design, manufacturing, installation, O&M, and after-sales support.",
+    "products_services": [
+      "Robotic Parking Systems (SILOMAT Shuttle & Dolly)",
+      "Puzzle Parking Systems",
+      "Tower Parking Systems (Travel Tower, Pallet, Comb)",
+      "Stack Parking Systems"
+    ],
+    "competitive_strengths": [
+      "Swiss engineering excellence adapted for India",
+      "International quality certifications (ISO 9001:2015)",
+      "Integrated end-to-end execution capabilities",
+      "Strong execution track record and diversified client base",
+      "Domain expertise in smart parking",
+      "Comprehensive post-sale support"
+    ],
+    "risks": [
+      "Project execution and order book dependency",
+      "Competition in parking solutions",
+      "Capital intensive operations",
+      "SME liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "16 Jul 2026",
+    "ipo_close_date": "20 Jul 2026",
+    "basis_of_allotment_date": "21 Jul 2026",
+    "refund_initiation_date": "22 Jul 2026",
+    "demat_credit_date": "22 Jul 2026",
+    "listing_date": "23 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "manufacturing_facility_kolkata": "₹20.13 Cr",
+    "new_office_premises": "₹8.17 Cr",
+    "working_capital": "₹40.00 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹68.30 Cr (approx.)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "50.00% of Net Issue",
+    "hni_nii_quota": "15.00% of Net Issue",
+    "retail_quota": "35.00% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "1200",
+      "amount": "₹2,24,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "1800",
+      "amount": "₹3,36,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 Lots",
+      "shares": "5400",
+      "amount": "₹10,09,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "26.98% (Mar 2026)",
+    "roce": "33.31% (Mar 2026)",
+    "pat_margin": "14.88% (Mar 2026)",
+    "ebitda_margin": "25.55% (Mar 2026)",
+    "eps": "13.00 (Pre-IPO)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.31 (Mar 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹129.06 Cr",
+      "total_income": "₹118.23 Cr",
+      "pat": "₹17.37 Cr",
+      "ebitda": "₹29.83 Cr",
+      "net_worth": "₹78.11 Cr",
+      "total_borrowing": "₹24.01 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹98.68 Cr",
+      "total_income": "₹94.15 Cr",
+      "pat": "₹11.31 Cr",
+      "ebitda": "₹18.46 Cr",
+      "net_worth": "₹50.63 Cr",
+      "total_borrowing": "₹12.16 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹60.64 Cr",
+      "total_income": "₹56.87 Cr",
+      "pat": "₹6.25 Cr",
+      "ebitda": "₹10.54 Cr",
+      "net_worth": "₹21.92 Cr",
+      "total_borrowing": "₹18.78 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "Check RHP"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Choice Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "72/B,Barakhola Kalikapur,Kolkata, West Bengal, 700099",
+    "company_website": "https://www.sotefinbharat.com/",
+    "company_email": "bdas@sotefinbharat.com",
+    "company_phone": "+91 82 8299 9547"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.sotefinbharat.com/wp-content/uploads/2026/07/Sotefin_Bharat_RHP-Final.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Sotefin Bharat Limited do?",
+      "answer": "The company provides mechanised and automated parking solutions with turnkey services."
+    },
+    {
+      "question": "When does the Sotefin Bharat IPO open and close?",
+      "answer": "The IPO opens on 16 July 2026 and closes on 20 July 2026."
+    },
+    {
+      "question": "What is the issue price of Sotefin Bharat IPO?",
+      "answer": "The IPO price band is ₹178 to ₹187 per share."
+    },
+    {
+      "question": "What is the lot size of Sotefin Bharat IPO?",
+      "answer": "The lot size is 600 shares. Retail minimum is 2 lots (1,200 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,24,400 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Sotefin Bharat IPO?",
+      "answer": "The IPO size is ₹89.76 - 90 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Sotefin Bharat shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 23 July 2026."
+    }
+  ]
+},
+{
+  "id": 129,
+  "name": "Caliber Mining and Logistics Limited",
+  "logo": "/images/ipo/calibermining.png",
+  "minInvestment": "₹14,840",
+  "open": "17 Jul 2026",
+  "close": "21 Jul 2026",
+  "listing": "24 Jul 2026",
+  "price": "402-424",
+  "lot": 35,
+
+  "about_company": {
+    "company_name": "Caliber Mining and Logistics Limited",
+    "industry_sector": "Coal Mining & Logistics Services",
+    "founded_year": "2014",
+    "promoters": [
+      "Mohit Satishkumar Chadda",
+      "Anuj Krishanlal Chadda",
+      "Manish Krishanlal Chadda",
+      "Rahul Roshanlal Chadda",
+      "Priya Anuj Chadda"
+    ],
+    "description": "Caliber Mining and Logistics Limited is an integrated service provider specializing in coal extraction, overburden removal, coal loading/unloading, road & rail transportation, and coal trading. It primarily works with Coal India subsidiaries and operates in Maharashtra, Chhattisgarh, and Madhya Pradesh with a large fleet of vehicles and machinery."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Caliber Mining and Logistics Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹402",
+    "price_band_max": "₹424",
+    "lot_size": "35 Shares",
+    "total_issue_size": "1,06,13,207 Equity Shares (₹450 Cr)",
+    "fresh_issue_size": "94,33,962 Equity Shares (₹400 Cr)",
+    "offer_for_sale": "11,79,245 Equity Shares (₹50 Cr)",
+    "shares_offered": "1,06,13,207 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹402 to ₹424",
+    "minimum_investment": "₹14,840 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹2,771.93 Cr)",
+    "pre_issue_shareholding": "5,59,41,823 shares",
+    "post_issue_shareholding": "6,53,75,785 shares"
+  },
+
+  "company_overview": {
+    "business_model": "End-to-end coal mining and logistics services including extraction, transportation, rake loading, rail coordination, and trading.",
+    "products_services": [
+      "Coal Mining & Overburden Removal",
+      "Coal Logistics & Transportation",
+      "Rake Loading & Rail Coordination",
+      "Coal Trading"
+    ],
+    "competitive_strengths": [
+      "Fast-growing end-to-end coal mining & logistics provider",
+      "Strong execution experience and operational efficiencies",
+      "Growing share with Coal India subsidiaries and large order book",
+      "Proven financial performance",
+      "Experienced promoters and management"
+    ],
+    "risks": [
+      "Dependence on Coal India subsidiaries",
+      "High debt levels",
+      "Execution risks on large contracts",
+      "Commodity price and regulatory risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "17 Jul 2026",
+    "ipo_close_date": "21 Jul 2026",
+    "basis_of_allotment_date": "22 Jul 2026",
+    "refund_initiation_date": "23 Jul 2026",
+    "demat_credit_date": "23 Jul 2026",
+    "listing_date": "24 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_borrowings": "₹208 Cr",
+    "capex_for_machinery": "₹167 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹375 Cr (Net Proceeds)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Net Offer",
+    "hni_nii_quota": "Not less than 15% of the Net Offer",
+    "retail_quota": "Not less than 35% of the Net Offer"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "35",
+      "amount": "₹14,840"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "490",
+      "amount": "₹2,07,760"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 Lots",
+      "shares": "2,380",
+      "amount": "₹10,09,120"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "Not specified",
+    "roce": "16.60% (Mar 2026)",
+    "pat_margin": "9.41% (Mar 2026)",
+    "ebitda_margin": "25.69% (Mar 2026)",
+    "eps": "28.23 (Pre-IPO)",
+    "nav": "Not specified",
+    "debt_to_equity": "1.63 (Mar 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹2,077.39 Cr",
+      "total_income": "₹1,684.66 Cr",
+      "pat": "₹157.90 Cr",
+      "ebitda": "₹430.92 Cr",
+      "net_worth": "₹647.54 Cr",
+      "total_borrowing": "₹1,057.61 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹1,404.09 Cr",
+      "total_income": "₹1,435.57 Cr",
+      "pat": "₹131.55 Cr",
+      "ebitda": "₹349.77 Cr",
+      "net_worth": "₹489.30 Cr",
+      "total_borrowing": "₹649.27 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹1,279.18 Cr",
+      "total_income": "₹957.92 Cr",
+      "pat": "₹95.90 Cr",
+      "ebitda": "₹243.14 Cr",
+      "net_worth": "₹295.93 Cr",
+      "total_borrowing": "₹717.88 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Dam Capital Advisors Ltd."
+  },
+
+  "company_information": {
+    "company_address": "MIDC Chandrapur Industrial Area, Plot No. B-38 to B-48, Chinchala, Chandrapur, Maharashtra - 442406",
+    "company_website": "https://cmll.in/",
+    "company_email": "investors@cmll.in",
+    "company_phone": "+91 7122996128"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on SEBI",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/jul-2026/caliber-mining-and-logistics-limited-rhp_102790.html",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Caliber Mining and Logistics Limited do?",
+      "answer": "The company provides coal mining, overburden removal, logistics, transportation, and trading services."
+    },
+    {
+      "question": "When does the Caliber Mining IPO open and close?",
+      "answer": "The IPO opens on 17 July 2026 and closes on 21 July 2026."
+    },
+    {
+      "question": "What is the issue price of Caliber Mining IPO?",
+      "answer": "The IPO price band is ₹402 to ₹424 per share."
+    },
+    {
+      "question": "What is the lot size of Caliber Mining IPO?",
+      "answer": "The lot size is 35 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,840 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Caliber Mining IPO?",
+      "answer": "The IPO size is ₹450 crore (Fresh Issue ₹400 Cr + OFS ₹50 Cr)."
+    },
+    {
+      "question": "Where will Caliber Mining shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 24 July 2026."
+    }
+  ]
 }
 
 
