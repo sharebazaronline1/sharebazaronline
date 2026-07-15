@@ -1,19 +1,44 @@
+# Allow all search engines
 User-agent: *
 Allow: /
 
-# Important pages
+# Public pages
 Allow: /pre-ipo
 Allow: /ipo-tracker
 Allow: /broker-analyzer
 Allow: /insight-hub
 Allow: /skillup
 
-# Block private areas
+# Private pages
 Disallow: /dashboard
 Disallow: /admin
 Disallow: /profile
 Disallow: /settings
-Disallow: /api
+Disallow: /api/
 Disallow: /reset-password
+
+# OpenAI Search
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI Training (optional)
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT user retrieval
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
 
 Sitemap: https://www.sharebazaaronline.com/sitemap.xml
