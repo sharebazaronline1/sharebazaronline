@@ -100,6 +100,34 @@ const BlogDetail = () => {
     if (id) fetchBlog();
   }, [id]);
 
+  // Share functionality
+  const handleShare = async () => {
+    const url = window.location.href;
+
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: blog?.heading || "Insight Article",
+          text: "Check out this article",
+          url: url,
+        });
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          console.error("Share failed:", err);
+        }
+      }
+    } else {
+      // Fallback: Copy to clipboard
+      try {
+        await navigator.clipboard.writeText(url);
+        alert("✅ Link copied to clipboard!");
+      } catch (err) {
+        console.error("Failed to copy:", err);
+        alert("Failed to copy link");
+      }
+    }
+  };
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
@@ -118,7 +146,8 @@ const BlogDetail = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* Wider content - max-w-6xl */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
         {/* CATEGORY */}
         <div className="text-center mb-5">
@@ -177,7 +206,10 @@ const BlogDetail = () => {
         <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
             <span className="font-medium text-gray-700">Share this article</span>
-            <button className="p-2 bg-white rounded-full border hover:bg-gray-100 transition">
+            <button 
+              onClick={handleShare}
+              className="p-2 bg-white rounded-full border hover:bg-gray-100 transition"
+            >
               <Share2 size={18} />
             </button>
           </div>
