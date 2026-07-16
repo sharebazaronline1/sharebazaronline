@@ -162,7 +162,7 @@ const BlogDetail = () => {
         </h1>
 
         {/* META */}
-        <div className="flex flex-wrap justify-center gap-5 text-sm text-gray-500 mb-10">
+        {/* <div className="flex flex-wrap justify-center gap-5 text-sm text-gray-500 mb-10">
           {blog.author && (
             <span className="flex items-center gap-2">
               <User size={16} />
@@ -181,7 +181,7 @@ const BlogDetail = () => {
             <Clock size={16} />
             {blog.reading_time || "10 min read"}
           </span>
-        </div>
+        </div> */}
 
         {/* FEATURED IMAGE */}
         {blog.image_url && (
