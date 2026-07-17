@@ -236,22 +236,21 @@ useEffect(() => {
                 onClick={() => handleCardClick(post)}
               >
                 {/* IMAGE */}
-           <div className="relative aspect-[16/10] sm:aspect-[16/9] overflow-hidden bg-gray-100">
+          <div className="relative aspect-[16/12] sm:aspect-[16/11] lg:aspect-[16/10] overflow-hidden bg-gray-100">
 
-              <img
-                src={post.image_url}
-                alt={post.title}
-                loading="lazy"
-                className="
-                  w-full
-                  h-full
-                  object-cover
-                  object-center
-                  rounded-none
-                  transition-transform duration-500
-                  group-hover:scale-105
-                "
-              />
+             <img
+  src={post.image_url}
+  alt={post.title}
+  loading="lazy"
+  className="
+    w-full
+    h-full
+    object-cover
+    object-top
+    transition-transform duration-500
+    group-hover:scale-105
+  "
+/>
 
             </div>
 

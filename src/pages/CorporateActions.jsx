@@ -7,8 +7,11 @@ import {
   Search, 
   TrendingUp
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import slugify from "../utils/slugify";
 
 const CorporateActions = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("buyback");
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -33,7 +36,14 @@ const CorporateActions = () => {
         const currentConfig = tabs.find((t) => t.id === activeTab);
         const { data, error } = await supabase
           .from("corporate_actions")
-          .select("*")
+          .select(`
+            *,
+            blog:blogs (
+              id,
+              slug,
+              heading
+            )
+          `)
           .eq("action_type", currentConfig?.dbType || "buyback")
           .order("ex_date", { ascending: false });
 
@@ -245,8 +255,24 @@ const CorporateActions = () => {
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-slate-800">
                   {filteredRecords.map((row) => (
-                    <tr key={row.id} className="hover:bg-slate-50/60 transition-colors">
-                      <td className="px-6 py-4 text-left font-bold text-slate-900 border-r border-slate-100">
+                    <tr 
+                      key={row.id} 
+                      onClick={() => {
+                        if (row.blog?.id) {
+                          navigate(`/insight-hub/${row.blog.id}/${row.blog.slug}`);
+                        }
+                      }}
+                      className={`hover:bg-slate-50/60 transition-colors ${
+                        row.blog?.id ? "cursor-pointer" : ""
+                      }`}
+                    >
+                      <td 
+                        className={`px-6 py-4 text-left font-bold border-r border-slate-100 ${
+                          row.blog?.id 
+                            ? "text-[#16A34A] hover:underline" 
+                            : "text-slate-900"
+                        }`}
+                      >
                         {row.company}
                       </td>
 

@@ -1,5 +1,5 @@
 // src/pages/AdminCorporateAction.jsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabase";
 import AdminSidebar from "../components/AdminSidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
@@ -16,6 +16,10 @@ const AdminCorporateAction = () => {
   const [readingTime, setReadingTime] = useState(5);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  // Added states for managing corporate action relationships
+  const [corporateActions, setCorporateActions] = useState([]);
+  const [selectedAction, setSelectedAction] = useState("");
 
   const categories = [
     "Buyback",
@@ -66,6 +70,23 @@ const AdminCorporateAction = () => {
     "Trading Suspension",
     "Revocation of Suspension",
   ];
+
+  // Fetch unlinked corporate actions on component mount
+  useEffect(() => {
+    const loadActions = async () => {
+      const { data, error } = await supabase
+        .from("corporate_actions")
+        .select("id, company, action_type")
+        .is("blog_id", null)
+        .order("company");
+
+      if (!error) {
+        setCorporateActions(data || []);
+      }
+    };
+
+    loadActions();
+  }, []);
 
   const generateSlug = (text) =>
     text.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
@@ -135,13 +156,33 @@ const AdminCorporateAction = () => {
         return;
       }
 
+      // Link the corporate action record if one was chosen
+      const blogId = data[0].id;
+      if (selectedAction) {
+        const { error: updateError } = await supabase
+          .from("corporate_actions")
+          .update({
+            blog_id: blogId,
+          })
+          .eq("id", selectedAction);
+
+        if (updateError) {
+          console.error("Supabase Relationship Link Error:", updateError);
+        } else {
+          // Remove linked item from local UI dropdown list
+          setCorporateActions((prev) => prev.filter((item) => item.id !== selectedAction));
+        }
+      }
+
       setSuccess(true);
 
+      // Reset form variables
       setTitle("");
       setHeading("");
       setExcerpt("");
       setContent("");
       setImageUrl("");
+      setSelectedAction("");
 
       setTimeout(() => setSuccess(false), 3000);
     } catch (err) {
@@ -196,6 +237,25 @@ const AdminCorporateAction = () => {
             />
 
             <div className="grid md:grid-cols-3 gap-6 items-end">
+              {/* Relationship Dropdown placement */}
+              <div>
+                <label className="text-sm text-gray-600 mb-2 block">
+                  Link Corporate Action
+                </label>
+                <select
+                  value={selectedAction}
+                  onChange={(e) => setSelectedAction(e.target.value)}
+                  className="w-full px-4 py-3 border rounded-xl bg-white"
+                >
+                  <option value="">Select Corporate Action</option>
+                  {corporateActions.map((item) => (
+                    <option key={item.id} value={item.id}>
+                      {item.company} — {item.action_type}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
               <div>
                 <label className="text-sm text-gray-600 mb-2 block">Corporate Action Type</label>
                 <select
