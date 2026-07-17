@@ -18,33 +18,30 @@ const AdminCorporateActions = () => {
 
   const parseDate = (value) => {
     if (!value) return null;
-
-    const formats = [
-      "yyyy-MM-dd",
-      "dd/MM/yyyy",
-      "dd-MM-yyyy",
-      "dd-MMM-yyyy",
-      "dd MMM yyyy",
-    ];
-
+    const formats = ["yyyy-MM-dd", "dd/MM/yyyy", "dd-MM-yyyy", "dd-MMM-yyyy", "dd MMM yyyy"];
     for (const f of formats) {
       const parsed = parse(value, f, new Date());
-      if (!isNaN(parsed.getTime())) {
-        return parsed;
-      }
+      if (!isNaN(parsed.getTime())) return parsed;
     }
     return null;
   };
 
   const formatDate = (date) => {
-    if (!date) return "";
-    return format(date, "yyyy-MM-dd");
-  };
+  if (!date) return null;
+  return format(date, "yyyy-MM-dd");
+}
+  const formatDateOnly = (dateValue) => {
+  if (!dateValue) return "";
+  try {
+    return format(new Date(dateValue), "dd-MM-yyyy");
+  } catch {
+    return dateValue; // for text like "Post 15 Aug 2026"
+  }
+};
 
-  // Form Data schemas strictly aligned to standard inputs and mock dataset columns
   const [data, setData] = useState({
     buyback: [{ company: "", buyback_price: "", cmp: "", premium: "", record: "", size: "" }],
-    dividends: [{ company: "", type: "Final Dividend", percentage: "", announcement: "", record: "", ex_date: "", payment_date: "" }],
+    dividends: [{ company: "", type: "Final Dividend", percentage: "", dividend_share: "", announcement: "", record: "", ex_date: "", payment_date: "" }],
     rights: [{ company: "", ratio: "", rights_price: "", market_price: "", discount: "", announcement: "", record: "", ex_date: "" }],
     bonus: [{ company: "", ratio: "", announcement: "", record: "", ex_date: "" }],
     splits: [{ company: "", ratio: "", old_fv: "", new_fv: "", announcement: "", record: "", ex_date: "" }],
@@ -76,12 +73,6 @@ const AdminCorporateActions = () => {
     "Distribution", "Unit Split"
   ];
 
-  // Extracts YYYY-MM-DD from any date string to guarantee clean formatting without timestamps
-  const formatDateOnly = (dateValue) => {
-    if (!dateValue) return null;
-    return dateValue.split("T")[0];
-  };
-
   const fetchRecords = async () => {
     setFetchLoading(true);
     try {
@@ -89,7 +80,6 @@ const AdminCorporateActions = () => {
         .from("corporate_actions")
         .select("*")
         .order("created_at", { ascending: false });
-
       if (error) throw error;
       setExistingRecords(records || []);
     } catch (err) {
@@ -106,24 +96,12 @@ const AdminCorporateActions = () => {
   const addNewRow = () => {
     let newRow = { company: "" };
     switch (activeTab) {
-      case "buyback":
-        newRow = { company: "", buyback_price: "", cmp: "", premium: "", record: "", size: "" };
-        break;
-      case "dividends":
-        newRow = { company: "", type: "Final Dividend", percentage: "", announcement: "", record: "", ex_date: "", payment_date: "" };
-        break;
-      case "rights":
-        newRow = { company: "", ratio: "", rights_price: "", market_price: "", discount: "", announcement: "", record: "", ex_date: "" };
-        break;
-      case "bonus":
-        newRow = { company: "", ratio: "", announcement: "", record: "", ex_date: "" };
-        break;
-      case "splits":
-        newRow = { company: "", ratio: "", old_fv: "", new_fv: "", announcement: "", record: "", ex_date: "" };
-        break;
-      case "other":
-        newRow = { company: "", action_type: "", key_detail: "", announcement: "", record: "", ex_date: "", status: "Completed" };
-        break;
+      case "buyback": newRow = { company: "", buyback_price: "", cmp: "", premium: "", record: "", size: "" }; break;
+      case "dividends": newRow = { company: "", type: "Final Dividend", percentage: "", dividend_share: "", announcement: "", record: "", ex_date: "", payment_date: "" }; break;
+      case "rights": newRow = { company: "", ratio: "", rights_price: "", market_price: "", discount: "", announcement: "", record: "", ex_date: "" }; break;
+      case "bonus": newRow = { company: "", ratio: "", announcement: "", record: "", ex_date: "" }; break;
+      case "splits": newRow = { company: "", ratio: "", old_fv: "", new_fv: "", announcement: "", record: "", ex_date: "" }; break;
+      case "other": newRow = { company: "", action_type: "", key_detail: "", announcement: "", record: "", ex_date: "", status: "Completed" }; break;
     }
     setCurrentData([...currentData, newRow]);
   };
@@ -151,6 +129,7 @@ const AdminCorporateActions = () => {
         company: item.company.trim(),
         type: item.type || null,
         ratio_or_percentage: item.ratio || item.percentage || null,
+        dividend_share: item.dividend_share || null,
         rights_price: item.rights_price ? parseFloat(item.rights_price) : null,
         market_price: item.market_price ? parseFloat(item.market_price) : null,
         discount: item.discount || null,
@@ -160,24 +139,11 @@ const AdminCorporateActions = () => {
         size: item.size || null,
         key_detail: item.key_detail || null,
         action_type_detail: item.action_type || null,
-       announcement: item.announcement
-  ? formatDate(parseDate(item.announcement))
-  : null,
 
-record: item.record
-  ? formatDate(parseDate(item.record))
-  : null,
-
-ex_date: item.ex_date
-  ? formatDate(parseDate(item.ex_date))
-  : null,
-
-payment_date: item.payment_date
-  ? formatDate(parseDate(item.payment_date))
-  : null,
-        status: item.status || null,
-        old_fv: item.old_fv ? parseInt(item.old_fv) : null,
-        new_fv: item.new_fv ? parseInt(item.new_fv) : null,
+        announcement: item.announcement && item.announcement.trim() ? formatDate(parseDate(item.announcement)) : null,
+        record: item.record && item.record.trim() ? formatDate(parseDate(item.record)) : null,
+        ex_date: item.ex_date && item.ex_date.trim() ? formatDate(parseDate(item.ex_date)) : null,
+payment_date: item.payment_date?.trim() || null,
       }));
 
       const { error } = await supabase.from("corporate_actions").insert(formattedData);
@@ -187,8 +153,8 @@ payment_date: item.payment_date
       fetchRecords();
 
       let blankRow = { company: "" };
+      if (activeTab === "dividends") blankRow = { company: "", type: "Final Dividend", percentage: "", dividend_share: "", announcement: "", record: "", ex_date: "", payment_date: "" };
       if (activeTab === "buyback") blankRow = { company: "", buyback_price: "", cmp: "", premium: "", record: "", size: "" };
-      if (activeTab === "dividends") blankRow = { company: "", type: "Final Dividend", percentage: "", announcement: "", record: "", ex_date: "", payment_date: "" };
       if (activeTab === "rights") blankRow = { company: "", ratio: "", rights_price: "", market_price: "", discount: "", announcement: "", record: "", ex_date: "" };
       if (activeTab === "bonus") blankRow = { company: "", ratio: "", announcement: "", record: "", ex_date: "" };
       if (activeTab === "splits") blankRow = { company: "", ratio: "", old_fv: "", new_fv: "", announcement: "", record: "", ex_date: "" };
@@ -216,12 +182,13 @@ payment_date: item.payment_date
       ratio: record.ratio_or_percentage,
       percentage: record.ratio_or_percentage,
       action_type: record.action_type_detail,
+      dividend_share: record.dividend_share || "",
       old_fv: record.old_fv || "",
       new_fv: record.new_fv || "",
       announcement: formatDateOnly(record.announcement) || "",
       record: formatDateOnly(record.record) || "",
       ex_date: formatDateOnly(record.ex_date) || "",
-      payment_date: formatDateOnly(record.payment_date) || "",
+payment_date: record.payment_date || "",
     });
   };
 
@@ -233,6 +200,7 @@ payment_date: item.payment_date
         company: editModal.company,
         type: editModal.type || null,
         ratio_or_percentage: activeTab === "dividends" ? editModal.percentage : editModal.ratio || null,
+        dividend_share: editModal.dividend_share || null,
         rights_price: editModal.rights_price ? parseFloat(editModal.rights_price) : null,
         market_price: editModal.market_price ? parseFloat(editModal.market_price) : null,
         discount: editModal.discount || null,
@@ -242,10 +210,11 @@ payment_date: item.payment_date
         size: editModal.size || null,
         key_detail: editModal.key_detail || null,
         action_type_detail: editModal.action_type || null,
-        announcement: formatDate(parseDate(editModal.announcement)),
-        record: formatDate(parseDate(editModal.record)),
-        ex_date: formatDate(parseDate(editModal.ex_date)),
-        payment_date: formatDate(parseDate(editModal.payment_date)),
+
+        announcement: editModal.announcement && editModal.announcement.trim() ? formatDate(parseDate(editModal.announcement)) : null,
+        record: editModal.record && editModal.record.trim() ? formatDate(parseDate(editModal.record)) : null,
+        ex_date: editModal.ex_date && editModal.ex_date.trim() ? formatDate(parseDate(editModal.ex_date)) : null,
+payment_date: editModal.payment_date?.trim() || null,
         status: editModal.status || null,
         old_fv: editModal.old_fv ? parseInt(editModal.old_fv) : null,
         new_fv: editModal.new_fv ? parseInt(editModal.new_fv) : null,
@@ -267,7 +236,6 @@ payment_date: item.payment_date
   const filteredRecords = existingRecords.filter(
     (record) => record.action_type === currentTabConfig?.dbType
   );
-
   return (
     <div className="min-h-screen bg-gray-50 flex">
       <AdminSidebar />
@@ -285,11 +253,10 @@ payment_date: item.payment_date
         <div className="max-w-[1600px] mx-auto px-8 py-10 space-y-8">
           {success && (
             <div className="p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl flex items-center gap-3 font-medium text-sm animate-fadeIn">
-              <CheckCircle className="text-emerald-600" size={18} />  Database updated successfully!
+              <CheckCircle className="text-emerald-600" size={18} /> Database updated successfully!
             </div>
           )}
 
-          {/* Nav Tab Options */}
           <div className="flex border-b border-gray-200 overflow-x-auto bg-white rounded-xl shadow-xs p-1">
             {tabs.map((tab) => (
               <button
@@ -307,13 +274,12 @@ payment_date: item.payment_date
             ))}
           </div>
 
-          {/* Form Processing Area */}
           <div className="bg-white border border-gray-200 rounded-2xl shadow-xs p-6">
-            <h2 className="text-lg text-gray-900 mb-4 uppercase tracking-wider"> New {currentTabConfig?.label}</h2>
+            <h2 className="text-lg text-gray-900 mb-4 uppercase tracking-wider">New {currentTabConfig?.label}</h2>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="overflow-x-auto border border-gray-100 rounded-xl">
-                <table className="w-full border-collapse min-w-[1250px]">
+                <table className="w-full border-collapse min-w-[1400px]">
                   <thead>
                     <tr className="bg-gray-50/70 text-[11px] uppercase tracking-widest text-gray-500 border-b border-gray-200">
                       <th className="px-4 py-3 text-left w-72">Company</th>
@@ -321,6 +287,7 @@ payment_date: item.payment_date
                         <>
                           <th className="px-4 py-3 text-left w-48">Dividend Type</th>
                           <th className="px-4 py-3 text-left w-36">Yield %</th>
+                          <th className="px-4 py-3 text-left w-40">Dividend/Share</th>
                         </>
                       )}
                       {activeTab === "rights" && (
@@ -357,7 +324,7 @@ payment_date: item.payment_date
                       <th className="px-4 py-3 text-left w-40">Announcement</th>
                       <th className="px-4 py-3 text-left w-40">Record Date</th>
                       <th className="px-4 py-3 text-left w-40">Ex Date</th>
-                      {activeTab === "dividends" && <th className="px-4 py-3 text-left w-40">Payment Date</th>}
+                      {activeTab === "dividends" && <th className="px-4 py-3 text-left w-44">Payment Date</th>}
                       <th className="w-12"></th>
                     </tr>
                   </thead>
@@ -395,6 +362,15 @@ payment_date: item.payment_date
                                 onChange={(e) => handleInputChange(index, "percentage", e.target.value)}
                                 className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500"
                                 placeholder="1.40%"
+                              />
+                            </td>
+                            <td className="px-3 py-3">
+                              <input
+                                type="text"
+                                value={row.dividend_share || ""}
+                                onChange={(e) => handleInputChange(index, "dividend_share", e.target.value)}
+                                className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                                placeholder="₹15.50"
                               />
                             </td>
                           </>
@@ -473,54 +449,52 @@ payment_date: item.payment_date
                           </>
                         )}
 
-                        {/* Announcement Date */}
                         <td className="px-3 py-3">
                           <DatePicker
                             selected={parseDate(row.announcement)}
                             onChange={(date) => handleInputChange(index, "announcement", formatDate(date))}
                             onChangeRaw={(e) => handleInputChange(index, "announcement", e.target.value)}
-                            dateFormat="yyyy-MM-dd"
-                            placeholderText="YYYY-MM-DD"
+                            dateFormat="dd-MM-yyyy"
+                            placeholderText="DD-MM-YYYY"
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
                           />
                         </td>
 
-                        {/* Record Date */}
                         <td className="px-3 py-3">
                           <DatePicker
                             selected={parseDate(row.record)}
                             onChange={(date) => handleInputChange(index, "record", formatDate(date))}
                             onChangeRaw={(e) => handleInputChange(index, "record", e.target.value)}
-                            dateFormat="yyyy-MM-dd"
-                            placeholderText="YYYY-MM-DD"
+                            dateFormat="dd-MM-yyyy"
+                            placeholderText="DD-MM-YYYY"
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
                           />
                         </td>
 
-                        {/* Ex Date */}
                         <td className="px-3 py-3">
                           <DatePicker
                             selected={parseDate(row.ex_date)}
                             onChange={(date) => handleInputChange(index, "ex_date", formatDate(date))}
                             onChangeRaw={(e) => handleInputChange(index, "ex_date", e.target.value)}
-                            dateFormat="yyyy-MM-dd"
-                            placeholderText="YYYY-MM-DD"
+                            dateFormat="dd-MM-yyyy"
+                            placeholderText="DD-MM-YYYY"
                             className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
                           />
                         </td>
 
-                        {activeTab === "dividends" && (
-                          <td className="px-3 py-3">
-                            <DatePicker
-                              selected={parseDate(row.payment_date)}
-                              onChange={(date) => handleInputChange(index, "payment_date", formatDate(date))}
-                              onChangeRaw={(e) => handleInputChange(index, "payment_date", e.target.value)}
-                              dateFormat="yyyy-MM-dd"
-                              placeholderText="YYYY-MM-DD"
-                              className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
-                            />
-                          </td>
-                        )}
+                       {activeTab === "dividends" && (
+  <td className="px-3 py-3">
+   <input
+  type="text"
+  value={row.payment_date || ""}
+  onChange={(e) =>
+    handleInputChange(index, "payment_date", e.target.value)
+  }
+  placeholder="e.g. Post 15 Aug 2026 or 2026-08-15"
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+/>
+  </td>
+)}
 
                         <td className="px-3 py-3 text-center">
                           <button
@@ -559,7 +533,6 @@ payment_date: item.payment_date
             </form>
           </div>
 
-          {/* Records Readout list view */}
           <div className="bg-white border border-gray-200 rounded-2xl shadow-xs p-6">
             <div className="flex justify-between items-center mb-6">
               <div>
@@ -584,12 +557,11 @@ payment_date: item.payment_date
                   <thead>
                     <tr className="bg-gray-50 text-gray-500 font-medium border-b border-gray-200">
                       <th className="px-4 py-3 text-left w-72">Company</th>
-
-                      {/* Same columns as input form */}
                       {activeTab === "dividends" && (
                         <>
                           <th className="px-4 py-3 text-left w-48">Dividend Type</th>
                           <th className="px-4 py-3 text-left w-36">Yield %</th>
+                          <th className="px-4 py-3 text-left w-40">Dividend/Share</th>
                         </>
                       )}
                       {activeTab === "rights" && (
@@ -623,12 +595,10 @@ payment_date: item.payment_date
                           <th className="px-4 py-3 text-left w-40">Status</th>
                         </>
                       )}
-
                       <th className="px-4 py-3 text-left w-40">Announcement</th>
                       <th className="px-4 py-3 text-left w-40">Record Date</th>
                       <th className="px-4 py-3 text-left w-40">Ex Date</th>
-                      {activeTab === "dividends" && <th className="px-4 py-3 text-left w-40">Payment Date</th>}
-                      
+                      {activeTab === "dividends" && <th className="px-4 py-3 text-left w-44">Payment Date</th>}
                       <th className="w-20 text-center">Actions</th>
                     </tr>
                   </thead>
@@ -637,15 +607,16 @@ payment_date: item.payment_date
                       <tr key={record.id} className="hover:bg-gray-50/50">
                         <td className="px-4 py-3.5 font-semibold text-gray-900">{record.company}</td>
 
-                        {/* Dividends */}
                         {activeTab === "dividends" && (
                           <>
                             <td className="px-4 py-3.5">{record.type || "-"}</td>
                             <td className="px-4 py-3.5">{record.ratio_or_percentage || "-"}</td>
+                            <td className="px-4 py-3.5 font-medium text-emerald-700">
+                              {record.dividend_share ? `₹${record.dividend_share}` : "-"}
+                            </td>
                           </>
                         )}
 
-                        {/* Rights */}
                         {activeTab === "rights" && (
                           <>
                             <td className="px-4 py-3.5">{record.ratio_or_percentage || "-"}</td>
@@ -655,12 +626,10 @@ payment_date: item.payment_date
                           </>
                         )}
 
-                        {/* Bonus */}
                         {activeTab === "bonus" && (
                           <td className="px-4 py-3.5">{record.ratio_or_percentage || "-"}</td>
                         )}
 
-                        {/* Splits */}
                         {activeTab === "splits" && (
                           <>
                             <td className="px-4 py-3.5">{record.ratio_or_percentage || "-"}</td>
@@ -669,7 +638,6 @@ payment_date: item.payment_date
                           </>
                         )}
 
-                        {/* Buyback */}
                         {activeTab === "buyback" && (
                           <>
                             <td className="px-4 py-3.5">₹{record.buyback_price || "-"}</td>
@@ -679,7 +647,6 @@ payment_date: item.payment_date
                           </>
                         )}
 
-                        {/* Other */}
                         {activeTab === "other" && (
                           <>
                             <td className="px-4 py-3.5">{record.action_type_detail || "-"}</td>
@@ -730,7 +697,6 @@ payment_date: item.payment_date
         </div>
       </main>
 
-      {/* Dynamic contextual Edit Overlay Modal */}
       {editModal && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 backdrop-blur-xs">
           <div className="bg-white rounded-2xl w-full max-w-xl max-h-[85vh] flex flex-col shadow-xl animate-scaleUp">
@@ -753,7 +719,7 @@ payment_date: item.payment_date
               </div>
 
               {activeTab === "dividends" && (
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-3 gap-4">
                   <div>
                     <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Dividend Type</label>
                     <select
@@ -773,6 +739,16 @@ payment_date: item.payment_date
                       value={editModal.percentage || ""}
                       onChange={(e) => updateEditModal("percentage", e.target.value)}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Dividend/Share</label>
+                    <input
+                      type="text"
+                      value={editModal.dividend_share || ""}
+                      onChange={(e) => updateEditModal("dividend_share", e.target.value)}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                      placeholder="₹15.50"
                     />
                   </div>
                 </div>
@@ -877,8 +853,8 @@ payment_date: item.payment_date
                     selected={parseDate(editModal.announcement)}
                     onChange={(date) => updateEditModal("announcement", formatDate(date))}
                     onChangeRaw={(e) => updateEditModal("announcement", e.target.value)}
-                    dateFormat="yyyy-MM-dd"
-                    placeholderText="YYYY-MM-DD"
+                    dateFormat="dd-MM-yyyy"
+                    placeholderText="DD-MM-YYYY"
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900"
                   />
                 </div>
@@ -888,8 +864,8 @@ payment_date: item.payment_date
                     selected={parseDate(editModal.record)}
                     onChange={(date) => updateEditModal("record", formatDate(date))}
                     onChangeRaw={(e) => updateEditModal("record", e.target.value)}
-                    dateFormat="yyyy-MM-dd"
-                    placeholderText="YYYY-MM-DD"
+                    dateFormat="dd-MM-yyyy"
+                    placeholderText="DD-MM-YYYY"
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900"
                   />
                 </div>
@@ -899,22 +875,21 @@ payment_date: item.payment_date
                     selected={parseDate(editModal.ex_date)}
                     onChange={(date) => updateEditModal("ex_date", formatDate(date))}
                     onChangeRaw={(e) => updateEditModal("ex_date", e.target.value)}
-                    dateFormat="yyyy-MM-dd"
-                    placeholderText="YYYY-MM-DD"
+                    dateFormat="dd-MM-yyyy"
+                    placeholderText="DD-MM-YYYY"
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900"
                   />
                 </div>
                 {activeTab === "dividends" && (
                   <div>
                     <label className="block text-[11px] font-medium text-gray-400 uppercase tracking-wider mb-1">Payment Date</label>
-                    <DatePicker
-                      selected={parseDate(editModal.payment_date)}
-                      onChange={(date) => updateEditModal("payment_date", formatDate(date))}
-                      onChangeRaw={(e) => updateEditModal("payment_date", e.target.value)}
-                      dateFormat="yyyy-MM-dd"
-                      placeholderText="YYYY-MM-DD"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900"
-                    />
+                   <input
+  type="text"
+  value={editModal.payment_date || ""}
+  onChange={(e) => updateEditModal("payment_date", e.target.value)}
+  placeholder="DD-MM-YYYY or Post 15 Aug 2026"
+  className="w-full px-3 py-2 border border-gray-300 rounded-lg text-slate-900 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+/>
                   </div>
                 )}
               </div>
