@@ -26341,6 +26341,225 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE & NSE on 24 July 2026."
     }
   ]
+},
+{
+  "id": 130,
+  "name": "Metalic Technoforge Limited",
+  "logo": "/images/ipo/metalictechnoforge.png",
+  "minInvestment": "₹2,46,400",
+  "open": "21 Jul 2026",
+  "close": "23 Jul 2026",
+  "listing": "28 Jul 2026",
+  "price": "72-77",
+  "lot": 1600,
+
+  "about_company": {
+    "company_name": "Metalic Technoforge Limited",
+    "industry_sector": "Forging & Precision Machining (Closed-Die Forged Components)",
+    "founded_year": "2016",
+    "promoters": [
+      "Gajipara Keyur Dhirajlal",
+      "Trambadiya Dhaval Vrajlal",
+      "Vadodariya Satish Rameshbhai",
+      "Kapadiya Vipul K",
+      "Rupapara Jay Rameshbhai",
+      "Gajipara Ronakkumar Mansukhbhai",
+      "Ekta Satish Vadodariya"
+    ],
+    "description": "Metalic Technoforge manufactures closed-die forged and precision-machined components such as rings, ball studs, gear blanks, gears, and coupling assemblies for automotive (cars, tractors, commercial vehicles) and non-automotive sectors (agricultural equipment, hydraulic, construction machinery, general engineering). The company serves domestic and global OEMs from its Rajkot facility."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Metalic Technoforge Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹72",
+    "price_band_max": "₹77",
+    "lot_size": "1600 Shares",
+    "total_issue_size": "64,88,000 Equity Shares (₹50 Cr)",
+    "fresh_issue_size": "64,88,000 Equity Shares (₹50 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "64,88,000 Equity Shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹72 to ₹77",
+    "minimum_investment": "₹2,46,400 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹184.68 Cr)",
+    "pre_issue_shareholding": "1,74,96,400 shares",
+    "post_issue_shareholding": "2,39,84,400 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated closed-die forging and precision machining for OEMs with focus on quality and export markets.",
+    "products_services": [
+      "Big & Small Rings",
+      "Ball Studs",
+      "Gear Blanks with Broaching",
+      "Gears & Coupling Assemblies",
+      "Other Critical Forged & Machined Components"
+    ],
+    "competitive_strengths": [
+      "Integrated manufacturing capabilities",
+      "Focus on safety-critical and high-precision components",
+      "Domestic and international OEM customer base",
+      "Order book visibility",
+      "Experienced promoters"
+    ],
+    "risks": [
+      "Highly competitive and fragmented forging sector",
+      "Raw material price volatility",
+      "Execution risks on expansion",
+      "SME liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "21 Jul 2026",
+    "ipo_close_date": "23 Jul 2026",
+    "basis_of_allotment_date": "24 Jul 2026",
+    "refund_initiation_date": "24 Jul 2026",
+    "demat_credit_date": "27 Jul 2026",
+    "listing_date": "28 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "manufacturing_unit_iv_and_upgradation": "₹30.81 Cr",
+    "repayment_of_borrowings": "₹6.72 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.87% of Net Issue",
+    "hni_nii_quota": "15.06% of Net Issue",
+    "retail_quota": "35.06% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "3200",
+      "amount": "₹2,46,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "4800",
+      "amount": "₹3,69,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 Lots",
+      "shares": "14400",
+      "amount": "₹11,08,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "48.66% (Mar 2026)",
+    "roce": "30.38% (Mar 2026)",
+    "pat_margin": "12.94% (Mar 2026)",
+    "ebitda_margin": "22.97% (Mar 2026)",
+    "eps": "7.07 (Pre-IPO)",
+    "nav": "Not specified",
+    "debt_to_equity": "0.95 (Mar 2026)"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹92.09 Cr",
+      "total_income": "₹97.98 Cr",
+      "pat": "₹12.36 Cr",
+      "ebitda": "₹21.95 Cr",
+      "net_worth": "₹33.42 Cr",
+      "total_borrowing": "₹31.78 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹65.10 Cr",
+      "total_income": "₹75.64 Cr",
+      "pat": "₹9.03 Cr",
+      "ebitda": "₹16.08 Cr",
+      "net_worth": "₹17.40 Cr",
+      "total_borrowing": "₹27.97 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹33.67 Cr",
+      "total_income": "₹51.50 Cr",
+      "pat": "₹4.26 Cr",
+      "ebitda": "₹7.29 Cr",
+      "net_worth": "₹7.72 Cr",
+      "total_borrowing": "₹10.81 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Bigshare Services Pvt. Ltd.",
+    "registrar_website": "https://ipo.bigshareonline.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Smart Horizon Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Sr. No. 129/1 P4 (New Survey No. 296), Plot No. 5 & 6, Padavala Main Road, Opp. Electric Power House, Kot Village, Padavala, Veraval (Shapar), Kotda Sanghani, Rajkot, Gujarat - 360024",
+    "company_website": "https://www.metalictechnoforge.com/",
+    "company_email": "investors@metalictechnoforge.com",
+    "company_phone": "+91-9033332532"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/rhp_mtf.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Metalic Technoforge Limited do?",
+      "answer": "The company manufactures closed-die forged and precision-machined components for automotive and non-automotive sectors."
+    },
+    {
+      "question": "When does the Metalic Technoforge IPO open and close?",
+      "answer": "The IPO opens on 21 July 2026 and closes on 23 July 2026."
+    },
+    {
+      "question": "What is the issue price of Metalic Technoforge IPO?",
+      "answer": "The IPO price band is ₹72 to ₹77 per share."
+    },
+    {
+      "question": "What is the lot size of Metalic Technoforge IPO?",
+      "answer": "The lot size is 1,600 shares. Retail minimum is 2 lots (3,200 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,46,400 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Metalic Technoforge IPO?",
+      "answer": "The IPO size is ₹50 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Metalic Technoforge shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 28 July 2026."
+    }
+  ]
 }
 
 
