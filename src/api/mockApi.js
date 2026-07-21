@@ -26560,6 +26560,218 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on NSE SME on 28 July 2026."
     }
   ]
+},
+{
+  "id": 131,
+  "name": "Shree Balaji (Mala) Textiles Limited",
+  "logo": "/images/ipo/shreebalajimala.png",
+  "minInvestment": "₹2,80,000",
+  "open": "22 Jul 2026",
+  "close": "24 Jul 2026",
+  "listing": "29 Jul 2026",
+  "price": "66-70",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Shree Balaji (Mala) Textiles Limited",
+    "industry_sector": "Textiles (Cotton Sarees Manufacturing & Trading)",
+    "founded_year": "2005",
+    "promoters": [
+      "Binod Kumar Kedia",
+      "Anita Kedia",
+      "Mrityunjay Commosales Pvt. Ltd."
+    ],
+    "description": "Shree Balaji (Mala) Textiles Limited is engaged in manufacturing and wholesale distribution of high-quality cotton sarees under the brand “Mala Saree”. It operates on a B2B model with a wide distribution network across India and focuses on diverse designs for everyday and occasional wear."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Shree Balaji (Mala) Textiles Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹66",
+    "price_band_max": "₹70",
+    "lot_size": "2000 Shares",
+    "total_issue_size": "27,00,000 Equity Shares (₹18.90 Cr)",
+    "fresh_issue_size": "27,00,000 Equity Shares (₹18.90 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "27,00,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹66 to ₹70",
+    "minimum_investment": "₹2,80,000 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹69.33 Cr)",
+    "pre_issue_shareholding": "72,05,000 shares",
+    "post_issue_shareholding": "99,05,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing and B2B wholesale of cotton sarees with outsourcing of production and strong distribution network.",
+    "products_services": [
+      "Cotton Sarees",
+      "Embroidery Sarees",
+      "Fancy Sarees"
+    ],
+    "competitive_strengths": [
+      "Diversified supplier and customer base",
+      "Vast and versatile product portfolio",
+      "Bulk purchasing capabilities",
+      "Experienced promoters and management",
+      "Long-standing relationships with job workers"
+    ],
+    "risks": [
+      "Highly competitive and fragmented textile sector",
+      "Dependence on job work outsourcing",
+      "Raw material price volatility",
+      "SME liquidity risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "22 Jul 2026",
+    "ipo_close_date": "24 Jul 2026",
+    "basis_of_allotment_date": "27 Jul 2026",
+    "refund_initiation_date": "28 Jul 2026",
+    "demat_credit_date": "28 Jul 2026",
+    "listing_date": "29 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹16.50 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.69% of Net Issue",
+    "hni_nii_quota": "15.21% of Net Issue",
+    "retail_quota": "35.10% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "4000",
+      "amount": "₹2,80,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "6000",
+      "amount": "₹4,20,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "16000",
+      "amount": "₹11,20,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "Not specified",
+    "roce": "Not specified",
+    "pat_margin": "Not specified",
+    "ebitda_margin": "Not specified",
+    "eps": "8.13 (Pre-IPO)",
+    "nav": "Not specified",
+    "debt_to_equity": "Not specified"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹148.64 Cr",
+      "total_income": "₹212.40 Cr",
+      "pat": "₹5.85 Cr",
+      "ebitda": "₹15.50 Cr",
+      "net_worth": "₹27.51 Cr",
+      "total_borrowing": "₹69.08 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹138.88 Cr",
+      "total_income": "₹193.44 Cr",
+      "pat": "₹4.95 Cr",
+      "ebitda": "₹13.20 Cr",
+      "net_worth": "₹21.65 Cr",
+      "total_borrowing": "₹48.75 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹127.51 Cr",
+      "total_income": "₹195.89 Cr",
+      "pat": "₹2.46 Cr",
+      "ebitda": "₹10.23 Cr",
+      "net_worth": "₹16.70 Cr",
+      "total_borrowing": "₹51.37 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "GYR Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "65, Sir Hariram Goenka Street Ground Floor, Block-A, Bangur Arcade Kolkata, West Bengal, 700007",
+    "company_website": "https://www.malasaree.com/",
+    "company_email": "cs@malasaree.com",
+    "company_phone": "+91 8910014345"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.malasaree.com/Image/Mala_Saree_RHP.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Shree Balaji (Mala) Textiles Limited do?",
+      "answer": "The company manufactures and distributes cotton sarees under the 'Mala Saree' brand in the B2B segment."
+    },
+    {
+      "question": "When does the Shree Balaji (Mala) Textiles IPO open and close?",
+      "answer": "The IPO opens on 22 July 2026 and closes on 24 July 2026."
+    },
+    {
+      "question": "What is the issue price of Shree Balaji (Mala) Textiles IPO?",
+      "answer": "The IPO price band is ₹66 to ₹70 per share."
+    },
+    {
+      "question": "What is the lot size of Shree Balaji (Mala) Textiles IPO?",
+      "answer": "The lot size is 2,000 shares. Retail minimum is 2 lots (4,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,80,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Shree Balaji (Mala) Textiles IPO?",
+      "answer": "The IPO size is ₹18.90 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Shree Balaji (Mala) Textiles shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 29 July 2026."
+    }
+  ]
 }
 
 
