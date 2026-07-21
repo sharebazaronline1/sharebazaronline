@@ -26637,7 +26637,8 @@ export const fetchIPOs = async () => {
 
   "ipo_objectives": {
     "working_capital_requirements": "₹16.50 Cr",
-    "general_corporate_purposes": "Balance Amount"
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹16.50 Cr (Net Proceeds)"
   },
 
   "investor_reservation": {
@@ -26667,11 +26668,17 @@ export const fetchIPOs = async () => {
   "key_performance_indicators": {
     "roe": "Not specified",
     "roce": "Not specified",
+    "ronw": "Not specified",
     "pat_margin": "Not specified",
     "ebitda_margin": "Not specified",
-    "eps": "8.13 (Pre-IPO)",
+    "eps_pre_ipo": "₹8.13",
+    "eps_post_ipo": "₹5.91",
+    "pe_pre_ipo": "8.62x",
+    "pe_post_ipo": "11.84x",
     "nav": "Not specified",
-    "debt_to_equity": "Not specified"
+    "debt_to_equity": "Not specified",
+    "promoter_holding_pre": "100%",
+    "market_cap_pre": "₹69.33 Cr"
   },
 
   "company_financial_data": [
@@ -26729,7 +26736,7 @@ export const fetchIPOs = async () => {
   },
 
   "company_information": {
-    "company_address": "65, Sir Hariram Goenka Street Ground Floor, Block-A, Bangur Arcade Kolkata, West Bengal, 700007",
+    "company_address": "65, Sir Hariram Goenka Street, Ground Floor, Block-A, Bangur Arcade, Kolkata, West Bengal - 700007",
     "company_website": "https://www.malasaree.com/",
     "company_email": "cs@malasaree.com",
     "company_phone": "+91 8910014345"
