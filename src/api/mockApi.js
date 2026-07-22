@@ -26779,6 +26779,664 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 29 July 2026."
     }
   ]
+},
+{
+  "id": 132,
+  "name": "Indo-MIM Limited",
+  "logo": "/images/ipo/indomim.png",
+  "minInvestment": "₹14,550",
+  "open": "23 Jul 2026",
+  "close": "27 Jul 2026",
+  "listing": "30 Jul 2026",
+  "price": "461-485",
+  "lot": 30,
+
+  "about_company": {
+    "company_name": "Indo-MIM Limited",
+    "industry_sector": "Precision Engineering Components (Metal Injection Molding - MIM)",
+    "founded_year": "1996",
+    "promoters": [
+      "Green Meadows Investments Ltd.",
+      "Krishna Chivukula",
+      "Krishna Chivukula Jr",
+      "Raj Chivukula",
+      "Jagadamba Chandrasekhar"
+    ],
+    "description": "Indo-MIM is a global leader in manufacturing precision engineering components using metal injection molding (MIM) technology. It provides end-to-end solutions including design, tooling, finishing, and assembly, serving industries such as automotive, defence, medical, consumer, and aerospace. The company operates 15 manufacturing facilities across India, US, UK, and Mexico."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Indo-MIM Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹1 per share",
+    "price_band_min": "₹461",
+    "price_band_max": "₹485",
+    "lot_size": "30 Shares",
+    "total_issue_size": "7,86,00,300 Equity Shares (₹3,811.21 Cr)",
+    "fresh_issue_size": "1,03,09,278 Equity Shares (₹499.10 Cr)",
+    "offer_for_sale": "6,82,91,022 Equity Shares (₹3,311.21 Cr)",
+    "shares_offered": "7,86,00,300 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹461 to ₹485",
+    "minimum_investment": "₹14,550 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹23,981.42 Cr)",
+    "pre_issue_shareholding": "48,41,53,072 shares",
+    "post_issue_shareholding": "49,44,62,350 shares"
+  },
+
+  "company_overview": {
+    "business_model": "End-to-end precision component manufacturing using MIM and related technologies for global OEMs.",
+    "products_services": [
+      "MIM Components",
+      "Investment Casting",
+      "Precision Machining",
+      "Ceramic Injection Molding",
+      "3D Metal Printing"
+    ],
+    "competitive_strengths": [
+      "Global leadership in MIM technology",
+      "Long-standing relationships with OEMs",
+      "Diversified product portfolio across industries",
+      "Backward integrated dual-shore manufacturing",
+      "Strong export capabilities",
+      "Experienced promoters and management",
+      "Robust financial performance"
+    ],
+    "risks": [
+      "High valuation and competition",
+      "Execution risks on large scale",
+      "Dependency on key industries (auto, defence, medical)",
+      "Currency and geopolitical risks in global operations"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Jul 2026",
+    "ipo_close_date": "27 Jul 2026",
+    "basis_of_allotment_date": "28 Jul 2026",
+    "refund_initiation_date": "29 Jul 2026",
+    "demat_credit_date": "29 Jul 2026",
+    "listing_date": "30 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_borrowings": "₹400 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹400 Cr (Net Proceeds from Fresh Issue)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Net Offer",
+    "hni_nii_quota": "Not less than 15% of the Net Offer",
+    "retail_quota": "Not less than 35% of the Net Offer"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "30",
+      "amount": "₹14,550"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "420",
+      "amount": "₹2,03,700"
+    },
+    "bhni_minimum": {
+      "lot_size": "69 Lots",
+      "shares": "2,070",
+      "amount": "₹10,03,950"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "21.26% (Mar 2026)",
+    "roce": "26.60% (Mar 2026)",
+    "ronw": "21.26% (Mar 2026)",
+    "pat_margin": "12.72% (Mar 2026)",
+    "ebitda_margin": "25.54% (Mar 2026)",
+    "eps_pre_ipo": "₹11.02",
+    "eps_post_ipo": "₹10.79",
+    "pe_pre_ipo": "44.01x",
+    "pe_post_ipo": "44.95x",
+    "debt_to_equity": "0.39 (Mar 2026)",
+    "promoter_holding_pre": "92.94%",
+    "promoter_holding_post": "77.65%",
+    "market_cap_pre": "₹23,981.42 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹4,897.33 Cr",
+      "total_income": "₹4,320.70 Cr",
+      "pat": "₹533.54 Cr",
+      "ebitda": "₹1,070.92 Cr",
+      "net_worth": "₹2,819.55 Cr",
+      "total_borrowing": "₹1,090.49 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹4,140.84 Cr",
+      "total_income": "₹3,373.97 Cr",
+      "pat": "₹423.73 Cr",
+      "ebitda": "₹932.60 Cr",
+      "net_worth": "₹2,199.43 Cr",
+      "total_borrowing": "₹1,247.20 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹3,757.51 Cr",
+      "total_income": "₹2,900.38 Cr",
+      "pat": "₹283.73 Cr",
+      "ebitda": "₹743.46 Cr",
+      "net_worth": "₹2,050.51 Cr",
+      "total_borrowing": "₹1,085.01 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "HDFC Bank Ltd."
+  },
+
+  "company_information": {
+    "company_address": "45(P), KIADB Industrial Area, Hoskote, Bengaluru, Karnataka",
+    "company_website": "https://www.indo-mim.com/",
+    "company_email": "santosh.d@indo-mim.com",
+    "company_phone": "+91 81 2347 9565"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on SEBI",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/jul-2026/indo-mim-limited-rhp_102938.html",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Indo-MIM Limited do?",
+      "answer": "The company is a global leader in precision engineering components using metal injection molding (MIM) technology."
+    },
+    {
+      "question": "When does the Indo-MIM IPO open and close?",
+      "answer": "The IPO opens on 23 July 2026 and closes on 27 July 2026."
+    },
+    {
+      "question": "What is the issue price of Indo-MIM IPO?",
+      "answer": "The IPO price band is ₹461 to ₹485 per share."
+    },
+    {
+      "question": "What is the lot size of Indo-MIM IPO?",
+      "answer": "The lot size is 30 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,550 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Indo-MIM IPO?",
+      "answer": "The IPO size is ₹3,811.21 crore (Fresh Issue ₹499 Cr + OFS ₹3,311 Cr)."
+    },
+    {
+      "question": "Where will Indo-MIM shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 30 July 2026."
+    }
+  ]
+},
+{
+  "id": 133,
+  "name": "Lohia Corp Limited",
+  "logo": "/images/ipo/lohiacorp.png",
+  "minInvestment": "₹14,875",
+  "open": "23 Jul 2026",
+  "close": "27 Jul 2026",
+  "listing": "30 Jul 2026",
+  "price": "404-425",
+  "lot": 35,
+
+  "about_company": {
+    "company_name": "Lohia Corp Limited",
+    "industry_sector": "Machinery for Technical Textiles (Raffia / Woven Fabric & Sacks)",
+    "founded_year": "2023 (consolidated operations)",
+    "promoters": [
+      "Raj Kumar Lohia",
+      "Gaurav Lohia",
+      "Amit Kumar Lohia"
+    ],
+    "description": "Lohia Corp is a global manufacturer of machinery and equipment for technical textiles, especially for producing polypropylene (PP) and high-density polyethylene (HDPE) woven fabric and sacks (raffia). It offers a comprehensive range including tape extrusion lines, circular looms, coating & lamination lines, printing machines, and recycling equipment."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Lohia Corp Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹1 per share",
+    "price_band_min": "₹404",
+    "price_band_max": "₹425",
+    "lot_size": "35 Shares",
+    "total_issue_size": "2,59,31,407 Equity Shares (₹1,101.28 Cr)",
+    "fresh_issue_size": "Nil",
+    "offer_for_sale": "2,59,31,407 Equity Shares (₹1,101.28 Cr)",
+    "shares_offered": "2,59,31,407 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹404 to ₹425",
+    "minimum_investment": "₹14,875 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹4,490.13 Cr)",
+    "pre_issue_shareholding": "10,56,50,000 shares",
+    "post_issue_shareholding": "10,56,50,000 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturer of end-to-end solutions for woven raffia and technical textiles machinery with global presence.",
+    "products_services": [
+      "Tape Extrusion Lines",
+      "Circular Looms",
+      "Coating & Lamination Lines",
+      "Printing & Conversion Machines",
+      "Multifilament Yarn Machines",
+      "Recycling Machines",
+      "Spare Parts"
+    ],
+    "competitive_strengths": [
+      "Market leader in India and strong global position in raffia machinery",
+      "Diverse end-to-end product portfolio",
+      "Strong global customer relationships",
+      "Advanced manufacturing with backward integration",
+      "Innovation-driven R&D with strong IP portfolio",
+      "Experienced management"
+    ],
+    "risks": [
+      "OFS-only issue (no fresh capital to company)",
+      "Cyclicality in textile machinery demand",
+      "Competition in global markets",
+      "Execution risks on international expansion"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Jul 2026",
+    "ipo_close_date": "27 Jul 2026",
+    "basis_of_allotment_date": "28 Jul 2026",
+    "refund_initiation_date": "29 Jul 2026",
+    "demat_credit_date": "29 Jul 2026",
+    "listing_date": "30 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "note": "Pure OFS – No proceeds to the company"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "At least 75% of the Net Offer",
+    "hni_nii_quota": "Not more than 15% of the Net Offer",
+    "retail_quota": "Not more than 10% of the Net Offer"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "35",
+      "amount": "₹14,875"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "490",
+      "amount": "₹2,08,250"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 Lots",
+      "shares": "2,380",
+      "amount": "₹10,11,500"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "36.80% (Mar 2026)",
+    "roce": "40.92% (Mar 2026)",
+    "ronw": "72.95% (Mar 2026)",
+    "pat_margin": "11.13% (Mar 2026)",
+    "ebitda_margin": "19.53% (Mar 2026)",
+    "eps_pre_ipo": "₹18.31",
+    "eps_post_ipo": "₹18.31",
+    "pe_pre_ipo": "23.21x",
+    "pe_post_ipo": "23.21x",
+    "debt_to_equity": "0.23 (Mar 2026)",
+    "promoter_holding_pre": "95.61%",
+    "promoter_holding_post": "75.24%",
+    "market_cap_pre": "₹4,490.13 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹1,304.66 Cr",
+      "total_income": "₹1,737.87 Cr",
+      "pat": "₹193.45 Cr",
+      "ebitda": "₹339.45 Cr",
+      "net_worth": "Not fully specified",
+      "total_borrowing": "₹152.78 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹967.60 Cr",
+      "total_income": "₹1,386.47 Cr",
+      "pat": "₹117.84 Cr",
+      "ebitda": "₹228.60 Cr",
+      "net_worth": "Not fully specified",
+      "total_borrowing": "₹212.16 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Equirus Capital Ltd."
+  },
+
+  "company_information": {
+    "company_address": "D-3/A, Panki Industrial Estate, Udyog Nagar, Kanpur Nagar, Ratan Lal Nagar, Kanpur, Uttar Pradesh",
+    "company_website": "https://www.lohiagroup.com/",
+    "company_email": "compliance@lohiagroup.com",
+    "company_phone": "+91 512-2593100"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available on SEBI",
+    "rhp_link": "https://www.sebi.gov.in/filings/public-issues/jul-2026/lohia-corp-limited-rhp_102936.html",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Lohia Corp Limited do?",
+      "answer": "The company manufactures machinery for technical textiles, especially raffia woven fabric and sacks."
+    },
+    {
+      "question": "When does the Lohia Corp IPO open and close?",
+      "answer": "The IPO opens on 23 July 2026 and closes on 27 July 2026."
+    },
+    {
+      "question": "What is the issue price of Lohia Corp IPO?",
+      "answer": "The IPO price band is ₹404 to ₹425 per share."
+    },
+    {
+      "question": "What is the lot size of Lohia Corp IPO?",
+      "answer": "The lot size is 35 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,875 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Lohia Corp IPO?",
+      "answer": "The IPO size is ₹1,101.28 crore (Pure OFS)."
+    },
+    {
+      "question": "Where will Lohia Corp shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 30 July 2026."
+    }
+  ]
+},
+{
+  "id": 134,
+  "name": "Xtranet Technologies Limited",
+  "logo": "/images/ipo/xtranet.png",
+  "minInvestment": "₹13,970",
+  "open": "23 Jul 2026",
+  "close": "27 Jul 2026",
+  "listing": "30 Jul 2026",
+  "price": "120-127",
+  "lot": 110,
+
+  "about_company": {
+    "company_name": "Xtranet Technologies Limited",
+    "industry_sector": "IT Solutions & Services (Enterprise Applications, Digital Transformation, Managed Services)",
+    "founded_year": "2002",
+    "promoters": [
+      "Sukhbir Singh Kukreja",
+      "Jogendrapal Singh Alagh",
+      "Shiney Sukhbir"
+    ],
+    "description": "Xtranet Technologies is an integrated IT solutions provider offering enterprise applications, digital transformation, managed services, proprietary platforms, and strategic technology partnerships. It serves government, PSU, and private clients with onsite/offshore delivery models."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Xtranet Technologies Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹120",
+    "price_band_max": "₹127",
+    "lot_size": "110 Shares",
+    "total_issue_size": "1,31,34,000 Equity Shares (₹166.80 Cr)",
+    "fresh_issue_size": "1,31,34,000 Equity Shares (₹166.80 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "1,31,34,000 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹120 to ₹127",
+    "minimum_investment": "₹13,970 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹664.03 Cr)",
+    "pre_issue_shareholding": "3,91,51,700 shares",
+    "post_issue_shareholding": "5,22,85,700 shares"
+  },
+
+  "company_overview": {
+    "business_model": "End-to-end IT solutions with focus on government/PSU clients, proprietary platforms, and multi-location operations.",
+    "products_services": [
+      "Enterprise Applications (ERP, System Integration)",
+      "Managed Services & Infrastructure Management",
+      "Digital Services (IaaS, PaaS, SaaS)",
+      "Proprietary Platforms (Synergy, XtraTrust)"
+    ],
+    "competitive_strengths": [
+      "Proven track record with Government & PSU clients",
+      "Long-standing relationships with marquee customers",
+      "Experienced management team",
+      "Geographic presence and multi-location operations"
+    ],
+    "risks": [
+      "High dependence on government/PSU contracts",
+      "Competition in IT services sector",
+      "Execution risks on large projects",
+      "Working capital intensive business"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "23 Jul 2026",
+    "ipo_close_date": "27 Jul 2026",
+    "basis_of_allotment_date": "28 Jul 2026",
+    "refund_initiation_date": "29 Jul 2026",
+    "demat_credit_date": "29 Jul 2026",
+    "listing_date": "30 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_borrowings": "₹21.99 Cr",
+    "capex_for_systems_hardware": "₹7.30 Cr",
+    "working_capital_requirements": "₹102.00 Cr",
+    "general_corporate_purposes": "Balance Amount"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Issue size",
+    "hni_nii_quota": "Not less than 15% of the Issue",
+    "retail_quota": "Not less than 35% of the Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "110",
+      "amount": "₹13,970"
+    },
+    "shni_minimum": {
+      "lot_size": "15 Lots",
+      "shares": "1,650",
+      "amount": "₹2,09,550"
+    },
+    "bhni_minimum": {
+      "lot_size": "72 Lots",
+      "shares": "7,920",
+      "amount": "₹10,05,840"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "34.78% (Mar 2026)",
+    "roce": "32.52% (Mar 2026)",
+    "ronw": "29.60% (Mar 2026)",
+    "pat_margin": "11.15% (Mar 2026)",
+    "ebitda_margin": "17.30% (Mar 2026)",
+    "eps_pre_ipo": "₹10.40",
+    "eps_post_ipo": "₹7.79",
+    "pe_pre_ipo": "12.21x",
+    "pe_post_ipo": "16.3x",
+    "debt_to_equity": "0.63 (Mar 2026)",
+    "promoter_holding_pre": "83.63%",
+    "promoter_holding_post": "62.63%",
+    "market_cap_pre": "₹664.03 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹341.97 Cr",
+      "total_income": "₹366.01 Cr",
+      "pat": "₹40.73 Cr",
+      "ebitda": "₹63.18 Cr",
+      "net_worth": "₹136.01 Cr",
+      "total_borrowing": "₹85.45 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹321.79 Cr",
+      "total_income": "₹276.53 Cr",
+      "pat": "₹30.03 Cr",
+      "ebitda": "₹47.20 Cr",
+      "net_worth": "₹95.49 Cr",
+      "total_borrowing": "₹39.24 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹202.94 Cr",
+      "total_income": "₹233.26 Cr",
+      "pat": "₹10.94 Cr",
+      "ebitda": "₹18.86 Cr",
+      "net_worth": "₹38.78 Cr",
+      "total_borrowing": "₹41.19 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Share India Capital Services Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Z-24, Zone - 1, M.P. Nagar, Bhopal, Madhya Pradesh - 462011",
+    "company_website": "https://xtranetindia.com/",
+    "company_email": "compliance@xtranetindia.com",
+    "company_phone": "+91 1143547623"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://xtranetindia.com/assets/img/pdf/RHP.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Xtranet Technologies Limited do?",
+      "answer": "The company provides integrated IT solutions including enterprise applications, digital transformation, and managed services."
+    },
+    {
+      "question": "When does the Xtranet Technologies IPO open and close?",
+      "answer": "The IPO opens on 23 July 2026 and closes on 27 July 2026."
+    },
+    {
+      "question": "What is the issue price of Xtranet Technologies IPO?",
+      "answer": "The IPO price band is ₹120 to ₹127 per share."
+    },
+    {
+      "question": "What is the lot size of Xtranet Technologies IPO?",
+      "answer": "The lot size is 110 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹13,970 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Xtranet Technologies IPO?",
+      "answer": "The IPO size is ₹166.80 - 167 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Xtranet Technologies shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 30 July 2026."
+    }
+  ]
 }
 
 
