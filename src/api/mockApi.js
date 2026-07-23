@@ -27437,6 +27437,228 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE & NSE on 30 July 2026."
     }
   ]
+},
+{
+  "id": 135,
+  "name": "Silverstorm Parks and Resorts Limited",
+  "logo": "/images/ipo/silverstorm.png",
+  "minInvestment": "₹2,66,000",
+  "open": "24 Jul 2026",
+  "close": "28 Jul 2026",
+  "listing": "31 Jul 2026",
+  "price": "123-133",
+  "lot": 1000,
+
+  "about_company": {
+    "company_name": "Silverstorm Parks and Resorts Limited",
+    "industry_sector": "Amusement Parks, Water Parks, Snow Parks & Hospitality",
+    "founded_year": "1998",
+    "promoters": [
+      "Puthiyaveettil Kuvaka Kunhimon Mohamed Abdul Jaleel",
+      "Shalimar Antharathara Ibrahim"
+    ],
+    "description": "Silverstorm Parks and Resorts operates integrated amusement and tourism destinations including amusement parks, water parks, snow parks, and hospitality services. Its flagship Silver Storm Theme Park in Athirappilly, Kerala, features amusement/water park, indoor snow park, restaurants, and resort. It also operates a snow park in Jamshedpur and is developing one in Lucknow."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Silverstorm Parks and Resorts Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹123",
+    "price_band_max": "₹133",
+    "lot_size": "1000 Shares",
+    "total_issue_size": "61,98,000 Equity Shares (₹82.43 Cr)",
+    "fresh_issue_size": "61,98,000 Equity Shares (₹82.43 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "61,98,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹123 to ₹133",
+    "minimum_investment": "₹2,66,000 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹301.60 Cr)",
+    "pre_issue_shareholding": "1,64,78,736 shares",
+    "post_issue_shareholding": "2,26,76,736 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated amusement and tourism with ticket sales, F&B, hospitality, and events.",
+    "products_services": [
+      "Amusement & Water Parks",
+      "Indoor Snow Parks",
+      "Resort & Hospitality",
+      "Aerial Cable Car (upcoming)",
+      "Corporate & Private Events"
+    ],
+    "competitive_strengths": [
+      "Integrated entertainment destinations",
+      "Established brand with 25+ years experience",
+      "Diversified revenue streams",
+      "Strong institutional marketing network",
+      "Focus on safety and continuous expansion"
+    ],
+    "risks": [
+      "Seasonal nature of amusement business",
+      "High capex for expansion",
+      "Competition in leisure & tourism sector",
+      "Regulatory and environmental risks in locations"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "24 Jul 2026",
+    "ipo_close_date": "28 Jul 2026",
+    "basis_of_allotment_date": "29 Jul 2026",
+    "refund_initiation_date": "30 Jul 2026",
+    "demat_credit_date": "30 Jul 2026",
+    "listing_date": "31 Jul 2026"
+  },
+
+  "ipo_objectives": {
+    "lucknow_snow_park_fec": "₹26.12 Cr",
+    "athirappilly_expansion_upgradation": "₹15.14 Cr",
+    "repayment_of_borrowings": "₹24.00 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹65.25 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Net Issue",
+    "hni_nii_quota": "Not less than 15% of the Net Issue",
+    "retail_quota": "Not less than 35% of the Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "2000",
+      "amount": "₹2,66,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "3000",
+      "amount": "₹3,99,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "8000",
+      "amount": "₹10,64,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "30.98% (Mar 2026)",
+    "roce": "25.22% (Mar 2026)",
+    "ronw": "30.98% (Mar 2026)",
+    "pat_margin": "42.59% (Mar 2026)",
+    "ebitda_margin": "67.37% (Mar 2026)",
+    "eps_pre_ipo": "₹11.59",
+    "eps_post_ipo": "₹8.42",
+    "pe_pre_ipo": "11.47x",
+    "pe_post_ipo": "15.79x",
+    "debt_to_equity": "0.89 (Mar 2026)",
+    "promoter_holding_pre": "70.15%",
+    "promoter_holding_post": "50.98%",
+    "market_cap_pre": "₹301.60 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹214.09 Cr",
+      "total_income": "₹44.85 Cr",
+      "pat": "₹19.10 Cr",
+      "ebitda": "₹29.36 Cr",
+      "net_worth": "₹72.84 Cr",
+      "total_borrowing": "₹65.07 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹151.60 Cr",
+      "total_income": "₹31.64 Cr",
+      "pat": "₹9.71 Cr",
+      "ebitda": "₹16.56 Cr",
+      "net_worth": "₹50.47 Cr",
+      "total_borrowing": "₹29.95 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹112.02 Cr",
+      "total_income": "₹19.11 Cr",
+      "pat": "₹0.97 Cr",
+      "ebitda": "₹6.52 Cr",
+      "net_worth": "₹23.26 Cr",
+      "total_borrowing": "₹28.36 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Vivro Financial Services Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Door No 1/77A, Vettilapara P O, Chalakudy, Kerala",
+    "company_website": "https://silverstorm.in/",
+    "company_email": "info@silverstorm.in",
+    "company_phone": "+91 88905079"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://silverstorm.in/download/rhp/?wpdmdl=3697",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Silverstorm Parks and Resorts Limited do?",
+      "answer": "The company operates integrated amusement parks, water parks, snow parks, and hospitality services."
+    },
+    {
+      "question": "When does the Silverstorm Parks IPO open and close?",
+      "answer": "The IPO opens on 24 July 2026 and closes on 28 July 2026."
+    },
+    {
+      "question": "What is the issue price of Silverstorm Parks IPO?",
+      "answer": "The IPO price band is ₹123 to ₹133 per share."
+    },
+    {
+      "question": "What is the lot size of Silverstorm Parks IPO?",
+      "answer": "The lot size is 1,000 shares. Retail minimum is 2 lots (2,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,66,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Silverstorm Parks IPO?",
+      "answer": "The IPO size is ₹82.43 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Silverstorm Parks shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 31 July 2026."
+    }
+  ]
 }
 
 
