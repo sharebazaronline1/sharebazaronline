@@ -21,35 +21,34 @@ const GlobalSearch = () => {
   const searchRef = useRef(null);
 
   useEffect(() => {
-    const fetchAllData = async () => {
-      const [
+  const fetchAllData = async () => {
+    const [
+      ipos,
+      preIpos,
+      brokers,
+      blogs,
+      unlistedShares,
+    ] = await Promise.all([
+      fetchIPOs(),
+      fetchPreIPODetails(),
+      fetchBrokers(),
+      fetchBlogs(),
+      fetchUnlistedShares(),
+    ]);
+
+    setSearchIndex(
+      buildSearchIndex(
         ipos,
         preIpos,
         brokers,
         blogs,
-        unlistedShares,
-      ] = await Promise.all([
-        fetchIPOs(),
-        fetchPreIPODetails(),
-        fetchBrokers(),
-        fetchBlogs(),
-        fetchUnlistedShares(),
-      ]);
+        unlistedShares
+      )
+    );
+  };
 
-      setSearchIndex(
-        buildSearchIndex(
-          ipos,
-          preIpos,
-          brokers,
-          blogs,
-          unlistedShares
-        )
-      );
-    };
-
-    fetchAllData();
-  }, []);
-
+  fetchAllData();
+}, []);
   // Close when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -182,7 +181,7 @@ const GlobalSearch = () => {
                   </p>
 
                   <p className="text-xs text-slate-500 mt-1 line-clamp-2">
-                    {r.content}
+                 {r.preview || r.content}
                   </p>
                 </button>
               ))}

@@ -12,9 +12,12 @@ import {
   GraduationCap,
 } from "lucide-react";
 
+const CARDS_PER_PAGE = 24;
+
 const InsightHub = () => {
   const navigate = useNavigate();
   const [blogs, setBlogs] = useState([]);
+  const [visibleCount, setVisibleCount] = useState(CARDS_PER_PAGE);
   const [loading, setLoading] = useState(true);
 
   const corporateActionTypes = ["buyback", "dividend", "rights", "bonus", "split", "other"];
@@ -67,6 +70,7 @@ const InsightHub = () => {
         });
 
         setBlogs(merged);
+        setVisibleCount(CARDS_PER_PAGE);
       } catch (err) {
         console.error("Error loading blogs:", err);
       }
@@ -77,6 +81,16 @@ const InsightHub = () => {
     fetchBlogs();
   }, []);
 
+  // Preload the first few images before user scrolls
+  useEffect(() => {
+    blogs.slice(0, 12).forEach((post) => {
+      if (post.image_url) {
+        const img = new Image();
+        img.src = post.image_url;
+      }
+    });
+  }, [blogs]);
+
   const handleCardClick = (post) => {
     navigate(`/insight-hub/${post.id}/${slugify(post.title)}`);
   };
@@ -86,6 +100,9 @@ const InsightHub = () => {
     const type = (post.action_type || post.category || "").toLowerCase();
     return corporateActionTypes.includes(type);
   };
+
+  // Slice blogs based on pagination state
+  const visibleBlogs = blogs.slice(0, visibleCount);
 
   return (
     <div className="w-full min-h-screen">
@@ -163,8 +180,8 @@ const InsightHub = () => {
         ) : blogs.length === 0 ? (
           <div className="text-center text-gray-500">No blogs found</div>
         ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5">
-            {blogs.map((post, i) => {
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6">
+            {visibleBlogs.map((post, i) => {
               const isCorp = isCorporateAction(post);
               return (
                 <motion.article
@@ -174,17 +191,24 @@ const InsightHub = () => {
                   transition={{ delay: i * 0.05 }}
                   className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col h-full overflow-hidden"
                   onClick={() => handleCardClick(post)}
+                  style={{
+                    contentVisibility: "auto",
+                    containIntrinsicSize: "320px",
+                  }}
                 >
-                  <div className="relative aspect-[16/12] sm:aspect-[16/11] lg:aspect-[16/10] overflow-hidden bg-gray-100">
+                  {/* Reduced height & forced full width for wider thumbnail ratio */}
+                  <div className="relative w-full h-[160px] sm:h-[175px] lg:h-[190px] overflow-hidden bg-gray-100">
                     <img
                       src={post.image_url}
                       alt={post.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      loading={i < 8 ? "eager" : "lazy"}
+                      decoding="async"
+                      fetchPriority={i < 8 ? "high" : "auto"}
+                      className="w-full h-full object-cover object-center transition-all duration-300"
                     />
                   </div>
 
-                  <div className="p-2 sm:p-3 flex flex-col flex-1">
+                  <div className="p-3 sm:p-4 flex flex-col flex-1">
                     {!isCorp && (
                       <time className="text-[11px] text-gray-500 mb-1">
                         {post.published_at
@@ -207,11 +231,16 @@ const InsightHub = () => {
           </div>
         )}
 
-        <div className="text-center mt-14">
-          <button className="px-8 py-3 bg-[#16A34A] text-white font-semibold rounded-full hover:bg-[#15803D] transition shadow-md">
-            Load More Insights
-          </button>
-        </div>
+        {visibleCount < blogs.length && (
+          <div className="text-center mt-14">
+            <button
+              onClick={() => setVisibleCount((prev) => prev + CARDS_PER_PAGE)}
+              className="px-8 py-3 bg-[#16A34A] text-white font-semibold rounded-full hover:bg-[#15803D] transition shadow-md"
+            >
+              Load More Insights
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

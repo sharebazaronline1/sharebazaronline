@@ -1,4 +1,5 @@
 // src/api/mockApi.js 
+import { supabase } from "../lib/supabase";
 
 export const fetchIPOs = async () => {
    return [
@@ -27739,11 +27740,18 @@ export const fetchBrokers = async () => {
 };
 
 export const fetchBlogs = async () => {
-  return [
-    { id: 1, title: 'Upcoming IPO: XYZ Corp', content: 'Details on right issues...' },
-    { id: 2, title: 'Dividend Alert: HDFC Bank', content: '₹19 per share declared...' },
-    { id: 3, title: 'Bonus Issue: TCS', content: '1:1 bonus announced...' },
-  ];
+  const { data, error } = await supabase
+    .from("blogs")
+    .select("*")
+    .eq("status", "published")
+    .order("published_at", { ascending: false });
+
+  if (error) {
+    console.error(error);
+    return [];
+  }
+
+  return data;
 };
 
 export const fetchUpcomingIPOs = async () => {
@@ -27869,7 +27877,19 @@ export const fetchUnlistedShares = async () => {
 };
 
 
+export const fetchCorporateActions = async () => {
+  const { data, error } = await supabase
+    .from("corporate_actions")
+    .select("*")
+    .order("created_at", { ascending: false });
 
+  if (error) {
+    console.error(error);
+    return [];
+  }
+
+  return data;
+};
 
 export const fetchInsightDetails = async () => {
   return [
