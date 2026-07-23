@@ -146,8 +146,8 @@ const BlogDetail = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Wider content - max-w-6xl */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      {/* Much Wider - Almost Full Screen Width */}
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-10">
 
         {/* CATEGORY */}
         <div className="text-center mb-5">
@@ -160,28 +160,6 @@ const BlogDetail = () => {
         <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
           {blog.heading}
         </h1>
-
-        {/* META */}
-        {/* <div className="flex flex-wrap justify-center gap-5 text-sm text-gray-500 mb-10">
-          {blog.author && (
-            <span className="flex items-center gap-2">
-              <User size={16} />
-              {blog.author}
-            </span>
-          )}
-
-          <span className="flex items-center gap-2">
-            <Calendar size={16} />
-            {blog.published_at
-              ? new Date(blog.published_at).toLocaleDateString("en-IN")
-              : "—"}
-          </span>
-
-          <span className="flex items-center gap-2">
-            <Clock size={16} />
-            {blog.reading_time || "10 min read"}
-          </span>
-        </div> */}
 
         {/* FEATURED IMAGE */}
         {blog.image_url && (
