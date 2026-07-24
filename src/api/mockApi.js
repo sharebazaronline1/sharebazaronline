@@ -27660,6 +27660,234 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 31 July 2026."
     }
   ]
+},
+{
+  "id": 136,
+  "name": "Propshop Events and Exhibitions Limited",
+  "logo": "/images/ipo/propshop.png",
+  "minInvestment": "₹2,76,000",
+  "open": "27 Jul 2026",
+  "close": "29 Jul 2026",
+  "listing": "03 Aug 2026",
+  "price": "65-69",
+  "lot": 2000,
+
+  "about_company": {
+    "company_name": "Propshop Events and Exhibitions Limited",
+    "industry_sector": "Exhibition & Trade Show Solutions (Booth Design & Fabrication)",
+    "founded_year": "2019",
+    "promoters": [
+      "Prathamesh Shantaram Pusalkar",
+      "Aarti Prathamesh Pusalkar"
+    ],
+    "description": "Propshop Events and Exhibitions provides end-to-end exhibition and trade show solutions including concept design, 3D visualization, fabrication, logistics, installation, and post-event services. It operates an asset-light model with global execution capabilities across major exhibition markets."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Propshop Events and Exhibitions Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹65",
+    "price_band_max": "₹69",
+    "lot_size": "2000 Shares",
+    "total_issue_size": "41,40,000 Equity Shares (₹28.57 Cr)",
+    "fresh_issue_size": "33,24,000 Equity Shares (₹23.05 Cr)",
+    "offer_for_sale": "8,00,000 Equity Shares (₹5.52 Cr)",
+    "shares_offered": "41,40,000 Equity Shares",
+    "listing_exchange": "NSE SME",
+    "issue_price": "₹65 to ₹69",
+    "minimum_investment": "₹2,76,000 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹100.95 Cr)",
+    "pre_issue_shareholding": "1,12,90,804 shares",
+    "post_issue_shareholding": "1,46,30,804 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Asset-light exhibition booth design, fabrication (outsourced), and turnkey project management for domestic and international events.",
+    "products_services": [
+      "Custom & Modular Exhibition Booths",
+      "Concept Design & 3D Visualization",
+      "Project Management & Logistics",
+      "On-site Installation & Supervision",
+      "Post-Event Dismantling"
+    ],
+    "competitive_strengths": [
+      "Established track record in exhibition industry",
+      "Asset-light scalable model",
+      "Global execution capabilities",
+      "Strong in-house design & branding",
+      "Experienced promoters"
+    ],
+    "risks": [
+      "Fragmented and competitive exhibition sector",
+      "Dependence on outsourcing for fabrication",
+      "Project-based revenue with execution risks",
+      "Seasonal/event-driven demand"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "27 Jul 2026",
+    "ipo_close_date": "29 Jul 2026",
+    "basis_of_allotment_date": "30 Jul 2026",
+    "refund_initiation_date": "31 Jul 2026",
+    "demat_credit_date": "31 Jul 2026",
+    "listing_date": "03 Aug 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹16.62 Cr",
+    "total": "₹16.62 Cr (Net Proceeds)"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 30.12% of the Net Offer",
+    "hni_nii_quota": "Not less than 30.73% of the Net Offer",
+    "retail_quota": "Not less than 39.15% of the Net Offer"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "4000",
+      "amount": "₹2,76,000"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "6000",
+      "amount": "₹4,14,000"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "16000",
+      "amount": "₹11,04,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "44.42% (Feb 2026)",
+    "roce": "49.62% (Feb 2026)",
+    "ronw": "36.35% (Feb 2026)",
+    "pat_margin": "10.81% (Feb 2026)",
+    "ebitda_margin": "14.93% (Feb 2026)",
+    "eps_pre_ipo": "₹5.60",
+    "eps_post_ipo": "₹4.82",
+    "pe_pre_ipo": "12.32x",
+    "pe_post_ipo": "14.32x",
+    "debt_to_equity": "0.00 (Feb 2026)",
+    "promoter_holding_pre": "94.55%",
+    "promoter_holding_post": "67.50%",
+    "market_cap_pre": "₹100.95 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "Period Ended 28 Feb 2026",
+      "assets": "₹25.71 Cr",
+      "total_income": "₹59.94 Cr",
+      "pat": "₹6.46 Cr",
+      "ebitda": "₹8.93 Cr",
+      "net_worth": "₹17.78 Cr",
+      "total_borrowing": "₹0 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹18.46 Cr",
+      "total_income": "₹51.59 Cr",
+      "pat": "₹6.32 Cr",
+      "ebitda": "₹8.55 Cr",
+      "net_worth": "₹11.32 Cr",
+      "total_borrowing": "₹0.63 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹11.10 Cr",
+      "total_income": "₹30.57 Cr",
+      "pat": "₹2.19 Cr",
+      "ebitda": "₹2.95 Cr",
+      "net_worth": "₹4.17 Cr",
+      "total_borrowing": "₹0.43 Cr"
+    },
+    {
+      "period": "FY2023 (31 Mar 2023)",
+      "assets": "₹8.15 Cr",
+      "total_income": "₹25.93 Cr",
+      "pat": "₹0.97 Cr",
+      "ebitda": "₹1.28 Cr",
+      "net_worth": "₹1.05 Cr",
+      "total_borrowing": "₹0 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Unistone Capital Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "18E AC Shed, Plot No. 837, TPS 3, Mori Road, Mahim West, Mumbai, Maharashtra - 400016",
+    "company_website": "https://www.thepropshopindia.com/",
+    "company_email": "secretarialcompliance@thepropshop.co.in",
+    "company_phone": "+91 022-24440237"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://thepropshopindia.com/ipo/DRHP/RHP_Propshop.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Propshop Events and Exhibitions Limited do?",
+      "answer": "The company provides end-to-end exhibition and trade show booth design, fabrication, and management services."
+    },
+    {
+      "question": "When does the Propshop Events IPO open and close?",
+      "answer": "The IPO opens on 27 July 2026 and closes on 29 July 2026."
+    },
+    {
+      "question": "What is the issue price of Propshop Events IPO?",
+      "answer": "The IPO price band is ₹65 to ₹69 per share."
+    },
+    {
+      "question": "What is the lot size of Propshop Events IPO?",
+      "answer": "The lot size is 2,000 shares. Retail minimum is 2 lots (4,000 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,76,000 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Propshop Events IPO?",
+      "answer": "The IPO size is ₹28.57 crore (Fresh Issue ₹23.05 Cr + OFS ₹5.52 Cr)."
+    },
+    {
+      "question": "Where will Propshop Events shares be listed?",
+      "answer": "The shares will be listed on NSE SME on 03 August 2026."
+    }
+  ]
 }
 
 
