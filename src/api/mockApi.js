@@ -2,7 +2,7 @@
 import { supabase } from "../lib/supabase";
 
 export const fetchIPOs = async () => {
-   return [
+   const mockIPOs = [
   {
   "id": 1,
   "name": "Neptune Logitek",
@@ -27662,7 +27662,7 @@ export const fetchIPOs = async () => {
   ]
 },
 {
-  "id": 136,
+  "id": 137,
   "name": "Propshop Events and Exhibitions Limited",
   "logo": "/images/ipo/propshop.png",
   "minInvestment": "₹2,76,000",
@@ -27888,6 +27888,441 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on NSE SME on 03 August 2026."
     }
   ]
+},
+{
+  "id": 137,
+  "name": "Poojaa Precision Engg. Limited",
+  "logo": "/images/ipo/poojaaprecision.png",
+  "minInvestment": "₹2,40,800",
+  "open": "28 Jul 2026",
+  "close": "30 Jul 2026",
+  "listing": "04 Aug 2026",
+  "price": "285-301",
+  "lot": 400,
+
+  "about_company": {
+    "company_name": "Poojaa Precision Engg. Limited",
+    "industry_sector": "Precision Engineering (Aluminium Die Casting & Machined Components)",
+    "founded_year": "1992",
+    "promoters": [
+      "Anil Shivajirao Kulkarni",
+      "Jayshree Anil Kulkarni",
+      "Sanket Anil Kulkarni",
+      "Rahul Sohanlal Ranka",
+      "Vaishali Dakshendra Agrawal",
+      "Dakshendra Brijballabh Agrawal",
+      "Bhavya Dakshendra Agrawal",
+      "Bhavya Financial Services Pvt. Ltd."
+    ],
+    "description": "Poojaa Precision Engg. manufactures aluminium die-cast and precision-machined components for automotive (including EV), agriculture, defence, energy, aerospace, and engineering goods. It offers integrated capabilities in gravity, low-pressure, and high-pressure die casting along with machining and assembly."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Poojaa Precision Engg. Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹285",
+    "price_band_max": "₹301",
+    "lot_size": "400 Shares",
+    "total_issue_size": "53,10,000 Equity Shares (₹159.83 Cr)",
+    "fresh_issue_size": "53,10,000 Equity Shares (₹159.83 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "53,10,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹285 to ₹301",
+    "minimum_investment": "₹2,40,800 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹600.34 Cr)",
+    "pre_issue_shareholding": "1,46,34,960 shares",
+    "post_issue_shareholding": "1,99,44,960 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Integrated aluminium die casting, machining, and precision component manufacturing for OEMs and Tier-1 suppliers.",
+    "products_services": [
+      "Aluminium Die Cast Components (GDC, LPDC, HPDC)",
+      "Precision Machined Parts",
+      "Safety-Critical Engine & Drivetrain Components",
+      "EV Powertrain & Electrical System Parts"
+    ],
+    "competitive_strengths": [
+      "Integrated casting and machining capabilities",
+      "Diverse product portfolio for multiple sectors",
+      "Long-standing relationships with domestic and international customers",
+      "Focus on quality, innovation, and engineering excellence"
+    ],
+    "risks": [
+      "Highly competitive and fragmented sector",
+      "Raw material price volatility (aluminium)",
+      "Dependence on automotive industry",
+      "Execution risks on capacity expansion"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "28 Jul 2026",
+    "ipo_close_date": "30 Jul 2026",
+    "basis_of_allotment_date": "31 Jul 2026",
+    "refund_initiation_date": "03 Aug 2026",
+    "demat_credit_date": "03 Aug 2026",
+    "listing_date": "04 Aug 2026"
+  },
+
+  "ipo_objectives": {
+    "manufacturing_facility": "₹106.34 Cr",
+    "working_capital": "₹30.00 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹136.34 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.98% of Net Issue",
+    "hni_nii_quota": "15.02% of Net Issue",
+    "retail_quota": "35.01% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "800",
+      "amount": "₹2,40,800"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "1200",
+      "amount": "₹3,61,200"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 Lots",
+      "shares": "3600",
+      "amount": "₹10,83,600"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "28.18% (Mar 2026)",
+    "roce": "26.38% (Mar 2026)",
+    "ronw": "23.21% (Mar 2026)",
+    "pat_margin": "10.52% (Mar 2026)",
+    "ebitda_margin": "17.62% (Mar 2026)",
+    "eps_pre_ipo": "₹21.12",
+    "eps_post_ipo": "₹15.49",
+    "pe_pre_ipo": "14.25x",
+    "pe_post_ipo": "19.43x",
+    "debt_to_equity": "0.31 (Mar 2026)",
+    "promoter_holding_pre": "82.63%",
+    "promoter_holding_post": "60.63%",
+    "market_cap_pre": "₹600.34 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹231.38 Cr",
+      "total_income": "₹295.20 Cr",
+      "pat": "₹30.90 Cr",
+      "ebitda": "₹51.78 Cr",
+      "net_worth": "₹133.16 Cr",
+      "total_borrowing": "₹41.16 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹135.92 Cr",
+      "total_income": "₹222.80 Cr",
+      "pat": "₹23.93 Cr",
+      "ebitda": "₹39.89 Cr",
+      "net_worth": "₹86.20 Cr",
+      "total_borrowing": "₹19.54 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹96.75 Cr",
+      "total_income": "₹174.59 Cr",
+      "pat": "₹16.10 Cr",
+      "ebitda": "₹27.45 Cr",
+      "net_worth": "₹64.83 Cr",
+      "total_borrowing": "₹14.28 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "MUFG Intime India Pvt. Ltd.",
+    "registrar_website": "https://in.mpms.mufg.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Hem Securities Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Gat No. 253/1A, Village-Kharabwadi, Chakan, Maharashtra",
+    "company_website": "https://www.poojacastings.in/",
+    "company_email": "info@poojaaprecisionengg.in",
+    "company_phone": "+91-86001 08448"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://hemadmin.hemsecurities.com/images/Files/offer/3097.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Poojaa Precision Engg. Limited do?",
+      "answer": "The company manufactures aluminium die-cast and precision-machined components for automotive, EV, aerospace, and industrial sectors."
+    },
+    {
+      "question": "When does the Poojaa Precision Engg. IPO open and close?",
+      "answer": "The IPO opens on 28 July 2026 and closes on 30 July 2026."
+    },
+    {
+      "question": "What is the issue price of Poojaa Precision Engg. IPO?",
+      "answer": "The IPO price band is ₹285 to ₹301 per share."
+    },
+    {
+      "question": "What is the lot size of Poojaa Precision Engg. IPO?",
+      "answer": "The lot size is 400 shares. Retail minimum is 2 lots (800 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,40,800 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Poojaa Precision Engg. IPO?",
+      "answer": "The IPO size is ₹159.83 - 160 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Poojaa Precision Engg. shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 04 August 2026."
+    }
+  ]
+},
+{
+  "id": 138,
+  "name": "Oneindig Technologies Limited",
+  "logo": "/images/ipo/oneindig.png",
+  "minInvestment": "₹2,30,400",
+  "open": "30 Jul 2026",
+  "close": "03 Aug 2026",
+  "listing": "06 Aug 2026",
+  "price": "91-96",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Oneindig Technologies Limited",
+    "industry_sector": "Renewable Energy (Solar EPC, O&M, IPP & Solar Products)",
+    "founded_year": "2016",
+    "promoters": [
+      "Manoj Agarwal",
+      "Seema Agarwal"
+    ],
+    "description": "Oneindig Technologies provides Engineering, Procurement, and Commissioning (EPC) services for solar power projects, solar water pumps, Operations & Maintenance (O&M), and Independent Power Producer (IPP) activities. It also supplies solar modules, inverters, batteries, and related equipment."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Oneindig Technologies Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹91",
+    "price_band_max": "₹96",
+    "lot_size": "1200 Shares",
+    "total_issue_size": "28,80,000 Equity Shares (₹27.65 Cr)",
+    "fresh_issue_size": "28,80,000 Equity Shares (₹27.65 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "28,80,000 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹91 to ₹96",
+    "minimum_investment": "₹2,30,400 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹104.87 Cr)",
+    "pre_issue_shareholding": "80,44,160 shares",
+    "post_issue_shareholding": "1,09,24,160 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Turnkey solar EPC, O&M, IPP, and solar product supply with projects across multiple states in India.",
+    "products_services": [
+      "Solar EPC Services (Rooftop, Ground-Mounted)",
+      "Solar Water Pumps",
+      "Operations & Maintenance (O&M)",
+      "Independent Power Producer (IPP)",
+      "Solar Modules, Inverters, Batteries & Accessories"
+    ],
+    "competitive_strengths": [
+      "Established solar EPC player with strong execution track record",
+      "Diversified portfolio including EPC, O&M, products, and IPP",
+      "Experienced management with technical capabilities",
+      "Co-development model and geographic presence"
+    ],
+    "risks": [
+      "Dependence on government schemes and subsidies",
+      "Project execution and delay risks",
+      "Competition in renewable energy sector",
+      "Working capital intensive business"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jul 2026",
+    "ipo_close_date": "03 Aug 2026",
+    "basis_of_allotment_date": "04 Aug 2026",
+    "refund_initiation_date": "05 Aug 2026",
+    "demat_credit_date": "05 Aug 2026",
+    "listing_date": "06 Aug 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹20.00 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹20.00 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.78% of Net Issue",
+    "hni_nii_quota": "15.13% of Net Issue",
+    "retail_quota": "35.09% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "2400",
+      "amount": "₹2,30,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "3600",
+      "amount": "₹3,45,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 Lots",
+      "shares": "10800",
+      "amount": "₹10,36,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "34.89% (Jan 2026)",
+    "roce": "14.71% (Jan 2026)",
+    "ronw": "34.89% (Jan 2026)",
+    "pat_margin": "Not specified",
+    "ebitda_margin": "18.31% (Jan 2026)",
+    "eps_pre_ipo": "₹5.18",
+    "eps_post_ipo": "₹6.77",
+    "pe_pre_ipo": "18.53x",
+    "pe_post_ipo": "14.18x",
+    "debt_to_equity": "Not specified",
+    "promoter_holding_pre": "51.33%",
+    "promoter_holding_post": "37.80%",
+    "market_cap_pre": "₹104.87 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "Period Ended 31 Jan 2026",
+      "assets": "₹88.99 Cr",
+      "total_income": "₹57.56 Cr",
+      "pat": "₹6.16 Cr",
+      "ebitda": "₹10.52 Cr",
+      "net_worth": "₹20.65 Cr",
+      "total_borrowing": "₹50.77 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹35.53 Cr",
+      "total_income": "₹46.14 Cr",
+      "pat": "₹4.17 Cr",
+      "ebitda": "₹6.87 Cr",
+      "net_worth": "₹14.68 Cr",
+      "total_borrowing": "₹6.96 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Maashitla Securities Pvt. Ltd.",
+    "registrar_website": "https://maashitla.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Share India Capital Services Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "V-503, Atrium, VIVANTA by Taj Hotel Complex, Shooting Range Road, Suraj Kund, Delhi NCR",
+    "company_website": "https://www.oneindig.tech/",
+    "company_email": "info@oneindig.tech",
+    "company_phone": "+91 9810484146"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://static1.squarespace.com/static/67610de5174d532c12c355c8/t/6a61888f4f35e178022295f1/1784776847928/RHP-With+QR-22-07-2026.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Oneindig Technologies Limited do?",
+      "answer": "The company provides solar EPC services, solar water pumps, O&M, IPP, and solar product supply."
+    },
+    {
+      "question": "When does the Oneindig Technologies IPO open and close?",
+      "answer": "The IPO opens on 30 July 2026 and closes on 03 August 2026."
+    },
+    {
+      "question": "What is the issue price of Oneindig Technologies IPO?",
+      "answer": "The IPO price band is ₹91 to ₹96 per share."
+    },
+    {
+      "question": "What is the lot size of Oneindig Technologies IPO?",
+      "answer": "The lot size is 1,200 shares. Retail minimum is 2 lots (2,400 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,30,400 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Oneindig Technologies IPO?",
+      "answer": "The IPO size is ₹27.65 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Oneindig Technologies shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 06 August 2026."
+    }
+  ]
 }
 
 
@@ -27897,7 +28332,29 @@ export const fetchIPOs = async () => {
 
 
 
-  ]
+ 
+]
+    try {
+    const { data, error } = await supabase
+      .from("ipos")
+      .select("*");
+    if (error) throw error;
+
+    const map = new Map();
+
+    mockIPOs.forEach((ipo) => {
+      map.set(ipo.id, ipo);
+    });
+
+    (data || []).forEach((ipo) => {
+      map.set(ipo.id, ipo); // Supabase replaces mock if same id
+    });
+
+    return Array.from(map.values());
+  } catch (err) {
+    console.error(err);
+    return mockIPOs;
+  }
 }
 
 export const fetchUnlisted = async () => {
