@@ -28323,6 +28323,1334 @@ export const fetchIPOs = async () => {
       "answer": "The shares will be listed on BSE SME on 06 August 2026."
     }
   ]
+},
+{
+  "id": 139,
+  "name": "Fusion Klassroom Edutech Limited",
+  "logo": "/images/ipo/fusionklassroom.png",
+  "minInvestment": "₹2,54,400",
+  "open": "31 Jul 2026",
+  "close": "04 Aug 2026",
+  "listing": "07 Aug 2026",
+  "price": "151-159",
+  "lot": 800,
+
+  "about_company": {
+    "company_name": "Fusion Klassroom Edutech Limited",
+    "industry_sector": "EdTech (Professional & Competitive Exam Coaching - Hybrid & Digital)",
+    "founded_year": "2016",
+    "promoters": [
+      "Alka Nikhil Javeri",
+      "Dhruv Nikhil Javeri",
+      "Dhumil Nikhil Javeri"
+    ],
+    "description": "Fusion Klassroom Edutech provides professional and competitive exam coaching (CA, CS, CMA, etc.) through hybrid (offline + online) and digital platforms. It operates an AI-powered Education OTT platform (Klassroom Konnect) along with partner offline centres and skill development programs."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Fusion Klassroom Edutech Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹151",
+    "price_band_max": "₹159",
+    "lot_size": "800 Shares",
+    "total_issue_size": "24,55,200 Equity Shares (₹39.04 Cr)",
+    "fresh_issue_size": "20,86,200 Equity Shares approx. (₹31.63 Cr)",
+    "offer_for_sale": "4,65,800 Equity Shares (₹7.41 Cr)",
+    "shares_offered": "24,55,200 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹151 to ₹159",
+    "minimum_investment": "₹2,54,400 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹148.14 Cr)",
+    "pre_issue_shareholding": "73,27,473 shares",
+    "post_issue_shareholding": "93,16,873 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Hybrid EdTech with B2C OTT/offline coaching, skill development, and B2B/B2G institutional partnerships.",
+    "products_services": [
+      "CA, CS, CMA & Commerce Exam Coaching",
+      "AI-Powered Education OTT Platform",
+      "Skill Development (AI/ML, Coding, etc.)",
+      "Offline Partner Centres & Hybrid Learning",
+      "Institutional Training Programs"
+    ],
+    "competitive_strengths": [
+      "Hybrid learning model combining offline and digital",
+      "Proprietary AI-powered platform",
+      "Affordable subscription-based OTT",
+      "Focus on employability and skill development",
+      "Growing user base with 400K+ registered users"
+    ],
+    "risks": [
+      "Intense competition in EdTech sector",
+      "Dependence on student enrollments and faculty",
+      "Regulatory changes in education sector",
+      "Execution risks in expansion and acquisitions"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "31 Jul 2026",
+    "ipo_close_date": "04 Aug 2026",
+    "basis_of_allotment_date": "05 Aug 2026",
+    "refund_initiation_date": "06 Aug 2026",
+    "demat_credit_date": "06 Aug 2026",
+    "listing_date": "07 Aug 2026"
+  },
+
+  "ipo_objectives": {
+    "debt_repayment": "₹2.36 Cr",
+    "technology_ai_ml_development": "₹6.71 Cr",
+    "content_development": "₹5.35 Cr",
+    "hardware_for_centers_labs": "₹1.95 Cr",
+    "marketing_initiatives": "₹5.22 Cr",
+    "inorganic_growth_general_corporate": "Balance Amount",
+    "total": "₹21.59 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.81% of Net Issue",
+    "hni_nii_quota": "15.13% of Net Issue",
+    "retail_quota": "35.06% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "1600",
+      "amount": "₹2,54,400"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "2400",
+      "amount": "₹3,81,600"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "6400",
+      "amount": "₹10,17,600"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "53.45% (Mar 2026)",
+    "roce": "45.60% (Mar 2026)",
+    "ronw": "53.45% (Mar 2026)",
+    "pat_margin": "32.99% (Mar 2026)",
+    "ebitda_margin": "56.38% (Mar 2026)",
+    "eps_pre_ipo": "₹10.37",
+    "eps_post_ipo": "₹8.16",
+    "pe_pre_ipo": "15.33x",
+    "pe_post_ipo": "19.49x",
+    "debt_to_equity": "0.19 (Mar 2026)",
+    "promoter_holding_pre": "55.07%",
+    "promoter_holding_post": "39.53%",
+    "market_cap_pre": "₹148.14 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹25.46 Cr",
+      "total_income": "₹23.10 Cr",
+      "pat": "₹7.60 Cr",
+      "ebitda": "₹12.99 Cr",
+      "net_worth": "₹18.41 Cr",
+      "total_borrowing": "₹3.43 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹12.06 Cr",
+      "total_income": "₹10.11 Cr",
+      "pat": "₹2.90 Cr",
+      "ebitda": "₹4.06 Cr",
+      "net_worth": "₹10.03 Cr",
+      "total_borrowing": "₹1.01 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹4.48 Cr",
+      "total_income": "₹4.62 Cr",
+      "pat": "₹0.34 Cr",
+      "ebitda": "₹1.02 Cr",
+      "net_worth": "₹3.92 Cr",
+      "total_borrowing": "₹0.32 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Maashitla Securities Pvt. Ltd.",
+    "registrar_website": "https://maashitla.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Narnolia Financial Services Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Matruprabha, Plot No-78, CTS No-2731, Daulat Nagar Road 7, Borivali East, Mumbai, Maharashtra - 400066",
+    "company_website": "https://www.klassroom.in/",
+    "company_email": "companysecretary@klassroom.in",
+    "company_phone": "+91 8655678159"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/rhp_klassroom.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Fusion Klassroom Edutech Limited do?",
+      "answer": "The company provides hybrid and digital coaching for professional exams (CA, CS, CMA) and skill development courses through its OTT platform and offline centres."
+    },
+    {
+      "question": "When does the Fusion Klassroom Edutech IPO open and close?",
+      "answer": "The IPO opens on 31 July 2026 and closes on 04 August 2026."
+    },
+    {
+      "question": "What is the issue price of Fusion Klassroom Edutech IPO?",
+      "answer": "The IPO price band is ₹151 to ₹159 per share."
+    },
+    {
+      "question": "What is the lot size of Fusion Klassroom Edutech IPO?",
+      "answer": "The lot size is 800 shares. Retail minimum is 2 lots (1,600 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,54,400 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Fusion Klassroom Edutech IPO?",
+      "answer": "The IPO size is ₹39.04 crore (Fresh Issue + OFS)."
+    },
+    {
+      "question": "Where will Fusion Klassroom Edutech shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 07 August 2026."
+    }
+  ]
+},
+{
+  "id": 140,
+  "name": "Juniper Green Energy Limited",
+  "logo": "/images/ipo/junipergreen.png",
+  "minInvestment": "₹14,850",
+  "open": "30 Jul 2026",
+  "close": "03 Aug 2026",
+  "listing": "06 Aug 2026",
+  "price": "214-225",
+  "lot": 66,
+
+  "about_company": {
+    "company_name": "Juniper Green Energy Limited",
+    "industry_sector": "Renewable Energy (Solar, Wind, Hybrid & FDRE IPP)",
+    "founded_year": "2011",
+    "promoters": [
+      "Arvind Tiku",
+      "Hemant Tikoo",
+      "Niharika Tiku",
+      "AT Holdings Pte. Ltd.",
+      "Juniper Renewable Holdings Pte. Ltd."
+    ],
+    "description": "Juniper Green Energy is a leading renewable energy Independent Power Producer (IPP) in India, developing, building, operating, and maintaining utility-scale solar, wind, hybrid, and Firm & Dispatchable Renewable Energy (FDRE) projects with Battery Energy Storage Systems (BESS). It has a large portfolio with long-term PPAs."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Juniper Green Energy Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹214",
+    "price_band_max": "₹225",
+    "lot_size": "66 Shares",
+    "total_issue_size": "8,00,00,000 Equity Shares (₹1,800 Cr)",
+    "fresh_issue_size": "8,00,00,000 Equity Shares (₹1,800 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "8,00,00,000 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹214 to ₹225",
+    "minimum_investment": "₹14,850 (Upper price band)",
+    "market_cap_post_issue": "₹12,802.26 Cr (at upper band)",
+    "pre_issue_shareholding": "48,89,89,292 shares",
+    "post_issue_shareholding": "56,89,89,292 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Utility-scale renewable energy IPP with in-house EPC and O&M capabilities.",
+    "products_services": [
+      "Solar Power Projects",
+      "Wind Power Projects",
+      "Wind-Solar Hybrid & FDRE with BESS",
+      "Long-term PPAs with Discoms/Government entities"
+    ],
+    "competitive_strengths": [
+      "Top 10 renewable IPP by total capacity in India",
+      "Diversified portfolio across solar, wind, hybrid",
+      "Integrated EPC and O&M capabilities",
+      "Strong execution track record and land acquisition",
+      "Stable cash flows from long-term PPAs"
+    ],
+    "risks": [
+      "High debt levels typical for renewable IPPs",
+      "Regulatory and policy risks in power sector",
+      "Execution risks on large pipeline",
+      "Interest rate and financing risks"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jul 2026",
+    "ipo_close_date": "03 Aug 2026",
+    "basis_of_allotment_date": "04 Aug 2026",
+    "refund_initiation_date": "05 Aug 2026",
+    "demat_credit_date": "05 Aug 2026",
+    "listing_date": "06 Aug 2026"
+  },
+
+  "ipo_objectives": {
+    "repayment_of_borrowings": "₹683.24 Cr",
+    "investment_in_subsidiaries_for_debt_repayment": "₹728.69 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹1,411.92 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not more than 50% of the Net Issue",
+    "hni_nii_quota": "Not less than 15% of the Net Issue",
+    "retail_quota": "Not less than 35% of the Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "66",
+      "amount": "₹14,850"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "924",
+      "amount": "₹2,07,900"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 Lots",
+      "shares": "4,488",
+      "amount": "₹10,09,800"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "Not specified",
+    "roce": "Not specified",
+    "ronw": "1.18% (Mar 2026)",
+    "pat_margin": "Not specified",
+    "ebitda_margin": "85.99% (Mar 2026)",
+    "eps_pre_ipo": "₹0.83",
+    "eps_post_ipo": "₹0.71",
+    "pe_pre_ipo": "271.08x",
+    "pe_post_ipo": "316.9x",
+    "debt_to_equity": "Not specified",
+    "promoter_holding_pre": "100%",
+    "promoter_holding_post": "85.94%",
+    "market_cap_pre": "₹12,802.26 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹19,538.45 Cr",
+      "total_income": "₹804.93 Cr",
+      "pat": "₹40.46 Cr",
+      "ebitda": "₹692.18 Cr",
+      "net_worth": "₹122.89 Cr",
+      "total_borrowing": "₹12,920.54 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹10,356.81 Cr",
+      "total_income": "₹569.78 Cr",
+      "pat": "₹36.48 Cr",
+      "ebitda": "₹485.69 Cr",
+      "net_worth": "₹116.29 Cr",
+      "total_borrowing": "₹5,502.53 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹4,986.44 Cr",
+      "total_income": "₹424.45 Cr",
+      "pat": "₹40.06 Cr",
+      "ebitda": "₹370.84 Cr",
+      "net_worth": "₹108.21 Cr",
+      "total_borrowing": "₹2,671.70 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "ICICI Securities Ltd."
+  },
+
+  "company_information": {
+    "company_address": "1103A & 1103B, 11th Floor, Hemkunt Chamber, 89, Nehru Place, New Delhi",
+    "company_website": "https://www.junipergreenenergy.com/",
+    "company_email": "investors@junipergreenenergy.com",
+    "company_phone": "+91 124 473 9600"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.junipergreenenergy.com/pdfs/initial-public-offering/JuniperGreenEnergyLimited_RHP_23-07-26.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Juniper Green Energy Limited do?",
+      "answer": "The company is a leading renewable energy IPP developing and operating solar, wind, hybrid, and FDRE projects."
+    },
+    {
+      "question": "When does the Juniper Green Energy IPO open and close?",
+      "answer": "The IPO opens on 30 July 2026 and closes on 03 August 2026."
+    },
+    {
+      "question": "What is the issue price of Juniper Green Energy IPO?",
+      "answer": "The IPO price band is ₹214 to ₹225 per share."
+    },
+    {
+      "question": "What is the lot size of Juniper Green Energy IPO?",
+      "answer": "The lot size is 66 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,850 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Juniper Green Energy IPO?",
+      "answer": "The IPO size is ₹1,800 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Juniper Green Energy shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 06 August 2026."
+    }
+  ]
+},
+{
+  "id": 141,
+  "name": "MV Electrosystems Limited",
+  "logo": "/images/ipo/mvelectrosystems.png",
+  "minInvestment": "₹14,450",
+  "open": "30 Jul 2026",
+  "close": "03 Aug 2026",
+  "listing": "06 Aug 2026",
+  "price": "400-425",
+  "lot": 34,
+
+  "about_company": {
+    "company_name": "MV Electrosystems Limited",
+    "industry_sector": "Railway Electrical & Power Electronics Equipment",
+    "founded_year": "2009",
+    "promoters": [
+      "Mohit Vohra",
+      "Amit Dhawan",
+      "Sumit Dhawan",
+      "Rahul Dhawan",
+      "Sonali Dhawan",
+      "Ramendra Pratap Singh"
+    ],
+    "description": "MV Electrosystems designs, develops, assembles, and manufactures electrical and power electronics equipment for railway rolling stock, including IGBT-based propulsion systems, switchgear panels, cable protection products, and other electrical components and subsystems."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "MV Electrosystems Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹5 per share",
+    "price_band_min": "₹400",
+    "price_band_max": "₹425",
+    "lot_size": "34 Shares",
+    "total_issue_size": "68,23,528 Equity Shares (₹290 Cr)",
+    "fresh_issue_size": "68,23,528 Equity Shares (₹290 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "68,23,528 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹400 to ₹425",
+    "minimum_investment": "₹14,450 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹1,159.52 Cr)",
+    "pre_issue_shareholding": "2,04,59,200 shares",
+    "post_issue_shareholding": "2,72,82,728 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Design, development, assembly, and manufacturing of railway electrical and power electronics equipment.",
+    "products_services": [
+      "IGBT-based 3-Phase Drive Propulsion Equipment",
+      "Switchgear Panels for Coaches & EMUs",
+      "Cable Protection & Management Products",
+      "Electrical Components, Systems & Sub-systems"
+    ],
+    "competitive_strengths": [
+      "Strong in-house R&D capabilities",
+      "High barriers to entry in safety-critical railway equipment",
+      "Long-standing relationship with Indian Railways",
+      "Precision engineering and domain expertise"
+    ],
+    "risks": [
+      "Dependence on Indian Railways and rail sector",
+      "Recent financial losses",
+      "High competition in electrical equipment",
+      "Execution risks on new product development"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jul 2026",
+    "ipo_close_date": "03 Aug 2026",
+    "basis_of_allotment_date": "04 Aug 2026",
+    "refund_initiation_date": "05 Aug 2026",
+    "demat_credit_date": "05 Aug 2026",
+    "listing_date": "06 Aug 2026"
+  },
+
+  "ipo_objectives": {
+    "working_capital_requirements": "₹180.00 Cr",
+    "research_design_development": "₹21.00 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹201.00 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not less than 75% of the Net Issue",
+    "hni_nii_quota": "Not more than 15% of the Net Offer",
+    "retail_quota": "Not more than 10% of the Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "34",
+      "amount": "₹14,450"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "476",
+      "amount": "₹2,02,300"
+    },
+    "bhni_minimum": {
+      "lot_size": "70 Lots",
+      "shares": "2,380",
+      "amount": "₹10,11,500"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "-31.55% (Mar 2026)",
+    "roce": "-17.69% (Mar 2026)",
+    "ronw": "-20.29% (Mar 2026)",
+    "pat_margin": "-25.36% (Mar 2026)",
+    "ebitda_margin": "-19.97% (Mar 2026)",
+    "eps_pre_ipo": "-₹6.17",
+    "eps_post_ipo": "Negative",
+    "pe_pre_ipo": "-68.88x",
+    "pe_post_ipo": "Negative",
+    "debt_to_equity": "0.80 (Mar 2026)",
+    "promoter_holding_pre": "76.92%",
+    "promoter_holding_post": "Not specified",
+    "market_cap_pre": "₹1,159.52 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹145.74 Cr",
+      "total_income": "₹49.79 Cr",
+      "pat": "-₹12.63 Cr",
+      "ebitda": "-₹9.94 Cr",
+      "net_worth": "₹62.57 Cr",
+      "total_borrowing": "₹49.89 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹74.12 Cr",
+      "total_income": "₹64.64 Cr",
+      "pat": "₹1.40 Cr",
+      "ebitda": "₹8.92 Cr",
+      "net_worth": "₹17.91 Cr",
+      "total_borrowing": "₹27.50 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹65.58 Cr",
+      "total_income": "₹50.57 Cr",
+      "pat": "₹0.56 Cr",
+      "ebitda": "₹6.41 Cr",
+      "net_worth": "₹16.53 Cr",
+      "total_borrowing": "₹27.59 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Sundae Capital Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No. 7, Site No. 2, 14/3, Mathura Road, Faridabad, Haryana - 121003",
+    "company_website": "https://www.mvelectrosystems.com/",
+    "company_email": "cs@mvelectrosystems.com",
+    "company_phone": "+91 9211999711"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.chittorgarh.net/reports/ipo_notes/mv-electrosystems-red_herring_prospectus.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does MV Electrosystems Limited do?",
+      "answer": "The company manufactures electrical and power electronics equipment for Indian Railways, including propulsion systems and switchgear panels."
+    },
+    {
+      "question": "When does the MV Electrosystems IPO open and close?",
+      "answer": "The IPO opens on 30 July 2026 and closes on 03 August 2026."
+    },
+    {
+      "question": "What is the issue price of MV Electrosystems IPO?",
+      "answer": "The IPO price band is ₹400 to ₹425 per share."
+    },
+    {
+      "question": "What is the lot size of MV Electrosystems IPO?",
+      "answer": "The lot size is 34 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,450 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of MV Electrosystems IPO?",
+      "answer": "The IPO size is ₹290 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will MV Electrosystems shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 06 August 2026."
+    }
+  ]
+},
+{
+  "id": 142,
+  "name": "Dhaval Packaging Limited",
+  "logo": "/images/ipo/dhavalpackaging.png",
+  "minInvestment": "₹2,32,800",
+  "open": "30 Jul 2026",
+  "close": "03 Aug 2026",
+  "listing": "06 Aug 2026",
+  "price": "92-97",
+  "lot": 1200,
+
+  "about_company": {
+    "company_name": "Dhaval Packaging Limited",
+    "industry_sector": "Plastic Packaging (IML Containers & Pipe End Caps)",
+    "founded_year": "2015",
+    "promoters": [
+      "Dhaval Nanalal Dagla",
+      "Jigar Harivadan Contractor",
+      "Jigar Manubhai Shah",
+      "Manish Nanalal Dagla",
+      "Shah Aalpa Dipak"
+    ],
+    "description": "Dhaval Packaging manufactures In-Mold Labeling (IML) food containers and SAW Pipe Protection Plastic End Caps for food, FMCG, and industrial sectors. It operates advanced facilities in Sanand, Gujarat, with strong backward integration."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Dhaval Packaging Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹92",
+    "price_band_max": "₹97",
+    "lot_size": "1200 Shares",
+    "total_issue_size": "37,48,800 Equity Shares (₹36.36 Cr)",
+    "fresh_issue_size": "37,48,800 Equity Shares (₹36.36 Cr)",
+    "offer_for_sale": "Nil",
+    "shares_offered": "37,48,800 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹92 to ₹97",
+    "minimum_investment": "₹2,32,800 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹133.25 Cr)",
+    "pre_issue_shareholding": "99,88,000 shares",
+    "post_issue_shareholding": "1,37,36,800 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Design, manufacturing, and supply of plastic packaging solutions with in-house IML and tooling capabilities.",
+    "products_services": [
+      "In-Mold Labeling (IML) Food Containers",
+      "SAW Pipe Protection Plastic End Caps"
+    ],
+    "competitive_strengths": [
+      "Fully automated IML manufacturing with backward integration",
+      "Dual product portfolio (food & industrial)",
+      "Customization and tooling expertise",
+      "Strong customer relationships and export presence"
+    ],
+    "risks": [
+      "Competition in plastic packaging sector",
+      "Raw material price volatility",
+      "Execution risks on new facility",
+      "Regulatory/environmental concerns in plastics"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "30 Jul 2026",
+    "ipo_close_date": "03 Aug 2026",
+    "basis_of_allotment_date": "04 Aug 2026",
+    "refund_initiation_date": "05 Aug 2026",
+    "demat_credit_date": "05 Aug 2026",
+    "listing_date": "06 Aug 2026"
+  },
+
+  "ipo_objectives": {
+    "new_manufacturing_facility": "₹27.19 Cr",
+    "debt_repayment": "₹3.75 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹30.94 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.95% of Net Issue",
+    "hni_nii_quota": "15.03% of Net Issue",
+    "retail_quota": "35.02% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "2400",
+      "amount": "₹2,32,800"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "3600",
+      "amount": "₹3,49,200"
+    },
+    "bhni_minimum": {
+      "lot_size": "9 Lots",
+      "shares": "10800",
+      "amount": "₹10,47,600"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "31.58% (Mar 2026)",
+    "roce": "22.58% (Mar 2026)",
+    "ronw": "31.58% (Mar 2026)",
+    "pat_margin": "12.33% (Mar 2026)",
+    "ebitda_margin": "21.41% (Mar 2026)",
+    "eps_pre_ipo": "₹8.05",
+    "eps_post_ipo": "₹5.85",
+    "pe_pre_ipo": "12.05x",
+    "pe_post_ipo": "16.58x",
+    "debt_to_equity": "0.78 (Mar 2026)",
+    "promoter_holding_pre": "90.86%",
+    "promoter_holding_post": "66.06%",
+    "market_cap_pre": "₹133.25 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹66.42 Cr",
+      "total_income": "₹65.20 Cr",
+      "pat": "₹8.04 Cr",
+      "ebitda": "₹13.93 Cr",
+      "net_worth": "₹30.75 Cr",
+      "total_borrowing": "₹24.13 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹47.89 Cr",
+      "total_income": "₹52.43 Cr",
+      "pat": "₹6.04 Cr",
+      "ebitda": "₹10.22 Cr",
+      "net_worth": "₹20.16 Cr",
+      "total_borrowing": "₹16.55 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹33.70 Cr",
+      "total_income": "₹48.08 Cr",
+      "pat": "₹1.55 Cr",
+      "ebitda": "₹4.99 Cr",
+      "net_worth": "₹4.10 Cr",
+      "total_borrowing": "₹19.28 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Rarever Financial Advisors Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Plot No. E 411, GIDC, Sanand, Ahmedabad, Gujarat - 382110",
+    "company_website": "https://www.dhavalpackaging.com/",
+    "company_email": "cs@dhavalpackaging.com",
+    "company_phone": "+91 9898066258"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.dhavalpackaging.com/storage/attachments/1784875690_6a630aaad0ec9.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Dhaval Packaging Limited do?",
+      "answer": "The company manufactures In-Mold Labeling (IML) plastic containers and pipe protection end caps for food, FMCG, and industrial sectors."
+    },
+    {
+      "question": "When does the Dhaval Packaging IPO open and close?",
+      "answer": "The IPO opens on 30 July 2026 and closes on 03 August 2026."
+    },
+    {
+      "question": "What is the issue price of Dhaval Packaging IPO?",
+      "answer": "The IPO price band is ₹92 to ₹97 per share."
+    },
+    {
+      "question": "What is the lot size of Dhaval Packaging IPO?",
+      "answer": "The lot size is 1,200 shares. Retail minimum is 2 lots (2,400 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,32,800 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of Dhaval Packaging IPO?",
+      "answer": "The IPO size is ₹36.36 crore (Fresh Issue only)."
+    },
+    {
+      "question": "Where will Dhaval Packaging shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 06 August 2026."
+    }
+  ]
+},
+{
+  "id": 143,
+  "name": "Manipal Health Enterprises Limited",
+  "logo": "/images/ipo/manipalhealth.png",
+  "minInvestment": "₹14,750",
+  "open": "29 Jul 2026",
+  "close": "31 Jul 2026",
+  "listing": "05 Aug 2026",
+  "price": "560-590",
+  "lot": 25,
+
+  "about_company": {
+    "company_name": "Manipal Health Enterprises Limited",
+    "industry_sector": "Healthcare (Multi-Specialty Hospitals & Clinics)",
+    "founded_year": "2010",
+    "promoters": [
+      "Manipal Education and Medical Group"
+    ],
+    "description": "Manipal Health Enterprises operates a large network of multi-specialty hospitals, clinics, and diagnostic centres across India. It offers tertiary and quaternary care, organ transplants, oncology, cardiology, and preventive healthcare as part of the Manipal Group."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "Manipal Health Enterprises Limited",
+    "ipo_type": "Mainboard IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹2 per share",
+    "price_band_min": "₹560",
+    "price_band_max": "₹590",
+    "lot_size": "25 Shares",
+    "total_issue_size": "15,72,07,054 Equity Shares (₹9,275.22 Cr)",
+    "fresh_issue_size": "13,55,93,220 Equity Shares (₹8,000 Cr)",
+    "offer_for_sale": "2,16,13,834 Equity Shares (₹1,275.22 Cr)",
+    "shares_offered": "15,72,07,054 Equity Shares",
+    "listing_exchange": "BSE & NSE",
+    "issue_price": "₹560 to ₹590",
+    "minimum_investment": "₹14,750 (Upper price band)",
+    "market_cap_post_issue": "₹77,605.68 Cr (at upper band)",
+    "pre_issue_shareholding": "1,17,97,57,321 shares",
+    "post_issue_shareholding": "1,31,53,50,541 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Multi-specialty hospital chain with focus on quality care, clinical excellence, and expansion.",
+    "products_services": [
+      "Tertiary & Quaternary Care",
+      "Organ Transplants, Oncology, Cardiology, Neurology",
+      "Preventive Healthcare & Diagnostics"
+    ],
+    "competitive_strengths": [
+      "Largest multi-specialty hospital group by bed capacity in India",
+      "Leadership in key metros (Bengaluru, Kolkata, Pune)",
+      "Strong brand and network",
+      "Advanced infrastructure and clinical excellence"
+    ],
+    "risks": [
+      "High debt for expansion",
+      "Regulatory risks in healthcare",
+      "Competition from other hospital chains",
+      "Margin pressure from employee and finance costs"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "29 Jul 2026",
+    "ipo_close_date": "31 Jul 2026",
+    "basis_of_allotment_date": "03 Aug 2026",
+    "refund_initiation_date": "04 Aug 2026",
+    "demat_credit_date": "04 Aug 2026",
+    "listing_date": "05 Aug 2026"
+  },
+
+  "ipo_objectives": {
+    "debt_repayment_subsidiary": "₹5,552.76 Cr",
+    "acquisition_sahyadri": "₹574.00 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹6,126.76 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "Not less than 75% of the Net Offer",
+    "hni_nii_quota": "Not more than 15% of the Net Offer",
+    "retail_quota": "Not more than 10% of the Net Offer"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "1 Lot",
+      "shares": "25",
+      "amount": "₹14,750"
+    },
+    "shni_minimum": {
+      "lot_size": "14 Lots",
+      "shares": "350",
+      "amount": "₹2,06,500"
+    },
+    "bhni_minimum": {
+      "lot_size": "68 Lots",
+      "shares": "1,700",
+      "amount": "₹10,03,000"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "Not specified",
+    "roce": "21.88% (Mar 2026)",
+    "ronw": "10.57% (Mar 2026)",
+    "pat_margin": "8.87% (Mar 2026)",
+    "ebitda_margin": "27.05% (Mar 2026)",
+    "eps_pre_ipo": "₹7.77",
+    "eps_post_ipo": "₹6.97",
+    "pe_pre_ipo": "75.93x",
+    "pe_post_ipo": "84.65x",
+    "debt_to_equity": "Not specified",
+    "promoter_holding_pre": "Not specified",
+    "promoter_holding_post": "Not specified",
+    "market_cap_pre": "₹77,605.68 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹24,864.50 Cr",
+      "total_income": "₹10,520.52 Cr",
+      "pat": "₹916.52 Cr",
+      "ebitda": "₹2,795.94 Cr",
+      "net_worth": "₹8,440.92 Cr",
+      "total_borrowing": "₹10,553.43 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹14,072.08 Cr",
+      "total_income": "₹8,362.79 Cr",
+      "pat": "₹1,081.67 Cr",
+      "ebitda": "₹2,247.07 Cr",
+      "net_worth": "₹5,865.66 Cr",
+      "total_borrowing": "₹4,766.83 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹10,818.83 Cr",
+      "total_income": "₹6,265.17 Cr",
+      "pat": "₹533.20 Cr",
+      "ebitda": "₹1,776.60 Cr",
+      "net_worth": "₹4,029.22 Cr",
+      "total_borrowing": "₹3,943.98 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Kfin Technologies Ltd.",
+    "registrar_website": "https://ipostatus.kfintech.com/"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Kotak Mahindra Capital Co. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "The Annexe, #98/2, Rustom Bagh, HAL Airport Road, Bengaluru Karnataka, 560017",
+    "company_website": "https://www.manipalhospitals.com/",
+    "company_email": "legalcs@manipalhospitals.com",
+    "company_phone": "+91 80 4936 0300"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://www.axiscapital.co.in/contents/Manipal%20Health%20Enterprises%20Limited-%20RHP%20(July%2023,%202026)-1784864230.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does Manipal Health Enterprises Limited do?",
+      "answer": "The company operates a large network of multi-specialty hospitals and clinics across India."
+    },
+    {
+      "question": "When does the Manipal Health Enterprises IPO open and close?",
+      "answer": "The IPO opens on 29 July 2026 and closes on 31 July 2026."
+    },
+    {
+      "question": "What is the issue price of Manipal Health Enterprises IPO?",
+      "answer": "The IPO price band is ₹560 to ₹590 per share."
+    },
+    {
+      "question": "What is the lot size of Manipal Health Enterprises IPO?",
+      "answer": "The lot size is 25 shares."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹14,750 (upper band) for 1 lot."
+    },
+    {
+      "question": "What is the issue size of Manipal Health Enterprises IPO?",
+      "answer": "The IPO size is ₹9,275.22 crore (Fresh Issue + OFS)."
+    },
+    {
+      "question": "Where will Manipal Health Enterprises shares be listed?",
+      "answer": "The shares will be listed on BSE & NSE on 05 August 2026."
+    }
+  ]
+},
+{
+  "id": 144,
+  "name": "H.R. Hygiene Products Limited",
+  "logo": "/images/ipo/hrhygiene.png",
+  "minInvestment": "₹2,81,600",
+  "open": "29 Jul 2026",
+  "close": "31 Jul 2026",
+  "listing": "05 Aug 2026",
+  "price": "83-88",
+  "lot": 1600,
+
+  "about_company": {
+    "company_name": "H.R. Hygiene Products Limited",
+    "industry_sector": "Hygiene Products (Sanitary Napkins, Adult & Baby Diapers)",
+    "founded_year": "2016",
+    "promoters": [
+      "Hemal Babubhai Borsadiya",
+      "Rahul Kishorbai Sheradia",
+      "Borsadiya Binita Hemalbhai",
+      "Sheradia Parth Damjibhai"
+    ],
+    "description": "H.R. Hygiene Products manufactures and markets hygiene products under brands like Femiss, Womanica, ElderFit, and Bloom Baby. It focuses on sanitary napkins, adult diapers, and baby diapers, serving B2B and B2C segments with pan-India distribution and exports."
+  },
+
+  "ipo_basic_details": {
+    "company_name": "H.R. Hygiene Products Limited",
+    "ipo_type": "SME IPO",
+    "issue_type": "Bookbuilding IPO",
+    "face_value": "₹10 per share",
+    "price_band_min": "₹83",
+    "price_band_max": "₹88",
+    "lot_size": "1600 Shares",
+    "total_issue_size": "61,31,200 Equity Shares (₹53.95 Cr)",
+    "fresh_issue_size": "49,10,400 Equity Shares approx. (₹43.17 Cr)",
+    "offer_for_sale": "12,20,800 Equity Shares approx. (₹10.79 Cr)",
+    "shares_offered": "61,31,200 Equity Shares",
+    "listing_exchange": "BSE SME",
+    "issue_price": "₹83 to ₹88",
+    "minimum_investment": "₹2,81,600 (Upper price band)",
+    "market_cap_post_issue": "Not specified (Pre-IPO ₹199.87 Cr)",
+    "pre_issue_shareholding": "1,78,06,438 shares",
+    "post_issue_shareholding": "2,27,12,038 shares"
+  },
+
+  "company_overview": {
+    "business_model": "Manufacturing and marketing of personal hygiene products with dual B2B/B2C distribution.",
+    "products_services": [
+      "Sanitary Napkins (Femiss, Womanica)",
+      "Adult Diapers (ElderFit)",
+      "Baby Diapers (Bloom Baby)"
+    ],
+    "competitive_strengths": [
+      "Modern manufacturing facility",
+      "Dual channel distribution strategy",
+      "Brand loyalty and trust",
+      "Founder-led with professional management"
+    ],
+    "risks": [
+      "Competition in hygiene products sector",
+      "Raw material price fluctuations",
+      "Dependence on distribution network",
+      "Regulatory standards for hygiene products"
+    ]
+  },
+
+  "ipo_important_dates": {
+    "ipo_open_date": "29 Jul 2026",
+    "ipo_close_date": "31 Jul 2026",
+    "basis_of_allotment_date": "03 Aug 2026",
+    "refund_initiation_date": "04 Aug 2026",
+    "demat_credit_date": "04 Aug 2026",
+    "listing_date": "05 Aug 2026"
+  },
+
+  "ipo_objectives": {
+    "new_manufacturing_facility": "₹31.36 Cr",
+    "debt_repayment": "₹3.57 Cr",
+    "general_corporate_purposes": "Balance Amount",
+    "total": "₹34.93 Cr"
+  },
+
+  "investor_reservation": {
+    "qib_quota": "49.97% of Net Issue",
+    "hni_nii_quota": "15.01% of Net Issue",
+    "retail_quota": "35.02% of Net Issue"
+  },
+
+  "market_lot_details": {
+    "retail_minimum": {
+      "lot_size": "2 Lots",
+      "shares": "3200",
+      "amount": "₹2,81,600"
+    },
+    "shni_minimum": {
+      "lot_size": "3 Lots",
+      "shares": "4800",
+      "amount": "₹4,22,400"
+    },
+    "bhni_minimum": {
+      "lot_size": "8 Lots",
+      "shares": "12800",
+      "amount": "₹11,26,400"
+    }
+  },
+
+  "key_performance_indicators": {
+    "roe": "30.90% (Mar 2026)",
+    "roce": "24.86% (Mar 2026)",
+    "ronw": "26.91% (Mar 2026)",
+    "pat_margin": "8.73% (Mar 2026)",
+    "ebitda_margin": "13.07% (Mar 2026)",
+    "eps_pre_ipo": "₹6.41",
+    "eps_post_ipo": "₹5.02",
+    "pe_pre_ipo": "13.73x",
+    "pe_post_ipo": "17.53x",
+    "debt_to_equity": "0.51 (Mar 2026)",
+    "promoter_holding_pre": "68.80%",
+    "promoter_holding_post": "Not specified",
+    "market_cap_pre": "₹199.87 Cr"
+  },
+
+  "company_financial_data": [
+    {
+      "period": "FY2026 (31 Mar 2026)",
+      "assets": "₹170.92 Cr",
+      "total_income": "₹131.90 Cr",
+      "pat": "₹11.41 Cr",
+      "ebitda": "₹17.08 Cr",
+      "net_worth": "₹42.38 Cr",
+      "total_borrowing": "₹21.53 Cr"
+    },
+    {
+      "period": "FY2025 (31 Mar 2025)",
+      "assets": "₹90.56 Cr",
+      "total_income": "₹115.15 Cr",
+      "pat": "₹9.08 Cr",
+      "ebitda": "₹14.77 Cr",
+      "net_worth": "₹31.44 Cr",
+      "total_borrowing": "₹21.19 Cr"
+    },
+    {
+      "period": "FY2024 (31 Mar 2024)",
+      "assets": "₹48.87 Cr",
+      "total_income": "₹85.33 Cr",
+      "pat": "₹4.66 Cr",
+      "ebitda": "₹7.58 Cr",
+      "net_worth": "₹5.90 Cr",
+      "total_borrowing": "₹24.68 Cr"
+    }
+  ],
+
+  "grey_market_premium": {
+    "gmp_price": "Not Available",
+    "kostak_rate": "Not Available",
+    "subject_to_sauda": "Not Available",
+    "gmp_last_updated": "Jul 2026",
+    "estimated_listing_price": "TBA"
+  },
+
+  "ipo_subscription_data": {
+    "total_subscription": "Pending",
+    "qib_ex_anchor": "Pending",
+    "hni_subscription": "Pending",
+    "retail_subscription": "Pending"
+  },
+
+  "ipo_intermediaries": {
+    "registrar": "Purva Sharegistry (India) Pvt. Ltd.",
+    "registrar_website": "https://www.purvashare.com"
+  },
+
+  "ipo_lead_manager": {
+    "lead_manager": "Marwadi Chandarana Intermediaries Brokers Pvt. Ltd."
+  },
+
+  "company_information": {
+    "company_address": "Survey No.125/P2/P2, Plot no. 1 to 3, Village: Lothada, Rajkot, Gujarat - 360002",
+    "company_website": "https://www.hrhygiene.com/",
+    "company_email": "compliance@hrhygiene.com",
+    "company_phone": "+91 6354554191"
+  },
+
+  "ipo_documents": {
+    "drhp_link": "Available",
+    "rhp_link": "https://hrhygiene.com/wp-content/uploads/2026/07/21072026-RHP-HR-Hygiene-Products-Ltd.pdf",
+    "prospectus_pdf": "Available via RHP",
+    "investor_presentation": "Pending"
+  },
+
+  "faq": [
+    {
+      "question": "What does H.R. Hygiene Products Limited do?",
+      "answer": "The company manufactures and markets hygiene products including sanitary napkins, adult diapers, and baby diapers."
+    },
+    {
+      "question": "When does the H.R. Hygiene Products IPO open and close?",
+      "answer": "The IPO opens on 29 July 2026 and closes on 31 July 2026."
+    },
+    {
+      "question": "What is the issue price of H.R. Hygiene Products IPO?",
+      "answer": "The IPO price band is ₹83 to ₹88 per share."
+    },
+    {
+      "question": "What is the lot size of H.R. Hygiene Products IPO?",
+      "answer": "The lot size is 1,600 shares. Retail minimum is 2 lots (3,200 shares)."
+    },
+    {
+      "question": "What is the minimum investment required?",
+      "answer": "Retail investors need to invest ₹2,81,600 (upper band) for 2 lots."
+    },
+    {
+      "question": "What is the issue size of H.R. Hygiene Products IPO?",
+      "answer": "The IPO size is ₹53.95 crore (Fresh Issue + OFS)."
+    },
+    {
+      "question": "Where will H.R. Hygiene Products shares be listed?",
+      "answer": "The shares will be listed on BSE SME on 05 August 2026."
+    }
+  ]
 }
 
 
