@@ -1,84 +1,70 @@
 // src/pages/AdminBlog.jsx
-import { useState, useRef } from "react";
+
+import { useState } from "react";
 import { supabase } from "../lib/supabase";
 import AdminSidebar from "../components/AdminSidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
-import { Save, Image as ImageIcon, Loader2, CheckCircle } from "lucide-react";
-import ReactQuill from "react-quill";
-import Quill from "quill";
-import "react-quill/dist/quill.snow.css";
-
-/* 🔥 Preserve table paste */
-const Clipboard = Quill.import("modules/clipboard");
-
-class PlainClipboard extends Clipboard {
-  onPaste(e) {
-    e.preventDefault();
-    const html = e.clipboardData.getData("text/html");
-    const text = e.clipboardData.getData("text/plain");
-
-    const quill = this.quill;
-    const range = quill.getSelection();
-
-    if (html && html.includes("<table")) {
-      quill.clipboard.dangerouslyPasteHTML(range.index, html);
-    } else {
-      quill.insertText(range.index, text);
-    }
-  }
-}
-
-Quill.register("modules/clipboard", PlainClipboard, true);
+import {
+  Save,
+  Image as ImageIcon,
+  Loader2,
+  CheckCircle,
+} from "lucide-react";
 
 const AdminBlog = () => {
-  const quillRef = useRef(null);
-
   const [title, setTitle] = useState("");
   const [excerpt, setExcerpt] = useState("");
   const [content, setContent] = useState("");
   const [imageUrl, setImageUrl] = useState("");
-  const [imageUploading, setImageUploading] = useState(false); // 🔥 NEW
+  const [imageUploading, setImageUploading] = useState(false);
   const [category, setCategory] = useState("IPO News");
   const [readingTime, setReadingTime] = useState(5);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-const [heading, setHeading] = useState("");
+  const [heading, setHeading] = useState("");
 
- const categories = [
-  "IPO News",
-  "Market Analysis",
-  "Financial Market Updates",
-  "Pre-IPO",
-  "Investment Tips",
-  "Company Updates",
-  "Dividend News",
+  const categories = [
+    "IPO News",
+    "Market Analysis",
+    "Financial Market Updates",
+    "Pre-IPO",
+    "Investment Tips",
+    "Company Updates",
+    "Dividend News",
 
-  // NEW
-  "Broker Comparison",
-  "Options Trading",
-  "Futures Trading",
-  "Commodity Market",
-  "ETF News",
-  "Mutual Funds",
-  "NFO Updates",
-  "Corporate Actions",
-  "Unlisted Shares",
-];
+    // NEW
+    "Broker Comparison",
+    "Options Trading",
+    "Futures Trading",
+    "Commodity Market",
+    "ETF News",
+    "Mutual Funds",
+    "NFO Updates",
+    "Corporate Actions",
+    "Unlisted Shares",
+  ];
 
   const generateSlug = (text) =>
-    text.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
+    text
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, "")
+      .replace(/\s+/g, "-");
 
-  const stripHtml = (html) => html.replace(/<[^>]*>/g, "").trim();
+  const stripHtml = (html) =>
+    html.replace(/<[^>]*>/g, "").trim();
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
 
-    setImageUploading(true); // 🔥 start uploading
+    setImageUploading(true);
+
     try {
       const fileName = `${Date.now()}-${file.name}`;
 
-      await supabase.storage.from("blog-images").upload(fileName, file);
+      await supabase.storage
+        .from("blog-images")
+        .upload(fileName, file);
 
       const { data } = supabase.storage
         .from("blog-images")
@@ -88,108 +74,69 @@ const [heading, setHeading] = useState("");
     } catch (err) {
       alert("Upload failed: " + err.message);
     } finally {
-      setImageUploading(false); // 🔥 done
+      setImageUploading(false);
     }
   };
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  if (!title || !content) {
-    alert("Required fields missing");
-    return;
-  }
-
-  setLoading(true);
-
-  try {
-   const slug = `${generateSlug(title)}-${Date.now()}`;
-
-    const cleanExcerpt =
-      excerpt || stripHtml(content).substring(0, 160) + "...";
-
-    const { data, error } = await supabase
-      .from("blogs")
-      .insert([
-  {
-    title,
-    heading,
-    excerpt: cleanExcerpt,
-    content,
-    image_url: imageUrl || null,
-    category,
-    reading_time: Number(readingTime),
-    status: "published",
-    slug,
-    author: "Admin",
-    published_at: new Date().toISOString(),
-  },
-])
-      .select();
-
-    if (error) {
-      console.error("Supabase Insert Error:", error);
-      alert(error.message);
+    if (!title || !content) {
+      alert("Required fields missing");
       return;
     }
 
-    console.log("Inserted:", data);
+    setLoading(true);
 
-    setSuccess(true);
+    try {
+      const slug = `${generateSlug(title)}-${Date.now()}`;
 
-    setTitle("");
-    setHeading("");
-    setExcerpt("");
-    setContent("");
-    setImageUrl("");
+      const cleanExcerpt =
+        excerpt || stripHtml(content).substring(0, 160) + "...";
 
-    setTimeout(() => setSuccess(false), 3000);
+      const { data, error } = await supabase
+        .from("blogs")
+        .insert([
+          {
+            title,
+            heading,
+            excerpt: cleanExcerpt,
+            content,
+            image_url: imageUrl || null,
+            category,
+            reading_time: Number(readingTime),
+            status: "published",
+            slug,
+            author: "Admin",
+            published_at: new Date().toISOString(),
+          },
+        ])
+        .select();
 
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
-  } finally {
-    setLoading(false);
-  }
-};
+      if (error) {
+        console.error("Supabase Insert Error:", error);
+        alert(error.message);
+        return;
+      }
 
-const modules = {
-  toolbar: [
-    [{ font: [] }],
-    [{ size: ["small", false, "large", "huge"] }],
+      console.log("Inserted:", data);
 
-    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+      setSuccess(true);
 
-    ["bold", "italic", "underline", "strike"],
+      setTitle("");
+      setHeading("");
+      setExcerpt("");
+      setContent("");
+      setImageUrl("");
 
-    [
-      { color: [] },
-      { background: [] },
-    ],
-
-    [
-      { script: "sub" },
-      { script: "super" },
-    ],
-
-    [
-      { list: "ordered" },
-      { list: "bullet" },
-      { indent: "-1" },
-      { indent: "+1" },
-    ],
-
-    [
-      { align: [] },
-    ],
-
-    ["blockquote", "code-block"],
-
-    ["link", "image"],
-
-    ["clean"],
-  ],
-};
+      setTimeout(() => setSuccess(false), 3000);
+    } catch (err) {
+      console.error(err);
+      alert(err.message);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -203,10 +150,12 @@ const modules = {
               <h1 className="text-2xl font-semibold text-gray-900">
                 Create New Blog
               </h1>
+
               <p className="text-gray-500 text-sm mt-1">
                 Publish content to Insight Hub
               </p>
             </div>
+
             <UserProfileDropdown />
           </div>
         </header>
@@ -247,6 +196,7 @@ const modules = {
                 <label className="text-sm text-gray-600 mb-2 block">
                   Category
                 </label>
+
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
@@ -263,6 +213,7 @@ const modules = {
                 <label className="text-sm text-gray-600 mb-2 block">
                   Reading Time (min)
                 </label>
+
                 <input
                   type="number"
                   value={readingTime}
@@ -284,24 +235,35 @@ const modules = {
                     className="hidden"
                   />
 
-                  {/* 🔥 STATES */}
                   {imageUploading ? (
                     <>
-                      <Loader2 className="animate-spin text-gray-500" size={18} />
+                      <Loader2
+                        className="animate-spin text-gray-500"
+                        size={18}
+                      />
+
                       <span className="text-sm text-gray-600">
                         Uploading...
                       </span>
                     </>
                   ) : imageUrl ? (
                     <>
-                      <CheckCircle className="text-green-600" size={18} />
+                      <CheckCircle
+                        className="text-green-600"
+                        size={18}
+                      />
+
                       <span className="text-sm text-green-600">
                         Uploaded successfully
                       </span>
                     </>
                   ) : (
                     <>
-                      <ImageIcon size={18} className="text-gray-500" />
+                      <ImageIcon
+                        size={18}
+                        className="text-gray-500"
+                      />
+
                       <span className="text-sm text-gray-600">
                         Upload image
                       </span>
@@ -320,24 +282,30 @@ const modules = {
               className="w-full px-4 py-3 border rounded-xl"
             />
 
-            {/* EDITOR */}
+            {/* HTML CONTENT / DETAILED DESCRIPTION */}
             <div className="bg-white border rounded-xl overflow-hidden">
-              <ReactQuill
-                ref={quillRef}
+
+              <label className="block px-5 py-3 bg-gray-50 border-b text-sm font-medium text-gray-700">
+                HTML Content (Detailed Description)
+              </label>
+
+              <textarea
                 value={content}
-                onChange={setContent}
-                modules={modules}
-                className="h-[600px] text-lg"
+                onChange={(e) => setContent(e.target.value)}
+                placeholder="Paste or write full HTML here..."
+                className="w-full h-[600px] p-5 font-mono text-sm leading-relaxed resize-y focus:outline-none"
               />
+
             </div>
 
             {/* BUTTON */}
             <div className="flex justify-end">
               <button
                 disabled={loading}
-                className="bg-[#16A34A] hover:bg-[#15803D] text-white px-8 py-3 rounded-xl font-medium flex items-center gap-2"
+                className="bg-[#16A34A] hover:bg-[#15803D] text-white px-8 py-3 rounded-xl font-medium flex items-center gap-2 disabled:opacity-70"
               >
                 <Save size={18} />
+
                 {loading ? "Publishing..." : "Publish"}
               </button>
             </div>
