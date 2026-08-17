@@ -95,11 +95,19 @@ const InsightHub = () => {
     navigate(`/insight-hub/${post.id}/${slugify(post.title)}`);
   };
 
-  const isCorporateAction = (post) => {
-    if (!post.action_type && !post.category) return false;
-    const type = (post.action_type || post.category || "").toLowerCase();
-    return corporateActionTypes.includes(type);
-  };
+const isCorporateAction = (post) => {
+  const type = String(
+    post.action_type || post.category || ""
+  ).toLowerCase().trim();
+
+  return (
+    type.includes("buyback") ||
+    type.includes("dividend") ||
+    type.includes("rights") ||
+    type.includes("bonus") ||
+    type.includes("split")
+  );
+};
 
   // Slice blogs based on pagination state
   const visibleBlogs = blogs.slice(0, visibleCount);

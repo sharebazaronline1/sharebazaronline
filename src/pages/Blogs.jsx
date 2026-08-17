@@ -7,6 +7,26 @@ import { supabase } from "../lib/supabase";
 import { fetchInsightDetails } from "../api/mockApi";
 import slugify from "../utils/slugify";
 
+const corporateActionTypes = [
+  "buyback",
+  "dividend",
+  "rights",
+  "bonus",
+  "split",
+  "other",
+];
+
+const isCorporateAction = (post) => {
+  const type = String(
+    post.action_type || post.category || ""
+  )
+    .toLowerCase()
+    .trim();
+
+  return corporateActionTypes.some((action) =>
+    type.includes(action)
+  );
+};
 const BlogCard = ({ post, index, onClick }) => {
   return (
     <motion.div
@@ -71,13 +91,15 @@ const BlogCard = ({ post, index, onClick }) => {
             {post.heading}
           </h3>
 
-          <p className="text-sm text-gray-500 mt-3">
-            {post.published_at
-              ? new Date(post.published_at).toLocaleDateString("en-IN")
-              : "—"}
-          </p>
+         {!isCorporateAction(post) && (
+  <p className="text-sm text-gray-500 mt-3">
+    {post.published_at
+      ? new Date(post.published_at).toLocaleDateString("en-IN")
+      : "—"}
+  </p>
+)}
 
-          <div className="mt-auto pt-4">
+          <div className="mt-auto pt-2">
             <button className="text-green-600 font-medium text-sm hover:text-green-700 transition">
               Read More →
             </button>
