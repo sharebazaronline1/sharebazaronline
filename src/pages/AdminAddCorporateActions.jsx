@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabase";
 import AdminSidebar from "../components/AdminSidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
-import { Save, Image as ImageIcon, Loader2, CheckCircle } from "lucide-react";
+import { Save, Image as ImageIcon, Loader2, CheckCircle, Hash } from "lucide-react";
 
 const AdminCorporateAction = () => {
   const [title, setTitle] = useState("");
@@ -16,8 +16,8 @@ const AdminCorporateAction = () => {
   const [readingTime, setReadingTime] = useState(5);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [keywords, setKeywords] = useState("");
 
-  // Added states for managing corporate action relationships
   const [corporateActions, setCorporateActions] = useState([]);
   const [selectedAction, setSelectedAction] = useState("");
 
@@ -42,20 +42,14 @@ const AdminCorporateAction = () => {
     "NCD Issue",
     "Distribution",
     "Unit Split",
-
-    // Corporate Meetings & Governance
     "AGM",
     "EGM",
     "Board Meeting",
     "Postal Ballot",
     "E-Voting",
-
-    // Promoter & Shareholding Changes
     "Promoter Stake Increase",
     "Promoter Stake Sale",
     "Pledge Release",
-
-    // Others
     "Scheme of Arrangement",
     "Insolvency Resolution",
     "CIRP Process",
@@ -71,7 +65,6 @@ const AdminCorporateAction = () => {
     "Revocation of Suspension",
   ];
 
-  // Fetch unlinked corporate actions on component mount
   useEffect(() => {
     const loadActions = async () => {
       const { data, error } = await supabase
@@ -92,6 +85,14 @@ const AdminCorporateAction = () => {
     text.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
 
   const stripHtml = (html) => html.replace(/<[^>]*>/g, "").trim();
+
+  const processKeywords = (text) => {
+    if (!text) return [];
+    return text
+      .split(/[,\n]+/)
+      .map(k => k.trim().toLowerCase())
+      .filter(k => k.length > 0);
+  };
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
@@ -131,6 +132,8 @@ const AdminCorporateAction = () => {
       const cleanExcerpt =
         excerpt || stripHtml(content).substring(0, 160) + "...";
 
+      const keywordsArray = processKeywords(keywords);
+
       const { data, error } = await supabase
         .from("blogs")
         .insert([
@@ -146,6 +149,7 @@ const AdminCorporateAction = () => {
             slug,
             author: "Admin",
             published_at: new Date().toISOString(),
+            keywords: keywordsArray,
           },
         ])
         .select();
@@ -156,7 +160,6 @@ const AdminCorporateAction = () => {
         return;
       }
 
-      // Link the corporate action record if one was chosen
       const blogId = data[0].id;
       if (selectedAction) {
         const { error: updateError } = await supabase
@@ -169,20 +172,19 @@ const AdminCorporateAction = () => {
         if (updateError) {
           console.error("Supabase Relationship Link Error:", updateError);
         } else {
-          // Remove linked item from local UI dropdown list
           setCorporateActions((prev) => prev.filter((item) => item.id !== selectedAction));
         }
       }
 
       setSuccess(true);
 
-      // Reset form variables
       setTitle("");
       setHeading("");
       setExcerpt("");
       setContent("");
       setImageUrl("");
       setSelectedAction("");
+      setKeywords("");
 
       setTimeout(() => setSuccess(false), 3000);
     } catch (err) {
@@ -237,7 +239,6 @@ const AdminCorporateAction = () => {
             />
 
             <div className="grid md:grid-cols-3 gap-6 items-end">
-              {/* Relationship Dropdown placement */}
               <div>
                 <label className="text-sm text-gray-600 mb-2 block">
                   Link Corporate Action
@@ -278,7 +279,9 @@ const AdminCorporateAction = () => {
                   className="w-full px-4 py-3 border rounded-xl"
                 />
               </div>
+            </div>
 
+            <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label className="text-sm text-gray-600 mb-2 block">Featured Image</label>
                 <label className="flex items-center justify-center gap-2 px-4 py-3 border rounded-xl cursor-pointer hover:bg-gray-50 transition">
@@ -301,6 +304,50 @@ const AdminCorporateAction = () => {
                   )}
                 </label>
               </div>
+            </div>
+
+            {/* Keywords Section */}
+            <div >
+              <label className="text-sm font-medium text-gray-700 block mb-2">
+               Keywords <span className="text-red-500 text-lg">*</span>
+                <span className="text-xs text-gray-500 ml-2 font-normal">
+                  (Separate with commas or new lines)
+                </span>
+              </label>
+              
+              <div className="relative">
+                <Hash className="absolute left-3 top-3 text-gray-400" size={18} />
+                <textarea
+                  value={keywords}
+                  onChange={(e) => setKeywords(e.target.value)}
+                  placeholder="Enter keywords separated by commas or new lines&#10;Example:&#10;buyback, stock split, dividend announcement&#10;corporate action&#10;shareholder meeting"
+                  className="w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-green-500 min-h-[120px] resize-y"
+                />
+              </div>
+
+              {keywords && (
+                <div className="mt-3">
+                  <p className="text-xs text-gray-500 mb-2">
+                    Preview ({processKeywords(keywords).length} keywords):
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {processKeywords(keywords).slice(0, 10).map((keyword, index) => (
+                      <span
+                        key={index}
+                        className="inline-flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-xs text-gray-700"
+                      >
+                        <Hash size={12} className="text-gray-400" />
+                        {keyword}
+                      </span>
+                    ))}
+                    {processKeywords(keywords).length > 10 && (
+                      <span className="text-xs text-gray-400">
+                        +{processKeywords(keywords).length - 10} more
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             <textarea

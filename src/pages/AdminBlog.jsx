@@ -9,6 +9,7 @@ import {
   Image as ImageIcon,
   Loader2,
   CheckCircle,
+  Hash,
 } from "lucide-react";
 
 const AdminBlog = () => {
@@ -22,6 +23,7 @@ const AdminBlog = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [heading, setHeading] = useState("");
+  const [keywords, setKeywords] = useState("");
 
   const categories = [
     "IPO News",
@@ -31,8 +33,6 @@ const AdminBlog = () => {
     "Investment Tips",
     "Company Updates",
     "Dividend News",
-
-    // NEW
     "Broker Comparison",
     "Options Trading",
     "Futures Trading",
@@ -78,6 +78,16 @@ const AdminBlog = () => {
     }
   };
 
+  // Process keywords from textarea
+  const processKeywords = (text) => {
+    if (!text) return [];
+    // Split by comma, newline, or comma+space
+    return text
+      .split(/[,\n]+/)
+      .map(k => k.trim().toLowerCase())
+      .filter(k => k.length > 0);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -94,6 +104,8 @@ const AdminBlog = () => {
       const cleanExcerpt =
         excerpt || stripHtml(content).substring(0, 160) + "...";
 
+      const keywordsArray = processKeywords(keywords);
+
       const { data, error } = await supabase
         .from("blogs")
         .insert([
@@ -109,6 +121,7 @@ const AdminBlog = () => {
             slug,
             author: "Admin",
             published_at: new Date().toISOString(),
+            keywords: keywordsArray, // Add keywords array
           },
         ])
         .select();
@@ -123,11 +136,13 @@ const AdminBlog = () => {
 
       setSuccess(true);
 
+      // Reset form
       setTitle("");
       setHeading("");
       setExcerpt("");
       setContent("");
       setImageUrl("");
+      setKeywords("");
 
       setTimeout(() => setSuccess(false), 3000);
     } catch (err) {
@@ -169,11 +184,10 @@ const AdminBlog = () => {
           )}
 
           <form onSubmit={handleSubmit} className="space-y-8">
-
             {/* TITLE */}
             <input
               type="text"
-              placeholder="Enter blog Slug..."
+              placeholder="Enter blog title..."
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               className="w-full text-2xl font-medium px-5 py-4 border rounded-xl focus:ring-2 focus:ring-green-500"
@@ -190,7 +204,6 @@ const AdminBlog = () => {
 
             {/* HORIZONTAL */}
             <div className="grid md:grid-cols-3 gap-6 items-end">
-
               {/* CATEGORY */}
               <div>
                 <label className="text-sm text-gray-600 mb-2 block">
@@ -241,7 +254,6 @@ const AdminBlog = () => {
                         className="animate-spin text-gray-500"
                         size={18}
                       />
-
                       <span className="text-sm text-gray-600">
                         Uploading...
                       </span>
@@ -252,7 +264,6 @@ const AdminBlog = () => {
                         className="text-green-600"
                         size={18}
                       />
-
                       <span className="text-sm text-green-600">
                         Uploaded successfully
                       </span>
@@ -263,7 +274,6 @@ const AdminBlog = () => {
                         size={18}
                         className="text-gray-500"
                       />
-
                       <span className="text-sm text-gray-600">
                         Upload image
                       </span>
@@ -271,6 +281,51 @@ const AdminBlog = () => {
                   )}
                 </label>
               </div>
+            </div>
+
+            {/* KEYWORDS SECTION - WITH ASTERISK */}
+            <div>
+              <label className="text-sm font-medium text-gray-700 block mb-2">
+               Keywords <span className="text-red-500 text-lg">*</span>
+                <span className="text-xs text-gray-500 ml-2 font-normal">
+                  (Separate with commas or new lines)
+                </span>
+              </label>
+              
+              <div className="relative">
+           
+                <textarea
+                  value={keywords}
+                  onChange={(e) => setKeywords(e.target.value)}
+                  placeholder="Enter keywords separated by commas or new lines&#10;Example:&#10;ipo news, market analysis, investment tips&#10;stock market&#10;financial updates"
+                  className="w-full pl-10 pr-4 py-3 border rounded-xl focus:ring-2 focus:ring-green-500 min-h-[120px] resize-y"
+                />
+              </div>
+
+              {/* Preview of processed keywords */}
+              {keywords && (
+                <div className="mt-3">
+                  <p className="text-xs text-gray-500 mb-2">
+                    Preview ({processKeywords(keywords).length} keywords):
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {processKeywords(keywords).slice(0, 10).map((keyword, index) => (
+                      <span
+                        key={index}
+                        className="inline-flex items-center gap-1 bg-gray-100 px-3 py-1 rounded-full text-xs text-gray-700"
+                      >
+                        <Hash size={12} className="text-gray-400" />
+                        {keyword}
+                      </span>
+                    ))}
+                    {processKeywords(keywords).length > 10 && (
+                      <span className="text-xs text-gray-400">
+                        +{processKeywords(keywords).length - 10} more
+                      </span>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* EXCERPT */}
@@ -284,7 +339,6 @@ const AdminBlog = () => {
 
             {/* HTML CONTENT / DETAILED DESCRIPTION */}
             <div className="bg-white border rounded-xl overflow-hidden">
-
               <label className="block px-5 py-3 bg-gray-50 border-b text-sm font-medium text-gray-700">
                 HTML Content (Detailed Description)
               </label>
@@ -295,7 +349,6 @@ const AdminBlog = () => {
                 placeholder="Paste or write full HTML here..."
                 className="w-full h-[600px] p-5 font-mono text-sm leading-relaxed resize-y focus:outline-none"
               />
-
             </div>
 
             {/* BUTTON */}
@@ -305,11 +358,9 @@ const AdminBlog = () => {
                 className="bg-[#16A34A] hover:bg-[#15803D] text-white px-8 py-3 rounded-xl font-medium flex items-center gap-2 disabled:opacity-70"
               >
                 <Save size={18} />
-
                 {loading ? "Publishing..." : "Publish"}
               </button>
             </div>
-
           </form>
         </div>
       </main>

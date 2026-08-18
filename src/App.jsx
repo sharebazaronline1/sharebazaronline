@@ -39,7 +39,6 @@ import AdminSignals from "./pages/AdminSignals";
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import AdminRoute from "./components/AdminRoute";      
-// import AdminReferrals from "./pages/AdminReferrals";
 import AdminUsers from "./pages/AdminUsers"
 import ScrollToTop from "./components/ScrollToTop";
 import AdminPreIPO from "./pages/AdminPreIPO"
@@ -52,65 +51,47 @@ import BrokerCompare from "./pages/BrokerCompare";
 import AdminDividends from "./pages/AdminCorporateActions";
 import CorporateActions from "./pages/CorporateActions"
 import BrokerReviewDetail from "./pages/BrokerDetails";
-// Optional: If you want admin to have its own layout without user sidebar/header
-function AdminLayout() {
-  const location = useLocation();
-  const isAdminPage = location.pathname.startsWith("/admin");
 
-  return (
-    <div className="min-h-screen  font-sans flex flex-col">
-      {/* No HeaderAndNav or Footer for admin */}
-      <main className="flex-1">
-        <Outlet />
-      </main>
-    </div>
-  );
-}
+// Import SEO component
+import SEO from "./components/SEO";
 
 function AppLayout() {
   const location = useLocation();
-  const isAuthOrProtectedPage =
-    location.pathname === "/login" ||
+  
+  const hideHeader =
     location.pathname.startsWith("/dashboard") ||
     location.pathname.startsWith("/portfolio") ||
     location.pathname.startsWith("/pre-ipo-watchlist") ||
-    location.pathname.startsWith("/pre-ipo-stocks") ||
-     location.pathname.startsWith("/ipo/ipo-list") ||
     location.pathname.startsWith("/kyc") ||
     location.pathname.startsWith("/orders") ||
     location.pathname.startsWith("/notifications") ||
     location.pathname.startsWith("/settings") ||
     location.pathname.startsWith("/referrals") ||
     location.pathname.startsWith("/holdings") ||
-    location.pathname.startsWith("/admin"); // ← hide layout for admin too
-const hideHeader =
-  location.pathname.startsWith("/dashboard") ||
-  location.pathname.startsWith("/portfolio") ||
-  location.pathname.startsWith("/pre-ipo-watchlist") ||
-  location.pathname.startsWith("/kyc") ||
-  location.pathname.startsWith("/orders") ||
-  location.pathname.startsWith("/notifications") ||
-  location.pathname.startsWith("/settings") ||
-  location.pathname.startsWith("/referrals") ||
-  location.pathname.startsWith("/holdings") ||
-  location.pathname.startsWith("/admin");
+    location.pathname.startsWith("/admin");
+
+  // Check if we're on a blog detail page (these pages will set their own SEO)
+  const isBlogDetailPage = location.pathname.startsWith("/insight-hub/") && 
+                           location.pathname !== "/insight-hub";
+
   return (
     <>
-      <Helmet>
-        <title>ShareBazaarOnline - IPO Updates, Unlisted Shares & Broker Comparison</title>
-        <meta
-          name="description"
-          content="India's most trusted platform for real-time IPO insights, GMP updates, pre-IPO stocks, and broker comparisons."
+      {/* Default SEO - only shown on pages without their own SEO */}
+      {!isBlogDetailPage && (
+        <SEO
+          title="ShareBazaarOnline - IPO Updates, Unlisted Shares & Broker Comparison"
+          description="India's most trusted platform for real-time IPO insights, GMP updates, pre-IPO stocks, and broker comparisons."
+          canonical="/"
         />
-      </Helmet>
+      )}
 
-      <div className="min-h-screen  font-sans flex flex-col">
+      <div className="min-h-screen font-sans flex flex-col">
         {/* HEADER - only on public pages */}
-      {!hideHeader && <HeaderAndNav />}
+        {!hideHeader && <HeaderAndNav />}
 
         {/* CONTENT */}
         <div className="flex-1 flex justify-center">
-  <main className="w-full max-w-[1600px] min-w-0 px-4 lg:px-6">
+          <main className="w-full max-w-[1600px] min-w-0 px-4 lg:px-6">
             <Routes>
               {/* Public routes (with layout) */}
               <Route path="/" element={<Home />} />
@@ -121,14 +102,14 @@ const hideHeader =
               <Route path="/how-to-apply-ipo" element={<HowToApplyIPO />} />
               <Route path="/preipo/:id/:slug" element={<PreIPODetails />} />
               <Route path="/insight-hub" element={<InsightHub />} />
-              <Route  path="/insight-hub/:id/:slug" element={<InsightHubDetails />} />
-              <Route path="/ipo/:id/:slug"element={<IPODetails />} />
+              <Route path="/insight-hub/:id/:slug" element={<InsightHubDetails />} />
+              <Route path="/ipo/:id/:slug" element={<IPODetails />} />
               <Route path="/skill-up" element={<SkillUp />} />
               <Route path="/ipoguide" element={<IPOGuideSection />} />
               <Route path="/preipoguide" element={<UnlistedGuideSection />} />
-                 <Route path="/comparebrokers" element={<BrokerCompare />} />
-                  <Route path="/corporateactions" element={<CorporateActions />} />
-                  <Route  path="/brokerdetails/:slug" element={<BrokerReviewDetail />} />
+              <Route path="/comparebrokers" element={<BrokerCompare />} />
+              <Route path="/corporateactions" element={<CorporateActions />} />
+              <Route path="/brokerdetails/:slug" element={<BrokerReviewDetail />} />
 
               {/* Login & Referral */}
               <Route path="/login" element={<Login />} />
@@ -141,7 +122,7 @@ const hideHeader =
                 <Route path="/pre-ipo-watchlist" element={<PreIPOWatchlist />} />
                 <Route path="/kyc" element={<Documents />} />
                 <Route path="/orders" element={<Orders />} />
-                  <Route path="/holdings" element={<Holdings />} />
+                <Route path="/holdings" element={<Holdings />} />
                 <Route path="/notifications" element={<Notifications />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/referrals" element={<Referrals />} />
@@ -164,7 +145,7 @@ const hideHeader =
               </Route>
 
               {/* Catch-all redirect (optional) */}
-            <Route path="*" element={<NotFound />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
 
@@ -192,7 +173,7 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-         <ScrollToTop />
+        <ScrollToTop />
         <AppLayout />
       </Router>
     </AuthProvider>

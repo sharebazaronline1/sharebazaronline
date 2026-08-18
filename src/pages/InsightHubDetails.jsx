@@ -1,18 +1,16 @@
-// src/pages/BlogDetail.jsx
-
+// src/pages/InsightHubDetails.jsx
 import { useParams, Link } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import { useState, useEffect } from "react";
-import { ArrowLeft, Clock, User, Calendar, Share2 } from "lucide-react";
+import { ArrowLeft, Share2, ChevronRight, Home } from "lucide-react";
 import { supabase } from "../lib/supabase";
 import { fetchInsightDetails } from "../api/mockApi";
+import SEO from "../components/SEO";
+import BreadcrumbSchema from "../components/BreadcrumbSchema";
 
-const BlogDetail = () => {
-  const { id } = useParams();
+const InsightHubDetails = () => {
+  const { id, slug } = useParams();
 
-  const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  // Corporate Action Categories
   const corporateCategories = [
     "Buyback", "Stock Split", "Bonus Issue", "Dividend", "Rights Issue",
     "Merger", "Demerger", "Takeover / Acquisition", "Open Offer", "Delisting",
@@ -26,84 +24,68 @@ const BlogDetail = () => {
     "Regulatory Action", "Trading Suspension", "Revocation of Suspension",
   ];
 
+  const formatKeywordsForMeta = (keywordsArray) => {
+    if (!keywordsArray || keywordsArray.length === 0) return '';
+    if (typeof keywordsArray === 'string') return keywordsArray;
+    return keywordsArray.join(', ');
+  };
+
+  const generateKeywordsFromTitle = (title) => {
+    if (!title) return '';
+    return title
+      .toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .split(' ')
+      .filter(word => word.length > 3)
+      .slice(0, 8)
+      .join(', ');
+  };
+
+  const { data: blog, isLoading, error } = useQuery({
+    queryKey: ['blog', id],
+    queryFn: async () => {
+      let foundBlog = null;
+
+      const { data: dbBlog, error: dbError } = await supabase
+        .from("blogs")
+        .select("*")
+        .eq("id", id)
+        .single();
+
+      if (!dbError && dbBlog) {
+        foundBlog = { ...dbBlog, source: "db" };
+      } else {
+        const mockData = await fetchInsightDetails();
+        const mockBlog = mockData.find(
+          (item) => String(item.id) === String(id) || `mock-${item.id}` === String(id)
+        );
+
+        if (mockBlog) {
+          foundBlog = {
+            ...mockBlog,
+            id: `mock-${mockBlog.id}`,
+            image_url: mockBlog.image,
+            published_at: mockBlog.date,
+            reading_time: mockBlog.readTime,
+            source: "mock",
+            keywords: mockBlog.keywords || [],
+          };
+        }
+      }
+
+      if (!foundBlog) throw new Error("Blog not found");
+      return foundBlog;
+    },
+    staleTime: 10 * 60 * 1000,
+    cacheTime: 15 * 60 * 1000,
+  });
+
   const isCorporateAction = blog?.category 
     ? corporateCategories.includes(blog.category) 
     : false;
 
-  useEffect(() => {
-    const fetchBlog = async () => {
-      setLoading(true);
-
-      try {
-        let foundBlog = null;
-
-        // MOCK BLOG
-        if (String(id).startsWith("mock-")) {
-          const mockData = await fetchInsightDetails();
-          const cleanId = id.replace("mock-", "");
-
-          const mockBlog = mockData.find(
-            (item) => String(item.id) === String(cleanId)
-          );
-
-          if (mockBlog) {
-            foundBlog = {
-              ...mockBlog,
-              id,
-              image_url: mockBlog.image,
-              published_at: mockBlog.date,
-              reading_time: mockBlog.readTime,
-              source: "mock",
-            };
-          }
-        } else {
-          // SUPABASE BLOG
-          const { data, error } = await supabase
-            .from("blogs")
-            .select("*")
-            .eq("id", id)
-            .single();
-
-          if (!error && data) {
-            foundBlog = { ...data, source: "db" };
-          } else {
-            // FALLBACK MOCK
-            const mockData = await fetchInsightDetails();
-            const mockBlog = mockData.find(
-              (item) =>
-                String(item.id) === String(id) ||
-                `mock-${item.id}` === String(id)
-            );
-
-            if (mockBlog) {
-              foundBlog = {
-                ...mockBlog,
-                id: `mock-${mockBlog.id}`,
-                image_url: mockBlog.image,
-                published_at: mockBlog.date,
-                reading_time: mockBlog.readTime,
-                source: "mock",
-              };
-            }
-          }
-        }
-
-        setBlog(foundBlog);
-      } catch (err) {
-        console.error("Error loading blog:", err);
-        setBlog(null);
-      }
-
-      setLoading(false);
-    };
-
-    if (id) fetchBlog();
-  }, [id]);
-
-  // Share functionality
   const handleShare = async () => {
     const url = window.location.href;
-
     if (navigator.share) {
       try {
         await navigator.share({
@@ -112,15 +94,12 @@ const BlogDetail = () => {
           url: url,
         });
       } catch (err) {
-        if (err.name !== "AbortError") {
-          console.error("Share failed:", err);
-        }
+        if (err.name !== "AbortError") console.error("Share failed:", err);
       }
     } else {
-      // Fallback: Copy to clipboard
       try {
         await navigator.clipboard.writeText(url);
-        alert("✅ Link copied to clipboard!");
+        alert("Link copied to clipboard!");
       } catch (err) {
         console.error("Failed to copy:", err);
         alert("Failed to copy link");
@@ -128,7 +107,7 @@ const BlogDetail = () => {
     }
   };
 
-  if (loading) {
+  if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
         <span className="text-gray-600 text-lg">Loading article…</span>
@@ -136,76 +115,136 @@ const BlogDetail = () => {
     );
   }
 
-  if (!blog) {
+  if (error || !blog) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-50">
-        <span className="text-gray-600 text-xl">Article not found</span>
+        <div className="text-center">
+          <span className="text-gray-600 text-xl">Article not found</span>
+          <Link to="/insight-hub" className="block mt-6 text-green-600 hover:underline">
+            ← Back to Insights
+          </Link>
+        </div>
       </div>
     );
   }
 
+  const articleTitle = blog.heading || blog.title || "Article";
+  
+  let metaKeywords = formatKeywordsForMeta(blog.keywords);
+  if (!metaKeywords) {
+    metaKeywords = generateKeywordsFromTitle(articleTitle);
+  }
+  
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Insight Hub", url: "/insight-hub" },
+    { name: articleTitle, url: `/insight-hub/${id}` },
+  ];
+
   return (
-    <div className="bg-gray-50 min-h-screen">
-      {/* Much Wider - Almost Full Screen Width */}
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-10">
+    <>
+      <SEO
+        title={articleTitle}
+        description={blog.meta_description || blog.excerpt || "Read this insightful article on ShareBazaarOnline"}
+        keywords={metaKeywords}
+        canonical={`/insight-hub/${id}/${slug || ''}`}
+        image={blog.image_url || blog.image}
+        type="article"
+        publishedTime={blog.published_at || blog.created_at}
+        modifiedTime={blog.updated_at}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: articleTitle,
+          datePublished: blog.published_at || blog.created_at,
+          dateModified: blog.updated_at,
+          author: { "@type": "Organization", name: "ShareBazaarOnline" },
+          publisher: {
+            "@type": "Organization",
+            name: "ShareBazaarOnline",
+            logo: { "@type": "ImageObject", url: "https://www.sharebazaaronline.com/logo.png" },
+          },
+          image: blog.image_url || blog.image,
+          keywords: metaKeywords,
+        }}
+      />
 
-        {/* CATEGORY */}
-        <div className="text-center mb-5">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
-            {blog.category || "Market Insight"}
-          </span>
-        </div>
+      <BreadcrumbSchema items={breadcrumbItems} />
 
-        {/* TITLE */}
-        <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-          {blog.heading}
-        </h1>
+      <div className="bg-gray-50 min-h-screen">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-8">
+          <nav aria-label="Breadcrumb" className="mb-6 text-sm font-medium text-slate-500">
+            <ol className="flex items-center space-x-2 flex-wrap">
+              <li>
+                <Link to="/" className="hover:text-green-600 flex items-center gap-1 transition-colors">
+                  <Home className="w-4 h-4" />
+                  <span>Home</span>
+                </Link>
+              </li>
+              <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
+              <li>
+                <Link to="/insight-hub" className="hover:text-green-600 transition-colors">
+                  Insight Hub
+                </Link>
+              </li>
+              <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
+              <li className="text-slate-900 font-semibold truncate max-w-[200px] sm:max-w-[350px] md:max-w-[500px]">
+                {articleTitle}
+              </li>
+            </ol>
+          </nav>
 
-        {/* FEATURED IMAGE */}
-        {blog.image_url && (
-          <div className="mb-10">
-            <img
-              src={blog.image_url}
-              alt={blog.title || blog.heading}
-              className="w-full h-auto object-contain rounded-2xl shadow-sm"
+          <div className="text-center mb-5">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+              {blog.category || "Market Insight"}
+            </span>
+          </div>
+
+          <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+            {articleTitle}
+          </h1>
+
+          {blog.image_url && (
+            <div className="mb-10">
+              <img
+                src={blog.image_url}
+                alt={articleTitle}
+                className="w-full h-auto object-contain rounded-2xl shadow-sm"
+              />
+            </div>
+          )}
+
+          <div className="w-full max-w-[1200px] mx-auto">
+            <article
+              className={`prose-content ${isCorporateAction ? "corporate-content" : "blog-content"}`}
+              dangerouslySetInnerHTML={{ __html: blog.content || "" }}
             />
           </div>
-        )}
 
-        {/* ARTICLE CONTENT */}
-        <article
-          className={`prose-content ${isCorporateAction ? "corporate-content" : "blog-content"}`}
-          dangerouslySetInnerHTML={{
-            __html: blog.content || "",
-          }}
-        />
+          <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-3">
+              <span className="font-medium text-gray-700">Share this article</span>
+              <button 
+                onClick={handleShare}
+                className="p-2 bg-white rounded-full border hover:bg-gray-100 transition"
+              >
+                <Share2 size={18} />
+              </button>
+            </div>
 
-        {/* FOOTER */}
-        <div className="mt-16 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <span className="font-medium text-gray-700">Share this article</span>
-            <button 
-              onClick={handleShare}
-              className="p-2 bg-white rounded-full border hover:bg-gray-100 transition"
+            <Link
+              to="/insight-hub"
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#16A34A] text-white font-semibold rounded-full hover:bg-[#15803D] transition"
             >
-              <Share2 size={18} />
-            </button>
+              <ArrowLeft size={18} />
+              Back to Insights
+            </Link>
           </div>
-
-          <Link
-            to="/insight-hub"
-            className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#16A34A] text-white font-semibold rounded-full hover:bg-[#15803D] transition"
-          >
-            <ArrowLeft size={18} />
-            Back to Insights
-          </Link>
         </div>
-      </div>
 
-      {/* CONDITIONAL STYLES - Only apply for normal blogs */}
-      {!isCorporateAction && (
-        <style jsx>{`
-          .blog-content {
+        {!isCorporateAction && (
+          <style jsx>{`
+            .blog-content {
             font-size: 16px;
             line-height: 1.8;
           }
@@ -213,16 +252,16 @@ const BlogDetail = () => {
           .blog-content p {
             margin-bottom: 18px !important;
             line-height: 1.8 !important;
-            color: #374151;
-          }
+              color: #374151;
+            }
 
           .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4 {
-            color: #111827;
-            font-weight: 700;
-            line-height: 1.3;
+              color: #111827;
+              font-weight: 700;
+              line-height: 1.3;
             margin-top: 40px !important;
             margin-bottom: 18px !important;
-          }
+            }
 
           .blog-content h2 { font-size: 28px; }
           .blog-content h3 { font-size: 24px; }
@@ -230,15 +269,15 @@ const BlogDetail = () => {
           .blog-content ul, .blog-content ol {
             margin: 20px 0 !important;
             padding-left: 24px !important;
-          }
+            }
 
-          .blog-content li {
+            .blog-content li {
             margin-bottom: 10px !important;
             line-height: 1.8 !important;
-          }
+            }
 
-          .blog-content table {
-            width: 100%;
+            .blog-content table {
+              width: 100%;
           }
 
           .blog-content th {
@@ -249,10 +288,10 @@ const BlogDetail = () => {
             border: 1px solid #d1d5db;
           }
 
-          .blog-content td {
-            padding: 14px;
-            border: 1px solid #d1d5db;
-          }
+            .blog-content td {
+              padding: 14px;
+              border: 1px solid #d1d5db;
+            }
 
           .blog-content img {
             border-radius: 14px;
@@ -266,13 +305,12 @@ const BlogDetail = () => {
             }
             .blog-content h2 { font-size: 24px; }
             .blog-content h3 { font-size: 20px; }
-          }
-        `}</style>
-      )}
+            }
+          `}</style>
+        )}
 
-      {/* Minimal styles for Corporate Actions - shows HTML as it is */}
-      {isCorporateAction && (
-        <style jsx>{`
+        {isCorporateAction && (
+          <style jsx>{`
           .corporate-content {
             font-size: 16px;
             line-height: 1.75;
@@ -295,10 +333,11 @@ const BlogDetail = () => {
             background-color: #f8fafc;
             font-weight: 600;
           }
-        `}</style>
-      )}
-    </div>
+          `}</style>
+        )}
+      </div>
+    </>
   );
 };
 
-export default BlogDetail;
+export default InsightHubDetails;
