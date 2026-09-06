@@ -7,24 +7,27 @@ import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
 import {
   BarChart2,
-  Briefcase,
   FileText,
   AlertTriangle,
   IndianRupee,
   Menu,
   TrendingUp,
   CalendarDays,
+  X,
+  Phone,
 } from "lucide-react";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
+  const [profile, setProfile] = useState(null);
   const [accountStatus, setAccountStatus] = useState(null);
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [orders, setOrders] = useState([]);
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [trendingShares, setTrendingShares] = useState([]);
-const [upcomingShares, setUpcomingShares] = useState([]);
+  const [upcomingShares, setUpcomingShares] = useState([]);
+  const [showMobilePrompt, setShowMobilePrompt] = useState(false);
 
   useEffect(() => {
     const checkUser = async () => {
@@ -39,13 +42,21 @@ const [upcomingShares, setUpcomingShares] = useState([]);
 
       setUser(session.user);
 
-      const { data: profile } = await supabase
+      // Fetch profile
+      const { data: profileData, error: profileError } = await supabase
         .from("profiles")
-        .select("account_status")
+        .select("id, account_status, mobile, full_name, email")
         .eq("id", session.user.id)
         .single();
 
-      setAccountStatus(profile?.account_status || "inactive");
+      if (profileError) {
+        console.error("Profile fetch error:", profileError);
+      } else {
+        setProfile(profileData);
+        setAccountStatus(profileData?.account_status || "inactive");
+        // Show prompt if mobile is missing (always on refresh)
+        setShowMobilePrompt(!profileData.mobile);
+      }
 
       // FETCH USER ORDERS
       const { data: userOrders, error: orderError } = await supabase
@@ -59,96 +70,75 @@ const [upcomingShares, setUpcomingShares] = useState([]);
       } else {
         setOrders(userOrders || []);
       }
-// FETCH PRE IPO PRICES
-const { data: preIPOData, error: preIPOError } = await supabase
-  .from("pre_ipo_companies")
-  .select("id, name, price")
-  .order("updated_at", { ascending: false });
 
-if (preIPOError) {
-  console.error(preIPOError);
-} else {
-  setTrendingShares(preIPOData || []);
-  setUpcomingShares(preIPOData || []);
-}
+      // FETCH PRE IPO PRICES
+      const { data: preIPOData, error: preIPOError } = await supabase
+        .from("pre_ipo_companies")
+        .select("id, name, price")
+        .order("updated_at", { ascending: false });
+
+      if (preIPOError) {
+        console.error(preIPOError);
+      } else {
+        setTrendingShares(preIPOData || []);
+        setUpcomingShares(preIPOData || []);
+      }
       setLoading(false);
     };
 
     checkUser();
   }, [navigate]);
 
+  // Close banner (hides it until next page reload)
+  const dismissMobilePrompt = () => {
+    setShowMobilePrompt(false);
+  };
+
   if (!user || loading) return null;
 
   // CALCULATIONS
   const totalOrders = orders.length;
-
   const settledOrders = orders.filter(
     (o) => o.status?.toUpperCase() === "SETTLED"
   );
-
   const holdingsCount = settledOrders.length;
-
-  const portfolioValue = settledOrders.reduce((acc, item) => {
-    const qty = Number(item.quantity || 0);
-    const price = Number(item.price || 0);
-    return acc + qty * price;
-  }, 0);
 
   return (
     <div className="min-h-screen bg-gray-50">
-     <Sidebar
-  mobileOpen={mobileSidebarOpen}
-  setMobileOpen={setMobileSidebarOpen}
-/>
+      <Sidebar
+        mobileOpen={mobileSidebarOpen}
+        setMobileOpen={setMobileSidebarOpen}
+      />
 
       <main className="md:ml-64 p-4 md:p-8 transition-all">
         {/* Mobile Header */}
-    <header className="md:hidden sticky top-0 z-20 bg-white border-gray-200 px-4 py-4 mb-6">
-  <div className="flex items-center justify-between">
+        <header className="md:hidden sticky top-0 z-20 bg-white border-gray-200 px-4 py-4 mb-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => setMobileSidebarOpen(true)}
+                className="p-1"
+              >
+                <Menu size={24} />
+              </button>
+              <div>
+                <p className="text-xs text-gray-500">Welcome Back</p>
+                <h1 className="text-lg font-semibold text-gray-900 leading-tight">Dashboard</h1>
+              </div>
+              <button
+                onClick={() => navigate("/kyc")}
+                className="ml-2 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold shadow-sm transition-all whitespace-nowrap"
+                title="Complete your KYC"
+              >
+                Complete KYC
+              </button>
+            </div>
+            <div className="shrink-0">
+              <UserProfileDropdown />
+            </div>
+          </div>
+        </header>
 
-    {/* LEFT */}
-    <div className="flex items-center gap-3">
-      <button
-        onClick={() => setMobileSidebarOpen(true)}
-        className="p-1"
-      >
-        <Menu size={24} />
-      </button>
-
-      <div>
-        <p className="text-xs text-gray-500">Welcome Back</p>
-        <h1 className="text-lg font-semibold text-gray-900 leading-tight">Dashboard</h1>
-      </div>
-
-      {/* Account Inactive / Complete KYC Button */}
-     <button
-  onClick={() => navigate("/kyc")}
-  className="
-    ml-2
-    px-4
-    py-2
-    rounded-full
-    bg-blue-600
-    hover:bg-blue-700
-    text-white
-    text-xs
-    font-semibold
-    shadow-sm
-    transition-all
-    whitespace-nowrap
-  "
-  title="Complete your KYC"
->
-  Complete KYC
-</button>
-    </div>
-
-    {/* RIGHT */}
-    <div className="shrink-0">
-      <UserProfileDropdown />
-    </div>
-  </div>
-</header>
         {/* Desktop Header */}
         <header className="hidden md:flex items-center justify-between mb-8">
           <div>
@@ -158,82 +148,72 @@ if (preIPOError) {
                 user.email ||
                 "Investor"}
             </h1>
-
             <p className="text-gray-600 mt-1">
               Track IPOs, Pre-IPOs & portfolio performance
             </p>
           </div>
-<div className="flex items-center gap-4">
-  {accountStatus !== "active" && (
-    <div
-      className="
-        flex items-center gap-4
-        px-5 py-3
-        rounded-2xl
-        border border-orange-200
-        bg-gradient-to-r
-        from-orange-50
-        to-amber-50
-        shadow-sm
-      "
-    >
-      {/* Icon */}
-      <div
-        className="
-          w-10 h-10
-          rounded-xl
-          bg-orange-100
-          flex items-center justify-center
-          flex-shrink-0
-        "
-      >
-        <AlertTriangle
-          size={20}
-          className="text-orange-600"
-        />
-      </div>
-
-      {/* Text */}
-      <div>
+          <div className="flex items-center gap-4">
+            {accountStatus !== "active" && (
+              <div className="flex items-center gap-4 px-5 py-3 rounded-2xl border border-orange-200 bg-gradient-to-r from-orange-50 to-amber-50 shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center flex-shrink-0">
+                  <AlertTriangle size={20} className="text-orange-600" />
+                </div>
+                <div>
                   <p className="font-semibold text-amber-800 text-sm">
                     Account is Inactive
-        </p>
-
-        <p className="text-xs text-slate-600">
-          Complete your KYC to start trading
-        </p>
-      </div>
-
-      {/* CTA */}
-      <button
-        onClick={() => navigate("/kyc")}
-        className="
-          ml-2
-          px-5 py-2.5
-          rounded-xl
-          bg-blue-600
-          hover:bg-blue-700
-          text-white
-          text-sm
-          font-semibold
-          transition-all
-          shadow-sm
-          whitespace-nowrap
-        "
-      >
-        Complete KYC
-      </button>
-    </div>
-  )}
-
-  <UserProfileDropdown />
-</div>
+                  </p>
+                  <p className="text-xs text-slate-600">
+                    Complete your KYC to start trading
+                  </p>
+                </div>
+                <button
+                  onClick={() => navigate("/kyc")}
+                  className="ml-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-all shadow-sm whitespace-nowrap"
+                >
+                  Complete KYC
+                </button>
+              </div>
+            )}
+            <UserProfileDropdown />
+          </div>
         </header>
+
+        {/* ===== MOBILE NUMBER PROMPT BANNER (always appears if missing) ===== */}
+        {showMobilePrompt && (
+          <div className="mb-6 bg-blue-50 border border-blue-200 rounded-2xl p-4 shadow-sm flex items-center justify-between gap-4 flex-wrap">
+            <div className="flex items-center gap-3">
+              <div className="p-2 bg-blue-100 rounded-full text-blue-600">
+                <Phone size={20} />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-blue-900">
+                  Update Your Mobile Number
+                </p>
+                <p className="text-xs text-blue-700">
+                  Please add your mobile number to stay updated and for secure transactions.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => navigate("/kyc")}
+                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-xl transition"
+              >
+                Update Now
+              </button>
+              <button
+                onClick={dismissMobilePrompt}
+                className="p-2 rounded-full hover:bg-blue-200/50 transition text-blue-600"
+                aria-label="Dismiss"
+              >
+                <X size={20} />
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
-         
-
           <StatCard
             icon={<FileText />}
             title="Holdings"
@@ -241,7 +221,6 @@ if (preIPOError) {
             change="Settled investments"
             onClick={() => navigate("/holdings")}
           />
-
           <StatCard
             icon={<CalendarDays />}
             title="Orders"
@@ -249,7 +228,6 @@ if (preIPOError) {
             change="View all orders"
             onClick={() => navigate("/orders")}
           />
-
           <StatCard
             icon={<IndianRupee />}
             title="Wallet Balance"
@@ -262,34 +240,31 @@ if (preIPOError) {
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-4">
           <section className="bg-white rounded-2xl p-5 -sm xl:col-span-2 h-72 flex flex-col">
             <h2 className="text-xl font-bold mb-4">Top Trending</h2>
-
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 flex-1">
-            {trendingShares.slice(0, 3).map((item, idx) => (
-  <SmallPreIPOItem
-    key={item.id || idx}
-    id={item.id}
-    name={item.name}
-    price={`₹${Number(item.price || 0).toLocaleString("en-IN")}`}
-    demand={
-      idx === 0
-        ? "Very High Demand"
-        : idx === 1
-        ? "High Investor Interest"
-        : "IPO Watchlist"
-    }
-    navigate={navigate}
-  />
-))}
+              {trendingShares.slice(0, 3).map((item, idx) => (
+                <SmallPreIPOItem
+                  key={item.id || idx}
+                  id={item.id}
+                  name={item.name}
+                  price={`₹${Number(item.price || 0).toLocaleString("en-IN")}`}
+                  demand={
+                    idx === 0
+                      ? "Very High Demand"
+                      : idx === 1
+                      ? "High Investor Interest"
+                      : "IPO Watchlist"
+                  }
+                  navigate={navigate}
+                />
+              ))}
             </div>
           </section>
 
           <section className="bg-white rounded-2xl p-5 -sm h-72 flex flex-col">
             <h2 className="text-xl font-bold mb-4">Portfolio Mix</h2>
-
             <div className="flex-1 bg-gray-50 rounded-xl flex items-center justify-center">
               <BarChart2 className="w-14 h-14 text-green-600" />
             </div>
-
             <p className="text-center text-xs text-gray-500 mt-2">
               IPO • Pre-IPO distribution
             </p>
@@ -300,25 +275,24 @@ if (preIPOError) {
               <TrendingUp className="text-green-600" />
               Upcoming Unlisted Shares
             </h2>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {upcomingShares.slice(0, 3).map((item, idx) => (
-  <UnlistedCard
-    key={item.id || idx}
-    id={item.id}
-    name={item.name}
-    sector="Pre-IPO"
-    price={`₹${Number(item.price || 0).toLocaleString("en-IN")}`}
-    status={
-      idx === 0
-        ? "Active Unlisted"
-        : idx === 1
-        ? "IPO Expected"
-        : "Pre-IPO"
-    }
-    navigate={navigate}
-  />
-))}
+              {upcomingShares.slice(0, 3).map((item, idx) => (
+                <UnlistedCard
+                  key={item.id || idx}
+                  id={item.id}
+                  name={item.name}
+                  sector="Pre-IPO"
+                  price={`₹${Number(item.price || 0).toLocaleString("en-IN")}`}
+                  status={
+                    idx === 0
+                      ? "Active Unlisted"
+                      : idx === 1
+                      ? "IPO Expected"
+                      : "Pre-IPO"
+                  }
+                  navigate={navigate}
+                />
+              ))}
             </div>
           </section>
         </div>
@@ -340,12 +314,9 @@ const StatCard = ({ icon, title, value, change, onClick }) => (
       <div className="p-2 bg-green-100 text-green-600 rounded-full">
         {icon}
       </div>
-
       <p className="text-gray-600 text-sm">{title}</p>
     </div>
-
     <p className="text-2xl font-bold">{value}</p>
-
     <p className="text-sm text-green-600">{change}</p>
   </div>
 );
@@ -361,19 +332,15 @@ const SmallPreIPOItem = ({
     <h4 className="font-semibold text-gray-900 text-sm leading-snug">
       {name}
     </h4>
-
     <div className="flex items-center gap-1">
       <span className="text-lg font-bold text-gray-900">{price}</span>
-
       <span className="text-xs text-gray-500">/ share</span>
     </div>
-
     {demand && (
       <span className="inline-block w-fit px-2.5 py-1 text-xs font-medium rounded-full bg-green-50 text-green-700">
         {demand}
       </span>
     )}
-
     <div className="pt-2">
       <button
         onClick={() => navigate("/orders")}
@@ -394,20 +361,16 @@ const UnlistedCard = ({
 }) => (
   <div className="bg-gray-50 rounded-xl p-4 hover:shadow-md transition">
     <h4 className="font-bold text-gray-900">{name}</h4>
-
     <p className="text-sm text-gray-600 mt-1">
       Sector: {sector}
     </p>
-
     <p className="text-sm text-gray-600">
       Price Range: {price}
     </p>
-
     <div className="flex items-center justify-between mt-4">
       <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-700 font-medium">
         {status}
       </span>
-
       <button
         onClick={() => navigate("/orders")}
         className="px-4 py-1.5 text-sm font-semibold rounded-full border-green-600 text-green-600 hover:bg-green-50 transition"

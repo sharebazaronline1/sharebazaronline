@@ -1,5 +1,5 @@
 // src/pages/AdminUsers.jsx
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { supabase } from "../lib/supabase";
 import AdminSidebar from "../components/AdminSidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
@@ -21,6 +21,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Download,
+  Filter,
 } from "lucide-react";
 import * as XLSX from "xlsx";
 
@@ -30,13 +31,18 @@ const AdminUsers = () => {
   const [error, setError] = useState(null);
   const [editingRates, setEditingRates] = useState({});
   const [expandedUserId, setExpandedUserId] = useState(null);
-const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  // Filter state
+  const [filterStatus, setFilterStatus] = useState("all");
+  const [filterOrders, setFilterOrders] = useState("all");
+
   // Modals
   const [selectedReferred, setSelectedReferred] = useState(null);
   const [referredOrders, setReferredOrders] = useState([]);
   const [modalLoading, setModalLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-const [referredOrdersMap, setReferredOrdersMap] = useState({});
+  const [referredOrdersMap, setReferredOrdersMap] = useState({});
   const [selectedMainUser, setSelectedMainUser] = useState(null);
   const [mainUserOrders, setMainUserOrders] = useState([]);
   const [mainModalLoading, setMainModalLoading] = useState(false);
@@ -53,11 +59,11 @@ const [referredOrdersMap, setReferredOrdersMap] = useState({});
 
   const calculateCommission = async (referredUserId, commissionRate) => {
     const { data: orders } = await supabase
-  .from("orders")
-  .select("total")
-  .eq("user_id", referredUserId)
-  .eq("status", "CONFIRMED")
-  .eq("order_type", "BUY");
+      .from("orders")
+      .select("total")
+      .eq("user_id", referredUserId)
+      .eq("status", "CONFIRMED")
+      .eq("order_type", "BUY");
 
     return orders?.reduce((sum, o) => sum + (Number(o.total || 0) * (commissionRate / 100)), 0) || 0;
   };
@@ -81,34 +87,34 @@ const [referredOrdersMap, setReferredOrdersMap] = useState({});
             .select("*", { count: "exact", head: true })
             .eq("referrer_sb_user_id", profile.id);
 
-         const { data: referredUsersRaw } = await supabase
-  .from("referrals")
-  .select(`
-    referred_name,
-    referred_email,
-    referred_mobile,
-    referred_sb_user_id,
-    reward_amount,
-    commission_earned,
-    status,
-    created_at
-  `)
-  .eq("referrer_sb_user_id", profile.id);
+          const { data: referredUsersRaw } = await supabase
+            .from("referrals")
+            .select(`
+              referred_name,
+              referred_email,
+              referred_mobile,
+              referred_sb_user_id,
+              reward_amount,
+              commission_earned,
+              status,
+              created_at
+            `)
+            .eq("referrer_sb_user_id", profile.id);
 
-const referredUsers = await Promise.all(
-  (referredUsersRaw || []).map(async (ref) => {
-    const { data: referredProfile } = await supabase
-      .from("profiles")
-      .select("sb_user_id")
-      .eq("id", ref.referred_sb_user_id)
-      .maybeSingle();
+          const referredUsers = await Promise.all(
+            (referredUsersRaw || []).map(async (ref) => {
+              const { data: referredProfile } = await supabase
+                .from("profiles")
+                .select("sb_user_id")
+                .eq("id", ref.referred_sb_user_id)
+                .maybeSingle();
 
-    return {
-      ...ref,
-      profiles: referredProfile || null,
-    };
-  })
-);
+              return {
+                ...ref,
+                profiles: referredProfile || null,
+              };
+            })
+          );
 
           const { count: orderCount } = await supabase
             .from("orders")
@@ -169,22 +175,21 @@ const referredUsers = await Promise.all(
       setUsers(enriched);
       const ordersMap = {};
 
-for (const user of enriched) {
-  for (const ref of user.referredUsers) {
-    if (!ref.referred_sb_user_id) continue;
+      for (const user of enriched) {
+        for (const ref of user.referredUsers) {
+          if (!ref.referred_sb_user_id) continue;
 
-   const { data: orders } = await supabase
-  .from("orders")
-  .select("total, status, order_type")
-  .eq("user_id", ref.referred_sb_user_id);
+          const { data: orders } = await supabase
+            .from("orders")
+            .select("total, status, order_type")
+            .eq("user_id", ref.referred_sb_user_id);
 
-    ordersMap[ref.referred_sb_user_id] = orders || [];
-  }
-}
+          ordersMap[ref.referred_sb_user_id] = orders || [];
+        }
+      }
 
-setReferredOrdersMap(ordersMap);
+      setReferredOrdersMap(ordersMap);
 
-      // Calculate commissions for all referred users
       const commissionMap = {};
       for (const user of enriched) {
         for (const ref of user.referredUsers) {
@@ -206,164 +211,168 @@ setReferredOrdersMap(ordersMap);
     }
   };
 
+  // ================= FILTERED USERS =================
+  const filteredUsers = useMemo(() => {
+    return users.filter((user) => {
+      // Status filter
+      if (filterStatus !== "all") {
+        const status = (user.account_status || "active").toLowerCase();
+        if (filterStatus === "active" && status !== "active") return false;
+        if (filterStatus === "inactive" && status !== "inactive") return false;
+      }
+
+      // Orders filter
+      if (filterOrders === "withOrders" && (user.orderCount || 0) === 0) return false;
+      if (filterOrders === "withoutOrders" && (user.orderCount || 0) > 0) return false;
+
+      return true;
+    });
+  }, [users, filterStatus, filterOrders]);
+
   // ================= DOWNLOAD FUNCTIONS =================
   const downloadUserReport = async () => {
-  const userSummary = [];
+    const userSummary = [];
 
-  for (const user of users) {
-    // 🔹 Get referred users
-    const { data: referrals } = await supabase
-      .from("referrals")
-      .select("referred_sb_user_id")
-      .eq("referrer_sb_user_id", user.id);
+    for (const user of filteredUsers) {
+      const { data: referrals } = await supabase
+        .from("referrals")
+        .select("referred_sb_user_id")
+        .eq("referrer_sb_user_id", user.id);
 
-    let referralOrders = 0;
-    let referralAmount = 0;
+      let referralOrders = 0;
+      let referralAmount = 0;
 
-    for (const ref of referrals || []) {
-      const { data: orders } = await supabase
-        .from("orders")
-       .select("total, status, order_type")
-        .eq("user_id", ref.referred_sb_user_id);
+      for (const ref of referrals || []) {
+        const { data: orders } = await supabase
+          .from("orders")
+          .select("total, status, order_type")
+          .eq("user_id", ref.referred_sb_user_id);
 
-      if (orders) {
-        referralOrders += orders.length;
-        referralAmount += orders
-  .filter(
-    (o) =>
-      o.order_type === "BUY" &&
-      (o.status === "CONFIRMED" ||
-       o.status === "SETTLED")
-  )
-  .reduce(
-          (sum, o) =>
-            sum +
-            ((Number(o.total) || 0) *
-              ((user.commission_rate || 0) / 100)),
-          0
-        );
+        if (orders) {
+          referralOrders += orders.length;
+          referralAmount += orders
+            .filter(
+              (o) =>
+                o.order_type === "BUY" &&
+                (o.status === "CONFIRMED" ||
+                 o.status === "SETTLED")
+            )
+            .reduce(
+              (sum, o) =>
+                sum +
+                ((Number(o.total) || 0) *
+                  ((user.commission_rate || 0) / 100)),
+              0
+            );
+        }
       }
+
+      userSummary.push({
+        "Full Name": user.full_name || "",
+        "SB ID": user.sb_user_id || "",
+        "Email": user.email || "",
+        "Mobile": user.mobile || "",
+        "Demat ID": user.demat_id || "",
+        "Joined Date": new Date(user.created_at).toLocaleDateString("en-IN"),
+        "Account Status": user.account_status || "Active",
+        "Commission Rate (%)": user.commission_rate || 0.25,
+        "Total Orders": user.orderCount || 0,
+        "Portfolio Value (₹)": user.totalPortfolioValue || 0,
+        "Total Referrals": referrals?.length || 0,
+        "Referral Orders Count": referralOrders,
+        "Referral Commission Earned (₹)": referralAmount.toFixed(2),
+        "KYC Status": user.kycStatus || "Not Uploaded",
+        "Bank Name": user.bankAccount?.bank_name || "",
+        "Account Number": user.bankAccount?.account_number || "",
+        "IFSC": user.bankAccount?.ifsc_code || "",
+      });
     }
 
-    userSummary.push({
-      "Full Name": user.full_name || "",
-      "SB ID": user.sb_user_id || "",
-      "Email": user.email || "",
-      "Mobile": user.mobile || "",
-      "Demat ID": user.demat_id || "",
-      "Joined Date": new Date(user.created_at).toLocaleDateString("en-IN"),
-      "Account Status": user.account_status || "Active",
-      "Commission Rate (%)": user.commission_rate || 0.25,
-      "Total Orders": user.orderCount || 0,
-      "Portfolio Value (₹)": user.totalPortfolioValue || 0,
+    const ws = XLSX.utils.json_to_sheet(userSummary);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Users Summary");
+    XLSX.writeFile(
+      wb,
+      `ShareBazaar_Users_Summary_${new Date().toISOString().slice(0, 10)}.xlsx`
+    );
+  };
 
-      // ✅ NEW FIELDS
-      "Total Referrals": referrals?.length || 0,
-      "Referral Orders Count": referralOrders,
-      "Referral Commission Earned (₹)": referralAmount.toFixed(2),
-
-      "KYC Status": user.kycStatus || "Not Uploaded",
-      "Bank Name": user.bankAccount?.bank_name || "",
-      "Account Number": user.bankAccount?.account_number || "",
-      "IFSC": user.bankAccount?.ifsc_code || "",
-    });
-  }
-
-  const ws = XLSX.utils.json_to_sheet(userSummary);
-  const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, "Users Summary");
-  XLSX.writeFile(
-    wb,
-    `ShareBazaar_Users_Summary_${new Date().toISOString().slice(0, 10)}.xlsx`
-  );
-};
-
-const downloadOrderReport = async () => {
-  // ✅ Step 1: Get all orders with user
-  const { data: orders, error } = await supabase
-    .from("orders")
-    .select(`
-      id,
-      asset_name,
-      price,
-      quantity,
-      total,
-      order_type,
-      status,
-      created_at,
-      user_id,
-      profiles (
+  const downloadOrderReport = async () => {
+    const { data: orders, error } = await supabase
+      .from("orders")
+      .select(`
         id,
-        full_name,
-        sb_user_id
-      )
-    `);
+        asset_name,
+        price,
+        quantity,
+        total,
+        order_type,
+        status,
+        created_at,
+        user_id,
+        profiles (
+          id,
+          full_name,
+          sb_user_id
+        )
+      `);
 
-  if (error) {
-    console.error(error);
-    return;
-  }
+    if (error) {
+      console.error(error);
+      return;
+    }
 
+    const { data: referrals } = await supabase
+      .from("referrals")
+      .select("referrer_sb_user_id, referred_sb_user_id");
 
-  const { data: referrals } = await supabase
-    .from("referrals")
-    .select("referrer_sb_user_id, referred_sb_user_id");
+    const { data: profiles } = await supabase
+      .from("profiles")
+      .select("id, full_name, sb_user_id");
 
-  
-  const { data: profiles } = await supabase
-    .from("profiles")
-    .select("id, full_name, sb_user_id");
-
-  
-  const profileMap = {};
-  profiles.forEach((p) => {
-    profileMap[p.id] = p;
-  });
-
-  const referralMap = {};
-  referrals.forEach((r) => {
-    referralMap[r.referred_sb_user_id] = r;
-  });
-
-  let allOrders = [];
-
-  orders?.forEach((order) => {
-    const user = profileMap[order.user_id];
-    const referral = referralMap[order.user_id];
-    const referrer = referral
-      ? profileMap[referral.referrer_sb_user_id]
-      : null;
-
-    allOrders.push({
-      
-      "Company Name": order.asset_name,
-
-   
-      "User Name": user?.full_name || "-",
-      "User SB ID": user?.sb_user_id || "-",
-
-      "Referrer Name": referrer?.full_name || "-",
-      "Referrer SB ID": referrer?.sb_user_id || "-",
-
-      "Quantity": order.quantity || 0,
-      "Price (₹)": order.price || 0,
-      "Total (₹)": order.total || 0,
-
-      "Status": order.status,
-      "Order Type": order.order_type,
-      "Order Date": new Date(order.created_at).toLocaleDateString("en-IN"),
+    const profileMap = {};
+    profiles.forEach((p) => {
+      profileMap[p.id] = p;
     });
-  });
 
-  const ws = XLSX.utils.json_to_sheet(allOrders);
-  const wb = XLSX.utils.book_new();
-  XLSX.utils.book_append_sheet(wb, ws, "All Orders");
+    const referralMap = {};
+    referrals.forEach((r) => {
+      referralMap[r.referred_sb_user_id] = r;
+    });
 
-  XLSX.writeFile(
-    wb,
-    `All_Orders_Report_${new Date().toISOString().slice(0, 10)}.xlsx`
-  );
-};
+    let allOrders = [];
+
+    orders?.forEach((order) => {
+      const user = profileMap[order.user_id];
+      const referral = referralMap[order.user_id];
+      const referrer = referral
+        ? profileMap[referral.referrer_sb_user_id]
+        : null;
+
+      allOrders.push({
+        "Company Name": order.asset_name,
+        "User Name": user?.full_name || "-",
+        "User SB ID": user?.sb_user_id || "-",
+        "Referrer Name": referrer?.full_name || "-",
+        "Referrer SB ID": referrer?.sb_user_id || "-",
+        "Quantity": order.quantity || 0,
+        "Price (₹)": order.price || 0,
+        "Total (₹)": order.total || 0,
+        "Status": order.status,
+        "Order Type": order.order_type,
+        "Order Date": new Date(order.created_at).toLocaleDateString("en-IN"),
+      });
+    });
+
+    const ws = XLSX.utils.json_to_sheet(allOrders);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "All Orders");
+
+    XLSX.writeFile(
+      wb,
+      `All_Orders_Report_${new Date().toISOString().slice(0, 10)}.xlsx`
+    );
+  };
 
   const toggleExpand = (userId) => {
     setExpandedUserId(expandedUserId === userId ? null : userId);
@@ -396,52 +405,47 @@ const downloadOrderReport = async () => {
   };
 
   const verifyOrder = async (orderId) => {
-  const { error } = await supabase
-    .from("orders")
-    .update({ status: "CONFIRMED" })
-    .eq("id", orderId);
+    const { error } = await supabase
+      .from("orders")
+      .update({ status: "CONFIRMED" })
+      .eq("id", orderId);
 
-  if (error) {
-    console.error("Failed to verify order:", error);
-    alert(`Failed to update order: ${error.message}`);
-    return;
-  }
+    if (error) {
+      console.error("Failed to verify order:", error);
+      alert(`Failed to update order: ${error.message}`);
+      return;
+    }
 
-  // ✅ Update main modal orders
-  setMainUserOrders((prev) =>
-    prev.map((order) =>
-      order.id === orderId
-        ? { ...order, status: "CONFIRMED" }
-        : order
-    )
-  );
-
-  // ✅ Update referred orders modal
-  setReferredOrders((prev) =>
-    prev.map((order) =>
-      order.id === orderId
-        ? { ...order, status: "CONFIRMED" }
-        : order
-    )
-  );
-
-  // ✅ Update referred cards cache
-  setReferredOrdersMap((prev) => {
-    const updated = { ...prev };
-
-    Object.keys(updated).forEach((userId) => {
-      updated[userId] = updated[userId].map((order) =>
+    setMainUserOrders((prev) =>
+      prev.map((order) =>
         order.id === orderId
           ? { ...order, status: "CONFIRMED" }
           : order
-      );
+      )
+    );
+
+    setReferredOrders((prev) =>
+      prev.map((order) =>
+        order.id === orderId
+          ? { ...order, status: "CONFIRMED" }
+          : order
+      )
+    );
+
+    setReferredOrdersMap((prev) => {
+      const updated = { ...prev };
+      Object.keys(updated).forEach((userId) => {
+        updated[userId] = updated[userId].map((order) =>
+          order.id === orderId
+            ? { ...order, status: "CONFIRMED" }
+            : order
+        );
+      });
+      return updated;
     });
 
-    return updated;
-  });
-
-  alert("Order verified successfully as CONFIRMED!");
-};
+    alert("Order verified successfully as CONFIRMED!");
+  };
 
   const openReferredModal = async (referred, referrer) => {
     setSelectedReferred({ ...referred, referrer });
@@ -541,120 +545,152 @@ const downloadOrderReport = async () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <AdminSidebar
-  mobileOpen={mobileOpen}
-  setMobileOpen={setMobileOpen}
-/>
+        mobileOpen={mobileOpen}
+        setMobileOpen={setMobileOpen}
+      />
 
       <main className="md:ml-64 transition-all duration-300">
-       <header className="sticky top-0 z-10 bg-white border-gray-200 px-4 py-4 shadow-sm">
-  <div className="max-w-7xl mx-auto">
-    
-    {/* Mobile Header */}
-    <div className="flex items-center justify-between md:hidden">
-      
-      {/* Left */}
-      <div className="flex items-center gap-3">
-        <button
-          onClick={() => setMobileOpen(true)}
-          className="p-2.5 rounded-xl border border-gray-200 bg-white shadow-sm"
-        >
-          <Menu size={22} />
-        </button>
-
-        <div>
-          <h1 className="text-2xl font-bold leading-tight text-gray-900">
-            Users
-          </h1>
-
-          <p className="text-xs text-gray-500">
-            Registered users
-          </p>
-        </div>
-      </div>
-
-      {/* Right */}
-      <div className="flex items-center gap-2">
-        <button
-          onClick={fetchUsers}
-          className="p-2.5 rounded-xl border border-gray-200 bg-white shadow-sm"
-        >
-          <RefreshCw size={18} />
-        </button>
-
-        <button
-          onClick={() =>
-            setShowDownloadDropdown(!showDownloadDropdown)
-          }
-          className="p-2.5 rounded-xl border border-gray-200 bg-white shadow-sm"
-        >
-          <Download size={18} />
-        </button>
-      </div>
-    </div>
-
-    {/* Desktop Header */}
-    <div className="hidden md:flex items-center justify-between gap-4">
-      <div>
-        <h1 className="text-3xl font-semibold text-gray-900 tracking-tight">
-          Users Overview
-        </h1>
-
-        <p className="text-sm text-gray-600 mt-1">
-          All registered users • Orders • Portfolio • Referrals • KYC
-        </p>
-      </div>
-
-      <div className="flex items-center gap-3 relative">
-        <button
-          onClick={fetchUsers}
-          className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 shadow-sm"
-        >
-          <RefreshCw size={17} />
-          Refresh
-        </button>
-
-        <div className="relative">
-          <button
-            onClick={() =>
-              setShowDownloadDropdown(!showDownloadDropdown)
-            }
-            className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 shadow-sm"
-          >
-            <Download size={17} />
-            Download Report
-            <ChevronDown size={16} />
-          </button>
-
-          {showDownloadDropdown && (
-            <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
-              <button
-                onClick={() => {
-                  downloadUserReport();
-                  setShowDownloadDropdown(false);
-                }}
-                className="w-full text-left px-6 py-3 hover:bg-gray-50 text-sm"
-              >
-                User Summary Report
-              </button>
-
-              <button
-                onClick={() => {
-                  downloadOrderReport();
-                  setShowDownloadDropdown(false);
-                }}
-                className="w-full text-left px-6 py-3 hover:bg-gray-50 text-sm"
-              >
-                All Orders Report
-              </button>
+        <header className="sticky top-0 z-10 bg-white border-gray-200 px-4 py-4 shadow-sm">
+          <div className="max-w-7xl mx-auto">
+            {/* Mobile Header */}
+            <div className="flex items-center justify-between md:hidden">
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => setMobileOpen(true)}
+                  className="p-2.5 rounded-xl border border-gray-200 bg-white shadow-sm"
+                >
+                  <Menu size={22} />
+                </button>
+                <div>
+                  <h1 className="text-2xl font-bold leading-tight text-gray-900">
+                    Users
+                  </h1>
+                  <p className="text-xs text-gray-500">
+                    Registered users
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={fetchUsers}
+                  className="p-2.5 rounded-xl border border-gray-200 bg-white shadow-sm"
+                >
+                  <RefreshCw size={18} />
+                </button>
+                <button
+                  onClick={() =>
+                    setShowDownloadDropdown(!showDownloadDropdown)
+                  }
+                  className="p-2.5 rounded-xl border border-gray-200 bg-white shadow-sm"
+                >
+                  <Download size={18} />
+                </button>
+              </div>
             </div>
-          )}
-        </div>
 
-        <UserProfileDropdown />
-      </div>
-    </div>
-  </div>
-</header>
+            {/* Desktop Header */}
+            <div className="hidden md:flex items-center justify-between gap-4">
+              <div>
+                <h1 className="text-3xl font-semibold text-gray-900 tracking-tight">
+                  Users Overview
+                </h1>
+                <p className="text-sm text-gray-600 mt-1">
+                  All registered users • Orders • Portfolio • Referrals • KYC
+                </p>
+              </div>
+              <div className="flex items-center gap-3 relative">
+                <button
+                  onClick={fetchUsers}
+                  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 shadow-sm"
+                >
+                  <RefreshCw size={17} />
+                  Refresh
+                </button>
+
+                <div className="relative">
+                  <button
+                    onClick={() =>
+                      setShowDownloadDropdown(!showDownloadDropdown)
+                    }
+                    className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-2xl hover:bg-gray-50 shadow-sm"
+                  >
+                    <Download size={17} />
+                    Download Report
+                    <ChevronDown size={16} />
+                  </button>
+
+                  {showDownloadDropdown && (
+                    <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-gray-100 py-2 z-50">
+                      <button
+                        onClick={() => {
+                          downloadUserReport();
+                          setShowDownloadDropdown(false);
+                        }}
+                        className="w-full text-left px-6 py-3 hover:bg-gray-50 text-sm"
+                      >
+                        User Summary Report
+                      </button>
+                      <button
+                        onClick={() => {
+                          downloadOrderReport();
+                          setShowDownloadDropdown(false);
+                        }}
+                        className="w-full text-left px-6 py-3 hover:bg-gray-50 text-sm"
+                      >
+                        All Orders Report
+                      </button>
+                    </div>
+                  )}
+                </div>
+
+                <UserProfileDropdown />
+              </div>
+            </div>
+
+            {/* ===== FILTER BAR ===== */}
+            <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-gray-100 pt-4">
+              <div className="flex items-center gap-2 text-sm text-gray-600">
+                <Filter size={16} />
+                <span className="font-medium">Filters:</span>
+              </div>
+
+              {/* Status Filter */}
+              <div className="flex items-center gap-2">
+                <label htmlFor="statusFilter" className="text-xs text-gray-500">Status</label>
+                <select
+                  id="statusFilter"
+                  value={filterStatus}
+                  onChange={(e) => setFilterStatus(e.target.value)}
+                  className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+                >
+                  <option value="all">All</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
+
+              {/* Orders Filter */}
+              <div className="flex items-center gap-2">
+                <label htmlFor="ordersFilter" className="text-xs text-gray-500">Orders</label>
+                <select
+                  id="ordersFilter"
+                  value={filterOrders}
+                  onChange={(e) => setFilterOrders(e.target.value)}
+                  className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
+                >
+                  <option value="all">All</option>
+                  <option value="withOrders">Has Orders</option>
+                  <option value="withoutOrders">No Orders</option>
+                </select>
+              </div>
+
+              {/* Optional: show count of filtered users */}
+              <span className="ml-auto text-xs text-gray-500">
+                Showing {filteredUsers.length} of {users.length} users
+              </span>
+            </div>
+          </div>
+        </header>
 
         <div className="px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto">
           {error && (
@@ -664,10 +700,11 @@ const downloadOrderReport = async () => {
             </div>
           )}
 
-          {users.length === 0 ? (
+          {filteredUsers.length === 0 ? (
             <div className="bg-white rounded-3xl border border-gray-200 shadow-sm p-20 text-center">
               <Users className="mx-auto text-emerald-600" size={56} />
               <h3 className="text-2xl font-semibold text-gray-800 mt-8">No Users Found</h3>
+              <p className="text-gray-500 mt-2">Try adjusting your filters.</p>
             </div>
           ) : (
             <div className="overflow-x-auto rounded-3xl border border-gray-200 shadow-sm bg-white">
@@ -687,7 +724,7 @@ const downloadOrderReport = async () => {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">
-                  {users.map((user) => (
+                  {filteredUsers.map((user) => (
                     <>
                       <tr
                         key={user.id}
@@ -761,8 +798,8 @@ const downloadOrderReport = async () => {
                       {expandedUserId === user.id && (
                         <tr>
                           <td colSpan={10} className="p-0 bg-gray-50">
-                          <div className="px-3 py-4 md:px-6 md:py-8">
-                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-5 mb-6">
+                            <div className="px-3 py-4 md:px-6 md:py-8">
+                              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-5 mb-6">
                                 <div className="bg-white p-5 rounded-3xl border border-gray-100 shadow-sm h-full">
                                   <h4 className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2 md:mb-4">
                                     <Clock size={18} className="text-gray-500" />
@@ -810,7 +847,7 @@ const downloadOrderReport = async () => {
                                     Referrals
                                   </h4>
                                   <div className="mt-auto">
-                                  <div className="text-3xl md:text-5xl font-semibold text-emerald-700 tracking-tighter">{user.referralCount}</div>
+                                    <div className="text-3xl md:text-5xl font-semibold text-emerald-700 tracking-tighter">{user.referralCount}</div>
                                     <p className="text-sm text-gray-500 mt-1">Total referred users</p>
                                   </div>
                                 </div>
@@ -868,73 +905,68 @@ const downloadOrderReport = async () => {
                                   </div>
                                 ) : (
                                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                                   {user.referredUsers.map((ref, index) => {
-  const orders =
-    referredOrdersMap[ref.referred_sb_user_id] || [];
+                                    {user.referredUsers.map((ref, index) => {
+                                      const orders =
+                                        referredOrdersMap[ref.referred_sb_user_id] || [];
 
-  
-  const eligibleOrders = orders.filter(
-  (o) =>
-    (o.status === "CONFIRMED" ||
-      o.status === "SETTLED") &&
-    o.order_type === "BUY"
-);
+                                      const eligibleOrders = orders.filter(
+                                        (o) =>
+                                          (o.status === "CONFIRMED" ||
+                                            o.status === "SETTLED") &&
+                                          o.order_type === "BUY"
+                                      );
 
-  const commission = eligibleOrders.reduce(
-    (sum, o) =>
-      sum +
-      ((Number(o.total) || 0) *
-        ((user.commission_rate || 0) / 100)),
-    0
-  );
+                                      const commission = eligibleOrders.reduce(
+                                        (sum, o) =>
+                                          sum +
+                                          ((Number(o.total) || 0) *
+                                            ((user.commission_rate || 0) / 100)),
+                                        0
+                                      );
 
-  const latestStatus =
-    orders.length > 0
-      ? orders[0].status
-      : "PENDING";
+                                      const latestStatus =
+                                        orders.length > 0
+                                          ? orders[0].status
+                                          : "PENDING";
 
-  return (
-    <div
-      key={`${user.id}-ref-${index}`}
-      onClick={() => openReferredModal(ref, user)}
-      className="bg-white border border-gray-100 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group"
-    >
-      <div className="font-medium text-gray-900 group-hover:text-emerald-700 transition-colors">
-        {ref.referred_name || "Unnamed User"}
-      </div>
-
-      <div className="text-sm text-gray-600 mt-3">
-        SB ID: {ref.profiles?.sb_user_id ||
-          ref.referred_sb_user_id ||
-          "Not Registered"}
-      </div>
-
-      {ref.referred_email && (
-        <div className="text-xs text-gray-500 mt-2 truncate">
-          {ref.referred_email}
-        </div>
-      )}
-
-      <div className="mt-6 flex items-center justify-between text-xs">
-        <span className="text-emerald-600 font-medium">
-          ₹{commission.toFixed(2)}
-        </span>
-
-        <span
-          className={`px-3 py-1 rounded-2xl font-medium ${
-            latestStatus === "CONFIRMED"
-              ? "bg-emerald-100 text-emerald-700"
-              : latestStatus === "PENDING"
-              ? "bg-amber-100 text-amber-700"
-              : "bg-gray-100 text-gray-700"
-          }`}
-        >
-          {latestStatus}
-        </span>
-      </div>
-    </div>
-  );
-})}
+                                      return (
+                                        <div
+                                          key={`${user.id}-ref-${index}`}
+                                          onClick={() => openReferredModal(ref, user)}
+                                          className="bg-white border border-gray-100 p-6 rounded-3xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all cursor-pointer group"
+                                        >
+                                          <div className="font-medium text-gray-900 group-hover:text-emerald-700 transition-colors">
+                                            {ref.referred_name || "Unnamed User"}
+                                          </div>
+                                          <div className="text-sm text-gray-600 mt-3">
+                                            SB ID: {ref.profiles?.sb_user_id ||
+                                              ref.referred_sb_user_id ||
+                                              "Not Registered"}
+                                          </div>
+                                          {ref.referred_email && (
+                                            <div className="text-xs text-gray-500 mt-2 truncate">
+                                              {ref.referred_email}
+                                            </div>
+                                          )}
+                                          <div className="mt-6 flex items-center justify-between text-xs">
+                                            <span className="text-emerald-600 font-medium">
+                                              ₹{commission.toFixed(2)}
+                                            </span>
+                                            <span
+                                              className={`px-3 py-1 rounded-2xl font-medium ${
+                                                latestStatus === "CONFIRMED"
+                                                  ? "bg-emerald-100 text-emerald-700"
+                                                  : latestStatus === "PENDING"
+                                                  ? "bg-amber-100 text-amber-700"
+                                                  : "bg-gray-100 text-gray-700"
+                                              }`}
+                                            >
+                                              {latestStatus}
+                                            </span>
+                                          </div>
+                                        </div>
+                                      );
+                                    })}
                                   </div>
                                 )}
                               </div>
@@ -1020,20 +1052,20 @@ const downloadOrderReport = async () => {
                             <td className="px-4 py-4 text-right text-xs text-gray-500 whitespace-nowrap">
                               {new Date(order.created_at).toLocaleDateString("en-IN")}
                             </td>
-                           <td className="px-4 py-4 text-center">
-  {order.status === "PENDING" ? (
-    <button
-      onClick={() => verifyOrder(order.id)}
-      className="px-5 py-1.5 bg-gray-600 hover:bg-gray-700 text-white text-xs font-medium rounded-2xl transition-colors"
-    >
-      Verify
-    </button>
-  ) : order.status === "CONFIRMED" ? (
-    <span className="px-5 py-1.5 bg-gray-600 text-xs text-white font-medium rounded-2xl">
-      Verified
-    </span>
-  ) : null}
-</td>
+                            <td className="px-4 py-4 text-center">
+                              {order.status === "PENDING" ? (
+                                <button
+                                  onClick={() => verifyOrder(order.id)}
+                                  className="px-5 py-1.5 bg-gray-600 hover:bg-gray-700 text-white text-xs font-medium rounded-2xl transition-colors"
+                                >
+                                  Verify
+                                </button>
+                              ) : order.status === "CONFIRMED" ? (
+                                <span className="px-5 py-1.5 bg-gray-600 text-xs text-white font-medium rounded-2xl">
+                                  Verified
+                                </span>
+                              ) : null}
+                            </td>
                           </tr>
                         ))}
                       </tbody>
@@ -1089,21 +1121,21 @@ const downloadOrderReport = async () => {
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600">Commission Earned</span>
                       <span className="text-md font-semibold text-emerald-700">
-                       ₹{referredOrders
-  .filter(
-    (o) =>
-      (o.status === "CONFIRMED" ||
-       o.status === "SETTLED") &&
-      o.order_type === "BUY"
-  )
-  .reduce(
-    (sum, o) =>
-      sum +
-      ((Number(o.total) || 0) *
-      ((selectedReferred?.referrer?.commission_rate || 0) / 100)),
-    0
-  )
-  .toFixed(2)}
+                        ₹{referredOrders
+                          .filter(
+                            (o) =>
+                              (o.status === "CONFIRMED" ||
+                               o.status === "SETTLED") &&
+                              o.order_type === "BUY"
+                          )
+                          .reduce(
+                            (sum, o) =>
+                              sum +
+                              ((Number(o.total) || 0) *
+                              ((selectedReferred?.referrer?.commission_rate || 0) / 100)),
+                            0
+                          )
+                          .toFixed(2)}
                       </span>
                     </div>
                     <div className="flex justify-between items-center">

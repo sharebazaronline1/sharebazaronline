@@ -3,8 +3,8 @@
 import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
-import { IndianRupee, Search, Plus, Minus,Menu } from "lucide-react";
-import { fetchPreIPODetails } from "../api/mockApi"; // Only Pre-IPOs
+import { IndianRupee, Search, Plus, Minus, Menu, CheckCircle } from "lucide-react";
+import { fetchPreIPODetails } from "../api/mockApi";
 import Sidebar from "../components/Sidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
 
@@ -14,9 +14,9 @@ const Orders = () => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
   const [pricePerUnit, setPricePerUnit] = useState(0);
   const [quantity, setQuantity] = useState(null);
-const total = (quantity || 0) * (pricePerUnit || 0);
-const [preIpos, setPreIpos] = useState([]);
-const [dbCompanies, setDbCompanies] = useState([]);
+  const total = (quantity || 0) * (pricePerUnit || 0);
+  const [preIpos, setPreIpos] = useState([]);
+  const [dbCompanies, setDbCompanies] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCompany, setSelectedCompany] = useState("");
   const [showDropdown, setShowDropdown] = useState(false);
@@ -25,93 +25,96 @@ const [dbCompanies, setDbCompanies] = useState([]);
   const [orders, setOrders] = useState([]);
   const [ordersLoading, setOrdersLoading] = useState(true);
 
-  // Load Pre-IPO list
+  // Success modal state
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
   // Load Pre-IPO list + Supabase prices/lots
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const preIpoData = await fetchPreIPODetails();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const preIpoData = await fetchPreIPODetails();
 
-      const { data: dbData, error } = await supabase
-        .from("pre_ipo_companies")
-        .select("name, price, lot_size");
+        const { data: dbData, error } = await supabase
+          .from("pre_ipo_companies")
+          .select("name, price, lot_size");
 
-      if (error) {
-        console.error("Supabase fetch error:", error);
-      }
-
-      const normalize = (str = "") =>
-        str
-          .toLowerCase()
-          .replace(/limited|ltd|llp|private|unlisted|shares?|share/gi, "")
-          .replace(/[^\w\s]/g, " ")
-          .replace(/\s+/g, " ")
-          .trim();
-
-      const dbMap = {};
-
-      dbData?.forEach((item) => {
-        dbMap[normalize(item.name)] = item;
-      });
-
-      const merged = preIpoData.map((item) => {
-        const key = normalize(item.name);
-
-        let dbItem = dbMap[key];
-
-        // fuzzy fallback
-        if (!dbItem) {
-          const bestMatch = Object.keys(dbMap).find(
-            (dbKey) =>
-              dbKey.includes(key) ||
-              key.includes(dbKey)
-          );
-
-          if (bestMatch) {
-            dbItem = dbMap[bestMatch];
-          }
+        if (error) {
+          console.error("Supabase fetch error:", error);
         }
 
-        return {
-          ...item,
-         price:
-  dbItem?.price != null
-    ? Number(dbItem.price)
-    : Number(
-        String(
-          item.shareDetails?.indicativeUnlistedSharePrice ||
-          item.price ||
-          0
-        )
-          .replace(/[^\d.-]/g, "")
-          .split("-")[0]
-      ),
-        lot_size:
-  dbItem?.lot_size != null
-    ? Number(
-        String(dbItem.lot_size).replace(/[^\d]/g, "")
-      )
-    : Number(
-        String(
-          item.shareDetails?.lotSize ||
-          item.lot_size ||
-          item.lotSize ||
-          0
-        ).replace(/[^\d]/g, "")
-      ),
-        };
-      });
+        const normalize = (str = "") =>
+          str
+            .toLowerCase()
+            .replace(/limited|ltd|llp|private|unlisted|shares?|share/gi, "")
+            .replace(/[^\w\s]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
 
-      setPreIpos(Array.isArray(merged) ? merged : []);
-      setDbCompanies(dbData || []);
-    } catch (err) {
-      console.error("Failed to load Pre-IPOs:", err);
-      setPreIpos([]);
-    }
-  };
+        const dbMap = {};
 
-  fetchData();
-}, []);
+        dbData?.forEach((item) => {
+          dbMap[normalize(item.name)] = item;
+        });
+
+        const merged = preIpoData.map((item) => {
+          const key = normalize(item.name);
+
+          let dbItem = dbMap[key];
+
+          // fuzzy fallback
+          if (!dbItem) {
+            const bestMatch = Object.keys(dbMap).find(
+              (dbKey) =>
+                dbKey.includes(key) ||
+                key.includes(dbKey)
+            );
+
+            if (bestMatch) {
+              dbItem = dbMap[bestMatch];
+            }
+          }
+
+          return {
+            ...item,
+            price:
+              dbItem?.price != null
+                ? Number(dbItem.price)
+                : Number(
+                    String(
+                      item.shareDetails?.indicativeUnlistedSharePrice ||
+                      item.price ||
+                      0
+                    )
+                      .replace(/[^\d.-]/g, "")
+                      .split("-")[0]
+                  ),
+            lot_size:
+              dbItem?.lot_size != null
+                ? Number(
+                    String(dbItem.lot_size).replace(/[^\d]/g, "")
+                  )
+                : Number(
+                    String(
+                      item.shareDetails?.lotSize ||
+                      item.lot_size ||
+                      item.lotSize ||
+                      0
+                    ).replace(/[^\d]/g, "")
+                  ),
+          };
+        });
+
+        setPreIpos(Array.isArray(merged) ? merged : []);
+        setDbCompanies(dbData || []);
+      } catch (err) {
+        console.error("Failed to load Pre-IPOs:", err);
+        setPreIpos([]);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -156,64 +159,66 @@ useEffect(() => {
     (item?.isin ?? "").toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-const handleCompanySelect = (company) => {
-  setSelectedCompany(company.name || "Unknown");
+  const handleCompanySelect = (company) => {
+    setSelectedCompany(company.name || "Unknown");
 
-  // PRICE
-  const parsedPrice = Number(company.price || 0);
+    // PRICE
+    const parsedPrice = Number(company.price || 0);
 
-  setPricePerUnit(parsedPrice);
+    setPricePerUnit(parsedPrice);
 
-  // LOT SIZE
-  const parsedLot = Number(
-    String(
-      company.lot_size ||
-      company.shareDetails?.lotSize ||
-      company.lotSize ||
-      5
-    ).replace(/[^\d]/g, "")
-  );
+    // LOT SIZE
+    const parsedLot = Number(
+      String(
+        company.lot_size ||
+        company.shareDetails?.lotSize ||
+        company.lotSize ||
+        5
+      ).replace(/[^\d]/g, "")
+    );
 
-  setQuantity(parsedLot || 5);
+    setQuantity(parsedLot || 5);
 
-  setSearchQuery("");
-  setShowDropdown(false);
-};
-const adjustQuantity = (delta) => {
-  const selected = preIpos.find(
-    (item) => item.name === selectedCompany
-  );
+    setSearchQuery("");
+    setShowDropdown(false);
+  };
 
-  const minLot =
-    Number(selected?.lot_size) || 5;
+  const adjustQuantity = (delta) => {
+    const selected = preIpos.find(
+      (item) => item.name === selectedCompany
+    );
 
-  const currentQty =
-    Number(quantity) || minLot;
+    const minLot =
+      Number(selected?.lot_size) || 5;
 
-  const newQty = Math.max(
-    minLot,
-    currentQty + delta * 5
-  );
+    const currentQty =
+      Number(quantity) || minLot;
 
-  setQuantity(newQty);
-};
+    const newQty = Math.max(
+      minLot,
+      currentQty + delta * 5
+    );
+
+    setQuantity(newQty);
+  };
 
   const handleSubmit = async () => {
     if (!selectedCompany) {
       alert("Please select a company");
       return;
     }
-const selected = preIpos.find(
-  (item) => item.name === selectedCompany
-);
 
-const minLot = Number(selected?.lot_size) || 5;
+    const selected = preIpos.find(
+      (item) => item.name === selectedCompany
+    );
 
-if (quantity < minLot)
-     {
-   alert(
-  `Minimum quantity required is ${minLot}`
-);    return;
+    const minLot = Number(selected?.lot_size) || 5;
+
+    if (quantity < minLot) {
+      alert(
+        `Minimum quantity required is ${minLot}`
+      );
+      return;
     }
 
     const { data: { user } } = await supabase.auth.getUser();
@@ -253,65 +258,67 @@ if (quantity < minLot)
     setSelectedCompany("");
     setPricePerUnit(0);
     setSearchQuery("");
+
+    // Show success modal
+    setShowSuccessModal(true);
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Sidebar
-  mobileOpen={mobileSidebarOpen}
-  setMobileOpen={setMobileSidebarOpen}
-/>
+        mobileOpen={mobileSidebarOpen}
+        setMobileOpen={setMobileSidebarOpen}
+      />
 
       <main className="md:ml-64 transition-all">
         {/* Header with title and profile */}
-       <header className="sticky top-0 z-10 bg-white border-gray-200 shadow-sm">
-  <div className="px-4 sm:px-6 lg:px-8 py-5">
+        <header className="sticky top-0 z-10 bg-white border-gray-200 shadow-sm">
+          <div className="px-4 sm:px-6 lg:px-8 py-5">
 
-    {/* MOBILE HEADER */}
-    <div className="flex items-center justify-between md:hidden">
+            {/* MOBILE HEADER */}
+            <div className="flex items-center justify-between md:hidden">
 
-      {/* LEFT */}
-      <button
-        onClick={() => setMobileSidebarOpen(true)}
-        className="p-2"
-      >
-        <Menu size={24} />
-      </button>
+              {/* LEFT */}
+              <button
+                onClick={() => setMobileSidebarOpen(true)}
+                className="p-2"
+              >
+                <Menu size={24} />
+              </button>
 
-      {/* CENTER */}
-      <div className="flex-1 text-center px-2">
-        <h1 className="text-xl font-semibold text-gray-900">
-          Orders
-        </h1>
+              {/* CENTER */}
+              <div className="flex-1 text-center px-2">
+                <h1 className="text-xl font-semibold text-gray-900">
+                  Orders
+                </h1>
 
-        <p className="text-xs text-gray-500 mt-1">
-          Buy & Sell Pre-IPO Shares
-        </p>
-      </div>
+                <p className="text-xs text-gray-500 mt-1">
+                  Buy & Sell Pre-IPO Shares
+                </p>
+              </div>
 
-      {/* RIGHT */}
-      <div className="flex items-center justify-end min-w-[40px]">
-        <UserProfileDropdown />
-      </div>
-    </div>
+              {/* RIGHT */}
+              <div className="flex items-center justify-end min-w-[40px]">
+                <UserProfileDropdown />
+              </div>
+            </div>
 
-    {/* DESKTOP HEADER */}
-    <div className="hidden md:flex items-center justify-between">
-      
-      <div>
-        <h1 className="text-3xl font-bold text-gray-900">
-          Orders & Buy/Sell
-        </h1>
+            {/* DESKTOP HEADER */}
+            <div className="hidden md:flex items-center justify-between">
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900">
+                  Orders & Buy/Sell
+                </h1>
 
-        <p className="text-sm text-gray-600 mt-1">
-          Manage your Pre-IPO buy & sell requests
-        </p>
-      </div>
+                <p className="text-sm text-gray-600 mt-1">
+                  Manage your Pre-IPO buy & sell requests
+                </p>
+              </div>
 
-      <UserProfileDropdown />
-    </div>
-  </div>
-</header>
+              <UserProfileDropdown />
+            </div>
+          </div>
+        </header>
 
         {/* Content */}
         <div className="p-4 md:p-6 lg:p-8 flex flex-col lg:flex-row gap-6 xl:gap-8">
@@ -400,100 +407,99 @@ if (quantity < minLot)
               </div>
 
               {/* Quantity + Price */}
-             {/* Quantity + Price */}
-<div className="grid grid-cols-2 gap-6">
-  <div>
-    {(() => {
-      const selected = preIpos.find(
-        (item) => item.name === selectedCompany
-      );
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  {(() => {
+                    const selected = preIpos.find(
+                      (item) => item.name === selectedCompany
+                    );
 
-      const minLot =
-        Number(selected?.lot_size) || 5;
+                    const minLot =
+                      Number(selected?.lot_size) || 5;
 
-      return (
-        <>
-          <label className="block text-xs font-medium text-gray-600 mb-2">
-            Minimum Lot Size is{" "}
-            <span className="font-bold text-green-700">
-              {minLot.toLocaleString("en-IN")}
-            </span>
-          </label>
+                    return (
+                      <>
+                        <label className="block text-xs font-medium text-gray-600 mb-2">
+                          Minimum Lot Size is{" "}
+                          <span className="font-bold text-green-700">
+                            {minLot.toLocaleString("en-IN")}
+                          </span>
+                        </label>
 
-          <div
-            className="flex items-center border border-gray-300 rounded-lg overflow-hidden"
-            title={`Minimum quantity allowed is ${minLot}`}
-          >
-            {/* MINUS */}
-            <button
-              onClick={() => adjustQuantity(-1)}
-              className="px-3 py-3 bg-gray-100 hover:bg-gray-200 transition"
-              disabled={(quantity || 0) <= minLot}
-            >
-              <Minus size={16} />
-            </button>
+                        <div
+                          className="flex items-center border border-gray-300 rounded-lg overflow-hidden"
+                          title={`Minimum quantity allowed is ${minLot}`}
+                        >
+                          {/* MINUS */}
+                          <button
+                            onClick={() => adjustQuantity(-1)}
+                            className="px-3 py-3 bg-gray-100 hover:bg-gray-200 transition"
+                            disabled={(quantity || 0) <= minLot}
+                          >
+                            <Minus size={16} />
+                          </button>
 
-            {/* INPUT */}
-            <input
-              type="text"
-              inputMode="numeric"
-              value={quantity ?? ""}
-              onChange={(e) => {
-                let value = e.target.value.replace(/\D/g, "");
+                          {/* INPUT */}
+                          <input
+                            type="text"
+                            inputMode="numeric"
+                            value={quantity ?? ""}
+                            onChange={(e) => {
+                              let value = e.target.value.replace(/\D/g, "");
 
-                value = value.replace(/^0+/, "");
+                              value = value.replace(/^0+/, "");
 
-                if (value === "") {
-                  setQuantity("");
-                  return;
-                }
+                              if (value === "") {
+                                setQuantity("");
+                                return;
+                              }
 
-                const numericValue = Number(value);
+                              const numericValue = Number(value);
 
-                setQuantity(numericValue);
-              }}
-              className={`w-full text-center py-3 font-semibold text-base focus:outline-none appearance-none ${
-                Number(quantity || 0) < minLot
-                  ? "text-red-600"
-                  : "text-gray-900"
-              }`}
-              style={{
-                MozAppearance: "textfield",
-              }}
-            />
+                              setQuantity(numericValue);
+                            }}
+                            className={`w-full text-center py-3 font-semibold text-base focus:outline-none appearance-none ${
+                              Number(quantity || 0) < minLot
+                                ? "text-red-600"
+                                : "text-gray-900"
+                            }`}
+                            style={{
+                              MozAppearance: "textfield",
+                            }}
+                          />
 
-            {/* PLUS */}
-            <button
-              onClick={() => adjustQuantity(1)}
-              className="px-3 py-3 bg-gray-100 hover:bg-gray-200 transition"
-            >
-              <Plus size={16} />
-            </button>
-          </div>
+                          {/* PLUS */}
+                          <button
+                            onClick={() => adjustQuantity(1)}
+                            className="px-3 py-3 bg-gray-100 hover:bg-gray-200 transition"
+                          >
+                            <Plus size={16} />
+                          </button>
+                        </div>
 
-          {/* VALIDATION TEXT */}
-          {Number(quantity || 0) < minLot && (
-            <p className="text-xs text-red-600 mt-2">
-              Quantity must be at least{" "}
-              {minLot.toLocaleString("en-IN")}
-            </p>
-          )}
-        </>
-      );
-    })()}
-  </div>
+                        {/* VALIDATION TEXT */}
+                        {Number(quantity || 0) < minLot && (
+                          <p className="text-xs text-red-600 mt-2">
+                            Quantity must be at least{" "}
+                            {minLot.toLocaleString("en-IN")}
+                          </p>
+                        )}
+                      </>
+                    );
+                  })()}
+                </div>
 
-  {/* PRICE */}
-  <div>
-    <label className="block text-xs font-medium text-gray-600 mb-2">
-      Price/Unit
-    </label>
+                {/* PRICE */}
+                <div>
+                  <label className="block text-xs font-medium text-gray-600 mb-2">
+                    Price/Unit
+                  </label>
 
-    <div className="text-xl font-bold text-gray-900 flex items-center h-[46px]">
-      ₹{pricePerUnit.toLocaleString("en-IN")}
-    </div>
-  </div>
-</div>
+                  <div className="text-xl font-bold text-gray-900 flex items-center h-[46px]">
+                    ₹{pricePerUnit.toLocaleString("en-IN")}
+                  </div>
+                </div>
+              </div>
 
               {/* Total + Submit */}
               <div className="pt-6 space-y-5 sticky bottom-0 bg-white pb-2">
@@ -504,44 +510,40 @@ if (quantity < minLot)
                   </span>
                 </div>
 
-              {(() => {
-  const selected = preIpos.find(
-    (item) => item.name === selectedCompany
-  );
+                {(() => {
+                  const selected = preIpos.find(
+                    (item) => item.name === selectedCompany
+                  );
 
-  const minLot =
-    Number(selected?.lot_size) || 5;
+                  const minLot =
+                    Number(selected?.lot_size) || 5;
 
- const qty = Number(quantity || 0);
+                  const qty = Number(quantity || 0);
 
-const isBelowLot =
-  qty < minLot;
+                  const isBelowLot =
+                    qty < minLot;
 
-  return (
-    <>
-    
-
-      <button
-        onClick={handleSubmit}
-        disabled={isBelowLot}
-        title={
-  isBelowLot
-    ? `Minimum quantity must be in multiples of ${minLot}`
-    : ""
-}
-        className={`w-full py-3.5 rounded-xl font-semibold text-white transition-all shadow-md ${
-          isBelowLot
-            ? "bg-gray-400 cursor-not-allowed"
-            : "bg-[#16A34A] hover:bg-[#15803D] hover:shadow-lg active:scale-[0.98]"
-        }`}
-      >
-        {activeTab === "buy"
-          ? "Submit Buy Request"
-          : "Submit Sell Request"}
-      </button>
-    </>
-  );
-})()}
+                  return (
+                    <button
+                      onClick={handleSubmit}
+                      disabled={isBelowLot}
+                      title={
+                        isBelowLot
+                          ? `Minimum quantity must be in multiples of ${minLot}`
+                          : ""
+                      }
+                      className={`w-full py-3.5 rounded-xl font-semibold text-white transition-all shadow-md ${
+                        isBelowLot
+                          ? "bg-gray-400 cursor-not-allowed"
+                          : "bg-[#16A34A] hover:bg-[#15803D] hover:shadow-lg active:scale-[0.98]"
+                      }`}
+                    >
+                      {activeTab === "buy"
+                        ? "Submit Buy Request"
+                        : "Submit Sell Request"}
+                    </button>
+                  );
+                })()}
 
                 <p className="text-xs text-gray-500 text-center">
                   Indicative prices • Final confirmation required
@@ -630,11 +632,11 @@ const isBelowLot =
                         <td className="py-3 px-4">
                           <span
                             className={`inline-block px-2 py-0.5 rounded-full text-xs font-medium ${
-                             order.status === "SETTLED"
-  ? "bg-green-100 text-green-700"
-  : order.status === "PROCESSING"
-  ? "bg-blue-100 text-blue-700"
-  : "bg-yellow-100 text-yellow-700"
+                              order.status === "SETTLED"
+                                ? "bg-green-100 text-green-700"
+                                : order.status === "PROCESSING"
+                                ? "bg-blue-100 text-blue-700"
+                                : "bg-yellow-100 text-yellow-700"
                             }`}
                           >
                             {order.status || "PENDING"}
@@ -660,6 +662,35 @@ const isBelowLot =
           </section>
         </div>
       </main>
+
+      {/* ✅ Success Modal - appears as overlay with blur */}
+      {showSuccessModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+          onClick={() => setShowSuccessModal(false)} // close when clicking backdrop
+        >
+          <div
+            className="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl transform transition-all"
+            onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside modal
+          >
+            <div className="text-center">
+              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+                <CheckCircle className="h-6 w-6 text-green-600" />
+              </div>
+              <h3 className="text-lg font-bold text-gray-900">Order Placed!</h3>
+              <p className="text-sm text-gray-600 mt-2">
+                Thank you for placing your order. Our agent will contact you within 24 hours.
+              </p>
+              <button
+                onClick={() => setShowSuccessModal(false)}
+                className="mt-4 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition"
+              >
+                Okay
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

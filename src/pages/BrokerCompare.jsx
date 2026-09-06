@@ -29,22 +29,22 @@ const formatCharge = (value) => {
 
   let text = String(value).trim();
 
-  if (/free/i.test(text)) return "Free";
-
-  // Standardize multiple variations of the Rupee sign/entity wrappers
+  // Normalize currency symbols and HTML entities
   text = text
+    .replace(/Rs\.?/gi, "₹")
     .replace(/&#8377;|&\s*₹\s*;|&amp;#8377;/g, "₹")
     .replace(/\\u20B9/g, "₹")
-    .replace(/Rs\.?/gi, "₹");
+    .replace(/\s+/g, " ");
 
-  // Regex safely extracts decimals or integers following potential symbol mutations
-  const match = text.match(/(\d+(\.\d+)?)/);
-
-  if (match) {
-    return `₹${match[1]}/order`;
+  // Remove currency symbol, commas, and spaces to check if it's a pure numeric fee
+  const cleaned = text.replace(/[₹,\s]/g, "");
+  if (/^\d+(\.\d+)?$/.test(cleaned)) {
+    // Pure number → format as per‑order fee
+    return `₹${cleaned}/order`;
   }
 
-  return text.length > 28 ? text.substring(0, 28) + "..." : text;
+  // Otherwise, return the descriptive text (with truncation if too long)
+  return text.length > 45 ? text.substring(0, 45) + "..." : text;
 };
 
 const StarRating = ({ rating }) => (
@@ -299,7 +299,6 @@ const CompareBroker = () => {
           }));
 
           setBrokers(parsedData);
-          
           const urlParam1 = searchParams.get("broker1");
           const urlParam2 = searchParams.get("broker2");
           const urlParam3 = searchParams.get("broker3");
