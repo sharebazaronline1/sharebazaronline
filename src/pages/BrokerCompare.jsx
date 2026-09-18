@@ -14,6 +14,7 @@ import {
   Check,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 import { supabase } from "../lib/supabase";
 
@@ -358,6 +359,27 @@ const CompareBroker = () => {
   if (loading) return <div className="min-h-screen bg-gray-50/50 flex items-center justify-center"><LoadingAnimation /></div>;
 
   return (
+    <>
+    <Helmet>
+  <title>
+    Compare Best Stock Brokers in India 2026 - Brokerage Charges & Ratings | ShareBazaarOnline
+  </title>
+
+  <meta
+    name="description"
+    content="Compare top stock brokers in India side by side. Check brokerage charges, account opening fees, ratings, active users, and trading segments to find the best broker for your needs."
+  />
+
+  <meta
+    name="keywords"
+    content="broker comparison, broker app, compare stock brokers, online broker comparison, compare stock broker, brokers with lowest fees, best broker for stock trading, broker comparison india, broker demat account, broker commodity, broker futures, broker options, broker type, demat account broker list, demat account comparison, top brokers comparison, best broker comparison, broker review, broker app, broker account opening, broker customer service, broker currency, broker equity, brokerage account comparison, how to choose the best broker, best brokers for beginner investors, broker for beginners, best demat account broker"
+  />
+
+  <link
+    rel="canonical"
+    href="https://sharebazaaronline.com/comparebrokers"
+  />
+</Helmet>
     <div className="min-h-screen bg-gray-50/50 antialiased">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20">
         {/* Header */}
@@ -432,6 +454,7 @@ const CompareBroker = () => {
         )}
       </AnimatePresence>
     </div>
+    </>
   );
 };
 
