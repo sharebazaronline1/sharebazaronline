@@ -5,9 +5,8 @@ import AdminSidebar from "../components/AdminSidebar";
 import UserProfileDropdown from "../components/UserProfileDropdown";
 import {
   FileText,
-  CheckCircle,
-  XCircle,
   Loader2,
+  AlertCircle,
   RefreshCw,
   Filter,
 } from "lucide-react";
@@ -18,7 +17,6 @@ const AdminKycDocuments = () => {
   const [actionLoading, setActionLoading] = useState({});
   const [error, setError] = useState(null);
 
-  // Filter state
   const [filterDocType, setFilterDocType] = useState("all");
   const [filterStatus, setFilterStatus] = useState("all");
 
@@ -31,13 +29,48 @@ const AdminKycDocuments = () => {
     setError(null);
 
     try {
-      const { data, error } = await supabase
-        .from("user_kyc_with_user")
+      // 1. Fetch base KYC rows (RLS on user_kyc should allow admin reads)
+      const { data: kycRows, error: kycError } = await supabase
+        .from("user_kyc")
         .select("*")
         .order("updated_at", { ascending: false });
 
-      if (error) throw error;
-      setDocuments(data || []);
+      if (kycError) throw kycError;
+
+      if (!kycRows || kycRows.length === 0) {
+        setDocuments([]);
+        return;
+      }
+
+      // 2. Fetch profile info for those users
+      const userIds = kycRows.map((r) => r.user_id).filter(Boolean);
+
+      const { data: profiles, error: profilesError } = await supabase
+        .from("profiles")
+        .select("id, full_name, sb_user_id, email")
+        .in("id", userIds);
+
+      if (profilesError) {
+        console.error("Profiles fetch error:", profilesError);
+      }
+
+      const profileMap = {};
+      (profiles || []).forEach((p) => {
+        profileMap[p.id] = p;
+      });
+
+      // 3. Merge KYC + profile data
+      const merged = kycRows.map((row) => {
+        const profile = profileMap[row.user_id] || {};
+        return {
+          ...row,
+          full_name: profile.full_name || row.full_name || "",
+          sb_user_id: profile.sb_user_id || row.sb_user_id || "",
+          email: profile.email || row.email || "",
+        };
+      });
+
+      setDocuments(merged);
     } catch (err) {
       console.error("KYC fetch error:", err);
       setError("Failed to load KYC documents");
@@ -76,22 +109,16 @@ const AdminKycDocuments = () => {
     return supabase.storage.from("kyc-documents").getPublicUrl(path).data.publicUrl;
   };
 
-  // Filtered documents
   const filteredDocuments = useMemo(() => {
     return documents.filter((doc) => {
-      // Get all document types and their statuses
       const docTypes = ["pan", "aadhaar", "cmr", "cheque"];
       let matches = false;
 
-      // If filterDocType is "all", check all types; else check only selected type
       const typesToCheck = filterDocType === "all" ? docTypes : [filterDocType];
 
       for (const type of typesToCheck) {
         const status = doc[`${type}_status`] || "Not Uploaded";
         if (filterStatus === "all") {
-          // If status filter is "all", any document (of selected types) is enough
-          // but we also need to consider that the document might not be uploaded.
-          // We'll treat "Not Uploaded" as a valid state for filtering "all" statuses.
           matches = true;
           break;
         } else {
@@ -122,7 +149,6 @@ const AdminKycDocuments = () => {
       <AdminSidebar />
 
       <main className="md:ml-64 p-4 sm:p-6 lg:p-8">
-        {/* Header */}
         <header className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">KYC Documents</h1>
@@ -140,33 +166,14 @@ const AdminKycDocuments = () => {
           </div>
         </header>
 
-        {/* Filter Bar */}
         <div className="bg-white rounded-xl border border-gray-200 p-4 mb-6 flex flex-wrap items-center gap-4 shadow-sm">
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <Filter size={16} />
             <span className="font-medium">Filters:</span>
           </div>
 
-          {/* Document Type Filter */}
-          <div className="flex items-center gap-2">
-            <label htmlFor="docTypeFilter" className="text-xs text-gray-500">
-              Document Type
-            </label>
-            <select
-              id="docTypeFilter"
-              value={filterDocType}
-              onChange={(e) => setFilterDocType(e.target.value)}
-              className="px-3 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 bg-white"
-            >
-              <option value="all">All</option>
-              <option value="pan">PAN</option>
-              <option value="aadhaar">Aadhaar</option>
-              <option value="cmr">CMR</option>
-              <option value="cheque">Cheque</option>
-            </select>
-          </div>
+          
 
-          {/* Status Filter */}
           <div className="flex items-center gap-2">
             <label htmlFor="statusFilter" className="text-xs text-gray-500">
               Status
@@ -185,7 +192,6 @@ const AdminKycDocuments = () => {
             </select>
           </div>
 
-          {/* Count */}
           <span className="ml-auto text-xs text-gray-500">
             Showing {filteredDocuments.length} of {documents.length} users
           </span>
@@ -229,7 +235,9 @@ const AdminKycDocuments = () => {
                     </div>
                     <span className="text-sm text-gray-500">
                       Updated:{" "}
-                      {new Date(doc.updated_at).toLocaleDateString("en-IN")}
+                      {doc.updated_at
+                        ? new Date(doc.updated_at).toLocaleDateString("en-IN")
+                        : "—"}
                     </span>
                   </div>
                 </div>
